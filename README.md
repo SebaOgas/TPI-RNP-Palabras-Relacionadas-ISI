@@ -21,7 +21,7 @@ Consiste en un juego en que, basándose en la terminología propia de la carrera
 2. Instalar dependencias
 
 ```
-    pip install -r requirements.txt
+    pip install -r prod/requirements.txt
 ```
 
 3. Ejecutar aplicación
