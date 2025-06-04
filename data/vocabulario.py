@@ -61,11 +61,12 @@ print("Vocabulario con min_freq=10:", len(vocab_min_freq_10))
 def subsample(oraciones):
     """Subsample high-frequency words de una lista de listas de tokens."""
     # Si las oraciones son strings, las tokenizamos
-    if oraciones and isinstance(oraciones[0], str):
-        oraciones = [line.split() for line in oraciones]
+    #if oraciones and isinstance(oraciones[0], str):
+    #    oraciones = [line.split() for line in oraciones]
 
     # Aplanar la lista de listas a una sola lista para contar frecuencias
-    tokens = [token for line in oraciones for token in line]
+    # tokens = [token for line in oraciones for token in line]
+    tokens = oraciones
 
     counter_obj = collections.Counter(tokens)
     num_tokens = sum(counter_obj.values())
@@ -75,7 +76,8 @@ def subsample(oraciones):
         return random.uniform(0, 1) < math.sqrt(1e-4 / (counter_obj[token] / num_tokens))
 
     # Crear nueva lista de oraciones con tokens muestreados (subsampled)
-    oraciones_subsampled = [[token for token in line if keep(token)] for line in oraciones]
+    # oraciones_subsampled = [[token for token in line if keep(token)] for line in oraciones]
+    oraciones_subsampled = [token for token in tokens if keep(token)]
 
     return oraciones_subsampled, counter_obj
 
