@@ -83,3 +83,6 @@ oraciones_subsampled, counter = subsample(oraciones)
 
 print(f"Original tokens: {sum(len(line) for line in [o.split() for o in oraciones])}")
 print(f"Tokens after subsampling: {sum(len(line) for line in oraciones_subsampled)}")
+print(f"Ten more frequent tokens:")
+for token, freq in counter.most_common(10):
+    print(f"{token}: {freq}")
