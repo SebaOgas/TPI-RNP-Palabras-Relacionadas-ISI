@@ -4,3 +4,221 @@ Ingeniería en Sistemas
 TCP/IP
 
 Teoría General de Sistemas
+
+Arquitectura de software
+Desarrollo de software
+Inteligencia artificial
+Redes de comunicación
+Análisis de datos
+Base de datos
+Seguridad informática
+Desarrollo web
+Sistemas operativos
+Algoritmos de búsqueda
+Computación en la nube
+Interfaz de usuario
+Programación orientada a objetos
+Pruebas de software
+Gestión de proyectos
+Análisis de requisitos
+Modelado de procesos
+Ingeniería de requisitos
+Ciberseguridad avanzada
+Sistema de gestión
+Lenguaje de programación
+Desarrollo ágil
+Internet de las cosas
+Computación distribuida
+Gestión de bases de datos
+Control de versiones
+Redes neuronales
+Machine Learning
+Desarrollo móvil
+Sistemas embebidos
+Ingeniería de software
+Sistemas de información
+Gestión de incidencias
+Arquitectura de red
+Metodología ágil
+Análisis de rendimiento
+Computación cuántica
+Desarrollo de aplicaciones
+Ciencia de datos
+Automatización de procesos
+Arquitectura de software
+Desarrollo de software
+Inteligencia artificial
+Redes de comunicación
+Análisis de datos
+Base de datos
+Seguridad informática
+Desarrollo web
+Sistemas operativos
+Algoritmos de búsqueda
+Computación en la nube
+Interfaz de usuario
+Programación orientada a objetos
+Pruebas de software
+Gestión de proyectos
+Análisis de requisitos
+Modelado de procesos
+Ingeniería de requisitos
+Ciberseguridad avanzada
+Sistema de gestión
+Lenguaje de programación
+Desarrollo ágil
+Internet de las cosas
+Computación distribuida
+Gestión de bases de datos
+Control de versiones
+Redes neuronales
+Machine Learning
+Desarrollo móvil
+Sistemas embebidos
+Ingeniería de software
+Sistemas de información
+Gestión de incidencias
+Arquitectura de red
+Metodología ágil
+Análisis de rendimiento
+Computación cuántica
+Desarrollo de aplicaciones
+Ciencia de datos
+Automatización de procesos
+Diagrama de Clases 
+Diagrama de Transición de Estados 
+Algoritmos recursivos
+Complejidad computacional
+Teoría de grafos
+Algoritmos de optimización
+Unidad central de procesamiento
+Memoria caché
+Unidad de control
+Registros de procesamiento
+Memoria principal
+Memoria secundaria
+Bus de datos
+Pipelines de procesamiento
+Computación paralela
+Sistemas de entradas y salidas
+Interrupciones y gestión de interrupciones
+Procesadores multinúcleo
+Flujo de trabajo
+Modelo de procesos de negocio
+Ciclo de vida
+Enterprise Resource Planning
+Customer Relationship Management
+Modelado de procesos de negocio
+Optimización de procesos
+Indicadores clave de rendimiento
+Recopilación de requisitos
+Especificaciones funcionales
+Modelos de sistemas de información
+Métodos ágiles en análisis
+Diagrama entidad-relación
+Técnicas de recolección de datos
+Ciclo de vida del sistema
+Lenguaje de Modelado Unificado
+Gestión de procesos
+Algoritmos de planificación
+Memoria virtual
+Manejo de archivos
+Sistemas de archivos distribuidos
+Sincronización de procesos
+Interbloqueo
+Gestión de entradas y salidas
+Sistemas operativos en tiempo real
+Gestión de recursos en sistemas distribuidos
+Virtualización de sistemas operativos
+Seguridad en sistemas operativos
+Sistemas de seguridad 
+Sistemas de autenticación
+Planificación de proyectos
+Base de datos relacional
+Consultas de bases de datos
+Sistemas de gestión de bases de datos
+Bases de datos NoSQL
+Bases de datos distribuidas
+Protocolo de comunicación
+Redes de área local
+Redes de área amplia
+Redes privadas virtuales
+Sistemas binarios
+Interfaz de usuario
+Pruebas de usabilidad
+Patrones de diseño
+Requisitos funcionales
+Requisitos no funcionales 
+Diagrama de casos de uso
+Pruebas unitarias
+Pruebas de integración
+Pruebas de aceptación
+Integración continua
+Protocolos de comunicación
+Capa de enlace de datos
+Capa de red
+Redes inalámbricas
+Red Privada Virtual
+Red de Área Local Virtual
+Topologías de red 
+Conmutación de paquetes
+Conmutación de circuitos
+Tráfico de red
+Robótica industrial
+Redes de sensores
+Inteligencia artificial
+Investigación de usuarios
+Mapas de experiencia 
+Diseño responsivo
+Diseño de interfaces adaptativas
+Pruebas de usabilidad
+Diseño de interacción
+Prototipos interactivos
+Diseño de interfaz móvil 
+Diseño inclusivo
+Arquitectura de información
+Estilos de interacción
+Planeación estratégica
+Gestión del cambio
+Toma de decisiones
+Teoría de organizaciones
+Desarrollo organizacional
+Gestión de equipos multidisciplinarios
+Gestión de recursos humanos
+Cultura organizacional
+Trabajo en equipo
+Técnicas de negociación
+Gestión de conflictos
+Matriz FODA 
+Evaluación financiera
+Gestión de contraseñas seguras
+Ataques de denegación de servicio 
+Análisis forense digital
+Gestión de vulnerabilidades
+Control de acceso
+Redes privadas virtuales
+Autenticación multifactor
+Políticas de seguridad de la información
+Incidentes de seguridad
+Cifrado de datos
+Autenticación biométrica
+Seguridad en comunicaciones 
+Auditorías de seguridad
+Gestión de riesgos 
+Protección de la privacidad de datos
+
+Redes de datos
+Tecnologia de la automatizacion
+Diseño ux/ui
+Gestion gerencial 
+Seguridad de los sistemas de información
+Algoritmo y Estructura de Datos 
+Arquitectura de Computadoras
+Sistemas y Procesos de Negocio
+Análisis de Sistemas de Información
+Sistemas operativos 
+Administración de proyectos
+Base de datos
+Comunicacion de datos
+Diseño de sistemas de información
+IngenierÍa y calidad de software
