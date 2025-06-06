@@ -1,0 +1,2439 @@
+Resumen de Sistemas Operativos
+Sebasti´an Og´as
+6 de noviembre de 2022´Indice
+´Indice I
+1. Introducci ´on 1
+1.1. Programas de usuario . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2. Modos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3. Funciones de un sistema operativo . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3.1. M ´aquina extendida . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.3.2. Administrador de recursos . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.4. Partes principales de una computadora . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.4.1. Procesadores (CPU) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.4.2. Memoria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.4.3. Dispositivos de E/S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.4.4. Buses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.5. Arranque de la computadora . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+1.6. Tipos de Sistemas Operativos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+1.6.1. Mainframe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+1.6.2. De servidores . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.6.3. De multiprocesadores . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.6.4. De computadoras personales . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.6.5. De computadoras de bolsillo / PDA (Personal Digital Assistant) . . . . . . . 9
+1.6.6. Integrados / Incrustados / Embedded . . . . . . . . . . . . . . . . . . . . . . 9
+1.6.7. De nodos sensores . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.6.8. En tiempo real . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.6.9. De tarjetas inteligentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.7. Conceptos de los Sistemas Operativos . . . . . . . . . . . . . . . . . . . . . . . . . 10
+1.7.1. Proceso . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+1.7.2. Espacios de direcciones . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+1.7.3. Archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+1.7.4. Entrada/salida . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.7.5. Protecci ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.7.6. Shell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.7.7. Evoluci ´on y obsolecencia . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.8. Llamadas al sistema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+1.8.1. Llamadas al sistema para la administraci ´on de recursos . . . . . . . . . . . . 13
+1.8.2. Llamadas al sistema para la administraci ´on de archivos . . . . . . . . . . . . 14
+1.8.3. Llamadas al sistema para la administraci ´on de directorios . . . . . . . . . . . 14
+III ´INDICE
+1.8.4. Llamadas varias . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.8.5. Windows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+1.9. Estructuras de sistemas operativos . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+2. Procesos 17
+2.1. Modelo del proceso . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+2.2. Creaci ´on de procesos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+2.3. Terminaci ´on de procesos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+2.4. Jerarqu ´ıa de procesos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+2.5. Estados de un proceso . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+2.6. Tabla de procesos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+2.7. Modelado de la multiprogramaci ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+2.8. Hilos de control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+2.9. Formas de construir un servidor . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+2.10. Hilos cl´asicos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+2.11. Hilos en POSIX: Pthreads . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+2.12. Implementaci ´on de hilos seg´un el espacio . . . . . . . . . . . . . . . . . . . . . . . 21
+2.12.1. En el espacio de usuario / ULT (User-Level Threads) . . . . . . . . . . . . . 21
+2.12.2. En el kernel / KLT (Kernel-Level Threads) . . . . . . . . . . . . . . . . . . 22
+2.12.3. H ´ıbridas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.12.4. Problemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.12.5. Activaciones del planificador . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.13. Hilos emergentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.14. Comunicaci ´on entre procesos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+2.14.1. Condiciones de carrera y regiones cr ´ıticas . . . . . . . . . . . . . . . . . . . 23
+2.14.2. Exclusi ´on mutua con espera ocupada . . . . . . . . . . . . . . . . . . . . . 23
+2.14.3. Exclusi ´on mutua con bloqueo . . . . . . . . . . . . . . . . . . . . . . . . . 24
+2.14.4. Otros m ´etodos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+2.15. Planificaci ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+2.15.1. Comportamiento de un proceso . . . . . . . . . . . . . . . . . . . . . . . . 27
+2.15.2. Llamadas al planificador . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+2.15.3. Planificaci ´on en sistemas de procesamiento por lotes . . . . . . . . . . . . . 27
+2.15.4. Planificaci ´on en sistemas interactivos . . . . . . . . . . . . . . . . . . . . . 28
+2.15.5. Planificaci ´on en sistemas de tiempo real . . . . . . . . . . . . . . . . . . . . 29
+2.16. Pol´ıtica contra mecanismo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+2.17. Planificaci ´on de Hilos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+2.17.1. Planificaci ´on de hilos en el espacio de usuario . . . . . . . . . . . . . . . . . 30
+2.17.2. Planificaci ´on de hilos en el kernel . . . . . . . . . . . . . . . . . . . . . . . 30
+2.18. Problemas de sincronizaci ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2.18.1. Interbloqueo (deadlock) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2.18.2. C ´ırculo vicioso / Bloqueo activo (livelock) . . . . . . . . . . . . . . . . . . 33
+2.18.3. Inanici ´on (starvation) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+2.19. IPC: problemas cl´asicos de la comunicaci´on entre procesos . . . . . . . . . . . . . . 33
+2.19.1. Problema de los fil ´osofos comelones . . . . . . . . . . . . . . . . . . . . . . 33
+2.19.2. Problema de los lectores y escritores . . . . . . . . . . . . . . . . . . . . . . 34
+2.19.3. Problema de la barber ´ıa . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34´INDICE III
+3. Administraci ´on de memoria 36
+3.1. Administrador de memoria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+3.2. Sin abstracci ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+3.3. Abstracci ´on con espacios de direcciones . . . . . . . . . . . . . . . . . . . . . . . . 37
+3.4. Registros base y l ´ımite . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+3.5. Intercambio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+3.5.1. Intercambio con mapas de bits . . . . . . . . . . . . . . . . . . . . . . . . . 37
+3.5.2. Intercambio con listas enlazadas . . . . . . . . . . . . . . . . . . . . . . . . 37
+3.6. Memoria virtual . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+3.6.1. Memoria virtual a memoria f ´ısica . . . . . . . . . . . . . . . . . . . . . . . 39
+3.6.2. Entradas en la tabla de procesos . . . . . . . . . . . . . . . . . . . . . . . . 39
+3.6.3. Aceleraci ´on de la paginaci´on: b´ufers de traducci´on adelantada (TLB) . . . . 39
+3.6.4. Memorias extensas: tablas de p ´aginas multinivel . . . . . . . . . . . . . . . 40
+3.6.5. Memorias extensas: tablas de p ´aginas invertidas . . . . . . . . . . . . . . . . 40
+3.6.6. Algoritmos de reemplazo de p ´aginas . . . . . . . . . . . . . . . . . . . . . . 41
+3.6.7. Pol ´ıticas de asignaci´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+3.6.8. Control de carga . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+3.6.9. Tama ˜no de p´agina . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+3.6.10. Espacios separados de instrucciones y datos . . . . . . . . . . . . . . . . . . 44
+3.6.11. Compartici ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+3.6.12. Pol ´ıtica de limpieza . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+3.6.13. Interfaz de memoria virtual . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+3.6.14. Participaci ´on del sistema operativo en la paginaci´on . . . . . . . . . . . . . 46
+3.6.15. Manejo de fallos de p ´agina . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+3.6.16. Respaldo de instrucci ´on (fallida) . . . . . . . . . . . . . . . . . . . . . . . . 47
+3.6.17. E/S y reemplazo de p ´aginas . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+3.6.18. Almac ´en de respaldo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+3.6.19. Pol ´ıtica contra mecanismo . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+3.7. Segmentaci ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+3.7.1. Segmentaci ´on pura . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+3.7.2. Segmentaci ´on con paginaci´on . . . . . . . . . . . . . . . . . . . . . . . . . 49
+4. Archivos 51
+4.1. Almacenamiento de informaci ´on a largo plazo . . . . . . . . . . . . . . . . . . . . . 51
+4.2. Estructuras de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+4.2.1. Secuencia de bytes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+4.2.2. Secuencia de registros . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+4.2.3. ´Arbol de registros . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+4.3. Tipos de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+4.3.1. Regulares . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+4.3.2. Especiales . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+4.4. Acceso a archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+4.5. Atributos de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+4.6. Operaciones de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+4.7. Sistemas de directorios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+4.7.1. Sistemas de directorios de un nivel . . . . . . . . . . . . . . . . . . . . . . . 54IV ´INDICE
+4.7.2. Sistemas de directorios jer ´arquicos . . . . . . . . . . . . . . . . . . . . . . . 54
+4.8. Operaciones de directorios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+4.9. Distribuci ´on del sistema de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+4.10. Implementaci ´on de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+4.10.1. Asignaci ´on contigua . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+4.10.2. Asignaci ´on de lista enlazada . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+4.10.3. Asignaci ´on de lista enlazada con FAT . . . . . . . . . . . . . . . . . . . . . 57
+4.10.4. Nodos-I . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+4.11. Implementaci ´on de directorios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+4.11.1. Acceso a archivos y atributos . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+4.11.2. Tama ˜no de nombres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+4.11.3. Aceleraci ´on de la b´usqueda . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+4.12. Sistemas de archivos alternativos . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+4.12.1. Estructurados por registro (LFS) . . . . . . . . . . . . . . . . . . . . . . . . 58
+4.12.2. Por bit ´acora (JFS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+4.12.3. Virtuales (VFS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+4.13. Administraci ´on del espacio en disco . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+4.13.1. Modos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+4.13.2. Tama ˜no de bloque . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+4.13.3. Bloques libres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+4.13.4. Cuotas de disco . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+4.14. Respaldo del sistema de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+4.15. Consistencia del sistema de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+4.16. Rendimiento del sistema de archivos . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+4.16.1. Cach ´es . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+4.16.2. Lectura adelantada de bloque . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+4.16.3. Reducci ´on del movimiento del brazo del disco . . . . . . . . . . . . . . . . 64
+4.16.4. Desfragmentaci ´on del disco . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+5. Entradas y Salidas 65
+5.1. Tipos de dispositivos de Entrada/Salida . . . . . . . . . . . . . . . . . . . . . . . . 65
+5.2. Comunicaci ´on con los dispositivos de Entrada/Salida . . . . . . . . . . . . . . . . . 65
+5.3. Entradas y Salidas mediante puertos y por asignaci ´on de memoria . . . . . . . . . . 65
+5.4. Acceso Directo a Memoria (DMA) . . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+5.5. Interrupciones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+5.6. Objetivos del software de E/S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+5.7. Maneras de realizar la E/S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+5.7.1. E/S programada . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+5.7.2. E/S controlada por interrupciones . . . . . . . . . . . . . . . . . . . . . . . 69
+5.7.3. E/S mediante DMA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+5.8. Capas del software de E/S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+5.8.1. Manejadores de interrupciones . . . . . . . . . . . . . . . . . . . . . . . . . 69
+5.8.2. Controladores de dispositivos . . . . . . . . . . . . . . . . . . . . . . . . . 70
+5.8.3. Software independiente del dispositivo . . . . . . . . . . . . . . . . . . . . 70
+5.8.4. Software de E/S de usuario . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+5.9. Discos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71´INDICE V
+5.9.1. Discos magn ´eticos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+5.9.2. Discos ´opticos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+5.10. Relojes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+5.10.1. Hardware . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+5.10.2. Tareas de la controladora del reloj . . . . . . . . . . . . . . . . . . . . . . . 74
+5.10.3. Temporizadores de software . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+5.11. Interfaces de usuario . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+5.11.1. Teclado . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+5.11.2. Rat ´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+5.11.3. Interfaces Gr ´aficas de Usuario (GUIs) . . . . . . . . . . . . . . . . . . . . . 76
+5.12. Clientes delgados . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+5.13. Administraci ´on de la energ´ıa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+Glosario 78
+Siglas 79
+Bibliograf´ıa 81Cap´ıtulo 1
+Introducci´on
+1.1 Programas de usuario (Tanenbaum, 2009, p. 1)
+shell: l´ınea de comandos
+GUI: Graphical User Interface, Interfaz Gr´afica de Usuario
+1.2 Modos (Tanenbaum, 2009, p. 1-2)
+Kernel/n´ucleo/supervisor: sin restricciones, tiene acceso a todo lo que el nivel ISA (Instruc-
+tion Set Architecture, Set de Instrucciones de la Arquitectura) permita. El sistema operativo se
+ejecuta en este modo.
+Usuario: no puede ejecutar cualquier instrucci ´on por motivos de seguridad, en particular aque-
+llas relacionadas al control de la m´aquina o las E/S (entradas y salidas).
+1.3 Funciones de un sistema operativo (Tanenbaum, 2009, p. 4-7) (Stallings,
+2005, p. 54-57)
+12 CAP´ITULO 1. INTRODUCCI´ON
+1.3.1. M ´aquina extendida
+El sistema operativo toma la interfaz compleja y t´ecnica provista por una arquitectura y laabstrae,
+ofreciendo una interfaz m´as sencilla a los programas y sus desarrolladores.
+Se suele proporcionar servicios para:
+Desarrollo de programas
+Ejecuci´on de programas
+Acceso a dispositivos de E/S
+Acceso controlado a los archivos
+Acceso al sistema
+Detecci´on y respuesta a errores
+Contabilidad (estad´ısticas de uso y par´ametros de rendimiento)
+1.3.2. Administrador de recursos
+El sistema operativo decide c ´omo distribuir (multiplexar) los recursos (CPU, Memoria, E/S y
+buses) cuando varias rutinas los requieren, en el espacio (dividi´endolos) y en el tiempo (turn´andose).
+1.4 Partes principales de una computadora (Tanenbaum, 2009, p. 19-32)
+(Stallings, 2005, p. 10-37)
+1.4.1. Procesadores (CPU)
+Ciclo b ´asico: obtener una instrucci ´on de memoria (ciclo de b ´usqueda), decodificarla y ejecutar-
+la (ciclo de ejecuci ´on). La acci ´on que realiza una instrucci ´on suele entrar en una de las siguientes
+categor´ıas:1.4. PARTES PRINCIPALES DE UNA COMPUTADORA 3
+Procesador-memoria
+Procesador-E/S
+Procesamiento de datos
+Control
+M´etodos para mejorar el rendimiento:
+Canalizaci´on (pipeline): hay una unidad dedicada a cada proceso del ciclo b ´asico, permitiendo
+la obtenci´on, decodificaci´on y ejecuci´on simult´anea de instrucciones consecutivas.
+CPU superescalar: hay m ´ultiples unidades dedicadas a cada proceso del ciclo b ´asico, siendo
+cada unidad de ejecuci ´on espec´ıfica a un tipo de instrucci ´on. Luego de ser decodificadas, las
+instrucciones son colocadas en un b ´ufer de contenci ´on, del cu ´al las unidades de ejecuci ´on las
+obtienen.
+Registros:
+Generales: para variables y resultados temporales
+PC: Contador de programa
+IR: Registro de instrucciones
+SP: Apuntador de Pila (Stack Pointer, apunta a su cima)
+PSW: Palabra de Estado del Programa (Program Status Word, almacena bits de control como
+resultados de comparaci´on, prioridad de la CPU o modo kernel o usuario)
+RDIM, RDAM: Registros de Direcciones/Datos de Memoria.
+RDIE/S, RDAE/S: Registros de Direcciones/Datos de E/S.
+Registros ´ındice
+Registros puntero de segmento
+Llamadas al sistema: llamada a procedimiento en modo kernel por un programa en modo usuario.
+Se realizan mediante la instrucci´on TRAP / INT.
+Ley de Moore: el n´umero de transistores en un chip se duplica cada 18 meses.
+Multihilamiento (multithreading): una CPU act´ua como m´ultiples, con hilos de ejecuci´on/threads
+que pueden ser alternados. No es paralelismo, pero funciona bien por la ley de Moore.
+Multin´ucleo (multicore): m´ultiples procesadores conectados por cach ´es dentro de una CPU. Es
+paralelismo verdadero.4 CAP´ITULO 1. INTRODUCCI´ON
+1.4.2. Memoria
+Hay tres par´ametros principales que definen a una memoria y su uso indicado: velocidad, tama˜no
+y costo. En general, a mayor velocidad, menor tama˜no y mayor costo. As´ı, se define una jerarqu´ıa de
+memoria, de mayor a menor velocidad:
+Registros: igual de veloces que la CPU, tama ˜no de 32 x 32 bits o 64 x 64 bits dependiendo de
+la CPU.
+Cach´e: usada para acceso m´as veloz a datos almacenados en la memoria principal que son utili-
+zados com´unmente. La memoria principal se divide en l´ıneas de cach´e, que hacen corresponder
+a 64 bytes de memoria principal a una l´ınea de cach´e. Cuando un procedimiento quiere obtener
+un dato de memoria, primero busca en las cach´es. Tipos de cach´e:
+• L1: de 16kB, sin retraso
+• L2: de varios mB, con retraso de uno o dos ciclos de reloj
+Memoria principal: es una RAM, se borra al apagarse la computadora
+Discos magn´eticos (disco duro): es el doble de econ´omico y suele tener el doble de tama˜no que
+una RAM, pero es unas tres veces m ´as lento que esta. Esto se debe a que es mec ´anico. Tiene
+cilindros compuestos por pistas, las cuales son le´ıdas por la cabeza de un brazo.1.4. PARTES PRINCIPALES DE UNA COMPUTADORA 5
+Cintas magn´eticas: Es mec´anica, suele utilizarse para respaldar datos en discos.
+Otros:
+• ROM (Read-Only Memory): es escrita en la f ´abrica y no puede ser borrada. Suele ser
+usada para el cargador de arranque (bootstrap loader), y en algunas tarjetas de E/S.
+• EEPROM (Electrically Erasable PROM) y flash: pueden ser borradas y reescritas, pero
+esto es muy lento.
+• CMOS: vol ´atil, pero consume muy poca energ´ıa. Suele utilizarse para guardar la fecha y
+hora actuales.
+1.4.3. Dispositivos de E/S
+Consiste en el dispositivo controlador y el dispositivo en s´ı.
+El dispositivo en s ´ı tiene una interfaz simple est ´andar (para los discos, a esto se lo llama IDE
+(Integrated Drive Electronics, Electr ´onica de Unidad Integrada)). El controlador se conecta con el
+dispositivo en s´ı, y ofrece una interfaz distinta al sistema operativo.
+El driver es un software que se comunica con el controlador, y se requiere uno por cada sistema
+operativo que soporte a un tipo de controlador espec ´ıfico. Requiere ejecutarse en modo kernel, por
+lo que debe pasar a formar parte de este. Es com ´un necesitar reiniciar la computadora para instalar
+drivers (como en Windows o antiguos sistemas UNIX), aunque tambi´en existen drivers que se cargan
+en forma din´amica.
+Dependiendo de la arquitectura de la computadora, se pueden requerir instrucciones especialesIN
+y OUT para E/S (si los registros de dispositivos se colocan en puertos de E/S especiales). Sin embargo,
+estas instrucciones no son necesarias si los registros de dispositivos se corresponden con el espacio
+de direcciones de sistemas operativos.
+M´etodos de E/S:
+Espera ocupada: el driver inicia la operaci´on y espera a que termine el dispositivo. No se puede
+hacer nada mientras tanto.
+Interrupciones: el driver inicia la operaci ´on. El controlador genera una interrupci ´on una vez
+que el dispositivo en s´ı termina. Esta interrupci´on ejecuta un manejador(handler) que pertenece
+al driver, y se ubica en una parte de la memoria apuntada por un elemento en un vector de
+interrupci´on.
+DMA (Direct Memory Access): utiliza un chip especial llamado DMA que maneja la comuni-
+caci´on entre el controlador y la memoria. La CPU lo configura al inicio, y lo deja trabajar.
+La interrupciones pueden ser:
+De programa
+Por temporizador (de reloj)
+De E/S
+Por fallo del hardware6 CAP´ITULO 1. INTRODUCCI´ON
+Cuando ocurre una interrupci´on, primero debe terminar de ejecutarse la instrucci´on actual (ciclos
+de b´usqueda y ejecuci´on) para luego ejecutarse un ciclo de interrupci´on.
+Ejemplo de ciclo de interrupci´on:
+Las interrupciones pueden suceder en momentos inconvenientes; all ´ı pueden manejarse de dos
+formas:
+SI: Biestable Sistema de Interrupciones. Permite bloquear las interrupciones, lo cual ocurre si
+ya se est´a manejando una.
+Priorizaci´on: se definen prioridades a la hora de atender interrupciones. Si ya se est´a atendiendo
+una y otra aparece, esta solo ser´a atendida si tiene mayor prioridad (interrumpiendo la anterior).
+1.4.4. Buses
+Originalmente, sol´ıa usarse un ´unico bus, pero con el aumento de la velocidad de los dispositivos
+se hizo necesaria la implementaci´on de otros, normalmente:1.4. PARTES PRINCIPALES DE UNA COMPUTADORA 7
+ISA (Industry Standard Architecture (Bus)): usado para mantener compatibilidad con tarjetas
+de E/S antiguas; obsoleto
+PCI (Peripheral Component Interconnect) y PCI Express: sucesores de ISA, m´as veloces
+USB (Universal Serial Bus, Bus Serial Universal): conecta con dispositivos de E/S lentos, sumi-
+nistr´andolos de energ´ıa a la vez. Tiene un solo controlador, por lo que no es necesario reiniciar
+al agregar dispositivos USB
+SCSI (Small Computer System Interface): bus de alto rendimiento para dispositivos veloces
+que requieren un gran ancho de banda
+IDE (Integrated Drive Electronics, Electr´onica de Unidad Integrada): conecta perif´ericos como
+discos duros y CD-ROM.
+IEEE 1394: bus de bits en serie m´as veloz que USB, pero sin un solo controlador central.
+De Memoria
+Local
+De Cach´e: conecta la CPU y el cach´e L2
+Plug and play: sistema que permite asignar la informaci ´on de los dispositivos de E/S, los nive-
+les de interrupci ´on y las direcciones de E/S de forma centralizada. Esto es para evitar que distintos
+perif´ericos interfieran entre s´ı porque de no estar, por ejemplo, podr´ıan sobrescribir su informaci´on.8 CAP´ITULO 1. INTRODUCCI´ON
+1.5 Arranque de la computadora (Tanenbaum, 2009, p. 33)
+En las tarjetas madre, en una memoria flash, se encuentra un programa llamado BIOS (Basic
+Input/Output System, Sistema B´asico de E/S).
+Al arrancar la computadora:
+1. Se ejecuta el BIOS
+a) Comprueba la RAM instalada
+b) Explora los buses ISA y PCI, detectando los dispositivos conectados (heredados (antes de
+plug and play) y no heredados)
+c) Configura los dispositivos que no estaban la ´ultima vez
+d) Comprueba una lista de dispositivos almacenada en la memoria CMOS, determinando el
+dispositivo de arranque seg´un la siguiente prioridad:
+1) Disco flexible
+2) CD-ROM
+3) Disco duro
+2. Se ejecuta un programa que se encuentra al inicio del dispositivo de arranque
+a) Lee una tabla de particiones al final del sector de arranque y determina la partici ´on activa
+b) Lee un cargador de arranque secundario de la partici ´on activa
+3. Se ejecuta el sistema operativo de la partici ´on activa
+a) Pide al BIOS la informaci ´on de configuraci´on
+b) Comprueba que tenga los drivers de todos los dispositivos. Solicita al usuario que instale
+los faltantes
+c) Carga los drivers en el kernel
+d) Inicialia sus tablas, crea los procesos de segundo plano requeridos y arranca un programa
+de inicio de sesi´on
+1.6 Tipos de Sistemas Operativos (Tanenbaum, 2009, p. 33-37) (Stallings, 2005,
+p. 79-82, 172-174)
+1.6.1. Mainframe
+Son para computadoras que ocupan una habitaci ´on entera, con mucha memoria y capacidad para
+E/S. Ofrecen tres tipos de servicios:
+Procesamiento por lotes: para trabajos de rutina, sin un usuario interactivo presente
+Procesamiento de transacciones: maneja grandes cantidades de peque˜nas peticiones
+Tiempo compartido: permite que m ´ultiples usuarios remotos ejecuten trabajos en la compu-
+tadora simult´aneamente1.6. TIPOS DE SISTEMAS OPERATIVOS 9
+1.6.2. De servidores
+Dan servicio a varios usuarios por una red y les permite compartir los recursos.
+1.6.3. De multiprocesadores
+Conectan varias CPU a un mismo sistema. Seg ´un la forma en que un sistema operativo asigna
+procesos a los procesadores, puede ser:
+SMP significa Symmetric Multiprocessing, y hace referencia a un sistema de computaci ´on
+multiprocesador en el que todos tienen acceso a los mismos recursos y pueden realizar las
+mismas funciones. Cada procesador realiza su propia planificaci´on de procesos.
+Maestro-esclavo consiste en un procesador central, en el cu ´al se ejecuta el n ´ucleo del sistema
+operativo y se planifican los procesos de todos los otros procesadores.
+Cluster; a diferencia de los anteriores (multiprocesadores de memoria compartida), en este
+esquema cada procesador tiene su propia memoria.
+1.6.4. De computadoras personales
+Proporcionan buen soporte para un solo usuario.
+1.6.5. De computadoras de bolsillo / PDA (Personal Digital Assistant)
+Para computadoras de peque˜no tama˜no que realizan una variedad de funciones
+1.6.6. Integrados / Incrustados / Embedded
+Para computadoras que no aceptan software instalado por el usuario, pues se ubica en una ROM.
+Usado en autos, microondas y reproductores de MP3, etc.
+1.6.7. De nodos sensores
+Para redes de peque ˜nas computadoras que se comunican inal ´ambricamente. Suelen trabajar en
+ambientes hostiles, desatendidas por largos periodos y con energ´ıa limitada, por lo que debe soportar
+eventuales fallas en sus nodos.
+1.6.8. En tiempo real
+El tiempo es un par´ametro clave. Si puede tolerar alguna falla, se dice que es suave; caso contrario,
+es duro. Se suelen utilizar en la industria (duros) o en sistemas de audio digital o tel ´efonos digitales
+(suaves).
+1.6.9. De tarjetas inteligentes
+Para dispositivos del tama˜no de una tarjeta de cr´edito, por lo que son muy peque˜nos y tienen pocas
+funciones, frecuentemente una sola.10 CAP´ITULO 1. INTRODUCCI´ON
+1.7 Conceptos de los Sistemas Operativos (Tanenbaum, 2009, p. 37-49)
+1.7.1. Proceso
+Programa en ejecuci´on.
+Pueden ejecutarse muchos a la vez, y ser suspendidos de forma temporal.
+El sistema operativo guarda una tabla de procesos, que guarda estructuras con informaci´on acerca
+de cada proceso.
+Cada proceso consiste en su imagen de n ´ucleo (espacio de direcciones) y su entrada en la tabla
+de procesos.
+Un proceso puede crear procesos hijos, creando as´ı un ´arbol de procesos.
+Una se˜nal (entre procesos) es al software lo que una interrupci´on es al hardware.
+Los procesos pueden comunicarse entre s ´ı. Estos, pueden estar o no esperando la comunicaci ´on.
+Si no la esperan y transcurre un cierto tiempo, se la considera perdida y se env´ıa una se˜nal de alarma
+al proceso emisor para que reenv´ıe los datos, suspendi´endolo temporalmente.
+Cada persona autorizada a usar un sistema tiene una UID (User Identificacion), y cada proceso
+guarda la UID de quien lo inici ´o. Los usuarios pueden pertenecer a un grupo, los cuales tienen una
+GID (Group Identification).
+Existe un superusuario con poder especial, al que solo pueden acceder los administradores con
+una contrase˜na.
+1.7.2. Espacios de direcciones
+Cada proceso guarda un conjunto de direcciones que puede utilizar, desde 0 hasta un valor m ´axi-
+mo. Si este valor m´aximo excede el espacio disponible en la memoria principal, se puede almacenar
+parte del programa en disco e irlo cargando en memoria a medida que es requerido. Esto se llama
+memoria virtual.
+Tambi´en se pueden almacenar varios procesos en memoria simult´aneamente, y para evitar que in-
+terfieran entre s´ı y con el sistema operativo se implementa un mecanismo de protecci´on por hardware,
+el cual es controlado por el software.
+1.7.3. Archivos
+Un sistema de archivos es un ´arbol de archivos organizados en directorios, que buscan ocultar las
+peculiaridades de los discos y otros dispositivos de E/S.
+Un nombre de ruta es una cadena que permite identificar un archivo en el sistema de archivos. Es
+absoluto si se comienza a buscar desde el directorio ra´ız (comienza con / en UNIX); caso contrario se
+comienza a buscar desde el directorio de trabajo actual de un proceso.
+Al intentar abrir un archivo, se comprueban los permisos y devuelve un entero llamado descriptor
+para ser utilizado para leer y escribir en ´el.
+Un sistema de archivos montado permite unir dos sistemas distintos en uno solo, al hacer que un
+directorio vac´ıo del primero apunte al directorio ra´ız del otro.
+Los dispositivos de E/S pueden ser vistos como archivos, para realizar operaciones de E/S con las
+mismas llamadas que para leer y escribir en archivos. Esto se logra con los archivos especiales. Hay
+dos tipos:1.7. CONCEPTOS DE LOS SISTEMAS OPERATIVOS 11
+De bloque: modelan dispositivos como discos, que contienen un conjunto de bloques de acceso
+aleatorio y permite acceder a ellos de forma directa, sin importar la estructura del sistema de
+archivos que contenga.
+De car´acter: modelan dispositivos como impresoras o m ´odems, que emiten o reciben un flujo
+de caracteres.
+Un canal (pipe) es un pseudoarchivo que permite la comunicaci ´on entre procesos, utilizando las
+mismas operaciones de lectura y escritura.
+1.7.4. Entrada/salida
+Existe un subsistema de E/S en todo sistema operativo, con partes tanto dependientes como inde-
+pendientes del dispositivo.
+1.7.5. Protecci ´on
+Se refiere a la necesidad de los usuarios de ocultar informaci ´on. Hay sistemas para limitar el
+acceso a otros usuarios, y sistemas para proteger de intrusos no deseados (atacantes o virus).
+En UNIX, respecto a la protecci ´on de archivos y directorios, cada uno tiene un campo de 9 bits
+dividido en 3 subcampos de 3 bits. Los subcampos se refieren al usuario, al grupo del usuario y a
+otros usuarios fuera del grupo. Los bits de cada subcampo se refieren a los permisos para leer, escribir
+y ejecutar (o buscar, si es un directorio) (rwx).
+1.7.6. Shell
+Se refiere a un int´erprete de comandos. Hay muchos shells para distintos sistemas operativos.
+Tienen un caracter indicador de comandos (como $).
+Para invocar un programaa se escribe su nombre.
+Para indicar que la entrada de un programa NO es la est´andar (shell), se usa el operador <; y para
+indicar que la salida no es la est´andar, se usa el operador >.
+Para crear un canal (pipe), se usa el operador |, el cual indica al programa a la derecha que su
+entrada est´andar es la salida del de la izquierda.
+El signo & al final de un comando indica que se debe ejecutar en segundo plano.
+1.7.7. Evoluci ´on y obsolecencia
+El avance de la tecnolog´ıa hace que algunas se vuelvan obsoletas, pero a su vez puede provocar
+que otras consideradas obsoletas resurjan.
+Memorias extensas: las memorias peque ˜nas exigen un muy buen manejo del espacio dispo-
+nible. Por esto, suelen ser programadas en ensamblador. Con los aumentos en capacidad, se
+vuelve viable programar con lenguajes de mayor nivel; pero al desarrollar nuevas computado-
+ras con memorias m´as peque˜nas, suele volver la necesidad de usar ensamblador.
+Hardware de protecci ´on: la multiprogramaci ´on exige hardware de protecci ´on que evite que
+un proceso utilice memoria fuera de su imagen de n´ucleo, pero tambi´en aumenta la complejidad
+requerida por el hardware y el sistema operativo. Por esto, al desarrollar nuevos procesadores12 CAP´ITULO 1. INTRODUCCI´ON
+muchas veces no han tenido hardware de protecci´on ni multiprogramaci´on, pero con el tiempo
+suelen agregar soporte.
+Discos: los dispositivos de almacenamiento de peque ˜na capacidad no requieren un sistema de
+archivos complejo; con un solo directorio alcanza. Al desarrollarse avances en los discos, a
+veces han vuelto a ser usados estos sistemas de un directorio.
+Memoria virtual: permite ejecutar programas m ´as grandes que la memoria principal, y ligar
+din´amicamente bibliotecas en tiempo de ejecuci´on.
+1.8 Llamadas al sistema (Tanenbaum, 2009, p. 49-61)
+Son similares a un procedimiento, con las diferencias de que: se ejecutan en modo kernel y son
+activadas por la instrucci´on TRAP.
+TRAP suele tomar un campo de 8 bits que corresponden al ´ındice de una tabla que contiene apun-
+tadores a manejadores de llamadas al sistema.
+Un procedimiento de biblioteca provee una interfaz para los lenguajes de programaci´on para reali-
+zar las llamadas al sistema, colocando los par´ametros en los registros correspondientes y devolviendo
+el valor requerido.
+1.8. LLAMADAS AL SISTEMA 13
+1.8.1. Llamadas al sistema para la administraci ´on de recursos
+fork crea una copia del proceso; su valor de retorno es 0 en el hijo y pid (process identifier)
+en el padre.
+waitpid espera a que finalice un proceso hijo espec´ıfico o cualquiera (si el pid pasado es -1),
+y se coloca el valor de retorno del hijo en statloc.14 CAP´ITULO 1. INTRODUCCI´ON
+exit finaliza un proceso y devuelve el status.
+execve sustituye toda la imagen de n´ucleo del proceso por el archivo especificado en el primer
+par´ametro.
+1.8.2. Llamadas al sistema para la administraci ´on de archivos
+open abre un archivo para lectura, escritura, ambas o lo crea. Devuelve un fd (file descriptor).
+close para cerrar un archivo y liberar el fd.
+read, write leen o escriben a un archivo.
+lseek mueve el apuntador de posici´on de un archivo respecto del inicio, fin o posici´on actual.
+stat, fstat permiten accesso a informaci´on de un archivo (modo (regular, especial, directo-
+rio, etc.), tama˜no, ´ultima modificaci´on, etc.).
+1.8.3. Llamadas al sistema para la administraci ´on de directorios
+En UNIX, todo archivo tiene un n ´umero ´unico (inumber) que lo identifica. Este es un ´ındice en
+una tabla de inodes, uno por archivo, que indican su propietario, sus bloques en disco, cantidad de
+enlaces, etc.
+Un directorio es un archivo que contiene un conjunto de pares: un inumber y un nombre.
+mkdir, rmdir crean o remueven un directorio vac´ıo.
+link crea un enlace a un archivo, permitiendo acceder a este bajo distintas rutas.
+unlink elimina un enlace. Si este era el ´ultimo a un archivo, se elimina el archivo.
+mount, umount monta o desmonta un sistema de archivos, permitiendo integrar una jerarqu´ıa
+de archivos.
+1.8.4. Llamadas varias
+chdir cambia el directorio de trabajo
+chmod cambia los bits de protecci´on de un archivo (rwx-rwx-rwx)
+kill env´ıa una se ˜nal a un proceso. Si el proceso est ´a preparado para recibirla, se ejecuta un
+manejador de se˜nales; caso contrario lo mata.
+time devuelve la cantidad de segundos desde el 1 de enero de 1970 a medianoche.1.9. ESTRUCTURAS DE SISTEMAS OPERATIVOS 15
+1.8.5. Windows
+Microsoft provee la API Win32, una biblioteca con procedimientos que forman la interfaz de los
+programadores con el sistema operativo desde Windows 95.
+No todos los procedimientos que provee involucran llamadas al sistema, y esto puede incluso
+variar entre versiones de Windows (la GUI es manejada por el kernel en algunas, pero no en todas).
+1.9 Estructuras de sistemas operativos (Tanenbaum, 2009, p. 62-72) (Sta-
+llings, 2005, p. 76-79)
+Sistemas monol´ıticos: el sistema operativo es una colecci ´on de procedimientos, y se ejecuta
+como un solo programa en modo kernel. No hay ocultamiento de informaci ´on, pero se logra
+cierta estructura al clasificar los procedimientos en programa principal, de servicio (activan las
+TRAP) y utilitarios (ayudan a los de servicio).16 CAP´ITULO 1. INTRODUCCI´ON
+Sistema de capas: el sistema operativo divide los procesos en capas o anillos, cada uno depen-
+diendo de la capa anterior y con menos privilegios mientras mayor sea el nivel. Ejemplos: THE
+y MULTICS. Una propuesta para sistema operativo de este tipo es hecha por Brown, R. y Den-
+ning, P., con 13 capas agrupadas en tres grupos: hardware (primeras 4 capas, no son el sistema
+operativo en s´ı), procesador ´unicamente (capas 5 a 7) y dispositivos externos (capas 8 a 13).
+Microkernel: sistema operativo en capas que busca reducir al m ´aximo el tama ˜no del kernel,
+para as´ı volverlo menos propenso a errores.
+Modelo cliente-servidor: se clasifican los procesos en servidores y clientes, tal que los clientes
+env´ıan un mensaje a los servidores, estos los procesan y responden. Este modelo puede ser
+usado tanto en redes como en una misma computadora.
+M´aquinas virtuales: se refieren a un sistema operativo que se ejecuta en simult ´aneo con otros.
+Puede implementarse como hipervisores de tipo 1 (se ejecuta directamente sobre el hardware)
+o de tipo 2 (se ejecuta sobre otro sistema operativo).
+Exokernel: otro m ´etodo para implementar m ´aquinas virtuales, consiste en crear una capa de-
+bajo de los kernels llamada exokernel, programa encargado de asignar recursos a las m´aquinas
+virtuales y comprobar que ninguna intente usar los de las otras.Cap´ıtulo 2
+Procesos
+2.1 Modelo del proceso (Tanenbaum, 2009, p. 83-86)
+Consiste en la idea de que todo el software ejecutable se organiza en varios procesos secuenciales.
+Un proceso es una actividad, que tiene un programa, una entrada, una salida y un estado.
+En cada CPU solo se puede ejecutar un proceso a la vez, por lo que para lograr un pseudoparale-
+lismo cada proceso debe tener su propio contador de programa.
+2.2 Creaci ´on de procesos (Tanenbaum, 2009, p. 86-88)
+Pueden ser creados por:
+Arranque del sistema: tanto procesos en primer plano (que interact´uan con el usuario) como en
+segundo plano (demonios / daemons).
+Ejecuci´on de una llamada al sistema desde otro proceso.
+Petici´on de usuario (por comando o con doble clic en un ´ıcono, por ejemplo).
+Inicio de un trabajo por lotes (al enviar trabajos de procesamiento por lotes a mainframes, que
+los coloca en una cola de entrada y los ejecuta creando un proceso cuando puede).
+2.3 Terminaci ´on de procesos (Tanenbaum, 2009, p. 88-89)
+Salida normal (voluntaria)
+Salida por error (voluntaria)
+Error fatal (involuntaria)
+Eliminado por otro proceso (involuntaria)
+1718 CAP´ITULO 2. PROCESOS
+2.4 Jerarqu ´ıa de procesos (Tanenbaum, 2009, p. 89)
+Se refiere a la estructura que surge al un proceso padre crear procesos hijos.
+En Windows no existe, pues si bien el padre recibe un token (manejador) al crear al hijo que le
+permite controlarlo, no hay restricciones de pasar el token a otros procesos, invalidando la jerarqu´ıa.
+En UNIX s´ı existe. Un proceso y todos sus descendientes forman un grupo de procesos. Adem´as,
+todos los procesos pertenecen a un mismo grupo llamado de ra ´ız init, que es el proceso llamado al
+ejecutar el sistema operativo.
+2.5 Estados de un proceso (Tanenbaum, 2009, p. 90-91) (Stallings, 2005, p. 117-
+120)
+El planificador de procesos es una parte del sistema operativo que asigna la CPU a los distintos
+procesos para lograr el pseudoparalelismo. Se encarga de alternar entre los estados “En ejecuci ´on” y
+“Listo”.
+Cuando un proceso requiere una entrada que no est´a lista, su estado pasa a “Bloqueado” y, cuando
+finalmente lo est´e, pasa a “Listo”.
+Tambi´en se puede considerar la existencia de otros dos estados adicionales: “Nuevo” y “Saliente”.
+2.6 Tabla de procesos (Tanenbaum, 2009, p. 91-93)
+Los sistemas operativos mantienen una tabla de procesos, con una entrada (llamada bloque de
+control de procesos (BCP)) por procesos. Cada entrada contiene, por lo general (depende del sistema
+operativo):2.7. MODELADO DE LA MULTIPROGRAMACI´ON 19
+Gracias a esta tabla es que funcionan el planificador de procesos y las interrupciones.
+Las interrupciones son manejadas seg´un el algoritmo:
+1. El hardware mete a la pila los registros del proceso.
+2. El hardware coloca en el contador de programa la direcci ´on en el vector de interrupciones
+asociada al servicio de interrupci´on correspondiente.
+3. Se guardan los registros en la entrada de la tabla de procesos y se los quita de la pila.
+4. Se establece una nueva pila para el manejador de la interrupci ´on.
+5. Se ejecutra el servicio de interrupciones.
+6. El planificador decide el siguiente proceso a ejecutar.
+7. Se cargan los registros y el mapa de memoria del siguiente proceso.
+8. Se ejecuta el siguiente proceso.
+2.7 Modelado de la multiprogramaci ´on (Tanenbaum, 2009, p. 93-95)
+UsoCPU = 1 − pn
+p: porcentaje del tiempo de un proceso en espera de completar una operaci´on de E/S.
+n: grado de multiprogramaci´on: cantidad de procesos en memoria a la vez.20 CAP´ITULO 2. PROCESOS
+2.8 Hilos de control (Tanenbaum, 2009, p. 95-97)
+“Miniprocesos” que forman parte de un proceso y se ejecutan en cuasi-paralelo. M ´ultiples hilos
+creados por un proceso comparten su mismo espacio de direcciones.
+Son m´as r´apidos de crear, intercambiar y eliminar que los procesos, permiten ejecutar actividades
+de forma que no interfieran con otras y pueden aumentar el rendimiento en procesadores multin´ucleo.
+2.9 Formas de construir un servidor (Tanenbaum, 2009, p. 97-100)
+2.10 Hilos cl ´asicos (Tanenbaum, 2009, p. 100-104)
+Multihilamiento es la presencia de m ´ultiples hilos en un mismo proceso. Para funcionar en una
+sola CPU, se van turnando (como los procesos), y para ello se requieren 4 estados: en ejecuci ´on,
+bloqueado, listo o terminado.
+Los procesos poseen algunos datos a los que, por compartir espacio de memoria, sus hilos pueden
+acceder; pero los hilos tambi ´en tienen sus datos propios necesarios para su funcionamiento. Si bien
+no hay protecci ´on para que un hilo modifique los elementos de otro, esto no deber ´ıa ser necesario,
+pues los hilos deben cooperar entre s´ı (a diferencia de los procesos).2.11. HILOS EN POSIX: PTHREADS 21
+Existen procedimientos de biblioteca para manipular hilos similares a aquellos para los procesos:
+thread create, thread exit, thread join, thread yield (crear hilo, salir del hilo, bloquear
+hilo llamador hasta que otro retorne, entregar la CPU para otros hilos)
+2.11 Hilos en POSIX: Pthreads (Tanenbaum, 2009, p. 104-106)
+El IEEE ha definido un est´andar llamado 1003.1c, con un paquete Pthreads, usado por la mayor´ıa
+de los sistemas UNIX.
+Cada hilo Pthreads tiene un identificador, un conjunto de registros y un conjunto de atributos.
+Pthreads ofrece m´as de 60 llamadas para manipular hilos, algunas son:
+2.12 Implementaci ´on de hilos seg´un el espacio (Tanenbaum, 2009, p. 106-
+112) (Stallings, 2005, p. 165-169)
+2.12.1. En el espacio de usuario / ULT (User-Level Threads)
+Son muy veloces. Cada proceso tiene una tabla de hilos y se encarga de administrarla, lo que
+permite algoritmos de planificaci ´on personalizados de ser necesarios. Pueden implementarse inde-
+pendientemente del soporte del sistema operativo.
+Las llamadas al sistema pueden producir bloqueos, y estos son en el proceso en s ´ı, por lo que el
+sistema operativo no puede saber que es solo un hilo el que no puede avanzar, y forzar´a un cambio de
+contexto entre procesos (que es m ´as costoso que entre hilos). Esto puede evitarse comprobando si la
+llamada al sistema producir´ıa un bloqueo, tal t´ecnica se llama jacketing. Los fallos de p´agina (salto a22 CAP´ITULO 2. PROCESOS
+una instrucci´on fuera de la memoria principal) tambi´en bloquean el proceso hasta que se haya cargado
+la memoria necesaria. Es requerido que un hilo renuncie a la CPU para que otros puedan ejecutarse.
+2.12.2. En el kernel / KLT (Kernel-Level Threads)
+La tabla de hilos se encuentra en el kernel. Al realizar llamadas al sistema, se bloquea el hilo y no
+el proceso, por lo que el planificador puede decidir si ejecutar un hilo del mismo u otro proceso. Lo
+mismo ocurre con los fallos de p´agina.
+Son lentos, debido al costo de procesamiento de las llamadas al sistema, en especial para crear y
+destruir hilos.
+2.12.3. H ´ıbridas
+Tiene hilos en el kernel, y a cada uno de ellos le corresponde un conjunto de hilos en el espacio
+de usuario. Esto es as´ı para obtener mayor velocidad (al no crear y destruir tantos hilos del kernel) y
+flexibilidad.
+2.12.4. Problemas
+Al crear un procedimiento con fork, ¿se deben replicar todos los hilos o solo uno?
+Las se˜nales se env´ıan a los procesos, no hilos. ¿Qu´e hilo deber´ıa encargarse de recibirlas?
+2.12.5. Activaciones del planificador
+Busca la eficiencia de la implementaci ´on en el espacio de usuario con la funcionalidad de ha-
+cerlo en el kernel. Lo logra evitando transiciones innecesarias entre el usuario y el kernel. Tambi ´en,
+enviando una llamada ascendente (upcall) del kernel al sistema en tiempo de ejecuci ´on para infor-
+mar del bloqueo de un hilo y replanificar los hilos en el espacio de usuario, y enviando otra llamada
+ascendente cuando un proceso bloqueado est´a listo.
+Por ´ultimo, si se produce una interrupci ´on que no es de inter ´es para el proceso interrumpido, al
+terminar el manejador de interrupciones se coloca el hilo interrumpido de vuelta en el estado en que
+estaba antes de ser interrumpido. Caso contrario, el hilo interrumpido se suspende y el sistema en
+tiempo de ejecuci´on se inicia en la CPU virtual, para decidir cu´al hilo planificar.
+2.13 Hilos emergentes (Tanenbaum, 2009, p. 112-113)
+Hay dos formas de manejar un mensaje entrante (se˜nal): con un hilo bloqueado en una llamada al
+sistema receive o creando un hilo emergente (pop-up thread) cada vez que se reciba un mensaje.
+Los hilos emergentes en el kernel son m´as veloces que si estuviera en el espacio de usuario pero,
+de haber errores, estos ser´ıan m´as peligrosos.
+2.14 Comunicaci ´on entre procesos (Tanenbaum, 2009, p. 117-145) (Stallings,
+2005, p. 180-181, 202-241)
+Se debe resolver tres cuestiones respecto a la comunicaci ´on entre procesos (e hilos, pero solo las
+dos ´ultimas): pasar informaci´on, no entrar en conflicto y usar como entrada la salida de otro.2.14. COMUNICACI ´ON ENTRE PROCESOS 23
+2.14.1. Condiciones de carrera y regiones cr ´ıticas
+Las condiciones de carrera (race conditions) se producen cuando dos o m´as procesos leen o escri-
+ben simult´aneamente la misma informaci´on compartida, ocasionando que la salida de estos procesos
+dependa del orden en que su ejecuci´on es organizada por el planificador.
+Las condiciones de carrera pueden evitarse con exclusi´on mutua: evitando que m´as de un proceso
+escriba o lea la informaci ´on compartida a la vez. Para esto, se define como regiones cr´ıticas a las
+zonas de un proceso en que se lee o escribe, y se definen ciertas necesidades:
+1. Solo puede haber un proceso a la vez en una regi ´on cr´ıtica.
+2. No se debe hacer suposiciones de la velocidad o n ´umeros de CPUs.
+3. Ning ´un proceso fuera de su regi´on cr´ıtica puede bloquear otros procesos.
+4. Ning ´un proceso debe esperar para siempre para entrar a su regi´on cr´ıtica.
+2.14.2. Exclusi ´on mutua con espera ocupada
+Deshabilitaci´on de interrupciones
+Consiste en desactivar las interrupciones al entrar a una regi ´on cr´ıtica y reactivarlas al salir. Esto
+no funciona en CPUs multin ´ucleo porque solo de desactivan en un n ´ucleo, mientras que los dem ´as
+podr´ıan seguir accediendo a la memoria compartida.
+Adem´as, para procesos de usuario, no es deseable dar permiso para apagar o prender interrupcio-
+nes, pues podr´ıan quedar desactivadas por error y causar fallos cr´ıticos.
+Variable de candado
+Consiste en crear una variable en la memoria compartida cuyo valor sea 0 si no hay procesos en
+su regi´on cr´ıtica, y 1 si s´ı los hay. Este m´etodo podr´ıa fallar, pues cambia unas condiciones de carrera
+por otra.
+Alternancia estricta
+Consiste en crear una variable en la memoria compartida. Esta variable guardar ´a un valor que
+corresponda a uno de los procesos que pueden acceder a esa memoria.
+Cuando un proceso quiere entrar en su regi ´on cr´ıtica, solo lo hace si la variable corresponde a ´el.
+Si no, entra en un bucle a esperar a que s ´ı lo haga. Al salir de su regi ´on cr´ıtica, cambia el valor de la
+variable para permitir que otro proceso se ejecute en su regi´on cr´ıtica.
+Esta soluci´on no es deseable, pues no satisface la necesidad 3: un proceso puede estar esperando
+a ejecutar su regi´on cr´ıtica, mientras que el proceso que corresponde al valor actual de la variable no
+est´a en su regi´on cr´ıtica. Adem´as, como esta espera a que el valor de la variable cambie se produce en
+un bucle, consume mucha CPU.24 CAP´ITULO 2. PROCESOS
+Soluci´on de Peterson
+Consiste en dos procedimientos, uno para entrar y otro para salir de la regi ´on cr´ıtica. entrar
+indica que el proceso est´a interesado en entrar en su regi´on cr´ıtica, y que el siguiente turno deber´ıa ser
+suyo. Luego, espera a que el otro proceso indique que ya no est ´a interesado (lo cual hace llamando a
+salir).
+Instrucci´on TSL / XCHG
+Instrucciones existentes en computadoras multiprocesadores. TSL REGISTRO, CANDADO guarda
+CANDADO en REGISTRO y coloca 1 en CANDADO. XCHG REGISTRO, CANDADO intercambia los valores
+de REGISTRO y CANDADO, y debe ser precedida por una instrucci´on MOVE REGISTRO, 1 para tener el
+mismo efecto que TSL.
+Funciona de una forma similar a la alternancia estricta. entrar consiste en un bucle que coloca 1
+en CANDADO, y solo sale cuando el valor anterior de este registro fuera 0. salir solo coloca un 0 en
+CANDADO.
+2.14.3. Exclusi ´on mutua con bloqueo
+El problema del productor-consumidor / b´ufer limitado
+Dos procesos comparten un b ´ufer com ´un de tama ˜no N. El proceso productor coloca datos en el
+b´ufer, y el consumidor los saca. El productor solo deber´ıa poder colocar datos si el b´ufer no est´a lleno,
+y el consumidor solo deber´ıa sacarlos si no est´a vac´ıo.
+Este es una simplificaci ´on que busca mostrar por qu ´e la espera ocupada no es conveniente para
+manejar la comunicaci ´on entre procesos, y se debe preferir los bloqueos. La diferencia es que los
+segundos no desperdician la CPU.
+Dormir y despertar
+Llamadas al sistema que provocan el bloqueo del proceso llamador y el despertar de un proceso
+indicado por un par´ametro, respectivamente.
+Aplicado al problema del productor-consumidor:
+Cuando el b´ufer se llene, productor se duerme.
+Cuando el consumidor quita un elemento, despierta al productor.
+Cuando el b´ufer se vac´ıa, consumidor se duerme.2.14. COMUNICACI ´ON ENTRE PROCESOS 25
+Cuando el productor agrega un elemento, despierta al consumidor.
+Puede ocurrir que uno de los procesos sea interrumpido antes de dormirse por el otro, y el otro
+intente despertarlo (perdiendo la se˜nal). Luego, el primero se dormir´ıa para nunca despertar (y, even-
+tualmente, el segundo tambi´en). Esto puede solucionarse con un bit de espera de despertar que evite
+perder la se˜nal, pero en un ejemplo m´as complejo puede no ser suficiente.
+Sem´aforos
+Registro con un n ´umero entero, por defecto 0. Una llamada a down lo decrementa si es mayor a
+0, caso contrario pone a dormir al proceso sin concretar la llamada. Una llamada a up incrementa al
+sem´aforo y, si uno o m´as procesos estaban durmiendo en el sem´aforo, despierta a uno arbitrariamente,
+el cual termina de ejecutar la instrucci´on down (devolviendo al sem´aforo a 0).
+Es importante que up y down deben estar implementadas de forma at ´omica como llamadas al
+sistema, para evitar condiciones de carrera y lograr la sincronizaci´on.
+Los sem ´aforos binarios o mutexes son aquellos utilizados para lograr la exclusi ´on mutua. Son
+inicializados a 1, y cada proceso debe ejecutar down para entrar a su regi ´on cr´ıtica y up para salir.
+As´ı, solo un proceso (el primero en realizar down) se ejecutar´a. El resto que realice down mientras el
+sem´aforo est´a en 0, se dormir ´a, y cuando el primero regrese (con up), alguno ser ´a despertado. down
+sirve para entrar a la regi´on cr´ıtica, y up para salir.
+Aplicado al problema del productor-consumidor:
+Se crean tres sem´aforos: llenos (valor inicial = 0, consumidor lo disminuye y productor lo aumen-
+ta), vac´ıos (valor inicial = N, productor lo disminuye y consumidor lo aumenta) y mutex (sem ´aforo
+binario, para lograr exclusi´on mutua).
+Mutexes y variables de condici´on
+Un mutex es una variable que puede estar cerrada o abierta. Si un hilo quiere entrar en su regi ´on
+cr´ıtica, lo hace solo si el mutex est´a abierto (y lo cierra luego); caso contrario, el hilo se bloquea.
+Las variables de condici´on permiten bloquear un hilo (wait) hasta que otro lo desbloquee (signal).
+Adem´as, wait toma un mutex bloqueado como argumento, al cual desbloquea en un principio para
+que se ejecuten otros hilos, y lo bloquea al recibir la se˜nal.
+Se usan en conjunto con los mutex para esperar cuando un hilo no puede obtener algo que desea,
+e indicar cuando ya puede obtenerlo.
+mutex lock(&mutex); //Bloquear mutex
+while(cond) {
+var cond wait(&var cond1, &mutex); //Esperar se~ nal 1
+}
+//Acciones
+var cond signal(&var cond2); //Enviar se~ nal 2
+mutex unlock(&mutex); //Desbloquear mutex
+Monitores
+Los mutexes y las variables de condici´on, si bien funcionan, son complejos y propensos a errores.
+Una alternativa a ellos son los monitores: conjuntos de procedimientos, variables y estructuras de26 CAP´ITULO 2. PROCESOS
+datos. Los dos ´ultimos solo son accesibles desde los procedimientos, y el monitor garantiza que solo
+pueda haber uno de estos activo. Tambi´en requieren variables de condici´on.
+La mayor ventaja que tienen es que deben ser implementados por el compilador, por lo que evita
+los posibles errores introducidos por el programador con los mutexes. Solo una selecci´on de lenguajes
+soportan monitores, aunque algunos (como Java) permiten implementarlos con sencillez.
+2.14.4. Otros m ´etodos
+Pasaje / Transmisi´on de mensajes
+Involucra dos llamadas al sistema: send y receive. send env´ıa un mensaje(datos) desde un
+proceso, y receive lo recibe.
+Un mensaje puede perderse. Para prevenir la p´erdida de comunicaci´on, al recibir un mensaje, todo
+proceso env´ıa otro como respuesta llamadoacknowledgement. Si el proceso emisor no lo recibe, vuel-
+ve a enviar el mismo mensaje. Adem´as, cada mensaje tiene un n´umero de secuencia que lo identifica,
+por lo que si se perdiera el mensaje de acknowledgement y se enviara dos veces el mismo mensaje, el
+receptor lo sabr´ıa e ignorar´ıa el segundo.
+Los mensajes guardan tambi ´en una identificaci ´on del proceso emisor, para que as ´ı el receptor
+pueda autenticarlo.
+Direccionamiento se refiere a d´onde apuntan los mensajes, d´onde ser´an recibidos. Esto puede ser
+un b´ufer, llamado buz´on o puerto, que luego ser´a manejado por el proceso. La otra alternativa es un
+proceso en s´ı, lo que implica una estrategia llamada encuentro, consistente en bloquear al receptor
+hasta que el emisor emita un mensaje; y bloquear al emisor hasta que el receptor est´e listo para recibir
+un mensaje.
+Barreras
+Busca sincronizar distintos procesos. Consiste en crear una o m ´as barreras que bloquean a los
+procesos hasta que todos hayan llegado a ella, luego los libera.
+2.15 Planificaci ´on (Tanenbaum, 2009, p. 145-161)
+Se refiere al algoritmo que selecciona el proceso (o hilo) a ejecutar cuando hay varios en estado
+listo. Es realizado por el Planificador de procesos, una parte del kernel.
+El algoritmo de planificaci ´on debe tener en cuenta una prioridad en los procesos para satisfacer
+mejor al usuario, y tambi ´en que el alternar entre procesos es costoso para la CPU (involucra guardar
+el estado actual del proceso y cargar otro, adem´as de que suele invalidar la cach´e).
+Todo algoritmo de planificaci´on debe perseguir algunas metas:
+Equidad: otorgar a cada proceso una parte justa de la CPU
+Aplicaci´on de pol´ıticas: verificar que se lleven a cabo las pol´ıticas establecidas
+Balance: mantener ocupadas todas las partes del sistema2.15. PLANIFICACI ´ON 27
+2.15.1. Comportamiento de un proceso
+Un proceso puede ser limitado a c ´alculos (si invierte la mayor parte de su tiempo con la CPU) o
+limitado a E/S (I/O-bound) (si ocupa la mayor parte de su tiempo esperando la E/S).
+La primera l ´ınea de tiempo corresponde a un proceso limitado a c ´alculos, y la segunda a uno
+limitado a E/S.
+2.15.2. Llamadas al planificador
+Ocurren autom´aticamente cuando:
+Al crearse un nuevo proceso, se elije si se ejecutar´a el padre o el hijo.
+Al terminar un proceso. Si no hubiera ning´un otro proceso listo, se ejecuta uno inactivo provisto
+por el sistema.
+Al bloquearse un proceso. A veces, podr ´ıa ser ´util en estas situaciones saber el contexto para
+definir una prioridad particular, pero es com´un que el planificador no tenga acceso a este.
+Al ocurrir una interrupci´on de E/S.
+Al ocurrir una interrupci ´on de reloj. Dado un sistema operativo que puede llamarlo en estas
+situaciones, se dice que su algoritmo de planificaci ´on es apropiativo. Esto implica que los
+procesos tienen un tiempo m ´aximo de ejecuci ´on ininterrumpida, a diferencia de si fuera no
+apropiativo.
+2.15.3. Planificaci ´on en sistemas de procesamiento por lotes
+No es necesario limitar el tiempo de CPU por proceso, por lo que no hay problema con algoritmos
+de planificaci´on no apropiativos (o apropiativos con largos periodos).
+Metas adicionales:
+Rendimiento: maximizar el n´umero de trabajos completos por hora
+Tiempo de retorno: minimizar el tiempo entre la entrega y la terminaci´on
+Utilizaci´on de la CPU: mantenerla ocupada todo el tiempo28 CAP´ITULO 2. PROCESOS
+Primero en entrar, primero en ser atendido (First-Come, First-Served (FCFS))
+Utiliza una cola, y es equitativo. Su mayor desventaja es que los procesos limitados a c ´alculos
+pueden ralentizar significativamente a los limitados a E/S.
+El trabajo m´as corto primero
+Prioriza los trabajos m ´as cortos, algo que puede ser determinado estad ´ısticamente. As´ı, optimiza
+el tiempo de retorno promedio. Es ´optimo cuando todos los trabajos est´an disponibles a la vez.
+El menor tiempo restante a continuaci´on (Shortest Remaining Time Next (SRTN))
+Similar a “El trabajo m ´as corto primero”, siempre elije ejecutar el trabajo que requiera menos
+tiempo para ser completado, bloqueando a uno en ejecuci´on de ser necesario.
+2.15.4. Planificaci ´on en sistemas interactivos
+En sistemas interactivos (o servidores), s´ı es necesario contar con algoritmo apropiativo, pues no
+suele ser deseable que se ejecute un solo proceso por largos periodos.
+Metas adicionales:
+Tiempo de respuesta: responder a las peticiones con rapidez
+Proporcionalidad: cumplir las expectativas de los usuarios
+Planificaci´on por turno circular (round-robin)
+A cada proceso se le asigna un intervalo de tiempo m´aximo (llamado qu´antum) durante el cu´al se
+puede ejecutar. Si un proceso excede su qu ´antum, es bloqueado y se ejecuta al siguiente en una fila
+de procesos, colocando al proceso bloqueado al final de la fila.
+La conmutaci ´on de procesos (cambio de proceso en ejecuci ´on) es muy costosa, por lo que un
+qu´antum muy chico es problem ´atico, pero tambi´en lo es uno muy largo si se colocaran muchos pro-
+cesos en la fila. Esto ocasionar´ıa un largo tiempo de respuesta para los ´ultimos procesos.
+Planificaci´on por prioridad
+Se asigna una prioridad a los procesos, y se ejecuta el que tenga la mayor. Esto es´util cuando hay
+m´ultiples usuarios, y para manejar demonios.
+Este m ´etodo trae el problema de que el proceso de mayor prioridad podr ´ıa ejecutarse indefini-
+damente. Para evitarlo, podr ´ıa implementarse un qu ´antum, o disminuir la prioridad del proceso en
+ejecuci´on con cada interrupci´on de reloj.
+Las prioridades pueden asignarse de forma est´atica seg´un, por ejemplo, la importancia del usuario
+propietario. Tambi´en pueden asignarse de forma din´amica, por ejemplo, para lograr un mejor balance
+(ocupar mejor todas las partes del sistema), otorgando una mayor prioridad a los procesos limitados a
+E/S. Para la asignaci´on din´amica puede usarse un algoritmo como, por ejemplo, establecer la prioridad
+a 1/f , donde f es la fracci´on del ´ultimo qu´antum que us´o un proceso.
+Este m´etodo puede ser combinado con la planificaci ´on por turno circular, creando clases de prio-
+ridad que ejecuten un proceso al azar de los que pertenezcan a la clase de mayor prioridad. Requiere
+ajustar prioridades ocasionalmente para que todos los procesos se ejecuten.2.15. PLANIFICACI ´ON 29
+M´ultiples colas
+Tiene distintas clases de prioridad, y asigna qu´antums m´as largos mientras de menor prioridad sea
+la clase. As´ı, hay distintos criterios para crear las clases y asignar prioridades.
+Uno de estos criterios es el de CTSS, que asigna 1 qu ´antum a la clase de mayor prioridad, 2 a la
+siguiente, 4 a la otra y as´ı sucesivamente.
+Otro es el de XDS 940, con cuatro clases: terminal, E/S, qu´antum corto y qu´antum largo (de mayor
+a menor prioridad). Este criterio busca favorecer a los procesos interactivos.
+Adem´as, se suele implementar un algoritmo que mueva procesos a clases de menor prioridad, para
+asegurarse de alternar el uso de la CPU; y tambi´en se puede implementar un algoritmo que los mueva
+a clases de mayor prioridad.
+El proceso m´as corto a continuaci´on
+Similar a “El trabajo m ´as corto primero” (de los sistemas de procesamiento por lotes). Sin em-
+bargo, esto requiere estimar el tiempo de ejecuci ´on requerido. Esto puede realizarse mediante un
+algoritmo como envejecimiento, donde se estima el tiempo de ejecuci´on en base al tiempo que ocup´o
+en ejecuciones anteriores, otorgando mayor importancia a las m´as recientes.
+Planificaci´on garantizada
+Se establecen algunas reglas referidas a la proporci ´on en que el poder de la CPU es distribuido,
+las cuales se intenta cumplir. Estas podr ´ıan ser que a cada usuario le corresponda una fracci ´on del
+poder de la CPU, o que a cada proceso le corresponda una fracci´on de los ciclos de la CPU.
+Planificaci´on por sorteo
+Se otorga a los procesos “boletos de loter´ıa”, y cada cierta cantidad de tiempo se realiza un sorteo.
+En estos, se selecciona alg ´un boleto, y el proceso que lo tenga obtiene como premio el acceso a un
+recurso que requiere (como tiempo de la CPU).
+Este m´etodo, de una forma sencilla, permite crear prioridades (otorgando m´as boletos) y una mejor
+cooperaci´on entre procesos (intercambiando boletos).
+Planificaci´on por partes equitativa
+Relacionada con la “planificaci´on garantizada”, pues toma en cuenta al propietario de un proceso
+para otorgar prioridades.
+2.15.5. Planificaci ´on en sistemas de tiempo real
+En sistemas de tiempo real, como se suele saber qu ´e clase de proceso se ejecutar ´a, puede no ser
+necesario un algoritmo apropiativo.
+Metas adicionales:
+Cumplir con los plazos: para evitar perder datos
+Predictibilidad: evitar degradaci´on en los sistemas multimedia30 CAP´ITULO 2. PROCESOS
+Suelen implementarse mediante muchos procesos cortos, y el planificador debe intentar organizar
+los procesos para cumplir con el tiempo l´ımite siempre que detecte eventos externos.
+Un sistema en tiempo real puede responder a eventos peri ´odicos (que ocurren en intervalos regu-
+lares) o aperi´odicos. Se dice que el sistema es planificable si cumple:
+m
+∑
+i=0
+Ci
+Pi
+≤ 1
+Donde:
+m: cantidad de eventos peri´odicos
+Pi: periodo del evento i
+Ci: tiempo de CPU requerido del evento i
+Los algoritmos de planificaci ´on en tiempo real pueden ser est ´aticos (si hay informaci ´on perfecta
+de antemano del trabajo a ejecutar, pues toman las decisiones antes de que el sistema se ejecute) o
+din´amicos (toman sus decisiones en tiempo de ejecuci´on del sistema).
+2.16 Pol ´ıtica contra mecanismo (Tanenbaum, 2009, p. 161-162)
+Un algoritmo de planificaci ´on puede separarse en pol´ıtica y mecanismo de planificaci ´on. El me-
+canismo siempre se encuentra en el kernel, y son los mencionados anteriormente. Sin embargo, el
+kernel por s´ı solo no tiene forma de saber si alg ´un proceso deber´ıa tener m´as prioridad que otro, por
+lo que no es muy eficiente.
+Esto puede mejorarse proveyendo llamadas al sistema que permitan que un proceso de usuario
+determine la pol´ıtica de planificaci´on, es decir, la importancia de sus procesos hijos.
+2.17 Planificaci ´on de Hilos (Tanenbaum, 2009, p. 162-163)
+Depende del espacio en el que se encuentran.
+2.17.1. Planificaci ´on de hilos en el espacio de usuario
+El planificador de hilos se encuentra en el espacio de usuario, lo que permite un algoritmo perso-
+nalizado potencialmente m´as eficiente para un problema en particular que un planificador en el kernel.
+Se pueden utilizar los m ´etodos ya mencionados en general, aunque no hay qu ´antums: un hilo dentro
+de un proceso podr´ıa ejecutarse de forma indefinida.
+Los qu´atums son externos al proceso, es decir, el kernel puede decidir el tiempo m ´aximo de un
+proceso, pero no de sus hilos.
+2.17.2. Planificaci ´on de hilos en el kernel
+Al involucrar llamadas al sistema, es considerablemente m´as lento, aunque puede ser optimizado
+al otorgar prioridad a hilos de un mismo proceso, para evitar cambiar el mapa de memoria e invalidar
+la cach´e. Sin embargo, permite mayor flexibilidad, pues no es necesario ejecutar una “r´afaga” de hilos
+pertenecientes a un mismo proceso.2.18. PROBLEMAS DE SINCRONIZACI´ON 31
+La principal ventaja de este m ´etodo es que puede bloquearse un hilo sin bloquear a todo su pro-
+ceso.
+2.18 Problemas de sincronizaci ´on (Tanenbaum, 2009, p. 433-461) (Stallings,
+2005, p. 203, 258-277)
+2.18.1. Interbloqueo (deadlock)
+Ocurre cuando, dado un conjunto de procesos, cada proceso est ´a esperando un evento que s ´olo
+puede ser ocasionado por otro proceso del conjunto.
+Si los eventos que esperan son liberaciones de recursos (dispositivos de hardware o piezas de in-
+formaci´on), espec´ıficamente del tipo no apropiativo (aquellos que no pueden ser quitados al proceso
+sin causar problemas), se conoce a los interbloqueos como “de recursos”.
+Los interbloqueos de este tipo pueden darse tanto con recursos reutilizables (no se destruyen al
+terminar de ser usados) como consumibles (s ´ı se destruyen, pero hay un proceso productor que los
+crea al ser necesitados).
+Existe una convenci´on para modelar las relaciones entre procesos y recursos mediante grafos de
+asignaci´on de recursos, donde:
+los procesos se modelan con nodos circulares,
+los recursos se modelan con nodos rectangulares, y
+los ejemplares de recursos se modelan con puntos dentro de los nodos de recursos.
+As´ı, una flecha de un proceso a un recurso significa que este lo solicita; y una flecha de un ejemplar
+de recurso a un proceso implica que el segundo lo posee.
+De esta forma, podemos identificar a un interbloqueo al hallar un bucle.
+Condiciones para que se de un interbloqueo:
+Exclusi´on mutua: un recurso solo debe poder asignarse a un proceso simult´aneamente
+Contenci´on y espera: capacidad de solicitar recursos cuando ya tiene otros previamente asigna-
+dos
+Condici´on no apropiativa: no se puede quitar los recursos por la fuerza, el proceso debe liberar-
+los
+Espera circular: lista circular de dos o m ´as procesos en que cada uno tiene uno o m ´as recursos
+necesitados por el siguiente32 CAP´ITULO 2. PROCESOS
+Estrategias para la soluci´on de interbloqueos:
+Ignor´andolo (algoritmo de la avestruz)
+Detect´andolo y recuper´andolo:
+Detecci´on:
+• Para interbloqueos con un recurso de cada tipo: por cada nodo, recorriendo el grafo forma-
+do, y terminando al llegar a un nodo ya analizado o recorrer todos los grafos. Los nodos
+son procesos que poseen y/o quieren recursos.
+• Para interbloqueos con varios recursos de cada tipo: basado en el marcaje de procesos que
+pueden ser finalizados con recursos potencialmente disponibles. Se busca un proceso que
+pueda ser finalizado con los recursos actuales:
+◦ Si se lo haya, se considera que este puede finalizar y que sus recursos pueden estar
+eventualmente disponibles. Se marca al proceso.
+◦ Si no se lo haya, el algoritmo termina.
+Al finalizar, los procesos sin marcar se encuentran en un interbloqueo.
+Recuperaci´on:
+• Por apropiaci ´on
+• Por retroceso (si se realizan puntos de comprobaci ´on peri´odicamente, restaurando un pro-
+ceso hasta un estado anterior en que no hubiera interbloqueo)
+• Por eliminaci ´on de procesos (ya sea dentro del ciclo o fuera, para liberar recursos)
+Predici´endolo (evit´andolo): distinguiendo estados seguros de inseguros (seg´un si puede garanti-
+zarse que nunca llevar´a a un interbloqueo o no), y evitando asignar los recursos que un proceso
+requiere si esto llevar´ıa a un estado inseguro.
+Esto se hace mediante el algoritmo del banquero, que es muy similar al algoritmo de detecci´on
+para interbloqueos con varios recursos de cada tipo. La diferencia es que se activa antes, para
+no asignar recursos si esta asignaci ´on llevar´ıa a un estado inseguro. Este algoritmo solo puede
+ser aplicado si se sabe cu´antos recursos podr´ıa requerir un proceso como m´aximo, si no variara
+la cantidad de procesos, si no pudiera disminuir el n´umero de recursos disponibles por motivos
+externos y si los procesos fueran independientes entre s´ı (su orden de ejecuci´on no depende de
+otros).
+Una forma alternativa no ´optima de implementar este m´etodo es impidiendo que un proceso se
+inicie si sus necesidades de recursos sumadas a las de los otros procesos activos superan a los
+recursos disponibles.
+Previni´endolo: removiendo alguna de las condiciones:
+• Exclusi ´on mutua: inviable, pues requiere ser muy cuidadoso al asignar recursos para evitar
+un caos.
+• Contenci ´on y espera: puede realizarse solicitando que se asignen todos los recursos antes
+de comenzar la ejecuci´on (pocas veces se sabe cu´ales y cu´antos se necesitar´a); o requirien-
+do que para solicitar un nuevo recurso se libere al resto, para luego solicitarlos nuevamente
+a la vez.2.19. IPC: PROBLEMAS CL´ASICOS DE LA COMUNICACI´ON ENTRE PROCESOS 33
+• No apropiativa: quitar recursos es peligroso, pero si se los virtualiza (de modo que solo un
+demonio pueda acceder directamente a estos) se puede evitar interbloqueos relacionados
+a este recurso (aunque virtualizar consume espacio en disco, haciendo posible un interblo-
+queo aqu´ı). No todos los recursos pueden ser virtualizados. Otra forma de solucionarlos es
+forzando a un proceso a liberar un recurso cuando otro proceso lo solicita; esto solo sirve
+para recursos cuyo estado puede ser salvado y restaurado.
+• Espera circular: forzando a que todo proceso pueda tener acceso a un solo recurso si-
+mult´aneamente, o enumerando los recursos de forma que ning ´un proceso pueda adquirir
+recursos menores de los que ya contiene.
+Estrategia integrada: requiere especificar ciertas clases de recursos, utilizando la estrategia de
+prevenci´on de espera circular por enumeraci´on para evitar interbloqueos entre recursos de clases
+distintas. Por otro lado, para evitar interbloqueos entre recursos de una misma clase se puede
+elegir una estrategia que parezca apropiada.
+Si bien no hay ning ´un algoritmo muy bueno en general, es cierto que existen algunos muy bue-
+nos en situaciones particulares. Un ejemplo es del de bloqueo de dos fases, usado en sistemas de
+bases de datos. Este algoritmo primero intenta bloquear todos los registros (recursos) que necesita,
+desbloque´andolos y comenzando de nuevo si alguno ya se encuentra bloqueado (primera fase), y
+actualiz´andolos y liber´andolos al finalizar (segunda fase).
+Un tipo distinto de interbloqueos son los “de comunicaci ´on”. En estos, el evento no es la libe-
+raci´on de recursos, sino la recepci´on de un mensaje. Un interbloqueo de comunicaci ´on puede ocurrir
+sencillamente por la p´erdida de un mensaje. Suele poder solucionarse mediante tiempos de espera, es
+decir, reenviando un mensaje si no se ha recibido respuesta (acknowledgement) en un cierto lapso de
+tiempo. Esto tambi´en requiere un protocolo, para validar mensajes por si, por ejemplo, un mensaje se
+hubiera retrasado y no perdido (lo que podr´ıa causar la recepci´on doble del mismo mensaje).
+2.18.2. C ´ırculo vicioso / Bloqueo activo (livelock)
+Ocurre cuando m´ultiples procesos cambian sus estados en respuestas a cambios en los estados de
+otros procesos, sin que ninguno avance realmente. Los procesos no dejan de ejecutarse (hasta que el
+planificador lo decida).
+2.18.3. Inanici ´on (starvation)
+Ocurre cuando un proceso es capaz de avanzar, pero no lo hace por mal funcionamiento del algo-
+ritmo de planificaci´on. En otras palabras, el planificador lo pospone por tiempo indefinido.
+2.19 IPC: problemas cl ´asicos de la comunicaci ´on entre procesos
+(Tanenbaum, 2009, p. 163-168) (Stallings, 2005, p.241-245, 277-280, 758-763)
+2.19.1. Problema de los fil ´osofos comelones
+Un fil´osofo ocupa su tiempo comiendo y pensando. 5 fil ´osofos se sientan alrededor de una mesa
+redonda, con 5 platos de espagueti y 5 tenedores (cada plato tiene dos tenedores a sus costados). Los34 CAP´ITULO 2. PROCESOS
+fil´osofos no son italianos, as´ı que necesitan dos tenedores para poder comer. Siempre que consiguen
+los dos, comen un poco y vuelven a pensar, liberando los tenedores. Se debe lograr un algoritmo que
+se ejecute bien y nunca se trabe.
+Una soluci ´on es que cada fil ´osofo, al querer comer, intente agarrar los tenedores y no los suel-
+te hasta terminar de comer. Podr ´ıa producirse un interbloqueo si, por ejemplo, todos los fil ´osofos
+agarraran el tenedor izquierdo y no lo soltaran, pues ninguno comer´ıa.
+Una modificaci ´on al algoritmo anterior podr ´ıa ser que un fil ´osofo, si agarra un tenedor pero no
+puede agarrar el otro, suelta el primero y espera un cierto tiempo para volver a intentarlo. Podr ´ıa
+producirse una inanici ´on si todos los fil ´osofos empiezan a la vez, intentando comer a la vez y luego
+esperando mientras nadie come.
+Podr´ıa arreglarse esto introduciendo aleatoriedad, volviendo estad ´ısticamente improbable la ina-
+nici´on, pero esto puede no ser suficiente en un sistema cr´ıtico, que no puede fallar.
+Podr´ıa utilizarse un sem´aforo binario, como se us´o en el problema del productor-consumidor para
+coordinar los procesos. Esto ser´ıa confiable pero poco eficiente, porque solo un fil ´osofo comer´ıa a la
+vez (cuando hasta dos podr´ıan hacerlo con un mejor algoritmo).
+Una mejora al anterior ser´ıa implementar un sem´aforo por fil´osofo y guardar un estado: comiendo,
+pensando o hambriento. Un fil´osofo solo podr´ıa comer si sus vecinos no lo est´an haciendo.
+Este problema tambi´en puede ser solucionado con un monitor que posea dos procedimientos: uno
+para obtener y otro para liberar tenedores. Adem´as, se requiere un arreglo de 5 valores booleanos que
+almacene la disponibilidad de tenedores, y 5 variables de condici´on (una por cada tenedor).
+2.19.2. Problema de los lectores y escritores
+Modela el acceso a una base de datos. Pueden haber muchos lectores y escritores. M ´ultiples lec-
+tores pueden acceder a ella a la vez, pero si un escritor est ´a accediendo, nadie m´as (lector o escritor)
+puede hacerlo.
+Una soluci ´on es implementar un sem ´aforo binario. Al entrar un lector, se realiza una operaci ´on
+down para que bloquee a los escritores, pero se permite pasar a m ´as lectores. Una vez que salga
+el ´ultimo lector, realiza una operaci ´on up. El problema de esto es que, si hay muchos lectores, los
+escritores podr´ıan nunca entrar.
+La otra alternativa es que, si hay un escritor en espera, se suspenda a los lectores que lleguen tras
+´el. Esto permite que los escritores esperen solo a los lectores que llegaron antes que ellos.
+2.19.3. Problema de la barber ´ıa
+Se requiere asegurar el correcto funcionamiento de una barber ´ıa con 3 barberos, 3 sillas (en las
+que los clientes se ubican al ser atendidos), una caja y un sill ´on con capacidad para 4 personas. La
+caja es administrada por un barbero.
+Una soluci´on puede implementarse con m´ultiples sem´aforos:2.19. IPC: PROBLEMAS CL´ASICOS DE LA COMUNICACI´ON ENTRE PROCESOS 35
+Sem´aforo wait signal
+max capacidad Cliente espera a que haya espacio
+para entrar a la barber´ıa
+Cliente avisa cuando sale de la bar-
+ber´ıa
+sill´on Cliente espera a que haya lugar en
+el sill´on
+Cliente avisa cuando lo van a aten-
+der (tras levantarse del sof´a)
+silla barbero Cliente espera a que se vac ´ıe una si-
+lla
+Barbero avisa cuando se vac´ıa su si-
+lla
+cliente listo Barbero espera a que un cliente se
+siente en su silla
+Cliente avisa que se sent´o
+terminado[n] Cliente espera a que su corte de pe-
+lo sea completado
+Barbero avisa que termin´o el corte
+dejar silla Barbero espera a que el cliente se
+vaya de la silla
+Cliente avisa que se ha levantado de
+la silla
+pago Cajero espera a que el cliente pague Cliente avisa que pag ´o
+recibo Cliente espera para obtener un reci-
+bo por el pago
+Cajero avisa que acept´o el pago
+coord Espera a que haya un barbero o ca-
+jero libre para realizar una de estas
+funciones
+Avisa que un barbero o cajero se li-
+ber´o
+conseguir numero Cliente espera a que ning ´un otro
+cliente est´e consiguiendo su n ´ume-
+ro de cliente
+Cliente avisa que ya obtuvo su
+n´umero de cliente
+Cabe mencionar que se a˜nade el sem´aforo conseguir n´umero para lograr sincronizaci´on al termi-
+nar un barbero un corte, pues si terminado no fuera un arreglo de sem´aforos, al realizar up un barbero
+sobre este podr´ıa suceder que se eche a un cliente de su silla antes de terminar su corte, y se retenga
+a otro m ´as tiempo del necesario. Al asignar un n ´umero a cada cliente, el barbero puede se ˜nalizar al
+sem´aforo terminado correspondiente.Cap´ıtulo 3
+Administraci´on de memoria
+3.1 Administrador de memoria (Tanenbaum, 2009, p. 175-176)
+Parte del sistema operativo que asigna y libera memoria a los procesos, manteniendo un registro
+de las partes en uso (particularmente de la memoria principal). Debe abstraer la memoria.
+3.2 Sin abstracci ´on (Tanenbaum, 2009, p. 176-179)
+Direccionamiento absoluto, es decir, los programas ven la memoria f ´ısica. Hay varias formas de
+plantear esto, como:
+Sin multiprogramaci´on. Si bien no causar ´a problemas entre procesos de usuario, podr ´ıa haber
+errores cr´ıticos si el sistema operativo (o parte de este) est´a en la RAM y un proceso lo modifica.
+Hay varias formas de ubicar el sistema operativo en memoria, algunas son:
+• Todo en RAM (posiciones bajas)
+• Todo en ROM (posiciones altas)
+• Controladores de dispositivos (BIOS) en ROM, resto en RAM
+Con hilos. Se supone que los hilos deben tener acceso a la misma memoria, pero es frecuente
+que el usuario quiera ejecutar muchos programas independientes en simult´aneo.
+Con llaves. Utilizado por la IBM 360, consiste en dividir la memoria en bloques de tama˜no fijo
+y asignarles una llave de 4 bits, la cual debe corresponder con una llave que tiene cada proceso
+en la PSW para que este puede utilizar el bloque.
+Sin embargo, al haber direccionamiento absoluto, un proceso no sabe cual es su ubicaci ´on en
+la memoria, y puede intentar (por ejemplo) saltar a un sector que no es suyo.
+Con llaves con reubicaci´on est´atica (static relocation). Variaci´on del anterior, en el cual a cada
+direcci´on de memoria del programa se le suma su direcci´on inicial durante la carga, para evitar
+referencias a sectores no propios. Funciona, pero es lento.
+363.3. ABSTRACCI ´ON CON ESPACIOS DE DIRECCIONES 37
+3.3 Abstracci ´on con espacios de direcciones (Tanenbaum, 2009, p. 179-
+180)
+Un espacio de direcciones es un conjunto de direcciones que usa un proceso para direccionar la
+memoria.
+Para asignar espacios de direcciones a los procesos, se pueden usar distintos m ´etodos: registros
+base y l´ımite, intercambio y memoria virtual.
+3.4 Registros base y l ´ımite (Tanenbaum, 2009, p. 180-181)
+Almacenan la direcci´on inicial y la longitud de un programa, respectivamente. Utiliza reubicaci´on
+din´amica, sumando el valor del registro base a toda referencia a memoria al momento de ejecutar
+la instrucci ´on que la realiza. Es relativamente costoso, pues requiere una suma y comparaci ´on para
+evitar sobrepasar el l´ımite.
+3.5 Intercambio (Tanenbaum, 2009, p. 181-187)
+Consiste en mover los procesos completos al disco cuando ya no se ejecutan, de modo que ya no
+ocupen memoria. Puede hacerse uso de reubicaci ´on est ´atica o din ´amica, mediante registros base y
+fuente.
+Al intercambiar procesos, se va creando huecos en la memoria en los cuales no entran proce-
+sos, por lo que se los puede combinar en un solo gran hueco mediante compactaci´on de memoria,
+moviendo a todos los procesos hacia abajo. Es muy costosa.
+El espacio de direcciones de un proceso suele requerir crecer, por lo que se puede, por ejemplo,
+dejar huecos entre los procesos para ser ocupados de ser necesario. Si un proceso no tiene hueco para
+crecer, debe ser movido a un hueco m´as grande (o los procesos adyacentes, para crear un hueco). Si el
+proceso no puede crecer y el ´area de intercambio en el disco est ´a llena, el proceso debe suspenderse
+hasta que se libere espacio o eliminarse.
+Para que funcione este m ´etodo, se debe poder distinguir entre memoria libre y ocupada. Esto
+puede lograrse con:
+3.5.1. Intercambio con mapas de bits
+Se crean n unidades de asignaci ´on (partes de la memoria) de m direcciones de longitud, y un
+mapa de bits con un bit por unidad de asignaci ´on (n bits). Cada bit representa el estado de su unidad
+de asignaci´on.
+Unidades de asignaci ´on peque ˜nas dejan huecos peque ˜nos, pero requieren un gran mapa; y vice-
+versa.
+Para llevar un proceso a memoria, se debe buscar una secuencia de cierta cantidad de bits en el
+mapa que indiquen una unidad de asignaci´on vac´ıa. Esto es costoso.
+3.5.2. Intercambio con listas enlazadas
+Consiste en mantener lista(s) relacionad(as) mediante punteros con la informaci ´on necesaria de
+los segmentos de memoria, tanto huecos como procesos. Requiere realizar fusi ´on de huecos siem-38 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+pre que termina un proceso para evitar fragmentaci ´on de memoria (tener muchos huecos peque ˜nos
+adyacentes).
+Tipos:
+Lista ´unica: utiliza una lista de segmentos cuyos elementos especifican la direcci ´on de inicio,
+la longitud y si se trata de un proceso o un hueco, adem´as de un puntero.
+Doble lista: una para procesos y otra para huecos. Siempre es m´as veloz que una lista ´unica.
+Doble lista optimizada: una para procesos y otra para huecos; esta segunda solo guarda su
+longitud y el puntero a la direcci ´on del siguiente hueco, pues cada elemento de la lista se
+encuentra al inicio de su hueco correspondiente.
+Doble lista ordenada: una para procesos y otra para huecos, pero la segunda siempre es ordenada
+del hueco m´as peque˜no al m´as grande.
+M´ultiples listas: una lista para procesos, y una lista por cada tama˜no frecuente de hueco reque-
+rido para ubicar procesos. Requiere una tabla de punteros a los primeros elementos de cada lista
+de huecos. Usada ´unicamente por el algoritmo de ajuste r´apido.
+Algoritmos para ubicar procesos:
+Primer ajuste: busca en la lista de segmentos (o huecos, si est´an separadas) desde el inicio hasta
+el primer hueco que acomode al proceso.
+Siguiente ajuste: primer ajuste, pero busca desde el ´ultimo hueco en que se acomod ´o a un
+proceso. Es levemente menos rendidor que el algoritmo de primer ajuste.
+Mejor ajuste: busca el hueco m´as peque˜no posible en el que entre el proceso, para evitar dividir
+huecos grandes. Es m ´as lento que el algoritmo de primer ajuste (salvo en dobles listas orde-
+nadas, donde son equivalentes) y suele causar m ´as huecos peque ˜nos inutilizables que los dos
+algoritmos anteriores.
+Peor ajuste: busca el hueco m´as grande, para que el hueco que queda siempre sea lo suficiente-
+mente grande para ser ´util.
+Ajuste r´apido: utiliza m´ultiples listas, busca en la lista de huecos del tama˜no indicado, por lo que
+es la m´as veloz. Sin embargo, la fusi´on de huecos es tambi´en significativamente m´as costosa.
+3.6 Memoria virtual (Tanenbaum, 2009, p. 188-234)
+Virtualizar la memoria consiste en dividir la memoria que ocupa un proceso, con el objetivo de
+poder cargar en memoria un proceso (o varios) m´as grande que esta. Tener en cuenta que este m´etodo
+es para acceder a la memoria principal (f´ısica), no a memorias inferiores o superiores en la jerarqu´ıa.
+A cada parte en que un proceso se divide se le llama “p´agina”. Tambi´en se debe dividir la memoria
+f´ısica en partes iguales capaces de contener p´aginas; por esto se les llama “marco de p´agina”.
+La memoria virtual es implementada por hardware mediante una MMU (Memory Management
+Unit), la cual mantiene una tabla de p´aginas (con una entrada por p´agina).
+Lo que la memoria virtual logra es que los procesos se manejen con direcciones virtuales, pero
+que al ser procesadas y antes de mandarse a la memoria f ´ısica, son traducidas en direcciones f ´ısicas
+por la MMU.3.6. MEMORIA VIRTUAL 39
+3.6.1. Memoria virtual a memoria f ´ısica
+Una direcci ´on virtual consta de dos partes: n ´umero de p ´agina y desplazamiento. El n ´umero de
+p´agina corresponde a un ´ındice en la tabla de p´aginas; para obtener la direcci´on f´ısica se debe obtener
+el n´umero de marco de p´agina (que se halla en la entrada) y colocarlo delante del desplazamiento.
+Ahora bien, es posible que la p´agina cuyo n´umero fue pasado en la direcci´on virtual no se encuen-
+tre actualmente en la memoria f ´ısica (esto se sabe debido a un bit de presente/ausente en la entrada
+de la tabla de p ´aginas). Cuando esto pasa, se ejecuta un TRAP correspondiente a un fallo de p ´agina
+y se otorga el control al sistema operativo para que este traiga la p ´agina necesaria desde la memoria
+secundaria a la principal.
+3.6.2. Entradas en la tabla de procesos
+N´umero de marco de p´agina: secuencia de bits utilizados para obtener la direcci´on f´ısica
+Presente/ausente: bit que indica si la p´agina se encuentra o no en la memoria f´ısica
+Protecci´on: bit o secuencia de bits que indica si la p´agina puede ser, por ejemplo, le´ıda y escrita
+o solo le´ıda, o con formato rwx.
+Modificada/bit sucio (M): bit que indica si la p ´agina ha sido modificada; permite aumentar la
+eficiencia al traer otra p´agina al marco que esta ocupa, pues al salir de la memoria principal sigue
+siendo una copia fiel de la memoria secundaria correspondiente, y no es necesario actualizar
+esta.
+Referenciada (R): bit que se establece siempre que una p ´agina es usada para lectura o escri-
+tura, utilizada para ayudar al sistema operativo a elegir una p ´agina para desalojar cuando es
+necesario.
+Uso de cach ´e inhabilitado: bit que permite deshabilitar el uso de cach ´e para la p ´agina, para
+situaciones en que la p ´agina est ´a asociada a un registro de un dispositivo de E/S en lugar de
+a la memoria principal, pues se querr ´a que el hardware tenga acceso siempre a la palabra del
+dispositivo actualizada y no a una copia en la cach´e.
+3.6.3. Aceleraci ´on de la paginaci´on: b´ufers de traducci´on adelantada (TLB)
+La tabla de p´aginas puede ser implementada de dos formas:
+1. Con registros de hardware en la MMU: veloz pero peque ˜no (por ser costoso). Adem ´as, cada
+conmutaci´on de contexto de los procesos se vuelve m´as lenta, al tener que cambiar tambi´en los
+valores de este arreglo de registros.40 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+2. En la memoria principal: lento (por usar el doble de accesos a memoria) pero grande, requiere
+un solo registro en la MMU que apunte al inicio de la tabla de p ´aginas, entonces las conmuta-
+ciones de contexto son m´as veloces.
+As´ı como las cach´es se usan para reducir el acceso a la memoria principal y aumentar la velocidad,
+se puede usar un dispositivo de hardware llamado TLB ( Translation Lookaside Buffer/ B ´ufer de
+Traducci´on Adelantada). Este es una memoria que guarda unas pocas entradas de la tabla de p ´aginas
+(con el n´umero de p´agina que corresponda), idealmente aquellas de acceso frecuente, con el objetivo
+de evitar el acceso a memoria cuando la entrada est´e en el TLB.
+Al dar a la MMU una direcci´on virtual a traducir, el algoritmo es el siguiente:
+1. Comparar la p ´agina virtual de la instrucci´on con aquellas presentes en el TLB
+2. Si se encuentra all ´ı, leer la entrada
+3. Si no se encuentra all ´ı, buscar la entrada en la tabla de p´aginas en la memoria principal y leerla
+4. Si la p ´agina no se encuentra en memoria principal, traerla
+5. Traducir la direcci ´on
+El TLB puede ser administrado por hardware o software (esto quiere decir d´onde se implementar´a
+el algoritmo anterior). Cuando es administrado por software, el sistema operativo est ´a a cargo de
+buscar p´aginas en memoria principal y modificar el TLB. El motivo de esto es simplificar la MMU,
+reduciendo su tama˜no y permitiendo mejorar el rendimiento de la m´aquina al aprovechar este espacio.
+La MMU es la encargada de buscar las entradas de la tabla de p ´aginas en el TLB. Al ser admi-
+nistrado por software, la forma en que la MMU pasa control al sistema operativo al no encontrar una
+entrada es mediante un fallo de TLB.
+Se puede mejorar el rendimiento de los procesadores que administran el TLB mediante software,
+ya sea reduciendo los fallos del TLB (al intentar adelantarse a m ´ultiples operaciones de memoria en
+las mismas p´aginas) o reduciendo el costo de un fallo del TLB.
+Se debe mantener una “cach´e” de entradas del TLB en software en una posici´on fija, cuya p´agina
+siempre se encuentre en el TLB. De no ser as ´ı, podr´ıa darse la situaci ´on de que una entrada de una
+direcci´on virtual cualquiera no se encuentre en el TLB y, al intentar buscar la tabla de p´aginas, ocurra
+que esta tampoco est´e en el TLB.
+Un fallo suave ocurre cuando la p ´agina no est ´a en el TLB, sino en memoria; y un fallo duro es
+aquel en que tampoco est´a en memoria, sino que se debe buscar en el disco.
+3.6.4. Memorias extensas: tablas de p ´aginas multinivel
+Consiste en al menos una tabla de p ´aginas cuyas entradas corresponden al n ´umero de marco de
+p´agina de otras tablas de p ´aginas. Esto permite tener unas pocas tablas en memoria, solo las necesa-
+rias. Requiere hacer una doble traducci´on de memoria virtual (si tiene dos niveles).
+3.6.5. Memorias extensas: tablas de p ´aginas invertidas
+Consiste en una tabla de marcos de p ´aginas, cuya cantidad es mucho menor que las p ´aginas.
+Por esto ahorran mucho espacio, pero tambi ´en son muy lentas, pues para encontrar una p ´agina en
+espec´ıfico no se puede usar el n´umero de p´agina como ´ındice. En su lugar, se debe buscar el marco de3.6. MEMORIA VIRTUAL 41
+p´agina que haga referencia a la p ´agina buscada. Adem´as, a menos que se use el TLB, esta b ´usqueda
+debe ocurrir siempre, no solo en los fallos de TLB.
+Una forma de acelerar la b ´usqueda de una p ´agina es mediante una tabla que, a cada p ´agina en
+memoria, le haga corresponder el marco de p ´agina en el que se encuentra. A este tipo de tabla se le
+llama tabla de hash.
+3.6.6. Algoritmos de reemplazo de p ´aginas
+´Optimo
+Se etiqueta cada p ´agina con la cantidad de instrucciones que se ejecutar ´an antes de que se re-
+ferencie a dicha p ´agina, y al realizar un cambio se selecciona aquella cuyo valor de la etiqueta sea
+mayor.
+Es imposible de implementar: no se puede saber cu ´antas instrucciones se tardar ´a en hacer la
+pr´oxima referencia. Lo que s ´ı es posible es realizar una primera corrida para estimar estos valores
+(pero solo sirve para un programa con ciertos datos de entrada).
+No usadas recientemente (NRU)
+Clase Referenciado Modificado
+0 0 0
+1 0 1
+2 1 0
+3 1 1
+Utiliza los bits de Referenciada y Modificada de las en-
+tradas en la tabla de procesos. Establece una jerarqu´ıa en ba-
+se a estos para decidir qu´e p´agina sacar de la memoria f´ısica.
+La primera clase en la que se buscar ´a una p´agina al azar
+para sacar ser´a la 0; en caso de no haber ninguna, la 1, y as ´ı
+sucesivamente.
+Primera en entrar, primera en salir (FIFO)
+Mantiene una lista enlazada con las entradas de la tabla
+de p´aginas, de forma que al producirse un fallo de p´agina se elimina la ´ultima y se agrega una al inicio.
+El problema es que podr ´ıa eliminarse una entrada importante a lo largo del tiempo, que requerir ´a
+pronto ser buscada nuevamente.
+Segunda oportunidad
+Variaci´on de FIFO. Si ocurre un fallo de p ´agina, se comprueba el ´ultimo elemento de la cola. Si
+este no ha sido referenciado desde su carga (R = 0), se lo elimina; caso contrario (R = 1), se mueve el
+elemento al principio de la cola y se coloca R en 0 (renov´andolo).
+Reloj
+Implementaci´on m´as eficiente de Segunda oportunidad, utiliza una lista circular de los marcos de
+p´agina y un puntero (manecilla) al que tiene la p´agina m´as antigua. El funcionamiento con R es igual
+al del algoritmo anterior.42 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+Menos usadas recientemente (LRU)
+Consiste en eliminar la p ´agina que no se haya usado durante la mayor cantidad de tiempo. Hay
+varias variantes y algoritmos similares:
+LRU mediante una lista enlazada: con cada p ´agina, las m ´as recientemente referenciadas al
+frente. Debe ser actualizada con cada referencia, buscando y llevando a la p ´agina correspon-
+diente al frente, algo muy costoso.
+LRU con un contador en hardware: hay un contador C que se incrementa con cada instruc-
+ci´on autom´aticamente. Su valor debe guardarse en un campo de la entrada correspondiente a
+una p´agina de la tabla cada vez que esta sea referenciada. Al requerir quitar una p ´agina de la
+memoria f´ısica, se eliminar´a aquella de menor valor en el campo mencionado.
+LRU mediante una matriz por hardware: si hay n p ´aginas, la matriz debe ser de n x n bits.
+En las filas, se guarda un valor binario por cada p´agina, entre los cuales el menor indica aquella
+que lleva m´as tiempo sin ser usada.
+Siempre que se referencia una p´agina k:
+• se aumenta el valor de su fila a su m ´aximo posible (colocando todos los bits salvo el
+k-´esimo en 1)
+• Se disminuye el valor de las otras filas, colocando su k- ´esimo bit (columna k) en 0.
+Not Frequently Used (NFU): en cada interrupci ´on de reloj, se le suma a un contador en cada
+entrada de la tabla de p ´aginas el bit R. El problema es que los contadores no olvidan: si al
+principio se referenci ´o mucho a una p ´agina, m´as adelante (cuando ya no est ´e en uso) su valor
+podr´ıa seguir siendo m ´as alto que el de otras p ´aginas ´utiles, provocando una preferencia para
+quitar estas p´aginas en uso por sobre la otra.
+Envejecimiento (aging): variante de NFU; en lugar de sumar R, desplaza el “contador” un bit
+a la derecha y coloca a R a la izquierda. As ´ı, mientras m ´as recientemente se haya hecho la
+referencia, se garantiza que mayor ser ´a el valor del contador, pero si el contador tiene n bits,
+luego de n pulsos de reloj las referencias pasadas ser ´an eliminadas (evitando el problema de
+NFU).
+Conjunto de trabajo:
+Se basa en la agrupaci ´on de las p ´aginas de uso frecuente en un momento dado, pues un proceso
+suele usar solo una peque ˜na parte de sus p ´aginas durante cierto periodo (localidad de referencia). A
+este grupo se le llama conjunto de trabajo.
+Sobrepaginaci´on (thrashing) es la situaci´on en que ocurren muchos fallos de p´agina consecutivos
+en un corto periodo de tiempo. Es indeseable por su lentitud y, si no se tiene en cuenta, ocurre cada vez
+que se carga un proceso desde el disco. Esto puede solucionarse identificando el conjunto de trabajo
+y carg´andolo autom´aticamente al traer un proceso. Esto es la prepaginaci´on.
+Para identificar las p´aginas pertenecientes al conjunto de trabajo, se debe tener en cuenta:
+un n´umero k de referencias a memoria (o p´aginas) m´as recientes (inviable, requiere un enorme
+e ineficiente registro de desplazamiento por cada referencia), o3.6. MEMORIA VIRTUAL 43
+un n´umero τ de milisegundos de tiempo virtual durante el cual una p ´agina no debe haber sido
+usada
+La segunda opci´on es posible de implementar. Requiere un campo adicional en las entradas de la tabla
+de p´aginas que almacene el tiempo en el que la p ´agina fue referenciada por ´ultima vez, adem ´as del
+bit R (colocado en 0 en cada interrupci´on de reloj).
+Al ocurrir un fallo de p´agina, se recorre la tabla. Por cada entrada:
+1. Si R es 1, colocar el tiempo de ´ultima referencia como el tiempo virtual actual(almacenado en
+la tabla de procesos).
+2. Si R es 0, se calcula la edad (tiempo virtual actual - tiempo de ´ultima referencia) y:
+a) Si su edad es menor a τ, se la considera parte del grupo de trabajo y se la reserva tempo-
+ralmente. Hay un puntero a la entrada de la p ´agina en este grupo de mayor edad, el cual
+es actualizado de ser necesario.
+b) Si su edad es mayor a τ, ya no est´a en el grupo de trabajo y es reemplazada.
+3. Si no se encontrara ninguna p ´agina de edad mayor a τ, se elimina a aquella de mayor edad
+(mediante el puntero).
+WSClock
+Es una combinaci ´on del algoritmo del reloj con el conjunto de trabajo. Al ocurrir un fallo de
+p´agina, se comprueba R, τ y M.
+Referenciada (R) 0 1
+Edad < τ > τ < τ
+Modificada (M) 0 1 0 1 0 1
+Asignar 0 a R No No No No S ´ı S ´ı
+Cargar p´agina No No S ´ı No No No
+Planificar escritura No No No S ´ı No No
+Siguiente p´agina S ´ı S ´ı No S ´ı S ´ı S ´ı
+En un primer recorrido, se intenta buscar una p´agina no referenciada, sin modificar y de edad ma-
+yor a τ, por ser estas las p´aginas ideales a sacar de la memoria f´ısica. Adem´as, se planifica la escritura
+al disco de aquellas similares a las anteriores pero modificadas, para no realizar una conmutaci ´on de
+procesos y seguir buscando una mejor alternativa.
+Luego del primer recorrido, pueden darse dos situaciones:
+Se ha planificado al menos una escritura: buscar una p ´agina “ideal” para quitar de la memoria
+f´ısica. Tarde o temprano, una de las planificadas ser´a escrita al disco y su M valdr´a 0.
+No se han planificado escrituras: se debe seleccionar una p ´agina al azar (preferentemente con
+M = 0) para sobrescribir, pues todas las p´aginas est´an en el conjunto de trabajo.44 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+3.6.7. Pol ´ıticas de asignaci´on
+Las hay locales y globales, seg´un donde se busquen marcos de p´agina para sobrescribir al ocurrir
+un fallo de p´agina.
+Las pol´ıticas globales suelen ser m ´as convenientes, pues es com ´un que las locales provoquen
+sobrepaginaci´on a´un cuando haya m´ultiples marcos disponibles. Adem´as, si el conjunto de trabajo se
+reduce, se desperdicia memoria.
+Una forma de solucionar estos problemas es repartiendo marcos de p ´agina entre los procesos.
+Podr´ıa hacerse equitativamente, o de forma proporcional al tama˜no total de los procesos.
+Con pol´ıticas globales, tambi´en se requiere distribuir los marcos de p´agina. Una forma conveniente
+de decidir cu ´ando asignar o quitar marcos es el algoritmo Page Fault Frequency(PFF), que mide la
+proporci´on de fallos de los procesos en funci´on del tiempo e identifica a aquellos que no se encuentren
+en un cierto rango. El algoritmo no decide qu´e p´agina sustituir en un fallo.
+No todos los algoritmos pueden funcionar con cualquier pol´ıtica de asignaci´on. FIFO, LRU y sus
+variantes funcionan tanto local como globalmente, pero el resto (en especial la de conjuntos de trabajo
+y WSClock) solo sirven de forma local.
+3.6.8. Control de carga
+Incluso con pol´ıticas de asignaci´on globales, puede ocurrir sobrepaginaci´on. Para solucionar esto,
+se debe intercambiar los procesos, llev´andolos al disco.
+Para decidir cu ´al intercambiar, se debe tener en cuenta el tama ˜no del proceso, la proporci ´on de
+p´aginas que tiene y el grado de multiprogramaci ´on (este ´ultimo para evitar tiempos ociosos de la
+CPU).
+3.6.9. Tama ˜no de p´agina
+Hay varios factores para determinar el tama˜no m´as conveniente:
+Fragmentaci´on interna: desperdicio de espacio de la ´ultima p´agina (en promedio, la mitad de
+esta). Hay menor fragmentaci´on interna con tama˜nos de p´agina menores.
+Partes no utilizadas en memoria: si un proceso requiere una peque ˜na porci´on suya para ejecu-
+tarse, un tama˜no de p´agina grande obliga a cargar una gran parte de este sin necesidad.
+Tama˜no de la tabla de p ´aginas: a menor tama ˜no de p ´agina, mayor tama ˜no de la tabla. En al-
+gunas m´aquinas, al realizar la conmutaci ´on de procesos se debe cargar la tabla en registros del
+hardware, por lo que si esta es muy grande, la conmutaci´on tardar´a m´as.
+Transferencias con el disco: el retraso al llevar o traer una p´agina del disco no var´ıa mucho seg´un
+el tama˜no de p´agina, por lo que llevar la misma cantidad de memoria en m´ultiples p´aginas ser´a
+considerablemente m´as lento.
+3.6.10. Espacios separados de instrucciones y datos
+Algunas arquitecturas definen espacios de direcciones “I” y “D” independientes para instrucciones
+y datos, cada una paginada con su propia tabla de p´aginas.3.6. MEMORIA VIRTUAL 45
+3.6.11. Compartici ´on
+Compartir las p ´aginas con instrucciones de un programa no suele suponer complicaciones, pues
+al ser de solo lectura no se necesita aplicar exclusi´on mutua.
+Por otro lado, compartir las p´aginas con los datos solo deber´ıa hacerse mientras estos sean, como
+las instrucciones, de solo lectura. En el momento en que se los intente modificar, se emite un TRAP
+que ordena al sistema operativo copiar la p´agina correspondiente y asignarle tanto a la original como
+a la copia permiso de escritura (bits de protecci´on en las entradas de la tabla de p´aginas). A esto se le
+llama “copiar en escritura”.
+Ambas posibles comparticiones se simplifican mucho si hay espacios de instrucciones y datos,
+aunque esto requiere dos punteros por BCP en la tabla de procesos, una por cada tabla de p´aginas.
+Similar a las instrucciones de un programa, existen las bibliotecas compartidas (Dynamically
+Linked Library, Biblioteca de Enlaces Din´amicoss (DLLs)). Sus ventajas son:
+Menor tama˜no de los ejecutables
+Se cargan una vez, aunque muchos programas las est´en usando
+Actualizaci´on autom ´atica, no es necesario recompilar programas cuando las bibliotecas son
+actualizadas
+Cada programa ve las bibliotecas compartidas como si se encontraran en su espacio de memoria,
+por lo que no se puede hacer direccionamiento absoluto (¿c ´omo sabr´ıa la biblioteca a la direcci ´on de
+qu´e programa se refiere la instrucci´on?), sino que se debe utilizar c´odigo independiente de la posici´on,
+es decir, con direccionamiento relativo (JUMP 4 lugares hacia adelante).
+Las bibliotecas compartidas se implementan mediante archivos asociados a memoria: archivos
+que son accedidos como si fueran parte de la memoria virtual de un proceso (solicitando esto al
+sistema operativo con una llamada al sistema). Adem ´as, los archivos asociados permiten obtener un
+canal de comunicaci´on de gran ancho de banda entre procesos.
+3.6.12. Pol ´ıtica de limpieza
+Es com ´un la existencia de un demonio de paginaci ´on que peri ´odicamente copie las p ´aginas con
+M = 1 al disco y colocando M en 0, para que cuando haya un fallo de p ´agina no se deba realizar el
+movimiento de urgencia.
+Adem´as, puede incluso desalojar p´aginas para acelerar la b´usqueda de marcos de p´agina libres en
+los fallos de p´agina.
+3.6.13. Interfaz de memoria virtual
+B´asicamente, lo que los procesos y programadores ven es un espacio de direcciones virtuales gran-
+de en una computadora de memoria f´ısica m´as peque˜na. Sin embargo, algunos sistemas proporcionan
+mayor control del mapa de memoria, lo que posibilita los archivos asociados, sistemas de mensajes
+veloces que no requieren ser copiados y la memoria compartida distribuida (entre distintas m´aquinas,
+envi´andose p´aginas).46 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+3.6.14. Participaci ´on del sistema operativo en la paginaci´on
+Al crear un proceso
+Se debe crear e inicializar la tabla de p ´aginas, asign ´andole memoria. Tambi ´en se debe asignar
+espacio en el ´area de intercambio del disco, donde se guardan las p ´aginas no cargadas. Se debe
+guardar la informaci´on de la tabla de p´aginas y el ´area de intercambio en la tabla de procesos.
+Al ejecutar un proceso
+Se debe establecer la MMU y vaciar el TLB para deshacerse de las p ´aginas del proceso anterior,
+y tambi´en actualizarse la tabla de p´aginas. Puede o no hacerse prepaginaci´on.
+Al ocurrir un fallo de p´agina
+1. Determinar direcci ´on virtual que produjo el fallo (leyendo registros de hardware)
+2. Determinar p ´agina necesaria y localizarla en el disco
+3. Buscar un marco de p ´agina y liberarlo de ser necesario, copiando su contenido de su p ´agina al
+disco si esta fue modificada
+4. Copiar la p ´agina necesaria al marco de p´agina
+5. Restaurar registro contador de programa (PC)
+Al terminar un proceso
+Se debe liberar su tabla de p ´aginas y el espacio que las p ´aginas ocupan cuando est ´an en disco,
+siempre y cuando no est´en compartidas.
+3.6.15. Manejo de fallos de p ´agina
+1. El hardware guarda PC en la pila y, com´unmente, cierta informaci´on del estado de la instrucci´on
+actual en registros especiales de la CPU. TRAP al kernel.
+2. Una rutina guarda los registros generales e informaci ´on vol´atil. Llama al sistema operativo.
+3. El sistema operativo determina la p ´agina necesaria, ya sea por un registro especial o analizando
+por software la instrucci´on que produjo el fallo.
+4. El sistema operativo comprueba si la direcci ´on es v ´alida y no viola la protecci ´on, envi´andole
+una se ˜nal al proceso o elimin ´andolo de no ser as ´ı. De otro modo, el sistema selecciona un
+marco de p´agina, primero buscando alguno disponible y si no lo hay, ejecutando un algoritmo
+de reemplazo de p´aginas.
+5. Si el marco est ´a sucio, se planifica la transferencia de la p ´agina que contiene al disco y se
+realiza una conmutaci ´on de contexto, dejando que otros procesos se ejecuten. Se marca como
+“ocupado” al marco de p´agina.3.6. MEMORIA VIRTUAL 47
+6. Cuando el marco de p ´agina est ´e limpio, el sistema operativo busca la p ´agina necesaria en el
+disco y planifica la transferencia de esta al marco de p ´agina en memoria f´ısica. Se deja a otros
+procesos ejecutarse mientras esto ocurre.
+7. El disco emite una interrupci ´on al terminarse la transferencia, y el sistema operativo entonces
+actualiza las tablas de p´agina y se marca como “normal” al marco de p´agina.
+8. Se respalda el estado de la instrucci ´on fallida y se restablece PC.
+9. Se planifica el proceso fallido y el sistema operativo regresa el control a la rutina que lo llam ´o.
+10. La rutina recarga los registros y dem ´as informaci´on de estado, regresando al espacio de usuario
+para seguir con la ejecuci´on.
+3.6.16. Respaldo de instrucci ´on (fallida)
+Instrucciones con m´ultiples referencias a memoria
+Se considera as´ı a las instrucciones que ocupan m´ultiples palabras. Estas, deben ir aumentando el
+contador de programa a medida que se ejecutan, por lo que al ocurrir un fallo de p ´agina no basta con
+guardar el PC actual, sino que tambi ´en se debe guardar el PC en que inician las instrucciones. Esto
+pueden solucionarlo los dise˜nadores de CPUs agregando un registro interno oculto.
+Instrucciones con autoincremento/autodecremento
+Seg´un las microinstrucciones que usa una instrucci´on, puede incrementar o decrementar uno o m´as
+registros antes o despu ´es de un potencial fallo de p ´agina. Si ocurren luego no hay ning ´un problema;
+pero si son previos al fallo, se deben deshacer los cambios que hayan hecho al continuar la ejecuci´on
+luego de traer la p ´agina a memoria. Tambi ´en puede solucionarse mediante registros que indiquen
+cu´ales registros han sido incrementados y en cu´anto.
+3.6.17. E/S y reemplazo de p ´aginas
+Si un proceso inicia una transferencia de E/S mediante DMA, luego se conmuta a otro proceso
+y este tiene un fallo de p ´agina en que se decida mover la p ´agina encargada de recibir los datos de
+la transferencia al disco, parte de estos datos ser ´an escritos a la p ´agina correspondiente pero el resto
+quedar´an en la nueva p´agina que ocupa el marco.
+Esto puede solucionarse mediante bloqueo de p´aginas en memoria o fijaci´on, para evitar que esta
+sea eliminada. Otra opci´on es forzar que todas las transferencias de E/S se realicen a b´ufers del n´ucleo,
+y que este luego copie los datos a la p´agina correspondiente.
+3.6.18. Almac ´en de respaldo
+Se refiere a la forma en que las p´aginas se almacenan en el disco: en una partici´on de intercambio
+especial en el disco o en un disco separado del sistema operativo. Esta partici´on (o disco separado) se
+administra como una lista de trozos libres.
+Al comenzar a ejecutarse un proceso, se debe inicializar el ´area de intercambio, ya sea:48 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+Copiando la imagen del proceso al ´area de intercambio para que pueda llevarse a memoria
+cuando sea necesario (aqu ´ı puede ser ´util designar ´areas separadas para el texto, datos y pila,
+dado que el tama˜no de los dos ´ultimos cambia, y puede tambi´en realizarse una optimizaci´on si
+se designa como ´area de texto al archivo ejecutable, pues este no cambia). Las direcciones de
+inicio de las ´areas de intercambio se guardan en el BCP de cada proceso.
+Cargando el proceso en memoria, y dejando que se pagine hacia afuera, escribi´endose al disco
+al realizar intercambios. Adem ´as, esto da la posibilidad de ahorrar espacio del ´area de inter-
+cambio si tambi ´en se liberan las p ´aginas del disco al escribirlas a la memoria principal. Las
+desventajas son que no se aprovecha el bit M y que hace falta una tabla por proceso que alma-
+cene la ubicaci´on de cada p´agina en el disco.
+3.6.19. Pol ´ıtica contra mecanismo
+Para conseguir una organizaci ´on m´as modular del c ´odigo, se lo puede dividir entre los espacios
+de n ´ucleo y de usuario. El mecanismo es aquel implementado en el n ´ucleo (manejador de fallos),
+mientras que la pol´ıtica es un proceso de usuario (paginador externo).
+Entonces, los fallos de p´agina pueden ser administrados de la forma indicada en el gr´afico:
+Una complicaci´on es decidir d´onde se ejecuta el algoritmo de reemplazo de p´aginas:
+En el paginador externo no se tiene acceso a los bits R y M, por lo que probablemente haga
+falta pasarlos de alguna forma si el algoritmo estuviera aqu´ı.
+En el manejador de fallos, se debe indicar al paginador externo la p´agina a desalojar (pues este
+es el que interact´ua con el disco).
+Al separar pol ´ıtica y mecanismo se obtiene un c ´odigo modular m ´as flexible, pero hace menos
+eficiente al sistema al requerir m´as cambios de modo.3.7. SEGMENTACI´ON 49
+3.7 Segmentaci ´on (Tanenbaum, 2009, 234-247)
+Consiste en dividir la memoria (f ´ısica o virtual) en partes llamadas “segmentos”, espacios de
+direcciones independientes, con las ventajas de:
+Facilitar la expansi´on y compresi´on de las partes de un proceso sin afectar a las otras.
+Optimiza la compilaci ´on, pues al cada segmento tener su propio espacio de direcciones, una
+actualizaci´on en uno de ellos no requiere recompilar el resto. Esto es ´util para las bibliotecas
+compartidas.
+Permitir el establecimiento de protecciones para distintos segmentos, evitando por ejemplo que
+se escriba a un segmento de texto, o que se ejecute un segmento con un arreglo o una pila.
+Todo esto es posible gracias a que, a diferencia de la paginaci ´on, la segmentaci ´on es manipu-
+lada por los programadores: los segmentos son unidades l ´ogicas de las cuales el programador est ´a
+consciente.
+3.7.1. Segmentaci ´on pura
+La memoria se divide en segmentos de distintos tama˜nos, que van siendo reemplazados por otros
+conforme pasa el tiempo. Para evitar fragmentaci´on externa (divisi´on de la memoria en muchos trozos,
+algunos ocupados y otros no) se debe compactar peri´odicamente a la memoria (como en el intercam-
+bio de procesos).
+3.7.2. Segmentaci ´on con paginaci´on
+Consiste en dividir a la memoria en segmentos, y a los segmentos en p ´aginas. Por esto, las direc-
+ciones (o selectores) deben consistir de tres partes: un n ´umero de segmento, un n ´umero de p ´agina y
+un desplazamiento en esta p´agina. En consecuencia, cada proceso tiene una tabla de segmentos, cuyas
+entradas se denominan descriptores de segmento, y cada descriptor de segmento tiene un puntero a su
+tabla de p´aginas.
+La imagen que sigue describe la conversi´on de una direcci´on del sistema operativo MULTICS en
+una direcci´on de la memoria principal:
+50 CAP´ITULO 3. ADMINISTRACI´ON DE MEMORIA
+Esta organizaci ´on requiere una mayor complejidad en el TLB, pues adem ´as de la p ´agina, debe
+almacenar el segmento. En el sistema operativo MULTICS el TLB es a´un m´as complejo, pues soporta
+m´as de un tama˜no de p´agina.
+En algunos sistemas (como Intel Pentium) hay, adem ´as de una tabla de segmentos por proceso
+(LDT, Local Descriptor Table), una tabla de segmentos global (GDT, Global Descriptor table) que
+almacena los segmentos del sistema. El Intel Pentium tambi ´en soporta desactivar la segmentaci ´on y
+la paginaci´on.
+La protecci´on suele implementarse por segmento. En MULTICS e Intel Pentium hay ciertos nive-
+les, y un programa en cierto segmento en un nivel no puede acceder a segmentos en niveles menores.
+Hay una excepci´on a esto: una instrucci´on CALL, que utiliza un selector para identificar un descriptor
+llamado compuerta de llamada que contiene la direcci ´on de un procedimiento de un nivel inferior.
+Esto es para evitar saltos a direcciones arbitrarias. LosTRAPs e interrupciones funcionan an´alogamen-
+te.Cap´ıtulo 4
+Archivos
+4.1 Almacenamiento de informaci ´on a largo plazo (Tanenbaum, 2009,
+p. 255-256)
+Hay tres requerimientos para considerar que se tiene un almacenamiento de informaci ´on a largo
+plazo:
+Gran capacidad para informaci´on
+Persistencia de informaci´on tras terminaci´on de procesos de la utilicen
+Posible acceso concurrente por m´ultiples procesos
+Este almacenamiento se refiere a la memoria secundaria, y suele involucrar discos (organizados
+linealmente en bloques de datos de tama ˜no fijo, con operaciones para leer o escribir un bloque de
+cierto ´ındice).
+El sistema operativo crea una interfaz m ´as conveniente para que los procesos de usuario puedan
+manejar el almacenamiento a largo plazo: el sistema de archivos.
+Un archivo es una unidad l´ogica de informaci´on creada por un proceso.
+Los archivos tienen nombres. Los sistemas operativos determinan qu ´e caracteres pueden conte-
+ner los nombres. Los nombres suelen separarse en dos o m ´as partes que, dependiendo del sistema
+operativo, pueden tener un significado para este o solo para el usuario. Una divisi´on com´un es “nom-
+bre.extensi´on”.
+4.2 Estructuras de archivos (Tanenbaum, 2009, p. 259-260)
+5152 CAP´ITULO 4. ARCHIVOS
+Hay tres tipos de estructura interna de un archivo:
+4.2.1. Secuencia de bytes
+No tiene estructura alguna, es el tipo m´as flexible.
+4.2.2. Secuencia de registros
+M´ultiples registros de tama˜no fijo que pueden ser accedidos mediante un ´ındice.
+4.2.3. ´Arbol de registros
+Cada registro (de tama ˜no variable) tiene una llave que debe ser proporcionada para acceder al
+mismo, aunque tambi´en puede accederse a los registros secuencialmente.
+4.3 Tipos de archivos (Tanenbaum, 2009, p. 260-262)
+4.3.1. Regulares
+Archivos regulares
+Contienen informaci´on del usuario.
+Los hay:
+ASCII (de texto) , que pueden ser mostrados como est ´an, editados e impresos con sencillez.
+Adem´as, facilitan la canalizaci ´on de programas (un programa usa como entrada la salida de
+otro). Hay distintas convenciones respecto a c´omo deber´ıa terminar una l´ınea: con un avance de
+l´ınea/line feed (LF), con un retorno de carro/carriage return (CR) o con ambos (CRLF).
+Binario, aquellos que no son de texto. Suelen tener una estructura interna y ser usados por
+programas espec´ıficos, pero su contenido no podr ´a mostrarse directamente (como los archivos
+ASCII). Los sistemas operativos suelen reconocer al menos un tipo: los ejecutables.4.4. ACCESO A ARCHIVOS 53
+Directorios regulares
+Sistemas de archivos que permiten mantener la estructura.
+4.3.2. Especiales
+Tienen un prop´osito particular transparente al usuario. Algunos ejemplos podr´ıan ser, en UNIX:
+De caracteres: para modelar dispositivos de E/S en serie
+De bloques: para modelar discos
+4.4 Acceso a archivos (Tanenbaum, 2009, p. 262)
+Se refiere a la lectura de datos de estos. Puede ser secuencial o de acceso aleatorio (indicando
+la posici ´on). Com ´unmente se usa una combinaci ´on de ambas, con las operaciones seek (colocar la
+posici´on a partir de la que se comenzar´a a leer) y read (leer).
+4.5 Atributos de archivos (Tanenbaum, 2009, p. 263-264)
+Los atributos o metadatos son campos con informaci ´on adicional acerca de cada archivo que
+guardan los sistemas operativos.
+Algunos aspectos a los que suelen relacionarse estos atributos son la protecci´on, creador y propie-
+tario, tama˜no de registro, tama ˜no de llave y posici ´on de las llaves, horas de creaci ´on, ´ultimos acceso
+y modificaci´on, tama˜nos actual y m´aximo.
+4.6 Operaciones de archivos (Tanenbaum, 2009, p. 264-265)
+T´ıpicamente, son:
+Create: sin datos, avisa de la creaci´on y establece algunos atributos
+Delete: para liberar el espacio en disco
+Open: trae el archivo del disco a la memoria principal
+Close: escribe el ´ultimo bloque del archivo de la memoria principal al disco (los bloques ante-
+riores ya hab´ıan sido escritos)
+Read: lee datos del archivo a un b ´ufer desde la posici ´on actual, se debe indicar la cantidad de
+datos le´ıda
+Write: escribe datos al archivo en la posici´on actual; si esta es en medio del archivo, sobrescribe
+el contenido, pero si es al final, aumenta el tama˜no del archivo
+Append: Write que siempre escribe al final
+Seek: coloca el apuntador del archivo en cierta posici´on especificada54 CAP´ITULO 4. ARCHIVOS
+Get attributes: devuelve el valor de los atributos
+Set attributes: establece el valor de ciertos atributos
+Rename: cambia el nombre del archivo
+4.7 Sistemas de directorios (Tanenbaum, 2009, p. 268-272)
+4.7.1. Sistemas de directorios de un nivel
+Todos los archivos se encuentran en un´unico directorio. Es ´util ´unicamente para sistemas simples.
+4.7.2. Sistemas de directorios jer ´arquicos
+Mediante un ´arbol de directorios. Si los directorios son considerados como archivos por un siste-
+ma, un directorio puede contener tanto directorios como otros archivos.
+Estos sistemas requieren nombres de rutapara ubicar archivos y directorios. Los nombres de
+ruta consisten en una secuencia de nombres de directorios separadas por un caracter especial que el
+sistema operativo establece (“ \” en Windows, “/” en UNIX, “ >” en MULTICS). El ´ultimo nombre
+puede ser un archivo regular.
+Hay dos tipos de nombres de ruta:
+Absolutas: comienzan con el caracter especial, y se debe comenzar la b´usqueda por el directorio
+ra´ız.
+Relativas: no comienzan con el caracter especial, buscan a partir del directorio de trabajo
+Adem´as, muchos sistemas operativos proveen unas entradas especiales para ser usadas en lugar
+de los nombres de directorios o archivos:
+“.”: hace referencia al directorio de trabajo
+“..”: hace referencia al directorio padre del directorio de trabajo (a excepci ´on de la ra ´ız, que
+hace referencia a s´ı misma).
+4.8 Operaciones de directorios (Tanenbaum, 2009, p. 272-273, 283-285)
+Algunas operaciones comunes son:
+Create: crea un directorio vac´ıo, salvo por “.” y “..”
+Delete: elimina un directorio siempre y cuando est´e vac´ıo (que solo contiene a “.” y “..”)
+Opendir: abre un directorio (para poder leer su contenido)
+Closedir: cierra un directorio para liberar espacio
+Readdir: devuelve la siguiente entrada en un directorio abierto4.9. DISTRIBUCI ´ON DEL SISTEMA DE ARCHIVOS 55
+Rename: cambia el nombre de un directorio (a veces es la misma operaci´on que con los archivos)
+Link: vincula (v´ınculo o liga dura) un archivo a un directorio. La vinculaci ´on permite que un
+mismo archivo aparezca en m ´ultiples directorios, con m ´ultiples rutas. Es usado en UNIX con
+los Nodos-I
+Unlink: desvincula un archivo de un directorio, eliminando su entrada. Si esta era la ´unica
+referencia al archivo, tambi´en se lo elimina definitivamente
+Existen tambi´en los v´ınculos o ligas simb ´olicos: un archivo que apunta a otro. Para modificar el
+archivo apuntado, primero se tiene que buscar la en la ruta del primero, leerlo y buscar en la ruta
+que este conten´ıa al segundo. Es menos eficiente que el v´ınculo duro, pero a diferencia de este puede
+nombrar archivos en computadoras remotas.
+4.9 Distribuci ´on del sistema de archivos (Tanenbaum, 2009, p. 273-274)
+Los discos se dividen en particiones, cada partici´on correspondiendo al sistema de archivos de un
+sistema operativo.
+En el sector 0 de un disco, se encuentra el Registro Maestro de Arranque (MBR, Master Boot
+Record). Al final de este se halla una tabla de particiones, que proporciona informaci ´on respecto al
+inicio y fin de cada una, y se marca a una partici´on como activa.
+Cada partici´on, a su vez, se divide en ciertos bloques. Esta distribuci´on var´ıa de un sistema de ar-
+chivos a otro, pero suelen tener algunos bloques en com´un (sin ning´un orden en particular, a excepci´on
+del bloque de arranque):
+Bloque de arranque: contiene un programa que carga el sistema operativo contenido en la par-
+tici´on. Al arrancar la m ´aquina, se carga y ejecuta el bloque de arranque de la partici ´on activa.
+Siempre est´a primero.
+Superbloque: contiene par´ametros clave sobre el sistema de archivos, y se lee en la memoria en
+el arranque del sistema operativo o con la primera interacci´on con el sistema de archivos.
+Administraci´on del espacio libre: mapa de bits o lista enlazada para manejar los bloques libres.
+Nodos-I: arreglo de estructuras de datos con informaci´on de los archivos (una por cada uno).
+Directorio ra´ız
+Otros archivos y directorios56 CAP´ITULO 4. ARCHIVOS
+4.10 Implementaci ´on de archivos (Tanenbaum, 2009, p. 274-280, 321-323)
+Se refiere a la forma en que se organizan los archivos en el espacio destinado a ellos en el disco.
+4.10.1. Asignaci ´on contigua
+Es dividir el disco en bloques del mismo tama ˜no y colocar un archivo tras otro, ocupando una
+cierta cantidad de bloques. Entonces, a cada archivo se le debe asociar dos n ´umeros: el bloque de
+inicio y la cantidad de bloques que ocupa.
+El asignar bloques indivisibles implica que siempre una parte del ´ultimo quedar´a sin utilizar; esto
+es la fragmentaci´on interna.
+Este m´etodo es muy sencillo de implementar y es eficiente (pues todos los bloques del archivo se
+encuentran juntos, solo hace falta una operaci´on de b´usqueda). Sin embargo, acarrea un problema: la
+fragmentaci´on externa.
+La fragmentaci ´on externa ocurre cuando se eliminan archivos, pues quedan bloques libres en
+medio de otros ya ocupados. Esto implica elegir una forma de agregar archivos: siempre al final, o
+buscando huecos libres (la segunda requiere siempre saber el tama˜no m´aximo del archivo).
+Para solucionar la fragmentaci´on externa se debe recurrir a la compactaci´on del disco, un proceso
+muy caro.
+La asignaci ´on contigua puede ser ideal para almacenamiento permanente ROM, pues al nunca
+eliminarse archivos, no se produce fragmentaci´on externa.
+4.10.2. Asignaci ´on de lista enlazada
+Un archivo consiste en un conjunto de bloques; cada bloque contiene una palabra reservada al
+comienzo que almacena un puntero al siguiente bloque.
+Si bien soluciona la fragmentaci ´on externa, la b ´usqueda es muy lenta, puesto que llegar a cierto
+bloque requiere haber le´ıdo todos los anteriores. Otra peque˜na desventaja es que cada bloque tendr´a un
+tama˜no utilizable distinto a una potencia de dos, algo que puede ralentizar las operaciones de lectura
+de un programa si cree que puede ocupar el tama ˜no real y no el disponible de un bloque (implicar ´ıa
+la escritura a dos bloques).4.11. IMPLEMENTACI´ON DE DIRECTORIOS 57
+4.10.3. Asignaci ´on de lista enlazada con FAT
+Utiliza el mismo principio de la lista enlazada normal, pero almacenando los punteros en una tabla
+FAT (File Allocation Table, Tabla de Asignaci´on de Memoria) en memoria principal.
+Este m´etodo acelera la b´usqueda pues, si bien se debe recorrer toda la lista para llegar a un bloque,
+los punteros se encuentran en la memoria principal. Adem ´as, l ´ogicamente, el tama ˜no disponible de
+un bloque es igual a su tama˜no real, pues no se necesita guardar en ´el el puntero.
+Sin embargo, acarrea una desventaja significativa: una gran cantidad de bloques requiere una gran
+tabla que debe mantenerse cargada en memoria principal todo el tiempo.
+4.10.4. Nodos-I
+Consiste en una estructura de datos relacionada con un archivo en particular. Estos Nodos-I (nodos
+´ındice) se guardan en el disco, y solo se cargan en memoria cuando se abre el archivo.
+Como suele haber un n ´umero m ´aximo de archivos abiertos simult ´aneamente, este es el mismo
+n´umero m´aximo de Nodos-I en memoria. Entonces, el espacio que deber ´a reservarse en memoria es
+independiente del tama ˜no del disco y la cantidad de bloques (a diferencia de la lista enlazada con
+FAT), y suele ser bastante m´as peque˜no.
+Un Nodo-I contiene los atributos del archivo, algunos apuntadores a bloques con el contenido y
+puede tener un apuntador a un bloque con m ´as apuntadores a contenido, por si el archivo requiriera
+m´as espacio. Tambi´en lleva la cuenta de cu ´antas referencias hay a este archivo, para saber si puede
+ser eliminado (al eliminar la ´ultima referencia).
+Otra forma que suelen tener los Nodos-I suele ser:
+Atributos
+10 apuntadores directos a bloques del archivo
+1 apuntador indirecto simple (a un bloque de apuntadores a bloques del archivo)
+1 apuntador indirecto doble (a un bloque de apuntadores a bloques de apuntadores a bloques
+del archivo)
+1 apuntador indirecto triple (similar a los anteriores, pero con 3 capas)
+4.11 Implementaci ´on de directorios (Tanenbaum, 2009, p. 280-282)
+4.11.1. Acceso a archivos y atributos
+Un directorio debe almacenar los nombres de los archivos que contiene, y con este posibilitar
+acceder al archivo y sus atributos.58 CAP´ITULO 4. ARCHIVOS
+Implementaci´on
+de Archivos
+Acceso a archivos Ubicaci ´on de atri-
+butos
+Continua Direcci ´on de disco
+del archivo
+En la entrada del di-
+rectorio
+Lista enlazada N ´umero del bloque
+inicial
+En la entrada del di-
+rectorio
+FAT N ´umero del bloque
+inicial
+En la entrada del di-
+rectorio
+Nodos-I N ´umero del Nodo-I En el Nodo-I
+4.11.2. Tama ˜no de nombres
+Pueden ser de longitud:
+Fija: obliga a que todos los nombres ocupen el mismo espacio, lo que conlleva un desperdicio
+considerable si se permiten nombres largos.
+Variable:
+Al final de la entrada: requiere almacenar la longitud de cada entrada al inicio, seguida
+por los campos necesarios para el acceso al contenido del archivo y los atributos y, al final,
+el nombre del archivo en s ´ı. Implica entradas de tama ˜no variable, produciendo fragmentaci ´on
+externa poco costosa de compactar (pues se encuentra en la memoria principal).
+En un heap: Se almacena un puntero a una direcci ´on en un heap que tiene cada directorio
+para el prop´osito espec´ıfico de guardar los nombres.
+4.11.3. Aceleraci ´on de la b´usqueda
+Las formas de organizar las entradas de acuerdo a los nombres ya mencionadas requieren realizar
+una b´usqueda lineal, leyendo entrada por entrada hasta encontrar aquella cuyo nombre coincida con
+el buscado. Esto puede ser lento si hay directorios con muchos archivos.
+Con el fin de acelerar la b ´usqueda, puede crearse una tabla de hash que procesa el nombre del
+archivo y devuelve un c´odigo de hash. Todas las entradas con el mismo c´odigo se colocan en una lista
+enlazada, reduciendo la b´usqueda a la lectura de una fracci´on de las entradas.
+Una alternativa es la implementaci ´on de una cach ´e, ´unicamente ´util si los archivos a los que se
+accede suelen ser los mismos.
+4.12 Sistemas de archivos alternativos (Tanenbaum, 2009, p. 285-291)
+4.12.1. Estructurados por registro (LFS)
+Dada la lenta mejora de la velocidad de los discos comparada con la evoluci ´on de otros medios
+de almacenamiento y hardware en general, se ha dise˜nado otro sistema de archivos que busca ser m´as
+eficiente.
+Un LFS (Log-structured File System, Sistema de archivos estructurado por registro) se basa en
+que, si bien el disco no aumenta su velocidad a un ritmo suficientemente r ´apido, las cach´es de disco4.12. SISTEMAS DE ARCHIVOS ALTERNATIVOS 59
+s´ı lo hacen. Por esto, la mayor ´ıa de las operaciones de lectura no requieren acceso al disco y no
+representan un problema.
+El verdadero inconveniente es la gran cantidad de escrituras peque ˜nas que se necesitan. Un LFS
+utiliza un b ´ufer en memoria en el cual se realizan todas las escrituras y, cada cierto tiempo, un hilo
+“escritor” realiza una escritura al disco en un solo segmento al final. Se considera al disco como un
+registro.
+Si se utilizan Nodos-I, una gran parte de las escrituras ocurrir ´an sobre estos, por lo que tenerlos
+en una parte fija de la memoria reducir ´ıa en gran medida la efectividad de este sistema de archivos.
+En su lugar, se mantiene una tabla en cach´e que relaciona cada entrada con un nodo, apuntando a este
+donde sea que est´e en el disco.
+Adem´as, un LFS requiere un hilo “limpiador”, que recorra al registro para compactarlo. Esto
+implica:
+Verificar si los Nodos-I que contiene ya han sido sobrescritos (si la tabla con apuntadores no
+les apunta)
+Verificar si los bloques que contiene a´un est´an en uso (si los Nodos-I no les apuntan)
+Escribir los nodos y bloques que a ´un est´en en uso en el b ´ufer de memoria para ser escritos en
+el siguiente segmento
+Liberar el segmento
+En s´ıntesis, el disco se estructura como un b ´ufer circular, con un disco escritor que lo llena y un
+hilo limpiador que lo vac´ıa.
+4.12.2. Por bit ´acora (JFS)
+Los JFS (Journaling File System, Sistema de archivos por bit ´acora) buscan una forma robusta de
+salvar las posibles fallas que puede haber durante un proceso que requiere m´ultiples escrituras.
+Esto lo logra creando una entrada de registro en el disco con las operaciones que se debe realizar
+antes de ejecutarlas, y borrando la entrada al finalizar. De esta forma, si ocurre un fallo y la m ´aquina
+se reinicia, lo primero que har ´a el sistema operativo es buscar estas entradas y realizar las acciones
+listadas.
+Algo importante a tener en cuenta es que las acciones deben ser idempotentes: que puedan rea-
+lizarse m´ultiples veces sin ning´un peligro. Las acciones no idempotentes suelen poder convertirse en
+este tipo con algunos cambios.
+Adem´as, es conveniente que las acciones se realicen como una transacci´on at ´omica, para au-
+mentar la confiabilidad al garantizar que ninguna acci´on quedar´a a medio hacer.
+Algunos ejemplos de JFS son NTFS (Windows), ReiserFS y ext3 (Linux).
+4.12.3. Virtuales (VFS)
+Un sistema operativo suele ser capaz de manejar m´as de un sistema de archivos simult´aneamente.
+Windows lo logra asign ´andole a cada sistema una letra de unidad (C:, D:). Los sistemas UNIX los
+unifican mediante la montura, con un VFS (Virtual File System, Sistema de archivos virtual).
+En un VFS intervienen dos interfaces: una para los procesos de usuario (POSIX) y otra para los
+sistemas de archivos. Ambas consisten en ciertas llamadas: las llamadas POSIX y ciertas funciones
+definidas en el VFS e implementadas por cada sistema de archivos.60 CAP´ITULO 4. ARCHIVOS
+Un VFS define tres objetos:
+Superbloque: sistema de archivos
+Directorio: directorio del sistema de archivos
+Nodo-V: archivo
+Cada objeto tiene sus propias llamadas. Al montarse un sistema de archivos (ya sea en el arranque
+o luego), este se debe registrar con el VFS provey´endole todas las llamadas que necesita, ya sea en un
+´unico vector o con uno por objeto.
+La operaci´on de lectura requiere identificar cuando se accede a un sistema montado, para as´ı:
+1. Identificar el superbloque correspondiente al sistema de archivos
+2. Identificar el directorio ra ´ız en el superbloque y seguir la ruta especificada
+3. Crear un Nodo-V y hacer una llamada al sistema de archivos que copie en este la informaci ´on
+del Nodo-I correspondiente (y otra informaci´on, como el puntero al vector de funciones)
+4. Crear una entrada en la tabla de descriptores de archivos (file descriptors) que apunte al Nodo-V
+As´ı, utilizando el descriptor de archivo se puede acceder al archivo correspondiente sin importar
+en qu´e dispositivo se encuentre.
+4.13 Administraci ´on del espacio en disco (Tanenbaum, 2009, p. 292-298)
+4.13.1. Modos
+Un archivo puede ocupar n bytes consecutivos o bloques no necesariamente contiguos. El primero
+es m´as veloz para la b´usqueda pero inaceptablemente lento para ser movido a otro sector del disco, y
+provoca fragmentaci´on externa.
+Es por esto que se suele usar bloques de tama˜no fijo.
+4.13.2. Tama ˜no de bloque
+Un tama ˜no de bloque grande implica un desperdicio de espacio por la fragmentaci ´on interna;
+mientras que uno peque˜no implica un mal rendimiento, pues para archivos m´as grandes que el tama˜no
+de bloque se requieren m´as b´usquedas.
+Dado que el espacio en disco aumenta m´as r´apido que su velocidad, suele favorecerse a un tama˜no
+de bloque m´as grande.
+4.13.3. Bloques libres
+Es necesario que el sistema operativo sea capaz de identificar aquellos bloques disponibles para
+ser ocupados al crearse nuevos archivos o agrandarse otros ya existentes. Esto puede hacerse de varias
+formas:4.13. ADMINISTRACI ´ON DEL ESPACIO EN DISCO 61
+Lista enlazada
+Se utilizan algunos bloques para guardar punteros a bloques libres. Los primeros reservan una
+palabra para guardar un puntero al siguiente bloque con punteros a bloques libres.
+Este m´etodo ocupa mucha memoria, pues por cada bloque libre se requerir´a n bits que le apunten
+para saber que lo est´a (si el disco es de 2n). Sin embargo, el tama˜no de la lista cambia din´amicamente,
+por lo que si disminuyera la cantidad de bloques libres, tambi ´en disminuir´ıa la cantidad de bloques
+ocupados por la lista (liber´andolos).
+Para que el sistema operativo tenga acceso a la informaci ´on de aquellos bloques libres con este
+m´etodo, debe mantener en todo momento un bloque de punteros en la memoria principal. De este
+modo:
+Al agrandar (o crear) un archivo, podr´a saberse qu´e bloques pueden ser ocupados.
+Al achicar (o eliminar) un archivo, podr´a marcarse los bloques correspondientes como “libres”.
+Si se requiriera m´as bloques libres de los apuntados por el bloque de punteros en memoria, se debe
+traer otro del disco; lo opuesto pasa si se han liberado m ´as bloques de los que pueden ser apuntados
+por el bloque actualmente cargado en memoria.
+Siempre que se intercambia un bloque de punteros con el disco es conveniente solo mover una
+parte del bloque, pues as´ı se evita la posibilidad de que se produzcan muchas operaciones de E/S por
+intercambio de bloques. Caso contrario, de moverse bloques completos:
+Teniendo el bloque de punteros llenos, al liberarse m ´as bloques se debe llevar el bloque actual
+al disco y traer uno nuevo vac´ıo.
+Teniendo el bloque de punteros vac ´ıo, al ocuparse bloques se debe traer un bloque lleno del
+disco.
+Est´a la posibilidad de que, estando en cualquiera de estas situaciones, comience a liberarse y
+ocuparse el disco intercaladamente, ralentizando el sistema.
+Lista enlazadas para bloques consecutivos
+Es una variaci ´on de las listas enlazadas que, en lugar de guardar un puntero a cada bloque libre,
+guarda un puntero y un n´umero. Estos, permiten identificar una secuencia de bloques libres:
+el puntero, apuntando al primero bloque, y
+el n´umero, guardando la cantidad de bloques libres.
+Mapa de bits
+Hace corresponder, de forma secuencial, un bit a cada bloque del disco, con un 0 si est ´a ocupado
+y un 1 si est´a libre (o viceversa).
+Ocupa menos espacio que la lista enlazada en general, a menos que haya mucho espacio ocupado
+en el disco.
+Tiene un tama ˜no fijo, por lo que puede colocarse en la memoria virtual y ser paginado cuando
+sea necesario. Adem ´as, dado que est ´a ordenado, el encontrar bloques libres requiere b ´usquedas de
+bloques cercanos en el disco, aumentando su rendimiento.62 CAP´ITULO 4. ARCHIVOS
+4.13.4. Cuotas de disco
+Los sistemas operativos multiusuario suelen limitar el espacio en disco que puede ocupar cada
+uno de sus usuarios.
+Esto lo logra asignando una cuota a cada usuario, las cuales se guardan en una tabla de cuotas.
+Cada archivo que est ´e abierto tiene una entrada en la tabla de archivos abiertos, en la cual se
+almacena el UID del propietario del archivo y un puntero a su entrada en la tabla de cuotas. De esta
+forma, cualquier aumento o disminuci ´on en la cantidad de bloques (o archivos) que correspondan al
+usuario quedan registrados.
+En la tabla de cuotas se almacena tambi´en, tanto para los bloques como para los archivos:
+Un l´ımite suave, que puede ser sobrepasado
+Un n´umero de advertencias pendientes, que disminuye siempre que se inicia sesi ´on cuando se
+ha sobrepasado el l´ımite suave, e impide el ingreso al usuario si agota el n´umero de advertencias
+(por ignorarlo)
+Un l´ımite duro, que no puede ser sobrepasado
+4.14 Respaldo del sistema de archivos (Tanenbaum, 2009, p. 298-304)
+“Vaciar” se refiere a hacer una copia de seguridad al disco. Puede ser:
+Completo (todos los archivos)
+Incremental (solo aquellos archivos que han sufrido modificaciones desde el ´ultimo respaldo)
+Tambi´en hay vaciados:
+F´ısicos: mediante un programa simple que respalda todo el disco (es completo), en orden. Es
+r´apido, pero se desaprovecha el espacio.
+L´ogicos: comienzan en un directorio y respaldan sus contenidos en forma recursiva. Puede ser
+incremental.
+En el caso de un vaciado l ´ogico incremental, se deben respaldar primero todos los directorios
+que contengan archivos o directorios modificados (o hayan sido modificados ellos mismos). Luego,
+se deben respaldar solo los archivos modificados. Esto es as ´ı para que, al realizar la recuperaci ´on,
+primero se arme la estructura de directorios del sistema de archivos, antes de comenzar a colocar los
+contenidos.
+Hay algunas otras cuestiones relacionadas con los vaciados l ´ogicos incrementales, como los seg-
+mentos huecos dentro de los programas, los v´ınculos y los archivos especiales (canales).
+4.15 Consistencia del sistema de archivos (Tanenbaum, 2009, p. 304-307)
+Los sistemas operativos suelen proveer programas que verifican la consistencia del sistema de
+archivos.
+Hay m ´ultiples aspectos que pueden ser verificados, algunos de los cuales pueden ser corregidos
+autom´aticamente.
+Dos verificaciones comunes son:4.16. RENDIMIENTO DEL SISTEMA DE ARCHIVOS 63
+Archivos: mediante dos tablas de contadores, uno para bloques ocupados por archivos y la otra
+para bloques libres, se analiza que todo bloque est´e ocupado por un solo archivo o solo aparezca
+una vez en la lista enlazada o mapa de bits de bloques libres. De no ser as ´ı, pueden darse tres
+situaciones:
+• Si un bloque no aparece ni ocupado ni libre, se lo coloca como libre.
+• Si un bloque aparece como libre dos veces (en lista enlazada ´unicamente), se elimina uno
+de los punteros en la lista.
+• Si un bloque aparece como ocupado dos veces, se debe copiar los contenidos a un bloque
+libre y asignar este bloque a uno de los archivos, para que dejen de compartirlo.
+Directorios: construye una tabla de contadores de archivos. Comienza analizando desde el di-
+rectorio ra´ız y, al terminar, verifica que la cantidad de veces que aparece un archivo coincida
+con aquella indicada en el Nodo-I. De no ser as ´ı, debe modificarse el valor almacenado en el
+Nodo-I.
+4.16 Rendimiento del sistema de archivos (Tanenbaum, 2009, p. 307-312)
+4.16.1. Cach ´es
+Una cach ´e es una colecci ´on de bloques que pertenece al disco pero se mantienen en memoria
+para mejorar el rendimiento. Se puede administrar con los algoritmos de reemplazo de p ´agina, pero
+se deben tener en cuenta dos problemas:
+¿Es probable que el bloque se utilice de vuelta pronto?
+¿Es el bloque esencial para la consistencia del sistema de archivos?
+As´ı, si se organizan los bloques en una lista enlazada, se puede decidir cu ´ales bloques deber´ıan
+ser escritos inmediatamente al disco, y cu´ales pueden esperar.
+Sin embargo, que se est´e escribiendo en un bloque con frecuencia requiere escrituras al disco para
+no perder trabajo, m´as all´a de lo que diga la lista enlazada. Esto puede ser solucionado mediante una
+llamada al sistema sync ejecutada por un programa llamado update cada cierto tiempo (30 segundos
+en UNIX).
+Una forma m ´as confiable pero no tan veloz de realizar las escrituras al disco son las cach ´es de
+escritura inmediata. Actualmente se han dejado de usar.
+4.16.2. Lectura adelantada de bloque
+Consiste en llevar el siguiente bloque de un archivo a la cach´e cuando se ha solicitado uno. Solo es
+beneficioso en archivos de acceso secuencial, por lo que un sistema operativo podr´ıa llevar un registro
+de la forma en que se ha accedido a un archivo recientemente: secuencial o aleatoria.64 CAP´ITULO 4. ARCHIVOS
+4.16.3. Reducci ´on del movimiento del brazo del disco
+Se puede lograr de dos maneras: colocando los bloques pertenecientes a un mismo archivo en
+sectores cercanos (algo sencillo si se administran los bloques libres con un mapa de bits). La otra
+forma es disminuyendo la distancia promedio entre los Nodos-I y los archivos: si se colocan los
+Nodos-I en el medio del disco, el tiempo de b ´usqueda promedio ser ´a la mitad que si estuvieran al
+inicio.
+4.16.4. Desfragmentaci ´on del disco
+Es un algoritmo realizado por un programa llamado desfragmentador; consiste en mover los blo-
+ques dentro de una partici´on para que todos aquellos pertenecientes a un archivo queden contiguos, y
+as´ı mejorar el rendimiento.Cap´ıtulo 5
+Entradas y Salidas
+5.1 Tipos de dispositivos de Entrada/Salida (Tanenbaum, 2009, p. 330)
+De bloque: se organizan por bloques de memoria, los cuales pueden ser buscados.
+De caracter: se maneja mediante un flujo de caracteres.
+Otros
+5.2 Comunicaci ´on con los dispositivos de Entrada/Salida (Tanen-
+baum, 2009, p. 331-332)
+Una unidad de E/S consiste en el dispositivo y un controlador de dispositivo o adaptador. El
+segundo se encarga de proveer la interfaz al sistema operativo para manejar los dispositivos corres-
+pondientes.
+Por su parte, la interfaz entre la controladora y el dispositivo de E/S suele acomodarse a alg ´un
+est´andar. Suele ser de muy bajo nivel, cada comunicaci ´on realiz´andose como un flujo serial de bits
+precedido por un pre´ambulo y sucedido por un ECC (Error Correction Code, C´odigo de Correci´on de
+Errores) o suma de comprobaci´on.
+Al recibir el flujo de bits, la controladora lo ensambla en un registro interno y verifica que no haya
+errores (usando el ECC).
+5.3 Entradas y Salidas mediante puertos y por asignaci ´on de me-
+moria (Tanenbaum, 2009, p. 332-336)
+Los controladores tienen registros de control y b ´ufers de datos que permiten al sistema operativo
+dar ´ordenes a los dispositivos, conocer informaci ´on acerca de ellos y transmitirles o recibir informa-
+ci´on.
+Estos registros de control y b´ufers pueden implementarse de dos maneras:
+Con puertos de E/S: asign´andole a cada registro de control un n ´umero de puerto y proveyendo
+instrucciones especiales IN y OUT para manipularlos.
+6566 CAP´ITULO 5. ENTRADAS Y SALIDAS
+Con asignaci ´on de memoria: escribiendo el contenido de los registros de control y b ´ufers de
+datos a la memoria.
+La implementaci´on mediante asignaci´on de memoria tiene las ventajas de no requerir instruccio-
+nes especiales, facilitando la programaci ´on a mayor nivel; permite usar las mismas instrucciones de
+manipulaci´on de memoria con los registros de control sin tener que moverlos antes; y puede imple-
+mentarse la protecci´on simplemente no colocando la memoria que contiene a estos registros y b´ufers
+en el espacio de direcciones virtuales de un usuario.
+Sin embargo, este m´etodo tambi´en requiere solucionar dos problemas:
+Problema de la cach ´e: si los registros de control se colocaran en cach ´e y una controladora los
+actualizara en la memoria principal, este cambio no se ver ´ıa reflejado en la cach ´e. La soluci´on
+es la implementaci´on de una cach´e selectiva por hardware y manejada por el sistema operativo.
+Problema del an´alisis de direcciones: cuando se actualiza un registro de control, la controladora
+correspondiente debe hacer algo en consecuencia. Si estos registros est´an en memoria, la ´unica
+forma en que las controladoras sepan que deben hacer algo es analizando cada referencia a
+memoria que se haga. Hay varias soluciones posibles:
+• Enviar todas las referencias de memoria a memoria y, si esta no responde, mandarla por
+los otros buses.
+• Colocar un dispositivo husmeador que pase todas las direcciones del bus de memoria a
+los dispositivos de E/S (lo cual tiene el inconveniente de que estos pueden llegar a ser m´as
+lentos).
+• Filtrar las direcciones en el chip del puente PCI, cargando un rango de memoria al inicio
+del sistema en el cual se hallan los registros de control y b ´ufers de datos. Todas las direc-
+ciones que se encuentren en este rango son enviadas al bus PCI en lugar de a la memoria.
+5.4 Acceso Directo a Memoria (DMA) (Tanenbaum, 2009, p. 336-339)
+El chip DMA (Direct Memory Access) permite realizar las operaciones de E/S sin depender tanto
+de la CPU, pues como su nombre indica, accede directamente a la memoria.5.5. INTERRUPCIONES 67
+Inicialmente, la CPU programa al DMA para que sepa qu ´e debe transferir y a d ´onde. Entonces,
+este chip maneja al controlador de dispositivo correspondiente hasta concretar la transferencia, y
+finaliza provocando una interrupci´on.
+La CPU y el DMA no pueden usar el bus al mismo tiempo; de aqu´ı surgen dos mecanismos:
+Robo de ciclo: el controlador de DMA solicita la transferencia de una palabra y la obtiene,
+forzando a la CPU a esperar si tambi´en quisiera usar el bus.
+Modo de r´afaga: se realiza la transferencia de m´ultiples palabras de modo consecutivo.
+Otros mecanismos que puede utilizar el DMA seg´un el recorrido de los datos a transferir son:
+Modo “fly-by”: el controlador de dispositivo transfiere directamente a la memoria principal.
+Mediante el chip DMA: el controlador de dispositivo transifere al DMA, y este a la memoria.
+Este mecanismo es m´as flexible pero m´as costoso.
+5.5 Interrupciones (Tanenbaum, 2009, p. 139-343)
+Las interrupciones son emitidas por un controlador de interrupciones al recibir se ˜nales emitidas
+por dispositivos de E/S (indicando que finalizaron). Luego, la CPU reconoce la interrupci ´on cuando
+est´a lista para procesar otra.68 CAP´ITULO 5. ENTRADAS Y SALIDAS
+Al provocar una interrupci´on, el controlador de interrupciones coloca un n ´umero en las l´ıneas de
+direcci´on (IRQ, Interrupt Request) que es usado para hallar la direcci ´on de memoria del servicio de
+atenci´on de interrupci´on en la tabla de vectores de interrupci´on.
+Las interrupciones pueden clasificarse en precisas e imprecisas, entrando en la primera categor ´ıa
+s´ı y solo s´ı cumplen:
+El PC se guarda en un lugar conocido
+Las instrucciones anteriores a la apuntada por el PC se han ejecutado por completo
+Las instrucciones posteriores a la apuntada por el PC no se han ejecutado
+Se conoce el estado de ejecuci´on de la instrucci´on apuntada por el PC
+Las interrupciones imprecisas son comunes en m ´aquinas superescalares con pipelines (tuber´ıas).
+Se les dice as´ı porque cada interrupci ´on requerir´ıa guardar mucha informaci ´on para poder luego res-
+taurar el contexto, por lo que a veces se opta por no guardarla. Este ser ´ıa el caso de una TRAP (in-
+terrupci´on interna) producida por un error fatal como una divisi ´on por 0, por ejemplo, pues nunca
+tendremos que restaurar el contexto.
+5.6 Objetivos del software de E/S (Tanenbaum, 2009, p. 343-344)
+Independencia de dispositivos: se debe poder crear programas que accedan a cualquier disposi-
+tivo de E/S sin tener que especificarlo por adelantado.
+Denominaci´on uniforme: el nombre de un archivo o dispositivo debe ser una cadena o n ´umero
+sin depender del dispositivo.
+Manejo de errores: debe realizarse siempre que sea posible a bajo nivel, por el controlador.
+Sincron´ıa de transferencias: las transferencias suelen ser as ´ıncronas (controladas por interrup-
+ciones), pero dado que es mucho m´as f´acil programar consider´andolas s´ıncronas, el sistema operativo
+debe encargarse de que las transferencias controladas por interrupciones parezcan s´ıncronas (median-
+te el bloqueo de procesos).
+Uso de b´ufer: los datos entrantes suelen ser almacenados en un b´ufer del sistema operativo antes
+de ser copiados a su destino final.
+Dispositivos compartidos y dedicados: los dispositivos pueden clasificarse en compartidos y
+dedicados seg´un si es posible que m ´as de un usuario los use a la vez. El sistema operativo debe ser
+capaz de manejar ambos correctamente, a fin de evitar interbloqueos.5.7. MANERAS DE REALIZAR LA E/S 69
+5.7 Maneras de realizar la E/S (Tanenbaum, 2009, p. 344-347)
+5.7.1. E/S programada
+Utiliza sondeo u ocupado en espera: se carga un b ´ufer con toda la informaci ´on a transferir y se
+entra en bucle hasta que toda haya sido transferida al dispositivo, o se entra en bucle hasta recibir toda
+la informaci´on del dispositivo.
+Su gran desventaja es que ocupa mucho la CPU, desperdiciando su tiempo.
+5.7.2. E/S controlada por interrupciones
+Se inicia una transferencia parcial y se bloquea al proceso que la realiza, hasta que el controlador
+de dispositivo emita una interrupci ´on indicando que termin ´o la transferencia, permitiendo continuar
+con la siguiente y repitiendo lo anterior.
+La diferencia con la E/S programada es que en este se utilizan bloqueos en lugar de espera ocupa-
+da, permitiendo a otros procesos ejecutarse mientras el dispositivo hace su trabajo.
+5.7.3. E/S mediante DMA
+En lugar de realizar una interrupci ´on por parte transferida (como la E/S controlada por interrup-
+ciones), el chip DMA realiza todo el trabajo y emite una ´unica interrupci´on, ahorrando tiempo de la
+CPU.
+Las desventajas son leves: requiere el hardware especial (que es t ´ıpicamente m ´as lento que la
+CPU, y puede llegar a ser m´as lento que alg´un dispositivo de E/S).
+5.8 Capas del software de E/S (Tanenbaum, 2009, p. 348-360)
+5.8.1. Manejadores de interrupciones
+Atender una interrupci ´on requiere realizar varios pasos previos para guardar el contexto del pro-
+ceso que estaba ejecut ´andose previamente y realizar el cambio de contexto. Tambi ´en involucra una
+llamada al planificador de procesos posterior a la atenci´on, con su cambio de contexto correspondien-
+te. Si la transferencia de E/S pas´o un proceso de estado bloqueado a listo, este es elegible.
+Este proceso ocupa una cantidad considerable de instrucciones y, dependiendo de la m ´aquina,
+puede involucrar a la MMU, el TLB y la tabla de p´aginas.70 CAP´ITULO 5. ENTRADAS Y SALIDAS
+5.8.2. Controladores de dispositivos
+Los controladores de dispositivos odrivers son software provisto, por lo general, por el fabricante
+de un dispositivo de E/S. A veces se ejecutan en el kernel, y otras en el modo usuario.
+Un driver hace de interfaz entre el software independiente del dispositivo y los dispositivos de E/S.
+Para esto, valida toda la informaci´on que la capa superior le env´ıa, y tras comprobar que el dispositivo
+correspondiente se encuentra en funcionamiento y listo, le env´ıa una secuencia de comandos.
+Una vez enviada esta secuencia, el driver se bloquear´a hasta que el dispositivo finalice sus activi-
+dades (haci´endoselo saber por una interrupci ´on). Por ´ultimo, si es que no hubo errores, le devuelve
+esta informaci´on al software independiente del dispositivo.
+Algunos sistemas operativos permiten agregar o quitar dispositivos de E/S mientras la m ´aqui-
+na esta en funcionamiento; esto requiere software adicional que permita abortar toda transferencia
+pendiente y en curso sin da˜nar ninguna estructura de datos del kernel.
+5.8.3. Software independiente del dispositivo
+Se encarga de realizar todas las actividades comunes a las transferencias con los dispositivos de
+E/S. Suele cumplir varias funciones:
+Interfaz uniforme para los drivers
+La interfaz puede o no ser est´andar (todas iguales). Sea cual fuere el caso, para cada tipo de interfaz
+el sistema operativo define un conjunto de operaciones que el driver debe definir. As ´ı, al kernel no
+le importa de qu ´e dispositivo se trata; solo sabe que si quiere hacer algo con este, debe utilizar las
+operaciones proporcionadas.
+El nombre que se le coloca a cada dispositivo tambi´en est´a relacionado a la interfaz uniforme.
+Uso de b´ufer
+Se refiere a las partes de la memoria que son utilizadas para almacenar los datos de una transfe-
+rencia de E/S temporalmente.
+De no haber b ´ufer, por cada fragmento de la informaci ´on transmitida o a transmitir se deber ´ıa
+iniciar el proceso de usuario, para luego bloquearlo tan solo un instante despu´es, algo muy ineficiente.
+De haber un solo b ´ufer en espacio de usuario, podr ´ıa ocurrir que la p ´agina en la que este se
+encuentra sea llevada al disco, ocasionando problemas. Bloquear las p ´aginas con estos b ´ufers ser´ıa
+una soluci´on viable, pero bajar´ıa el rendimiento si hay muchas bloqueadas.
+De haber un b´ufer en el espacio de usuario y otro en el kernel se evita el problema de las p´aginas,
+pero a ´un queda otro: el b ´ufer en el kernel podr ´ıa estar transfiriendo sus datos (ya sea al b ´ufer en el
+espacio de usuario o al dispositivo de E/S), mientras que deber´ıa recibir otros simult´aneamente.
+La soluci´on a todo esto es el doble b ´ufer: utiliza, aparte de los ya mencionados, otro b ´ufer en el
+kernel, de modo que si uno est ´a enviando sus contenidos, el otro sea encargado de recibir otros, y
+viceversa.
+Otra alternativa es el b´ufer circular, que consiste en una regi´on de memoria y dos punteros: uno a
+la siguiente palabra libre, y otro a la ´ultima palabra sin eliminar.5.9. DISCOS 71
+Reporte de errores
+Si bien la controladora del dispositivo es la encargada de detectar los errores de E/S reales, es el
+software independiente del dispositivo el encargado de proporcionar el marco para su tratamiento.
+Tambi´en se consideran errores de E/S aquellos en los que, por una mala programaci´on, un proceso
+pide algo imposible o proporciona par´ametros inv´alidos.
+Asignaci´on y liberaci´on de dispositivos dedicados
+Aquellos dispositivos que solo pueden ser accedidos por un proceso a la vez requieren mecanismos
+especiales que garanticen esto.
+Un mecanismo podr ´ıa ser manejarlos como archivos especiales, de modo que open solicite el
+acceso (fallando si ya estuviera ocupado) y close lo libere.
+Otra forma ser´ıa mediante operaciones especiales que bloqueen a un proceso cuando este solicita
+que se le asigne un dispositivo dedicado ya ocupado, coloc´andolo en cola para cuando este haya sido
+liberado.
+Tama˜no de bloque independiente de dispositivo
+Proporcionar un mismo tama ˜no de bloque (o caracter) para los procesos de usuario, sin importar
+c´omo funcione realmente cada dispositivo.
+5.8.4. Software de E/S de usuario
+Consiste en procedimientos de biblioteca que realizan las llamadas al sistema de E/S (formateando
+o no los datos).
+Tambi´en se considera dentro de esta capa a las colas ( spooling) utilizadas para virtualizar alg ´un
+dispositivo de E/S, as´ı como los daemons que las administran.
+5.9 Discos (Tanenbaum, 2009, p. 360-388)
+5.9.1. Discos magn ´eticos
+Son los discos flexibles y discos duros.
+Se organizan en pistas circulares conc ´entricas apiladas (cilindros), cada una con cabezas para
+leerlas. Adem´as, las pistas se subdividen en sectores, que tienen huecos entre ellos.
+Los sectores tienen un pre ´ambulo, con informaci ´on como el n ´umero de cilindro, pista y sector;
+los datos y un ´area al final destinada para el ECC. Esta organizaci ´on se consigue con un formato de
+bajo nivel.
+Un disco magn ´etico tiene un controlador propio que se encarga de las transferencias de E/S, as ´ı
+como de la correcci´on de errores. Tambi´en tiene b´ufers y cach´es para el almac´en de datos a escribir y
+datos que posiblemente sean le´ıdos pronto.
+Para realizar la b ´usqueda, se debe especificar el cilindro, la cabeza y el sector. Entonces, el con-
+trolador ordenar´a a la cabeza correspondiente que se mueva al cilindro indicado y rotar´a al disco hasta
+llegar al sector que se busca. Es com´un que, aunque s´olo se busque un sector para lectura, en realidad
+se lean los siguientes tambi´en y se escriban a la cach´e, pues la rotaci´on contin´ua.72 CAP´ITULO 5. ENTRADAS Y SALIDAS
+Como toda lectura requiere una validaci´on mediante el ECC, el leer m´ultiples sectores consecuti-
+vos puede demorar m´as tiempo del necesario si la rotaci ´on continu´o y la cabeza ya pas ´o el siguiente
+sector (asumiendo que no todos entraron en la cach ´e). Esto se puede lograr mediante el entrelaza-
+do: intercalar sectores de modo que cuando la controladora solicite el siguiente sector, la cabeza se
+encuentre pr´oxima a este.
+El primer sector en la mayor´ıa de las computadoras es conocido como MBR (Master Boot Record,
+Registro Maestro de Arranque) y tiene cierto c ´odigo para el inicio de la m ´aquina, adem´as de la tabla
+de particiones.
+El formato de alto nivel consiste en la estructuraci ´on de las particiones (divisiones del disco,
+cada una formada por sectores) en bloques (de arranque, superbloque, administraci ´on del espacio
+libre, Nodos-I, etc.).
+La b´usqueda en el disco puede realizarse mediante distintos algoritmos. Algunos de ellos son:
+Primero en llegar, primero en ser atendido (First Come, First Served(FCFS))
+La b´usqueda m´as corta primero (Shortest Seek First (SSF))
+Algoritmo del elevador (en la misma direcci´on hasta llegar al extremo)
+Siempre en la misma direcci´on
+Estos algoritmos buscan disminuir el tiempo de b ´usqueda (lo que tarda el brazo en moverse del
+cilindro actual al requerido), pues el retraso rotacional (tiempo que tarda el sector indicado en colo-
+carse bajo la cabeza) y el tiempo de transferencia de datos actual son irrelevantes en comparaci ´on al
+primero.
+Un RAID (Redundant Array of Independent Disks, Arreglo Redundante de Discos Independien-
+tes) es una organizaci ´on de m ´ultiples discos que permite aumentar el rendimiento y confiabilidad al
+usar m´ultiples discos. Hay seis alternativas:
+0: cada bloque consecutivo en otro disco (round-robin)
+1: cada bloque consecutivo en otro disco, con el doble de discos para que cada bloque tenga
+una copia
+2: cada bit (incluidos aquellos de Hamming para la detecci ´on y correcci ´on de errores) en un
+disco distinto
+3: cada bit (incluido el de paridad para la detecci´on de errores) en un disco distinto
+4: cada bloque consecutivo en otro disco, m ´as un disco con bloques de paridad para los otros
+bloques
+5: cada bloque consecutivo en otro disco, seleccionando algunos bloques por round-robin para
+contener bloques de paridad para los otros bloques
+Cuando se detectan errores, ya sea en la f ´abrica por el controlador o al ya estar en uso, se marca
+al sector como defectuoso y se utilizan unos sectores adicionales que quedan en blanco para grabar
+los datos en estos en lugar del defectuoso. As´ı, hay dos estrategias:
+Escribir el contenido directamente en el sector adicional (haciendo potencialmente m ´as lentas
+las b´usquedas)5.9. DISCOS 73
+Mover todos los sectores para mantener el orden (un proceso costoso, especialmente si los
+sectores no est´an en blanco, por lo que requerir´ıan copiar no solo el pre´ambulo)
+De forma similar a los JFS, se busca salvar las posibles fallas en los discos asegur ´andose de que
+las transferencias se concreten o no se realicen, sin punto medio. Esto se lo logra por un m ´etodo
+llamado almacenamiento estable.
+El almacenamiento estable utiliza dos discos, cada uno con contenidos id´enticos de ser correctos.
+Define tres operaciones:
+Escritura estable: escribe a un sector de un disco, lee lo escrito para comprobar que sea correcto
+y, de no serlo, repite la operaci´on. Si pasan muchos intentos de escritura fallidos, se considera al
+sector defectuoso y se comienza a probar con el siguiente. Una vez que la escritura se concret´o
+correctamente, se hace lo mismo con el segundo disco.
+Lectura estable: se lee el bloque del primer disco. Si el ECC validara el contenido, la lectura
+es correcta; si no lo hiciera, se vuelve a intentar varias veces hasta que lo sea. Si tras muchas
+lecturas siguiera siendo incorrecto, se lee el bloque del segundo disco. La probabilidad de que
+ambos se hayan vuelto defectuosos es min´uscula.
+Recuperaci´on de fallas: tras una falla, se exploran los discos (o un sector en espec´ıfico si sabe-
+mos en cu ´al se estaba al ocurrir la falla) para determinar si hubo un problema de escritura. Si
+dos bloques verifican el ECC y son iguales, todo est ´a bien; si se detecta un error en uno por el
+ECC, se lo sobrescribe con el otro y, si ambos son correctos pero distintos, el bloque del primer
+disco sobrescribe al del segundo (bajo la asunci´on de que el primero fue escrito pero la escritura
+del segundo no se concret´o).
+5.9.2. Discos ´opticos
+Por lo general son de solo lectura. Tienen menor capacidad que los discos magn ´eticos y son m´as
+lentos, pero tambi´en m´as baratos.
+Todo lo que se escribe en ellos se encuentra en una espiral.
+CD-ROM
+Se graban con hoyos y ´areas lisas, y son le ´ıdos con un l ´aser. Como los discos magn ´eticos, se
+graban por sectores con pre´ambulo y ECC.
+CD-R
+Son grabables (en distintos momentos) puesto que usan colorantes que reaccionan ante el l´aser en
+lugar de hoyos y ´areas lisas.
+CD-RW
+Son regrabables, pues usan una aleaci ´on de plata, indio, antimonio y telurio que reacciona ante
+distintas potencias de l´aser y cambia entre sus estados cristalino y amorfo, los cuales tienen distintas
+reflectividades.74 CAP´ITULO 5. ENTRADAS Y SALIDAS
+DVD
+Significa Digital Versatile Disk, Disco Vers´atil Digital. Son muy similares a los CD-ROM pero
+usan hoyos m´as peque˜nos, una espiral m´as estrecha y un l´aser menos potente (rojo). As´ı, tienen mayor
+capacidad, e incluso m´as si se les coloca doble capa y/o se los graba de ambos lados.
+Blu-ray y HD DVD
+Otra mejora respecto a los DVDs, con un l´aser a´un menos potente (azul) que aumenta incluso m´as
+la capacidad.
+5.10 Relojes (Tanenbaum, 2009, p. 388-394)
+5.10.1. Hardware
+Los relojes o temporizadores programables utilizan un oscilador de cristal de cuarzo que genera
+se˜nales peri ´odicas con muy alta frecuencia. Cuentan con un registro contador y un registro conte-
+nedor; en el segundo se coloca la cantidad de se ˜nales que deben transcurrir hasta que se emita una
+interrupci´on. El funcionamiento consiste en cargar el contenedor en el contador, y disminuir al´ultimo
+en 1 con cada se˜nal del oscilador. El contador puede volver a ser cargado con el contador una vez que
+llega a 0 y se produce la interrupci ´on, si es que se busca generar pulsos de reloj. A este modo se le
+llama “de onda cuadrada”.
+Las computadoras suelen contar con otro reloj de respaldo energizado por una bater´ıa, para guar-
+dar la fecha y hora a´un cuando la m´aquina est´a apagada.
+5.10.2. Tareas de la controladora del reloj
+Mantener la hora del d´ıa
+Al iniciarse la computadora, se utiliza el reloj de respaldo para obtener la hora actual (o se pide al
+usuario que la ingrese, de no estar este reloj). A partir de eso, la hora puede calcularse de tres formas:
+Contando los pulsos que han ocurrido desde un cierto momento en el tiempo en un registro de
+64 bits, para evitar desbordamiento.
+Contar los segundos que han ocurrido desde un cierto momento en el tiempo.
+Contar los pulsos que han ocurrido desde que se inici´o el sistema.
+Implementar el quantum
+Establece un contador en la cantidad de pulsos del quantum cada vez que un proceso pasa al estado
+de ejecuci´on, y lo decrementa en cada pulso hasta que llega a 0, que es cuando la controladora llama
+al planificador.5.11. INTERFACES DE USUARIO 75
+Contabilizar el uso de la CPU
+Puede realizarse con un temporizador secundario, o con un campo en el que se incremente con
+cada pulso de reloj ocurrido mientras un proceso est´a en ejecuci´on.
+Llamada al sistema “alarm”
+Puede hacerse con una tabla que guarde todas las alarmas con los tiempos en los que deben ocurrir,
+y una variable que proporcione el tiempo de la pr´oxima alarma.
+Una forma m ´as eficiente es mediante una lista enlazada en la que cada ´ıtem (alarma) guarde el
+tiempo que debe transcurrir desde la anterior alarma.
+Temporizadores guardianes (watchdogs)
+Son como la llamada alarm, pero para procesos del kernel. No produce interrupciones, sino que
+directamente llama al procedimiento proporcionado (a diferencia de alarm).
+Perfilamiento, supervisi´on y recopilaci´on de estad´ısticas
+Algunos sistemas operativos proporcionan un mecanismo a los procesos de usuario para solicitar
+que se construya un histograma de las ubicaciones en las que suele pasar el PC.
+5.10.3. Temporizadores de software
+Son una alternativa para el manejo de la E/S peri´odica.
+Las interrupciones tienen muy baja latencia (retraso), pero provocan un cambio de contexto (lo
+cual es muy costoso en tiempo).
+El sondeo consiste en que el mismo programa compruebe cada cierto tiempo si la transferencia
+se ha concretado, lo cual puede tener una alta latencia si este evento ocurre justo despu´es del sondeo.
+Un temporizador de software se comprueba cada vez que la computadora est ´a a punto de salir
+del modo kernel, para evitar interrupciones y cambios de contexto adicionales. El procedimiento que
+se debe realizar ocurre all´ı mismo, y el temporizador se restablece a continuaci´on.
+5.11 Interfaces de usuario (Tanenbaum, 2009, p. 394-415)
+5.11.1. Teclado
+Se genera una interrupci´on cada vez que se presiona o se suelta una tecla.
+El controlador puede adoptar dos filosof´ıas:
+Modo crudo, no can ´onico u orientado a caracteres: el controlador recibe los caracteres y los
+pasa sin procesamiento.
+Modo cocido, can´onico u orientado a l´ıneas: el controlador espera a que se termine de ingresar
+una l´ınea para procesarla y corregirla.
+Es com´un que se requiera eco: lo que se presiona en el teclado debe ser mostrado por el monitor
+en el momento.76 CAP´ITULO 5. ENTRADAS Y SALIDAS
+5.11.2. Rat ´on
+Los hay “con bolita” y ´opticos. Sea cual fuere, al producir interrupciones transmiten tres par´ame-
+tros: ∆x, ∆y y los botones presionados.
+5.11.3. Interfaces Gr ´aficas de Usuario (GUIs)
+Una GUI (Graphical User Interface, Interfaz Gr ´afica de Usuario) es el sistema de ventanas que
+tienen muchos sistemas operativos interactivos modernos. Pueden estar implementados dentro (Win-
+dows) o fuera (UNIX) del kernel.
+La entrada para las GUIs suele ser el teclado y el rat ´on, mientras que la salida suele ir a un
+adaptador de gr´aficos, un hardware especial que contiene una RAM de video.
+Una GUI tiene cuatro elementos principales (conocidos como WIMP): ventanas (Windows), ´ıco-
+nos (Icons), men´ues (Menus) y dispositivo se˜nalador (Pointing device).
+Las GUIs reciben eventos a trav´es de sus ventanas que colocan en una cola de eventos.
+Las ventanas contienen otros elementos visuales que permiten la interacci ´on con el usuario; a
+estos elementos se les llama widgets.
+Otro concepto a tener en cuenta es el de recursos: estructuras de datos con alguna informaci ´on
+relevante para la GUI, como las ventanas, fuentes o mapas de bits.
+Por ´ultimo, las ventanas pueden mostrar gr ´aficos de dos formas: vectoriales (mediante funciones
+que indican c´omo deben dibujarse) o con mapas de bits.
+5.12 Clientes delgados (Tanenbaum, 2009, p. 415-417)
+Se refiere a las “terminales tontas”, aquellas m ´aquinas que consisten solo de un monitor, teclado
+y tal vez rat´on, que se conectan a un mainframe que realiza toda la computaci ´on y le dice al monitor
+qu´e mostrar.
+Actualmente, tal modelo es viable, pues muchos usuarios quieren realizar muchas cosas desde un
+navegador, ahorr´andose as´ı la administraci´on de la computadora.
+5.13 Administraci ´on de la energ´ıa (Tanenbaum, 2009, p. 417-425)
+La capacidad de las bater ´ıas no ha aumentado mucho con el paso de los a ˜nos; es por esto que
+se han ideado m ´etodos para ahorrar energ ´ıa. Uno de ellos es la asignaci ´on de estados a la CPU, la
+memoria y los dispositivos de E/S: encendido, inactivo, hibernando y apagado. Los primeros tardan
+menos en reaccionar, pero consumen m´as energ´ıa.
+Las pantallas pueden ponerse en estado de inactividad al hacer que dejen de emitir luz, pues el
+volver a encenderlas solo requiere leer su RAM de video. Esto puede ocurrir cuando un usuario lo
+decida, o tras cierto tiempo.
+El disco duro puede ponerse a hibernar cuando deja de girar, pues tarda un tiempo considerable
+en volver a su m´axima velocidad.
+En cuanto a la memoria, puede vaciarse apagarse las cach ´es (inactividad) o puede hacerse lo
+mismo con la memoria principal (hibernaci´on), lo que adem´as requiere el apagado de la CPU.
+La comunicaci ´on inal ´ambrica tambi ´en puede representar un problema si el receptor debe estar
+siempre esperando a una comunicaci ´on; una soluci ´on es que avise al emisor cuando va a apagarse5.13. ADMINISTRACI ´ON DE LA ENERG´IA 77
+para que este no env´ıe nada. Una vez que vuelva a prenderse, tambi ´en se le avisa al emisor para que
+env´ıe todo lo que temporalmente debi´o guardar en un b´ufer.
+Otro tema a considerar ser´ıa el sobrecalentamiento; este puede evitarse ya sea mediante un venti-
+lador (que hace ruido y consume energ ´ıa) o disminuyendo el consumo de energ ´ıa de los aparatos ya
+mencionados.
+Cuando una computadora tiene bater´ıas inteligentes y no est´a conectada a una alimentaci´on, debe
+administrarlas correctamente, puesto que as ´ı se logra avisar al usuario y un apagado ordenado al
+detectarse una carga baja. Adem ´as, si tiene m ´ultiples bater´ıas, puede tambi ´en alternarlas al detectar
+que una tiene poca carga.
+Sea como fuere, las controladoras de dispositivos suelen ser capaces de permitir la administraci´on
+de la energ´ıa del dispositivo de E/S por parte de la computadora (orden ´andoles cambios de estado),
+y algunos dispositivos tambi´en deber´ıan ser capaces de activar a la computadora cuando la CPU y/o
+memoria est´an inactivas o hibernando.
+Una forma adicional en la que se puede ahorrar energ ´ıa es mediante el software, degradando su
+rendimiento en pos de aumentar el tiempo que durar´a una bater´ıa.Glosario
+BCP Bloque de Control de Proceso, entrada de la tabla de procesos. 18, 45, 48, 75
+CMOS Memoria vol´atil que consume muy poca energ´ıa. 5, 8
+DMA Direct Memory Access, chip que maneja la comunicaci ´on entre los controladores de disposi-
+tivo de E/S y la memoria principal, liberando a la CPU. 5, 47, 66, 67, 69
+EEPROM Electrically Erasable PROM, memoria que puede ser borrada y reescrita lentamente. 5
+grado de multiprogramaci´on Cantidad de procesos en memoria a la vez. 19, 44
+PFF Page Fault Frequency, Frecuencia de Fallos de P ´agina. Algoritmo que mide la proporci ´on de
+fallos de p´agina por proceso respecto del tiempo e identifica a aquellos que no se encuentren en
+un determinado rango. 44
+rwx Bits de protecci´on de lectura (read), escritura (write) y ejecuci´on (execute). 11, 14, 39
+shell Interfaz de l´ınea de comandos. 1, 11
+SMP Symmetric Multiprocessing, sistema de computaci ´on multiprocesador en el que todos tienen
+acceso a los mismos recursos y pueden realizar las mismas funciones. 9
+WSClock Algoritmo de reemplazo de p ´aginas que combina los algoritmos del reloj y del conjunto
+de trabajo. 43, 44
+78Siglas
+BIOS Basic Input/Output System, Sistema B´asico de E/S. 8, 36
+CD-ROM Compact Disc, Read-Only Memory (ROM). 7, 8, 74
+CPU Central Processing Unit, Unidad Central de Procesamiento. 2, 3, 4, 5, 7, 9, 17, 18, 20, 21, 22,
+23, 24, 26, 27, 29, 30, 44, 46, 47, 67, 76, 77
+DLL Dynamically Linked Library, Biblioteca de Enlaces Din´amicos. 45
+E/S Entradas y Salidas. 1, 2, 3, 5, 7, 8, 10, 11, 19, 27, 28, 29, 39, 47, 53, 65, 66, 67, 68, 69, 70, 71,
+75, 76, 77, 78, 79, 80
+ECC Error Correction Code, C´odigo de Correci´on de Errores. 65, 71, 72, 73
+FAT File Allocation Table, Tabla de Asignaci´on de Memoria. 57, 58
+GID Group Identification, Identificaci´on de Grupo. 10
+GUI Graphical User Interface, Interfaz Gr´afica de Usuario. 1, 15, 76
+IDE Integrated Drive Electronics, Electr´onica de Unidad Integrada. 5, 7
+IR Instruction Register, Registro de Instrucciones. 3
+ISA Instruction Set Architecture, Set de Instrucciones de la Arquitectura. 1
+ISA Industry Standard Architecture (Bus). 7, 8
+JFS Journaling File System, Sistema de archivos por bit´acora. 59, 73
+LFS Log-structured File System, Sistema de archivos estructurado por registro. 58, 59
+LRU Least Recently Used, Menos Usadas Recientemente (algoritmo de reemplazo de p ´aginas). 42,
+44
+MBR Master Boot Record, Registro Maestro de Arranque. 55, 72
+MMU Memory Management Unit, Unidad de Administraci ´on de Memoria (hardware). 38, 39, 40,
+46, 69
+7980 Siglas
+NFU Not Frequently Used, No Usadas Frecuentemente (algoritmo de reemplazo de p´aginas). 42
+PC Program Counter, Contador de programa. 3, 46, 47, 68, 75
+PCI Peripheral Component Interconnect. 7, 8, 66
+PSW Program Status Word, Palabra de Estado del Programa. 3, 36
+RAID Redundant Array of Independent Disks, Arreglo Redundante de Discos Independientes. 72
+RAM Random Access Memory, Memoria de Acceso Aleatorio. 4, 8, 36, 76
+RDAE/S Registro de Datos de E/S. 3
+RDAM Registro de Datos de Memoria. 3
+RDIE/S Registro de Direcciones de E/S. 3
+RDIM Registro de Direcciones de Memoria. 3
+ROM Read-Only Memory, Memoria de Solo Lectura. 5, 9, 36, 79
+SCSI Small Computer System Interface. 7
+SP Stack Pointer, apuntador de pila. 3
+TLB Translation Lookaside Buffer, B´ufer de Traducci´on Adelantada (hardware). 40, 41, 46, 50, 69
+UID User Identification, Identificaci´on de Usuario. 10, 62
+USB Universal Serial Bus, Bus Serial Universal. 7
+VFS Virtual File System, Sistema de archivos virtual. 59, 60Bibliograf´ıa
+Stallings, W. (2005).Sistemas Operativos: Aspectos internos y principios de dise˜no. Pearson Prentice
+Hall, 5 edition.
+Tanenbaum, A. S. (2009). Sistemas Operativos Modernos. Pearson Education, 3 edition.
+81

@@ -1,0 +1,1342 @@
+V . 1 
+Principios y patrones del
+desarrollo de software
+SOFTWARE
+DESIGN
+Primera  parte
+GUIA PARA 
+DIRECTIVOS Y TÉCNICOS V . 1 Software Design 
+Principios y patrones del
+desarrollo de software
+Este documento forma parte de las guías de onboarding de 
+Autentia. Si te apasiona el desarrollo de software de calidad 
+ayúdanos a difundirlas y anímate a unirte al equipo. Este es un 
+documento vivo y puedes encontrar la última versión, así como el 
+resto de partes que completan este documento, en nuestra web.
+https://www.autentia.com/libros/
+Esta obra está licenciada bajo la licencia Creative Commons 
+Attribution ShareAlike 4.0 International (CC BY-SA 4.0)
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE
+En las fases iniciales del desarrollo 
+de un proyecto de software, 
+durante sus primeras versiones, 
+las nuevas funcionalidades fluyen 
+de manera graciosa y natural, casi 
+parecen construirse solas y “todo 
+son vino y rosas”. A medida que 
+los proyectos van avanzando y 
+creciendo, de repente, toda esa 
+magia desaparece y comienzan 
+a surgir una serie de problemas 
+y situaciones que muestran que 
+algo no va bien, son síntomas de 
+que nuestros diseños se están 
+degradando y pudriendo.
+“Sólo el tiempo 
+demostrará si 
+nuestro software, 
+al  enfrentarse a 
+los fuertes vientos 
+del cambio, está 
+asentado sobre roca 
+firme o sobre arena”PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE
+Los síntomas más evidentes son:
+• Rigidez: el so
+ftware se vuelve difícil de cambiar incluso en tareas 
+sencillas. Las estimaciones son cada vez más abultadas y cada 
+funcionalidad nueva cuesta horrores cuando antes era casi inmediata
+• Fragilida
+d: muy relacionado con la rigidez, la fragilidad es la tendencia 
+a que el software se rompa en múltiples sitios cada vez que se hace 
+un cambio, incluso en partes que conceptualmente no tienen relación 
+ninguna las unas con las otras. Cuando subimos una nueva versión 
+que ha costado “sudor y lágrimas”, resulta que se rompen cosas que 
+aparentemente no tienen nada que ver con lo que hemos hecho.
+•
+ Inmovilidad o poca
+ reutilización: cuando resulta imposible reutilizar 
+software de otros proyectos o incluso de otras partes del mismo 
+proyecto. Suele ocurrir porque el módulo que queremos reutilizar 
+tiene una mochila de dependencias demasiado grande como para 
+asumir el esfuerzo y el riesgo de desacoplarlo. Se piden cosas que 
+son prácticamente una copia de otras funcionalidades de las que ya 
+disponemos, sin embargo esto no parece ser una ventaja y cuesta 
+demasiado sacar lo común para reutilizarlo, tendiendose a copiar y 
+duplicar código.
+•
+ Viscosidad: la
+ viscosidad en el ámbito del diseño se da cuando 
+es más sencillo hacer las cosas mal, hacer la “ñapa”, que tratar de PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE
+hacerlas por el camino trazado. La viscosidad en el entorno ocurre 
+cuando el ecosistema de desarrollo es lento e ineficiente en el más 
+amplio sentido de la palabra. Por ejemplo, cuando una vez tenemos la 
+funcionalidad terminada, hacerla llegar hasta producción supone una 
+auténtica aventura y se necesitan días (o semanas).
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE
+Los principios de desarrollo de software son una serie de reglas y 
+recomendaciones específicas que los programadores deben seguir 
+durante el desarrollo si quieren escribir un código limpio, comprensible 
+y fácil de mantener. No hay una varita mágica por medio de la cual se 
+pueda transformar una combinación de variables, clases y funciones en 
+el código ideal, pero hay algunos consejos y sugerencias que pueden 
+ayudar al programador a determinar si está haciendo las cosas bien y 
+tratar de evitar las situaciones que a modo de ejemplo hemos narrado 
+en el apartado anterior, y que seguro, que si llevamos el tiempo suficiente 
+dedicados a esta  maravillosa profesión del desarrollo de software, 
+habremos vivido, sino igual, al menos de manera similar.Software
+Design
+Índice
+Principios y patrones del desarrollo de software
+• Principios generales
+• Principios S.O.L.I.D.
+•  Single responsibility (
+SRP)
+•  Open/closed 
+(OCP)
+•  Liskov substitution (LSP
+)
+•  Interface segr
+egation (ISP)
+•  Dependency inver
+sion (DIP)
+•  Don’t Repeat 
+Yourself (DRY)
+•  Inversion o
+f Control (IoC)
+•  You Aren
+’t Gonna Need It (YAGNI)
+•  Keep It Simple, Stupid (KISS
+)
+•  Law of
+ Demeter (LoD)
+•  Strive for loosel
+y coupled design between objects that interact
+•  Composition over inheritance
+•  Encapsulate wha
+t varies
+•  The four
+ rules of simple design
+•  The boy scout rule
+•  Last Responsible Moment• Design Patterns
+• Patrones creacionales
+• Builder
+• Singleton
+• Dependency Injection
+• Service Locator
+• Abstract Factory
+• Factory Me
+thod
+• Patrones estructurales
+• Adapter
+• Data A
+ccess Object (DAO)
+• Query Object
+• Decorator
+• Bridge
+• Patrones de comportamien
+to
+• Command
+• Chain of Responsibility
+• Strategy
+• Template Me
+thod
+• Interpre
+ter
+• Observer
+• State
+• Visitor
+• Iterator
+• Bibliografía
+• Lecciones aprendidas 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         7  
+Principios generales 
+Principios S.O.L.I.D. 
+ 
+S.O.L.I.D. es un acrónimo mnemónico para cinco principios de diseño                   
+destinados a hacer que los diseños de software sean más comprensibles,                     
+flexibles y mantenibles. Los principios son un subconjunto de muchos                   
+principios promovidos por el ingeniero e instructor de software                 
+estadounidense Robert C. Martin. Aunque se aplican a cualquier diseño                   
+orientado a objetos, los principios SOLID también pueden formar una                   
+filosofía central para metodologías como el desarrollo ágil o el desarrollo                     
+de software adaptativo. 
+Los principios comprendidos en S.O.L.I.D. son: 
+● S​: ​Single responsibility​. 
+● O​: ​Open/closed​. 
+● L​: ​Liskov substitution​. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         8  
+● I​: ​Interface segregation​. 
+● D​: ​Dependency inversion​. 
+Aplicar estos principios facilitará mucho el trabajo, tanto propio como ajeno                     
+(es muy probable que nuestro código lo acaben leyendo muchos otros                     
+desarrolladores a lo largo de su ciclo de vida). Algunas de las ventajas de                           
+aplicarlo son: 
+● Facilitar el mantenimiento del código. 
+● Reducir la complejidad de añadir nuevas funcionalidades. 
+● Aumentar la reusabilidad de piezas y componentes. 
+● Mejorar la calidad del código y su comprensión. 
+​Single responsibility (SRP) 
+El principio de responsabilidad única o single responsibility establece que                   
+un módulo de software debe tener una y solo una razón para cambiar​. Esta                           
+razón para cambiar es lo que se entiende por responsabilidad. 
+ 
+ 
+ 
+ 
+“Reúna las cosas que cambian por las             
+mismas razones. Separe las cosas         
+que cambian por diferentes razones.” 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         9  
+ 
+Este principio está estrechamente relacionado con los conceptos de                 
+acoplamiento y cohesión. Queremos aumentar la cohesión entre las cosas                   
+que cambian por las mismas razones y disminuir el acoplamiento entre las                       
+cosas que cambian por diferentes razones. Este principio trata sobre                   
+limitar el impacto de un cambio​. 
+Si existe más de una razón para cambiar una clase, probablemente tenga                       
+más de una responsabilidad. Otro posible “mal olor” es que tenga                     
+diferentes comportamientos dependiendo de su estado. Tener más de una                   
+responsabilidad también hace que el código sea difícil de leer, testear y                       
+mantener. Es decir, hace que el código sea menos flexible. 
+Entre las ventajas de aplicar este principio encontramos que, si se necesita                       
+hacer algún cambio, éste será fácil de detectar ya que estará aislado en                         
+una clase claramente definida y comprensible. Minimizando los efectos                 
+colaterales en otras clases. Algunos ejemplos que encontramos en la vida                     
+real son: 
+Si cambia la forma en que se compra un artículo, no tendremos que                         
+modificar el código responsable de almacenarlo. Si cambia la base de                     
+datos, no habrá que arreglar cada pedazo de código donde se utiliza. 
+Para más detalle, ver el artículo ​[S.O.L.I.D.] Single responsibility principle /                     
+Principio de Responsabilidad Única​ en Adictos al Trabajo. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         10  
+ 
+​Open/closed (OCP) 
+Este principio nos dice que ​los módulos de software deben ser abiertos                       
+para su extensión pero cerrados para su modificación​. ¿A qué se refiere                       
+con esto? 
+● Abierto para la extensión​: esto significa que el comportamiento del                   
+módulo puede extenderse. A medida que cambian los requisitos de la                     
+aplicación, podemos ampliar el módulo con nuevos comportamientos               
+que satisfagan esos cambios. En otras palabras, podemos cambiar lo                   
+que hace el módulo. 
+● Cerrado por modificación​: un módulo estará cerrado si dispone de                   
+una descripción (interface) estable y bien definida. Extender el                 
+comportamiento de un módulo no debería afectar al código ya                   
+existente en el módulo, es decir, el código original del módulo no                       
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         11  
+debería verse afectado y tener que modificarse. 
+Y esa es realmente la esencia de este principio. Debería ser fácil cambiar el                           
+comportamiento de un módulo sin cambiar el código fuente de ese módulo.                       
+Esto no significa que nunca cambiará el código fuente. Lo que significa es                         
+que debemos esforzarnos por lograr que nuestro código esté estructurado                   
+de forma que, cuando el comportamiento cambie de la manera esperada,                     
+no debamos hacer cambios radicales en todos los módulos del sistema.                     
+Idealmente, podremos agregar el nuevo comportamiento, añadiendo código               
+nuevo y cambiando poco o nada del código antiguo. 
+La forma de implementar este principio en el mundo práctico, es a través                         
+del polimorfismo, ya sea por interfaces o clases abstractas. 
+Para más detalle, ver el artículo ​[S.O.L.I.D.] Open-Closed Principle / Principio                     
+Abierto-Cerrado​ en Adictos al Trabajo. 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         12  
+​Liskov substitution (LSP) 
+ 
+“Si se ve como un pato, hace cuac 
+como un pato, pero necesita baterías, 
+probablemente tengas la abstracción 
+incorrecta.” 
+ 
+La sustitución de Liskov nos dice que los ​objetos de un programa deberían                         
+ser reemplazables por instancias de sus subtipos sin alterar el correcto                     
+funcionamiento del programa. Básicamente, si en alguna parte de nuestro                   
+código estamos usando una clase, y esta clase es extendida, tenemos que                       
+poder utilizar cualquiera de las clases hijas y que el programa siga siendo                         
+válido. Esto nos obliga a asegurarnos de que cuando extendemos una clase                       
+no estamos alterando el comportamiento de la clase padre. 
+Este principio nos ​ayuda a utilizar la herencia de forma correcta y nos                         
+muestra que no se debe mapear automáticamente el mundo real en un                       
+modelo orientado a objetos, ya que no existe una equivalencia unívoca                     
+entre ambos modelos. 
+Para más detalle, ver el artículo ​[S.O.L.I.D.] Liskov substitution en Adictos al                       
+Trabajo. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         13  
+ 
+​Interface segregation (ISP) 
+El principio de segregación de interfaces establece que ​muchas interfaces                   
+cliente específicas son mejores que una interfaz de propósito general​.                   
+Cuando los clientes son forzados a utilizar interfaces que no usan por                       
+completo, están sujetos a cambios de esa interfaz. Esto al final resulta en                         
+un acoplamiento innecesario entre los clientes. 
+Dicho de otra manera, cuando un cliente depende de una clase que                       
+implementa una interfaz, cuya funcionalidad este cliente no usa pero que                     
+otros clientes si, este cliente estará siendo afectado por los cambios que                       
+fuercen otros clientes en la clase en cuestión. 
+Debemos intentar evitar este tipo de acoplamiento cuando sea posible.                   
+Esto se consigue separando las interfaces en otras más pequeñas y                     
+específicas. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         14  
+Para más detalle, ver el artículo ​[S.O.L.I.D.] Interface Segregation Principle /                     
+Principio de segregación de interfaz​ en Adictos al Trabajo. 
+ 
+​Dependency inversion (DIP) 
+El principio de inversión de dependencia nos dice que ​las entidades de                       
+software deben depender de abstracciones, no de implementaciones​. A su                   
+vez, los módulos de alto nivel no deberían depender de los de bajo nivel.                           
+Ambos deberían depender de abstracciones. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         15  
+ 
+Mediante este principio ocultamos los detalles de implementación, ganando                 
+en flexibilidad. Cuando estamos haciendo tests, podemos reemplazar               
+dependencias reales por objetos mockeados. 
+Gracias a esta flexibilidad, vamos a poder sustituir componentes sin que                     
+los clientes que los consumen se vean afectados ya que dependen de la                         
+abstracción y no de la implementación concreta. 
+Lo que se pretende es que no existan dependencias directas entre                     
+módulos, sino que dependan de abstracciones. De esta forma, nuestros                   
+módulos pueden ser más fácilmente reutilizables. Es fundamental que la                   
+abstracción se defina en base a las necesidades del módulo o cliente y no                           
+en las capacidades de la implementación, de lo contrario, la abstracción                     
+estaría bastante acoplada a la implementación teniendo así menos                 
+flexibilidad. 
+Para más detalle, ver el artículo ​[S.O.L.I.D.] Dependency inversion principle /                     
+Principio de inversión de dependencias​ en Adictos al Trabajo. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         16  
+ 
+​Don’t Repeat Yourself (DRY) 
+ 
+Su objetivo principal es ​evitar la duplicación de lógica​. Cada pieza de                       
+funcionalidad debe tener una ​identidad única​, ​no ambigua y ​representativa                   
+dentro del sistema. 
+Según este principio toda pieza de funcionalidad nunca debería estar                   
+duplicada ya que esta duplicidad incrementa la dificultad en los cambios y                       
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         17  
+su evolución posterior, puede perjudicar la claridad y crear un espacio para                       
+posibles inconsistencias. 
+Por pieza de funcionalidad, no nos referimos a código sino a lógica, y más                           
+concretamente a función lógica. No es saludable tener tres métodos para                     
+abrir una conexión a una base de datos, cada uno con su propio código, si                             
+no hay un motivo que así lo justifique. Como se ve en este caso, los tres                               
+métodos pueden tener distinto código, pero la función final de los tres                       
+sigue siendo conectarse a la base de datos. Si en la evolución de nuestro                           
+software se nos solicita cambiar la forma de conectarnos, el tipo de base                         
+de datos o incluso enviar los datos a otros sistema de almacenamiento,                       
+deberemos modificar los tres métodos, lo que incrementa la cantidad de                     
+trabajo ya que debemos escribir el código tres veces y, consecuentemente,                     
+probarlo, introduce más posibilidades de cometer errores, aumenta la                 
+complejidad del código y más. Si además, no somos los autores originales                       
+de todo este código y solo nos toca mantenerlo, todo parece más difícil y                           
+laborioso aún. 
+Cuando el principio DRY se aplica de forma eficiente, los cambios en                       
+cualquier parte del proceso requieren cambios en un único lugar. Por el                       
+contrario, si algunas partes del proceso están repetidas por varios sitios,                     
+los cambios pueden provocar fallos con mayor facilidad si todos los sitios                       
+en los que aparece no se encuentran sincronizados. 
+En resumen, ¿por qué es importante? 
+● Hace el código más mantenible​. Evitar la repetición de lógica permite                     
+que si alguna vez cambia la funcionalidad en cuestión, no lo tengas                       
+que hacer en todos los lugares en los que lo repetiste. 
+● Reduce el tamaño del código​. Esto lo hace más legible y entendible                       
+porque hay menos código. 
+● Ahorra tiempo​. Al tener pedazos de lógica disponibles para                 
+reutilizarlos, en el futuro, estamos más preparados para lograr lo                   
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         18  
+mismo en menos tiempo. 
+ 
+​Inversion of Control (IoC) 
+Como su nombre indica, “inversión de control”,             
+se utiliza en el diseño orientado a objetos para                 
+delegar en un tercero diferentes tipos de flujos               
+de control ​para lograr un bajo acoplamiento.             
+Esto incluye el control sobre el flujo de una                 
+aplicación y el control sobre el flujo de la                 
+creación de un objeto o la creación y vinculación de objetos dependientes. 
+El principio de IoC ayuda a aumentar la modularidad del programa y al                         
+diseño de clases con bajo acoplamiento, lo que las hace testeables,                     
+mantenibles y extensibles. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         19  
+Algunos patrones de diseño son implementaciones de este principio: 
+● Service locator​. 
+● Dependency injection​. 
+● Template method​. 
+● Strategy​. 
+● Abstract Factory​. 
+● Observer​. 
+A este principio se lo conoce también como ​Don’t call us, we’ll call you​ (No 
+nos llame, nosotros lo llamamos) o ​Hollywood Principle​ (Principio de 
+Hollywood). 
+ 
+​You Aren’t Gonna Need It (YAGNI) 
+Este principio, que podemos traducir como “No vas a necesitar eso”, es un                         
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         20  
+principio que indica que ​no ​se ​deben ​agregar funcionalidades extras hasta                     
+que no sea necesario​. La tentación de escribir código que no es necesario                         
+pero que puede serlo en un futuro, tiene varias desventajas, como el                       
+desperdicio del tiempo que se destinaría para la funcionalidad básica (las                     
+nuevas características deben ser depuradas, documentadas y soportadas) o                 
+que cuando se requieran las nuevas funcionalidades, estas no funcionen                   
+correctamente, ya que hasta que no está definido para qué se puede                       
+necesitar, es imposible saber qué debe hacer. 
+Ver el artículo ​El principio YAGNI​, en Adictos al Trabajo, para más detalle. 
+​Keep It Simple, Stupid (KISS) 
+El principio KISS (🤘💋) es un acrónimo que proviene                 
+de la frase inglesa “keep it simple, stupid”, que                 
+podemos traducir como “mantenlo simple, estúpido”.           
+Se entiende como la necesidad de minimizar los               
+errores tratando de realizar las tareas de forma               
+efectiva y eficiente complicandose lo mínimo posible. 
+La simplicidad debe ser un objetivo clave tanto en el diseño, como en el                           
+desarrollo de la solución y se debe evitar la ​complejidad innecesaria​. 
+​Law of Demeter (LoD) 
+La Ley de Demeter, también conocida como el ​Principle of least knowledge                       
+o principio ​Don’t talk to strangers nos dice que un método de un objeto                           
+sólo debería interactuar con: 
+1. Métodos del propio objeto. 
+2. Los argumentos que recibe. 
+3. Cualquier objeto creado dentro del método. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         21  
+4. Cualquier propiedad / campo directo dentro del propio objeto. 
+La idea principal es que un objeto ​no tiene porqué conocer la estructura                         
+interna de los objetos con los que colabora​. En otras palabras, lo que se                           
+quiere evitar es el código con una estructura similar a la siguiente: 
+object.getX().getY().getZ().doSomething() 
+ 
+¿Cuál es el problema? Básicamente, la cadena denota un fuerte                   
+acoplamiento a la estructura de las clases involucradas en ella,                   
+afectándonos cualquier cambio o modificación en las mismas. 
+Entre las ventajas de aplicar este principio, encontramos: 
+● El software resultante tiende a ser más fácil de mantener y adaptar,                       
+ya que los objetos dependen menos de la estructura interna de otros                       
+objetos, lo que reduce el acoplamiento. 
+● Se vuelve más sencillo reutilizar las clases. 
+● El código es más fácil de probar. 
+Para más detalle, ver el artículo ​Ley de Demeter​ en Adictos al Trabajo. 
+​Strive for loosely coupled design between           
+objects that interact 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         22  
+En español “conseguir un diseño débilmente acoplado entre objetos que                   
+interactúan”. El acoplamiento se refiere al grado de conocimiento directo                   
+que un elemento tiene de otro. 
+El objetivo es ​reducir el riesgo de que un cambio en los objetos con los que                               
+interaccionamos provoque cambios en otros objetos​. 
+Limitar las interconexiones puede ayudar a aislar los problemas cuando las                     
+cosas salen mal y simplificar los procedimientos de prueba, mantenimiento                   
+y solución de problemas. Esto nos permite construir sistemas flexibles que                     
+pueden manejar los cambios porque reducen la dependencia entre                 
+múltiples objetos. 
+La arquitectura con bajo acoplamiento tiene las siguientes características: 
+● Reduce el riesgo de que un cambio en un elemento pueda provocar                       
+cambios en otros elementos. 
+● Simplifica las pruebas​, el mantenimiento y la resolución de                 
+problemas. 
+● Los componentes en un sistema débilmente acoplado pueden               
+reemplazarse con implementaciones alternativas que brinden los             
+mismos servicios. 
+Un claro ejemplo de la implementación de este principio es el patrón                       
+Observer​: 
+​ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         23  
+Composition over inheritance 
+ 
+El principio de composición sobre la herencia (también conocido como                   
+composite reuse principle​) establece que las clases deben ​lograr un                   
+comportamiento polimórfico y la reutilización del código mediante la                 
+composición (al contener instancias de otras clases que implementan la                   
+funcionalidad deseada), en lugar de a través de la la herencia de una clase                           
+base o primaria, siempre que sea posible. 
+Con la herencia, estructuramos las clases alrededor de lo que son. Con                       
+composición, estructuramos las clases basándonos en lo que hacen. Al                   
+favorecer la composición sobre la herencia y ​pensar en términos de lo que                         
+hacen las cosas en lugar de lo que son, nos liberamos de estructuras de                           
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         24  
+herencia frágiles y estrechamente acopladas. 
+El gran problema con la herencia es que tendemos a predecir el futuro, a                           
+construir una estructura rígida con un fuerte acoplamiento entre clases                   
+padres e hijas en una etapa muy temprana del proyecto y lo más probable,                           
+es que cometamos errores de diseño al hacer esto, dado que no podemos                         
+predecir el futuro, y cambiar o salir de estas estructuras o taxonomías de                         
+herencia es mucho más difícil de lo que parece. 
+Al favorecer la composición sobre la herencia, dotamos al diseño de una                       
+mayor flexibilidad. Es más natural construir clases a partir de varios                     
+componentes que tratar de encontrar puntos en común entre ellos y crear                       
+un árbol genealógico. Por ejemplo, un pedal acelerador y un volante                     
+comparten muy pocos rasgos comunes, sin embargo, ambos son                 
+componentes vitales en un automóvil. Lo que pueden hacer y cómo se                       
+pueden utilizar para beneficiar al automóvil se define fácilmente. La                   
+composición también proporciona un dominio más estable a largo plazo, ya                     
+que es menos propenso a las peculiaridades de los miembros. En otras                       
+palabras, es mejor componer lo que un objeto puede hacer, verificando que                       
+se cumpla la relación ​HAS-A o ​TIENE-UN​, que extender lo que es. Esto no                           
+significa que nunca se utilice la herencia, se puede implementar siempre                     
+que esta sea simple y tenga sentido dentro del modelo y,                     
+fundamentalmente, verificando siempre que se cumpla la relación ​IS-A o                   
+ES-UN​. 
+El diseño inicial se simplifica identificando los comportamientos de los                   
+objetos del sistema en interfaces separadas, en lugar de crear una relación                       
+jerárquica para distribuir los comportamientos entre las clases a través de                     
+la herencia. Este enfoque es más flexible a cambios futuros que de otro                         
+modo requerirían una reestructuración completa de las clases de dominio                   
+en el modelo de herencia. Además, evita problemas a menudo asociados                     
+con cambios relativamente menores en un modelo basado en la herencia                     
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         25  
+que incluye varias generaciones de clases. Evitando posibles diseños donde                   
+se requiera herencia múltiple, ya que muchos lenguajes no la soportan. 
+Como desventaja, los diseños basados en un enfoque por composición son                     
+menos intuitivos. 
+​Encapsulate what varies 
+Este principio se refiere a que cuando se identifiquen partes de la                       
+aplicación que ​pueden cambiar​, se deben ​aislar y ​encapsular en                   
+abstracciones que permitan realizar el cambio sin afectar a otras partes de                       
+la aplicación. 
+Este principio se apoya en otros dos vistos en apartados anteriores como                       
+son  ​Single responsibility (SRP)​ y ​Open/closed (OCP)​.  
+Con la correcta aplicación de este principio se puede obtener dos                     
+beneficios fundamentales: 
+● Cuando una responsabilidad es correctamente acotada en un único                 
+módulo, variaciones en los requisitos de esa responsabilidad influyen                 
+únicamente en dicho módulo, reduciendo la fragilidad de nuestro                 
+sistema y aumentando su reusabilidad. 
+● La solicitud de nuevos requisitos o nuevos comportamientos se                 
+obtiene mediante la incorporación de nuevos elementos en lugar de                   
+la modificación de los elementos ya existentes, se reduce la rigidez                     
+de nuestro sistema (se vuelve más versátil y flexible) y se reduce                       
+también la fragilidad del mismo, ya que el código anterior (y por lo                         
+tanto probado) no se modifica. 
+La mayoría de los patrones de diseño se basan en estos principios. Algunos                         
+de estos patrones son: 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         26  
+● Abstract Factory​. 
+● Factory Method​. 
+● Adapter​. 
+● Bridge​. 
+● Decorator​. 
+● Iterator​. 
+● Observer​. 
+● State​. 
+● Strategy​. 
+● Template Method​. 
+● Visitor​. 
+​The four rules of simple design 
+Hay 4 reglas que Kent Beck introdujo en los años 90 sobre los puntos                           
+fundamentales que se deben tener en cuenta a la hora de diseñar software,                         
+buscando una ​manera ​objetiva de poder ​medir la calidad de un diseño                       
+desde la perspectiva de minimizar los costes y maximizar el beneficio y                       
+huyendo de valoraciones subjetivas. Estas cuatro reglas sencillas de                 
+recordar están ordenadas por relevancia: 
+1. Los tests pasan​: el testing es una pieza que no puede faltar cuando                         
+desarrollamos software. El objetivo principal es que cada tarea                 
+funcione de la manera esperada y que haya un/unos tests que                     
+verifican que estos criterios se cumplen. 
+2. Expresan intención​: el código es autoexplicativo, fácil de entender y                   
+facilita la comunicación del propósito del mismo. 
+3. No hay duplicidades (DRY): se debe reducir al máximo la duplicidad                     
+de la lógica en el código, ya que de no hacerlo así, estaremos                         
+construyendo software frágil y cualquier cambio, por muy pequeño                 
+que sea, puede “romper” otras partes. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         27  
+4. Mínimo número de elementos​: se debe procurar reducir el número de                     
+componentes, clases, métodos, etc., a lo imprescindible, eliminando               
+todas aquellas cosas que incrementen la complejidad del sistema de                   
+manera innecesaria. 
+Estas 4 reglas han sido discutidas en gran variedad de libros y foros                         
+diversos dando lugar a una buena cantidad de ideas interesantes al                     
+respecto, destacando  entre otras: 
+● No hay unanimidad en el orden de los puntos 2 y 3, originando una                           
+idea generalizada de que ambos deberían estar en el mismo nivel de                       
+importancia.  
+● El primer punto podría no ser considerado siquiera como un punto                     
+del diseño simple, sino como algo esencial y connatural al desarrollo                     
+de software. Es decir, ni siquiera se debería plantear la posibilidad de                       
+un código sin tests.  
+● El último punto es considerado para muchos como una consecuencia                   
+de la continua aplicación de los puntos 2 y 3. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         28  
+ 
+​The boy scout rule 
+Los Boy Scouts tienen la regla de dejar el campamento más limpio de lo                           
+que se lo encontraron y en caso de ensuciarlo, se limpia y se deja lo mejor                               
+posible para la siguiente persona que venga. Si se aplica esto al desarrollo                         
+de software, se puede decir que si vemos alguna parte del código que se                           
+pueda mejorar, independientemente de quién lo haya hecho, debemos                 
+hacerlo. 
+El objetivo principal es mejorar la calidad del código y evitar su deterioro                         
+con el fin de ayudar al siguiente desarrollador (o a uno mismo dentro de un                             
+tiempo), a cambiar o desarrollar una nueva funcionalidad de una forma más                       
+sencilla. Se promueve el trabajo en equipo por encima de la individualidad,                       
+ya que no solo es importante la tarea que esa persona ha realizado, sino el                             
+proyecto en general y si se ve que algo se puede mejorar, se hace. La idea                               
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         29  
+es mejorar pequeñas partes de código de manera acotada y segura, ya que                         
+tampoco es cuestión de cambiar un módulo entero, sino poco a poco, ir                         
+mejorando su calidad. 
+Para aplicar esta regla, se deben tener claros los principios ​SOLID​. 
+Para más detalle, ver el artículo ​La regla del Boy Scout y la Oxidación del                             
+Software​ en Adictos al Trabajo. 
+​Last Responsible Moment 
+El desarrollo de software es una disciplina realmente curiosa. No es                     
+extraño, y me atrevería decir que es lo más habitual, encontrarse                     
+trabajando ya sobre las funcionalidades de un proyecto incipiente o                   
+añadiendo nuevas a otro ya más avanzado, sin tener aún claramente                     
+descritos los requisitos. ​Este principio propone como estrategia para                 
+abordar nuestros diseños, diferir nuestras decisiones, especialmente             
+aquellas que se puedan considerar irreversibles, hasta el ​último momento                   
+posible​. Este momento sería aquel en el que no tomar la decisión, supone                         
+un coste mayor que tomarla. Cuanto más tiempo mantengamos nuestras                   
+decisiones abiertas, más información iremos acumulando para optar por la                   
+decisión más adecuada.  
+ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         30  
+Design Patterns 
+ 
+“Los patrones de diseño son 
+descripciones de objetos y clases 
+conectadas que se personalizan para 
+resolver un problema de diseño 
+general en un contexto particular”. 
+- Gang of Four 
+ 
+Los patrones de diseño ofrecen ​soluciones comunes a problemas                 
+recurrentes de diseño de aplicaciones. En la programación orientada a                   
+objetos, los patrones de diseño normalmente están dirigidos a resolver los                     
+problemas asociados con la creación e interacción de objetos, en lugar de                       
+los problemas a gran escala que afrontan las arquitecturas generales del                     
+software. Proporcionan soluciones generalizadas en forma de repeticiones               
+que se pueden aplicar a problemas de la vida real. 
+Los patrones de diseño son soluciones útiles y probadas para los                     
+problemas que inevitablemente aparecen. No solo albergan años de                 
+conocimiento y experiencia colectiva, sino que además los patrones de                   
+diseño ofrecen un ​vocabulario común entre los desarrolladores y arrojan                   
+luz sobre muchos problemas. 
+Sin embargo, el uso innecesario o excesivo de patrones de diseño puede                       
+suponer también una sobre ingeniería, dando como resultado un sistema                   
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         31  
+excesivamente complejo que lejos de resolver los problemas, los aumenta,                   
+dando lugar a un diseño ineficiente, bajo rendimiento y problemas de                     
+mantenimiento. 
+Los patrones de diseño se clasificaron originalmente en tres grupos: 
+● Creacionales. 
+● Estructurales. 
+● De comportamiento. 
+Con el tiempo, fueron apareciendo nuevos patrones y con ellos, nuevas                     
+categorías de problemas que solucionan, por ejemplo, los patrones de                   
+concurrencia. 
+ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         32  
+Patrones creacionales 
+Builder 
+Este patrón pretende separar la lógica de construcción de su                   
+representación. Para ello, define una clase abstracta, Builder, que es la                     
+encargada de crear las instancias de los objetos. Los elementos que                     
+intervienen son los siguientes: 
+● Builder: interfaz abstracta que crea los productos. 
+● Builder concreto: implementación concreta del builder que crea               
+productos de un cierto tipo. 
+● Director: el encargado de utilizar la clase builder para crear los                     
+objetos. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         33  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         34  
+Singleton 
+Este patrón consiste en utilizar ​una sola instancia de clase, definiendo así                       
+un único punto global de acceso a ella. Dicha instancia es la encargada de                           
+la inicialización, creación y acceso a las propiedades de clase.   
+Este patrón es muy utilizado cuando se quiere controlar el acceso a un                         
+único recurso físico (fichero de lectura de uso exclusivo), o haya datos que                         
+deban estar disponibles para el resto de objetos de la aplicación (una                       
+instancia de log, por ejemplo). 
+Se define un método de acceso para recuperar la instancia de la clase. Este                           
+método también se encargará de crear la instancia en el caso de que se                           
+solicite por primera vez. Hay que prestar atención a los problemas que                       
+pudiera haber de acceso exclusivo. 
+  
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         35  
+Dependency Injection 
+Se trata de un patrón de diseño que se encarga de extraer la                         
+responsabilidad de la ​creación de instancias de un componente para                   
+delegarla en otro. Permite que un objeto reciba otros objetos de los que                         
+depende, en lugar de ser el propio objeto el que los cree. Estos otros                           
+objetos se llaman dependencias. En la típica relación de "uso", el objeto                       
+receptor se llama cliente y el objeto pasado (es decir, "inyectado") se llama                         
+servicio. El código que pasa el servicio al cliente puede ser de muchos tipos                           
+y se llama inyector. En lugar de que el cliente especifique qué servicio                         
+usará, el inyector le dice al cliente qué servicio usar. La "inyección" se                         
+refiere al paso de una dependencia (un servicio), al objeto (un cliente) que                         
+lo usaría. 
+La inyección de dependencias es una forma de lograr la ​inversión de                       
+control​. 
+El cliente únicamente necesita conocer las interfaces de los servicios sin                     
+preocuparse de la implementación real de los mismos 
+ 
+By Vanderjoe - Own work, CC BY-SA 4.0, 
+https://commons.wikimedia.org/wiki/File:W3sDesign_Dependency_Injection_Design_Pattern_UML.jpg 
+Para más detalle, ver el artículo ​Patrón de Inyección de dependencias en                       
+Adictos al Trabajo. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         36  
+Service Locator 
+El patrón de localización de servicios es un patrón de diseño utilizado para                         
+encapsular los procesos involucrados en la obtención de un servicio con                     
+una capa de abstracción fuerte. Este patrón utiliza un registro central                     
+conocido como el "Service Locator" que, a demanda, devuelve el                   
+componente necesario para realizar una determinada tarea. 
+Se basa en la creación de una clase, llamada ServiceLocator, que sabe                       
+cómo crear las dependencias de otros tipos. A menudo, el localizador de                       
+servicios actúa como un depósito para objetos de servicios previamente                   
+inicializados. Cuando se requiere uno de estos servicios, se solicita el                     
+mismo llamando a un método determinado del ServiceLocator. En algunos                   
+casos, el método encargado de la localización de servicios crea instancias                     
+de objetos a medida que se necesitan. 
+Los defensores del patrón dicen que el enfoque simplifica las aplicaciones                     
+basadas en componentes, donde todas las dependencias se enumeran                 
+limpiamente al comienzo de todo el diseño de la aplicación, lo que hace                         
+que la inyección de dependencias tradicional sea una forma más compleja                     
+de conectar objetos. Los críticos del patrón argumentan que el software es                       
+más difícil de probar. 
+La principal diferencia frente a la inyección de dependencias es que en este                         
+caso hay una solicitud explícita para obtener la dependencia mientras que                     
+en la inyección de dependencias la obtención viene ya dada. 
+Este patrón es otra implementación del principio de ​inversión de control                     
+(IoC)​. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         37  
+ 
+Abstract Factory 
+El propósito de Abstract Factory es proporcionar una interfaz para ​crear                     
+familias de ​objetos relacionados, sin especificar clases concretas.               
+Normalmente, el cliente crea una implementación concreta de la fábrica                   
+abstracta y luego utiliza la interfaz genérica de la misma para crear los                         
+objetos concretos. El cliente no sabe (ni le importa) qué objetos concretos                       
+obtiene de cada una de estas fábricas internas, ya que utiliza solo las                         
+interfaces genéricas de sus productos. Este patrón separa los detalles de la                       
+implementación de un conjunto de objetos de su uso general y se basa en                           
+la composición del objeto, ya que la creación de objetos se implementa en                         
+los métodos expuestos en la interfaz de fábrica. 
+La estructura típica del patrón Abstract Factory es la siguiente: 
+● Cliente: la clase que llamará a la factoría adecuada ya que necesita                       
+crear uno de los objetos que provee la factoría. 
+● Abstract Factory: es la definición de las interfaces de las factorías.                     
+Debe de proveer un método para la obtención de cada objeto que                       
+pueda crear. 
+● Factorías Concretas: estas son las diferentes familias de productos.                 
+Provee la instancia concreta del tipo de objeto que se encarga de                       
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         38  
+crear. 
+● Producto abstracto: definición de las interfaces para la familia de                   
+productos genéricos. 
+● Producto concreto: implementación de los diferentes productos. 
+Este patrón es otra implementación del principio de ​inversión de control                     
+(IoC)​. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         39  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         40  
+Factory Method 
+Provee una interfaz o clase abstracta (creator) que permite encapsular la                     
+lógica de creación de los objetos en subclases y éstas deciden qué clase                         
+instanciar. Los objetos se crean a partir de un método (factory method) y                         
+no a través de un constructor como se hace normalmente. Además, los                       
+ConcreteCreators devuelven siempre la interfaz (Product), esto permite que                 
+el cliente trate a los productos por igual, tengan una implementación u                       
+otra. 
+La estructura típica del patrón Factory method es la siguiente: 
+● Product: definición de las interfaces para la familia de productos                   
+genéricos. 
+● ConcreteProduct: implementación de los diferentes productos. 
+● Creator: declara el factory method que se encargará de instanciar                   
+nuevos objetos. Es importante que este método devuelva la interfaz                   
+Product. Normalmente el Creator suele ser una clase abstracta con                   
+cierta lógica de negocio relacionada con los productos a crear.                   
+Dependiendo de la instancia de producto que se devuelva, se puede                     
+seguir un flujo u otro. 
+● ConcreteCreator:  crea la instancia del producto concreto. 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         41  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         42  
+Patrones estructurales 
+Adapter 
+El libro [GoF] indica que este patrón "proporciona una ​interfaz ​unificada a                       
+un conjunto de interfaces en un subsistema". Head First Design Patterns da                       
+la misma explicación y señala que convierte la interfaz de una clase en otra                           
+interfaz que los clientes esperan. El adaptador permite que las clases                     
+puedan trabajar juntas ya que de otro modo, no podrían debido a tener                         
+interfaces incompatibles. 
+En el libro [GoF] se nos describen dos tipos principales de adaptadores: 
+● Adaptadores de clase: generalmente usan herencia múltiple o varias                 
+interfaces para implementarlo. 
+● Adaptadores de objetos: realizan las composiciones de objetos para                 
+adaptarlos. 
+Un adaptador se puede considerar como la aplicación del principio de                     
+inversión de dependencias (DIP)​, cuando la clase de alto nivel define su                       
+propia interfaz (adaptador) para el módulo de bajo nivel (implementado por                     
+una clase adaptada). 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         43  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         44  
+Data Access Object (DAO) 
+La solución original que propuso el patrón DAO se definió en el libro Core                           
+J2EE Patterns: Best Practices and Design Strategies de la siguiente manera: 
+“Se usa el Data Access Object (DAO) para ​abstraer y encapsular todo el                         
+acceso a la fuente de datos​. El DAO gestiona la conexión con la fuente de                             
+datos para obtener y almacenar datos”. 
+El problema que se resolvió con la abstracción y la encapsulación de la                         
+fuente de datos, fue evitar que la aplicación dependiera de la                     
+implementación de la fuente de datos. Esto desacopla la capa de negocio                       
+de la fuente de datos. 
+Aunque originariamente permitía protegerse frente a cambios en el motor                   
+de base de datos, el patrón DAO sigue siendo un patrón valioso y su                           
+solución original, sigue siendo válida. En lugar de protegerse contra el                     
+impacto de un cambio improbable en el tipo de fuente de datos, el valor                           
+está en su capacidad de prueba y su uso para estructurar el código y                           
+mantenerlo limpio de código de acceso a datos. 
+El patrón DAO encapsula las operaciones de acceso a los datos en una                         
+interfaz implementada por una clase en concreto. Si se mockea esta clase,                       
+se pueden probar las clases de negocio sin hacer conexiones a la base de                           
+datos. La implementación concreta de un DAO utiliza API de bajo nivel para                         
+realizar las operaciones de acceso a datos. 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         45  
+ 
+ 
+Query Object 
+Este patrón se puede consultar en el libro Patterns of Enterprise                     
+Application Architecture. Un Query Object es un ​intérprete [GoF], es decir,                     
+una estructura de objetos que puede ​formar una consulta ​SQL​. Puede crear                       
+esta consulta haciendo referencia a clases y campos en lugar de tablas y                         
+columnas. De esta forma, quienes escriben las consultas pueden hacerlo                   
+independientemente del esquema de la base de datos y los cambios en el                         
+esquema, se pueden localizar en un solo lugar. 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         46  
+Decorator 
+El propósito de este patrón es el de asignar ​responsabilidades ​adicionales                     
+a un objeto ​dinámicamente​, proporcionando una alternativa flexible a la                   
+herencia para extender la funcionalidad. 
+La estructura está compuesta por: 
+● Component: deﬁne la interfaz que deben implementar los objetos a                   
+los que se les pueden añadir funcionalidades. 
+● ConcreteComponent: deﬁne un objeto al cual se le pueden agregar                   
+responsabilidades adicionales. Implementa la interfaz Component. 
+● Decorator: mantiene una referencia al Component asociado.             
+Implementa la interfaz de la super clase Component, delegando en el                     
+Component asociado. El Decorator, en general, añade             
+comportamiento antes o después de un método que ya existe en el                       
+Component. 
+● ConcreteDecorator: añade responsabilidades al Component. 
+Entre las ventajas de implementar este patrón, podemos encontrar: 
+● Es más flexible que la herencia. 
+● Permite añadir y eliminar responsabilidades en tiempo de ejecución. 
+● Evita la herencia con muchas clases y la herencia múltiple. 
+● Limita la responsabilidad de los componentes para evitar clases con                   
+excesivas responsabilidades en los niveles superiores de la jerarquía. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         47  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         48  
+Bridge 
+Tiene como objetivo ​desacoplar la ​abstracción de la ​implementación​.                 
+Permite que la abstracción y la implementación se desarrollen de forma                     
+independiente a través de un puente (bridge) entre ambas. El código del                       
+cliente podrá acceder a la abstracción sin preocuparse por la parte de                       
+implementación. 
+Participantes: 
+● Abstraction: recibe por parámetro la interfaz que servirá de puente                   
+con las implementaciones y es la que se comunicará con el cliente. 
+● ConcreteAbstraction: puede trabajar con distintas implementaciones           
+a través de la interfaz.  
+● Implementator: declara una interfaz con sus respectivos métodos               
+que serán los que actúen de enlace entre la abstracción y las                       
+implementaciones. 
+● ConcreteImplementator: contiene código concreto sobre cada           
+implementación. 
+Entre las ventajas de implementar este patrón podemos encontrar: 
+● El cliente siempre trabaja con abstracciones y nunca con                 
+implementaciones. 
+● Cumple con el principio Open/Closed ya que se pueden añadir nuevas                     
+implementaciones independientes unas de otras. 
+● Permite reducir el número de subclases que si usaramos herencia                   
+pura. 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         49  
+ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         50  
+Patrones de comportamiento 
+Command 
+El libro The Gang of Four [GoF] indica que se usa el patrón de Comando                             
+para “​encapsular una ​solicitud” como un objeto, permitiendo definir una                   
+interfaz común para invocar acciones diversas.  
+Simplificando, el objetivo de un comando es ejecutar una serie de acciones                       
+en su receptor (Receiver). El cliente crea un objeto Command y                     
+generalmente, le pasa el Receiver para poder acceder a él. Cuando el Client                         
+desea ejecutar el Command, se utiliza el Invoker que almacena el                     
+Command y se encarga de iniciar su ejecución en algún momento,                     
+invocando al método execute del Command. 
+Esto permite añadir otras funcionalidades a las acciones como                 
+encolamiento, registro, acciones de deshacer o rehacer las operaciones,                 
+etc., gracias a ​desacoplar​ la ​solicitud​ de una acción de su ejecución. 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         51  
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         52  
+ 
+Chain of Responsibility 
+El libro The Gang of Four [GoF] indica que se usa el patrón “evitar acoplar                             
+el remitente de una solicitud a su receptor, al darle a ​más de un objeto la                               
+oportunidad de ​manejar la ​solicitud​. Se encadenan los objetos receptores y                     
+pasa la solicitud a lo largo de la cadena hasta que un receptor lo maneja.” 
+Aquí se procesan una serie de receptores uno por uno (es decir, de forma                           
+secuencial). Una fuente iniciará este procesamiento. Con este patrón,                 
+constituimos una cadena donde cada uno de los objetos de receptores                     
+puede tener cierta lógica para manejar un tipo particular de objeto. Una vez                         
+que se realiza el procesamiento, si aún hay algo pendiente, se puede                       
+reenviar al siguiente receptor de la cadena. 
+Cabe indicar que este tipo de patrón establece una jerarquía entre los                       
+receptores, pues los primeros en la cadena tienen prioridad sobre los                     
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         53  
+siguientes. Podemos agregar nuevos receptores en cualquier momento al                 
+final de una cadena. 
+ 
+By Vanderjoe - Own work, CC BY-SA 4.0, ​https://commons.wikimedia.org/w/index.php?curid=62530468 
+Este patrón representa una implementación del concepto definido en el                   
+principio de ​responsabilidad única (SRP)​. 
+ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         54  
+Strategy 
+El libro The Gang of Four [GoF] indica que se usa este patrón para definir                             
+una familia de ​algoritmos que se encapsulan cada uno de forma que sean                         
+intercambiables​. El patrón estrategia permite que el algoritmo varíe                 
+independientemente de un cliente a otro. 
+La clave para aplicar el patrón Strategy es diseñar interfaces para la                       
+estrategia y su contexto, que sean lo suficientemente generales como para                     
+admitir una variedad de algoritmos. No debería tener que cambiar la                     
+estrategia o la interfaz de contexto para admitir un nuevo algoritmo.  
+Según el patrón de estrategia, los comportamientos de una clase no deben                       
+heredarse. En su lugar, deben encapsularse utilizando interfaces. Esto es                   
+compatible con el principio ​Open/Closed (OCP)​, que propone que las clases                     
+deben estar abiertas para la extensión pero cerradas para la modificación. 
+Para más detalle, ver el artículo ​Utilizando el patrón Estrategia en Adictos                       
+al Trabajo. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         55  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         56  
+Template Method 
+El libro The Gang of Four [GoF] indica que se usa este patrón para definir el                               
+esqueleto de un ​algoritmo en una operación, ​delegando algunos ​pasos a                     
+subclases. El método plantilla permite que las subclases redefinan ciertos                   
+pasos de un algoritmo sin cambiar la estructura del algoritmo. 
+En un template method, definimos la estructura mínima o esencial de un                       
+algoritmo. Luego diferimos algunas funcionalidades (responsabilidades) a             
+las subclases. Como resultado, podemos redefinir ciertos pasos de un                   
+algoritmo manteniendo la estructura clave fija para ese algoritmo. 
+En tiempo de ejecución, el algoritmo representado por el método de                     
+plantilla se ejecuta enviando el mensaje de plantilla a una instancia de una                         
+de las subclases concretas. A través de la herencia, el método de plantilla                         
+en la clase base comienza a ejecutarse delegando parte de los detalles de                         
+la implementación en las clases hijas. Este mecanismo garantiza que el                     
+algoritmo general siga los mismos pasos cada vez, al tiempo que permite                       
+que los detalles de algunos pasos dependan de qué instancia recibió la                       
+solicitud original para ejecutar el algoritmo. 
+Este patrón es un ejemplo de ​inversión de control porque el código de alto                           
+nivel ya no determina qué algoritmos ejecutar, en su lugar, se selecciona un                         
+algoritmo de nivel inferior en tiempo de ejecución. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         57  
+ 
+By Vanderjoe - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=63155402 
+Para más detalle, ver el artículo ​El patrón de diseño Template Method​ en 
+Adictos al Trabajo. 
+ 
+Interpreter 
+El libro [GoF] lo define de la siguiente manera: 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         58  
+“Dado un lenguaje, define una representación de su ​gramática junto con un                       
+intérprete que usa dicha representación para interpretar sentencias del                 
+lenguaje.” 
+En otras palabras, el patrón define la gramática de un lenguaje particular                       
+de una manera orientada a objetos que puede ser evaluada por el propio                         
+intérprete. 
+Teniendo esto en cuenta, técnicamente podríamos construir nuestra               
+expresión regular personalizada, un intérprete DSL personalizado o               
+podríamos analizar cualquiera de los lenguajes humanos, construir árboles                 
+de sintaxis abstracta y luego ejecutar la interpretación. 
+El patrón intérprete, generalmente debe usarse cuando la gramática es                   
+relativamente simple. De lo contrario, podría ser difícil de mantener. 
+ 
+By Vanderjoe - Own work, CC BY-SA 4.0, 
+https://upload.wikimedia.org/wikipedia/commons/3/33/W3sDesign_Interpreter_Design_Pattern_UML.jpg 
+ 
+Ventajas e inconvenientes: 
+● Facilidad de cambiar y ampliar: puesto que el patrón usa clases para                       
+representar las reglas de la gramática, se puede usar la herencia para                       
+cambiar o extender ésta. 
+● Fácil implementación:. las clases que definen los nodos del árbol                   
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         59  
+sintáctico abstracto tienen implementaciones similares.  
+● Las gramáticas complejas son difíciles de mantener ya que define, al                     
+menos, una clase para cada regla de la gramática. De ahí que las                         
+gramáticas que contienen muchas reglas puedan ser difíciles de                 
+controlar y mantener. 
+Para más detalle, ver el artículo ​Patrón Intérprete​ en Adictos al Trabajo. 
+Observer 
+Este patrón define una ​dependencia entre objetos de forma que cuando un                       
+objeto ​cambia su ​estado​, todos los objetos que dependen de él son                       
+notificados​ y pueden reaccionar si lo desean a una acción. 
+El objeto de datos, o Subject, provee de métodos para que cualquier objeto                         
+Observer pueda suscribirse o cancelar la suscripción, pasando una                 
+referencia de sí mismo al Observable o Subject. El Subject mantiene una                       
+lista con las referencias a sus Observers para notificarles cada cambio de                       
+estado (si procede).  
+Los Observers a su vez están obligados a implementar los métodos que                       
+utiliza el Subject para notificar a sus Observers de los cambios que sufre                         
+para que todos ellos tengan la oportunidad de reaccionar a ese cambio de                         
+manera que, cuando se produzca un cambio en el Subject, éste pueda                       
+recorrer la lista de Observers notificando a cada uno. 
+Este patrón es aplicable cuando: 
+● Una abstracción tiene dos puntos de vista dependientes uno del otro.                     
+Encapsular estos puntos de vista en objetos separados permite                 
+cambiarlos y reutilizarlos. 
+● Un cambio en un objeto requiere cambiar otros y no sabemos                     
+cuántos objetos van a cambiar. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         60  
+● Un objeto debería poder notificar a otros sin saber quiénes son. 
+ 
+Entre las ventajas de utilizar este patrón encontramos: 
+● Podemos modificar el Subject y los Observers de forma                 
+independiente al estar desacoplados. 
+● Nos permite reutilizar tanto Observers como Subjects. 
+● Respeta el principio Open/Closed, permitiendo añadir Observers sin               
+modificar los Subjects. 
+● Reduce el acoplamiento entre Subject y Observer, ya que un Subject                     
+sólo conoce su lista de Observers a través de un interfaz pero no la                           
+clase concreta. 
+● El Subject se comunica con los Observers mediante broadcast o                   
+difusión. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         61  
+ 
+State 
+Según el libro de [GoF], el patrón State “permite que un objeto ​modifique                         
+su ​comportamiento cada vez que ​cambie su ​estado interno. Parecerá que                     
+cambia la clase del objeto”. Podemos dibujar el comportamiento de nuestro                     
+objeto como si se tratase de una “máquina de estados finita”. 
+El patrón estado se usa para encapsular todo el comportamiento variable                     
+de un objeto en función de su estado interno. Es una manera más limpia de                             
+construir un objeto que cambia su comportamiento en tiempo de ejecución                     
+sin recurrir a declaraciones condicionales, respetando el principio               
+Open/Closed y el Single Responsibility Principle, ya que cada estado está                     
+representado por una clase que implementa una interfaz. Esto facilita la                     
+mantenibilidad del código.  
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         62  
+ 
+Participantes: 
+● Context: 
+○ Define la interfaz que será usada por los clientes. 
+○ Mantiene una instancia que representa el estado actual del                 
+objeto. 
+● State: 
+○ Define una interfaz para encapsular el comportamiento             
+asociado con un determinado estado del Context. 
+● Subclases de State: 
+○ Cada subclase implementa un comportamiento asociado a los               
+diferentes estados del Context. 
+ 
+Principales ventajas: 
+● Separa el comportamiento del objeto por estados. Al aislar el                   
+comportamiento en estados y convertirlo en clases separadas, nos                 
+permite fácilmente añadir nuevos estados y definir las transiciones                 
+hacia ellos. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         63  
+● Hace explícitas las transiciones entre estados. Podemos evitar las                 
+transiciones a estados internos inconsistentes, ya que las               
+transiciones son atómicas para el Context. 
+● Los objetos State pueden compartirse por diferentes contextos.               
+Siempre que estos no tengan estado interno, comportándose como                 
+objetos del patrón Flyweight (sin estado intrínseco y con                 
+comportamiento). 
+ 
+ 
+Visitor 
+Permite ​añadir ​funcionalidad ​sin necesidad de ​cambiar las clases de los                     
+elementos en los que va a ejecutarse, a través de los denominados Visitors.                         
+El patrón sugiere que situemos el comportamiento en una nueva clase                     
+llamada Visitor, en vez de integrarlo todo en la clase base. Cada vez que se                             
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         64  
+necesite añadir un nuevo comportamiento, se hará en una nueva                   
+implementación de un Visitor y la clase base solo tiene que aceptar o                         
+delegar este comportamiento en el Visitor correspondiente. 
+Participantes: 
+● Visitor: interfaz que declara una serie de métodos, normalmente                 
+llamados visit y que reciben como parámetro elementos concretos a                   
+los que se les va a añadir funcionalidad. Se deben crear tantos                       
+métodos visit como clases concretas tengamos por lo que al llamarse                     
+igual, se diferenciarán por la firma del método. 
+● ConcreteVisitor: implementan la interfaz Visitor y definen las               
+funcionalidades que se aplicarán a los elementos o clase base. Aquí                     
+es donde se debe definir el comportamiento que debe tener nuestra                     
+clase base. En caso de querer hacer alguna modificación, se hará                     
+siempre en los ConcreteVisitors y nunca directamente en el                 
+elemento. Recordemos que la clase base únicamente delega al Visitor                   
+que realice estas modificaciones. 
+● Element: interfaz que declara un método que acepta los Visitors. 
+● ConcreteElement: clase base que implementa la interfaz Element y                 
+tiene como objetivo redirigir al Visitor concreto que se encargará de                     
+añadir el comportamiento específico. 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         65  
+ 
+Iterator 
+Provee una forma de acceder secuencialmente a los elementos de una                     
+colección sin necesidad de exponer su representación interna. El objetivo                   
+principal es el de extraer el comportamiento de una colección en un objeto                         
+llamado Iterator que se encargará de tener toda la información necesaria                     
+para manipularla. El cliente está siempre trabajando con abstracciones a                   
+través de sus interfaces. Esto le permite hacer uso de varios tipos de                         
+colecciones e iteradores con el mismo código. 
+Participantes: 
+● Client: interactúa tanto con Iterator como Iterable a través de sus                     
+interfaces para no acoplarse a clases concretas. 
+● Iterable: declara un método responsable de instanciar el objeto                 
+Iterator. Importante que el método devuelva la interfaz para no                   
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         66  
+acoplarnos a implementaciones. 
+● ConcreteIterable: implementa la interfaz e instancia el Iterator               
+concreto que iterará sobre una colección específica. 
+● Iterator: declara los métodos necesarios para recorrer la colección.                 
+Puede declarar varios métodos como remove, getFirst, currentItem,               
+size, next, etc. 
+● ConcreteIterator: implementa los métodos declarados en la interfaz y                 
+es responsable de gestionar la posición de la iteración. 
+ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         67  
+ 
+ 
+ 
+ 
+PRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE         68  
+Bibliografía 
+ 
+Estas son las fuentes que hemos consultado y en las que nos hemos                         
+basado para la redacción de este material: 
+● The 4 rules of simple design: 
+https://blog.jbrains.ca/permalink/the-four-elements-of-simple-desig
+n 
+https://blog.thecodewhisperer.com/permalink/putting-an-age-old-ba
+ttle-to-rest 
+​Understanding the Four Rules of Simple Design, Corey Haines 
+● The Clean Code Blog by Robert C. Martin (Uncle Bob): 
+https://blog.cleancoder.com 
+● Head First Design Patterns. Eric Freeman & Elisabeth Freeman. 
+● Design Patterns: Elements of Reusable Object-Oriented Software. 
+Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides. [GoF] 
+● Core J2EE Patterns: Best Practices and Design Strategies. Deepak 
+Alur, John Crupi, Dan Malks. 
+● Patterns of Enterprise Application Architecture. Martin Fowler con la 
+colaboración de David Rice, Matthew Foemmel, Edward Hieatt, 
+Robert Mee y Randy Stafford. 
+ 
+Página 50
+En esta guía hemos visto los 
+principales principios y patrones 
+de diseño. Estas prácticas no son 
+más que la experiencia de los 
+profesionales del sector, reunidas 
+en una serie de recetas o buenas 
+prácticas para que el software 
+crezca y evolucione de una forma 
+sostenible.
+Hemos visto los malos olores 
+que puede desprender el código 
+y como profesionales, es nuestra 
+responsabilidad irlos solucionando 
+poco a poco y no ir generando una 
+deuda técnica que sea como una 
+bola de nieve.
+Hacer de boy scout va implícito 
+en nuestras tareas del día a día 
+y es lo que va a permitir que las 
+futuras entregas de valor sean 
+rápidas, de calidad y que no rompan 
+funcionalidad existente.
+A menudo se pide permiso a 
+managers, product owners o 
+gente de desarrollo de negocio 
+para acometer estas tareas 
+asumiendo que es su decisión, ya 
+que son tareas que conllevan una 
+inversión de tiempo. Esto es un 
+error de base. La construcción de 
+software es responsabilidad de 
+los desarrolladores de software, lo 
+mismo que el estado del software.
+Conocer los patrones creacionales,  
+estructurales y de comportamiento 
+nos van a proporcionar herramientas 
+válidas para entregar valor constante 
+y de calidad.
+Conocer las buenas prácticas y 
+los principios de diseño nos va 
+a proporcionar las herramientas 
+necesarias para afrontar nuevos 
+desarrollos con seguridad, sabiendo 
+qué decisiones tomar, cuáles aplazar 
+y cómo construir software sobre 
+pilares sólidos, que cambio tras 
+cambio se mantengan firmes.
+Lecciones 
+aprendidas
+con esta guíaPRINCIPIOS Y PATRONES DEL DESARROLLO DE SOFTWARE
+En Autentia proporcionamos soporte al desarrollo de software y 
+ayudamos a la transformación digital de grandes organizaciones siendo 
+referentes en eficacia y buenas prácticas. Te invito a que te informes 
+sobre los servicios profesionales de Autentia y el soporte que podemos 
+proporcionar para la transformación digital de tu empresa.
+¡Conoce más!
+SOPORTE A DESARROLLO
+Construimos entornos sólidos para 
+los proyectos, trabajando a diario 
+con los equipos de desarrollo.
+AUDITORÍA DE DESARROLLO
+Analizamos la calidad técnica de 
+tu producto y te ayudamos a 
+recuperar la productividad 
+perdida.
+ACOMPAÑAMIENTO AGILE
+Ayudamos a escalar modelos ágiles 
+en las organizaciones.
+FORMACIÓN
+Formamos empresas, con clases 
+impartidas por desarrolladores 
+profesionales en activo.
+DISEÑO DE PRODUCTO Y UX
+Convertimos tus ideas en productos 
+digitales de valor para los usuarios 
+ﬁnales.
+SOFTWARE A MEDIDA
+Desarrollamos aplicaciones web y 
+móviles. Fullstack developers, 
+expertos en backend.
+Expertos en creación de
+software de calidad
+Diseñamos productos digitales y experiencias a medida
+www.autentia.com  
+info@autentia.com | T. 91  675 33 06  
+¡Síguenos en nuestros canales!

@@ -1,0 +1,50 @@
+AdministracióndeSistemasdeInformación
+UnidadIV:IngenieríaSocial
+Grupo6
+2024
+Integrantes:
+● Calcagno,Matías
+● delosRíos,Carolina
+● Haudet,Felipe
+● Ortiz,LucasAdministracióndeSistemas Grupo6deInformación
+Introducción
+La ingeniería social es una técnica utilizada para manipular a las personas con el fin deobtener información confidencial, accesonoautorizadoasistemas oprovocar laejecucióndeciertas acciones. Adiferenciadelos ataques puramentetécnicos, laingenieríasocial sebasa en la explotación de la confianza, la empatía o la curiosidad de las personas. Estemétodo es altamente efectivo debidoalavulnerabilidadinherentedel ser humano, yaqueinclusolossistemasmássegurospuedensercomprometidossi losusuariossonengañadosparaentregarinformaciónorealizaraccionesinapropiadas.
+Desarrollo
+Los atacantes de ingeniería social manipulan las emociones, la confianza y la falta deconocimientodesusvíctimas, generalmenteatravésdeengañosquepareceninofensivosorutinarios. Estos engaños pueden tomar muchas formas, pero todos ellos aprovechan lapsicologíahumanaenlugardelasvulnerabilidadestecnológicas.
+TiposdeataqueenlaIngenieríaSocial
+Los ataques pueden presentarse de varias formas. A continuación, sedescribenlos tiposmáscomunes:
+1. Phishing: El phishing es una de las formas más comunes deingenieríasocial. Eneste ataque, el atacante envíacorreos electrónicos falsos omensajes queparecenprovenir defuentes confiables, comobancos, redessocialesocolegasdetrabajo. Elobjetivoesquelavíctimahagaclicenunenlacemaliciosooproporcioneinformaciónconfidencial, comocontraseñasonúmerosdetarjetasdecrédito.
+2. Spear Phishing: Similar al phishing, peromás dirigidoypersonalizado. Enlugardeenviar mensajes a una amplia audiencia, el atacante investiga a una persona oempresa en particular y adapta el mensaje para queparezcalegítimo. Estopuedeinvolucrar información específica que solo un individuo objetivo podría reconocer,aumentandolaefectividaddel ataque.
+3. Pretexting: En este tipo de ataque, el atacante crea un escenario falso paraengañar a la víctima y lograr que revele información o realice una acción. Estopuede incluir hacerse pasar por un empleado de soporte técnico, un funcionariogubernamental, ouncolegadetrabajoparaobteneraccesoadatossensibles.
+2AdministracióndeSistemas Grupo6deInformación
+4. Baiting: El baiting implica atraer a la víctima a través de la promesa de algoatractivo. Por ejemplo, unatacantepodríadejar unamemoriaUSBmaliciosaenunárea pública esperando que alguien la recoja e inserte en su computadora,desencadenandolainstalacióndemalware.
+5. Tailgating: También conocido como “piggybacking”, el tailgating implica seguirfísicamente aalguienparaentrar enunárearestringidasinel accesoadecuado. Elatacante puede aprovechar la cortesía natural delas personas paracolarsedetrásdeunempleadoenunedificioasegurado.
+6. Vishing (Phishing por voz): Esta variante de phishingutilizallamadas telefónicasparaengañar alas víctimas. Los atacantes sehacenpasar por figurasdeautoridado soporte técnico para obtener información personal o financiera. Las estafas porvoz hanaumentadoconel usodetecnologíasdeVoIPquepermitenocultarel origenreal delasllamadas.
+FasesdeunAtaquedeIngenieríaSocial
+Un ataque de ingeniería social suele pasar por varias fases. Comprender estas etapasayudaalasorganizacionesaidentificaryprevenirataques:
+1. Investigación: El atacanterecopilainformaciónsobrelavíctima. Estopuedeincluirdatos personales, patrones de comportamiento, correos electrónicos, jerarquíadentrodeunaempresa, entreotros. Amenudo, estainformaciónseobtienederedessociales, sitioswebdeempresasofiltracionespreviasdedatos.
+2. Desarrollo de la relación: En esta fase, el atacante establece contacto con lavíctima, ganando su confianza. Este contacto puede ser a través de correoselectrónicos, llamadastelefónicasoencuentrospersonales.
+3. Explotación: Unavez queel atacantehaganadolaconfianzadelavíctima, explotaesa relación para extraer la información deseada o realizar alguna acción, comoproporcionaraccesoaunsistemaodescargarunarchivomalicioso.
+4. Cierre: Después dehaber obtenidoloquenecesitaba, el atacantecortael contactopara evitar levantar sospechas. Sinembargo, enalgunos casos, el atacantepuedecontinuarmanipulandoalavíctimaparaobtenermásinformación.
+3AdministracióndeSistemas Grupo6deInformación
+TécnicasyPsicologíaDetrásdelaIngenieríaSocial
+Laingenieríasocial sebasaenciertos principios psicológicosparaserefectiva. Algunasdelastécnicaspsicológicasmásutilizadasincluyen:
+1. Autoridad: Los atacantes sehacenpasarporfigurasdeautoridad, comoejecutivos,agentes del gobiernoopersonal deTI, paraconvencer alas víctimas dequesigansusinstruccionessincuestionarlas.
+2. Urgencia: Lacreacióndeunsentidodeurgenciapuedellevaralasvíctimasatomardecisiones precipitadas sinpensar enlas consecuencias. Unatacantepodríaalegarque si la víctima no actúa de inmediato, habrá consecuencias graves, como lapérdidadedatosolasuspensióndeservicios.
+3. Simpatía: El atacante puede crear un escenario donde la víctima sienta lástimaoempatíahaciaellos, loquefacilitalamanipulación. Porejemplo, puedenpedirayudahaciéndosepasarporalguienqueestáenapuros.
+4. Reciprocidad: Las personas tienenunatendenciaadevolver favores. Unatacantepodríaofrecer unpequeñoregalooasistenciaconlaesperanzadequelavíctimasesientaobligadaadevolverel favorentregandoinformación.
+5. Conformidad social: Este principio explotael deseodelas personas deencajar oseguir la norma social. Un atacantepodríaconvencer alavíctimadequetodos ensu organización están siguiendo ciertas políticas o procedimientos falsos paraobteneracceso.
+PrevencióndelaIngenieríaSocial
+Dado que los ataques de ingeniería social dependen principalmente de explotar elcomportamientohumano, laprevenciónseenfocaeneducaryconcienciaralaspersonasyorganizaciones. Algunasmedidasclaveincluyen:
+1. Educación yConcienciación: Lacapacitaciónregular delos empleados sobrelastácticas de ingeniería social es crucial. Las simulaciones de phishing y losseminarios sobre ciberseguridad pueden ayudar alos usuarios aidentificar y evitarcaerenestostiposdeataques.
+2. Verificación de Identidades: Las políticas de seguridad deben requerir laverificación de identidades antes de compartir información confidencial o
+4AdministracióndeSistemas Grupo6deInformación
+proporcionar accesoasistemas. Estoincluyelaverificaciónenmúltiplesetapasyelusodeautenticacióndedosfactores(2FA).
+3. PolíticasdeAccesoyContraseñas: Limitar el accesoalainformacióny recursosbasados en roles y la implementación de políticas de contraseñas seguras puedereducir el impactodelosataquesdeingenieríasocial. Tambiénesútil asegurarsedequelosempleadosnocompartancontraseñasocredencialesdeformaabierta.
+4. Seguridad Física: Implementar medidas de seguridad física, como el uso detarjetas de acceso y sistemas de vigilancia, puedeevitar quelos atacantes utilicentécnicascomoel tailgatingparaobteneraccesonoautorizadoainstalaciones.
+5. Pruebas Regulares deSeguridad: Las organizaciones debenrealizar auditorías ypruebas de penetración para evaluar la efectividad de sus medidas de seguridadcontralaingenieríasocial.
+Conclusión
+La ingeniería social es una amenaza constante en el panorama de la ciberseguridad. Alaprovecharse de la psicología humana, los atacantes pueden eludir incluso las barrerastécnicas más avanzadas. Para mitigar esteriesgo, las organizaciones debenenfocarseenla concienciación, la formación y la implementación de medidas preventivas tanto a nivelhumano como técnico. Aunque no se puede eliminar por completoel riesgodeingenieríasocial, unaestrategiaintegral puedereducirsignificativamentesuimpacto.
+Bibliografía
+● IBM. (s.f.). Social engineering. IBM. Recuperado el 8 de octubre de 2024, de:https://www.ibm.com/es-es/topics/social-engineering● Argentina.gob.ar. (s.f.). Qué eslaingenieríasocial ycómoprotegerte. MinisteriodeJusticiay DerechosHumanosdelaNación. Recuperadoel 8deoctubrede2024,de:https://www.argentina.gob.ar/justicia/convosenlaweb/situaciones/que-es-la-ingenieria-social-y-como-protegerte● Cloudflare. (s.f.). Whatisasocial engineeringattack?. Cloudflare. Recuperadoel8deoctubrede2024, de:https://www.cloudflare.com/es-es/learning/security/threats/social-engineering-attack/
+5

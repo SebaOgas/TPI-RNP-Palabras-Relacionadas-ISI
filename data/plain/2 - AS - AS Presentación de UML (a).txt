@@ -1,0 +1,909 @@
+ 
+ANALISIS DE SISTEMAS  
+Segundo Nivel 
+ 
+ 
+ 
+UNIDAD 6 
+ 
+ANÁLISIS DE SISTEMAS. ANÁLISIS DE 
+SISTEMAS ORIENTADO A OBJETOS 
+ 
+Bibliografía: 
+ 
+ EL LENGUAJE 11> UNIFICADO 
+DE MODELADO 
+Capítulo 2 
+PRESENTACIÓN DE UML 
+En este capítulo 
+Visión general de UML. 
+Tres pasos para comprender UML. 
+Arquitectura software. 
+El proceso de desarrollo de software. 
+El Lenguaje Unificado de Modelado (Unified Modeling Language, UML) es un lenguaje 
+estándar para escribir planos de software. UML puede utilizarse para visualizar, espe-
+cificar, construir y documentar los artefactos de un sistema que involucra una gran 
+cantidad de software. 
+UML es apropiado para modelar desde sistemas de información en empresas hasta 
+aplicaciones distribuidas basadas en la Web, e incluso para sistemas empotrados de tiem-
+po real muy exigentes. Es un lenguaje muy expresivo, que cubre todas las vistas nece-
+sarias para desarrollar y luego desplegar tales sistemas. Aunque sea expresivo, UML no 
+es difícil de aprender ni de utilizar. Aprender a aplicar UML de modo eficaz comienza 
+por crear un modelo conceptual del lenguaje, lo cual requiere aprender tres elementos 
+principales: los bloques básicos de construcción de UML, las reglas que dictan cómo 
+pueden combinarse esos bloques y algunos mecanismos comunes que se aplican a lo lar-
+go del lenguaje. 
+UML es sólo un lenguaje y por tanto es tan sólo una parte de un método de des-
+arrollo de software. UML es independiente del proceso, aunque para utilizarlo óptima-
+mente se debería usar en un proceso que fuese dirigido por los casos de uso, centrado en 
+la arquitectura, iterativo e incremental. 
+Visión general de UML 
+UML es un lenguaje para 
+Visualizar. 
+Especificar. 
+Construir. 
+Documentar. 
+los artefactos de un sistema con gran cantidad de software. 12 	 EL LENGUAJE UNIFICADO DE MODELADO 
+UML es un lenguaje 
+Los principios 
+básicos del 
+modelado se 
+discuten en el 
+Capitulo 1. 
+Un lenguaje proporciona un vocabulario y las reglas para combinar palabras de ese 
+vocabulario con el objetivo de posibilitar la comunicación. Un lenguaje de modelado es 
+un lenguaje cuyo vocabulario y reglas se centran en la representación conceptual y físi-
+ca de un sistema. Un lenguaje de modelado como UML es por tanto un lenguaje están-
+dar para los planos del software. 
+El modelado proporciona una comprensión de un sistema. Nunca es suficiente un 
+único modelo. Más bien, para comprender cualquier cosa, a menudo se necesitan 
+múltiples modelos conectados entre sí, excepto en los sistemas más triviales. Para sis-
+temas con gran cantidad de software, se requiere un lenguaje que cubra las diferentes 
+vistas de la arquitectura de un sistema mientras evoluciona a través del ciclo de vida del 
+desarrollo de software. 
+El vocabulario y las reglas de un lenguaje como UML indican cómo crear y leer 
+modelos bien formados, pero no dicen qué modelos se deben crear ni cuándo se deberían 
+crear. Esta es la tarea del proceso de desarrollo de software. Un proceso bien definido 
+guiará a sus usuarios al decidir qué artefactos producir, qué actividades y qué personal se 
+emplea para crearlos y gestionarlos, y cómo usar esos artefactos para medir y controlar 
+el proyecto de forma global. 
+UML es un lenguaje para visualizar 
+Para muchos programadores, la distancia entre pensar en una implementación y trans-
+formarla en código es casi cero. Lo piensas, lo codificas. De hecho, algunas cosas se mo-
+delan mejor directamente en código. El texto es un medio maravilloso para escribir 
+expresiones y algoritmos de forma concisa y directa. 
+En tales casos, el programador todavía está haciendo algo de modelado, si bien lo 
+hace de forma completamente mental. Incluso puede bosquejar algunas ideas sobre 
+una pizarra blanca o sobre una servilleta. Sin embargo, esto plantea algunos problemas. 
+Primero, la comunicación de esos modelos conceptuales a otros está sujeta a errores a 
+menos que cualquier persona implicada hable el mismo lenguaje. Normalmente, los pro-
+yectos y las organizaciones desarrollan su propio lenguaje, y es difícil comprender lo que 
+está pasando para alguien nuevo o ajeno al grupo. Segundo, hay algunas cuestiones 
+sobre un sistema software que no se pueden entender a menos que se construyan 
+modelos que trasciendan el lenguaje de programación textual. Por ejemplo, el signifi-
+cado de una jerarquía de clases puede inferirse, pero no capturarse completamente, 
+inspeccionando el código de todas las clases en la jerarquía. De forma parecida, la dis-
+tribución física y posible migración de los objetos en un sistema basado en la Web pue-
+de inferirse, pero no capturarse completamente, estudiando el código fuente del sistema. 
+Tercero, si el desarrollador que escribió el código no dejó documentación escrita sobre 
+los modelos que había en su cabeza, esa información se perderá para siempre o, como 
+mucho, será sólo parcialmente reproducible a partir de la implementación, una vez que 
+el desarrollador se haya marchado. 
+Al escribir modelos en UML se afronta el tercer problema: un modelo explícito fa-
+cilita la comunicación. PRESENTACIÓN DE UML 13 
+La semántica 
+completa de UML 
+se discute en The 
+Unified Modeling 
+Language 
+Reference 
+Manual. 
+El modelado de la 
+estructura de un 
+sistema se discute 
+en las Secciones 
+2 y 3. 
+El modelado del 
+comportamiento de 
+un sistema se 
+discute en las 
+Secciones 4 y 5. 
+Algunas cosas se modelan mejor textualmente; otras se modelan mejor de forma grá-
+fica. En realidad, en todos los sistemas interesantes hay estructuras que trascienden lo 
+que puede ser representado en un lenguaje de programación. UML es uno de estos 
+lenguajes gráficos. Así afronta el segundo problema mencionado anteriormente. 
+UML es algo más que un simple montón de símbolos gráficos. Más bien, detrás de 
+cada símbolo en la notación UML hay una semántica bien definida. De esta manera, un 
+desarrollador puede escribir un modelo en UML, y otro desarrollador, o incluso otra 
+herramienta, puede interpretar ese modelo sin ambigüedad. Así afronta el primer pro-
+blema mencionado anteriormente. 
+UML es un lenguaje para especificar 
+En este contexto, especificar significa construir modelos precisos, no ambiguos y com-
+pletos. En particular, UML cubre la especificación de todas las decisiones de análisis, 
+diseño e implementación que deben realizarse al desarrollar y desplegar un sistema con 
+gran cantidad de software. 
+UML es un lenguaje para construir 
+UML no es un lenguaje de programación visual, pero sus modelos pueden conectarse de 
+forma directa a una gran variedad de lenguajes de programación. Esto significa que es 
+posible establecer correspondencias desde un modelo UML a un lenguaje de progra-
+mación como Java, C++ o Visual Basic, o incluso a tablas en una base de datos rela-
+cional o al almacenamiento persistente en una base de datos orientada a objetos. Las 
+cosas que se expresan mejor gráficamente también se representan gráficamente en 
+UML, mientras que las cosas que se expresan mejor textualmente se plasman con el 
+lenguaje de programación. 
+Esta correspondencia permite ingeniería directa: la generación de código a partir de 
+un modelo UML en un lenguaje de programación. Lo contrario también es posible: se 
+puede reconstruir un modelo en UML a partir de una implementación. La ingeniería 
+inversa no es magia. A menos que se codifique esa información en la implementación, la 
+información se pierde cuando se pasa de los modelos al código. La ingeniería inversa 
+requiere, por lo tanto, herramientas que la soporten e intervención humana. La combi-
+nación de estas dos vías de generación de código y de ingeniería inversa produce una 
+ingeniería "de ida y vuelta", entendiendo por esto la posibilidad de trabajar en una 
+vista gráfica o textual, mientras las herramientas mantienen la consistencia entre las 
+dos vistas. 
+Además de esta correspondencia directa, UML es lo suficientemente expresivo y no 
+ambiguo como para permitir la ejecución directa de modelos, la simulación de sistemas 
+y la instrumentación de sistemas en ejecución. 
+UML es un lenguaje para documentar 
+Una organización de software que trabaje bien produce toda clase de artefactos además 
+de código ejecutable. Estos artefactos incluyen (aunque no se limitan a): 14 	 EL LENGUAJE UNIFICADO DE MODELADO 
+Requisitos. 
+Arquitectura. 
+Diseño. 
+Código fuente. 
+Planificación de proyectos. 
+Pruebas. 
+Prototipos. 
+Versiones. 
+Dependiendo de la cultura de desarrollo, algunos de estos artefactos se tratan más o 
+menos formalmente que otros. Tales artefactos no son sólo los entregables de un pro- 
+yecto, también son críticos en el control, la medición y comunicación que requiere un 
+sistema durante su desarrollo y después de su despliegue. 
+UML cubre la documentación de la arquitectura de un sistema y todos sus deta-
+lles. UML también proporciona un lenguaje para expresar requisitos y pruebas. Fi-
+nalmente, UML proporciona un lenguaje para modelar las actividades de planificación 
+de proyectos y gestión de versiones. 
+¿Dónde puede utilizarse UML? 
+UML está pensado principalmente para sistemas con gran cantidad de software. Ha sido 
+utilizado de forma efectiva en dominios tales como: 
+Sistemas de información de empresa. 
+Bancos y servicios financieros. 
+Telecomunicaciones. 
+Transporte. 
+Defensa/industria aeroespacial. 
+Comercio. 
+Electrónica médica. 
+Ámbito científico. 
+Servicios distribuidos basados en la Web. 
+UML no está limitado al modelado de software. De hecho, es lo suficientemente ex-
+presivo para modelar sistemas que no son software, como flujos de trabajo (workflows) 
+en el sistema jurídico, estructura y comportamiento de un sistema de vigilancia médica 
+de un enfermo, y el diseño de hardware. PRESENTACIÓN DE UML 15 
+Un modelo conceptual de UML 
+Para comprender UML, se necesita adquirir un modelo conceptual del lenguaje, y esto 
+requiere aprender tres elementos principales: los bloques básicos de construcción de 
+UML, las reglas que dictan cómo se pueden combinar estos bloques básicos y algunos 
+mecanismos comunes que se aplican a través de UML. Una vez comprendidas estas 
+ideas, se pueden leer modelos UML y crear algunos modelos básicos. Conforme se gana 
+más experiencia en la aplicación de UML, se puede edificar sobre este modelo concep-
+tual, utilizando características más avanzadas del lenguaje. 
+Las clases se 
+discuten en los 
+Capítulos 4y 9. 
+Bloques de construcción de UML 
+El vocabulario de UML incluye tres clases de bloques de construcción: 
+Elementos. 
+Relaciones. 
+Diagramas. 
+Los elementos son abstracciones que son ciudadanos de primera clase en un modelo; las 
+relaciones ligan estos elementos entre sí; los diagramas agrupan colecciones interesantes de 
+elementos. 
+Elementos en UML. Hay cuatro tipos de elementos en UML: 
+Elementos estructurales. 
+Elementos de comportamiento. 
+Elementos de agrupación. 
+Elementos de anotación. 
+Estos elementos son los bloques básicos de construcción orientados a objetos de 
+UML. Se utilizan para escribir modelos bien formados. 
+Elementos estructurales. Los elementos estructurales son los nombres de los mode-
+los UML. En su mayoría son las partes estáticas de un modelo, y representan cosas que 
+son conceptuales o materiales. En total, hay siete tipos de elementos estructurales. 
+Primero, una clase es una descripción de un conjunto de objetos que comparten los 
+mismos atributos, operaciones, relaciones y semántica. Una clase implementa una o más 
+interfaces. Gráficamente, una clase se representa como un rectángulo, que normalmen-
+te incluye su nombre, atributos y operaciones, como se muestra en la Figura 2.1. 
+Ventana 
+origen 
+tamaño 
+abrir() 
+cerrar() 
+mover() 
+dibujar() 
+Figura 2.1. Clases. 16 	 EL LENGUAJE UNIFICADO DE MODELADO 
+Las interfaces se 
+discuten en el 
+Capitulo 11. 
+Segundo, una interfaz es una colección de operaciones que especifican un servicio de 
+una clase o componente. Por lo tanto, una interfaz describe el comportamiento visible 
+externamente de ese elemento. Una interfaz puede representar el comportamiento com-
+pleto de una clase o componente o sólo una parte de ese comportamiento. Una interfaz 
+define un conjunto de especificaciones de operaciones (o sea, sus signaturas), pero 
+nunca un conjunto de implementaciones de operaciones. Gráficamente, una interfaz se 
+representa como un círculo junto con su nombre. Una interfaz raramente se encuentra 
+aislada. Más bien, suele estar conectada a la clase o componente que la realiza, como se 
+muestra en la Figura 2.2. 
+lOrtografia 
+Figura 2.2. Interfaces. 
+Las colaboraciones 
+se discuten en el 
+Capítulo 27. 
+Tercero, una colaboración define una interacción y es una sociedad de roles y otros 
+elementos que colaboran para proporcionar un comportamiento cooperativo mayor que 
+la suma de los comportamientos de sus elementos. Por lo tanto, las colaboraciones tienen 
+dimensión tanto estructural como de comportamiento. Una clase dada puede participar 
+en varias colaboraciones. Estas colaboraciones representan, pues, la implementación de 
+patrones que forman un sistema. Gráficamente, una colaboración se representa como una 
+elipse de borde discontinuo, incluyendo normalmente sólo su nombre, como se muestra 
+en la Figura 2.3. 
+, 	 . / 	 . t 	 Cadena 	 1 
+I, de responsabilidad / .. 	 ,/ . 	 , 
+Figura 2.3. Colaboraciones. 
+Los casos de uso 
+se discuten en el 
+Capítulo 16. 
+Cuarto, un caso de uso es una descripción de un conjunto de secuencias de acciones 
+que un sistema ejecuta y que produce un resultado observable de interés para un actor 
+particular. Un caso de uso se utiliza para estructurar los aspectos de comportamiento en 
+un modelo. Un caso de uso es realizado por una colaboración. Gráficamente, un caso de 
+uso se representa como una elipse de borde continuo, incluyendo normalmente sólo su 
+nombre, como se muestra en la Figura 2.4. 
+Realizar pedido 
+Figura 2.4. Casos de uso. 
+Los tres elementos restantes (clases activas, componentes y nodos) son todos simi-
+lares a las clases, en cuanto que también describen un conjunto de objetos que compar-
+ten los mismos atributos, operaciones, relaciones y semántica. Sin embargo, estos tres PRESENTACIÓN DE UML 17 
+Las clases activas 
+se discuten en el 
+Capítulo 22. 
+Los componentes 
+se discuten en el 
+Capítulo 24. 
+Los nodos se 
+discuten en el 
+Capítulo 26. 
+son suficientemente diferentes y son necesarios para modelar ciertos aspectos de un sis-
+tema orientado a objetos, así que está justificado un tratamiento especial. 
+Quinto, una clase activa es una clase cuyos objetos tienen uno o más procesos o hilos 
+de ejecución y por lo tanto pueden dar origen a actividades de control. Una clase activa 
+es igual que una clase, excepto en que sus objetos representan elementos cuyo compor-
+tamiento es concurrente con otros elementos. Gráficamente, una clase activa se repre-
+senta como una clase, pero con líneas más gruesas, incluyendo normalmente su nombre, 
+atributos y operaciones, como se muestra en la Figura 2.5. 
+GestorEventos 
+suspender() vaciarCola() 
+Figura 2.5. Clases activas. 
+Los dos elementos restantes (componentes y nodos) también son diferentes. Repre-
+sentan elementos físicos, mientras los cinco elementos anteriores representan cosas 
+conceptuales o lógicas. 
+Sexto, un componente es una parte física y reemplazable de un sistema que confor-
+ma con un conjunto de interfaces y proporciona la implementación de dicho conjunto. 
+En un sistema, se podrán encontrar diferentes tipos de componentes de despliegue, tales 
+como componentes COM+ o JavaBeans, así como componentes que sean artefactos del 
+proceso de desarrollo, tales como archivos de código fuente. Un componente represen-
+ta típicamente el empaquetamiento físico de diferentes elementos lógicos, como clases, 
+interfaces y colaboraciones. Gráficamente, un componente se representa como un rec-
+tángulo con pestañas, incluyendo normalmente sólo su nombre, como se muestra en la 
+Figura 2.6. 
+orderform.java 
+Figura 2.6. Componentes. 
+Séptimo, un nodo es un elemento físico que existe en tiempo de ejecución y repre-
+senta un recurso computacional, que por lo general dispone de algo de memoria y, con 
+frecuencia, capacidad de procesamiento. Un conjunto de componentes puede residir en 
+un nodo y puede también migrar de un nodo a otro. Gráficamente, un nodo se representa 
+como un cubo, incluyendo normalmente sólo su nombre, como se muestra en la Figu-
+ra 2.7. 
+Estos siete elementos (clasés, interfaces, colaboraciones, casos de uso, clases activas, 
+componentes y nodos) son los elementos estructurales básicos que se pueden incluir en 
+un modelo UML. También existen variaciones de estos siete elementos, tales como ac-
+tores, señales, utilidades (tipos de clases), procesos e hilos (tipos de clases activas), y 
+aplicaciones, documentos, archivos, bibliotecas, páginas y tablas (tipos de componentes). 18 	 EL LENGUAJE UNIFICADO DE MODELADO 
+Los casos de uso, 
+que se utilizan para 
+estructurar los 
+elementos de 
+comportamiento en 
+un modelo, se 
+discuten en el 
+Capítulo 16; las 
+interacciones se 
+discuten en el 
+Capítulo 15. 
+Figura 2.7. Nodos. 
+Elementos de comportamiento. Los elementos de comportamiento son las partes di-
+námicas de los modelos UML. Estos son los verbos de un modelo, y representan com-
+portamiento en el tiempo y el espacio. En total hay dos tipos principales de elementos de 
+comportamiento: 
+Primero, una interacción es un comportamiento que comprende un conjunto de 
+mensajes intercambiados entre un conjunto de objetos, dentro de un contexto particular, 
+para alcanzar un propósito específico. El comportamiento de una sociedad de objetos o 
+una operación individual puede especificarse con una interacción. Una interacción in-
+volucra muchos otros elementos, incluyendo mensajes, secuencias de acción (el com-
+portamiento invocado por un mensaje) y enlaces (conexiones entre objetos). Gráfica-
+mente, un mensaje se muestra como una línea dirigida, incluyendo casi siempre el 
+nombre de su operación, como se muestra en la Figura 2.8. 
+dibujar 
+Figura 2.8. Mensajes. 
+Las máquinas de 
+estados se discuten 
+ene! Capitulo 21. 
+Segundo, una máquina de estados es un comportamiento que especifica las secuen-
+cias de estados por las que pasa un objeto o una interacción durante su vida en respues-
+ta a eventos, junto con sus reacciones a estos eventos. El comportamiento de una clase 
+individual o una colaboración de clases puede especificarse con una máquina de estados. 
+Una máquina de estados involucra a otros elementos, incluyendo estados, transiciones 
+(el flujo de un estado a otro), eventos (que disparan una transición) y actividades (la res-
+puesta a una transición). Gráficamente, un estado se representa como un rectángulo de 
+esquinas redondeadas, incluyendo normalmente su nombre y sus subestados, si los tie-
+ne, como se muestra en la Figura 2.9. 
+Esperando 
+Figura 2.9. Estados. 
+Estos dos elementos (interacciones y máquinas de estados) son los elementos básicos 
+de comportamiento que se pueden incluir en un modelo UML. Semánticamente, estos 
+elementos están conectados normalmente a diversos elementos estructurales, principal-
+mente clases, colaboraciones y objetos. 
+Elementos de agrupación. Los elementos de agrupación son las partes organizativas 
+de los modelos UML. Estos son las cajas en las que puede descomponerse un modelo. 
+En total, hay un elemento de agrupación principal, los paquetes. PRESENTACIÓN DE UML 19 
+Los paquetes se 
+discuten en el 
+Capítulo 12. 
+Un paquete es un mecanismo de propósito general para organizar elementos en 
+grupos. Los elementos estructurales, los elementos de comportamiento, e incluso otros 
+elementos de agrupación pueden incluirse en un paquete. Al contrario que los compo-
+nentes (que existen en tiempo de ejecución), un paquete es puramente conceptual (sólo 
+existe en tiempo de desarrollo). Gráficamente, un paquete se visualiza como una carpeta, 
+incluyendo normalmente sólo su nombre y, a veces, su contenido, como se muestra en la 
+Figura 2.10. 
+Reglas del negocio 
+Figura 2.10. Paquetes. 
+Las notas se 
+discuten en el 
+Capítulo 6. 
+Los paquetes son los elementos de agrupación básicos con los cuales se puede or-
+ganizar un modelo UML. También hay variaciones, tales como los frameworks, los mo-
+delos y los subsistemas (tipos de paquetes). 
+Elementos de anotación. Los elementos de anotación son las partes explicativas de 
+los modelos UML. Son comentarios que se pueden aplicar para describir, clarificar y 
+hacer observaciones sobre cualquier elemento de un modelo. Hay un tipo principal de 
+elemento de anotación llamado nota. Una nota es simplemente un símbolo para mostrar 
+restricciones y comentarios junto a un elemento o una colección de elementos. Gráfi-
+camente, una nota se representa como un rectángulo con una esquina doblada, junto con 
+un comentario textual o gráfico, como se muestra en la Figura 2.11. 
+devuelve una 
+copia del objeto 
+receptor 
+Figura 2.11. Notas. 
+Este elemento es el objeto básico de anotación que se puede incluir en un modelo 
+UML. Típicamente, las notas se utilizarán para adornar los diagramas con restricciones 
+o comentarios que se expresen mejor en texto informal o formal. También hay varia-
+ciones sobre este elemento, tales como los requisitos (que especifican algún comporta-
+miento deseado desde la perspectiva externa del modelo). 
+Relaciones en UML. Hay cuatro tipos de relaciones en UML: 
+I. Dependencia. 
+Asociación. 
+Generalización. 
+Realización. 
+Estas relaciones son los bloques básicos de construcción para relaciones de UML. Se 
+utilizan para escribir modelos bien formados: 20 	 EL LENGUAJE UNIFICADO DE MODELADO 
+Las dependencias 
+se discuten en los 
+Capítulos 5y 10. 
+Primero, una dependencia es una relación semántica entre dos elementos, en la 
+cual un cambio a un elemento (el elemento independiente) puede afectar a la semántica 
+del otro elemento (el elemento dependiente). Gráficamente, una dependencia se repre-
+senta como una línea discontinua, posiblemente dirigida, que incluye a veces una eti-
+queta, como se muestra en la Figura 2.12. 
+Figura 2.12. Dependencias. 
+Las asociaciones se 
+discuten en los 
+Capítulos 53' 10. 
+Segundo, una asociación es una relación estructural que describe un conjunto de en-
+laces, los cuales son conexiones entre objetos. La agregación es un tipo especial de aso-
+ciación, que representa una relación estructural entre un todo y sus partes. Gráficamen-
+te, una asociación se representa como una línea continua, posiblemente dirigida, que a 
+veces incluye una etiqueta, y a menudo incluye otros adornos, como la multiplicidad y 
+los nombres de rol, como se muestra en la Figura 2.13. 
+patrón 	 empleado 
+Figura 2.13. Asociaciones. 
+Las generalizaciones 
+se discuten en los 
+Capítulos 5y 10. 
+Tercero, una generalización es una relación de especialización/generalización en la 
+cual los objetos del elemento especializado (el hijo) pueden sustituir a los objetos del 
+elemento general (el padre). De esta forma, el hijo comparte la estructura y el compor-
+tamiento del padre. Gráficamente, una relación de generalización se representa como una 
+línea continua con una punta de flecha vacía apuntando al padre, como se muestra en la 
+Figura 2.14. 
+Figura 2.14. Generalizaciones. 
+Las realizaciones se 
+discuten en el 
+Capítulo 10. 
+Cuarto, una realización es una relación semántica entre clasificadores, en donde un 
+clasificador especifica un contrato que otro clasificador garantiza que cumplirá. Se 
+pueden encontrar relaciones de yealización en dos sitios: entre interfaces y las clases y 
+componentes que las realizan, y entre los casos de uso y las colaboraciones que los re-
+alizan. Gráficamente, una relación de realización se representa como una mezcla entre 
+una generalización y una relación de dependencia, como se muestra en la Figura 2.15. 
+	 {> 
+Figura 2.15. Realización. 
+Las cinco vistas de 
+una arquitectura se 
+discuten en la 
+siguiente sección. 
+Estos cuatro elementos son los elementos básicos relacionales que se pueden incluir 
+en un modelo UML. También existen variaciones de estos cuatro, tales como el refina-
+miento, la traza, la inclusión y la extensión (para las dependencias). 
+Diagramas en UML. Un diagrama es la representación gráfica de un conjunto de ele-
+mentos, visualizado la mayoría de las veces como un grafo conexo de nodos (elementos) 
+y arcos (relaciones). Los diagramas se dibujan para visualizar un sistema desde dife- PRESENTACIÓN DE UML 21 
+rentes perspectivas, de forma que un diagrama es una proyección de un sistema. Para to-
+dos los sistemas, excepto los más triviales, un diagrama representa una vista resumida de 
+los elementos que constituyen un sistema. El mismo elemento puede aparecer en todos 
+los diagramas, sólo en unos pocos diagramas (el caso más común), o en ningún diagra-
+ma (un caso muy raro). En teoría, un diagrama puede contener cualquier combinación de 
+elementos y relaciones. En la práctica, sin embargo, sólo surge un pequeño número de 
+combinaciones, las cuales son consistentes con las cinco vistas más útiles que com-
+prenden la arquitectura de un sistema con gran cantidad de software. Por esta razón, 
+UML incluye nueve de estos diagramas:• 
+Diagrama de clases. 
+Diagrama de objetos. 
+Diagrama de casos de uso. 
+Diagrama de secuencia. 
+Diagrama de colaboración. 
+Diagrama de estados (statechart). 
+Diagrama de actividades. 
+Diagrama de componentes. 
+Diagrama de despliegue. 
+Los diagramas de 
+clases se discuten 
+en el Capítulo 8 
+Los diagramas de 
+objetos se discuten 
+en el Capítulo 14. 
+Un diagrama de clases muestra un conjunto de clases, interfaces y colaboraciones, 
+así como sus relaciones. Estos diagramas son los diagramas más comunes en el mode-
+lado de sistemas orientados a objetos. Los diagramas de clases cubren la vista de dise-
+ño estática de un sistema. Los diagramas de clases que incluyen clases activas cubren 
+la vista de procesos estática de un sistema. 
+Un diagrama de objetos muestra un conjunto de objetos y sus relaciones. Los dia-
+gramas de objetos representan instantáneas de instancias de los elementos encontrados 
+en los diagramas de clases. Estos diagramas cubren la vista de diseño estática o la vista 
+de procesos estática de un sistema como lo hacen los diagramas de clases, pero desde la 
+perspectiva de casos reales o prototípicos. 
+Un diagrama de casos de uso muestra un conjunto de casos de uso y actores (un tipo 
+especial de clases) y sus relaciones. Los diagramas de casos de uso cubren la vista de ca-
+sos de uso estática de un sistema. Estos diagramas son especialmente importantes en el 
+modelado y organización del comportamiento de un sistema. 
+Tanto los diagramas de secuencia como los diagramas de colaboración son un tipo de 
+diagramas de interacción. Un diagrama de interacción muestra una interacción, que 
+consta de un conjunto de objetos y sus relaciones, incluyendo los mensajes que pueden 
+ser enviados entre ellos. Los diagramas de interacción cubren la vista dinámica de un sis-
+tema. Un diagrama de secuencia es un diagrama de interacción que resalta la ordenación 
+temporal de los mensajes; un diagrama de colaboración es un diagrama de interacción 
+que resalta la organización estructural de los objetos que envían y reciben mensajes. Los 
+diagramas de secuencia y los diagramas de colaboración son isomorfos, es decir, que se 
+puede tomar uno y transformarlo en el otro. 
+Los diagramas de 
+casos de uso se 
+discuten en el 
+Capítulo 17. 
+Los diagramas de 
+interacción se 
+discuten en el 
+Capítulo 18. 22 	 EL LENGUAJE UNIFICADO DE MODELADO 
+Los diagramas de 
+estados se discuten 
+en el Capítulo 24. 
+Un diagrama de estados muestra una máquina de estados, que consta de estados, 
+transiciones, eventos y actividades. Los diagramas de estados cubren la vista dinámica 
+de un sistema. Son especialmente importantes en el modelado del comportamiento de 
+una interfaz, una clase o una colaboración y resaltan el comportamiento dirigido por 
+eventos de un objeto, lo cual es especialmente útil en el modelado de sistemas reactivos. 
+Un diagrama de actividades es un tipo especial de diagrama de estados que muestra 
+el flujo de actividades dentro de un sistema. Los diagramas de actividades cubren la vis-
+ta dinámica de un sistema. Son especialmente importantes al modelar el funcionamien-
+to de un sistema y resaltan el flujo de control entre objetos. 
+Un diagrama de componentes muestra la organización y las dependencias entre un 
+conjunto de componentes. Los diagramas de componentes cubren la vista de implemen-
+tación estática de un sistema. Se relacionan con los diagramas de clases en que un com-
+ponente se corresponde, por lo común, con una o más clases, interfaces o colaboraciones. 
+Un diagrama de despliegue muestra la configuración de nodos de procesamiento en 
+tiempo de ejecución y los componentes que residen en ellos. Los diagramas de despliegue 
+cubren la vista de despliegue estática de una arquitectura. Se relacionan con los diagra-
+mas de componentes en que un nodo incluye, por lo común, uno o más componentes. 
+Esta no es una lista cerrada de diagramas. Las herramientas pueden utilizar UML 
+para proporcionar otros tipos de diagramas, aunque estos nueve son, con mucho, los que 
+con mayor frecuencia aparecerán en la práctica. 
+Los diagramas de 
+actividades se 
+discuten en el 
+Capítulo 19. 
+Los diagramas de 
+componentes se 
+discuten en el 
+Capítulo 29. 
+Los diagramas de 
+despliegue se 
+discuten en el 
+Capítulo 30. 
+Reglas de UML 
+Los bloques de construcción de UML no pueden simplemente combinarse de cual-
+quier manera. Como cualquier lenguaje, UML tiene un número de reglas que especifican 
+a qué debe parecerse un modelo bien formado. Un modelo bien formado es aquél que es 
+semánticamente autoconsistente y está en armonía con todos sus modelos relacionados. 
+UML tiene reglas semánticas para: 
+Nombres 
+Alcance 
+Visibilidad 
+Integridad 
+Ejecución 
+Cómo llamar a los elementos, relaciones y diagramas. 
+El contexto que da un significado específico a un nombre. 
+Cómo se pueden ver y utilizar esos nombres por otros. 
+Cómo se relacionan apropiada y consistentemente unos elementos 
+con otros. 
+Qué significa ejecutar o simular un modelo dinámico. 
+Los modelos construidos durante el desarrollo de un sistema con gran cantidad de 
+software tienden a evolucionar y pueden ser vistos por diferentes usuarios de formas di-
+ferentes y en momentos diferentes. Por esta razón, es común en el equipo de desarrollo 
+no sólo construir modelos bien formados, sino también construir modelos que sean: 
+Abreviados 	 Ciertos elementos se ocultan para simplificar la vista. 
+Incompletos 	 Pueden estar ausentes ciertos elementos. 
+Inconsistentes No se garantiza la integridad del modelo. PRESENTACIÓN DE UML 23 
+Estos modelos que no llegan a ser bien formados son inevitables conforme los de-
+talles de un sistema van apareciendo y mezclándose durante el proceso de desarrollo de 
+software. Las reglas de UML estimulan (pero no obligan) a considerar las cuestiones 
+más importantes de análisis,diseño e implementación que llevan a tales sistemas a con-
+vertirse en bien formados con el paso del tiempo. 
+Mecanismos comunes en UML 
+Las notas y otros 
+adornos se discuten 
+en el Capítulo 6. 
+Un edificio se hace más simple y más armonioso al ajustarse a un patrón de caracterís-
+ticas comunes. Una casa puede construirse, en su mayor parte, de estilo victoriano o 
+francés utilizando ciertos patrones arquitectónicos que definen esos estilos. Lo mismo es 
+cierto para UML. Este se simplifica mediante la presencia de cuatro mecanismos co-
+munes que se aplican de forma consistente a través de todo el lenguaje: 
+Especificaciones. 
+Adornos. 
+Divisiones comunes. 
+Mecanismos de extensibilidad. 
+Especificaciones. UML es algo más que un lenguaje gráfico. Más bien, detrás de cada 
+elemento de su notación gráfica hay una especificación que proporciona una explicación 
+textual de la sintaxis y semántica de ese bloque de construcción. Por ejemplo, detrás de 
+un icono de clase hay una especificación que proporciona el conjunto completo de 
+atributos, operaciones (incluyendo sus signaturas completas) y comportamiento que 
+incluye la clase; visualmente, ese icono de clase puede mostrar sólo una pequeña parte 
+de su especificación. Además de esto, podría haber otra vista de esa clase que presentara 
+un conjunto de elementos totalmente diferente, siendo aún consistente con la especifi-
+cación subyacente de la clase. La notación gráfica de UML se utiliza para visualizar un 
+sistema; la especificación de UML se utiliza para enunciar los detalles del sistema. 
+Hecha esta división, es posible construir un modelo de forma incremental dibujando pri-
+mero diagramas y añadiendo después semántica a las especificaciones del modelo, o 
+bien directamente, mediante la creación de una especificación primero, quizás haciendo 
+ingeniería inversa sobre un sistema, y después creando los diagramas que se obtienen 
+como proyecciones de esas especificaciones. 
+Las especificaciones de UML proporcionan una base semántica que incluye a todos 
+los elementos de todos los modelos de un sistema, y cada elemento está relacionado con 
+otros de manera consistente. Los diagramas de UML son así simples proyecciones vi-
+suales de esa base, y cada diagrama revela un aspecto específico interesante del sistema. 
+Adornos. La mayoría de los elementos de UML tienen una única y clara notación grá-
+fica que proporciona una representación visual de los aspectos más importantes del ele-
+mento. Por ejemplo, la notación para una clase se ha diseñado intencionadamente de for-
+ma que sea fácil de dibujar, porque las clases son los elementos que aparecen con más 
+frecuencia al modelar sistemas orientados a objetos. La notación de la clase también revela 
+los aspectos más importantes de una clase, a saber: su nombre, atributos y operaciones. 
+La especificación de una clase puede incluir otros detalles, tales como si es abstrac-
+ta o la visibilidad de sus atributos y operaciones. Muchos de estos detalles se pueden in- 24 	 EL LENGUAJE UNIFICADO DE MODELADO 
+Los objetos se 
+discuten en el 
+Capítulo 13. 
+cluir como adornos gráficos o textuales en la notación rectangular básica de la clase. Por 
+ejemplo, la Figura 2.16 muestra una clase, con adornos que indican que es una clase abs-
+tracta con dos operaciones públicas, una protegida y la otra privada. 
+Transacción 
++ ejecutar() 
++ rollback() 
+# prioridad 
+marcaDeTiempo() 
+Figura 2.16. Adornos. 
+Todos los elementos en la Flotación UML comienzan con un símbolo básico, al 
+cual pueden añadirse una variedad de adornos específicos de ese símbolo. 
+Divisiones comunes. Al modelar sistemas orientados a objetos, el mundo puede di-
+vidirse, al menos, en un par de formas. 
+En primer lugar, está la división entre clase y objeto. Una clase es una abstracción; 
+un objeto es una manifestación concreta de esa abstracción. En UML se pueden mode-
+lar tanto clases como objetos, como se muestra en la Figura 2.17. 
+ 
+Juan : Cliente 
+Cliente 
+nombre 
+dirección 
+teléfono 
+: Cliente 
+ 
+Elisa 
+Figura 2.17. Clases y objetos. 
+Las interfaces se 
+discuten en el 
+Capítulo 11. 
+En esta figura hay una clase, llamada Cliente, junto a tres objetos: Juan, (del que 
+se indica explícitamente que es un objeto c 1 ente), : Cliente (un objeto Cliente 
+anónimo), y Elisa (el cual se ha etiquetado en su especificación como un objeto de la 
+clase Cliente, aunque aquí no se muestra de forma explícita). 
+Casi todos los bloques de construcción de UML presentan este mismo tipo de dico-
+tomía clase/objeto. Por ejemplo, se pueden tener casos de uso e instancias de casos de 
+uso, componentes e instancias de componentes, nodos e instancias de nodos, etcétera. 
+Gráficamente, UML distingue un objeto utilizando el mismo símbolo de la clase y 
+subrayando el nombre del objeto. 
+En segundo lugar, tenemos la separación entre interfaz e implementación. Una in-
+terfaz declara un contrato, y una implementación representa una realización concreta 
+de ese contrato, responsable de hacer efectiva de forma fidedigna la semántica com-
+pleta de la interfaz. En UML se pueden modelar las interfaces y sus implementacio-
+nes, como se muestra en la Figura 2.18. 
+En esta figura hay un componente llamado asistenteortografico dl 1 que 
+implementa dos interfaces, IUnknown e IOrtograf ia. ColaEventos 
+{versión = 3.2 
+autor = egb) 
+sexcephonii 
+Ove rflow 
+añadir() — 
+quitar() 
+vaciar() 
+PRESENTACIÓN DE UML 25 
+o 
+lUnknown* 
+o 
+10rtografía 
+Figura 2.18. Interfaces e implementaciones. 
+asistenteortográfico.d11 
+Los mecanismos de 
+extensibilidad de 
+UML se discuten en 
+el Capítulo 6. 
+Casi todos los bloques de construcción de UML presentan este mismo tipo de 
+dicotomía interfaz/implementación. Por ejemplo, se pueden tener casos de uso y las co-
+laboraciones que los realizan, así como operaciones y los métodos que los implementan. 
+Mecanismos de extensibilidad. UML proporciona un lenguaje estándar para escribir 
+planos software, pero no es posible que un lenguaje cerrado sea siempre suficiente 
+para expresar todos los matices posibles de todos los modelos en todos los dominios y en 
+todos los momentos. Por esta razón, UML es abierto-cenado, siendo posible extender el 
+lenguaje de manera controlada. Los mecanismos de extensión de UML incluyen: 
+Estereotipos. 
+Valores etiquetados. 
+Restricciones. 
+Un estereotipo extiende el vocabulario de UML, permitiendo crear nuevos tipos de 
+bloques de construcción que deriven de los existentes pero sean específicos a un 
+problema. Por ejemplo, si se está trabajando en un lenguaje de programación como Java 
+C++, a menudo será necesario modelar las excepciones. En estos lenguajes, las 
+excepciones son simplemente clases, aunque se tratan de formas muy especiales. Nor-
+malmente, sólo se permitirá que sean lanzadas y capturadas, nada más. Se puede hacer 
+que las excepciones sean ciudadanos de primera clase del modelo (lo que significa 
+que serán tratadas como bloques básicos de construcción) marcándolas con un estereo-
+tipo apropiado, como para la clase Over f 1 ow en la Figura 2.19. 
+{ordenado} 
+Figura 2.19. Mecanismos de extensibilidad. 
+Un valor etiquetado extiende las propiedades de un bloque de construcción de 
+UML, permitiendo añadir nueva información en la especificación de ese elemento. Por 
+ejemplo, si se está trabajando en un producto que atraviesa muchas versiones a lo largo 
+N. del T.: A lo largo del libro no se han traducido los identificadores que forman parte de algún lenguaje o 
+modelo de programación existentes. En este caso, se conserva el término lUnknown por tratarse de un identificador 
+del modelo COM de Microsoft. 26 	 EL LENGUAJE UNIFICADO DE MODELADO 
+del tiempo, a menudo se querrá registrar la versión y el autor de ciertas abstracciones 
+críticas. La versión y el autor no son conceptos primitivos de UML. Pueden ser añadidos 
+a cualquier bloque de construcción, como una clase, introduciendo nuevos valores 
+etiquetados en ese bloque de construcción. En la Figura 2.19, por ejemplo, la clase 
+ColaEventos se extiende indicando explícitamente su versión y su autor. 
+Una restricción extiende la semántica de un bloque de construcción de UML, per-
+mitiendo añadir nuevas reglas o modificar las existentes. Por ejemplo, quizás se desee 
+restringir la clase ColaEventos para que todas las adiciones se hiciesen en orden. 
+Como se muestra en la Figura 2.19, se puede añadir una restricción que indique explí-
+citamente esto para la operación añadir. 
+En conjunto, estos tres mecanismos de extensibilidad permiten configurar y exten-
+der UML para las necesidades de un proyecto. Estos mecanismos también permiten 
+a UML adaptarse a nuevas tecnologías de software, como la probable aparición 
+de lenguajes de programación distribuida más potentes. Se pueden añadir nuevos 
+bloques de construcción, modificar la especificación de los existentes, e incluso cambiar 
+su semántica. Naturalmente, es importante hacer esto de forma controlada, para que 
+a través de estas extensiones se siga siendo fiel al propósito de UML, la comunicación 
+de información. 
+Arquitectura 
+La necesidad de ver 
+los sistemas 
+complejos desde 
+diferentes vistas se 
+discute en el 
+Capítulo 1. 
+La visualización, especificación, construcción y documentación de un sistema con gran 
+cantidad de software requiere que el sistema sea visto desde varias perspectivas. Dife-
+rentes usuarios (usuarios finales, analistas, desarrolladores, integradores de sistemas, 
+encargados de los tests, encargados de la documentación técnica y jefes de proyectos) 
+siguen diferentes agendas en relación al proyecto, y cada uno mira a ese sistema de 
+formas diferentes en diversos momentos a lo largo de la vida del proyecto. La arquitec-
+tura de un sistema es quizás el artefacto más importante que puede emplearse para 
+manejar estos diferentes puntos de vista y controlar el desarrollo iterativo e incremental 
+de un sistema a lo largo de su ciclo de vida. 
+La arquitectura es el conjunto de decisiones significativas sobre: 
+La organización de un sistema software. 
+La selección de elementos estructurales y sus interfaces a través de los cuales se 
+constituye el sistema. 
+Su comportamiento, como se especifica en las colaboraciones entre esos elementos. 
+La composición de esos elementos estructurales y de comportamiento en subsis-
+temas progresivamente más grandes. 
+El estilo arquitectónico que guía esta organización: los elementos estáticos y di-
+námicos y sus interfaces, sus colaboraciones y su composición. 
+La arquitectura software no tiene que ver solamente con la estructura y el comporta-
+miento, sino también con el uso, la funcionalidad, el rendimiento, la capacidad de adap-
+tación, la reutilización, la capacidad de ser comprendido, las restricciones económicas y 
+de tecnología y los compromisos entre alternativas, así como los aspectos estéticos. vocabulario, 
+funcionalidad 
+comportamiento Vista de 
+casos de uso 
+Vista de diseño Vista 
+de implementación 
+Vista de procesos Vista de despliegue 
+PRESENTACIÓN DE UML 27 
+El modelado de/a 
+arquitectura de un 
+sistema se discute 
+en el Capítulo 31. 
+Como ilustra la Figura 2.20, la arquitectura de un sistema con gran cantidad de 
+software puede describirse mejor a través de cinco vistas interrelacionadas. Cada vista es 
+una proyección de la organización y la estructura del sistema, centrada en un aspecto 
+particular de ese sistema. 
+ensamblado del sistema, 
+gestión de configuraciones 
+	
+funcionamiento, 	 topologia del sistema, 
+	
+capacidad 	 distribución, 
+	
+de crecimiento, 	 entrega, 
+	
+rendimiento 	 instalación 
+Figura 2.20. Modelado de la arquitectura de un sistema. 
+La vista de casos de uso de un sistema comprende los casos de uso que describen el 
+comportamiento del sistema tal y como es percibido por los usuarios finales, analistas y 
+encargados de las pruebas. Esta vista no especifica realmente la organización de un sis-
+tema software. Más bien, existe para especificar las fuerzas que configuran la arquitectura 
+del sistema. Con UML, los aspectos estáticos de esta vista se capturan en los diagramas 
+de casos de uso; los aspectos dinámicos de esta vista se capturan en los diagramas de in-
+teracción, diagramas de estados y diagramas de actividades. 
+La vista de diseño de un sistema comprende las clases, interfaces y colaboraciones 
+que forman el vocabulario del problema y su solución. Esta vista soporta principalmente 
+los requisitos funcionales del sistema, entendiendo por ello los servicios que el sistema 
+debería proporcionar a sus usuarios finales. Con UML, los aspectos estáticos de esta vis-
+ta se capturan en los diagramas de clases y de objetos; los aspectos dinámicos se captu-
+ran en los diagramas de interacción, diagramas de estados y diagramas de actividades. 
+La vista de procesos de un sistema comprende los hilos y procesos que forman los 
+mecanismos de sincronización y concurrencia del sistema. Esta vista cubre principal-
+mente el funcionamiento, capacidad de crecimiento y rendimiento del sistema. Con 
+UML, los aspectos estáticos y dinámicos de esta vista se capturan en el mismo tipo de 
+diagramas que la vista de diseño, pero con énfasis en las clases activas que representan 
+estos hilos y procesos. 
+La vista de implementación de un sistema comprende los componentes y archivos 
+que se utilizan para ensamblar y hacer disponible el sistema físico. Esta vista se preo-
+cupa principalmente de la gestión de configuraciones de las distintas versiones de un sis-
+tema, a partir de componentes y archivos un tanto independientes y que pueden ensam-
+blarse de varias formas para producir un sistema en ejecución. Con UML, los aspectos 
+estáticos de esta vista se capturan en los diagramas de componentes; los aspectos diná-
+micos de esta vista se capturan en los diagramas de interacción, diagramas de estados y 
+diagramas de actividades. 28 	 EL LENGUAJE UNIFICADO DE MODELADO 
+La vista de despliegue de un sistema contiene los nodos que forman la topología 
+hardware sobre la que se ejecuta el sistema. Esta vista se preocupa principalmente de la 
+distribución, entrega e instalación de las partes que constituyen el sistema físico. Con 
+UML, los aspectos estáticos de esta vista se capturan en los diagramas de despliegue; los 
+aspectos dinámicos de esta vista se capturan en los diagramas de interacción, diagramas 
+de estados y diagramas de actividades. 
+Cada una de estas cinco vistas puede existir por sí misma, de forma que diferentes 
+usuarios puedan centrarse en las cuestiones de la arquitectura del sistema que más les in-
+teresen. Estas cinco vistas también pueden interactuar entre sí (los nodos en la vista de 
+despliegue contienen componentes de la vista de implementación que, a su vez, repre-
+sentan la realización física de las clases, interfaces, colaboraciones y clases activas de las 
+vistas de diseño y de procesos). UML permite expresar cada una de estas cinco vistas y 
+sus interacciones. 
+Ciclo de vida del desarrollo de software 
+El Proceso 
+Unificado de 
+Rational se resume 
+en el apéndice C; 
+un tratamiento más 
+completo de este 
+proceso se discute 
+en The Unified 
+Software 
+Development 
+Process. 
+UML es bastante independiente del proceso, lo que significa que no está ligado a ningún 
+ciclo de vida de desarrollo de software particular. Sin embargo, para obtener el máximo 
+beneficio de UML, se debería considerar un proceso que fuese: 
+Dirigido por los casos de uso. 
+Centrado en la arquitectura. 
+Iterativo e incremental. 
+Dirigido por los casos de uso significa que los casos de uso se utilizan como un ar-
+tefacto básico para establecer el comportamiento deseado del sistema, para verificar y 
+validar la arquitectura del sistema, para las pruebas y para la comunicación entre las per-
+sonas involucradas en el proyecto. 
+Centrado en la arquitectura significa que la arquitectura del sistema se utiliza como 
+un artefacto básico para conceptualizar, construir, gestionar y hacer evolucionar el sis-
+tema en desarrollo. 
+Un proceso iterativo es aquél que involucra la gestión de un flujo de ejecutables del 
+sistema. Un proceso incremental es aquél que involucra la continua integración de la 
+arquitectura del sistema para producir esos ejecutables, donde cada nuevo ejecutable 
+incorpora mejoras incrementales sobre los otros. En conjunto, un proceso iterativo e 
+incremental está dirigido por el riesgo, lo que significa que cada nueva versión se 
+encarga de atacar y reducir los riesgos más significativos para el éxito del proyecto. 
+Este proceso dirigido por casos de uso, centrado en la arquitectura, iterativo 
+e incremental puede descomponerse en fases. Una fase es el intervalo de tiempo entre 
+dos hitos importantes del proceso, cuando se cumplen un conjunto de objetivos bien 
+definidos, se completan los artefactos y se toman las decisiones sobre si pasar o no a la 
+siguiente fase. Como se muestra en la Figura 2.21, hay cuatro fases en el ciclo de vida 
+del desarrollo de software: iniciación, elaboración, construcción y transición. En el 
+diagrama, los flujos de trabajo se representan frente a estas fases, mostrando cómo varía 
+a lo largo del tiempo el nivel de atención que una fase presta a un flujo de trabajo. PRESENTACIÓN DE UML 29 
+Iniciación Elaboración Construcción Transición 
+a_ 
+iteración(es) 
+preliminares 
+iter 
+#1 
+iter 
+#2 
+iter 
+#n 
+iter 
+#n+1 
+iter 
+#n+2 
+iter 
+#m 
+iter 
+#m+1 
+Flujos de trabajo del proceso 
+Modelado del negocio 
+Requisitos 
+Análisis y diseño 
+Implementación 
+Pruebas 
+Despliegue 
+Flujos de trabajo de soporte 
+Gestión del cambio 
+y configuraciones 
+Gestión del proyecto 
+Entorno 
+Figura 2.21. Ciclo de vida del desarrollo de software. 
+La iniciación es la primera fase del proceso, cuando la idea inicial para el desarrollo 
+se lleva al punto de estar (al menos internamente) suficientemente bien fundamentada 
+para garantizar la entrada en la fase de elaboración. 
+La elaboración es la segunda fase del proceso, cuando se definen la visión del pro-
+ducto y su arquitectura. En esta fase se expresan con claridad los requisitos del sistema, 
+son priorizados y se utilizan para crear una sólida base arquitectónica. Los requisitos de 
+un sistema pueden variar desde enunciados de carácter general hasta criterios precisos de 
+evaluación, especificando cada uno un comportamiento funcional o no funcional y 
+proporcionando una referencia para las pruebas. 
+La construcción es la tercera fase del proceso, cuando el software se lleva desde una 
+base arquitectónica ejecutable hasta su disponibilidad para la comunidad de usuarios. 
+Aquí también los requisitos del sistema y especialmente sus criterios de evaluación son 
+constantemente reexaminados frente a las necesidades del proyecto, y los recursos se 
+asignan al proyecto de forma apropiada para atacar los riesgos. 
+La transición es la cuarta fase del proceso, cuando el software es puesto en las ma-
+nos de la comunidad de usuarios. El proceso del software raramente termina aquí, por-
+que incluso durante esta fase el sistema es mejorado continuamente, se erradican errores 
+de programación, y se añaden características que no se incluían en una versión anterior. 
+Un elemento que distingue a este proceso y que afecta a las cuatro fases es una ite-
+ración. Una iteración es un conjunto bien definido de actividades, con un plan y unos 
+criterios de evaluación bien establecidos, que acaba en una versión, bien interna o ex-
+terna. Esto significa que el ciclo de vida del desarrollo de software puede caracterizarse 
+por involucrar un flujo continuo de versiones ejecutables de la arquitectura del sistema. 
+Este énfasis en la arquitectura como un artefacto importante es el que conduce a UML a 
+centrarse en el modelado de las diferentes vistas de la arquitectura de un sistema. 

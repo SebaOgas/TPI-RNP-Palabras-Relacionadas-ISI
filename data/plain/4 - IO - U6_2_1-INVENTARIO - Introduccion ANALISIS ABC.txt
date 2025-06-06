@@ -1,0 +1,72 @@
+ 
+TEMA 6    Análisis ABC 
+ 
+ En la actualidad, cualquier negocio, por pequeño que sea, oferta al público 
+una elevada cantidad de artículos diferentes. A primera vista, pues, el análisis de la 
+incidencia que tiene cada uno de ellos en el volumen de negocio puede parecer una 
+tarea abrumadora. Así sería si no existiera una técnica de análisis cuya utilización 
+está muy generalizada en casi todos los campos de la gestión empresarial moderna. 
+Esta técnica es la derivada del análisis “ABC”. 
+ 
+ El término se utiliza en el campo de la gestión empresarial desde hace 
+muchos años, asociado principalmente a las técnicas de control de inventarios. 
+ 
+ Una clasificación ABC existe en cualquier situación; por ejemplo, una tarea 
+asignada es más importante que otra, un papel sobre el escritorio es más importante 
+que cualquier otro de los que se encuentran en el mismo escritorio, una tarea 
+doméstica deberá recibir atención antes otra. Así, la suma de unas pocas cosas que 
+tienen realmente más importancia probablemente representará la mayor proporción 
+del total de problemas a tratar en un momento dado. 
+ 
+ Es así como Pareto, filósofo y sociólogo italiano del siglo XIX, estableció una 
+ley de validez general, según la cual la mayoría de la riqueza de la Tierra estaba 
+concentrada en unos pocos individuos. No cabe duda que, aplicando este 
+planteamiento a otros del saber humano, podemos simplificar de forma considerable 
+algunos problemas que, a primera vista y por su volumen, nos parecían 
+inabordables. 
+ 
+ Resulta lógico ordenar los elementos de acuerdo con su importancia relativa 
+respecto al conjunto: así se pueden analizar aspectos tan diversos como los 
+siguientes: 
+ 
+ Unos pocos clientes proporcionan al negocio la mayoría de los pedidos.      
+Por ejemplo un 5% de los clientes representan el 80% de las ventas. En este caso 
+serían los clientes “A” de la clasificación. 
+ 
+ Unos pocos artículos aportan la mayor parte del volumen de ventas de un  
+comercio. 
+ 
+ Unos pocos talleres realizan el mayor importe de trabajo de una fábrica. 
+Lo que pretendemos aquí es entender el principio subyacente en cada uno  
+de los casos anteriores. Para efectuar la selección es necesario utilizar la unidad de 
+medida que este más de acuerdo con el objetivo que se persigue.      
+                                  
+Así tendríamos por ejemplo  Clientes ABC de ventas: importancia según el grado de dependencia 
+que se tenga con el cliente. 
+ Partidas ABC de inventarios: importancia económica. 
+ Pedidos ABC de carga: importancia por su tiempo de fabricación o 
+utilización del equipo. 
+ 
+Los anteriores son meros ejemplos de la forma de enfocar las selecciones en 
+situaciones específicas, pues el método ABC puede ser aplicado en diversas 
+situaciones. 
+ 
+En cualquier distribución o clasificación analítica hay una gran cantidad de 
+elementos triviales y una relativa pequeña cantidad de elementos significativos. El 
+reconocimiento de este principio, y como consecuencia, su correcta aplicación puede 
+permitir que el esfuerzo máximo y el control más estricto se ejerzan sobre aquellos 
+pocos elementos vitales y el control básico, menos caro, sobre los bastos números 
+de los más triviales 
+. 
+Por consiguiente, el separar los pocos elementos vitales de los muchos 
+triviales nos permite actuar aplicando esfuerzos y recursos en consecuencia. En el 
+mundo de los negocios no se alcanzan los objetivos sino por aproximaciones 
+sucesivas, y el análisis ABC puede ser la base ara muchas de ellas. 
+ 
+Una aplicación muy generalizada de este enfoque se nos muestra en la 
+política de inventarios y por derivación, en la formación de precios de venta. Resulta 
+básico seleccionar y prestar una atención especial a los elementos de fuerte 
+significación económica, siguiendo paso a paso todas sus fluctuaciones 
+ 
+. 
+ 

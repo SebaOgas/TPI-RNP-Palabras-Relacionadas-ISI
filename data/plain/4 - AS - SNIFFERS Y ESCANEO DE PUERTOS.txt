@@ -1,0 +1,121 @@
+ADMINISTRACIÓNDESISTEMASDEINFORMACIÓN-2024
+GRUPO8SNIFFERSYESCANEODEPUERTOS
+INTEGRANTES:
+- CucharelliSantiago- GaldeanoHuilen- LedesmaJennifer- LeonQuispeMarioCesar- MalgioglioLucio- MayaFacundo- VaierettiRoberto 
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+1.Introducción..........................................................................................................................42.¿QuéesunSniffer?..............................................................................................................43.TiposdeSniffers................................................................................................................43.1. Snifferspasivos.....................................................................................................43.2. Sniffersactivos......................................................................................................43.3. Sniffersbasadosenhardware...............................................................................43.4. Sniffersbasadosensoftware................................................................................54.CómoprotegersedeunataquedeSniffer....................................................................54.1. Cifradodedatos....................................................................................................54.2. Redesprivadasvirtuales(VPN)............................................................................54.3. Seguridaddelascontraseñas...............................................................................54.4. Monitoreoderedes............................................................................................... 54.5. Evitarel usoderedesdesconocidasonoseguras...............................................55.HerramientasComunes..................................................................................65.1. Wireshark..............................................................................................................65.2. Tcpdump................................................................................................................66.¿CómodetectarunSniffer?..........................................................................................66.1. Enviarpaquetes"trampa"......................................................................................66.2. Inspeccióndel usodelainterfazdered................................................................66.3. Herramientasdedeteccióndesniffers..................................................................67.EscaneodePuertos.........................................................................................................68.Tiposdeescaneodepuertos.......................................................................................78.1. EscaneodepuertosTCP......................................................................................78.2. EscaneodepuertosSYN......................................................................................78.3. EscaneodepuertosUDP......................................................................................78.4. EscaneodepuertosACK......................................................................................79.HerramientasComunes..................................................................................79.1. Nmap.....................................................................................................................79.2. Netcat....................................................................................................................710.RelaciónentreSniffersyEscaneodePuertos................................................................711.Cómoprotegersedeunescaneodepuertos................................................................811.1. Configurarunfirewall...........................................................................................811.2. Cerrarpuertosinnecesarios................................................................................811.3. Usarherramientasdedeteccióndeintrusiones(IDS).........................................812.LegalidadenArgentina...............................................................................................813.CasosdeataquesutilizandoSniffersyEscaneodepuertos.....................................913.1.Equifax.................................................................................................................9
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+13.2.Mirai.....................................................................................................................914.Conclusión...................................................................................................................1015.Referencias..................................................................................................................11
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+1. Introducción
+Elavancedelatecnologíahatraídoconsigoherramientasquepermitenanalizarysupervisareltráficoenredesinformáticas.Dosdeestasherramientassonlossniffersyelescaneodepuertos.Elusodeestastecnologíaspuedeserútilparatareaslegítimascomoeldiagnósticoderedes,perotambiénpuedenserutilizadasconfinesmaliciosos.Esteinformeabordaquésonlossniffersyelescaneodepuertos,suuso,asícomosulegalidadenArgentina.
+2. ¿QuéesunSniffer?
+Unsnifferesunaherramientaquepermitecapturaryanalizareltráficodeunared.Sufuncionamientosebasaeninterceptarlospaquetesdedatosquecirculanporlared,loquepermitealusuariovisualizarelcontenidodeestospaquetes(Avast,n.d.).Estatecnologíaesfrecuentementeutilizadaparamonitorearydiagnosticarredes,peroenmanosequivocadaspuedeserutilizadaparainterceptarinformaciónprivada,comocontraseñasodatosbancarios(UNIR,n.d.).
+3. TiposdeSniffers
+Existendiferentestiposdesniffersquesepuedenclasificardeacuerdoasucomportamientoylaformaenqueinterceptaneltráficodelared:
+3.1. Snifferspasivos
+Selimitanacapturardatossinalterareltráficodelared.Funcionanenredesconconmutadores(switches)oconcentradores(hubs)ysondifícilesdedetectarporquesoloestán"escuchando".
+3.2. Sniffersactivos
+Nosoloescuchan,sinoquetambiénpuedenenviarpaquetesalaredparagenerarrespuestasoalterareltráfico,loqueloshacemásdetectablesperotambiénmáspeligrososenmanosmalintencionadas.
+3.3. Sniffersbasadosenhardware
+Sondispositivosfísicosconectadosalaredqueinterceptanycapturaneltráficosinnecesidaddesoftwareadicional.
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+3.4. Sniffersbasadosensoftware
+Aplicacionesqueseinstalanenunsistemaparacapturareltráficodelared.EjemplosincluyenWiresharkytcpdump,quepuedenserutilizadosparaanálisisderedeslegítimasoconfinesmaliciosos(UNIR,n.d.).
+4. CómoprotegersedeunataquedeSniffer
+Paraprotegersedeunataquedesniffer,esimportanteadoptarmedidasdeseguridadqueasegureneltráficoenlared:
+4.1. Cifradodedatos
+Utilizarprotocolosdecifrado,comoHTTPS,SSLoTLS,paraprotegerlainformacióntransmitidaenlared.Elcifradohaceque,aunqueunatacantecapturelosdatos,nopuedaleerlossinlaclavededescifrado.
+4.2. Redesprivadasvirtuales(VPN)
+UnaVPNcifratodoeltráficodeinternetyocultaladirecciónIP, loquereducelaprobabilidaddequeunatacanteinterceptecomunicacionessensibles.
+4.3. Seguridaddelascontraseñas
+Usarcontraseñasfuertesyúnicasparacadacuenta,ademásdehabilitarlaautenticacióndedosfactores(2FA),loqueañadeunacapaextradeseguridadencasodequeunatacanteobtengaaccesoalared.
+4.4. Monitoreoderedes
+Implementarherramientasdemonitoreoparadetectarcualquiertráficoinusualoactividadsospechosaenlared,loquepuedeindicarlapresenciadeunsniffer(Avast,n.d.).
+4.5. Evitarelusoderedesdesconocidasonoseguras
+UtilizarunaredpúblicaodesconocidasignificaexponereltráficoquerealizamosenInternetohaciaotrosdispositivos,sihayunsnifferenlaredqueestérecolectandoinformación.Enlaactualidad,elcasomáscomúnseríaconectarseaunaredWiFi“gratuita”,cuyoadministradorpuedeestarutilizandoparamonitoreareltráficodered(InnovaciónDigital,n.d.).
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+5. HerramientasComunes
+5.1. Wireshark
+Unadelasherramientasdeanálisisdepaquetesmáspopulares.
+5.2. Tcpdump
+Herramientadelíneadecomandosparacapturaryanalizartráfico.
+6. ¿CómodetectarunSniffer?
+Detectarunsnifferenunaredpuedesercomplicado,especialmentesiespasivo.Sinembargo,existenalgunastécnicasparaidentificarsupresencia:
+6.1. Enviarpaquetes"trampa"
+Algunossniffersrespondenapaquetesespecialmentediseñadosquenodeberíangenerarunarespuestaencondicionesnormales.Siserecibeunarespuesta,esunaseñaldequehayunsnifferactivoenlared.
+6.2. Inspeccióndelusodelainterfazdered
+Lossnifferssuelencambiarlaconfiguracióndelainterfazdereda"modopromiscuo",loquepermitecapturartodoeltráficodered,nosóloeldestinadoaldispositivo.Algunasherramientasderedpuedendetectarsiunainterfazestáenmodopromiscuo,loqueindicalaposiblepresenciadeunsniffer.
+6.3. Herramientasdedeteccióndesniffers
+ExistenaplicacionescomoAntiSniffquepuedenayudaradetectarsniffersenlared,monitoreandoloscambiosenlasinterfacesyeltráficoderedinusual(UNIR,n.d.).
+7. EscaneodePuertos
+Elescaneodepuertosesunatécnicautilizadaparaidentificarlospuertosabiertosydisponiblesenunsistema.Lospuertosrepresentanpuntosdeaccesoaserviciosespecíficos,comowebocorreoelectrónico,yalserabiertospuedenconvertirseenpuntosvulnerables.Elescaneodepuertosayudaadeterminarquéserviciosestánactivosenunservidorodispositivo,ysiesosserviciospuedenrepresentarunriesgoparalaseguridad(Avast,n.d.).
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+8. Tiposdeescaneodepuertos
+Existenvariosmétodosdeescaneodepuertosquevaríanencomplejidadyeficacia:
+8.1. EscaneodepuertosTCP
+Esteeseltipomáscomúnyefectivo.Intentaestablecerunaconexióncompletaconcadapuertoenelsistemaobjetivo,permitiendoalatacanteoadministradorsabersielpuertoestáabierto.
+8.2. EscaneodepuertosSYN
+Tambiénconocidocomoescaneofurtivo,estemétodoenvíapaquetesSYNsincompletarlaconexión.EsmásrápidoymenosdetectablequeelescaneoTCPtradicional.
+8.3. EscaneodepuertosUDP
+BuscapuertosabiertosenlosserviciosqueutilizanelprotocoloUDP.Amenudoesmáslentoycomplicado,yaqueUDPnoofrececonfirmacióndepaquetescomolohaceTCP.
+8.4. EscaneodepuertosACK
+Estatécnicaseutilizaparadeterminarsiunpuertoestáfiltrado(porunfirewall,porejemplo)ypuedeayudaramapearlasreglasdeuncortafuegos.
+9. HerramientasComunes9.1. Nmap
+Unaherramientapopularypoderosaparaelescaneodepuertosymapeodered.
+9.2. Netcat
+Utilizadaparaexplorarredesygestionarconexiones.
+10. RelaciónentreSniffersyEscaneodePuertos
+Elescaneodepuertosylossnifferspuedenestarrelacionadosenunataquedered.Mientrasqueelescaneodepuertospermiteaunatacanteidentificarquépuertosestánabiertosyquéserviciosestánenfuncionamiento,unsnifferpuedeinterceptaryanalizareltráficoquepasaatravésdeesospuertos.Enconjunto,estasherramientaspuedenserutilizadasparadetectarvulnerabilidadesyextraerinformaciónconfidencial.
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+Porejemplo,unatacantepuedeusarunescánerdepuertosparaencontrarunpuertoabiertoenelqueestécorriendounservicioinseguro.Luego,podríausarunsnifferparacapturarlosdatosqueviajanatravésdeesepuertoyobtenerinformaciónsensible,comocontraseñasocredencialesdeiniciodesesión(Avast,n.d.).
+Elescaneodepuertostambiénpuedealertaraunadministradorsobreposiblesintentosdeataque,yaqueunagrancantidaddeescaneosnosolicitadospuedenserunindiciodequeunatacanteestábuscandovulnerabilidades.Estopermitealosadministradorestomarmedidaspreventivasantesdequeunsnifferseainstaladooutilizadoparacapturardatos.
+11. Cómoprotegersedeunescaneodepuertos
+11.1. Configurarunfirewall
+Unfirewallcorrectamenteconfiguradopuedebloqueareltráficodeescaneonoautorizadoyfiltrarpaquetesentrantesysalientes.
+11.2. Cerrarpuertosinnecesarios
+Asegurarsedequesololospuertosesencialesesténabiertos,minimizandolospuntosdeentradaqueunatacantepodríautilizar.
+11.3. Usarherramientasdedeteccióndeintrusiones(IDS)
+Estasherramientaspuedendetectarpatronesdeescaneodepuertosyalertaralosadministradoresderedsobreactividadessospechosas.
+12. LegalidadenArgentina
+EnArgentina,elusodesniffersyelescaneodepuertosestáreguladoporlaLey25.326deProteccióndeDatosPersonalesyotrasnormativasrelacionadascondelitosinformáticos.Elusodeestastecnologíassinconsentimientoestáprohibidoypuedeconsiderarseunaviolacióndelaprivacidadounintentodeaccesonoautorizado.Sinembargo,suusoeslegalsiserealizaenredesbajocontroldeladministradoryconelconsentimientodelosusuarios,comopartedelaspolíticasdeciberseguridad(UNIR,n.d.).
+UncasodestacadoenArgentinaen2016involucrólacondenadeunindividuoporelusodeunsnifferparainterceptarcomunicacionesdetercerossinautorización,sentandounprecedentesobrelailegalidaddeestaprácticaenelpaís.
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+13. CasosdeataquesutilizandoSniffersyEscaneodepuertos
+13.1. EquifaxEl12demayode2017,laempresaEquifaxfuevíctimadeunataquequeinvolucrósniffers:losatacantesobtuvieronaccesonoautorizadoalareddelaempresa(aprovechándosedeunavulnerabilidadcausadaporunaactualizacióndelsoftwareApacheStruts)yemplearonsniffersparaobtenerinformaciónsensible.SibienlosdesarrolladoresdeApacheStrutsrápidamentelanzaronunparcheparacorregirlavulnerabilidad,Equifaxnoactualizóelsoftwarehastamuchodespués.
+Estasactividadescontinuarondurante76díashastaserdescubiertas.AdemásdelavulnerabilidaddeApacheStrutsylalentitudenactualizarelsoftwarealpróximoparche,expertoshanreportadoquelaredinternadeEquifaxexhibíamúltiplespuntosdébiles,entrelosqueseencontrabantécnicasinsuficientesdeencriptación,ylaausenciademecanismosdedeteccióndeinfiltraciones.
+Seestimaquelainformaciónfiltradacorrespondea143millonesdeciudadanosdelosEstadosUnidos,queincluía:nombres,númerosdeseguridadsocial,datosdetarjetasdecrédito,einclusolicenciasdeconducir. (Wikipedia,EquifaxDataBreach).
+13.2. MiraiEn2016,unmalwarellamado“Mirai”comenzóaexpandirseporinternet.EstemalwareenparticularatacabaadispositivosIoT(InternetofThings)comocámaras,routers,etc.,conelpropósitodeformarunabotnet:unareddedispositivosquesesincronizanparalograrunobjetivo,queenelcontextodemalware,sueleserunataquedeciberseguridad.Miraiinfectóaquellosdispositivoscuyascontraseñasnuncafueroncambiadasdelasquevienenpordefecto,yaquellosconsoftwareviejoysinactualizar.Paradetectarestosdispositivoseinfectarlos,seutilizóescaneodepuertos.
+LacaracterísticaquedestacóaMiraifueque,unavezinfectadoeldispositivo,podíaautorreplicarse:mientrasmásdispositivosinfectaba,másrápidoseexpandía.EstabotnetseutilizóparallevaracabounataqueDoS(DenialofService),queentreotrascosas,atacóaDyn,unodelosproveedoresmásgrandesdelsistemaDNS,interrumpiendoelaccesoaGitHub,Twitter, Netflix,Amazon,entreotros.(Medium,CaseStudyonMiraiBotnetAttack).
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+14. Conclusión
+Tantolossnifferscomoelescaneodepuertossonherramientaspoderosasenelcampodelaadministraciónderedesylaciberseguridad.Suusodebeestarenmarcadoenlalegalidad,yaquepuedenserutilizadosconfinesmaliciososparainterceptarcomunicacionesyexplotarvulnerabilidades.Ladeteccióndesniffersylaproteccióncontraelescaneodepuertossonelementosclaveenlaprotecciónderedesysistemas.EnArgentina,elusonoautorizadodeestastecnologíaspuedeacarrearsancioneslegales,subrayandolaimportanciadeutilizarlasconelconsentimientoadecuadoyfineslegítimos.
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos
+IngenieríaenSistemasdeInformación ADM.DESISTEMAS-2024
+15. Referencias
+Avast.(n.d.).¿Quéesunsnifferdered?Cómofuncionanycómoprotegerse.Recuperadodehttps://www.avast.com/es-es/c-sniffer
+UNIR.(n.d.).¿Quéesunsniffer?Definición,usosyriesgos.Recuperadodehttps://ecuador.unir.net/actualidad-unir/que-es-sniffer-red/
+Mogull,R.(2009).UnderstandingPortScanningTechniques.SANSInstituteInfoSecReadingRoom.Recuperadodehttps://www.sans.org/reading-room/whitepapers/auditing/understanding-port-scanning-techniques-42
+NMAP. (n.d.).ScanningTechniques.NmapNetworkScanning.Recuperadodehttps://nmap.org/book/man-port-scanning-techniques.html
+InnovaciónDigital(n.d.).Ataquessniffer, quésonycómoprotegerse.Recuperadodehttps://www.innovaciondigital360.com/cyber-security/ataques-sniffer-que-son-y-como-protegerse/
+Wikipedia.(n.d.).2017Equifaxdatabreach.Recuperadodehttps://en.wikipedia.org/wiki/2017_Equifax_data_breach
+Medium.(n.d.).AcasestudyonMiraiBotnetAttackof2016.Recuperadodehttps://medium.com/@d21dcs151/a-case-study-on-mirai-botnet-attack-of-2016-4b66630e6508
+CucharelliSantiago,GaldeanoHuilen,LedesmaJennifer,LeonQuispeMarioCesar,MalgioglioLucio,MayaFacundo,VaierettiRoberto
+SniffersyEscaneodePuertos

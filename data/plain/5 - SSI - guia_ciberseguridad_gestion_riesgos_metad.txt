@@ -1,0 +1,865 @@
+Gestión de riesgos
+Una guía de aproximación 
+para el empresarioGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+2
+1  Introducción  3
+2  Conceptos  4
+ 2.1 Activo, amenazas, vulnerabilidad, impacto y probabilidad 4
+ 2.2 ¿Cómo se mide el nivel de riesgo? 6
+ 2.3 ¿Qué hacer con los riesgos? 7
+3  Gestión del riesgo: principios, marco de trabajo y proceso  9
+ 3.1 Principios 9
+ 3.2 Marco de trabajo 9
+   3.2.1 Política de gestión de riesgos 11
+ 3.3 Etapas del proceso de gestión de riesgos 11
+   3.3.1 Comunicación y consulta 12
+   3.3.2 Determinar el contexto 12
+   3.3.3 Valoración o apreciación de riesgos  12
+   3.3.4 Tratamiento del riesgo 13
+   3.3.5 Seguimiento y revisión 13
+4  Gestión de riesgos de seguridad de la información  14
+ 4.1 Conceptos 14
+ 4.2 El proceso de gestión de riesgos de seguridad de la información 16
+   4.2.1 Comunicación 16
+   4.2.2 Estableciendo el contexto de seguridad de la información 16
+   4.2.3 Valorando los riesgos de seguridad de la información 17
+   4.2.4 Tratando y aceptando riesgos de seguridad de la información 21
+   4.2.5 Monitorizando los riesgos de seguridad de la información 23
+5  Referencias  24
+Figuras
+Ilustración 1 Activo, amenaza, vulnerabilidad e impacto 5
+Ilustración 2 Cálculo del riesgo 6
+Ilustración 3 Coste de equilibrio 6
+Ilustración 4 Gestión de riesgos 7
+Ilustración 5 Opciones del tratamiento de riesgos  8
+Ilustración 6 Proceso de gestión de riesgos (fuente: ISO 31000:2009)  11
+Ilustración 7 Dimensiones de la seguridad de la información 14
+Tablas
+Tabla 1 Ejemplo de niveles de clasificación de los impactos de un incidente  19
+Tabla 2 Estimación del producto «probabilidad x impacto» para evaluar riesgos  21
+Tabla 3 Ejemplo criterios para el tratamiento de riesgos  22
+... Índice
+INCIBE_PTE_AproxEmpresario_002_GestionRiesgos-2015-v1GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+3
+1 Introducción
+a gestión de riesgos está presente, con mayor o menor protagonismo, en distintos ámbitos 
+de la sociedad y la empresa. Son algunos ejemplos la gestión de riesgos:
+n ... laborales
+n ... alimentarios
+n ... bancarios, financieros
+n ... corporativos, de proyectos
+n ... medioambientales
+n ... de seguridad de la información
+Un hecho común a todos ellos, es que los responsables son conscientes de la existencia de ame -
+nazas que suponen un peligro para la consecución de sus objetivos. Dedican esfuerzos y recursos 
+a mantener estos riesgos por debajo de un límite previamente consensuado en sus organizacio -
+nes.
+Para maximizar los beneficios de dicha gestión y contar con garantías de éxito, los esfuerzos han 
+de ser empleados de forma metódica, estructurada y, sobre todo, siguiendo un proceso de eva -
+luación y mejora continua. Las organizaciones se encuentran en un entorno en cambio constante. 
+Los logros obtenidos ante las amenazas de hoy no suponen ninguna garantía de éxito para las 
+amenazas de mañana.
+En esta guía se introducen los conceptos y procesos comunes a toda actividad de gestión de ries-
+gos. La guía mostrará la aplicación de estos conceptos y procesos a la seguridad de la información.
+La guía se estructura en los siguientes apartados:
+n Conceptos
+ Los términos básicos utilizados en gestión de riesgos.
+n Gestión de riesgos
+ Actividades para llevar a cabo una gestión de riesgos así como los diferentes 
+roles y responsabilidades.
+n Gestión de riesgos en sistemas de información
+ Se aplican las actividades del apartado anterior al área de sistemas de infor -
+mación.
+n Referencias
+ Listado de enlaces donde encontrar más información sobre de gestión de 
+riesgos.
+LGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+4
+2 Conceptos
+E
+2.1
+n este apartado se introducen los términos utilizados en la jerga clásica de gestión de ries-
+gos, su comprensión facilitará el resto de la lectura de la guía.
+En la actualidad la revisión de algunas de las normas sobre riesgos, en 
+particular las normas ISO, está incorporando nuevos conceptos más 
+generales que los tradicionales, definiendo el riesgo como «incerti -
+dumbre en la consecución de los objetivos». Además de la definición 
+se indican los cambios para cada término afectado.
+Activo, amenaza, vulnerabilidad, impacto y probabilidad
+n Activo   Cualquier recurso de la empresa necesario para desempeñar las activi -
+dades diarias y cuya no disponibilidad o deterioro supone un agravio o coste. La 
+naturaleza de los activos dependerá de la empresa, pero su protección es el fin 
+último de la gestión de riesgos. La valoración de los activos es importante para 
+la evaluación de la magnitud del riesgo.
+ Este término en las nuevas normas se generaliza para denominarse «fuente de ries-
+go» siendo el elemento que sólo o con otros puede originar un riesgo.
+n Amenaza   Circunstancia desfavorable que puede ocurrir y que cuando sucede 
+tiene consecuencias negativas sobre los activos provocando su indisponibili -
+dad, funcionamiento incorrecto o pérdida de valor. 
+ En la evolución de las normas este concepto se amplia para denominarse «suceso».
+La naturaleza de los 
+activos dependerá de la 
+empresa, pero su 
+protección es el fin último 
+de la gestión de riesgos
+¡GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+5
+n Vulnerabilidad   Debilidad que presentan los activos y que facilita la materializa-
+ción de las amenazas. 
+n Impacto o consecuencia  de la materialización de una amenaza sobre un activo 
+aprovechando una vulnerabilidad. El impacto se suele estimar en porcentaje 
+de degradación que afecta al valor del activo, el 100% sería la pérdida total del 
+activo.
+ La consecuencia en las nuevas normas es el resultado de un suceso que afecta a los 
+objetivos.
+n Probabilidad   Es la posibilidad de ocurrencia de un hecho, suceso o aconteci -
+miento. La frecuencia de ocurrencia implícita se corresponde con la amenaza. 
+Para estimar la frecuencia podemos basarnos en datos empíricos (datos obje -
+tivos) del histórico de la empresa, o en opiniones de expertos o del empresario 
+(datos subjetivos). 
+ Este término permanece en la evolución de las normas ISO refiriéndose a un suceso 
+en lugar de a una amenaza. 
+El siguiente diagrama muestra las relaciones entre estos conceptos: 
+2 Conceptos
+Explota
+q
+Amenaza
+Afecta
+q
+Vulnerabilidad
+Activo
+q 
+Provoca
+IMPACTO
+Ilustración 1   Activo, amenaza, vulnerabilidad e impactoGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+6
+¿Cómo se mide el nivel de riesgo? 
+Como veíamos en el apartado anterior, el impacto  nos indica las consecuencias de la materiali -
+zación de una amenaza. El nivel de riesgo es una estimación de lo que puede ocurrir y se valora, 
+de forma cuantitativa , como el producto del impacto,  (consecuencia), asociado a una amenaza 
+(suceso), por la probabilidad de la misma.
+El impacto, y por tanto el riesgo, se valoran en términos del coste derivado del valor de los activos 
+afectados considerando, además de los daños producidos en el propio activo:
+n daños personales
+n pérdidas financieras
+n interrupción del servicio
+n pérdida de imagen y reputación
+n disminución del rendimiento
+Si bien es posible, y en ocasiones necesario, realizar un análisis cualitativo , trabajar con magni -
+tudes económicas facilita a las organizaciones establecer el llamado umbral de riesgo, también 
+llamado «apetito al riesgo»: el nivel máximo de riesgo que la empresa está dispuesta o «se atreve» 
+a soportar. La gestión de riesgos debe mantener el nivel de riesgo siempre por debajo del umbral.
+Por otro lado, se denomina coste de protección  al coste que supone para las organizaciones los 
+recursos y esfuerzos que dedican para mantener el nivel de riesgo por debajo del umbral desea -
+do. Las organizaciones deben vigilar de no emplear más recursos de los necesarios para cumplir 
+ese objetivo. En la siguiente gráfica podemos ver como ambos conceptos, riesgo y coste de pro -
+tección, se relacionan.
+El punto en el que el coste de protección es el adecuado para mantener los riesgos por debajo del 
+umbral fijado de riesgo es el coste de equilibrio. Este punto dependerá del umbral de riesgo de 
+acuerdo con los objetivos de la empresa.
+2.2
+2 Conceptos
+Impacto x Probabilidad =   RIESGO
+Ilustración 3   
+Coste de equilibrio
+Ilustración 2   
+Cálculo del riesgo
+Riesgo                   
+Coste de protección
++
+Coste
+-
+Nivel de seguridad
+Coste
+equilibrioGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+7
+2.3
+2 Conceptos
+Análisis de riesgos +  Tratamiento de riesgosGestión de riesgos =
+¿Qué hacer con los riesgos? 
+Las actividades cuyo objetivo es mantener el riesgo por debajo del umbral fijado se engloban en 
+lo que se denomina Gestión del riesgo . Las organizaciones que decidan gestionar el riesgo para 
+su actividad deberán realizar dos grandes tareas: 
+n Análisis de riesgo   Que consiste en averiguar el nivel de riesgo que la empresa 
+está soportando. Para ello, tradicionalmente las metodologías proponen que se 
+realice un inventario de activos, se determinen las amenazas, las probabilidades 
+de que ocurran y los posibles impactos.
+n Tratamiento de los riesgos   Para aquellos riesgos cuyo nivel está por encima 
+del umbral deseado la empresa debe decidir cuál es el mejor tratamiento que 
+permita disminuirlos. Esta decisión siempre ha de pasar un filtro económico 
+donde el coste del tratamiento, o coste de protección, no supere el coste de 
+riesgo disminuido.
+Para el tratamiento de riesgos  las empresas cuentan, entre otras, con las siguientes opciones:
+n Evitar o eliminar el riesgo   Por ejemplo sustituyendo el activo por otro que no 
+se vea afectado por la amenaza o eliminando la actividad que lo produce.
+n Reducirlo o mitigarlo   Tomando las medidas oportunas para que el nivel de ries-
+go se sitúe por debajo del umbral. Para conseguirlo se puede:
+ _reducir la probabilidad o frecuencia de ocurrencia: tomando, por ejemplo, medi -
+das preventivas
+ _reducir el impacto de la amenaza o acotar el impacto, estableciendo por ejemplo 
+controles y revisando el funcionamiento de las medidas preventivas
+n Transferirlo, compartirlo o asignarlo a terceros   En ocasiones la empresa no 
+tiene la capacidad de tratamiento y precisa la contratación de un tercero con 
+capacidad para reducir y gestionar el riesgo dejándolo por debajo del umbral.
+n Aceptarlo   Se asume el riesgo, bien porque está debajo del umbral aceptable de 
+riesgo bien en situaciones en las que los costes de su tratamiento son elevados 
+y aun siendo riesgos de impacto alto su probabilidad de ocurrencia es baja o 
+porque aun a pesar del riesgo la empresa no quiere dejar de aprovechar la opor-
+tunidad que para su negocio supone esa actividad arriesgada. 
+Ilustración 4
+Gestión de riestosGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+8
+¡
+El análisis de riesgos debe ser realizado de forma metódica impidiendo omisiones, improvisa -
+ciones o posibles criterios arbitrarios. En la actualidad existen diversas metodologías y guías de 
+buenas prácticas , tanto generalistas como especializadas, que pueden ser utilizadas para realizar 
+este análisis. Entre las generalistas destacamos:
+n COSO [1] , organización americana dedicada a la creación de guías y marcos de 
+trabajo en el ámbito de la gestión de riesgos empresariales.
+n ISO 31000:2009 [2] , norma global, no certificable, que aporta metodología, 
+principios y directrices en materia de gestión de riesgos.
+Específicas para gestión de riesgos de seguridad de la información:
+n MAGERIT, Metodología de Análisis y Gestión de Riesgos de los Sistemas de In -
+formación [3]  creada por el Ministerio de Administraciones Públicas español.
+n ISO / IEC 27005: 2008 (E) [11]  norma que aporta directrices para la gestión de 
+riesgos de seguridad de la información.
+n NIST SP - 800-30 [4] , metodología creada en este caso por el gobierno norte -
+americano.
+Cada empresa puede elegir una metodología o una guía de buenas 
+prácticas a seguir o bien definir una propia que esté acorde con su 
+idiosincrasia.
+2 Conceptos
+Ilustración 5   
+Opciones del 
+tratamiento de riesgo
+Impacto
+Probabilidad
+Evitar
+Mitigar
+Transferir
+AceptarGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+9
+3 Gestión del riesgo: 
+principios, marco de trabajo y proceso
+E
+n este apartado se describe el proceso y las actividades necesarios para llevar a cabo la 
+gestión de riesgos de acuerdo a la norma ISO 31000:2009 [2].
+Principios
+Estos son los principios básicos que debe cumplir la gestión de riesgos si queremos que cumpla 
+su cometido:
+n proteger el valor, es decir, contribuir a la consecución de los objetivos y la mejo-
+ra del desempeño
+n ser una  parte integral de todos los procesos de la empresa
+n formar parte de la toma de decisiones
+n tratar explícitamente la incertidumbre
+n ser sistemática, estructurada y oportuna
+n basarse en la mejor información disponible
+n adaptarse, alineándose con el contexto interno y externo y con los perfiles del 
+riesgo
+n integrar factores humanos y culturales
+n ser trasparente y participativa
+n ser dinámica, iterativa y responde a los cambios
+n facilitar la mejora continua
+Marco de trabajo
+Como en toda actividad, el compromiso de la dirección es básico para llevarla a cabo con éxito. 
+En la gestión de riesgos no es diferente, ha de estar plenamente integrada en los procesos de la 
+empresa y requiere un compromiso fuerte y sostenido de la dirección así como del establecimien-
+to de una rigurosa planificación estratégica, un marco de trabajo. Este «marco de trabajo» ha de 
+ser objeto de seguimiento y revisión periódica que permitan medir el progreso y adaptarse a los 
+cambios del entorno, tomando las decisiones oportunas para la mejora continua.
+3.1
+3.2
+Este “marco de trabajo” 
+ha de ser objeto de 
+seguimiento y revisión 
+periódicaGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+10
+Para conseguir una buena gestión del riesgo el marco de trabajo definido ha de:
+n comprender la empresa y su contexto
+n establecer una política de gestión de riesgos
+n identificar autoridades y competencias
+n definir la integración en los procesos de negocio como plan estratégico para que 
+sea relevante, eficaz y eficiente
+n proporcionar los recursos necesarios:
+ _personas, formación
+ _procesos y procedimientos
+ _métodos y herramientas
+n establecer mecanismos de comunicación interna y externa
+Este marco de trabajo se implementará definiendo un  calendario y estrategia de implementación 
+y revisión que permita:
+n establecer y desarrollar los objetivos
+n aplicar la política y el proceso
+n cumplir con la legislación y normativa
+n organizar la formación y la comunicación y consulta a los interesados
+3 Gestión del riesgo: 
+principios, marco de trabajo y proceso
+Hay que definir un 
+calendario y estrategia 
+de implementación 
+y revisión del marco 
+de trabajo GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+11
+q
+Valoración de riesgos
+Política de gestión de riesgos
+El establecimiento de una  política de gestión de riesgos en la que se indiquen con claridad los 
+objetivos y se materialice el compromiso de toda la empresa va a ser clave para una gestión de 
+riesgos eficaz. La política tratará estas cuestiones:
+n motivos para llevar a cabo la gestión de riesgos
+n relación con otras políticas de la empresa
+n responsabilidades y rendición de cuentas en el proceso de gestión de riesgos
+n recursos disponibles
+n medición del desempeño
+n compromiso de revisión del marco de trabajo y de la política
+Etapas del proceso de gestión de riesgos
+En el proceso de gestión de riesgos se distinguen las siguientes actividades:
+3.2.1
+3.3
+q
+Determinar el contexto
+Identificación
+q
+Análisis
+q
+Evaluación
+Tratamiento del riesgo
+Ilustración 6   Proceso de gestión de riesgos (fuente: ISO 31000:2009)
+Seguimiento y revisión
+Comunicación y consulta
+3 Gestión del riesgo: 
+principios, marco de trabajo y proceso
+GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+12
+Comunicación y consulta
+Esta actividad es la primera y abarca todas las siguientes pues se ha de realizar en todas las etapas. 
+En ella se fomenta la participación y se coordinan las actuaciones de todas las partes implicadas, 
+tanto internas como externas, en la gestión de riesgos.
+Determinar el contexto
+Es esencial que la gestión de riesgos se integre tanto con el resto de áreas de la empresa como 
+con su entorno externo. Por tanto hay que determinar los condicionantes tanto internos como 
+externos que definen el marco de trabajo. A nivel interno se tendrán en cuenta: la cultura, recur -
+sos, procesos y objetivos del negocio. A nivel externo se consideran diferentes aspectos relativos 
+al entorno social, económico o legislativo.
+ 
+Como resultado de esta fase se establecen:
+n los objetivos de la gestión de riesgo
+n los criterios que se emplearán para la evaluación de los riesgos, el método a 
+utilizar en el establecimiento de probabilidades, así como las magnitudes de los 
+impactos
+n el alcance de la gestión de riesgos, los roles y la asignación de responsabilidades
+Valoración o apreciación de riesgos
+Una vez definido el contexto se han de valorar los riesgos. En esta etapa se determinan los riesgos 
+que van a ser controlados por medio de su identificación, análisis y evaluación. Todos aquellos 
+riesgos que no sean identificados quedarán como riesgos ocultos o no controlados. Se realizan en 
+esta fase las siguientes actividades:
+n Identificación del riesgo , cuyo objetivo es búsqueda, reconocimiento y des -
+cripción de todos los posibles puntos de peligro tanto internos como externos; 
+para cada uno de ellos se determinará su impacto y probabilidad
+ n esta fase responde a las siguientes preguntas:
+  _¿qué puede pasar?
+  _¿cuándo y dónde?
+  _¿cómo y por qué?
+3 Gestión del riesgo: 
+principios, marco de trabajo y proceso
+3.3.1
+3.3.2
+3.3.3GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+13
+n Análisis del riesgos  es la etapa en la cual se califican cada uno de los riesgos 
+identificados tanto de forma cuantitativa (valorando su impacto) como cualita-
+tiva (importancia relativa) para priorizar nuestros esfuerzos de forma no arbitra-
+ria. En esta actividad también se persigue comprender cómo se desarrollan los 
+riesgos, estudiando sus causas y consecuencias, así como evaluando la eficacia 
+de los diferentes medios de control implantados en la empresa.
+ n Se mide el nivel de riesgo según la fórmula Riesgo = Impacto x Probabilidad,
+  valorando las consecuencias y la probabilidad de cada riesgo.
+n Evaluación del riesgo , cuyo objetivo es determinar prioridades en el uso de los 
+recursos a emplear en la gestión de riesgos. En esta fase se amplía la calificación 
+del análisis anterior incluyendo valoraciones en términos de estrategia de ne -
+gocio que permitan establecer qué riesgos son aceptables y cuáles no. 
+Tratamiento del riesgo
+A continuación se identifican y evalúan las opciones existentes de tratamiento de cada uno de los 
+riesgos que sea necesario tratar según se determinó en la fase anterior. Algunas de las opciones 
+de tratamiento son, como vimos en apartados anteriores (apartado 2.3): evitarlo, reducirlo o miti-
+garlo, transferirlo o compartirlo y aceptarlo.
+Seguimiento y revisión
+Para conseguir una mejora continua se supervisa «lo que está ocurriendo» en la práctica y se reali-
+zan las correcciones que fuera preciso. También se ha de evaluar el propio sistema de gestión, de-
+tectando posibles deficiencias y oportunidades de mejora. La revisión de los cambios del entorno 
+está incluida en esta etapa, realimentando la fase de determinación del contexto.
+3 Gestión del riesgo: 
+principios, marco de trabajo y proceso
+3.3.4
+3.3.5
+Para conseguir una 
+mejora continua se 
+supervisa «lo que está 
+ocurriendo» en la práctica 
+y se realizan las 
+correcciones que 
+fuera precisoGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+14
+4 Gestión del riesgos 
+de seguridad de la información
+E
+n la sociedad actual, inmersa en la llamada revolución digital, las compañías son conscien-
+tes del protagonismo de la información  en sus procesos productivos.
+Esta revolución ha cambiado también las relaciones con clientes, proveedores, organismos oficia-
+les, donde Internet juega un importante papel como medio de comunicación. Este medio, por su 
+naturaleza libre y de bajo coste, ha permitido interconectar a las personas y a las empresas entre 
+sí rompiendo las barreras geográficas y habilitando en gran medida la llamada globalización de 
+la economía y de la sociedad.
+Las empresas acostumbradas a dedicar recursos para gestionar los riesgos de sus procesos pro -
+ductivos, deben también preocuparse y asignar recursos para la gestión de los riesgos asociados 
+a su información y a las infraestructuras que la soportan.
+Conceptos  
+En términos de gestión de riesgos de seguridad de la información, el activo  a proteger es la infor -
+mación  de la compañía. Hablamos tanto de información «digital» contenida en nuestros sistemas de 
+información como aquella contenida en cualquier otro soporte como por ejemplo el papel. También 
+tenemos que tener presente que la gestión debe ocuparse de todo el ciclo de vida de la información 
+y no sólo de su explotación, considerando etapas como la de captura o destrucción de la información.
+La información es el activo principal pero también debemos considerar: infraestructura informá -
+tica, equipos auxiliares, redes de comunicaciones, instalaciones  y personas.  
+Cuando hablamos de seguridad de la información hablamos de protegerla de riesgos que pue -
+dan afectar a una o varias de sus tres principales propiedades:
+n Confidencialidad  La información solo tiene que ser accesible o divulgada a 
+aquellos que están autorizados.
+n Integridad  La información debe permanecer correcta (integridad de datos) y 
+como el emisor la originó (integridad de fuente) sin manipulaciones por terceros.
+n Disponibilidad  La información debe estar siempre accesible para aquellos que 
+estén autorizados.
+ 
+4.1
+Ilustración 7  Dimensiones de 
+la seguridad de la información
+Confidencialidad
+Integridad Disponibilidad
+InformaciónGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+15
+Las amenazas  a las que se enfrenta la información de nuestras organizaciones pueden ser muy 
+variadas, a modo de ejemplo:
+n de origen natural:  inundaciones, terremotos, incendios, rayos
+n fallos de la infraestructura auxiliar: fallos de suministro eléctrico, refrigeración, 
+contaminación...
+n fallos de los sistemas informáticos y de comunicaciones: fallos en las aplica -
+ciones, hardware o equipos de transmisiones
+n error humano: errores accidentales o deliberados de las personas que interac -
+túan con la información, por ejemplo:
+ _acciones no autorizadas como uso de software o hardware no autorizados
+ _funcionamiento incorrecto por abuso o robo de derechos de acceso o errores en el 
+uso, falta de disponibilidad, etc
+ _información comprometida por robo de equipos, desvelado de secretos, espionaje, etc
+Las vulnerabilidades  frente a las cuales se debe proteger a los sistemas de información y a la in -
+formación que tratan, dependen en gran medida de la naturaleza de los mismos; podemos decir 
+que es un factor intrínseco  a nuestros activos. Estas pueden depender del hardware, del software, 
+las redes, el personal, el edificio o las infraestructuras o la organización. Algunos ejemplos son:
+n equipamiento informático susceptible a variaciones de temperatura o humedad
+n sistemas operativos que por su estructura, configuración o mantenimiento son 
+más vulnerables a algunos ataques
+n localizaciones que son más propensas a desastres naturales como por ejemplo 
+inundaciones o que están en lugares con variaciones de suministro eléctrico
+n aplicaciones informáticas, que por su diseño, son más inseguras que otras
+n personal sin la formación adecuada, ausente o sin supervisión
+Gran parte de estos factores son difíciles o muy caros de erradicar y las organizaciones tienen que 
+convivir con ellos tomando medidas que reduzcan el impacto de sus amenazas. 
+Las vulnerabilidades 
+pueden depender del 
+hardware, del software, 
+las redes, el personal, el 
+edificio, la organización...
+4 Gestión del riesgo: 
+de seguridad de la información
+GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+16
+4.2
+¡
+El proceso de gestión de riesgos de seguridad de la información 
+Análogamente a lo que veíamos en el capítulo anterior la gestión de riesgos de seguridad de la 
+información es un proceso que consiste en:
+n comunicación 
+n establecimiento del contexto
+n valoración del riesgo
+n tratamiento del riesgo y aceptación del riesgo
+n revisión y monitorización
+n Se recomienda la lectura del siguiente contenido del portal:
+n «Sigue el camino del análisis de riesgos» (infografía) [5]
+Comunicación
+Durante todo el proceso las acciones de comunicación se sucederán para mantener informada a 
+la dirección y a la plantilla. Igualmente se recibirá información de los procesos y los interesados. 
+Con estas acciones se consigue difundir la información necesaria para conseguir el consenso de 
+los responsables y los afectados por las decisiones que se tomen. 
+Estas acciones de comunicación son importantes para:
+n identificar los riesgos
+n valorarlos en función de las consecuencias para el negocio y la probabilidad de 
+que ocurran
+n comprender la probabilidad y consecuencias de los riesgos
+n establecer prioridades para el tratamiento de riesgos
+n informar y contribuir a que se involucren las áreas interesadas
+n monitorizar la efectividad del tratamiento de los riesgos
+n revisar con regularidad el proceso y su monitorización
+n concienciar a la plantilla y a la dirección sobre estos riesgos y su forma de mitigarlos
+Estableciendo el contexto de seguridad de la información
+En esta fase, en función del contexto, se definen los criterios básicos para la gestión de riesgos 
+de seguridad de la información. Por ejemplo, se ha de decidir si se va a utilizar un enfoque global 
+o un enfoque detallado; el primero sea más rápido pero menos preciso que el segundo. Además 
+sirve para ser conscientes de las leyes que se deben cumplir, -LOPD y LSSI por ejemplo-, así como 
+requisitos de contratos con terceros y normativa aplicable. Las distintas áreas implicadas harán 
+valer sus expectativas, los recursos disponibles y cómo valoran las posibles consecuencias de los 
+riesgos.
+4.2.1
+4 Gestión del riesgo: 
+de seguridad de la información
+4.2.2GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+17
+Así quedarán definidos los criterios  para:
+n evaluación de riesgos:
+_cuáles son los activos de información críticos.
+_la importancia de los mismos en cuanto a disponibilidad, integridad y confidencialidad.
+_el valor estratégico de los procesos de información del negocio.
+n niveles de clasificación de los impactos
+n escalas de aceptación de riesgos
+Por último se define el ámbito  y los límites de esta gestión, es decir a qué parte de la organización 
+afecta, que procesos, que oficinas o que parte de la estructura.
+Valorando los riesgos de seguridad de la información
+Esta es la fase central de la gestión de riesgos. Consta a su vez de:
+n identificación 
+n análisis 
+n evaluación
+Identificando los riesgos
+Para la evaluación de riesgos de seguridad de la información en primer lugar se han de identificar 
+los activos de información . En general estos pueden ser de dos tipos:
+n Primarios:
+_información: estratégica, de carácter personal o que esté sujeta a legislación que la pro-
+teja, esencial para el desarrollo del negocio, de difícil o muy costosa reposición, etc
+_actividades y procesos de negocio: que tienen que ver con propiedad intelectual, los 
+que si se degradan hacen imposible la ejecución de las tareas de la empresa, los ne -
+cesarios para el cumplimiento legal o contractual, etc
+n De soporte:
+_hardware: PC, portátiles, servidores, impresoras, discos, documentos en papel
+_software: sistemas operativos, paquetes, aplicaciones, ...
+_redes: conmutadores, cableado, puntos de acceso, ...
+_personal: usuarios, desarrolladores, responsables, ...
+_edificios, salas, y sus servicios
+_estructura organizativa: responsables, áreas, contratistas, ...
+Después de tener una relación con todos los activos se han de conocer las amenazas  que pueden 
+causar daños en la información, los procesos y los  soportes. La identificación de las amenazas y la 
+valoración de los daños que pueden producir se puede obtener preguntando a los propietarios 
+de los activos, usuarios, expertos, etc. En el apartado anterior se mencionan algunos ejemplos. 
+4 Gestión del riesgo: 
+de seguridad de la información
+4.2.3
+4.2.3.1GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+18
+¡
+Para valorar los daños estas son algunas de las preguntas:
+n ¿qué valor tiene este activo para la empresa?
+n ¿cuánto cuesta su mantenimiento?
+n ¿cómo repercute en los beneficios de la empresa?
+n ¿cuánto valdría para la competencia?
+n ¿cuánto costaría recuperarlo o volverlo a generar?
+n ¿cuánto costó adquirirlo o su desarrollo?
+n ¿a qué responsabilidades legales o contractuales nos enfrentamos si se ve com -
+prometido?
+Posiblemente ya se hayan tomado algunas medidas para contrarrestar estas amenazas. Es impor -
+tante tenerlas en cuenta para no duplicar esfuerzos, analizar si son efectivas y si aún se utilizan o no. 
+Al llegar aquí tendremos, un listado de activos, sus amenazas y las medidas que ya se han tomado. 
+A continuación revisaremos las vulnerabilidades que pueden aprovechar las amenazas y causar 
+daños a nuestros activos de información. Existen distintos métodos para analizar amenazas  por 
+ejemplo:
+n entrevistas con usuarios y cuestionarios
+n inspección física 
+n uso de herramientas para el escaneo automatizado
+Para cada una de las amenazas analizaremos las vulnerabilidades  que puede explotar. La norma 
+ISO 27005  [11]  incluye un anexo con ejemplos de vulnerabilidades y amenazas que puede servir 
+de apoyo en esta tarea. 
+Finalmente se han de concretar las consecuencias , es decir, cómo estas amenazas y vulnerabi -
+lidades afectan a la disponibilidad, integridad y confidencialidad de los activos de información.
+Las distintas metodologías y herramientas proporcionan listados que 
+sirven de orientación a la hora de identificar activos, amenazas y vul -
+nerabilidades.  
+4 Gestión del riesgo: 
+de seguridad de la información
+GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+19
+Estimando los riesgos
+En la fase de establecimiento del contexto se determinaron una serie de criterios que serán las 
+directrices de la estimación de riesgos. Son los que servirán para medir las consecuencias o im -
+pacto  de la pérdida de confidencialidad, integridad y disponibilidad de los activos. Estos criterios 
+se concretan en escalas para valorar:
+n pérdidas financieras
+n costes de reparación o sustitución
+n interrupción del servicio
+n pérdida de reputación y confianza de los clientes
+n disminución del rendimiento
+n infracciones legales o ruptura de condiciones contractuales
+n pérdida de ventaja competitiva
+n daños personales
+Esta tabla muestra un posible ejemplo de estos criterios:
+La estimación puede realizarse con distinta profundidad o nivel de detalle. Los métodos para 
+realizarla incluyen estimaciones cualitativas y cuantitativas o una combinación de ambas. Suele 
+realizarse una estimación cualitativa inicial para identificar los riesgos que precisan una estima -
+ción cuantitativa. 
+Catastrófico
+Rango impacto / Descripción
+> 6 % del
+presupuesto
+6% del 
+Presupuesto
+2% del
+presupuesto
+1% del
+presupuesto
+< 0,5 % del
+presupuesto
+5 Total
+Muy gran
+impacto
+   Gran impacto
+  
+ Impacto menor
+  
+ Casi sin impacto
+Mayor que un 
+mes
+De una semana
+ a un mes
+De un día a una 
+semana
+½ día o 1 día
+Menor de ½ día
+Alta y muy
+extendida
+Media y muy
+extendida
+Media y poco
+extendida
+Baja y muy
+extendida
+Baja y poco
+extendida
+> 50 % de variación 
+en los indicadores
+25-50 % variación 
+en los indicadores
+10-25% variación 
+en los indicadores
+5-10 % variación 
+enl os indicadores
+Hasta  5% variación
+ en los indicadores
+Desastroso
+Serio
+Menor
+Insignificante
+4
+3
+2
+1
+Descripción Pérdidas
+financieras
+Pérdida 
+del activo(s)
+Reputación
+e imagen
+Disminución
+de rendimiento
+Tabla 1  Ejemplo de niveles de clasificación de los impactos de un incidente
+4.2.3.2
+4 Gestión del riesgo: 
+de seguridad de la información
+GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+20
+¡
+En la estimación cualitativa se califican las potenciales consecuencias y la probabilidad según ni -
+veles (alto, medio, bajo) subjetivos. En la cuantitativa se utiliza una escala con valores numéricos, 
+apoyándose en datos de distintas fuentes por ejemplo incidentes del pasado, experiencia previa, 
+estudios, etc.
+Se recomienda la lectura de los siguientes contenidos del portal:
+n «Fácil y sencillo: análisis de riesgos en 6 pasos» [6]
+n «Plan director de seguridad» [7], en particular el área de descargas  
+ con plantillas y hojas de verificación .
+Además de medir las posibles consecuencias se ha de estimar la  probabilidad de que ocurran los 
+incidentes . También en este caso se utilizan técnicas cualitativas y cuantitativas que consideran:
+n estadísticas de los incidentes en el pasado, de estudios o del sector
+n factores geográficos o estacionales (temperatura, inundaciones, ...)
+n motivaciones de los posibles atacantes (atractivo de los datos que se manejan, 
+clima laboral, ...)
+n vulnerabilidades existentes
+n medidas que ya se han tomado y su resultado
+Como resultado tendremos la valoración de las consecuencias y su probabilidad, con las que po -
+dremos estimar el nivel del riesgo.
+Además de medir las 
+posibles consecuencias 
+se ha de estimar la 
+probabilidad de que 
+ocurran los incidentes
+4 Gestión del riesgo: 
+de seguridad de la información
+GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+21
+15Casi seguro 20 255 5 10
+12Muy probable 16 204 4 8
+9Posible 12 153 3 6
+6Improbable 8 102 2 4
+3Muy improbable 4 51 1 2
+3Probabilidad 4 5x 1 2
+Serio Desastroso CatastróficoImpacto Insignificante Menor
+Tabla 2   Estimación del producto «probabilidad x impacto» para evaluar riesgos
+Evaluando los riesgos
+Una vez se han valorado las consecuencias o impactos y la probabilidad de los incidentes para los 
+activos del ámbito elegido, se ha de realizar el producto de ambos para calcular los riesgos. Los 
+resultados obtenidos se compararán con los criterios de aceptación de riesgo. 
+La siguiente tabla muestra un ejemplo de un mapa de calor con el que comparar las valoraciones 
+realizadas. Situaremos cada riesgo en la tabla, antes y después de considerar como han afectado 
+las medidas que ya se habían puesto en marcha.
+Este tipo de tablas también servirá para estimar qué tratamiento dar a cada riesgo. Por ejemplo los 
+riesgos en la zona roja serían inaceptables pero los de la zona blanca podemos elegir soportarlos. Estos 
+criterios nos ayudarán en la fase siguiente. 
+Tratando y aceptando riesgos de seguridad de la información
+Como resultado de la etapa anterior tendremos una lista ordenada de riesgos o una tabla como la del 
+ejemplo con su posición. Ahora debemos elegir qué hacer con cada uno de ellos en virtud de su valo -
+ración y de los criterios establecidos. Es decir, tendremos que situar la «línea roja» de nuestro umbral o 
+nivel de tolerancia al riesgo. 
+En esta fase se seleccionarán la opción de tratamiento adecuada  (evitar, reducir o mitigar, transferir o 
+aceptar) para cada uno de los riesgos de la lista. Para elegir las opciones, o una combinación de ellas, se 
+considerará no sólo la valoración obtenida para cada riesgo sino también el coste del tratamiento. Por 
+ejemplo será mejor evitar algún riesgo que mitigarlo si el coste es muy alto. Se preferirán las opciones 
+que aporten una reducción considerable del riesgo de la forma más económica. El nivel de tolerancia 
+de riesgo se establece en base a criterios de coste-beneficio . 
+4.2.4
+4.2.3.3
+4 Gestión del riesgo: 
+de seguridad de la información
+GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+22
+El coste del tratamiento es muy 
+superior a los beneficios.
+El coste del tratamiento es ade -
+cuado a los beneficios.
+El coste del tratamiento por terce -
+ros es más beneficioso que el tra -
+tamiento directo.
+El nivel de riesgo está muy alejado 
+del nivel de tolerancia.
+Coste-Beneficio Tratamiento
+Evitar el riesgo , por ejemplo, dejando de rea -
+lizar esa actividad.
+ 
+Reducir o mitigar el riesgo : seleccionando e 
+implementando los controles o medidas ade -
+cuadas que hagan que se reduzca la probabi -
+lidad o el impacto.
+Transferir el riesgo, por ejemplo , contratan -
+do un seguro o subcontratando el servicio.
+Retener o aceptar el riesgo  sin implementar 
+controles adicionales. Monitorizarlo para con -
+firmar que no se incrementa.
+Para reducir o mitigar los riesgos se realizan estas acciones:
+n instalar productos o contratar servicios
+n establecer controles de seguridad
+n mejorar los procedimientos
+n cambiar el entorno
+n incluir métodos de detección temprana
+n implantar un plan de contingencia y continuidad
+n realizar formación y sensibilización
+Los controles son medidas de protección para reducir el riesgo. La norma 
+ISO 27001:2013 [8] en su anexo A incluye una lista de controles -no ex-
+haustiva- de aplicación a la mayoría de empresas.
+El resultado de esta fase se concreta en un plan de tratamiento de riesgos , es decir, la selección y justi -
+ficación de una o varias opciones para cada riesgo identificado.  A este plan se añadirá una relación de 
+riesgos residuales , es decir, aquellos que aún siguen existiendo a pesar de las medidas tomadas.
+Adicionalmente se incluye en algunos modelos una etapa de aceptación del riesgo  para garantizar que 
+la dirección es consciente de los riesgos residuales. Esta situación es importante cuando se decide pospo-
+ner la implantación de medidas o rechazarla por motivos económicos.
+¡
+4 Gestión del riesgo: 
+de seguridad de la información
+Tabla 3   Ejemplo criterios para el tratamiento de riesgosGESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+23
+Monitorizando los riesgos de seguridad de la información
+Periódicamente se revisará el valor de los activos, impactos, amenazas, vulnerabilidades y probabilida -
+des en busca de posibles cambios. 
+Los riesgos no son estáticos y pueden cambiar de forma radical sin previo aviso. Por ello es necesaria 
+una supervisión continua que detecte:
+n nuevos activos o modificaciones en el valor de los activos
+n nuevas amenazas
+n cambios o aparición de nuevas vulnerabilidades
+n aumento de las consecuencias o impactos 
+n incidentes de seguridad de la información
+De forma análoga se revisará el propio proceso de gestión de riesgos para adecuarlo al contexto. Esta 
+revisión afecta entre otros a:
+n las categorías de activos
+n los criterios de evaluación de riesgos
+n los niveles de clasificación de los impactos
+n las escalas de aceptación de riesgos 
+n los recursos necesarios
+Como resultado de la gestión de riesgos tenemos identificados los riesgos y su forma de tratarlos. Este 
+es un buen punto de partida para gestionar la seguridad de la información en la empresa de forma 
+amplia, planificando las distintas actuaciones de forma que estén organizadas en el tiempo y alineadas 
+con la estrategia del negocio. 
+La gestión de riesgos es el proceso central para poner en marcha un Plan director de seguridad de la 
+información . En este plan se definen y priorizan, en base a una evaluación de riesgos, los proyectos 
+que se hayan de implantar para reducir los riesgos a que está expuesta la empresa.
+Se recomienda la lectura del siguiente contenido del portal:
+«Plan director de seguridad» [7]
+4.2.5
+4 Gestión del riesgo: 
+de seguridad de la información
+¡GESTIÓN DE RIESGOS  
+Una guía de aproximación para el empresario
+24
+5 Referencias
+1 EEUU, COSO Committee of Sponsoring Organizations of the Treadway Commission (2015) 
+«Guidance», <http://www.coso.org/guidance.htm> [consulta: 12/05/2015]
+2 ISO, INTERNATIONAL STANDARIZATION ASSOCIATION (2009) «ISO 31000:2009 Risk manage -
+ment – Principles and guidelines», < http://www.iso.org/iso/ES/home/standards/iso31000.
+htm> [consulta: 12/05/2015]
+3 Gobierno de España – ADMINISTRACIÓN ELECTRÓNICA (2012),  MAGERIT V3: Metodología de 
+Análisis y Gestión de Riesgos de los Sistemas de Información,   <http://administracionelectro-
+nica.gob.es/pae_Home/pae_Documentacion/pae_Metodolog/pae_Magerit.html#.VVBx5WP-
+soco> [consulta: 12/05/2015]
+4 EEUU NIST, National Institute of Standards and Technology (2012), «Special Publication 800-30 
+Rev.1», Guide for conducting risk assessment, Computer Security Division Information Tech -
+nology Laboratory, < http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-
+30r1.pdf> [consulta: 12/05/2015]
+5 INCIBE Protege tu empresa - Blog  (2014) «Sigue el camino del análisis de riesgos»  <https://www.
+incibe.es/protege-tu-empresa/blog/sigue-camino-analisis-riesgos> [consulta: 12/05/2015]
+6 INCIBE - Protege tu empresa -  Blog (2014) «Fácil y sencillo: análisis de riesgos en 6 pasos» 
+<https://www.incibe.es/protege-tu-empresa/blog/analisis-riesgos-pasos-sencillo> [consulta: 
+12/05/2015]
+7 INCIBE - Protege tu empresa - ¿Qué te interesa? (2014), «Plan director de seguridad» < https://
+www.incibe.es/protege-tu-empresa/que-te-interesa/plan-director-seguridad> [consulta: 
+12/05/2015]
+8 ISO (2013) “ISO 27001:2013 Information security management systems - Requirements” , 
+<http://www.iso.org/iso/home/standards/management-standards/iso27001.htm> [consulta: 
+12/05/2015]
+9 ISO27000.es: el portal de la ISO27001 en español <http://www.iso27000.es/> 
+10 ISMS FORUM SPAIN: Asociación española para el fomento de la seguridad de la información 
+<https://www.ismsforum.es/>
+11 ISO (2011) «ISO 27005:2011 Information technology - Security techniques - Information se -
+curity risk management» < http://www.iso.org/iso/home/store/catalogue_ics/catalogue_de-
+tail_ics.htm?csnumber=56742>
+12 INCIBE Protege tu empresa - Blog  (2013) «Nueva versión ISO/IEC 27001:2013»  <https://www.
+incibe.es/protege-tu-empresa/blog/nueva-version-iso27001> [consulta: 12/05/2015]

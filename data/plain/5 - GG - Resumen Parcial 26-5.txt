@@ -1,0 +1,166 @@
+Resumen Parcial 26/5 
+Hammer y Champy 
+Unidad 1 – La Crisis que No Va a Desaparecer (hasta pág. 18)  
+Los ejecutivos no quieren que sus empresas funcionen así, pero lo hacen de todos 
+modos: 
+• A veces las unidades organizativas son calificadas según indicadores que 
+provocan, por efecto mariposa, que la empresa funcione ineficientemente.  
+• La eficiencia de las partes puede provocar ineficiencia en el todo. 
+• Las tareas que requieren la participación de varios departamentos suelen 
+originar problemas. 
+• Si no hay nadie a cargo, el trabajo se demora. 
+Los gerentes no son ineptos, ni los trabajadores perezosos. 
+El mundo en el que opera una empresa ha cambiado más allá de su capacidad 
+para adaptarse o evolucionar. 
+Las empresas anteriormente se basaron en el principio de la división del trabajo, 
+de Adam Smith. Esta especialización fue llevada al punto en que los gerentes 
+quieren “programar” personas. 
+Henry Ford y Alfred Sloan crearon la “producción masiva”, mediante la cadena de 
+montaje y un sistema de administración de la misma. Ford aplicó la 
+especialización a la producción, y Sloan a la administración. 
+Finalmente, las empresas desarrollaron sistemas más complejos para 
+presupuestar, planificar y controlar, pudiendo crecer rápidamente al tener una 
+estructura piramidal. Esto fue importante tras la segunda guerra mundial. 
+Las desventajas de esta empresa son: 
+• Los procesos se complejizaron, al agregar personas en el medio del 
+organigrama 
+• La distancia entre gerentes generales y los usuarios aumentó, midiendo las 
+respuestas a las estrategias solo en números, no en caras 
+Las empresas deben aceptar que la división del trabajo ya no aplica. 
+Las tres fuerzas actuales que mueven a las empresas son (3 Cs): 
+• Clientes toman el poder 
+• Competencia se intensifica • Cambio se vuelve constante 
+Unidad 2 – Reingeniería: El Camino del Cambio  
+Reingeniería significa empezar de nuevo. 
+Reingeniería es el repensamiento fundamental y rediseño radical de procesos de 
+negocio para lograr mejoras dramáticas en medidas de rendimiento críticas y 
+contemporarias. 
+Palabras clave: 
+• Fundamental: porque se debe preguntar ¿qué se hace? Y ¿por qué lo 
+hacemos como lo hacemos? Se ignora lo que es y se enfoca en lo que 
+debería ser. 
+• Radical: no hacer cambios superficiales, sino ir a la raíz. Reinventar. 
+• Dramático: no hacer mejoras marginales o incrementales. Hay tres tipos 
+de empresa que hacen reingeniería:  
+o las que están en problemas,  
+o las que cuyos gerentes ven los problemas venir, y 
+o las que están en perfecta condición pero los gerentes son 
+ambiciosos y agresivos. 
+• Proceso: colección de actividades que toma uno o más tipos de entrada y 
+crea una salida de valor para el cliente. 
+IBM Credit: empresa que otorgaba créditos para compras de artículos de IBM. 
+Estaba fuertemente fragmentado, y se demoraba en promedio 6 días para otorgar 
+un crédito. El problema era el proceso: las actividades tomaban 90 minutos, la 
+espera en pilas de papeles demoraba el resto del tiempo. La solución fue 
+reemplazar los especialistas por generalistas, con un sistema para apoyarlos y 
+algunos especialistas para asesorarlos cuando fuera necesario. El proceso pasó a 
+demorar cuatro horas. 
+Ford Motor Company: el departamento de pagos a proveedores empleaba 500 
+personas y automatizar los procesos las reduciría a 400, pero Mazda solo tenía 5. 
+No se aplicó reingeniería al departamento de pagos, sino al proceso de 
+adquisición. Antes, el departamento de pagos a proveedores utilizaba el 80% del 
+tiempo organizando las situaciones desiguales en que les llegaban los 
+documentos. Pasó de 500 a 125 personas. Cambiar una regla no hablada permitió 
+esto (pagar al recibir los bienes, no al ser notificados antes). 
+Kodak: Fuji creó una nueva cámara que Kodak no estaba ni cerca a igualar, así que 
+aplicó reingeniería a su proceso de desarrollo de productos. El diseño se realizaba 
+en paralelo, lo que implica que los subsistemas no suelen encajar. La ingeniería 
+de la manufactura se hacía en secuencia, que implica esperar a que termine la actividad anterior. Usando una base de datos integrada de diseño de productos, 
+pudieron hacer que trabajaran en conjunto los diseñadores, y que los ingenieros 
+de manufactura comiencen sus tareas mucho antes a partir de prototipos. Esto se 
+llama ingeniería concurrente. 
+Temas recurrentes en la reingeniería: 
+• Orientación a procesos 
+• Ambición 
+• Rompimiento de reglas 
+• Uso creativo de tecnologías de la información 
+Qué es y qué no es: 
+• Reingeniería no es automatización 
+• Reingeniería no es reingeniería de software 
+• Reingeniería no es reestructuración ni downsizing 
+• Reingeniería no es reorganizar, delayering, o aplanar una organización. La 
+burocracia es una solución al problema de los procesos fragmentados, y la 
+reingeniería elimina la necesidad de la burocracia al eliminar la 
+fragmentación. 
+• Reingeniería no es Gestión Total de la Calidad  
+• Reingeniería es empezar de nuevo 
+• Reingeniería se trata de revertir la revolución industrial 
+Unidad 7 – En Busca de Oportunidades de Reingeniería  
+El objeto de la reingeniería son los procesos, no los departamentos. 
+Una buena forma de entender mejor los procesos es llamarlos por sus cambios de 
+estado: concepto a prototipo, orden a pago, solicitud a resolución, etc. 
+Los procesos suelen ser pocos, y se los puede organizar en un mapa de procesos:  
+El mapa de procesos solo toma los procesos centrales. Estos pueden ser 
+divididos en subprocesos, con sus propios mapas de procesos. 
+Las empresas que van a aplicar reingeniería tienen que seleccionar los procesos y 
+elegir el orden. Se suelen usar tres criterios: 
+• Disfunción (quebrantamiento) 
+Síntoma Enfermedad Tratamiento 
+Intercambio excesivo 
+de información, 
+redundancia de datos, 
+retipeado 
+Fragmentación 
+arbitraria de un 
+proceso natural. 
+Unificar, para que las 
+personas se comuniquen 
+menos (no más) 
+Inventarios, buffers y 
+otros activos 
+Ineficiencias 
+sistémicas para 
+contrarrestar la 
+incertidumbre 
+Eliminar la incertidumbre, 
+estructurando mejor los 
+procesos 
+Mucha revisión y 
+control del valor, 
+agregando trabajo 
+Fragmentación Eliminar la incompetencia 
+y desconfianza, por la que 
+se pusieron los controles 
+Retrabajo e iteración Retroalimentación 
+inadecuada en las 
+cadenas 
+Eliminar los errores y la 
+confusión que causan el 
+retrabajo 
+Complejidad, 
+excepciones y casos 
+especiales 
+Agregación a una 
+base simple 
+Armar múltiples 
+procesos, uno por caso, 
+con un punto de decisión 
+al principio para elegir el 
+indicado 
+ 
+Muchas veces, las evidencias de que un proceso está quebrantado se 
+muestran en otro. 
+• Importancia (para el cliente): preguntar a los clientes qué valoran más, 
+para trazar sus respuestas a los procesos 
+• Factibilidad  (más probable que haya éxito al rediseñar). Implica el alcance, 
+los costos, la fuerza del equipo de reingeniería y el compromiso del dueño 
+del proceso. 
+Tras seleccionar el proceso, elegir el dueño del proceso y el equipo de 
+reingeniería, se debe entender el proceso actual.  
+No necesita ser profundo el entendimiento. El análisis exhaustivo no sirve, porque 
+no nos lleva a entender bien el proceso. 
+La mejor forma para empezar a entender un proceso son sus clientes: sus 
+requerimientos, lo que quieren y lo que necesitan, sus problemas, los procesos 
+que realizan con la salida. 
+Entender implica considerar los objetivos y problemas del cliente. 
+Observar al cliente es mejor que preguntarle, y participar del proceso del cliente 
+es mejor que observarlo. 
+Una vez que se conocen la necesidades del cliente, se debe conocer lo que el 
+proceso le provee actualmente. El qué y el por qué. Para esto, se puede aplicar la 
+observación y la participación. 
+No se debe sobreestudiar, el objetivo debe ser pasar rápidamente al rediseño 
+Benchmarking es aprender cómo hacen algo empresas que lo hacen mejor, para 
+emularlo. El benchmarking, sin embargo, pone un límite a las ambiciones del 
+equipo.  
+El benchmarking en la reingeniería se tiene que hacer respecto al mejor del 
+mundo, no de la industria. 

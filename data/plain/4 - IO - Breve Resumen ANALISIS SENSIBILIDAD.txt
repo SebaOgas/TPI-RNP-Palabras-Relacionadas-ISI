@@ -1,0 +1,63 @@
+UNIDAD 3 – ANALISIS SENSIBILIDAD 
+2024 
+• El A.S. si o si está relacionado a problemas resueltos con Simplex, por eso 
+se ve después de Programación Lineal 
+• Nos permite ver el comportamiento de un modelo evitando que se vuelva 
+a resolver 
+Conceptos relacionados a A.S. 
+• Variables de decisión: Elementos sobre los cuales puedo interceder o 
+cambiar. 
+• Coeficiente: son los valores que acompañan a mis variables de decisión y 
+que contribuyen a la solución óptima. 
+• Función objetivo:  función que incluye las variables de decisión  (no 
+necesariamente todas  las del problema ). Y además, quizás  no todas 
+formen parte de la solución óptima. 
+• Solución óptima: son los valores que toman las variables de la función 
+objetivo para optimizar mi problema (maximizar ganancias o minimizar 
+costos). 
+• Óptimo: es el valor de Z. 
+ 
+El análisis de sensibilidad lo vamos a separar en 2: 
+• Cambios que ocurren dentro de la función objetivo (COSTO REDUCIDO) 
+• Cambios que ocurren en las restricciones (PRECIO SOMBRA) 
+ 
+COSTO REDUCIDO 
+COSTO REDUCIDO: en cuanto tiene que mejorar el coeficiente para que la 
+variable sea parte de la solución óptima. 
+Si la variable forma parte de la solución óptima su costo reducido va a ser igual 
+a cero.  
+Si la variable es igual a cero (o sea no forma parte de la solución óptima), el costo 
+reducido tiene que ser distinto de cero, y eso es en cuanto tiene que mejorar 
+para formar parte de la solución óptima 
+Solo se puede cambiar un coeficiente  a la vez , si cambio dos o más , 
+independientemente que estén dentro de los valores permitidos no puedo 
+asegurar que la solución siga siendo la óptima. Moviéndome dentro de los valores de  “Permisible Aumentar” y “Permisible 
+Reducir”, me aseguro que la variable entra a la solución óptima, pero no puedo 
+saber que va a pasar con el resto de las variables. 
+ 
+PRECIO SOMBRA 
+PRECIO SOMBRA: trabaja sobre el la do derecho de las restricciones y puedo 
+dividir el análisis en las restricciones “Activas o Vinculantes” y las “No Activas o 
+No Vinculantes”  
+Me permite saber en cuanto cambia mi óptimo (Z) , si cambio en una unidad el 
+valor de mi lado derecho de las restricciones. 
+Y lo puedo hacer hasta los límites de “Permisible Aumentar” y “Permisible 
+Reducir”. 
+ 
+Tomando el ejemplo de la PROTRAC: 
+En las variables activas o vinculantes (Horas del Dpto. A y B) 
+Si aumento 1 hora al Dpto . A. el Z aumenta en 150, y lo puedo aumentar hasta 
+240 unidades (150 + 90) y disminuir hasta 102,86 unidades (150 – 47,14) 
+¡OJO CON LOS LIMITES!!! 
+Para que los límites formen parte de la soluc ión óptima, tiene que ser una 
+solución NO DEGENERADA. 
+• Solución no degenerada:  cuando todas las variables participan de la 
+solución óptima. 
+• Solución degenerada: cuando al menos una variable no participa de la 
+solución óptima. 
+ 
+En las variables no activas o no vinculantes (Horas de verificación, relación E-F 
+y Demanda mínima) 
+Me permite saber en cuanto puedo aumentar o disminuir el lado derecho de mis 
+restricciones sin que altere la solución óptima. 
+ 

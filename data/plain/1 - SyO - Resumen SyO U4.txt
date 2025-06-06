@@ -1,0 +1,117 @@
+UTN - FRM          Ingeniería en Sistemas de Información 
+Sistemas y Organizaciones          Resumen Unidad 4: Arquitectura Empresarial 
+ 
+1 
+ 
+UTN - FRM  
+Ingeniería en Sistemas de Información 
+Sistemas y Organizaciones 
+Resumen Unidad 4: Arquitectura Empresarial 
+ Arquitectura Empresarial: forma de representar integral mente la empresa de 
+forma sistémica, incorporando componentes críticos como los procesos, la estructura 
+organizacional y las tecnol ogías de la información. 
+ Framework: entorno de referencia, componentes especi ales que actúan como 
+base para la estructuración de otras componentes más complejas. Frameworks de 
+arquitectura empresarial conocidos: 
+o Zachman 
+o E2AF 
+o TOGAF (The Open Group Architecture Framework) 
+o GEAF 
+o FEAF 
+o BTEP 
+ Subtipos de arquitectura según TOGAF: 
+o Arquitectura de negocio: estrategia de negocio, gobierno, organización y 
+procesos cl ave de la organización. 
+o Arquitectura de datos: la estructura de datos físicos y lógicos que posee una 
+organización y sus recursos de gestión de datos. 
+o Arquitectura de aplicación: las aplicaciones individuales a implementar, sus 
+interacciones y relaciones con los procesos de negocio principales. 
+o Arquitectura Tecnológica: capacidades de software y hardware requeridas para 
+soportar los otros tipos de arquitectura. 
+Procesos 
+ Stakeholders: interesados, actores internos y externos cuyas expectativas buscamos 
+satisfacer. 
+ Procesos: conj unto de actividades mutuamente rel acionadas o que interactúan, 
+las cuales transforman el ementos de entrada en resultados.  
+ Estructuras organizacionales: 
+o Basada en funciones: tradicional, agrupar las actividades por sus similitudes. 
+o Basada en procesos: enfocada en el cliente (y stakeholders en general). 
+ Tipos de proceso: 
+o De dirección: actividades estratégicas que dirigen y orientan a la organización. 
+o Operativos, clave: son los que se relacionan de forma directa con los clientes, la 
+actividad principal de la empresa. 
+o De apoyo: soportan los otros tipos de proceso, son necesarios para el buen 
+funcionamiento de la empresa. 
+ Procedimiento: conj unto de reglas e ins trucciones que detallan cómo funciona un 
+proceso. Es descomponer al proceso en actividades. 
+ Actividades: agrupación de tareas dentro de un procedimiento.  
+ Mapa de procesos: representación gráfica de los procesos de una empresa, clasificándolos 
+y, posiblemente, indicando sus relaciones mediante diagramas de flujo. UTN - FRM          Ingeniería en Sistemas de Información 
+Sistemas y Organizaciones          Resumen Unidad 4: Arquitectura Empresarial 
+ 
+2 
+ 
+ Elementos de un proceso: entrada, salida, límites claros y conocidos, sistema de control 
+y un gestor. 
+ Requisitos básicos de un proceso: capaz de mejorarse continuamente, poseer indicadores 
+identificados para ver su evolución y un gestor que asegure su funcionamiento y mejora 
+continua. 
+ Ficha SIPOC: representación gráfica que permite analizar un proceso, identificando 
+proveedores (Suppliers), entradas (Inputs), proceso/procedimiento (Process), salidas 
+(Outputs) y clientes (Clients).  
+ BPMN: Business Process Model and Notation es una notación gráfica estándar para 
+modelar procesos de negocio. 
+o Sintaxis: tiene un conjunto de símbolos y reglas para combinarlos correctamente. 
+o Semántica: las estructuras formadas por los símbolos tienen un significado. 
+o Elementos: 
+ Canales: 
+ Pools: contienen un proceso realizado por un participante BPMN 
+ Lanes: divisiones de pools para identificar quién realiza cada 
+actividad dentro de un proceso. 
+ Fases: divisiones de pools para delimitar etapas dentro de un 
+proceso. 
+ Objetos de flujo: 
+ Actividades: tareas o pasos dentro de un proceso. 
+ Tareas: genéricas, de usuario, manuales, de script, de 
+servicio, de envío, de recepción, de regla de negocio, etc. 
+ Subprocesos: actividades compuestas, incluye otras 
+actividades y una secuencia lógica ente ellas. 
+ Eventos: “algo” que ocurre o puede ocurrir. 
+ De inicio: simple, por mensaje, temporizador, señal. 
+ Intermedio: sin especificar, de enlace, de mensaje, de 
+tiempo, de señal. 
+ De fin: simple, de mensaje, de señal, terminal. 
+ Compuertas: permiten controlar los puntos de divergencia y 
+convergencia (sincronización) de un flujo. 
+ Paralela: permite que varias actividades puedan realizarse en 
+paralelo. 
+ Exclusiva basada en datos. 
+ Exclusiva basada en eventos: permite mantener varias 
+actividades disponibles hasta que una de ellas es ejecutada. 
+ Inclusiva: permite que uno o varios caminos se activen. 
+ Compleja: para controlar puntos de decisión complejos. 
+ Artefactos: 
+ Objeto de datos: documentos, formularios o entidades actualizadas 
+durante el proceso. 
+ Anotaciones: agregan información relevante, comentarios. 
+ Agrupaciones: permiten relacionar distintos elementos de un 
+diagrama, pueden cruzar los límites del pool. UTN - FRM          Ingeniería en Sistemas de Información 
+Sistemas y Organizaciones          Resumen Unidad 4: Arquitectura Empresarial 
+ 
+3 
+ 
+ Almacenes de datos: permiten que las actividades recuperen o 
+actualicen información guardada previamente, para que esta exista 
+más allá del proceso. 
+ Conectores: 
+ Flujos de secuencia: controlan la secuencia de actividades dentro del 
+proceso, no pueden cruzar los límites de un pool. 
+ Flujos de mensaje: muestran el flujo de interacción entre dos 
+participantes (procesos separados). Deben cruzar los límites del 
+pool. 
+ Asociación: unen artefactos con actividades 
+o Sintaxis:  
+ Actividades: verbo (infinitivo) + sustantivo (objeto) 
+ Eventos: sustantivo (objeto) + verbo (participio) 
+o Orientación del diagrama: los procesos deben ser modelados de izquierda a 
+derecha, sin flujos de secuencia que regresen. 

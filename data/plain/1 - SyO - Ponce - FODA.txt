@@ -1,0 +1,1318 @@
+ 
+"Contribuciones a la Economía"  
+septiembre 2006 
+una revista académica con el 
+ Número Internacional Normalizado de Publicaciones Seriadas  
+ ISSN 16968360 
+ 
+La matriz FODA: una alternativa para realizar diagnósticos y 
+determinar estrategias de intervención en las organizaciones 
+productivas y sociales 
+ 
+ 
+Humberto Ponce Talancón 
+Jefe de la Sección de Estudios de Posgrado e Investigación de la ESCA Santo Tomás.                  
+Es licenciado, maestro y doctor en psicología social, con estudios de doctorado en administración pública por la 
+UNAM. Ha ocupado puestos de dirección y asesoría en la administración pública federal y en el sector bancario. 
+ 
+ 
+Escuela Superior de Comercio y Administración 
+Unidad Santo Tomás 
+ 
+ 
+Para citar este artículo puede utilizar el siguiente formato: 
+Ponce Talancón, H.  “La matriz FODA: una alternativa para realizar diagnósticos y determinar estrategias de 
+intervención en las organizaciones productivas y sociales" en Contribuciones a la Economía, septiembre 2006. 
+Texto completo en http://www.eumed.net/ce/ 
+ 
+ 
+ABSTRACT 
+This article makes referenc e to SWOT (Strenghts, Weakness, Opportunities, Threats) analysis, it means the 
+identification of strengths, weaknesses, opportunities a nd threats, procedurement to follow, factors of most 
+influence. 
+ 
+ 
+PALABRAS CLAVE  
+Matrices FODA,  MEFI, MPC, MEFE, MAFE, MEPE, MBCG, MIE, MGE, MCPE. 
+ 
+RESUMEN 
+La imperiosa necesidad de abordar sistemáticamente y en forma c ontinua acciones de evaluación, para efectos de diagnóstico en l as 
+organizaciones del sector productivo (tanto públicas como priva das), basada en la aplicación de una herramienta objetiva, práct ica y 
+viable, conocida como Matriz FODA (fortalezas, oportunidades , debilidades y amenazas), que deriva en el siguiente grupo de matr ices:  
+La Matriz de Evaluación de Factores Internos (MEFI), la Matriz del Perfil Competitivo (MPC), la Matriz de Evaluación de Factore s 
+Externos (MEFE), la Matriz MAFE (Amenaz as, Oportunidades, Debilidades y Fortalezas), la Matriz de la Posición Estratégica y 
+Evaluación de la Acción (MEPE), la Matriz del Boston (MBCG), La Matriz Interna y Externa (MIE), Matriz de la Gran Estrategia (M GE) y 
+finalmente la Matriz Cuantitativa de la Planeación Estratégica (MCPE), que permite desarrollar las estrategias, y de ésta forma  analizar 
+los factores que tienen mayor preponderancia y proporciona juicios para la construcción de un balance estratégico, que represen ta para 
+la dirección de las organizaciones la posibilidad de participar en forma exitosa en la implantación de estrategias. 
+ Humberto Ponce Talancón 
+ 2
+ 
+ 
+INTRODUCCIÓN 
+ 
+Realizar diagnósticos en las organizaciones laborales es una c ondición para intervenir profesionalmente en la formulación e 
+implantación de estrategias y su seguimiento para efectos de evaluación y control. 
+ 
+La matriz FODA como instrumento viable para realizar análisis organizacional, en relación con los factores que determinan 
+el éxito en el cumplimiento de metas, es una alternativa que motivó a efectuar el análisis para su difusión y divulgación. 
+ 
+Es importante destacar que dicha alternativa fue aplicada en un estudio de evaluación de la información generada en una 
+institución de seguridad social perteneciente al gobierno federal de México (2004). Los resultados contribuyeron en forma 
+significativa para la toma de decisiones en la selección de medios electrónicos e impresos; así como, en los contenidos de 
+información y en la necesidad de profesionalizar a los servidores públicos responsables de la función de comunicación 
+social, para garantizar el impacto institucional esperado. 
+ 
+Análisis FODA. 
+Proviene del acrónimo en inglés SWOT, en español las sigl as son FODA (Fortalezas, Oportunidades, Debilidades y 
+Amenazas). 
+ 
+El análisis FODA consiste en realizar una evaluación de los factores fuertes y débiles que en su conjunto diagnostican la 
+situación interna de una organización, así como su evaluación externa; es decir, las oportunidades y amenazas. También es 
+una herramienta que puede considerarse sencilla y permite obtener una perspectiva general de la situación estratégica de 
+una organización determinada. Thompson (1998) establece que el  análisis FODA estima el hecho que una estrategia tiene 
+que lograr un equilibrio o ajuste entre la capacidad interna de la organización y su situación de carácter externo; es decir, las 
+oportunidades y amenazas. 
+ 
+ 
+¿Cómo identificar las fortalezas y debilidades? 
+ 
+Una fortaleza de la organización es alguna función que ésta realiza de manera correcta, como son ciertas habilidades y 
+capacidades del personal con atributos psicológicos y su evidencia de competencias. Otro aspecto identificado como una 
+fortaleza son los recursos considerados valiosos y la misma capacidad competitiva de la organización, como un logro que 
+brinda la organización y una situación favorable en el medio social. Una debildad de una organización se define como un 
+factor considerado vulnerable en cuanto a su organización o simplemente una actividad que la empresa realiza en forma 
+deficiente, colocándola en una situación considerada débil. Para  Porter, las fortalezas y oportunidades son, en su conjunto, 
+las capacidades, es decir, el estudio tanto de los aspectos fuertes como débiles de las organizaciones o empresas 
+competidoras (productos, distribución, comercialización y vent as, operaciones, investigación e ingenería, costos generales, 
+estructura financiera, organización, habilidad directiva, etc)
+1 
+Estos talones de aquiles de situaciones  pueden generar en la organización  una posición competitiva vulnerable. 
+Es posible destacar que acerca del procedimiento para el análisis FODA, que una vez identificados los aspectos fuertes y 
+débiles de una organización se debe proceder a la evaluación de ambos, es decir, de las fortalezas y las debilidades. Es 
+importante destacar que algunos factores tienen mayor preponderancia que otros, como lo plantea Strickland, al denominar 
+el análisis FODA como la construcción de un balance estratégico, mientras que los aspectos considerados fuertes de una 
+organización son los activos competitivos, y los débiles son los pasivos también competitivos. Pero se comete un error si se 
+trata de equilibrar la balanza. 
+ 
+Lo importante radica en que los activos competitivos o aspectos fuertes superen  a los pasivos competitivos o situaciones 
+débiles; es decir, lo trascendente es darle mayor ponderancia a los activos. 
+ 
+                                                           
+1 Porter, M. Técnicas para el análisis de los sectores industriales y de la competencia , capítulo 3, Marco de referencia para el análisis de la competencia, 
+Editorial CECSA,  pp. 71, 84 y 85 La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 3
+El éxito de la dirección es diseñar estrategias a partir de lo que la organización realiza de  la mejor manera, obviamente 
+tratando de evitar las estrategias cuya probabilidad de éxito se encuentre en función de los pasivos competitivos. 
+ 
+Identificar oportunidades y amenazas. 
+ 
+Las oportunidades constituyen aquellas fuerzas ambientales de carácter externo no controlables por la organización, pero 
+que representan elementos potenciales de crecimiento o mejoría. 
+La oportunidad en el medio es un factor de gran importancia qu e permite de alguna manera moldear las estrategias de las 
+organizaciones. 
+Las amenazas son lo contrario de lo anterior, y representan la suma de las fuerzas ambientales no controlables por la 
+organización, pero representan fuerzas o aspectos negativos y problemas potenciales. Las oportunidades y amenazas no 
+sólo pueden influir en la atractividad del estado de una organización; ya que establecen la necesidad de emprender 
+acciones de carácter estratégico, pero lo importante de este análisis es evaluar sus fortalezas y debilidades, las 
+oportunidades y las amenazas y llegar a conclusiones. 
+En la matriz que se presenta a continuación (ver cuadro 1), Thompson propone cuales son los aspectos que se deben 
+considerar para elaborar los listados de la Matriz FODA. 
+ 
+CUADRO 1: MATRIZ FODA 
+ 
+FORTALEZAS DEBILIDADES 
+• Capacidades 
+fundamentales en áreas 
+claves. 
+• Recursos financieros 
+adecuados. 
+• Buena imagen de los 
+compradores. 
+• Un reconocido líder en el 
+mercado. 
+• Estrategias de las áreas 
+funcionales bien ideadas. 
+• Acceso a economías de 
+escala. 
+• Aislada (por lo menos 
+hasta cierto grado) de las 
+fuertes presiones 
+competitivas. 
+• Propiedad de la 
+tecnología. 
+• Ventajas en costos.  
+• Mejores campañas de 
+publicidad. 
+• Habilidades para la 
+innovación de productos. 
+• Dirección capaz.  
+• Posición ventajosa en la 
+curva de experiencia. 
+• Mejor capacidad de 
+fabricación. 
+• Habilidades tecnológicas 
+superiores. 
+• No hay una dirección 
+estratégica clara. 
+• Instalaciones 
+obsoletas. 
+• Rentabilidad inferior al 
+promedio. 
+• Falta de oportunidad y 
+talento gerencial. 
+• Seguimiento deficiente 
+al implantar la 
+estrategia. 
+• Abundancia de 
+problemas operativos 
+internos. 
+• Atraso en investigación 
+y desarrollo. 
+• Línea de productos 
+demasiado limitada. 
+• Débil imagen en el 
+mercado. 
+• Débil red de 
+distribución. 
+• Habilidades de 
+mercadotecnia por 
+debajo del promedio. 
+• Incapacidad de 
+financiar los cambios 
+necesarios en la 
+estrategia. 
+• Costos unitarios 
+generales más altos en 
+relación con los 
+competidores clave. 
+OPORTUNIDADES AMENAZAS 
+• Atender a grupos 
+adicionales de clientes. 
+• Ingresar en nuevos 
+mercados o segmentos. 
+• Expandir la línea de 
+productos para satisfacer 
+una gama mayor de 
+necesidades de los 
+clientes. 
+• Diversificarse en 
+• Entrada de 
+competidores foráneos 
+con costos menores. 
+• Incremento en las 
+ventas y productos 
+sustitutos. 
+• Crecimiento más lento 
+en el mercado. 
+• Cambios adversos en 
+los tipos de cambio y Humberto Ponce Talancón 
+ 4
+productos relacionados. 
+• Integración vertical (hacia 
+adelante o hacia atrás). 
+• Eliminación de barreras 
+comerciales en mercados 
+foráneos atractivos. 
+• Complacencia entre las 
+compañías rivales. 
+• Crecimiento en el  
+mercado más rápido. 
+las políticas 
+comerciales de 
+gobiernos extranjeros. 
+• Requisitos 
+reglamentarios 
+costosos. 
+• Vulnerabilidad a la 
+recesión y ciclo 
+empresarial. 
+• Creciente poder de 
+negociación de clientes 
+o proveedores. 
+• Cambio en las 
+necesidades y gustos 
+de los compradores. 
+• Cambios demográficos 
+adversos. 
+Fuente: Thompson et. al. (1998), Dirección y administración estratégicas, conceptos, casos y lecturas , " Análisis SWOT.  Qué es 
+necesario buscar para medir los puntos fuertes, débiles, las oportunidades y   las amenazas de una compañía ",  Editorial McGraw 
+Hill, primera edición en español, México, p. 98 
+ 
+La Matriz FODA propuesta por Thompson anteriormente, constituye la base o el punto de partida para la formulación o 
+elaboración de estrategias, de la Matriz FODA se pueden re alizar nuevas matrices, de esta forma de la Matriz FODA 
+(Fortalezas, Oportunidades, Debilidades y Amenazas), se pueden desarrollar el marco analítico y las estrategias a través de 
+las etapas siguientes (cuadro 2): 
+ 
+CUADRO 2: MARCO ANALÍTICO PARA FORMULAR ESTRATEGIAS 
+ 
+Etapa 1: Etapa de los insumos 
+1. Matriz de Evaluación de los Factores 
+Internos (MEFI). 
+2. Matriz del Perfil Competitivo (MPC). 
+3. Matriz de Evaluación de los Factores 
+Externos (MEFE) 
+Etapa 2: La Etapa de la adecuación 
+1. Matriz de las Amenazas, Oportunidades, 
+Debilidades, Fortalezas (MAFE). 
+2. Matriz de la Posición Estratégica y la 
+Evaluación de la Acción (MEPE). 
+3. Matriz del Boston Consulting Group 
+(MBCG) 
+4. Matriz Interna -- Externa (MIE) 
+5. Matriz de la Gran Estrategia (MGE) 
+Etapa de la decisión 
+1. Matriz Cuantitativa de la Planeación 
+Estratégica (MCPE) 
+Fuente: Fred, R. David (1997) Conceptos de administración estratégica , "El marco analítico para formular  estrategias", Capítulo 6, 
+Análisis y elección de la estrategia, Quinta Edición, México, Prentice Hall Hispano Americano, p. 185 
+ 
+Matriz de Evaluación de los Factores Internos (MEFI). 
+ 
+Una vez elaborada la Matriz FODA, que enlista cuales son los factores internos y externos que influyen en el desempeño de 
+una organización, el siguiente paso es evaluar primeramente la situación interna de la compañía, esto mediante la Matriz de 
+Evaluación de los Factores Internos (MEFI), como lo muestra el cuadro 3. 
+El procedimiento para la elaboración de una MEFI se constituye por cinco etapas, y la diferencia se tomará solamente para 
+realizar la evaluación de las fortalezas y debilidades de la organización y los valores de las calificaciones son distintos: 
+  
+Es fundamental hacer una lista de las fortalezas y debilidades de la organización para su análisis, entre las que figuran: 
+ La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 5
+1. Asignar un peso entre 0.0 (no importante) hasta 1.0 (muy im portante), el peso otorgado a cada factor, expresa la 
+importancia relativa del mismo, y el total de todos los pesos en su conjunto debe tener la suma de 1.0. 
+ 
+2. Asignar una calificación entre 1 y 4, en orden de importancia, donde el 1 es irrelevante y el 4 se evalúa como muy 
+importante. 
+ 
+3. Efectuar la multiplicación del peso de cada factor para su calificación correspondiente, para determinar una 
+calificación ponderada de cada factor, ya sea fortaleza o debilidad. 
+ 
+4. Sumar las calificaciones ponderadas de cada factor para determinar el total ponderado de la organización en su 
+conjunto. 
+ 
+CUADRO 3: MATRIZ MEFI 
+ 
+FACTOR A 
+ANALIZAR 
+PESO CALIFICACION PESO 
+PONDER
+ADO 
+FORTALEZAS 
+1. Adquisición de 
+maquinaria 
+moderna 
+.06 4 .24 
+2. El margen de 
+utilidad subió a 
+6.94 
+.16 4 .64 
+3. la moral del 
+personal es alta. 
+.18 4 .72 
+4. Sistema nuevo 
+de informática. 
+.08 3 .24 
+5. La participación 
+en el mercado se 
+incrementó en un 
+24% 
+.12 3 
+ 
+ 
+.36 
+DEBILIDADES 
+ 
+1. Demandas 
+legales sin 
+resolver. 
+.05 
+ 
+ 
+2 .10 
+2. La capacidad 
+de la planta ha 
+disminuido en un 
+74%. 
+.15 2 .30 
+ 
+ 
+3. Falta de un 
+sistema para la 
+administración 
+estratégica. 
+.06 1 .06 
+4. El gasto para la 
+investigación y 
+desarrollo se ha 
+incrementado en 
+un 31% 
+ 
+.08 
+ 
+1 
+ 
+.08 
+5. Los incentivos 
+para distribuidores 
+no han sido 
+eficaces. 
+ 
+.06 
+ 
+1 
+ 
+.06 
+TOTAL 1.00  2.80 
+Fuente: Fred, R. David (1997) Conceptos de administración estratégica , Quinta Edición, México, Prentice Hall Hispano Americano, p. 
+185 
+La suma total de la matriz anterior suma 2.80, arriba del promedio (2.5). Pero se encuentra en la explicación de David el 
+mismo caso de la  Matriz de Factores Externos, destacando que lo más importante no consiste en sumar el peso 
+ponderado de las fortalezas y las debilidades, lo relevante es comparar el peso ponderado total de las fortalezas contra 
+el peso ponderado total de las debilidades, determinando si las fuerzas internas de la organización en su conjunto son 
+favorables o desfavorables, o si el medio ambiente interno de la misma es favorable o desfavorable. En el caso anterior, Humberto Ponce Talancón 
+ 6
+las fuerzas internas son favorables a la organización, con un peso ponderado total de 2.20, contra un 0.60 de las 
+debilidades. 
+ 
+Matriz de Evaluación de los Factores Externos (MEFE). 
+ 
+Una vez elaboradas las matrices FODA y MAFE, existen otras matrices que pueden enriquecer el análisis estratégico. La 
+siguiente matriz es de evaluación de los factores externos como lo propone David en el cuadro 4, observando algunos 
+cambios con respecto a las anteriores, ya que establece un análisis  cuantitativo simple de los factores externos, es decir, de 
+las oportunidades y las amenazas mediante el siguiente procedimiento: 
+ 
+1. Hacer una lista de las oportunidades y amenazas externas con que cuenta la empresa. 
+ 
+2. Asignar un peso relativo en un rango de cero (irrelevante) a 1.0 (muy importante), el peso manifiesta la importancia 
+considerada relativa que tiene cada factor, soslayando que las oportunidades deben tener más peso que las amenazas, 
+siendo necesario establecer que la suma de todas las oportunidades y las amenazas deben sumar 1.0. 
+ 
+3. Ponderar con una calificación de 1 a  4 para cada uno de los factores considerados determinantes para el éxito, con el 
+propósito de evaluar si las estrategias actuales de la empresa son realmente eficaces, el 4 es una respuesta 
+considerada superior, 3 es una respuesta superior a la media, 2 una respuesta de término medio y 1 una respuesta 
+mala.  
+ 
+4. Multiplicar  el peso de cada factor por su calificación para obtener una calificación ponderada.  
+ 
+5. Sumar las calificaciones ponderadas de cada una de las variables para determinar el total del ponderado de la 
+organización en cuestión. 
+ 
+CUADRO 4: MATRIZ MEFE 
+ 
+FACTOR 
+EXTERNO PESO CALIFICACIÓN 
+PESO 
+PONDERA
+DO 
+OPORTUNIDADES 
+1. El Tratado de 
+Libre Comercio 
+entre Estados 
+Unidos, Canada y 
+México fomenta el 
+crecimiento. 
+ 
+ 
+.08 
+ 
+ 
+3 
+ 
+ 
+ 
+ 
+ 
+.24 
+2. Los valores del 
+capital son 
+saludables. 
+.06 2 
+ 
+ 
+.12 
+3. El ingreso 
+disponible está 
+creciendo en un 
+promedio de 3% al 
+año. 
+ 
+.11 
+ 
+1 
+ 
+.11 
+4.Los 
+consumidores 
+están más 
+dispuestos 
+a pagar por 
+empaques 
+biodegradables.   
+ 
+ 
+.09 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+ 
+ 
+ 
+ 
+ 
+.36 
+ 
+ 
+ 
+5. El software 
+nuevo puede 
+aumentar el ciclo 
+de vida del 
+producto. 
+ 
+.09 4 .36 La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 7
+AMENAZAS 
+1. Los mercados 
+japoneses están 
+cerrados para 
+muchos productos 
+norteamericanos. 
+.10 2 .20 
+2. El dólar ha ido 
+perdiendo terreno 
+frente al euro. 
+.12 
+ 
+ 
+4 .48 
+ 
+ 
+3. La República de 
+Rusia no es 
+políticamente 
+estable. 
+.07 3 .21 
+4. El apoyo federal 
+y estatal para las 
+empresas está 
+disminuyendo 
+.13 2 .26 
+5. Las tasas de 
+desempleo en el 
+mundo han ido 
+aumentando. 
+.10 1 
+ 
+ 
+ 
+.10 
+TOTAL: 1.00  2.44 
+Fuente: Fred, R. David (1997) Conceptos de administración estratégica , Quinta Edición, México, Prentice Hall Hispano Americano, p. 
+145 
+ 
+El total ponderado de 2.44 indica que dicha organización está por debajo de la media en cuanto al esfuerzo por seguir 
+estrategias que permitan aprovechar las oportunidades externas y evitar las amenazas externas, la clave de la Matriz de 
+Evaluación de los Factores Externos consiste en que el valor del peso ponderado total de las oportunidades sea mayor al 
+peso ponderado total de las amenazas.  
+Al evaluar el ejemplo anterior el peso ponderado total de las oportunidades es de 1.19, y de las amenazas es de 1.25, lo 
+cual establece que el medio ambiente externo es desfavorable para la organización. Resulta simple establecer que al 
+realizar una matriz MEFI la forma más simple de evaluar si las fuerzas del medio ambiente externo son favorables o 
+desfavorables para una organización es comparar el resultado del peso poderado total de las oportunidades, así como de 
+las amenazas. 
+ 
+La Matriz de Perfil Competitivo (MPC) 
+ 
+Esta matriz permite identificar plenamente a los competidores de una organización determinada a través de determinados 
+aspectos o factores internos, que bien pueden constituir fortalezas o debilidades. 
+Procedimiento 
+ 
+1. Se obtiene información de las empresas competidoras que serán incluidas en la Matriz de Perfil Competitivo. 
+ 
+2. Se enlistan los aspectos o factores a considerarse, que bien pueden ser elementos fuertes o débiles según sea el 
+caso de cada empresa u organización analizada. 
+ 
+3.   Se le asigna un peso a cada uno de estos factores. 
+ 
+4. A cada una de las organizaciones enlistadas en la tabla se le asigna un calificación, y los valores de las 
+calificaciones son las siguientes:  
+ 
+1= debilidad 
+2= menor debilidad 
+3= menor fuerza 
+4= mayor fuerza 
+ 
+5. Se multiplica el peso de la segunda columna por cada una de las calificaciones de las organizaciones o empresas 
+competidoras, obteniendo el peso ponderado correspondiente. Humberto Ponce Talancón 
+ 8
+ 
+6. Se suman los totales de la columna del peso (debe ser de 1.00) y de las columnas de los pesos ponderados. 
+ 
+CUADRO 5: EJEMPLO DE UNA MATRIZ DE PERFIL COMPETITIVO. 
+EMPRESA 1 EMPRESA 2 
+ Peso C Peso 
+Pond 
+C PP 
+Factores 
+críticos para 
+el éxito 
+     
+Participación 
+en el 
+mercado 
+0.20 3 0.60 2 0.4 
+Competitivida
+d de precios 
+0.20 1 0.20 4 
+ 
+0.8 
+Posición 
+financiera 
+0.40 2 0.80 1 0.4 
+Calidad de 
+producto 
+0.10 4 0.40 3 0.3 
+Lealtad del 
+cliente 
+0.10 3 0.30 3 0.3 
+Total 1.00  2.30  2.2 
+Fuente: Fred, R. David (1997) Conceptos de administración estratégica , Quinta Edición, México, Prentice Hall Hispano Americano, p. 
+146 
+ 
+En el ejemplo anterior (cuadro 5), tan solo tomando dos empresas como ejemplo, el factor crítico de mayor peso resulta la 
+posición financiera, en este factor la empresa 1 es relativamente vulnerable, la empresa 2 es más débil con respecto a la 
+posición de la primera, y en términos generales la empresa 1 es más fuerte que la primera, al sumar 2.3 contra 2.2 
+Esta matriz resuta de mayor interés para el estudio de organizaciones privadas, aunque puede adaptarse al caso de las 
+organizaciones públicas, en este caso como una Matriz de Perfil Comparativo. 
+ 
+Análisis estratégico mediante la matriz MAFE  
+ 
+Una vez efectuada la Matriz FODA con su listado de fortalezas, debilidades, oportunidades y amenazas correspondientes, 
+la siguiente etapa es realizar una matriz que se deriva de la anterior, la denominada primeramente como MAFE (Amenazas, 
+Oportunidades, Debilidades y Fortalezas), desarrollando cuatro  tipos de estrategias, de acuerdo con lo propuesto por David 
+(1997): 
+ 
+1) Estrategias FO: Aplican a las fuerzas internas de la empresa para aprovechar la ventaja de las oportunidades externas. 
+2) Estrategias DO: Pretenden superar las debilidades internas aprovechando las oportunidades externas. 
+3) Estrategias FA: Aprovechan las fuerzas de la empresa para evitar o disminuir las repercusiones de las amenazas 
+externas. 
+4) Estrategia DA: Son tácticas defensivas que pretenden disminuir las debilidades internas y evitar las amenazas del 
+entorno. En realidad esta empresa quizá tiene que luchar por su supervivencia, fusionarse, disminuirse, declarar la 
+quiebra u optar por la liquidación. 
+De la propuesta anterior pueden realizarse interesantes observaciones, como el cuadrante  de estrategias FO que es la más 
+fuerte, ya que la empresa integra las fortalezas y las oportunidades con que cuenta la organización, y el cuadrante más 
+débil (FA), combinando las debilidades y las amenazas que enfrenta la organización. Sin embargo, se considera que el 
+nombre de esta matriz con el acrónimo MAFE asignado por David no es adecuado, ya que realmente no está explicando lo 
+verdaderamente importante de esta matriz, que consiste en formular estrategias. La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 9
+A continuación, en el cuadro 6, se muestra un ejemplo de la Matriz MAFE de la empresa transnacional Hershey Food 
+Corporation: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CUADRO 6: MATRIZ MAFE HERSHEY FOOD CORPORATION 
+ 
+ 
+ 
+MATRIZ MAFE 
+Fuerzas 
+1. Incremento de 
+ingresos en 
+10% anual 
+2. Incremento en 
+publicidad 
+3. Calidad de 
+primera 
+4. Incremento en 
+investigación y 
+desarrollo 
+5. Reducción de 
+pasivo a Largo 
+plazo 
+6. Amplia 
+variedad de 
+productos 
+Debilidades 
+1. Baja moral de 
+los empleados 
+2. Importaciones  
+mayores a 
+exportaciones 
+3. Demanda 
+estacional 
+4. El transporte es 
+costoso 
+5. Reglamentos 
+locales para la 
+importación de 
+insumos 
+Oportunidades 
+1. Mercados 
+emergentes en 
+búsqueda de 
+inversionistas 
+2. Mercados 
+emergentes 
+cuentan con 
+mano de obra 
+barata 
+3. Beneficio del 
+tipo de cambio 
+4. Pérdida de la 
+competencia 
+local de 
+participación 
+de mercado 
+5. Especialización 
+en confitería y 
+chocolates. 
+Estrategias FO 
+1. Adquisición de 
+productores de 
+la industria en 
+México (F1, F5, 
+F6, O1, O2, O3, 
+O5) 
+2. Desarrollo de 
+nuevos 
+productos (F1, 
+F3, F4, O4, O5) 
+Estrategias DO 
+1. Formación de 
+unidades 
+celulares de 
+producción  
+2. Adquisición de 
+canales de 
+distribución 
+(Integración hacia 
+delante)  
+3. Intensificación de 
+publicidad y 
+promociones en 
+temporadas de 
+venta bajas (D3, 
+O4) 
+Amenazas 
+1. Incremento de 
+precio del 
+cacao 
+2. Formación de 
+bloques 
+económicos 
+3. Variación de 
+clima en áreas 
+productoras de 
+cacao 
+4. Crecimiento de 
+la competencia 
+ 
+Estrategias FA 
+1. Adquisición de 
+valores futuros 
+de cacao (F1, 
+A1, A3) 
+2. Desarrollo de 
+nuevos 
+productos (F1, 
+F4, A1, A4) 
+3. Almacenamiento 
+de materias 
+primas (F1, A1, 
+A2, A3) 
+Estrategias DA 
+1. Incremento de la 
+participación de 
+mercado 
+internacional. 
+(D2, D5, A2) 
+Fuente: David, Fred R. (1997)1” Conceptos de administración estratégica”,  capítulos 1 "La Naturaleza de la Administración Estratégica: el caso 
+Hershey Foods" y capítulo 6: "Análisis y Elección de la estrategia, Editorial Prentice Hall, Quinta Edición, México. 
+ Humberto Ponce Talancón 
+ 10
+ 
+ 
+Procedimiento para elaborar la matriz MAFE: 
+ 
+1. Integrar una lista de las oportunidades claves. 
+2. Integrar una lista de amenazas claves. 
+3. Integrar una lista de las fuerzas internas. 
+4. Integrar una lista de las debilidades internas. 
+ 5. Adecuar las fuerzas internas a las oportunidades extern as, registrando las estrategias FO resultantes en la celda 
+adecuada. 
+6. Adecuar las debilidades internas a las   oportunidades externas, registrando las estrategias DO en la celda adecuada. 
+7. Adecuar las fuerzas internas a las amenazas externas, registrando las estrategias FA en la celda adecuada. 
+8. Adecuar las debilidades internas a las amenazas externas registrando las estrategias DA en la celda correspondiente. 
+ 
+Matriz de la Posición Estratégica y la Evaluación de la Acción 
+ 
+Permite definir si una estrategia activa, conservadora, def ensiva o competitiva es la más adecuada para una organización 
+dada. Los ejes de la matriz representan dos dimensiones internas (fuerza financiera y ventaja competitiva) y dos 
+dimensiones externas (fuerza de la industria y estabilidad de l ambiente). Posteriormente se seleccionan variables para cada 
+una de las dimensiones, se les adjudica una calificación con un valor numérico de 1 a 6, o –1 a –6, donde el 1 en valor 
+absoluto representa la mejor calificación, se calcula la calificación promedio de cada dimensión, se anotan las calificaciones 
+promedio de cada dimensión en el eje correspondiente, se suman las dos calificaciones del eje X para obtener una primera 
+coordenada, y se repite para el eje de las y. Por último se traza un vector del origen al punto encontrado, para ubicar en un 
+cuadrante el perfil que la empresa debiera buscar para orientar su estrategia. 
+ 
+FIGURA 1: MATRIZ PEYEA HERSHEY FOODS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fuente: David, Fred R. (1997) 1” Conceptos de administración estratégica”,  capítulos 1 ""La Naturaleza de la Administración Estratégica: el caso 
+Hershey Foods y capítulo 6: "Análsis y Elección de la estraetegia", Editorial Prentice Hall, Quinta Edición, México. 
+ 
+ 
+En conclusión con la matriz anterior (Figura 1), se puede come ntar que la situación de Hershe y Foods no facilita a la matriz 
+el apoyo para seleccionar una estrategia, ya que por una parte cuenta con la fortaleza financiera para dirigirse activamente 
+hacia su futuro, superar las amenazas y debilidades y aprovechar sus oportunidades. Pero se detecta que las amenazas 
+externas tienen bastante peso, y las medidas para enfrentarlas son dignas de considerarse dentro de la estrategia global. 
+ 
+ 
+La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 11
+ 
+Matriz del Boston Consulting Group (MBCG) 
+ 
+Cuando las carteras de negocios compiten en diferentes indust rias esta matriz es particularmente útil. Se basa en dos 
+variables para ubicar cada negocio, la parte relativa del mercado que está ocupando (relación entre el campo del mercado 
+que corresponde a una división en una industria, y del mercado que ocupa la empresa rival más grande de esa industria) 
+con la tasa de crecimiento de la industria en cada una de las divisiones (ver cuadro 7).  
+ 
+La Matriz del Grupo Consultivo de Boston, se divide en cuatro cuadrantes que se dividen de la forma siguiente: 
+ 
+Cuadrante 1. Las interrogantes. Ocupan una posición en el mercado que abarcan una parte pequeña, pero compiten en un 
+mercado de gran crecimiento, se les llama así porque la organización debe decidir si los refuerza mediante una estrategia 
+intensiva de mercado, desarrollo de mercado o desarrollo de productos o si los vende. 
+ 
+Cuadrante 2. Las estrellas. Representan las mejores oportunidades para crecer, así como para lograr una mejor rentabilidad 
+de la empresa.  
+ 
+Cuadrante 3. Las vacas. Cuentan con una parte relativamente grande del mercado, pero se desarrollan en un mercado de 
+crecimiento escaso. 
+ 
+Cuadrante 4. El producto. Cuenta con escasa participación en el mercado, compitiendo en un mercado con escaso o nulo 
+crecimiento.  
+ 
+ 
+CUADRO 7: MATRIZ DEL GRUPO CONSULTIVO DE BOSTON  
+ 
+Posición de la 
+participación relativa del 
+mercado en la industria 
+  Alta Baja 
+ 
+Tasa de 
+creci 
+miento 
+Alta Cuadrante 
+II 
+Producto  
+Estrella 
+Cuadrante I 
+Producto 
+Problema 
+de las 
+ventas 
+Baja Cuadrante 
+III 
+Producto 
+vaca 
+Cuadrante 
+IV 
+Producto 
+perro 
+Fuente: David, Fred R. (1997) 1 “ Conceptos de administración estratégica”, capítulo 6: "Análisis y Elección de la Estrategia" , Editorial Prentice Hall, 
+Quinta Edición, México. 
+ 
+Matriz Interna Externa. 
+ 
+Es similar a la anterior, pero se diferencia en que los ejes son diferentes, mientras que la Matriz de Boston se basa en la 
+tasa de crecimiento de las ventas contra la participación relativa del mercado en la industria, esta matriz en el eje x coloca 
+los totales ponderados de la Matriz MEFI (se divide a su vez en fuerte, promedio y débil) y los totales ponderados de la 
+Matriz MEFE en el eje y (alto, media y bajo). 
+La matriz también se divide en tres grandes espacios con implicaciones estratégicas o recomendaciones, como también se 
+muestra en el cuadro 8: 
+ 
+Crecer y construir:celdas I, II o IV Crecer y construir 
+Retener y mantener: celdas III, V o VII  
+Cosechar o desinvertir: celdas VI, VIII y IX 
+  
+ 
+ Humberto Ponce Talancón 
+ 12
+CUADRO 8: EJEMPLO DE UNA MATRIZ INTERNA EXTERNA (MIE) 
+ 
+TOTALES 
+PONDERADOS 
+EFI 
+  Fuerte 
+3.0 a 4.0 
+Prome
+dio 
+2.0 a 
+2.9 
+Débil 
+1.0 a 
+1.99 
+ 4.0 3.0 2.0 1.0 
+ Alto 
+3.0 a 
+4.0 
+          
+ 
+3.0 
+ 
+PROD  1 
+ 
+ 
+Celda 1 
+ 
+PROD  
+2 
+ 
+Celda 
+II 
+ 
+ 
+ 
+ 
+Celda 
+III 
+TOTAL
+ES 
+PONDE 
+RADOS 
+EFE 
+Media 
+2.0 a 
+2.9 
+ 
+ 
+ 
+ 
+2.0 
+ 
+ 
+ 
+PROD  3 
+ 
+Celda IV 
+ 
+ 
+ 
+ 
+ 
+Celda 
+V 
+ 
+ 
+ 
+PROD 
+4 
+Celda 
+VI 
+ Bajo 
+1.0 a 
+1.9 
+ 
+ 
+ 
+ 
+   1.0 
+ 
+ 
+ 
+Celda VII 
+ 
+ 
+ 
+ 
+Celda 
+VIII 
+ 
+ 
+ 
+Celda 
+IX 
+Fuente:  David, Fred, Conceptos de admini stración estratégica, quinta edición, Capítu lo 6: Análisis y Elección de la Estrategia , p. 210,  tomada a su vez de 
+Michael Allen, "Diagramming for What's WATT", en Corporate Planning: Techniques and Applications, eds. R. Allio y M. Pennington (N.Y., 1979)  
+ 
+ 
+Matriz de la gran estrategia.  
+ 
+Mencionada así por Davids, es una matriz que se incluye dentro de la llamada etapa 2, "La etapa de la adecuación", y 
+según Davids es un instrumento de gran popularidad para fo rmular estrategias de carácter alternativo. Se compone 
+solamente por un plano cartesiano, basándose solamente en dos di mensiones: la posición competitiva y el crecimiento del 
+mercado, y todo tipo de organización puede ubicarse dentro de las dimensiones antes mencionadas, según sus condiciones 
+y posición estratégica (ver cuadro 9). 
+ 
+El plano de esta matriz se divide a su vez en cuatro cuadrantes: cuando una organización se ubica en el cuadrante uno se 
+encuentra comprometida únicamente con un producto, pero también las organizaciones ubicadas en el cuadrante uno 
+pueden aprovechar todas las oportunidades externas, corriendo riesgos cuando resulte necesario.  
+ 
+ 
+Las organizaciones que se ubican en el segundo cuadrante están en un mercado que se caracteriza por un rápido 
+crecimiento, pero enfrentan una posición competitiva débil,  las organizaciones ubicadas en el tercer cuadrante se 
+encuentran en la parte más vulnerable de la matriz, ya que su posición competitiva es débil y se encuentran en un mercado 
+con muy lento crecimiento. 
+En el último cuadrante, se ubican las organizaciones con una posición competitiva fuerte, pero desafortunadamente en un 
+mercado de muy lento crecimiento.   
+ 
+ 
+ 
+ 
+ 
+CUADRO 9: ESTRUCTURA DE UNA MATRIZ DE GRAN ESTRATEGIA La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 13
+ 
+CRECIMIENTO RÁPIDO DEL MERCADO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+POSICIÓN 
+COMPE-
+TITIVA 
+DEBIL 
+Cuadrante II 
+1. Desarrollo de 
+mercado 
+2. Penetración en el 
+mercado 
+3. Desarrollo del 
+producto 
+4. Integración 
+horizontal 
+5. Desinversión 
+6. Liquidación 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Cuadrante I 
+1. Desarrollo de 
+mercado 
+2. Penetración en el 
+mercado 
+3. Desarrollo del 
+producto 
+4. Integración hacia 
+delante 
+5. Integración hacia 
+atrás 
+6. Integración 
+horizontal 
+7. Diversificación 
+concéntrica  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+POSICIÓN 
+COMPETI-
+TIVA 
+FUERTE 
+  
+Cuadrante III 
+1. Atrincheramiento 
+2. Diversificación 
+concéntrica  
+3. Diversificación 
+horizontal 
+4. Diversificación en 
+conglomerado 
+5. Desinversión 
+6. Liquidación 
+ 
+ 
+ 
+Cuadrante IV 
+1. Diversificación 
+concéntrica 
+2. Diversificación 
+horizontal 
+3. Diversificación 
+en conglomerado 
+4. Empresas en 
+riesgo 
+compartido 
+ 
+ 
+ 
+CRECIMIENTO LENTO DEL MERCADO 
+Fuente:  David, Fred, Conceptos de Administración Estratégica,  quinta edición, Capítulo 6: Análisis y Elección de la Estrategia, p. 210,  tomada y 
+adaptada a su vez de Roland Christia nsen, Norman Berg y Malcolm Salter, Policy Formulation and Administration (Homewood, Ill.: Richard D. 
+Irwin, 1976), pp16-18 
+ 
+Matriz Cuantitiva de la Planeación Estratégica (MCPE).  
+ 
+Otra matriz que resulta importante para el análisis de la s estrategias es la denominada Matriz Cuantitativa de la 
+Planeación Estratégica, que expresa de manera objetiva, cuáles pueden resultar las mejores estrategias posibles, es 
+decir, permite establecer una evaluación de las estrategias formuladas de una forma objetiva, basándose en el trabajo 
+previo realizado por la matrices EFE y EFI, determinando el  atractivo de tales estrategias, y se constituye en los 
+siguientes pasos: 
+1. Hacer una lista tanto de las oportunidades y amenazas externas, así como de las fortalezas y debilidades internas de 
+la organización en la columna izquierda de la matriz; esta información se obtiene directamente  tanto de las matrices 
+EFE y EFI, aclarando que que deben incluirse al menos diez factores externos y diez factores internos. 
+2. Asignar pesos a cada uno de los llamados factores críticos  para el éxito, tanto internos como externos, y estos se 
+asignan de la misma forma que los asignados en la Matriz MEFE y MEFI, colocándose en una columna contigua a la 
+derecha de la realizada en el paso 1. 
+3. Analizar las matrices de adecuación de la etapa 2 (en éste caso sólo se estudiará la matriz AODF), seleccionando las 
+estrategias  formuladas en la matriz mencionada que la organización deba considerar. 
+4. Determinar las calificaciones de at ractivo de las estrategias formuladas mediante valores numéricos que indiquen el 
+grado de atractivo de cada estrategia mediante la sigui ente pregunta: ¿Afecta ese factor para la elección de tal Humberto Ponce Talancón 
+ 14
+estrategia? Si la respuesta es positiva entonces la estrateg ia se debe comparar en relación a tal factor clave, las 
+escalas de Calificaciones de Atractivo son las siguientes:  
+1= no es atractiva 
+2= algo atractiva 
+3= bastante atractiva 
+4= muy atractiva 
+5. Calcular las calificaciones del atractivo total. Simplemente se multiplican los pesos de la fase 2 por las calificaciones 
+del atractivo de la etapa 4 de cada hilera, y entre mayor se a la calificación del atractivo total, más atractiva será la 
+alternativa estratégica. 
+6. Calcular las calificaciones del atractivo total. 
+ 
+TABLA : EJEMPLO DE UNA MCPE 
+ EMPRESA 
+DE RIESGO 
+COMPARTI
+DO EN 
+EUROPA 
+EMPRESA 
+DE RIESGO 
+COMPARTI
+DO EN ASIA 
+Factores críticos para el 
+éxito 
+ PESO CA TCA CA TCA 
+OPORTUNIDADES      
+1. Unificación de Europa 
+Occidental 
+0.10 4 0.40 2 0.20 
+2. Mayor conciencia de la 
+salud al eegir alimentos 
+0.15 3 0.45 3 0.45 
+3. Economías de libre 
+comercio en Asia 
+0.10 2 
+ 
+0.20 4 0.40 
+4. Demanda de sopas 
+aumenta 10% al año 
+0.15 3 0.45 4 0.60 
+5. TLC  México - EU 0.05     
+AMENAZAS      
+1. Ingresos de alimentos 
+sólo aumentan 1% al año 
+0.10 3 0.30 3 0.30 
+2. Alimentos prepara dos 
+Banquet de Conagra  
+encabezan el mercado con 
+una participación del 27.4%  
+0.05  
+ 
+ 
+ 
+   
+3. Economías inestables en 
+Asia  
+0.10 4 0.40 1 0.10 
+ 
+4. Envases de latón  
+no son biodegradables 
+0.05     
+5. Valor bajo del dólar 0.15 4 0.60 2 0.30 
+FORTALEZAS      
+1. Utilidades aumentaron 
+30% 
+0.10 3 0.30 3 0.30 
+2. Nueva división para 
+América del Norte 
+0.10 
+ 
+    
+3. Nuevas sopas saludables 
+tienen éxito 
+0.10 4 0.40 2 0.20 
+4. Participación del 
+mercado de alimentos 
+preparados Swanson ha 
+subido al 25.1% 
+0.05 3 0.15 
+ 
+ 
+3 0.15 
+5. Una quinta parte de los 
+bonos gerenciales se basan 
+en los resultados generales 
+de la corporación 
+0.05     
+6. Aprovechamiento de la 
+capacidad pasó del 60% al 
+80% 
+0.15 3 0.45 3 0.45 
+DEBILIDADES      La matriz FODA: una alternativa para realizar dia gnósticos y determinar estrategias de intervención en las 
+organizaciones productivas y sociales. 
+ 
+ 15
+1. Ventas de Pepperidge 
+Farm han caído 7% 
+0.05     
+2. Costo de reestructuración 
+de 302 millones 
+0.10     
+3. La operación de la 
+compañía en Europa pierde 
+dinero 
+0.15 2 0.30 3 0.45 
+4. La compañía tarda en 
+globalizarse 
+0.15 4 0.60 3 0.45 
+5. Margen de utilidad del 
+8.4% antes de impuestos es 
+sólo la mitad de promedio 
+de la industria 
+0.10 3 0.30 3 0.30 
+TOTAL   5.30  4.65 
+Fuente: Fred, R. David (1997) Conceptos de Administración Estratégica , Capítulo 6, Análisis y Elección de la Estrategia, Quinta 
+Edición, México, Prentice Hall Hispano americano, p. 216 
+ 
+En la tabla 1,  se evalúa el caso de dos estrategias alte rnativas: construir una empresa de riesgo compartido en Europa 
+o una empresa de riesgo compartido en Asia. Nótese que hay espacios en blanco (el caso del TLC México - EU), lo cual 
+significa que tal factor no tiene repercusión para la elección de una de las dos estrategias. El 5.30 de la empresa de 
+riesgo compartido en Europa nos indica que es más conveniente aplicar la estrategia en esa regición que en Asia. 
+¿Cuáles son las ventajas de utilizar tal matriz estratégica? Se pueden mencionar varias, como, por ejemplo, que 
+permite analizar series de estrategias de forma secuencia l o simultánea, o según el nivel jerárquico (corporativo, 
+divisional o departamental), el número de estrategias que pueden evaluarse es ilimitado, implicando que los estrategas 
+integren factores tante internos como externos a proceso de toma de decisiones, y si bien requiere de la subjetividad el 
+hecho de tomar decisiones de menor envergadura incrementa la probabilidad de que las estrategias elegidas al final 
+puedan ser las más provechosas para la organización. 
+La ventaja más importante es que la Matriz Cuantitativa de Planeación Estratégica puede adaptarse perfectamente a la 
+problemática de cualquier tipo de organización, ya sea pública, privada, pequeña, mediana o grande. 
+ 
+CONCLUSIONES 
+Es determinante la realización de diagnósticos de las funciones de dirección, las cuales son sustantivas; así como, de 
+administración, consultoría y asesoría, prevalecientes en las organizaciones públicas, privadas y del sector social, 
+cuyos resultados en términos de criterios y juicios, fundamentan la intervención profesional y consecuentemente, el 
+sistema de evaluación, control y seguimiento. 
+De los métodos y técnicas de diagnóstico aplicables en las organizaciones, la Matriz FODA permite evaluar las 
+fortalezas oportunidades, debilidades y amenazas. Destacando  el procedimiento a seguir para su análisis y derivación 
+de estrategias para su enriquecimiento con la Matriz MAFE (Amenazas, Oportunidades, Debilidades y Fortalezas).  
+Es recomendable utilizar la metodología que garantice su aplicación en escenarios y campos de conocimiento 
+académico, a efecto de justificar adecuaciones, mejoramientos, reformas, modernizaciones o transformaciones de 
+nuevos modelos para realizar diagnósticos y determinar estr ategias de intervención en las organizaciones productivas y 
+sociales, objeto de análisis del presente artículo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Humberto Ponce Talancón 
+ 16
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+REFERENCIAS 
+ 
+o Dale, McConkey (1988) Planning in a Changing Environment, Business Horizons 31, No.5 
+o David, F. (1997), Conceptos de Administración Estratégica , Editorial Prentice Hall Hispanoamericana, S.A., 
+Quinta Edición, 353pp. 
+o J. M. Bryson; P. Bromiley (1993) Critical Factors Affecting the Pl anning and Implementation of Mayor 
+Products, Strategic Management Journal 12, No. 5. 
+o Hax, Arnold C. Majluf, Nicolas S. (1984) Strategic Management: An Interactive Perspective . USA. Prentice 
+Hall. 
+o Henry, Harold W. (1980) Appraising a Company’s Strengths and Weaknesses. Managerial Planning. 
+o Porter, M. (1998), Técnicas para el Análisis de los Se ctores Industriales y de la Competencia , Editorial 
+CECSA, México, Vigésima quinta reimpresión,  407pp. 
+o Stevenson, Howard H. (1976) Defining Corporate Strengths and Weaknesses. Sloan Management Review 17. 
+No. 2 
+o Thompson et. al. (1998), Dirección y Administración Estratég icas, Conceptos, casos y lecturas . Edición 
+especial en español. México. Mac Graw Hill Inter Americana y editores. 
+o Vandenberg, Robert J. E. Larence, Charles (1992) Examining the Causal Order of Job Satisfaction and 
+Organizational Commitment. Journal of Management 18, No. 1 
+o Wilhelm, Warren R. (1992) Changing Corporate Culture or Corpor ate Behavior? How to Change Your 
+Company. The Executive VI, No.4 
+o Y. Allarie; M. Firsirotu (1985)  How to Implement Radical Strategies in Large Organizations. Sloan 
+Management 

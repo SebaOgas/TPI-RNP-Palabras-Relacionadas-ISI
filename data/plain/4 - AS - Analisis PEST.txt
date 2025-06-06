@@ -1,0 +1,125 @@
+Administración de Sistemas de Información  FRM-UTN    
+Análisis PEST 
+La palabra PEST deriva de las siglas para los 4 factores que esta técnica 
+analiza: Políticos, Económicos, Socioculturales y Tecnológicos. Estas son las 
+principales variables que pueden afectar y modificar el entorno de una empresa 
+y de sus campañas. 
+Los beneficios de realizar un análisis PEST  
+El análisis PEST ayuda a los negocios a entender su posición dentro del 
+mercado y ser más estratégicos. Como dice la frase atribuida a Francis 
+Bacon: «El conocimiento es poder», y entender todas las particularidades del 
+mercado y tus clientes meta se traducirá en una campaña con altas 
+probabilidades de éxito.  
+• Se Podrá aplicar los recursos de manera más efectiva 
+• Se entenderá a fondo el entorno de negocios 
+• Se podrá ser más  consciente de aquello que puede representar un 
+riesgo 
+• Se dispondrá de información para aprovechar las oportunidades 
+Los 4 factores del análisis PEST  
+1. Factores políticos 
+Son los aspectos políticos o derivados que podrían impactar en la economía de 
+una empresa o sector empresarial. Las pautas o criterios a tener en cuenta 
+para este factor pueden afectar o favorecer el cumplimiento de objetivos.  
+Ejemplos de factores políticos de una empresa  
+• Políticas gubernamentales 
+• Trámites  
+• Estabilidad o inestabilidad política 
+• Aranceles 
+• Restricciones de importación y exportación 
+• Leyes de protección de derechos de autor 
+2. Factores económicos  
+Son los componentes del entorno económico que están relacionados con la 
+compañía. Incluyen todas las tendencias de mercado que pueden ayudar o 
+limitar el logro de objetivos de una empresa.  Administración de Sistemas de Información  FRM-UTN    
+Ejemplos de factores económicos de una empresa 
+• Crecimiento de la industria 
+• Aumento de la competencia 
+• Tendencias macroeconómicas 
+• Poder adquisitivo de los consumidores 
+• Inflación 
+• Tasas de interés 
+3. Factores socioculturales 
+Engloba los comportamientos, tendencias y actitudes sociales que tienen algún 
+efecto sobre la empresa o sus consumidores. 
+Ejemplos de factores socioculturales de una empresa 
+• Creencias acerca del valor del dinero 
+• Tabúes culturales 
+• Estructura familiar 
+• Estilo de vida 
+4. Factores tecnológicos 
+Son todos aquellos dispositivos o sistemas tecnológicos que pueden incidir en 
+la producción, distribución y publicación de tus productos o servicios. 
+Ejemplos de factores tecnológicos de una empresa 
+• Infraestructura de transporte 
+• Técnicas y tecnologías emergentes 
+• Automatización 
+• Tecnología de la que dispone la competencia 
+• Regulaciones tecnológicas 
+Existen otras variaciones del análisis PEST que incluyen revisiones finas sobre 
+ciertos aspectos. Se pueden escoger alguno de estos tipos si la empresa está 
+altamente influenciada por estos factores: 
+• El análisis PESTLE (PEST + Legales y Ecológicos) desglosa los factores 
+legales y del entorno ambiental. Administración de Sistemas de Información  FRM-UTN    
+• El análisis STEEP (PEST + Ecológicos) revisa los factores ecológicos. 
+• El análisis STEEPLED (STEEP + Legales, Éticos y Demográficos) 
+incluye factores legales, éticos y demográficos. 
+Paso a paso 
+Crear una gráfica del análisis 
+Con ayuda de herramientas como Desygner o Canva se puede crear el propio 
+gráfico PEST. Usualmente este análisis se representa usando cuadrantes: en 
+el superior izquierdo aparecen los factores políticos; en el superior derecho, los 
+económicos; en el inferior izquierdo, los socioculturales; mientras que en el 
+inferior derecho se muestran los factores tecnológicos. Así se tendrá una 
+representación breve y exacta de la situación del negocio. 
+ 
+Planificar una estrategia 
+Una vez que se identificaron los cuatro tipos de factores, establecer: 
+• Cuáles son las oportunidades para mejorar 
+• Qué puede representar un problema 
+• Cómo solucionarías las dificultades (ya sean actuales o hipotéticas) 
+Cuando se tenga todo esto, se puede empezar a crear un plan de mejora 
+empresarial más eficiente, y diseñar las campañas de marketing en 
+consecuencia. 
+Ejemplos 
+Análisis PEST de empresa de software financiero 
+Factores políticos 
+• Existencia de un nuevo acuerdo 
+internacional en el sector informático 
+• Hay leyes recientes que regulan el 
+tratamiento de datos fiscales 
+ 
+Factores económicos 
+• Existen nuevos planes de créditos 
+para microempresas 
+• Se detecta que hay opciones de la 
+competencia que son más 
+accesibles 
+ 
+Factores socioculturales 
+• Gran parte de los clientes, están 
+creciendo en ganancias, RRHH y 
+Tamaño 
+Factores tecnológicos 
+• Requiere de una solución de manejo 
+de grandes cantidades de datos Administración de Sistemas de Información  FRM-UTN    
+• Esta dirigida a un sector donde el 
+producto ha incrementado su 
+aceptación 
+ 
+ 
+• Son mas accesibles los softwares de 
+procesamiento de datos que los 
+competidores pueden aprovechar 
+ 
+Luego del análisis de la información, se llegó a estas conclusiones: 
+• Se promocionara, las nuevas opciones de créditos para atraer a clientes 
+de empresas de reciente creación u que lo necesiten. 
+• Se creará un esquema con beneficios para los clientes que pasaron de 
+ser pequeñas empresas a medianas, y de medianas a grandes. 
+• Se adquirirá software de big data para encontrar los nichos en 
+crecimiento. 
+• Se crearán un nuevo aviso de privacidad disponible en su sitio web. 
+• Se analizarán los beneficios fiscales que conlleva el acuerdo 
+internacional. 
+ 
+ 

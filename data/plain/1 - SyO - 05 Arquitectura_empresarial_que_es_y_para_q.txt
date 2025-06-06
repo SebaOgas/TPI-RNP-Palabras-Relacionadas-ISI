@@ -1,0 +1,79 @@
+ 
+  
+ Arquitectura empresarial ¿qué      
+ es y para qué sirve?  
+  
+ Para capturar la visión completa del sistema empresa en todas sus                      
+ dimensiones y complejidad surge el concepto de ​ arquitectura                
+ empresarial. Identifica los componentes principales de la organización                
+ y su relación para conseguir los objetivos de negocio. Actúa como                      
+ fuerza integradora entre aspectos de planificación del negocio,                
+ aspectos de operación de negocio y aspectos tecnológicos.  
+  
+   
+  
+ 
+ Hoy día las empresas son más complejas y requieren procesos de                      
+ negocio flexibles que sean soportados efectivamente por sistemas de                  
+ tecnologías de la información (TI). La implantación de una arquitectura                    
+ empresarial parte del establecimiento de un conjunto de directrices                  
+ arquitectónicas que permitan asegurar un desarrollo armónico entre                
+ los modelos y necesidades de la empresa, con los procesos de negocio y                          
+ las tecnologías de información. Estas directrices estratégicas de TI                  
+ deben partir de la misión de la empresa y del reconocimiento de las                          
+ estrategias y actividades de negocio que soportan dicha misión, y                    
+ derivan en la información necesaria para la operación de la                    
+ organización, las tecnologías requeridas para soportarla y los procesos                  
+ para implementar nuevas tecnologías como respuesta a los cambios y                    
+ necesidades de la empresa, en la medida en que las prioridades                      
+ cambian.  
+ El éxito del negocio y los costos que ello conlleva dependen cada vez                          
+ más de sus ​ sistemas de información, los cuales requieren de un enfoque                        
+ y una disciplina para la gestión de los mismos. En el marco de la                            
+ arquitectura empresarial ​ , un entorno de referencia o framework                
+ corresponde a los componentes especiales que actúan como base para                    
+ la estructuración y ensamble de componentes en edificaciones más                  
+ complejas. Un framework de ​ arquitectura empresarial determina en                
+ qué términos se define y documenta la arquitectura.    
+ En la siguiente tabla se relacionan los framework de ​ arquitectura                    
+ empresarial más difundidos y utilizados por la industria en el mundo                      
+ empresario.  
+  
+  
+ Según The Open Group, TOGAF abarca el desarrollo de cuatro tipos                      
+ relacionados de arquitecturas que vienen a ser como subconjuntos de                    
+ Página 2 de 4   
+ una ​ arquitectura empresarial, los cuales son soportados por TOGAF.                  
+ En la siguiente tabla se resumen estas arquitecturas.  
+  
+  
+  
+ La ​ arquitectura empresarial es muy importante, ya que una empresa es                      
+ una entidad compleja compuesta de personas, procesos y tecnología,                  
+ que producen productos o servicios orientados a satisfacer las                  
+ necesidades de los clientes.    
+  
+  
+ Qué es la arquitectura empresarial  
+ La ​ arquitectura empresarial ​ en una organización corresponde a la                  
+ forma de representar de manera integral la empresa, permitiendo                  
+ cubrir y considerar todos y cada uno de los  
+ elementos que la conforman. Esto conduce a que se pueda establecer                      
+ una visión clara sobre los objetivos, las metas y líneas de negocio en la                            
+ empresa, comenzando desde la perspectiva estratégica (misión, visión,                
+ lineamientos e indicadores estratégicos), hasta llegar a una estructura                  
+ actual y futura para los procesos de la organización; la cual incorpora                        
+ algunos de los componentes que se consideran como críticos para su                      
+ funcionamiento:    
+ ● Los ​ procesos ​ : modelos de negocio y procesos.  
+ ● La estructura organizacional: personas, estructuras  
+ Página 3 de 4   
+ administrativas.  
+ ● Las ​ tecnologías de información ​ : aplicaciones, información,            
+ infraestructura tecnológica y seguridad informática.  
+ Como resultado final, se va a disponer de las herramientas y los                        
+ mecanismos necesarios para la adecuada operación y funcionamiento                
+ de la empresa, y por ende, apoyar el cumplimiento de sus objetivos                        
+ estratégicos.  
+  
+ Página 4 de 4  

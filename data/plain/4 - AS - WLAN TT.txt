@@ -1,0 +1,63 @@
+WLAN
+I n t e g r a n t e s : E x p ó s i t o , L e o n a r d o M e z z a b o t t a , T o m á s V i l u r o n , R o d r i g o S a m p i e r i , F a c u n d o 
+QuéesunaWLAN..................................................................................................................2HistoriadelaWLAN...............................................................................................................2ComponentesdeunWLAN...................................................................................................21. PuntosdeAcceso(AccessPointsoAP)..................................................................22. RouterInalámbrico...................................................................................................33. AdaptadoresdeRedInalámbricos...........................................................................34. Antenas....................................................................................................................35. ControladoresdeRedInalámbrica...........................................................................36. RepetidoresoExtensoresdeSeñal.........................................................................37. Switches(enredesmixtas)......................................................................................3Ventajas...................................................................................................................................4Desventajas............................................................................................................................4Redesinalámbricas............................................................................................................... 4TiposderedesWLAN............................................................................................................5-RedWLANbasadaeninfraestructura....................................................................... 5-RedWLANAdhoc......................................................................................................5-RedWLANMesh....................................................................................................... 6Protocolosqueutilizan..........................................................................................................6Bibliografía:............................................................................................................................7
+1SegundaPresentaciónTemaWLAN
+QuéesunaWLAN
+UnaWLANoWirelessLocal AreaNetworkesunareddeárealocal queempleatecnologíainalámbricaparainterconectardispositivosenunadeterminadaáreageográfica. Estaáreageneralmentepuedeabarcarunhogar, unaoficinaounapartedeunedificio. AdiferenciadelasredesLANconvencionales, quedependendecablesparatransmitirdatosentrelosdispositivosconectados, lasWLANpermitenquelacomunicaciónentreestosdispositivosserealicemedianteel usodeunmedioinalámbrico, mayormenteondasderadiofrecuencia.
+LasondasderadiofrecuenciaqueutilizaunaWLANpuedenoperarendiferentesbandasdefrecuencia, siendolasmáscomunes2,4GHzy5GHz, aunqueversionesmásrecientes,comoWi-Fi 6(802.11ax), tambiénpuedenoperarenotrasfrecuenciasparaoptimizarlatransmisióndedatosyreducirinterferencias.
+HistoriadelaWLAN
+LahistoriadelasWLANcomienzaenlosaños70conALOHAnet, queestableciólasbasesparalacomunicacióndedatosinalámbrica. En1985, laFCCpermitióel usodebandasdefrecuenciaparadispositivosinalámbricos, impulsandoel desarrollodeWLAN. En1997, selanzóel estándarIEEE802.11conunavelocidadde2Mbps, seguidoen1999por802.11ay802.11b, quemejoraronlavelocidadylapopularidaddeWi-Fi enlabandade2.4GHzy5GHz.
+Durantelos2000s, 802.11gy802.11n(Wi-Fi 4)aumentaronlavelocidadyestabilidaddelasredesinalámbricas. Conel lanzamientode802.11ac(Wi-Fi 5)en2013y802.11ax(Wi-Fi 6)en2019, latecnologíaWLANavanzóeneficienciaycapacidad, preparándoseparaentornosdensos. En2020, Wi-Fi 6Eamplióel espectroalabandade6GHz, yseesperaqueWi-Fi 7ofrezcamayoresvelocidadesymenorlatenciaenel futuro.
+ComponentesdeunWLAN
+1.PuntosdeAcceso(AccessPointsoAP)
+● Sondispositivosquepermitenlaconexióndedispositivosinalámbricosalared. Actúancomointermediariosentrelaredcableadaylosdispositivosinalámbricos, transmitiendoyrecibiendoseñalesderadiofrecuencia.● LosAPspuedenserautónomosocontroladoscentralmente, yalgunosofrecencapacidadesavanzadas, comolaadministracióndemúltiplescanalesyusuarios.
+22.RouterInalámbrico
+● Esel dispositivoqueconectalaWLANconotrasredes, comoInternet. Losroutersinalámbricosgeneralmenteincluyenunpuntodeaccesointegradoyproporcionanfuncionesdeenrutamiento, asignacióndeIPyfirewall.
+3.AdaptadoresdeRedInalámbricos
+● SontarjetasodispositivosUSBquepermitenadispositivos, comocomputadorasyotrosequipos, conectarsealaWLAN. Losadaptadoresestánintegradosenlamayoríadelosdispositivosactuales, comolaptops,teléfonosytabletas.● EstosadaptadoressecomunicanconlosAPsyroutersinalámbricos,facilitandolatransferenciadedatosentreel dispositivoylared.
+4.Antenas
+● Lasantenasseutilizanparaaumentarel alcanceylafuerzadelaseñal enunaWLAN. Puedenserinternas(integradasenel APorouter)oexternas(antenasdealtagananciaquemejoranel rendimiento).● Existenvariostiposdeantenas, comolasomnidireccionales, queemitenseñalesentodaslasdirecciones, ylasdireccionales, queconcentranlaseñalenunadirecciónespecífica.
+5.ControladoresdeRedInalámbrica
+● EnredesWLANmásgrandes, loscontroladoresseutilizanparagestionarycentralizarlaadministracióndemúltiplespuntosdeacceso. EstoscontroladorespermitenconfigurarysupervisarlosAPs, optimizandoelrendimientoylaseguridad.● Sonmuycomunesenentornosempresariales, dondeserequiereunaadministraciónavanzadaycentralizadadelared.
+6.RepetidoresoExtensoresdeSeñal
+● Losrepetidoresoextensoresamplificanlaseñal del routeroAPparacubriráreasconpocaoningunacobertura. Captanlaseñal existenteylaretransmiten, extendiendoel alcancedelaWLAN.● LossistemasWi-Fi Meshsonunaalternativamodernaalosextensorestradicionales, ofreciendounacoberturauniformeygestionandoautomáticamentelamejorrutaparael tráficodedatos.
+7.Switches(enredesmixtas)
+● EnalgunasredesWLAN, seutilizanswitchesparaconectarlosAPsal restodelaredcableada. Losswitchesadministranel tráficodedatosentredispositivoscableadosyel AP, mejorandoel rendimientodelaredengeneral.
+3● Sonespecialmenteútilesenentornosdondesecombinanredescableadaseinalámbricas.
+Ventajas
+● Flexibilidadymovilidad:Losusuariospuedenconectarsedesdecualquierlugardentrodel alcancedelared, loquepermitemayorlibertaddemovimiento.● Facilidaddeinstalación:Norequierecableado, loquereducecostosdeinfraestructuraytiemposdeimplementación.● Escalabilidad:Esfácil agregarnuevosdispositivosalaredsinnecesidaddemodificacionessignificativas.● Costosreducidos:Aunquelosequiposdecomunicacióninalámbricapuedensermáscostososinicialmente, lafaltadecablesymantenimientofísicopuededisminuircostosalargoplazo.● Accesocompartido:Permitelaconexiónsimultáneademúltiplesdispositivos.
+Desventajas
+● Seguridad:Lasredesinalámbricassonmásvulnerablesaataquesexternosquelasredescableadas, porloqueesesencial implementarmedidasdeseguridadrobustas.● Interferencias:Lasseñalesderadiopuedenverseafectadasporotrosdispositivoselectrónicos, paredes, obstáculosfísicosyotrosfactoresambientales, loquepuedecausarproblemasdeconexión.● Alcancelimitado:LadistanciamáximadetransmisióndeunaWLANdependedediversosfactores, comolapotenciadelaseñal, losobstáculosyel estándarutilizado.● Velocidad:AunquelasvelocidadesdelasWLANhanaumentadosignificativamenteenlosúltimosaños, puedenserinferioresalasdelasconexionescableadasenalgunoscasos.
+Redesinalámbricas
+ApartedelasredesWLAN, lascualestienenunáreadecoberturarestringidaaciertacantidaddemetros, existenotros:
+● WPANSonredespersonalesodecortoalcance, muyutilizadasparaconectardispositivospersonalescomoauriculares, teclados, smartwatches, etc.● WLANSonredesquecubrenáreaslocalesopequeñascomocasas, uoficinas.● WMANSonredesquecubrenáreasmásgrandescomoedificiosmuygrandes● WWAN
+4Sonredesquecubrenáreasmuyamplias, comolasantenasqueproporcionanredes4Gy5G
+TiposderedesWLANExistemásdeuntipoderedesdeestaclase:
+- RedWLANbasadaeninfraestructura
+Esteesel tipomáscomúnderedWLANqueseutilizaenhogares, oficinasyempresas.
+Enunaredbasadaeninfraestructura, unoomáspuntosdeacceso(AP)seconectanaunaredcableada(comounrouterounconmutador)atravésdeuncableEthernet, ylosdispositivosinalámbricos, comocomputadorasportátiles, teléfonosytabletas, seconectanalaredatravésdel puntodeaccesomedianteseñalesWi-Fi.
+SetratadeuntipoderedWLANqueempleaconexionesfísicaseinalámbricas. Lacoberturadelareddependedel alcancedel APydel númerodepuntosdeaccesodistribuidosenel área.
+LagrandesventajadeestetipoderedWLANesquesetratadeunaredquenoesportátil, dependedepuntosfijosparalacobertura.
+Esideal paraentornosdondesenecesitaestabilidadysemanejanvariosdispositivosconectadossimultáneamente.
+- RedWLANAdhoc
+Enel tipoderedAdhocnoseempleanmediosfísicosparalaconexiónderedytampocosonnecesariospuntosdeaccesoparaestablecerlaconexióndered.
+Ensulugar, losdispositivosseconectandirectamenteentresí paraformarunaredtemporal odecortaduración. Enestetipodered, existeundispositivoqueactúacomomaestroal queseconectanel restodeelementosdelared, queactúancomoesclavosoclientesdel puntodeaccesomaestro.
+Esútil ensituacionesdondenohayunrouteroAPdisponible, comocuandonecesitascompartirarchivosentredispositivosrápidamenteoestablecerunaredtemporal enunevento.
+Laconexiónsecompartedesdeel puntodeorigenhastalosdistintospuntosdedestino. Enestecaso, ladesventajadelaredWLANesque, si unodelosdispositivossealejadel rangodealcancedelaconexiónWifi, laconexiónsepierde,ademásnoesadecuadaparamanejarunagrancantidaddedispositivosotráficoderedintensivo.
+- RedWLANMesh
+5Esteesuntipoderedmásavanzadaymodernaqueseutilizaprincipalmenteparacubrirgrandesáreassinperderconectividadovelocidad. AdiferenciadeunaredWLANbasadaeninfraestructura, dondetodoslosdispositivosseconectanaunpuntodeaccesocentral, enunaredMeshtodoslospuntosdeaccesoestáninterconectadosentresí, formandounamalladenodosquepermitenel roamingcontinuodelosdispositivosconectados.
+LosnodosMeshdistribuyenlaseñal demanerauniforme, eliminandolas"zonasmuertas", haciendoposiblequecadanodoenlaredpuedatransmitirdatos,permitiendoquelosdispositivossemuevansinperderconexión.
+Laredseautogestionayencuentraautomáticamentelamejorrutaparalatransmisióndedatosyesfácil deescalarañadiendonodosparaextenderlacobertura, estohacequeseaexcelenteparaentornosgrandesoedificiosconmúltiplesbarrerasfísicas.
+Ladesventajaesquesucosteinicial esmásaltoquelassolucionesbasadaseninfraestructuraypuederequerirciertaconfiguraciónygestiónenredesempresarialesocomplejas.
+Protocolosqueutilizan● Seguridad○ WEP:(WiredEquivalent Privacy)Actualmenteseencuentraobsoletodebidoasucomplicadaconfiguraciónylapocaprotecciónqueofrecealosusuariosdelosdispositivosconectadosalared○ WPA:(Wi-Fi ProtectedAccess)SurgiócomoreemplazodeWEP, innovóconclavesmáslargasysegurasylautilizacióndeunprotocolodeintegridaddeclavetemporal, actualmenteseencuentraendesuso.○ WPA2:Esmásutilizadaanivel mundial actualmente, utilizacifradoAES.○ WPA3:Eslaversiónmásactualizadayseguradel protocoloWPA, creandoclavesúnicasparacadadispositivosqueseconectaalared, yutilizandounnuevoprotocolodeautenticaciónmásseguro
+● Transmisión○ IEEE102.11:(Instituteof Electrical andElectronicsEngineers)Definemúltiplesnormasparalatransmisiónycontrol deredesWi-Fi.○ TCP/IP:(TransmissionControl Protocol/Internet Protocol)Familiadeprotocolosutilizadosparalatransmisióndedatosenredes,incluyendodireccionamiento, control deflujo, yenrutamiento.
+● Controldeacceso○ MAC:(MediaAccessControl)
+6Protocolodelacapadeenlaceutilizadoparadeterminarcómolosdispositivospuedenaccederalaredparaevitarcolisionesyoptimizarlatransmisión.
+Bibliografía:
+https://www.proofpoint.com/es/threat-reference/wifi
+https://www.tokioschool.com/noticias/red-wlan/
+https://www.fortinet.com/lat/resources/cyberglossary/wireless-network
+https://www.arubanetworks.com/es/faq/que-es-wlan/#:~:text=Una%20LAN%20inal%C3%A1mbrica%20(WLAN)%20es,es%20una%20LAN%20por%20cable.
+https://winempresas.pe/blog/conoces-la-evolucion-del-wifi#:~:text=En%201971%2C%20la%20Universidad%20de,comunicar%20con%20un%20ordenador%20central.
+LINKALAPRESENTACIÓNhttps://www.canva.com/design/DAGS8CkkR-A/0be6rJjqmBiXzqh2u5u1yg/edit
+7
