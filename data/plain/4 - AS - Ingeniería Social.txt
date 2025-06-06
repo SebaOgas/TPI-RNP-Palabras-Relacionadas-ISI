@@ -1,0 +1,109 @@
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+AdministracióndeSistemasdeInformaciónInformedeexposición:IngenieríaSocial
+Equipodocente: ProfesorTitular:Ing.JulioCuencaJTP:Mg.Ing. MarioCenteno
+Grupo:N°6Comisión:4K10-2024
+Integrantes: SecotaroIanardi,LeonardoTomasDuran,AndreaTatianaLuceroFiorelli,FacundoNicolasOgás,SebastiánAndrésPeruzzi,AgustínLuisValdiviaDadda,JuanManuel
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+DefiniciónycaracterizacióndelaIngenieríaSocial....................................3Métodos............................................................................................................5Tiposdeataque............................................................................................5LaamenazadelaIA........................................................................................7Casosdeestudio.............................................................................................8Comunicaciónlaboralfraudulenta......................................................................................8AtaquedeVishing..............................................................................................................8OtroataquedeVishing.......................................................................................................9GoogleyFacebookSpearPhishingScam.......................................................................10RobodecódigofuenteaMotorola...................................................................................10
+Conclusión:naturalezadelosataquesymitigación.................................11Bibliografíaconsultada.................................................................................15
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+DefiniciónycaracterizacióndelaIngenieríaSocial
+Laseguridaddelainformaciónseencuentraestrechamenteligadaalavanidadhumana.Enelambienteinformático,esmuyconocidoeldicho“unacomputadoraapagadaesunacomputadorasegura”.Ahorabien,silacomputadoraestáapagada,¿quiéneselobjetivo?Elusuario.Nohayunsolosistemaenelmundoquenodependadeunserhumano,loqueconllevaunavulnerabilidadindependientedelaplataformatecnológica.
+LaIngenieríaSocialpuededefinirsecomounaacciónoconductasocialdestinadaaconseguirinformacióndelaspersonascercanasaunsistema.Eselartedeconseguirdeunterceroaquellosdatosdeinterésparaelatacantepormediodehabilidadessociales.Estasprácticasestánrelacionadasconlacomunicaciónentresereshumanos.
+EnpalabrasdeKevinMitnick,unodelospersonajesmásfamososdelmundopordelitosutilizandolaIngenieríaSocialcomoprincipalarma:
+"ustedpuedetenerlamejortecnología,firewalls,sistemasdedeteccióndeataques,dispositivosbiométricos,etc.Loúnicoquesenecesitaesunllamadoaunempleadodesprevenidoeingresarsinmás.Tienentodoensusmanos".
+Laefectividaddelataqueseradicaenlascualidadespropiasdelserhumanocomo,porejemplo:credulidad,inocencia,curiosidad,ambición,desconocimiento,confianza,modosderelacionarseconotros,gustoporelmorbo,etc.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+Sibienparecepococreíblequeconsólopreguntarporlainformaciónqueaunoleinteresaseobtengaloquesedesea;estatécnicapuederesultardeunaefectividadabsoluta,silapersonaconfinesmaliciososseganalaconfianzadelavíctimaalaqueintentaengañar.
+Este“artedeengañar”puedeserutilizadoporcualquiera,desdeunvendedorque seinteresaenaveriguar las necesidades desus compradores paraofrecerlesunservicio,hastacreadoresdemalwareyatacantesquebuscanqueunusuariorevelesucontraseñadeaccesoaundeterminadosistema.Másalládelascoincidencias,ono,enellímitedeloéticamentecorrecto,todointentodeobtener informaciónconfidencial paraunusoinapropiado,resultaunaactividadaltamentecuestionable.
+OtraimportantecaracterísticadelaIngenieríaSocialessuexcelenterelacióncosto-beneficioobtenidaconsuaplicación,laconvierteenunatécnicadelomáseficiente: consólounallamadatelefónica,uncorreoelectrónicoounmensajedetextovíaSMSelatacantepuedeobteneraccesoainformaciónvaliosadelusuario,laempresaoinclusoaccederaunareddesistemas.
+LosatacantesqueusanlaIngenieríaSocialporlogeneraltienendosobjetivos:
+● Sabotaje:alterarocorromperdatos
+● Robo:obtenerobjetosdevalorcomoinformación,accesoasistemasodinero
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+Métodos
+Los distintos métodos de Ingeniería Social suelen tener en común lossiguientespasos:
+● Preparación:recopilarinformaciónbásicadelavíctima
+● Infiltración:comunicarseygenerarconfianzaenlavíctima
+● Explotación:delasdebilidadesdelavíctima
+● Desentendimiento
+Asuvez,elatacantesuelemostrarlossiguientescomportamientosparasermásefectivo:
+● Intensificacióndelasemociones
+● Urgencia
+● Confianza
+Tiposdeataque
+Existendiferentestiposdetécnicasdeingenieríasocial:
+● Phishing:envíancorreoselectrónicosfalsosparaobtenerinformaciónde la víctima. Por ejemplo, pueden solicitar datos personales, detarjetas de crédito, de la obra social, de actualización laboral,contraseñasdesistemas,etc.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+● Vishing: obtieneninformaciónatravésdeunallamadatelefónica.Elciberdelincuente se hace pasar por un familiar, personal de unaempresaodesoportetécnico.
+● Smishing:mediantemensajesdetexto,quemuchasvecesincluyenunenlaceaunsitioweb.
+● Spearphishing:envíanuncorreoelectrónicofalsoaalguienquetiene,porejemplo,undeterminadocargoomanejainformaciónsensibleenunaempresa.Losdelincuentesconocenalapersonaeintentanrobarledatos.
+● Quidproquo:ofrecenalavíctimaalgodeseable(comounconcurso)acambiodesuinformaciónpersonal.
+● Farming: realizan varias comunicaciones con las víctimas hastaconseguirlamayorcantidaddeinformaciónposible.
+● Robodecuentasdecorreoselectrónicos:robancuentasrealesparacometer ilícitos entre los contactos de la víctima, enviar softwaremaliciosooparaobtenerinformaciónpersonal.
+● Cebo:abusandolacuriosidaddelavíctimaparaqueseexponga,yaseaabriendounenlace,unarchivoadjuntoounpendriveabandonadoenunespaciopúblico.
+● Accesofísico:elatacantesepresentaenpersonahaciéndosepasarporalguienmás.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+● Scareware: malware que busca asustar a la víctima para quedescargueotromalwareoreveleinformaciónconfidencial.
+LaamenazadelaIA
+Con el avance IA, las técnicas utilizadas por los ciberdelincuentes paramanipularalaspersonasyhacerquereveleninformaciónconfidencialsehanvueltomássofisticadasyefectivas:
+● Phishingpersonalizado: laIAanalizadatos deredes socialesparacrear correoselectrónicosdephishingmuyconvincentes,dirigidosaindividuosespecíficos.
+● Deepfakes y suplantación de identidad: los deepfakes sonvídeos,imágenesoarchivosdevozmanipuladosconsoftwaredeinteligenciaartificial (IA) paraparecer realesyauténticos. Losciberdelincuentespuedenusarlos paraextorsionar, cometer fraudeomanipular alasvíctimasparaquerealicenaccionesperjudiciales.
+● Chatbotsmaliciosos:queinteractúanconlasvíctimasdemaneramuyconvincenteparaobtenerdatossensiblesycometerfraude.
+● Evolución de Patrones: los algoritmos de aprendizaje automáticopuedenestudiaryaprenderdelossistemasdedeteccióndefraudes,adaptandosustécnicasparaevadirladetección.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+Casosdeestudio
+Comunicaciónlaboral fraudulenta
+Uncompañerodenuestroequipodetrabajorecibióenunaocasiónensudireccióndecorreolaboral unmensajecuyoremitenteera“ComunicaciónInterna”, instandoaactivar laautenticacióndedosfactoresensucuentamedianteunenlace.Cabedestacarqueestenombredelremitenteesusadoporunacuentadecorreooficialdelaorganización.
+Elcorreopresentabaelmismoformatoqueloscorreoslegítimos,desdelasimágenes,fuentesytamañodeletrahastalaredacciónyortografía.Elenlaceteníatextoquefingíaser laURLlegítimadelclientedecorreowebdelaorganización.
+Sinembargo, al mantener el cursor sobreel remitente, mostrabaquesudirecciónnoeralegítima. Haciendolomismo, podíaversequeel enlacetambiénerafalso.
+Apenassesupodeesto,seinstóatodoslosempleadosquehubieransidoengañadosacambiarsucontraseña,puesfueunataquemasivo.
+AtaquedeVishing
+Unmiembrodelafamiliadeuncompañerorecibióunallamadatelefónicadeunsupuestorepresentantedelbancoenelquetieneunacuenta.Eltonodelallamada era muy profesional y la persona que hablaba parecía tenerconocimiento de ciertos detalles básicos de la cuenta, comoel nombrecompletodelfamiliaryladirecciónpostal.Elsupuestoagenteleinformóque
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+había habido una actividad sospechosa en su cuentay quenecesitabaverificarsuidentidadparaprevenirunposiblefraude.Durantelallamadayconlaexcusadelsupuestofraude,elsupuestoagentesolicitólaconfirmacióndeinformaciónsensible,comoelnúmerocompletodelatarjetadedébitoyelcódigodeseguridadqueseencuentraenlaparteposteriordelamisma.Elfamiliar,confiandoenqueestabahablandoconunrepresentantelegítimodelbanco, proporcionóestainformación. Horas más tarde, el familiar recibiónotificacionesdetransaccionesnoautorizadasrealizadasdesdesucuentabancaria.
+Debidoaestosetuvoquebloquearlatarjetaydenunciarelfraudealapolicía
+OtroataquedeVishing
+Enestecasomepasóamípersonalmente(Valdivia),recibíunallamadadeunnúmeroelcualdecíaqueerapartedelequipodeseguridaddemercadopago,elatacantemencionabaqueunapersonahabíarealizadounpagoatravésdemicuentaquenoerayoyrealizandolospasosqueelmesolicitabasepodíacancelaresepago.Durantelallamadasemesolicitóqueaccedaalas opciones deseguridaddemi cuentaparaver quédispositivos teníavinculadosalamisma,acontinuaciónsemesolicitóqueaceptelavinculacióndeunnuevodispositivo(lacomputadoradelestafador)paratomarelcontroldemicuentayasírobarlaplata.Enestecasodetectéenseguidaqueerafalso,primeroporqueelpersonaldemercadopagonuncapediríarealizarlospasosmencionadosysegundoelnúmerodeteléfononoestabaasociadoaningúntipodesoportedemercadopago.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+Estetipodeactividadessonmuypeligrosasyaquelaspersonasmayorescaenmuyfácilmenteenestetipodeestafas.
+GoogleyFacebookSpearPhishingScam
+UnodeloscasosmásgrandesdelosquesetengaconocimientotuvocomovíctimasaGoogleyFacebook.
+Un equipo de personas lideradas por Evaldas Rimasauskas creó unaempresa fantasma, configurando cuentas bancarias para esta, haciendopasar la misma por otraempresadehardwarequegenuinamenteteníanegociosconlasvíctimas.
+Luegodeestoenviaronperiódicamenteemailsconfacturascobrandoporbienesyserviciosofrecidosporlaempresaqueenverdadtrabajabaconlasvíctimas.Enestosmailssedabalainstruccióndedepositarlospagosenlascuentas bancarias delaempresafantasma. Desde2013hasta2015, seenviaronestosmailsquecausaronenconjuntounapérdidademásde100Millonesdedólares.
+RobodecódigofuenteaMotorola
+Parafinalizar lalistadecasosdeestudiosesútil volver al comienzodelinformeyhablarnuevamentesobreKevinMitnick,quienen1992pensóqueseríaunabuenaideamodificarelfirmwaredelMotorolaMicroTACparapodertenermásprivacidadyescapardelasautoridades.
+Parahacersedel códigofuenteoptóporsimplementellamaraMotorolaypedirhablarconelprojectmanagerdelproyecto.Luegodesertransferido
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+varias veces y hablar condistintas personas consiguióel númerodelaencargadadelproyecto,peroalmarcarloseencontróconunmensajepregrabadoindicandoqueestaríadevacacionesperopodíancontactarseconunacompañeraquehabíaquedadoacargo.
+Mitnicknolodudo,ysimplementediciendoquetrabajabaenotrocampusdeMotorolayusandounnombrefalsopidióqueleenviasenelcódigofuente,aloquelepreguntaron:“¿Quéversiónquieres”,yélrespondió“Laúltimaymejor”.
+Minutos después Kevinleexplicabaasuinterlocutoracomocomprimir yenviar el archivohaciendousodeFTM, peroviendoquelatransferenciafallabaellaconsultóasulíderdeseguridadporelproblema:“EstaIPestáfueradelaorganización,asíquenotengopermisodeenviarlo”.Mitnickseestabadandoporvencidohastaquelasecretariaprosiguióeindicó“Peromedieronelusuarioycontraseñapersonaldellíderseseguridadparaquepuedaenviártelo”.DeestamaneraMitnicksehizodelcódigofuentedelMotorolaMicroTAC,algoasícomoeliPhonedelmomento.
+Estecasoesunmuybuenejemplodecómo,inclusoteniendolaspersonascorrectas (un especialista en seguridad), una configuración adecuada(bloqueodeIPsexternas)yunaorganizaciónconmilesdeempleados,esposiblequeunapersonaburletodosloscontrolestansoloconunamentira.
+FACC(fabricanteaustriacodeaviones)Spearphishing
+FACCperdióalrededor de42millones deeuros cuandolaempresafuevíctimadeunasofisticadaestafadecorreoelectrónicocomercial(BEC).Se
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+suplantólacuentadecorreoelectrónicodeldirectorgeneraldelaempresayse utilizó para enviar un correo electrónico "urgente" solicitando unatransferencia de fondos. Este correo electrónico engañóaunempleadoencargadodepagarlacuenta,queaccedióalasolicitud,ingresandoeldineroenlacuentadelestafador.
+Conclusión:naturalezadelosataquesymitigación
+Sibiensepodríaentrarenparticularidadessegúncadacaso,esfundamentalcomprender quenohaytecnologíacapazdeprotegercontralaIngenieríaSocial,comotampocohayusuariosniexpertosqueesténasalvodeestaformadeataque.LaIngenieríaSocialnopasademoda,seperfeccionaysólotienelaimaginacióncomolímite.
+LaproliferacióndelaIAhapermitidoperfeccionarlosataques,masificandolos ataquespersonalizadosqueanteriormenteestabanreservadosaaltosperfilesporsucosto.
+Los ataques de ingeniería social son muy difíciles de identificar. Losciberdelincuentesusandiferentestécnicaspsicológicasysociales,distintostiposdedispositivosyplataformasparaengañaralaspersonas.
+Asímismo,existeunaúnicayefectivaformadeestarprevenidocontraella:laeducación.Nosetrataaquídeunaeducaciónestrictamentetécnicasinomásbienunaconcientizaciónsocialquepermitaalusuarioestarprevenidoyalertaparaevitarserunblancofácildeestetipodeataques.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+Cualquieratacanteconalgodeexperienciapuedeengañarconfacilidadaunusuarioingenuo.Siéste,encambio,seencuentradebidamentecapacitadoeinformadopodrádescubrirlaestafayevitarla.Además,laeducacióndelosusuariossueleserunaimportantetécnicadedisuasión.
+Algunospuntosimportantesson:
+● No entregar datos personales a personas extrañas por teléfono,correoselectrónicosoredessociales.
+● Configurar laprivacidadenlasredessocialesparaquenoquedenexpuestosdatospersonales,reduciendoasíeldigitalfootprint.
+● Informarse sobre este tipo de amenazas, ya que evolucionanconstantemente.
+● Usarunacontraseñasegura,únicaporaplicaciónyrotarlasmismasperiódicamente.
+● Configurarlaautenticaciónendospasosparaestaralertadeaccesosindebidosatuscuentas.
+● Prestar atenciónacualquier personaquepidainformaciónpersonal,porcualquiermedio.
+● Seguirlascuentasoficialesdelasentidadesconlasqueinteractuamos,como bancos, para conocer los riesgos actuales y los canales decomunicaciónseguros
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+● Limitar el acceso de los usuarios a los sistemas e informaciónestrictamentenecesarios,paramitigarelimpactodeunposibleataque
+● Verificarlaidentidaddelremitentedemensajesdecorreoelectrónicooquiénsecomunicaporcualquierotromedio,pidiendoestosdatossiesnecesario.
+● Estaratentoadetallescomolagramáticaylaortografía,lasURLs,eldiseñodesitiosweb,etc.
+● Nodejarseinfluenciarporlasensacióndeurgencia,queapresuralatomadedecisiones.
+● Si se estáenuncontextoorganizacional, validar conalgúnpar osuperiorlademandadeinformaciónyquienlarealiza.
+MinisteriodeCapitalHumanoUniversidadTecnológicaNacionalFacultadRegionalMendoza
+Bibliografíaconsultada
+Franceschi-Bicchierai,L.,&Franceschi-Bicchierai,L.(2024,9deAgosto).HowKevinMitnickstolethesourcecodeforthebestcellphoneof1992.VICE.https://www.vice.com/en/article/kevin-mitnick-hack-motorola-source-code/Huddleston,T.,Jr.(2019,27deMarzo).Howthisscammerusedphishingemailstostealover$100millionfromGoogleandFacebook.CNBC.https://www.cnbc.com/2019/03/27/phishing-email-scam-stole-100-million-from-facebook-and-google.htmlIbm.(2024,22deJulio).¿Quéeslaingenieríasocial?IBMBlog.https://www.ibm.com/es-es/topics/social-engineeringKostic,N.(2024,21deMarzo).15examplesofsocialengineeringattacks.phoenixNAPBlog.https://phoenixnap.com/blog/social-engineering-examples¿Quéeslaingenieríasocial?|Definición.(2017,6deDiciembre).https://latam.kaspersky.com/resource-center/definitions/what-is-social-engineering?srsltid=AfmBOoo_OdDqOaesl7pKpPjO_yuecEbDL1yvzQXzqWye7NeVeoZAJen9¿Quéeslaingenieríasocialycómomeprotejo?(2024,8deoctubre).Argentina.gob.ar.https://www.argentina.gob.ar/justicia/convosenlaweb/situaciones/que-es-la-ingenieria-social-y-como-protegerte#:~:text=Se%20llama%20ingenier%C3%ADa%20social%20a,haci%C3%A9ndose%20pasar%20por%20otra%20persona.

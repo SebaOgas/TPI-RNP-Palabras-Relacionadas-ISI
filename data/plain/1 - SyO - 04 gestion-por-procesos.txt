@@ -1,0 +1,796 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+LA GESTIÓN  POR PROCESOS 
+ 
+ 
+ 
+ 
+ÍNDICE: 
+ 
+1.1 La definición de proceso. Procesos versus funciones
+ 
+1.2 Clasificación de los procesos
+ 
+1.3 El Mapa de los procesos
+ 
+ 1.3.1 Requisitos básicos del proceso
+ 
+ 1.3.2 Conceptos básicos
+ 
+1.4 La Diagramación de procesos
+ 
+1.5 Procesos de Rediseño y Mejora
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 2
+1. 
+1. LA DEFINICIÓN DE PROCESO. PROCESOS VERSUS FUNCIONES 
+ 
+Los modelos organi zativos ut ilizados por la gran mayoria de las empresas, preocupadas, 
+durante buena parte del último siglo por crecer y aumentar sus volúmenes de producción, se 
+han basado en la fuerte especialización en funciones de las organizaciones. 
+ 
+Esto, les ha  cond ucido a situa ciones en la s qu e cad a dep artamento o pera como un  
+compartimiento estanco, con escasa integración con el resto de la organización. 
+ 
+En esta sit uación, las actividade s trans versales suele n estar difuminadas y las 
+responsabilidades de  las interfaces suelen estar poco definidas. En consecuencia, las 
+actividades q ue involu cran a varia s u nidades o rganizativas, se  ven afectad as po r rígi das 
+barreras departamentales que au mentan la durac ión del proceso, caus an errores, crean 
+confusión  y aumentan los costes. Estos factores sin duda afectan en la actualidad de forma 
+significativa a la com petitividad de la  mayoría de  las emp resas y, cua ndo cad a pe rsona 
+concentra su esfue rzo e n la tare a q ue tiene a signada sin que nadi e se  preo cupe p or 
+establecer la visión global del proceso, los clientes suelen estar desatendidos y la mayor parte 
+de las veces acaban por  no recibir el producto y servicio que necesitan. 
+ 
+Por ello, es necesario qu e la satisfacción del cliente sea la  razó n de  ser y existir de la  
+organización; se debe orientar la empresa hacia la creación de valor mediante el di seño de 
+procesos o perativos, eficaces y consecuentes con e se objetivo; proceso s, do nde l as 
+actividades d e la empresa  se ag rupan no por su similitud sino por la rela ción que existe n 
+entre ellas (fl ujos de i nformación, flujo s d e mate riales, rela ciones cusa-efecto) y, don de l a 
+organización se diseña alrededor de flujos de trabajo rompiendo las barreras departamentales 
+para satisfacer la s dem andas espe cificas de cada actividad según el concepto prove edor 
+cliente. 
+ 
+Así, podemos decir que un Proceso se define como: “conjunto de actividades mutuamente 
+relacionadas o que interactúan, las cuales transforman elementos de entrada en resultados”. 
+ 
+A continuación podemos ver gráficamente la visión f uncional y la visión por procesos de una 
+organización: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 3
+La visión por procesos de la empresa resulta especialmente interesante en las empresas de 
+servicios, que han encontrado dificultades a la  hora de implantar Sistemas de Gestión de la 
+Calidad, debido a su enfoque y lenguaje, típicos de los entornos industriales, y, a sus propias 
+características: 
+ 
+o Heterogeneidad, para una fábrica elementos como la maquinaria, instalaciones, 
+materias primas y componentes son factores fundamentales, mientras que en un 
+servicio el factor decisivo son las personas. 
+ 
+o Intangibilidad, la calidad de la empresa industrial se puede interpretar como la calidad 
+del producto, mientras que en la empresa de  servicios es la calidad del servicio 
+prestado a los clientes. 
+ 
+o Inseparabilidad de la producción y el consumo, en una fábrica el trabajo se puede 
+completar antes de ser entregado al cliente, mientras que en los servicios  las 
+operaciones se desarrollan en muchas ocasiones en el momento  y por lo tanto el 
+modo de desarrollarlas está enormemente condicionado por las situaciones externas 
+y ha de ser por tanto más flexible. 
+ 
+Por otra parte, este enfoque a procesos trae consigo un cambio en las responsabilidades de 
+la calidad. Producir productos y servicios excel entes y suministrarlos a los clientes, requiere 
+que todas las personas que intervienen en los pr ocesos, independientemente de la función a 
+la que estén adscritos, den lo mejor de sí mismos en ese esfuerzo común de satisfacer las 
+necesidades del cliente y se responsabilicen de la calidad de su propio trabajo. 
+ 
+Este enfoque de procesos ha sido recogido en la revisión de las normas ISO 9000:2000 con 
+el fin de adaptar los sistemas de aseguramiento de la calidad a prácticas de gestión más 
+competitivas y actuales y ha favorecido especi almente la simplificación de la estructura 
+documental de las empresas, al ser menos prescriptiva y favorecer  el uso de herramientas de 
+calidad como los diagramas de flujo para la elaboración de procedimientos e instrucciones. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+          VOLVER
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 4
+1.2 CLASIFICACION DE LOS PROCESOS 
+ 
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Observando la división que se da en el gráfico del Enfoque de Gestión basado en procesos 
+que define la Norma ISO 9001:2000, sobre la forma de entender los procesos y sus 
+interrelaciones, vemos que se pueden clasificar de una forma general para todas las 
+empresas en: 
+ 
+1) Procesos de la dirección 
+ 
+2) Procesos relacionados con la gestión de recursos 
+ 
+3) Procesos clave, que se relacionan con la realización del producto o la 
+prestación del servicio 
+ 
+4) Procesos de apoyo a los anteriores, que se emplean para la medición de 
+la marcha y evolución del proceso, el análisis de los resultados obtenidos 
+y la planificación para la mejora continua de los mismos. 
+ 
+ 
+1) Procesos de la dirección 
+ 
+ 
+Las a ctividades de una  e mpresa qu e se enumeran en  lo s p rocesos de la dirección son 
+principalmente los siguientes: 
+ 
+- Gestión de los recursos 
+ 
+- Planificación de la calidad 
+ 
+- Revisión del Sistema de Gestión 
+ 
+- Servicio de atención a los clientes 
+           
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 5
+ 
+2) Procesos relacionados con la gestión de recursos 
+ 
+Las actividades  relacionadas con la Gestión de la Calidad, se definen según la Norma  
+ISO 9000:2000 , como “ aquellas actividades c oordinadas para dirigir y controlar una 
+organización en lo relativo a la calidad” incluyendo en el párrafo final una nota en la que 
+se especifica que la dirección y control, en lo relativo a la calidad, generalmente, incluye 
+el establecimiento de la política de la calidad, los objetivos de la calidad, la planificación 
+de la calidad, el control de la calidad, el aseguramiento de la calidad y la mejora de la 
+calidad. 
+ 
+En definitiva, la idea de Gestión de la Calidad,  lleva implícitos la definición y consecución 
+de los objetivos, y la mejora continua de las actividades y procesos que constituyen las 
+actividades de la empresa. 
+ 
+Estos planteamientos nos llevan a la necesidad de la aplicación del conocido Ciclo de  
+mejora de Deming. 
+ 
+ 
+3) Procesos clave 
+ 
+Los procesos necesarios en una empresa para la realización del producto  o la prestación 
+del servicio comprenden: 
+ 
+- Ofertas 
+ 
+- Compras y ventas 
+ 
+- Diseño, I+D 
+ 
+- Almacén 
+ 
+- Producción 
+ 
+- Inspección y control de productos 
+ 
+ 
+4) Procesos de apoyo 
+ 
+ 
+    Entre las actividades a desarrollar dentro de este tipo de procesos se pueden citar: 
+ 
+- Medición y seguimiento de los procesos 
+ 
+- Auditorias internas  
+ 
+- Mejora continua 
+ 
+- Medición de la Satisfacción del cliente 
+ 
+- Acciones correctivas 
+ 
+- Acciones preventivas 
+ 
+- Gestión de las No conformidades 
+ 
+ 
+ 
+        VOLVER
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 6
+ 
+ 
+1.3 EL MAPA DE PROCESOS 
+ 
+El primer paso en las organizaciones a la hora de implantar un Sistema de Gestión de la 
+Calidad, según ISO 9001:2000  es identificar  los  procesos que tienen lugar en la 
+organización y  representarlos de manera que su secuencia e interacción estén claramente 
+establecidos. Se trata, de alguna manera, de rescatar esos procesos naturales de trabajo, 
+que hoy en día están fragmentados y sus actividades repartidas por los diferentes 
+departamentos funcionales de las empresas. 
+ 
+La determinación de estos procesos es en principio una tarea larga ya que requiere el 
+consenso de las personas que participen en su identificación, que deben ser conocedoras de 
+la actividad de la empresa, de su misión, visión y objetivos. No existe una fórmula a este 
+respecto, y el resultado además es muy diferente entre unas empresas y otras, en función de 
+su actividad y sus planteamientos estratégicos. 
+ 
+Para ello, se suele utilizar los llamados Mapas de Procesos  en los cuales se refleja el 
+diagrama de flujo correspondiente a las fases de que constan los diferentes procesos de la 
+Gestión de la empresa. 
+ 
+Los mapas de procesos son útiles para: 
+ 
+• conocer cómo se llevan a cabo los trabajos actualmente 
+ 
+• analizar los pasos del proceso para reducir el ciclo del tiempo o aumentar la calidad 
+ 
+• utilizar el proceso actual como punto de partida para llevar a cabo proyectos de 
+mejora del proceso 
+ 
+• orientar a nuevos empleados 
+ 
+• evaluar, establecer o fortalecer los indicadores o medidas de resultados 
+ 
+ 
+ 
+         
+        VOLVER
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 7
+ 
+Un ejemplo de Mapa de Procesos sería: 
+ 
+ 
+ 
+ 
+  PROCESOS DE GESTION Y CONTROL 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  PROCESOS DE APOYO 
+  
+    
+GESTION DE 
+LOS 
+RECURSOS 
+PLANIFICACION 
+DE LA CALIDAD 
+ATENCION REVISION 
+DEL S.G.C AL CLIENTE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+ 
+   
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+VENTAS 
+  
+ 
+COMPRAS 
+NECESIDADES Y 
+EXPECTATIVAS 
+COBRO ENTREGA 
+SATISFACCION 
+ELABORACION 
+PROCESOS CLAVE
+CLIENTE CLIENTE 
+AUDITORIAS 
+INTERNAS 
+FORMACION DEL 
+PERSONAL 
+ACCIONES 
+CORRECTIVAS 
+MEDICCION 
+SATISFACCION 
+DEL CLIENTE 
+MEDICION Y 
+SEGUIMIENTO DE 
+PROCESOS 
+MEJORA 
+CONTINUA GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 8
+ 
+En cualquier caso, siempre debemos tomar como referencia a la hora de identificar los 
+procesos claves su contribución a la hora de lograr la satisfacción del cliente (objetivo 
+estratégico de la Norma ISO 9001:2000).Bajo esta perspectiva nos encontramos siempre que 
+los siguientes procesos forman parte de los procesos clave: 
+ 
+o elaboración de la estrategia 
+ 
+o realización del producto 
+ 
+o desarrollo de nuevos productos 
+ 
+o gestión de relaciones con clientes 
+ 
+El resto puede ser o no ser proceso clave, según las circunstancias de la empresa y pueden 
+igualmente aparecer como subprocesos o como soporte de estos proceso clave. 
+ 
+Para seguir una regla práctica es bueno comenz ar por el proceso de realización del producto 
+como principal proceso operativo que abarca la mayor parte de las áreas funcionales de la 
+organización y después durante su análisis se irán analizando los subprocesos que existen 
+partiendo de su contribución al objetivo del proceso principalmente interfuncional. 
+ 
+Una vez identificados, se establecen las relaciones  existentes entre ellos utilizando el mapa 
+de procesos al tiempo que se resaltan los procesos de apoyo. 
+            
+ 
+1.3.1Requisitos básicos de  un proceso 
+ 
+Todos los procesos para ser considerados como tales deben de tener una serie de elementos 
+comunes o requisitos básicos que los identifican, como son: 
+ 
+o un responsable designado que asegure su cumplimiento, eficacia continuada y 
+mejora permanente 
+ 
+o han de ser capaces de satisfacer los ciclos del esquema de mejora continua 
+ 
+o es necesario que están identificados los indicadores que permitan ver de forma 
+gráfica la evolución de los mismos. 
+ 
+Estos requisitos se traducen en la necesidad de identificar unos elementos como son: 
+ 
+o La entrada (input), con unas característi cas objetivas que responda a un estándar o 
+criterio de aceptación definido. Normalmente, será la salida de algún proceso anterior. 
+ 
+o La salida (output) con la calidad exigida, que  habitualmente será la entrada para otro 
+proceso posterior. 
+ 
+o Un sistema de control por medio de indicadores del funcionamiento del proceso. 
+ 
+o Unos límites claros y conocidos que comienzan con una necesidad concreta y 
+terminan con su satisfacción. 
+ 
+o Finalmente, existirá un gestor o propietario del proceso. 
+ 
+ 
+           
+ 
+    
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 9
+1.3.2 Conceptos básicos 
+ 
+Algunos de los conceptos o términos relacionad os con la Gestión por Procesos, y que son 
+necesarios tener en cuenta para facilitar su identificación y definición posterior  son los 
+siguientes: 
+ 
+♦ Proceso clave: Son aquellos procesos que inciden de manera significativa en los 
+objetivos estratégicos y son críticos para el éxito del negocio. 
+ 
+♦ Subprocesos: son partes bien definidas en un proceso. 
+ 
+♦ Sistema: Estructura organizativa, procedimientos, procesos y recursos 
+necesarios para implantar una gestión determinada. Normalmente están basados 
+en una norma de reconocimiento internacional que tiene como finalidad servir de 
+herramienta de gestión en el aseguramiento de los procesos. 
+ 
+♦ Procedimiento: Forma especifica de llevar a cabo una actividad. 
+ 
+♦ Actividad: Es la suma de tareas que normalmente se agrupan en un 
+procedimiento para facilitar su gestión.  La secuencia ordenada de actividades da 
+como resultado un subproceso o un proceso. Normalmente se desarrolla en un 
+departamento o un área de la empresa. 
+ 
+♦ Proyecto: Suele ser una serie de actividades encaminadas a la consecución de 
+un objetivo, con un principio y final claramente definidos. La diferencia 
+fundamental con los procesos y procedimi entos estriba en la no repetitividad de 
+los proyectos. 
+ 
+♦ Indicador: Es un dato o conjunto de datos q ue ayudan a medir objetivamente la 
+evolución de un proceso  o de una actividad. 
+ 
+ 
+                                                                                     VOLVER                      
+ 
+ 
+1.4 LA DIAGRAMACIÓN DE PROCESOS 
+ 
+La mayoría de las veces los sistemas (conjunto de procesos y subprocesos integrados de una 
+organización) son difíciles de comprender, amplios, complejos con muchos puntos de 
+contacto entre si y un buen número de departamentos y puestos implicados. 
+ 
+Una ayuda que puede favorecer su  entendimiento consiste en utilizar Modelos, pero ¿en qué 
+consiste un Modelo? Pues bien, se trata de la  representación gráfica  de un sistema y las 
+actividades llevadas a cabo en él, donde se  hace una descripción lo más detallada posible.  
+ 
+Cuando un proceso es modelado con la ayuda de un Diagrama de Proceso pueden 
+apreciarse con facilidad las interrelaciones ex istentes entre las actividades, analizar cada 
+actividad, definir los puntos de contacto con otros procesos, así como identificar los 
+subprocesos definidos. 
+ 
+Al mismo tiempo, los problemas existentes, p ueden ponerse de manifiesto claramente dando 
+la oportunidad al inicio de acciones de mejora. 
+ 
+Diagramar, es establecer una representación visual de los procesos y subprocesos, lo que 
+permite obtener información preliminar sobre la amplitud de los mismos, sus tiempos y los de 
+sus actividades. 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 10
+Esta representación gráfica, facilita el análisi s, uno d e cuyos o bjetivos es la de scomposición 
+de los procesos de trabajo en actividades discretas. También hace posible la distinción entre 
+aquellas q ue aporta n val or añ adido de las que no lo ha cen, es de cir qu e no p roveen 
+directamente nada al cliente del proceso o al resultado deseado.  
+En este últim o sentid o ca be ha cer un a pre cisión, ya que no to das la s a ctividades qu e n o 
+proveen valor añadido han de ser innecesarias; éstas pueden ser actividades de apoyo y ser 
+requeridas p ara hacer más efi caces l as fun ciones de di rección y control, p or razone s d e 
+seguridad o por motivos normativos y de legislación. 
+Para realizar un Di agrama de Procesos, se suelen utilizar unos símbolos que están 
+normalizados por la American Nacional Standarda institute (ANSI). 
+En cuanto a las línea s, las co ntinuas indican fl ujos físicos de inf ormación o material es, las 
+discontinuas a base de puntos, flujos temporales o i nformales y las discontinuas a base de 
+trazos, transferencias electrónicas de información. 
+A continuación se presentan algunos símbolos ANSI: 
+ 
+  Actividad      Tran sporte de producción 
+ 
+ 
+  Dire cción de flujo    Archiva r-espera 
+ 
+     
+  Operaci ón manual    De struir 
+ 
+ Toma de decisión    Inspe cción- firma 
+ 
+ 
+ 
+  Se requiere soporte papel   Límites del proceso 
+ 
+ 
+ 
+          
+ 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 11
+ 
+Los Diagramas de Procesos se pueden clasificar en: 
+1. Diagramas d e Bloque , los cuale s no s permiten ob tener u na d escripción global del  
+proceso, utilizando simplemente rectángulos o bloques y flechas. 
+2. Diagramas de flujo de act ividades, los cuales son e mpleados para representar con  
+mayor precisión los procesos, 
+3. Diagramas de flujo funcio nal, los cuales son usado para flujos a través de di stintas 
+organizaciones. Suelen ser empleados por grandes multinacionales. 
+ 
+n ejemplo de Diagrama de Procesos sería: 
+ 
+                                 
+ 
+U
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+VOLVER
+ 
+ 
+ 
+ GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 12
+1.5 PROCESOS DE REDISEÑO Y MEJORA 
+y eficiente. Es conseguir que rinda en un g rado 
+uperior al que tenía anteriormente, y ello gracias a una acción sistemática sobre el proceso 
+n del ciclo PDCA de mejora continua. 
+1 
+1.  
+ 
+1. 1 
+1. Planificar, los obj etivos d e mejo ra p ara el mismo y la mane ra en qu e se van a 
+nzar. 
+2. las actividades planificadas para la mejora del proceso. 
+ con las mejoras que hayan    
+   demostrado su efectividad”. 
+ 
+ 
+a Gestión según los principios de Calidad Total utiliza un sinfín de técnicas y herramientas 
+ara provocar la mejo ra de los procesos de u na organización. Alguna s so n creativas y 
+s 
+ 
+erales                                                                     
+                               
+ 
+ otras pueden corresponder a mejoras en el funcionamiento como: 
+ 
+ 
+ 
+Rediseñar un proceso es hacerlo más eficaz 
+s
+que hará posible que los cambios efectuados se mantengan con una cierta estabilidad. Se 
+trata de conocer  el proceso, sus causas imputables de variación, de eliminar actividades sin 
+valor añadido y de aumentar la satisfacción del cliente. 
+ 
+Para mejorar un proceso es necesario seguir la aplicació
+ 
+ 
+ 
+ 
+ 
+ 
+1
+ 
+1.5 
+ 
+1.5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+alca
+ 
+Ejecutar, 
+ 
+3. Verificar, la efectividad de las actividades de mejora. 
+ 
+4.  Actualizar la  “nueva forma de hacer ocurrir el proceso
+  
+ 
+L
+p
+basadas en la imaginación como: 
+ 
+o Redefinición de expectativa
+o Redefinición de destinatarios 
+ 
+o Redefinición de resultados gen
+     
+ 
+Y
+ 
+o Mejoras en la eficiencia 
+o Mejoras en la eficacia GESTIÓN DE CALIDAD LA GESTIÓN POR PROCESOS 
+© Educaguia .com     / 14 13
+Ahora s el mismo objetivo: MEJORAR EL PROCESO. 
+l primer paso, esencial para acometer la me jora de los procesos es contar con el liderazgo 
+e la alta dirección de la organización. Este liderazgo ha de ser asumido decididamente e ir 
+e la misma conoce y domina los temas 
+relacionados con la gestión por y  de procesos. 
+♦ ersonal. 
+ejora y  
+esarrollar las 
+actividades de gestión por y de procesos. 
+ 
+i, todas ellas persiguen 
+ 
+ 
+E
+d
+acompañado de un intenso compromiso, para que: 
+ 
+♦ El resto de la organización perciba qu
+ 
+Que se involucran en la formación del resto del p
+ 
+♦ Que se involucran activa y personalmente en equipos de m
+ 
+♦ Que destinan los recursos humanos y materiales necesarios para d
+                                                                                                        VOLVER
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

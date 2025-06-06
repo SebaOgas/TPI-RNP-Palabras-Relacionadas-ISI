@@ -1,0 +1,395 @@
+1 
+ 
+Resumen Global Administración de Sistemas de 
+Información 
+U1 - Planificación Estratégica de Sistemas de Información 
+Pasos para la creación de un plan estratégico: 
+1. Definir propósitos de la empresa 
+• Misión: para qué hace lo que hace, qué intenta aportar 
+• Visión: visualización del futuro, alcanzable y objetiva 
+• Valores: principios éticos por los que se rige la empresa  
+2. Hacer un análisis interno y externo (FODA) 
+• F (interno) 
+• O (externo) 
+• D (interno) 
+• A (externo) 
+3. Puntualizar objetivos y estrategias 
+• Estrategia DA: supervivencia o retirada 
+• Estrategia FO: ofensiva o de crecimiento 
+• Estrategia DO: reorientación o refuerzo para cambiar de trayecto 
+• Estrategia FA: defensiva 
+4. Calcular el presupuesto: costos y posibles ingresos, determinar viabilidad 
+5. Desarrollar un plan de acción: qué se hace, quién y cuánto tiempo tiene. 
+Jerarquía de actividades. Gantt, mapeo de procesos (T1) 
+6. Implementar el plan: con motivación y disciplina 
+Estrategia empresarial: acciones para el logro de una ventaja competitiva 
+duradera. (T2) 
+Análisis estratégico: recoger y estudiar datos relativos al estado y evolución de 
+factores internos y externos. 
+Análisis externo (PEST): 
+• Políticos 
+• Económicos 
+• Sociales 
+• Tecnológicos 
+Análisis PESTEL: añade: 
+• Ecológicas 2 
+ 
+• Legales 
+ 
+Objetivos SMART: 
+• Specific 
+• Measurable 
+• Achievable 
+• Realistic 
+• Timely 
+Indicadores: 
+• De proceso 
+• De resultado 
+Indicadores de gestión: para medir el cumplimiento de objetivos internos. 
+Características de los indicadores de gestión: 
+• Claridad 
+• Utilidad explícita 
+• Temporalidad definida 
+• Adecuación contextual 
+Tipos de indicadores de gestión: 
+• Cualitativos y cuantitativos 
+• Calidad 
+• Proyectos 
+• Eficacia y eficiencia 
+3 
+ 
+Cualidades de un buen emprendedor: 
+• Creatividad e ingenio 
+• Pasión 
+• Visión 
+• Liderazgo 
+• Paciencia 
+• Confianza en ti 
+• Responsabilidad 
+• Receptivo 
+• Empatía 
+• Decisión 
+Plan de negocio: documento que identifica, describe y analiza una oportunidad de 
+negocio, examina la viabilidad técnica, económica y financiera y desarrolla los 
+procedimientos y estrategias necesarios para convertirlo en un proyecto 
+empresarial concreto. 
+Ética (T5) 
+U2 – Gestión de Recursos Humanos 
+Las organizaciones son sistemas parcialmente abiertos. 
+Relaciones humanas: hay laborales e industriales. 
+Hay una aldea global en la actualidad, o supertribu. 
+En el ámbito laboral, las relaciones no amistosas pueden afectar la productividad 
+y eficiencia. 
+Aportes a la ciencia de Administración de RRHH: 
+• Derecho laboral 
+• Administración científica 
+• Ingeniería Industrial (Taylor) 
+• Psicología 
+• Sociología (Mayo) 
+• Antropología 
+• Derecho 
+• Economía 
+• Matemáticas 
+• Higiene y Seguridad Industrial 
+Diseño organizacional: proceso de construir y adaptar continuamente la 
+estructura de la organización para que alcance sus objetivos y estrategias. 4 
+ 
+Comportamiento humano: conjunto de actos exhibidos por el ser humano. 
+Comportamiento organizacional: comportamiento de los individuos dentro de una 
+organización de la que forman parte. 
+Persona: 
+• Personalidad: integración dinámica de los mecanismos biopsicológicos 
+que determinan la adaptación del individuo al ambiente. 
+•  Temperamento: segmento de la personalidad, instinto. 
+• Carácter: cualidades psíquicas y emocionales que presenta un 
+individuo o grupo. 
+Motivación: todo aquello de lo que emerge la conducta. 
+Instinto: mecanismo adoptado por la especia por la evolución, para enfrentarse a 
+un problema de supervivencia. 
+Aprendizaje: adquirir nuevos tipos actuales o potenciales de conducta. 
+Frustración: ocurre cuando algo se interpone con el objetivo. 
+Alguien motivado no necesariamente produce más, pues su trabajo es un medio 
+para él. 
+Teoría de Maslow: 
+ 
+Teoría de Herzberg:  
+5 
+ 
+• Factores Motivadores → satisfacción / no satisfacción 
+• Factores Higiénicos → insatisfacción / no insatisfacción 
+Teoría de Alderfer (si no se logra una superior, aparece una inferior): 
+• Existencia: necesidades fisiológicas y de seguridad 
+• Relación: necesidades social y de estima (externa) 
+• Crecimiento: necesidades de estima (interna) y de autorrealización 
+Teoría de McClelland:  
+• Necesidad de Logro: sobresalir, éxito 
+• Necesidad de Poder: influencia 
+• Necesidad de Afiliación: relaciones interpersonales 
+Modelo de expectativas de Vroom (teoría de procesos): |V*E*I| 
+• V: Valor de la recompensa (-1;1) 
+• E: Expectativa (0;1) 
+• I: Instrumentalidad (0;1) 
+Modelo de equidad de Stacy Adams: obtención de recompensas equitativas, por 
+comparación de aportes y resultados. 
+Teoría de la modificación de la conducta de Skinner: usar refuerzo positivo, 
+porque el cambio producido por el refuerzo negativo es impredecible. 
+Motivación (T6) 
+Tipos de motivación:  
+• Intrínseca: por la tarea en sí 
+• Extrínseca: por el resultado 
+• Trascendental: por la satisfacción de un tercero 
+Sistemas de incentivos: 
+• Recompensas externas 
+• Enriquecimiento de tareas 
+Características motivacionales en el trabajo:  
+• Variedad de habilidades 
+• Identidad con la tarea 
+• Significación de la tarea 
+• Autonomía 
+• Feedback 6 
+ 
+Cultura organizacional: conjunto de hábitos, creencias, valores y tradiciones, 
+interacciones y relaciones sociales típicos de la organización.  Representan las 
+normas informales y no escritas que orientan la conducta de los miembros. 
+Parámetros de la cultura organizacional: 
+• Visión 
+• Valores 
+• Prácticas: transformación de la visión y los valores en acciones 
+específicas 
+• Capital humano: compartición de objetivos y estrategias entre los 
+integrantes 
+• Mensaje: forma de comunicar la misión, visión y valores 
+• Recursos: la cultura se sirve de recursos materiales para desplegar su 
+influencia 
+Pasos para construir la cultura de una empresa: 
+• Comprender y respetar las diferencias culturales 
+• Crear una cultura organizacional que trascienda las culturas regionales 
+• Definir bien la cultura 
+• Contratar empleados que se adapten a la cultura 
+Autoridad: virtud de la cual las personas ejercen mando y control sobre otras.  
+• Fuentes: jefatura, liderazgo, profesional 
+• Características: 
+o Tipo: oral, gestual, escrita 
+o Forma: clara, planificada, completa, concisa 
+o Receptor: conocer actitudes, hábitos, reacciones 
+o Estilo: imperativo, sugestivo, solicitativo 
+• Delegación: basada en la confianza. Se conserva la responsabilidad. 
+Hay tareas no delegables. 
+Funciones administrativas: 
+• Planificación 
+• Organización 
+• Dirección 
+• Control 
+Proceso administrativo: decisiones y actividades de trabajo que se realizan en 
+forma continua. 
+Habilidades: 7 
+ 
+• Alta gerencia → conceptuales 
+• Gerencia de nivel medio → humanas 
+• Gerencia de bajo nivel → técnicas 
+Liderazgo: actividad de influenciar en las personas para que se desempeñen 
+voluntariamente en el logro de los objetivos del grupo. (T7) 
+Estilos de liderazgo: 
+• Sustancialista: rasgos de personalidad profundamente arraigados en la 
+persona, innatos o adquiridos, capacidad intelectual, voluntad, 
+autodominio, templanza, coraje 
+• Comportamental: comportamiento del líder 
+• Situacional: madurez 
+• Personalista: por condiciones naturales, ética y valores 
+• Prospectivo: humildad y confianza, buena comunicación, creación de 
+cultura, percepción macro 
+• Según las variables que actúan: 
+ 
+8 
+ 
+ 
+ 
+Teorías gerenciales: relacionadas a la coordinación del esfuerzo de los 
+subordinados. 
+Teoría X (tradicional, sistema autoritario explotativo): tareas simples y vigilar de 
+cerca. 
+Teoría Paternalista (Likert): como la X, pero con cortesía. Parte del salario en 
+especie. 
+Teoría Z (de las relaciones humanas): reconocer el trabajo, hacer que los 
+subordinados se sientan importantes, mantenerlos informados. 
+Teoría Y (participativo, de las relaciones humanas): autocontrol y autodirección, 
+dar poder de decisión. 
+9 
+ 
+Análisis de puestos (T8): 
+• Métodos: 
+o Observación: 
+▪ Introspección del trabajo 
+▪ Observación natural 
+▪ Observación controlada 
+o Cuestionarios 
+▪ De respuestas abiertas 
+▪ De elección forzosa 
+o Entrevista 
+• Partes: 
+o Generales: ubicación física y organizacional, horarios 
+o Descripción analítica: función y clasificación en orden 
+cronológico 
+o Descripción genérica: definición del puesto 
+o Requerimientos: experiencia, capacitación 
+o Responsabilidad: en dirección de personas, en trámites y 
+procesos 
+o Condiciones de trabajo: ambiente, tiempo, riesgos 
+o Perfil 
+Valuación de puestos: procedimiento que analiza el puesto para determinar el 
+grado de habilidad, esfuerzo y responsabilidad requeridos, y las condiciones de 
+trabajo, comparándolo con otros puestos de la misma organización para 
+establecer una relación lógica entre estos factores y los salarios. 
+Selección de personal: procedimiento para encontrar la persona adecuada que 
+cubra un puesto a un costo adecuado. 
+Entrevista inicial: 
+• Informar características del trabajo 
+• Estar preparado 
+• Fases: 
+o Rapport (romper el hielo) 
+o Cima (historia laboral, personal) 
+o Cierre (feedback y redacción de informe) 
+• Pruebas: 
+o Psicológicas 
+o De trabajo 
+o Médica 
+o Socioeconómica 10 
+ 
+o Decisión final 
+Inducción: contiene las obligaciones, lugar, tiempo y modo, contraprestación, 
+identificación de superiores y subordinados, estructura física y lógica, 
+reglamentos, políticas, etc. 
+Medición de desempeño: 
+• Diseño: definir tareas a realizarse. Incluye qué y cómo medir. 
+• Implementación: evaluación periódica iniciada con la asignación de 
+tareas. 
+• Evaluación: proceso continuo, planificado, parametrizado, divulgado, 
+etc. 
+• Administración: proceso dinámico que debe ser corregido, adaptado y 
+mejorado continuamente. 
+U4 – Administración y Gestión de Hardware 
+Red: conjunto de dispositivos interconectados que comparten recursos y se 
+comunican entre sí mediante protocolos. 
+Topologías de red: arreglo físico en el cual los dispositivos de red se conectan. 
+• Ducto / Bus 
+• Estrella 
+• Anillo 
+• Malla 
+Métodos de control de acceso al medio: CSMA/CD, testigo de control (token 
+passing). 
+Medios: alambre (sólido o hilado), cable coaxial (grueso 10Base5 o delgado 
+10Base2), par trenzado (UTP o STP). 
+Disponibilidad: fracción de tiempo que un sistema está accesible. Varía la 
+tolerancia a fallas según el sistema. Se calcula a partir del tiempo que hay entre 
+fallas, el tiempo de diagnóstico y reparación. Permite tomar medidas para mejorar 
+el funcionamiento de la red. 
+Seguridad: característica de cualquier sistema que indica que está libre de todo 
+riesgo y es infalible. En sistemas operativos y redes es muy difícil, por lo que se 
+habla de fiabilidad (Probabilidad de que el sistema se porte como se espera). 
+Peligros de los que se debe proteger a los sistemas: 
+• Desastres naturales: 3% 
+• Errores u omisiones humanos: 85% (usuarios técnicos: 75%) 11 
+ 
+• Actos intencionales: 4% 
+• Riesgos de tecnología: 8% 
+Política de seguridad: reglas para proveer servicios seguros. 
+Un sistema seguro o altamente fiable garantiza: 
+• Confidencialidad (objetos accedidos únicamente por personal 
+autorizado) 
+• Integridad (objetos modificados de manera controlada por personal 
+autorizado) 
+• Disponibilidad (objetos que permanecen accesibles por personal 
+autorizado) 
+• Protección (de los objetos) 
+Rol de la seguridad: analizar distintas herramientas para comprender riesgos 
+existentes, descubrir vulnerabilidades y analizar la seguridad en la red. 
+Funciones de la seguridad: 
+• Evitar (ciertas actividades por el riesgo) 
+• Disuadir (inspirar respeto para mover a alguien a desistir) 
+• Prevenir 
+• Detectar (automática o manualmente) 
+• Recuperar y corregir 
+Elementos a proteger: 
+• Hardware 
+• Software 
+• Datos 
+• Instalaciones 
+• RRHH 
+Amenazas: 
+• Físicas 
+• Lógicas 
+Análisis de riesgos: técnica para determinar los montos máximos de dinero a 
+invertir para proteger los activos, cuantificando riesgos, pérdidas esperadas y el 
+costo de tomar medidas de control. 12 
+ 
+ 
+Debe haber protección en: 
+• Acceso físico 
+• Dispositivos de seguridad 
+• Identificación y autenticación de usuarios 
+• Autorización 
+Ataques: 
+• Interrupción (ataque a la disponibilidad): algo de valor es destruido 
+• Intercepción (ataque a la confidencialidad): alguien no autorizado gana 
+acceso sobre algo de valor 
+• Modificación (ataque a la integridad): alguien no autorizado modifica 
+algo de valor. 
+• Fabricación (ataque a la autenticidad): alguien no autorizado inserta 
+objetos falsos en el sistema. 
+T1 – Gantt y Mapeo de procesos 
+El diagrama de Gantt es una herramienta de planificación y gestión de proyectos. 
+Plasma los hitos y tareas en el tiempo. Tiene dos secciones: una lista de tareas y 
+un cronograma. 
+El mapeo de procesos (BPM) representa visualmente un flujo de trabajo. Suelen 
+usarse notaciones como BPMN y UML. 
+T2 – Plan Estratégico 
+ClearPoint Strategy: software para planeación estratégica con reportes de Data 
+Visualization, diagramas de Gantt, KPIs y OKRs, mapas mentales y FODA. 
+Enloop: software para generar planes de negocio, enfocado en el análisis 
+financiero, permitiendo hacer predicciones y asignar puntuaciones a distintos 
+planes de negocio. 
+13 
+ 
+T5- Ética 
+Autosuperación: no hacer lo mínimo indispensable. 
+Respeto: a los compañeros, más allá de las diferencias religiosas, políticas, 
+étnicas, etarias o académicas. 
+Transparencia: comunicar al cliente y stakeholders los aspectos del sistema que 
+deban o quieran conocer. 
+Predisposición: para dar soporte y mantenimiento a los procesos de una empresa. 
+Compromiso: con el cliente, la calidad, la integridad, la mejora continua y los 
+compañeros de trabajo. 
+T6 – Motivación 
+El recurso humano es el factor más importante para las empresas. 
+Agentes motivadores: 
+• Fomento a la creatividad e innovación 
+• Planteamiento de metas personales 
+• Fomento a la interacción y el servicio a otras áreas 
+• Enriquecimiento de las tareas 
+Incentivos de un área de desarrollo: ofrecer posibilidad de mejora y aprendizaje, 
+dar reconocimiento al buen trabajo, dar a cada integrante su propia estación de 
+trabajo. 
+T7 – Liderazgo 
+El líder perfecto es alguien con gran capacidad para motivar, justo, optimista y 
+abierto al cambio, responsable y decidido. Buenos comunicadores, empáticos y 
+guían con el ejemplo, competentes. 
+No cualquiera puede ser un líder. 
+Alguien tímido puede ser líder. 
+Hay una tendencia de “nuevo líder” remoto. 
+No es necesaria la presencialidad para ser líder, pero sí requiere mayor esfuerzo. 
+T8 – Análisis de Puesto 
+• Nombre del cargo: <cargo> 
+• Área: <área> 
+• Depende de: <cargo superior> 
+• Puestos a cargo: <lista de cargos subordinados> 14 
+ 
+• Formación: <lista de carreras> 
+• Conocimientos 
+• Experiencia: <tiempo y en qué> 
+• Tareas a realizar 
+• Horarios 
+• Modalidad: <presencial |  remota | híbrida> 
+• Ubicación física: <dónde dentro de la oficina> 
+ 
+ 
+ 

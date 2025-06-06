@@ -1,0 +1,175 @@
+Trabajo Especial sobre Actores – Casos de Uso 
+ 
+ Diseño de Sistemas. 3º año. 2010. UTN. Reg. Mendoza.  
+Realizado por los alumnos Guillermo Puntons y Victo ria Genesy. Revisado por la Prof. Adriana Ruiz  
+1 
+ 
+Información recopilada  
+ 
+“El Proceso Unificado de Desarrollo de Software”. 
+Jacobson, Booch, Rumbaugh. Capítulo 7. 
+  
+Actores 
+ 
+El Modelo de Casos de Uso describe lo que hace el sistema para cada tipo de 
+usuario. Cada uno de éstos se representa  mediante uno o más actores. Un actor puede 
+representar a una persona física, otro sistema, un dispositivo. Representan a terceros 
+fuera del sistema que colaboran con él. 
+ 
+Un actor es como una clase, que se define por la descripción de su 
+comportamiento. Un usuario puede desempeñar varios papeles (roles), esto es, puede 
+actuar como diferentes actores y a su vez, un actor puede ser diferentes usuarios. 
+ 
+La definición de actores, sirve para definir el contexto externo del sistema, esto es, 
+delimitar los elementos que se encuentran fuera y dentro del sistema. 
+ 
+Un actor juega un rol para cada caso de uso en el que colabora. Cada vez que un 
+usuario concreto interactúa con el sistema, la instancia correspondiente de ese actor está 
+jugando ese rol. Una instancia de un actor es un usuario específico interactuando con el 
+sistema. 
+ 
+Ejemplos 
+ 
+Actores de un sistema bancario: 
+• Cajero, cliente, gerente, sistema de tarjetas electrónicas, etc. 
+Actores en un sistema de bibliotecas: 
+• Socio, empleado de atención al público, empleado catalogador del material, etc. 
+Actores de un sistema de facturación: 
+• Cajero, sistema de stock, sistemas de tarjetas, etc. 
+ 
+ 
+ “El Lenguaje Unificado de Modelado Guía de usuario”. 
+Grady Booch, James Rumbaugh, Ivar Jacobson. Segunda 
+Edicion.  Capítulo 16 
+ 
+ 
+Actor: 
+ 
+Un actor representa un conjunto coherente de roles que los usuarios de los casos 
+de uso juegan al interactuar con éstos. Normalmente, un actor representa un rol que es 
+desempeñado por una persona, un dispositivo hardware o incluso otro sistema al 
+interactuar con nuestro sistema. Por ejemplo, si una persona trabaja para un banco, Trabajo Especial sobre Actores – Casos de Uso 
+ 
+ Diseño de Sistemas. 3º año. 2010. UTN. Reg. Mendoza.  
+Realizado por los alumnos Guillermo Puntons y Victo ria Genesy. Revisado por la Prof. Adriana Ruiz  
+2 
+ 
+podría ser un ResponsablePrestamos. Si tiene sus cuentas personales en ese banco, 
+está desempeñando también el rol de cliente. Una instancia de un actor, por lo tanto 
+representa una interacción individual con el sistema de una forma específica. Aunque se 
+utilizan actores en los modelos, éstos no forman parte del sistema. Están fuera de la 
+aplicación, en el entorno que la rodea. 
+ 
+Los actores se representan como monigotes. Se pueden definir categorías 
+generales de actores (como Cliente) y especializarlos (como ClienteComercial) a través 
+de relaciones de generalización. 
+ 
+ 
+ 
+Actores y casos de uso 
+ 
+Los actores solo se pueden conectar a los casos de uso a través de asociaciones. 
+Una asociación entre un actor y un caso de uso indica que el actor y el caso de uso se 
+comunican entre sí, y cada uno puede enviar y recibir mensajes. 
+ 
+ 
+Craig Larman. “UML y Patrones”. Segunda Edicion. 
+Capítulo 6 
+ 
+Actor 
+ 
+Un actor es cualquier cosa con comportamiento cuando solicita los servicios de 
+otros sistemas. Los actores no son solamente roles que juegan personas, sino también 
+organizaciones, software y máquinas, incluyendo al propio sistema que se está 
+estudiando. Hay tres tipos de actores externos con relación al sistema: 
+ 
+• Actor principal: tiene objetivos de usuario que se satisfacen mediante el uso de los 
+servicios del sistema. Por ejemplo, el cajero. 
+ ¿Por qué es útil identificar este tipo de actores? Para encontrar los objetivos de 
+usuario, los cuales dirigen los casos de uso. 
+ 
+• Actor de apoyo: proporciona un servicio (por ejemplo, información) al sistema. El 
+servicio de autorización de pago es un ejemplo. Normalmente se trata de un sistema 
+informático, pero podría ser una organización o una persona. 
+ ¿Por qué se identifica? Para clarificar las interfaces externas y los protocolos 
+ 
+• Actor pasivo: no es principal ni de apoyo pero está interesado en el 
+comportamiento del sistema. Por ejemplo, la agencia tributaria del gobierno.  Trabajo Especial sobre Actores – Casos de Uso 
+ 
+ Diseño de Sistemas. 3º año. 2010. UTN. Reg. Mendoza.  
+Realizado por los alumnos Guillermo Puntons y Victo ria Genesy. Revisado por la Prof. Adriana Ruiz  
+3 
+ 
+ ¿Por qué se identifica? Para asegurar todos los intereses necesarios se han 
+identificados y satisfecho. Los intereses de los actores pasivos algunas veces son sutiles 
+o es fácil no tenerlos en cuenta, a monos que estos actores sean identificados 
+explícitamente. 
+“Object-Oriented Software Engineering”, Jacobson, Ivar. 
+1992 
+ 
+Actores  
+ 
+Un actor es un tipo de usuario o categoría y cuando un usuario hace algo, actúa 
+como una ocurrencia de ese tipo. Una persona puede actuar como diferentes actores 
+(cumplir distintos roles). 
+ 
+Los actores pueden ser tanto personas como otros sistemas, los cuales se 
+comunican con el sistema en cuestión para intercambiar información, pero son externos a 
+este. 
+ 
+Los actores se pueden clasificar en primarios y secundarios, un buen punto de 
+partida para clasificarlos es tener en cuenta para cuales actores será diseñado el sistema, 
+a cuáles actores supone ayudar: 
+ 
+• Actores primarios: son los que usarán el sistema directamente, en su trabajo 
+diario. Estos van a llevar a realizar una o algunas de las tareas principales dentro 
+del sistema. Representa a aquellos actores para los cuales se ha construido el 
+sistema. 
+ 
+• Actores secundarios: son aquellos que realizan tareas de supervisión y de 
+mantenimiento del sistema. Estos sólo son necesarios para que los actores 
+primarios utilicen el sistema. 
+ 
+Hacemos la clasificación entre primarios y secundarios para asegurar que el 
+sistema se estructure basado en las funcionalidades principales. Los actores primarios 
+gobernarán la estructura del sistema. Por eso, al identificar casos de uso, empezaremos 
+siempre con los actores primarios, para garantizar que la estructura diseñada pueda 
+adaptarse a los usuarios más importantes. Los cambios de un sistema provienen 
+fundamentalmente de los actores primarios. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Trabajo Especial sobre Actores – Casos de Uso 
+ 
+ Diseño de Sistemas. 3º año. 2010. UTN. Reg. Mendoza.  
+Realizado por los alumnos Guillermo Puntons y Victo ria Genesy. Revisado por la Prof. Adriana Ruiz  
+4 
+ 
+Conclusión  
+ 
+ 
+Definición 
+ 
+ 
+Después de analiza las diferentes definiciones de actores según las diferentes 
+bibliografías citadas, nos pareció que la definición más abarcativa es la que dice que un 
+actor representa un conjunto coherente de roles que los usuarios de los casos de uso 
+juegan al interactuar con éstos. Normalmente, un actor representa un rol que es 
+desempeñado por una persona, un dispositivo hardware o incluso otro sistema al 
+interactuar con nuestro sistema . 
+ 
+ 
+ 
+Clasificación 
+ 
+De las clasificaciones citadas en la bibliografía, concluimos que lo relevante al 
+clasificar los casos de uso, es la utilidad que esta clasificación puede brindarnos a la hora 
+de encontrar “mejores casos de uso”. Por ejemplo según nos menciona Jacobson, si 
+determinamos que un actor es primario habremos encontrado una de las fuentes de 
+futuros cambios relevantes en el sistema. Este tipo de actores llamados principales en la 
+clasificación de Larman, nos permitirá enfocarnos en los objetivos de actor que deben 
+conducir la creación de los casos de uso, como recomienda el Proceso Unificado.  
+ 

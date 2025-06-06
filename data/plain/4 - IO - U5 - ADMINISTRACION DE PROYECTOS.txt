@@ -1,0 +1,335 @@
+TEMA 5 
+ 
+ 
+Administración de Proyectos 
+ 
+En Programación por Camino Crí tico, tenemos 2 métodos para realizar la 
+planificación y programación de las tareas que componen el proyecto:  
+ 
+ PERT: implementado para tiempos probabilísticos 
+ CPM: implementado para tiempos determinísticos. 
+ 
+ 
+ETAPAS: Planificación, Programación y control. 
+ 
+ PLANIFICAR: es especificar cada tarea a realizar del proyecto. 
+ PROGRAMAR: es tener la información del tiempo que demora cada tarea a 
+realizar 
+ CONTROLAR: es poder identificar en un tiempo determinado del proyecto en 
+qué estado se encuentra las tareas que deberían ejecutarse hasta  ese 
+momento. (si la tarea cumple con lo planificado y programado:  está terminada, 
+de no ser así, en qué %, se ha comenzado antes o no se ha terminado) 
+En síntesis, el objetivo es establecer un a planificación y programación del proyecto, en 
+el cual los recursos del mismo (horas máquina, horas hombre y productos), se 
+coordinen en forma apropiada para brindar el máximo beneficio. 
+ 
+DIAGRAMA DE GANTT  
+ 
+Es unos de los primeros métodos utilizados en la planificación y programación de 
+proyectos. Actualmente se ha dejado de utilizar este modelo , porque no per mite 
+visualizar la interrelació n de tareas, asignación de recursos ni información  en la 
+optimización de costos del proyecto. 
+La línea vertical roja indica el tiempo (h oras., min., día, mes…) donde se realiza un 
+control de las ta reas. Observamos que la tarea Nº 1 y Nº 2 está n te rminadas 
+cumpliendo con la programación, la tarea Nº 3 debería estar terminada y está realizada 
+al 50 %, la tarea Nº 4 no se ha empezado y tendría que estar terminada y la tarea Nº 5 
+esta adelantada. 
+        
+       Tarea 
+  
+control 
+    
+  
+  
+   
+  
+  
+    
+  
+5 
+  
+      
+ 
+   
+  
+   
+4 
+  
+  
+   
+   
+  
+   
+3 
+ 
+    
+   
+   
+  
+   
+2 
+ 
+    
+   
+        
+   
+         1       
+   
+            
+ 
+0 
+ 
+Ti Tf Tc Tiempo 
+ 
+        
+ 
+ETAPAS DE PLANIFICACION.:    
+ 
+1- LARGO PLAZO: cuando el proyecto es la construcción, o expansión de ejemplo 
+una industria, comercio, etc o la modernización de las instalaciones de la misma. 
+En estos casos se necesita un estudio de mercado, localizació n…etc.                 
+El periodo es de 1 a 3 años. 
+ 
+2- MEDIANO PLAZO: cuando se asignan recursos financieros, que dispone la 
+organización, al diseño de nuevos productos, modernización de má quinas, 
+equipos, software, estrategias de mercadotecnia, etc.,                                          
+El periodo es de 1 mes a 1 año. 
+ 
+3- CORTO PLAZO: cuando se asignan recursos financieros de la organización a 
+distintas áreas que la componen, por ejemplo establecer turnos de trabajo, 
+tercerización de productos, ofertas de productos destinados a la venta, etc.        
+El periodo es de 1 día a 1 mes. 
+ 
+ Planificación: subdivisión de tareas 
+ 
+1. Subdivisión por tipo de trabajo  o identificar gremios, por ejemplo en un proyecto 
+de construcción: electricista, pintores, albañiles, encofradores, etc. 
+2. Características estructurales: por ejemplo a) Torre 1  – b) Torre 2 o también ala 
+norte – ala sur. 
+3. División de tareas  por responsabilidad de trabajo : a) Propios: personal 
+perteneciente a planta –B) tercer izados: se realiza la misma tarea contratados o 
+por compra. Por ejemplo realizar la tar ea de: enchapar MDF o comprar MDF 
+enchapados, terminados. 
+4. Condiciones contractuales : a) propia, realizar la tarea con personal de la 
+organización o por licitación o contratación. Es necesario hacer esta subdiv isión 
+porque los costos de realizar la misma ta rea generalmente son dist intos, es 
+importante esta información en el área de costos del proyecto. 
+5. Lugar de trabajo : por ejemplo en la construcción de un gasoducto desde San 
+Carlos – Mendoza: identificar la zonas donde se realizan la misma tares. 
+Mendoza, Maipú, Luján, Agrelo, Tunuyán.  
+ 
+Definiciones a considerar, para realizar una red o maya, en las etapas de planific ación 
+y programación por Camino Critico utilizando notación de AoA. 
+ 
+ Nodo o acontecimiento: es la iniciación o conclusión de una actividad 
+específica del proyecto, es decir, una tarea, ocupa un instante en el tiempo y 
+se lo representa por lo general con un círculo. Generalmente los 
+acontecimientos se señalan con un número donde el número de 
+acontecimiento que le antecede debe ser menor que el que sucede, pero no 
+necesariamente secuencial y nunca se deben repetir. 
+ 
+ Tarea: es la parte del proyecto que se desarrolla entre dos acontecimientos 
+sucesivos lo cual demanda tiempo y recursos para su conclusión (horas 
+hombre, horas máquina). En general se lo representa como una flecha.  
+ 
+ Tarea ficticia: esta tarea no demanda ningún tipo de recursos y solamente 
+cumple la función de interrelacionar dos tareas, generalmente de gremios 
+distintos y se la representa con línea de trazas.  
+ 
+Realización de la Red o Malla 
+ 
+Se deben hacer estas dos preguntas para poder hacerla  
+ 
+1. Determinar la tarea que está en estudio 
+2. ¿Cuáles son las tareas que la anteceden, cuáles la preceden y cuáles puedo 
+realizar simultáneamente? 
+ 
+ 
+ 
+ 
+Determinación de tiempo de los distintos caminos. 
+ 
+C1: T(1-2) + T(2-3) + T(3-4) + T(4-6) +T(6-7) +T(7-10) +T(10-11)  
+            4    +   16     +     40   +    16   +   32    +    6       +     2           = 116 
+C2: T(1-2) + T(2-3) + T(3-6) + T(6-7) + T(7-10) + T(10-11) 
+            4   +    16    +    32    +   32     +     6       +     2                       = 92 
+C3: T(1-2) + T(2-3) + T(3-5) + T(5-6) + T(6-7) + T(7-10) + T(10-11)   
+          4     +     16    +    48   +     24   +    32    +     6       +      2        = 132 
+C4: T(1-2) + T(2-8) + T(8-9) + T(9-10) + T(10-11) 
+           4     +     2    +    56    +      2      +      2                                    = 66 
+-Observamos, que el camino constituido por las tareas (1 -2), (2-3), (3-5), (5-6), (6-7), 
+(7-10), (10-11) demanda el mayor tiempo : 132 minutos. Estas tareas constituyen el 
+“CAMINO CRITICO” o “TAREAS CRITICAS”, porque si se demora  más que la duración 
+estipulada para cada una de estas tareas, se demora la duración total del proyecto.    
+De esta conclusión su designación es  “Programación por Camino Critico” 
+Cuando el tiempo de una tarea nos es determinístico o conocido, se estudia: 
+ 
+Determinación del tiempo esperado (PERT) 
+ 
+               Te = Top + 4Tn + Tp              
+                                 6 
+ 
+ 
+ 
+ 
+Si el tiempo óptimo ( Top) o tiempo pesimista ( Tp) están cerca del tiempo normal ( Tn) 
+quiere decir que el Tn es un tiempo bastante  conocido y el tiempo esperado Te se 
+aproximará mucho al Tn. Entonces es evidente que la diferencia entre el Tp y Top es 
+muy pequeño, por lo tanto el valor del Te va a tener una desviación pequeña del Tn.   
+Es decir que la varianza del tiempo esperado está midiendo el grado de desviación o 
+incertidumbre con el cual estamos calculando el tiempo esperado. 
+ 
+ 
+Determinación del Camino Crítico por igualdad de FeTe y FeTa 
+ Este método me permite determinar no solamente el Camino Crítico sino 
+también los tiempos flotantes de aquellas tareas y caminos que no son críticos. Con 
+esta información podemos asignar recursos a cada una de las tareas y al proyecto en 
+general (horas hombre) a través de 2 diagramas: de calendario y de carga. 
+ Por último con la información que tenemos del costo de las tareas del proyecto  
+determinamos el costo directo de cada una de las mismas y con la información del  
+lucro cesante determinar cuál es la tarea q ue se debe acortar en el caso que quiera  
+disminuir la duración final del proyecto y determinar finalmente el costo total del mismo. 
+ 
+Fecha Temprana (FeTe) 
+ Se define como FeTe de un nodo o acontecimiento a aquel instante más próximo 
+al origen en que puede ocurrir ese acontecimiento tomando en consideración las tareas 
+que le preceden y fijando como fecha 0 el instante que corresponde al nodo inicial de 
+trabajo. 
+ 
+Fecha Tardía (FeTa) 
+ Se define como FeTa  de un nodo o acontecimiento al instante más alejado del 
+origen en que puede ocurrir ese acontecimiento tomando en consideración las tareas 
+que le suceden y fijado al igual que antes como fecha 0 la del nodo inicial. 
+ 
+Tiempo Flotante 
+ El Tf de una tarea es la diferencia entre la  fecha tardía (FeTa) y más temprana 
+(FeTe), correspondiente al nodo en el cual se inicia esa tarea . Este tiempo me permite 
+saber hasta cuanto puedo demorar la iniciación de una tarea sin afectar la duración 
+total del proyecto. Esta información es muy importante desde el punto de vista 
+económico del proyecto, porque me permite asignar recursos. 
+  Procedemos a analizar de cada acontecimiento, su fecha temprana y tardía: 
+ 
+ 
+ 
+ 
+ EJEMPLO TF: 
+Tiempo Flotante Tf (8-9) = FeTa 8 – FeTe 8 = 72 – 6   = 66 min. 
+Tiempo Flotante Tf (4-6) = FeTa 4 – FeTe 4 = 76 – 60 = 16 min. 
+ 
+ 
+  
+Diagrama Calendario y de Carga 
+Diagrama calendario : es aquel en el cual las distintas actividades que conforman el 
+proyecto, son representadas por fechas que tienen como magnitud la duración de la 
+tarea. Es decir, que cada tarea va a tener una magnitud proporcional al tiempo de la 
+tarea en consideración. Este diagrama se utiliza para luego realizar el diagrama de 
+carga, que nos permite asignar recursos y determinar el costo de cada tarea y el costo 
+total del proyecto. Esta información permite la “TOMA DE DECISIONES”. 
+Vamos a considerar el diagrama calendario y de carga de FeTe del proyecto.  
+                               
+ 
+El mismo diagrama se puede realizar para FeTa. 
+En el ejemplo donde todas las tareas se inician con FeTe, los tiempos flotantes están al 
+final del proyecto, generando picos (8 personas má ximo) y valles (2 personas mínimo). 
+Sucede a la inversa con el diagrama de FeTa.   
+En el diagrama de carga se distribuye los recursos (horas hombres) a partir de la 
+información que muestra el diagrama calendario, tratando que dichos “recursos” sean 
+lo más homogéneos posibles o estabilizar la cantidad de operarios durante la  duración 
+del proyecto ( por ejemplo 4 a 5  personas). Debemos asignar eficientemente los 
+recursos y distribuir en forma eficaz los tiempos flot antes (antes, durante o después de 
+la tarea en consideración). 
+ 
+Margen libre: son los días que se pueden atrasar las tareas predecesoras sin afectar 
+a dicha tarea.        M.L.: = FeTe destino – FeTe origen – Duración Tarea  
+ 
+Margen Total:    M.T. = FeTa destino – FeTe origen – Duración Tarea 
+Si el M.T. = 0         La Tarea es crítica. 
+ 
+Costo del Proyecto 
+ 
+ Sabemos que el método CPM tiene iguales características estructurales que el 
+PERT, pero trabajo con tiempos determinísticos a través de la experie ncia y de tareas 
+similares, es decir que a este método le interesa conocer la probabilidad de terminar el 
+proyecto en el tiempo estipulado y el costo mínimo u óptimo de llevar a cabo un 
+proyecto en función de los recursos asignados y los tiempos conocidos. 
+ Para cada tarea en que el proyecto se subdivide, exis te una curva de costos 
+directos y costos indirectos 
+Costo Directo: Está relacionado directamente con la tarea en sí.  Ej.: operarios que 
+hacen las tareas. 
+ 
+Costo Indirecto: Está relacionado indirectamente con la tarea. Ej.: contador, sereno, 
+vigilancia, etc. 
+Curva de costo directo de una tarea 
+ Para realizar la curva de costos directos, se consideran 3 tipos de tiempos y costos: 
+ 
+ Tiempo/costo habitual: tiempo sin preocuparse mucho por terminar la tarea. 
+ Tiempo/costo normal: tiempo con preocupación en terminar la tarea. 
+ Tiempo/costo crash: da idea d e ruptura . S e mejora  el tiempo agregando 
+recursos (operarios), en este punto, hay que invertir muchos $$$ para dismi nuir 
+el tiempo, el resultado no es lo deseado. 
+La representación de la curva de C.D. de cada una de las tareas del proyecto seria:    
+ 
+Esta curva está representando el rendimiento de una tarea en función de la cantidad 
+de personas (hs, hombres), que intervienen en la misma.  
+Los costos aumentarán en función de un decrecimiento del rendimiento, por ej.: 
+cuando más personas coloque a realiz ar 1 tarea, más se estorbarán entre ellos y 
+menos rendirán. El tiempo que tardan va a ser más o menos el mismo (o disminuirá 
+muy poco pero el costo si aumentará notablemente). 
+ Esta curva a los efectos de simplifica rla se acostumbra a la linealización 
+(convertida en una recta , dado que el error que se introduce es muy pequeño frente a 
+la incertidumbre con lo que se trabaja) se descarta Th-Ch y se consideran Tn y Cc, y se 
+obtiene así, la pendiente de la recta que representará el inc remento en $ por 
+disminución de una unidad de  tiempo de la tarea . Esta información me sirve para 
+reducir el proyecto en un tiempo determinado y para ello elijo la tarea que representa el 
+menor costo, es decir, la de menor pendiente = menor costo. 
+ 
+  
+Concepto de Lucro cesante 
+ 
+ Lo que dejo de percibir por tener una máquina, centro de trabajo, o  la planta 
+parada, sin producir, una unidad de tiempo. Desde otra perspectiva seria, lo que se 
+ahorra o se gana, terminando mi proyecto una unidad de tiempo antes .                     
+Para sab er si gano o pierdo, debo hacerme la siguiente pregunta :                                   
+si disminuye en  1 unidad de tie mpo el proyecto, en ¿cuánto se incrementa el costo?                            
+y para ello debo saber ¿qué tarea voy a elegir para reducirla en una unidad de tiempo? 
+ 
+ Se toma de todas las tareas del proyecto, una tarea crítica   (su tiempo 
+flotante = 0), cuya curva de costo directo,  tenga la menor pendiente y que muestre la 
+“MENOR” relación entre la variación de tiempo  (T) y la variación de $$ (costo), es decir 
+la tarea de menor costo. 
+Así se logra, disminuir el proyecto en una unidad de tiempo, al menor costo.  
+ 
+ Se compara el valor de la tarea elegida  ($$), con el valor del lucro 
+cesante ($$), si el costo de disminuir la tarea, es menor que el lucro cesante, conviene 
+disminuir en una unidad de tiempo la tarea y en consecuencia el tiempo del proyecto, 
+(por ser una tarea crítica del proyecto cuyo Tf=0). 
+Veamos por ej. el camino crítico de las puertas, en 2 gráficos, donde se evidencia la 
+disminución de 1 min o 1 día la duración total de fabricación de puertas. 
+ 
+         
+ 
+Se observa que la tarea elegida o la de menor pendiente es la T(4-5), pero al acortarla 
+en 1 min o 1 día de  tiempo, su costo aumenta y la pendiente  de su curva de C.D. 
+también. Este proceso es  iterativo e irá n disminuyendo todas las tareas del camino 
+crítico (siempre se compara el aumento de la tarea crítica en  $ con el lucro cesante)  y 
+en consecuencia la duración total del proyecto (siempre se compara el aumento de la 
+tarea crítica en $ con el lucro cesante). Pero llegará el momento en que ese camino se 
+ha acortado de tal manera que los márgenes de flotación o tiempo flotante de las         
+tareas no críticas desaparecerá y aparecerá así , otro camino crítico, además del ya 
+existente. Si los costos lo justifican, sigo reduciendo las tareas del nuevo camino  crítico 
+y las tareas críticas del camino original. Llegará el momento de no poder reducir más 
+en tiempo el proyecto, porque una disminuc ión de cualquiera de las tareas críticas lo 
+hará en base a un costo excesivamente alto , comparado con el lucro cesante,  que no 
+justificará esa disminución. 
+ 
+Costo total del proyecto 
+ 
+ Costo directo: directamente relacionado con las tareas (hs/hombre – 
+hs/máquina) 
+ Costo indirecto: proporcionalmente al tiempo, costos crecientes y no están 
+relacionados directamente con la tarea (sereno, contador, jefe de depósito) 
+ Costo por multas: multas impuestas por no terminar mi proyecto a tiempo (una 
+por mil del monto total del proyecto). 
+ 
+ 
+ 

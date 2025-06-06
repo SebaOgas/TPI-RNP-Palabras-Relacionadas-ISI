@@ -1,0 +1,611 @@
+   
+Revista Científica "Visión de Futuro"
+ISSN: 1669-7634
+revistacientifica@fce.una.edu.ar
+Universidad Nacional de Misiones
+Argentina
+Mallar, Miguel Ángel
+LA GESTIÓN POR PROCESOS: UN ENFOQUE DE GESTIÓN EFICIENTE
+Revista Científica "Visión de Futuro", vol. 13, núm. 1, enero-junio, 2010
+Universidad Nacional de Misiones
+Misiones, Argentina
+ 
+Disponible en: http://www.redalyc.org/articulo.oa?id=357935475004
+    Cómo citar el artículo
+    Número completo
+    Más información del artículo
+    Página de la revista en redalyc.org
+ 
+Sistema de Información Científica
+Red de Revistas Científicas de América Latina, el Caribe, España y Portugal
+Proyecto académico sin fines de lucro, desarrollado bajo la iniciativa de acceso abiertoLA GESTIÓN POR PROCESOS: UN ENFOQUE DE GESTIÓN EFICIENTE
+Mallar Miguel Ángel 
+Universidad Nacional de Cuyo.
+Secretaría de Gestión Administrativa, Económica y de Servicios – Rectorado.
+Parque Gral. San Martín – Centro Universitario – Mendoza (5500).
+Laprida 1147 – La Puntilla – Luján de Cuyo Mendoza (5505).
+E-mail: mmallar@uncu.edu.ar
+RESUMEN 
+Cada vez más se observan los esfuerzos orientados a adecuar las organizaciones al  
+complejo escenario en que se mueven. Cambios de reglas de juego,  incremento de la  
+competencia, apertura al mundo a través de la tecnología, hacen al cliente mucho más  
+exigente, modificando sus demandas y necesidades.
+La Gestión basada en los Procesos, surge como un enfoque que centra la atención  
+sobre las actividades de la organización, para optimizarlas.
+En  este  trabajo  se  considerará  a  la  organización  como  una  red  de  procesos 
+interrelacionados  o  interconectados,  donde  la  estructura  organizativa  vertical  clásica, 
+eficiente a nivel de funciones, se orienta hacia una concepción horizontal, desplazándose el  
+centro de interés desde las estructuras hacia los procesos, como metodología para mejorar  
+el rendimiento, concentrándose en el diseño disciplinado y cuidadosa ejecución de todos los  
+procesos de una organización.
+Concluyendo, la metodología de aplicación de la Gestión basada en Procesos se trata  
+de una herramienta de gestión adecuada para el momento actual, constituyéndose con  
+fuerza como una alternativa exitosa para la obtención de resultados cada vez mejores.
+“Visión de Futuro” Año 7, Nº1 Volumen Nº13, Enero - Junio 2010
+URL de la Revista: www.fce.unam.edu.ar/revistacientifica/ 
+URL del Documento: http://www.fce.unam.edu.ar/revistacientifica/index.php?option=com_content&view=article&id=184&Itemid=51 
+Fecha de recepción: 26/04/10
+Fecha de aprobación: 30/05/10
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010PALABRAS CLAVE:  estructura; proceso; valor; organización; metodología.
+INTRODUCCIÓN 
+Los cambios en la forma de plantear los problemas de la organización
+Desde comienzos de los años 2000, el escenario en que funcionan las empresas se ha 
+vuelto cada vez más complicado. Una serie de cambios políticos y sociales tuvieron lugar  
+modificando  los  estilos  de  vida,  revolucionando  las  áreas  económicas  y  tecnológicas, 
+trayendo consigo la necesidad de reconversión a las empresas, cuando no la quiebra y  
+desaparición de gran cantidad de ellas.
+Los clientes se vuelven cada vez más exigentes y la competencia se transformó en  
+feroz, creando un marco en que la necesidad de mejorar el rendimiento operativo y el logro  
+de la eficiencia se transforman en un imperativo estratégico. 
+Surgen así distintas ideas y enfoques, tales como las del valor agregado o beneficio  
+neto para los propietarios del capital o dueños de la empresa (Shareholder Value), tomando  
+fuerza conceptos como la creación de valor económico, con la aplicación del análisis del  
+valor agregado o maximizado para los propietarios (shareholder value analysis).
+En este esquema por ejemplo, gestión de la cadena de valor de Porter (2006), se  
+transforma en una concepción aplicada para identificar y aprovechar al máximo las áreas de  
+actividad en que la empresa espera maximizar sus beneficios (Value Drivers).
+Esta tendencia a la búsqueda del valor económico (en el sentido más economicista del  
+término), se inserta en la realidad de la globalización, y de las fusiones y adquisiciones de  
+empresas, manifestaciones de un esquema económico adoptado por numerosos países. 
+Se  observa  también  un  desplazamiento  del  centro  de  interés  de  los  sectores 
+comerciales de las empresas, desde la promoción, al Marketing de atención al cliente. 
+En  esta  línea,  el  concepto  de  calidad  por  ejemplo,  pasó  de  ser  una  propiedad 
+inherente  al  producto  o  servicio,  a  resultar  un  valor  asociado  a  la  satisfacción  de 
+necesidades y expectativas del cliente.
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Este cambio fue tan importante que provocó incluso la revisión de las normas I.S.O.  
+(Organización Internacional para la Estandarización) dando lugar a sus nuevas versiones  
+ISO 9001:2000 y 2008 y al desarrollo de distintos Modelos de Excelencia en la Gestión  
+como  el  Premio  Nacional  a  la  Calidad  Argentina,  instituido  por  la  Ley  24127/92  y 
+reglamentado  por  el  Decreto  1513/93  para  la  promoción,  desarrollo  y  difusión  de  los 
+procesos y sistemas destinados al mejoramiento continuo de la calidad en los productos y  
+en  los  servicios  que  se  originan  en  el  sector  empresario  con  el  fin  de  apoyar  la 
+modernización y competitividad de esas organizaciones , o los propuestos por la Fundación  
+Europea  para  la  Gestión  de  la  Calidad  (E.F.Q.M.)  que  otorga  el  Premio  Europeo  a  la 
+Calidad, orientado por la visión de ayudar a crear organizaciones europeas fuertes que  
+practiquen los principios de la calidad total en sus procesos de negocios y en sus relaciones  
+con sus empleados, clientes, accionistas y comunidades donde operan, o por el Malcolm  
+Baldrige National Quality Award, premio ofrecido por el Departamento de Comercio de los  
+EE.UU.  para promover y dar relevancia  a las mejores prácticas  en las organizaciones,  
+ayudando  a  ese  país a  incrementar su  competitividad  y su  efectividad  que  orientan  la 
+organización a la satisfacción de necesidades, equilibrando las expectativas de todos los  
+grupos de interés o stakeholders (clientes, proveedores, accionistas, empleados, sociedad). 
+En dicho contexto se implementan programas que buscan lograr mejoras, se alienta la  
+competencia entre los responsables de cada sector de la organización que defienden sus  
+respectivos  programas  y  que  normalmente  piden  más  recursos  para  implementarlos, 
+generándose  finalmente confusión y situaciones en que los esfuerzos terminan diluyéndose. 
+Por  ello  es  conveniente  aplicar  una  visión  globalizadora,  integrando  todas  estas 
+acciones  y  propuestas  de  mejora  como  una  forma  de  lograr  que  los  esfuerzos  se 
+complementen en lugar de competir entre sí, pudiendo manejar las iniciativas en forma  
+organizada.
+Los cambios en las formas de comprender la actividad empresaria, generan a su vez  
+otras  consideraciones  de  la  teoría  de  la  organización,  donde  se  produce  también  un 
+desplazamiento del centro de interés, desde las estructuras hacia los procesos, cobrando 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010importancia la denominada Gestión por Procesos, método estructurado para la mejora del  
+rendimiento, que se concentra en el diseño disciplinado y la cuidadosa ejecución de todos  
+los procesos de una organización.
+DESARROLLO
+La gestión por procesos
+Durante muchos años, el diseño estructural de las empresas, no había evolucionado  
+con relación a los requerimientos del enfoque organizacional. Se define ahora un nuevo  
+concepto de estructura organizativa que considera que toda organización se puede concebir  
+como una red de procesos interrelacionados o interconectados, a la cual se puede aplicar un 
+modelo de gestión denominado Gestión basada en los Procesos (GbP). 
+Bajo  este  enfoque,  la  estructura  organizativa  vertical  clásica,  eficiente  a  nivel  de 
+Funciones, se orienta hacia estructuras de tipo horizontal, tal cual lo define Ostroff (2000)  
+quien sostiene que no hay contraposición entre modelos, y que cada empresa debe buscar  
+su equilibrio en función de sus propias necesidades y posibilidades.
+Así el modelo de Gestión basada en los Procesos, se orienta a desarrollar la misión de  
+la organización, mediante la satisfacción de las expectativas de sus stakeholders –clientes,  
+proveedores,  accionistas,  empleados,  sociedad,.–  y  a  qué  hace  la  empresa  para 
+satisfacerlos, en lugar de centrarse en aspectos estructurales como cuál es su cadena de  
+mandos y la función de cada departamento.
+Pero este cambio de enfoque no es consecuencia de una mera idea, sino que refleja  
+los  resultados  de  la  experiencia  de  las  organizaciones  que  se  han  orientado  en  esta 
+dirección. 
+Empresas  líderes  aplicaron  el  cambio  organizativo,  individualizando  sus  procesos, 
+eligiendo los procesos relevantes, analizándolos y mejorándolos y finalmente utilizando este  
+enfoque para transformar sus organizaciones. Luego de los buenos resultados logrados, 
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010aplicaron  la  experiencia  obtenida  para  optimizar  el  resto  de  sus  procesos  en  toda  la 
+organización.
+El nuevo tipo de organización enfocada a los procesos, contiene no obstante, a la  
+anterior forma de organización estructural, sumándole el concepto del agregado de valor  
+para un destinatario  (cliente  interno  o externo) y exige  atender,  no sólo  a los  factores 
+internos del sistema (técnicos, etc.), sino también los requerimientos de dicha producción de  
+valor. Esta finalidad es la misma que se considera en el método del Análisis del Valor como  
+finalidad de satisfacción de necesidades del cliente.
+Mientras que el anterior esquema se orientaba a agrupar tareas según necesidades de  
+tipo técnico prescindiendo de la contribución de tales tareas a la creación de valor, el nuevo  
+enfoque orienta todas esas actividades a la satisfacción del cliente. 
+Así se llega a la Reingeniería de Procesos (Business Process Reengineering) que se  
+apoya en el cambio que va desde una consideración estática, orientada a las estructuras,  
+hacia una nueva orientada a la dinámica y a los flujos que crean valor.
+El tema de los procesos se consideraba sobre todo en el contexto de la organización  
+industrial  como  Organización  de  procesos  u  Organización  de  flujos  de  operaciones 
+(Operations Management), concentrándose en la división y articulación de tareas, el cálculo  
+y optimización de tiempos de operación etc., complementos de la Organización estructural  
+(definición  de  puestos,  áreas  o  departamentos  por  ejemplo),  aunque  el  tema  de  la 
+organización  de  flujos  operativos  presuponía  la  organización  en  departamentos  con 
+aplicación de este criterio, dentro de las estructuras organizativas. 
+En este nuevo contexto de gestión de sistemas generadores de valor, la concepción  
+de la organización por procesos no se apoya en una estructura previa, sino que presupone  
+que la misma deberá surgir de las exigencias de los procesos. Se conceptualiza entonces a  
+la estructura como infraestructura que contiene o sostiene a los procesos. 
+Por ello es necesario distinguir esta nueva manera de plantear el tema organizacional,  
+frente a las formas tradicionales, ya que en general, la estructura sigue siendo vista casi  
+siempre como superior al proceso, y la estabilidad valorada como superior al flujo dinámico. 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Los procesos
+La palabra Proceso proviene del latín processus que significa: avance, progreso.
+Un  proceso  es  un  conjunto  de  actividades  de  trabajo  interrelacionadas,  que  se 
+caracterizan por requerir ciertos insumos (inputs: productos o servicios obtenidos de otros  
+proveedores) y actividades  específicas que implican  agregar valor,  para obtener ciertos  
+resultados (outputs).
+Se define al proceso como: “una unidad en sí que cumple un objetivo completo, un  
+ciclo de actividades que se inicia y termina con un cliente o un usuario interno” [Carrasco, B., 
+2001, pg.11] (1)  . La familia de normas ISO 9000 corresponde a un conjunto de índices de  
+referencia de las mejores prácticas de gestión con respecto a la calidad, que se encuentran  
+definidos por la ISO ( Organización Internacional de Normalización ). La versión 2008 de la  
+norma ISO 9001, que es parte de la familia ISO 9000, se concentra principalmente en los  
+procesos usados para producir un servicio o producto, con el propósito de agregar valor  
+para un tercero en esta transformación .
+Así, en procesos industriales, la idea anterior se concreta en la entrada de materiales  
+(materia prima), que finaliza en un producto terminado de más valor, utilizando máquinas,  
+energía, recursos y mano de obra. En los procesos de tipo administrativo, también existen  
+actividades y se utilizan recursos (insumos), en particular el tiempo de las personas, que se  
+transforman, agregándoles valor y generando básicamente un servicio.
+Elementos del proceso
+Los elementos que conforman un proceso son: 
+    1.  Inputs:  recursos  a  transformar,  materiales  a  procesar,  personas  a  formar, 
+informaciones a procesar,  conocimientos a elaborar y sistematizar, etc.
+         2. Recursos o factores que transforman: actúan sobre los inputs a transformar. Aquí 
+se distinguen dos tipos básicos: 
+a)  Factores  dispositivos  humanos: planifican,  organizan,  dirigen  y  controlan  las 
+operaciones.
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010b)  Factores  de  apoyo: infraestructura  tecnológica  como  hardware,  programas de 
+software, computadoras, etc.
+3.  Flujo real de procesamiento o transformación:  La transformación puede ser  
+física (mecanizado, montaje etc.), de lugar (el output del transportista, el del correo, etc.),  
+pero también puede modificarse una estructura jurídica de propiedad (en una transacción,  
+escrituración, etc.).
+Si  el  input  es  información,  puede  tratarse  de  reconfigurarla  (como  en  servicios 
+financieros), o posibilitar su difusión (comunicaciones).
+Puede también tratarse de la transferencia de conocimientos como en la capacitación,  
+o de almacenarlos (centros de documentación, bases de datos, bibliotecas, etc.).
+A su vez se puede actuar sobre el mismo cliente de forma física (spa, masajes, etc.),  
+transportarlo (avión, ómnibus, taxi), dársele alojamiento (hotel, hostel), o actuar sobre su  
+cuerpo (medicina, odontología), o en su psicología y satisfacción (conciertos, teatro, cine).
+         4. Outputs: son básicamente de dos tipos:
+a.  Bienes:  tangibles,  almacenables,  transportables.  La  producción  se  puede 
+diferenciar de su consumo. Es posible además una evaluación de su grado de calidad de  
+forma objetiva y referida al producto.
+b. Servicios:  intangibles, acción sobre el cliente. La producción y el consumo son  
+simultáneos. Su calidad depende básicamente de la percepción del cliente.
+Dadas las crecientes formas mixtas, ha comenzado a emplearse también el término de  
+serducto (ser-vicio + pro-ducto) que indica la orientación a la satisfacción de necesidades del 
+cliente a través de una actividad u objeto portador de ese valor.
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Figura 1 .  Elementos del Proceso
+       Inicio
+          PROVEEDOR                                                                                                                                              CLIENTE
+  
+                                                             Fuente: Elaboración Propia 
+No todas las actividades que se realizan en las organizaciones son procesos. Para  
+determinar si una actividad es un proceso tiene que cumplir con los siguientes aspectos:
+• La actividad debe tener una misión o propósito claro.
+• Contiene entradas y salidas.
+• Se pueden identificar los clientes, proveedores y el producto final.
+• Debe ser susceptible de descomponerse en operaciones o tareas.
+• Puede  ser estabilizada  mediante  la aplicación  de la  metodología  de  gestión por 
+procesos (tiempos, recursos, costos).
+• Se puede asignar la responsabilidad del proceso a una persona.
+Un proceso comprende obviamente, una serie de actividades realizadas en diferentes  
+áreas de la organización, que deberán agregar valor, proporcionando así un servicio a su  
+cliente. Este cliente podrá ser un cliente interno o un cliente externo. Así la gestión por  
+procesos es una forma de organización, en la cual debe prevalecer la visión del cliente por  
+sobre las actividades de la organización. 
+INPUTS
+Recursos
+OUTPUTS
+Bienes/
+Servicios
+FACTORES
+ TRANSFORMADORES
+HUMANOS
+FACTORES 
+TRANSFORMADORES
+DE APOYO
+Fin
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Se definen los procesos y se gestionan de modo estructurado, y sobre la mejora de  
+cada uno de ellos se basa la mejora de toda la organización.
+Considerar los procesos aporta una visión integral que permite entender la globalidad  
+de una actividad. Así tendremos una idea de que se está construyendo un edificio con una  
+visión mucho mayor que el solo hecho de considerar la actividad de pegar ladrillos.
+El  enfoque hacia  el  proceso  ofrece una visión  horizontal de la  organización  y da 
+respuesta a un ciclo completo, desde que se realiza el primer contacto con el cliente, hasta  
+el  momento  en  que  éste  recibe  satisfactoriamente  el  producto  o  servicio,  e  incluso  la 
+atención posterior.
+Los procesos que se orientan directamente a satisfacer al cliente son los Procesos del  
+Negocio,  por  ejemplo  un  proceso  de  venta  que  incluye  tomar  el  pedido,  enviarlo  a 
+producción, fabricar el producto, despacharlo y cobrar.
+Además se consideran los Procesos de Apoyo que son aquellos que dan servicios a  
+los procesos del negocio, por ejemplo, el pago de sueldos a los empleados o reparación de  
+una maquinaria. No obstante en estos también se debe tener en cuenta la satisfacción del  
+cliente final.
+Hay ciclos de procesos tan amplios (como la construcción de un edificio) que se  
+consideran macroprocesos e incluyen servicios internos y externos.
+Arquitectura de Procesos 
+Para precisar el concepto de Proceso se debe distinguir como ya se ha mencionado,  
+entre dos distintos tipos básicos:
+1. Procesos del Negocio: 
+Atienden directamente la misión del negocio y satisfacen necesidades concretas de los 
+clientes. Por ejemplo en una empresa de confección de indumentaria, algunos procesos del  
+negocio serían:
+ Satisfacer el pedido de un cliente: desde el contacto inicial hasta la entrega del  
+producto, incluyendo compras de insumos, confección y cobranza.
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010 Diseño del producto: creación de modelos, preparación de matrices, etc.
+Además, los Procesos del Negocio pueden clasificarse en:
+a) Procesos Directivos o Estratégicos (de Management): son aquellos a través de los  
+cuales una empresa, o una dirección conjunta de una red, planifican, organizan, dirigen y  
+controlan recursos. Proporcionan el direccionamiento a los demás procesos, es decir indican 
+cómo estos se deben realizar para que se orienten a la misión y la visión de la empresa.
+b)  Procesos  Operativos  o  Clave  (Core  Processes):  Son  aquellos  que  impactan 
+directamente sobre la satisfacción del cliente y cualquier otro aspecto de la misión de la  
+organización. Normalmente constituyen la actividad primaria en la cadena de producción de  
+valor (según el esquema de Porter). Son procesos operativos típicos los procesos de: venta,  
+producción y servicio post- venta.
+Por ejemplo en las actividades destinadas a cumplir las exigencias de un pedido de  
+fabricación, son vitales los estándares de tiempo/ciclo de operaciones o el tiempo total de  
+obra en curso. 
+2. Procesos de Apoyo: 
+Son aquellos  servicios internos necesarios para realizar los procesos del negocio.  
+También se los llama procesos secundarios. En el ejemplo anterior se tendría entre otros:
+• Compra de artículos de oficina
+• Pago de anticipos
+• Pago de remuneraciones
+• Pago de impuestos
+• Mantenimiento de equipos
+        Los Procesos de Apoyo son procesos que no están ligados directamente a la  
+misión  de  la  organización,  pero  resultan  necesarios  para  que  los  procesos  operativos 
+lleguen  a  buen  fin.  Se  trata  de  actividades  orientadas  al  cliente  interno  que  sirven  de 
+infraestructura a los procesos clave de negocio.  Muchas veces son actividades de tipo  
+administrativo (actividades secundarias en el esquema de la cadena de valor de Porter). 
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010      Como ejemplo podemos mencionar el proceso de capacitación del personal, o el de  
+mantenimiento especializado de equipos de producción.
+Figura 2: Arquitectura de Procesos
+  
+Fuente: Elaboración Propia
+Mapa de Procesos
+El  mapa  de  procesos  une  los  procesos  segmentados  por  cadena,  jerarquía  o 
+versiones y los muestra en una visión de conjunto. Se incluyen las relaciones entre todos los  
+procesos identificados en un cierto ámbito.
+Figura 3   Mapa de Procesos
+Fuente: Elaboración Propia
+PROCESOS DIRECTIVOS O ESTRATÉGICOS
+PROCESOS DE SOPORTE
+VENTAS PRODUCC.    DISTRIBUC. SERVICIO
+C
+L
+I
+E
+N
+T
+E
+S
+Proporcionan guías
+Proporcionan recursos
+ PROCESOS OPERATIVOS
+Venta
+Integral
+Venta Despac Entreg
+a
+Contad Crédi Cta. 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Por  lo  general,  las  organizaciones  pueden  identificar  entre  5  y  10  procesos 
+importantes. 
+Ejecutar  una  orden  de  compra  por  ejemplo,  involucra  prácticamente  a  todas  las 
+actividades de una empresa, desde el momento en que un cliente realiza el pedido, hasta  
+que lo recibe y lo paga. 
+Ese proceso va más allá de las fronteras funcionales e integra distintas áreas como  
+servicio al cliente, logística, finanzas y fabricación, con el fin de satisfacer una meta común.  
+Otros procesos de nivel más alto, son igualmente abarcativos.
+Si no se aplica el enfoque orientado a los procesos, una empresa organizada por  
+funciones  llevará  a  cabo  todas  las  actividades  necesarias  para  convertir  un  pedido  en 
+dinero, pero normalmente sin considerarla en forma conjunta o sea como un proceso. 
+Distintos  departamentos  que  habitualmente  persiguen  objetivos  de  rendimiento 
+diferentes,  se  encargan  de  realizar  cada  actividad,  por  lo  que  normalmente  surgen 
+conflictos, aumentan los costos fijos y el trabajo que no agrega valor. 
+Además como nadie es responsable de las actividades desde el inicio hasta el fin,  
+tampoco hay nadie que establezca y haga cumplir un diseño general preciso y repetible. Las  
+consecuencia obvias son la variación y la improvisación.
+La Gestión de Procesos asegura que las actividades se piensen, diseñen y ejecuten  
+en  el  marco  de  un  proceso.  Cuando  los  empleados  reconocen  que  sus  actividades 
+individuales son parte de algo mayor, se encolumnan hacia metas comunes. 
+Cuando  un  proceso  tiene  un  diseño  explícito  del  principio  al  fin,  la  gente  puede 
+realizarlo de manera coherente y los gerentes están en condiciones de mejorarlo en forma  
+disciplinada se asegura que todos los procesos de una empresa estén bien diseñados, que  
+los diseños se respeten y se mantengan actualizados. 
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Propiedades de la Organización por Procesos
+1) Dominio del Proceso sobre la Estructura
+La estructura es vista como mera infraestructura. En lugar del dicho: “la estructura  
+sigue  a  la  estrategia  (structure  follows  strategy)”  [Chandler,  A.,1962,  p.16](2),  se  puede 
+afirmar ahora que: la estructura sigue al proceso y el proceso sigue a la estrategia (structure  
+follows process and process follows strategy). 
+2) Transversalidad de la organización y gestión por procesos
+A  diferencia  de  la  organización  tradicional,  que  con  respecto  a  los  procesos  se 
+orientaba  al  desempeño  de  tareas  en  flujos  dentro  de  departamentos  (en  las  áreas 
+funcionales) y se apoyaba en la especialización de puestos y personas en determinadas  
+tareas, la gestión de procesos tiene como finalidad la configuración de un conjunto o sistema 
+de procesos parciales y actividades que los conforman, para orientarlos a un objetivo final  
+que posibilite la creación de valor para el cliente o receptor.
+3) Predominio de la Información en la Organización por Procesos
+La  organización  es  comprendida  como  actividad  configuradora,  a  partir  de  las 
+informaciones referentes a las distintas actividades, tal como ocurre con la Logística donde  
+el flujo de información decide sobre la configuración del flujo material.
+4) Orientación a la generación de valor en la misma actividad organizativa de  
+procesos
+En  lugar  de  buscar  la  optimización  en  la  combinación  de  factores  o  de  una 
+racionalización  orientada  a  la  mejora  interna  en  el  uso  y  consumo  de  recursos,  la 
+organización por procesos se orienta al valor producido en un producto o servicio y a que  
+dicha orientación sea el criterio fundamental para la configuración de los procesos.
+Desarrollo  de  una  metodología  para  aplicar  la  gestión  basada  en  procesos
+     La gestión basada en los procesos es una herramienta que, en su aplicación, debe  
+generar un cambio en la filosofía y mentalidad del trabajo de las organizaciones. En la  
+práctica, no es importante a qué área, departamento o función pertenezcan los implicados 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010en un proceso, ya que todos son corresponsables de sus resultados,  independientemente  
+de  su  asignación  funcional.  Esto  genera  una  visión  amplia  de  lo  que  se  realiza  en  la 
+organización. 
+Además, la gestión por procesos implica e l control de  los mismos, es decir, que se  
+puedan establecer mecanismos capaces de predecir el resultado de  los procesos que se  
+están llevando a cabo, para asegurar la calidad de lo que hacemos a nuestros clientes. 
+Etapas
+Se  tratará  entonces,  de  definir  una  metodología  para  la  aplicación  de  la  gestión 
+basada en procesos, la que comprenderá las siguientes fases o etapas:
+Etapa 1 - Información, formación y participación
+Cuando se trata de adoptar una nueva metodología y cambiar la forma de pensar y de  
+trabajar de las personas,  es esencial la información y también la formación que se les  
+brinde. 
+Por ello, la implementación de la gestión en base a los procesos debe realizarse de la  
+forma más participativa posible. 
+En el caso de tener que diseñar nuevos procesos, o del rediseño de otros,  se deberá  
+dar participación a las personas que los tendrán que ejecutar y que son quienes mejor  
+conocen las situaciones que se planteen. Se deben evitar las  imposiciones desde instancias 
+superiores, que, en definitiva, terminan muchas veces complicando la implementación. 
+Se debe informar al personal sobre cuáles son los objetivos del proceso, sus etapas,  
+los resultados esperados, la colaboración requerida, etc.  
+Para esto, desde el punto de vista práctico, se realizarán Talleres de Trabajo donde se  
+brindará la formación adecuada, enseñándose la metodología necesaria para definir los  
+procesos que se desarrollan en cada unidad.
+Deben analizarse qué factores están influenciando  el accionar de la organización,  
+identificando resultados y efectos en la gestión diaria, y diferenciando los resultados que son  
+producto de factores externos, de los que son producto de factores internos. 
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Para  este  análisis,  se  pueden  aplicar  técnicas  como  la  tormenta  de  ideas 
+(brainstorming), realizada por cada área funcional y a nivel de toda la organización.
+Etapa 2 - Identificación de los procesos y definición de las fronteras de cada uno
+Para poder trabajar sobre los procesos es necesario identificarlos. Esto se llevará a  
+cabo elaborando una lista de todos los procesos y actividades que se desarrollan en la  
+organización, teniendo en cuenta los siguientes aspectos: 
+• El nombre con que se identifique a cada proceso debe representar claramente lo que  
+se hace en él. 
+• Todas las actividades que se llevan a cabo en la organización, deben estar incluidas  
+en alguno de los procesos listados. En caso contrario no son relevantes o importantes por lo  
+cual se pueden descartar. 
+• Aunque el número de procesos depende del tipo de empresa, si se identifican pocos  
+procesos o por el contrario demasiados, se aumentan las dificultades de gestión posterior. 
+Con los procesos identificados, cada grupo de trabajo definirá el mapa de procesos  
+que  le  corresponde,  tratando  de  verificar  cuáles  son  los  procesos  importantes  que  se 
+realizan. Debe tenerse en cuenta que se considera como importante a todo aquello que  
+tiene incidencia en la satisfacción del cliente o en la operatoria de la organización.  
+Podemos entonces decir, que en esta etapa se inicia el análisis hacia adentro de los  
+procesos, permitiendo detallar los problemas de cada uno e identificando si los factores que  
+se deben mejorar tienen una relación causal sobre los efectos o resultados de la gestión que 
+se aplica. 
+Se deberá definir la primera y última actividad de cada proceso y quiénes son sus  
+proveedores y sus clientes externos o internos. De esta forma se delimita el alcance de cada 
+proceso para hacerse una idea global de las actividades incluidas en el mismo. 
+Se tendrán que analizar: 
+• Los limites del proceso identificando las entradas y salidas,  reconociendo  a los  
+proveedores y a los clientes del proceso, así como aquellos otros procesos con que tiene  
+alguna relación. 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010• Dentro del proceso hay que reconocer y documentar las actividades y subprocesos  
+relacionados.
+• Se debe definir de qué manera se están realizando hoy los procesos, analizando los  
+documentos existentes con los procedimientos, los indicadores y los subprocesos. 
+Etapa 3 - Selección de los procesos clave 
+Una vez establecido el listado de todos los procesos, deben diferenciarse los procesos 
+relevantes y los procesos clave. 
+Definimos  como  proceso  relevante  a  una  secuencia  de  actividades  orientadas  a 
+generar  valor  agregado  sobre  una  entrada,  para  conseguir  un  resultado  que  satisfaga 
+plenamente  los  objetivos,  las  estrategias  de  una  organización  y  los  requerimientos  del 
+cliente. 
+Una de las características principales que normalmente tienen los procesos relevantes  
+es que son interfuncionales, pudiendo cruzar vertical y horizontalmente la organización. 
+En tanto que procesos clave son aquellos procesos que forman parte de los procesos  
+relevantes y que inciden de manera significativa en los objetivos estratégicos, siendo críticos  
+para el éxito del negocio. 
+Etapa 4 - Nombrar al responsable del proceso 
+Cuando han sido seleccionados los procesos relevantes y claves, se debe nombrar un  
+responsable o propietario, para cada uno de ellos (el dueño del proceso).
+A  partir  de  ese  momento  el  responsable  del  proceso  contará  con  autonomía  de 
+actuación y con la responsabilidad de dar respuesta a los objetivos estratégicos. Por esta  
+razón es de suma importancia que cuenten con atribuciones adecuadas que deben ser  
+puestas de manifiesto públicamente. 
+Como  puede  verse,  la  labor  de  designación  del  responsable  del  proceso  es  una 
+cuestión delicada ya que el éxito del proyecto estará influido por esta decisión. 
+Etapa 5 - Revisión y análisis de los procesos y detección de los problemas
+En esta instancia hay que analizar cada proceso, partiendo de los más importantes, de 
+acuerdo a lo definido en el punto 3.  
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Elegido el proceso, hay que verificar de qué manera éste da respuesta a los objetivos  
+estratégicos, y si no es así, habrá que abordar el diseño o rediseño del proceso. 
+Etapa 6 - Corrección de los problemas 
+A  partir de  los resultados  de la etapa anterior,  donde  han  quedado  definidos  los 
+problemas  que  presenta  el  proceso  y  que  tienen  mayor  incidencia  sobre  los  objetivos 
+estratégicos de la organización y sobre los clientes internos y/o externos del mismo, se  
+considerarán las posibilidades reales de solución a los problemas de forma viable para la  
+organización, a corto plazo, analizándose las posibles acciones a seguir para solucionar los  
+que mayor efecto tienen sobre el desempeño del proceso, considerando su factibilidad de  
+aplicación y el impacto integral sobre todo el sistema.
+En  esta  fase  y  dependiendo  del  contenido  y  de  la  complejidad  de  los  temas 
+planteados, se podrá recurrir a las siguientes herramientas: 
+• Métodos de resolución  de problemas : se aplica  a las actividades  seleccionadas, 
+siempre y cuando la información sea lo suficientemente concreta, como para describir el  
+objeto  o  lugar  donde  se  detecta  y  el  defecto  concreto  que  se  presenta.  Cualquier 
+herramienta relacionada con la resolución de problemas es válida. 
+• Técnica  del  valor  agregado: se  aplica  a  todas  las  actividades  del  proceso, 
+cuestionándose sistemáticamente todas ellas a través de preguntas como las siguientes: 
+ ¿Contribuye a satisfacer las necesidades del cliente? 
+ ¿El cliente esta dispuesto a pagar por ellas? 
+ ¿Contribuye a conseguir alguno de los objetivos estratégicos? 
+Luego  de  los análisis  efectuados se  está  en condiciones  de elaborar  un plan  de 
+mejoras, con el objeto de definir y validar las modificaciones y/o rediseños del proceso y  
+cómo se deben implementar, considerando responsables y plazos. 
+Previamente a poner en marcha las mejoras o modificaciones, se introducirán en los  
+sistemas habituales de la organización (procedimientos, instrucciones, normas, etc.), los  
+cambios relacionados con la implementación de las mismas, con el objeto de consolidar las  
+modificaciones y evitar contradicciones internas.
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010A partir de ahora comienza la parte dinámica donde se tratará de pasar del proceso  
+real,  al  que  debería  ser  el  ideal,  y  deberá  nuevamente  capacitarse  a  las  personas 
+encargadas  de  la  mejora  mediante  una  formación  que  consistirá  básicamente,  en 
+enseñarles a usar índices que midan la eficiencia del proceso.
+El responsable del proceso impulsará la implementación, controlando su cumplimiento  
+y  evaluando  la  efectividad  de  las  labores  realizadas  a  través  del  seguimiento  de  los 
+resultados obtenidos.
+Etapa 7 - Establecimiento de indicadores 
+Los  procesos  deben  ser  evaluados  periódicamente  ya  que  partiendo  de  las 
+evaluaciones que se realicen, se pueden determinar los puntos débiles y de esta forma  
+establecer una estrategia completa encaminada a mejorar su funcionamiento. 
+Se debe conocer qué es lo que interesa medir y cuándo, para controlar y mejorar los  
+procesos. Se efectuarán mediciones de fallas internas, externas, satisfacción del cliente,  
+tasa de errores, tiempos de respuesta, calidad, cuellos de botella, etc.
+La evaluación del nivel de funcionamiento de un proceso, se realiza tomando como  
+referencia  un  patrón  de  comparación  denominado  patrón  de  excelencia  funcional  del 
+proceso, formado con los estándares de evaluación que se definan y que funcionarán como  
+indicadores.
+La  utilización  de  indicadores  es  fundamental  para  poder  interpretar  lo  que  está 
+ocurriendo, y tomar medidas cuando las variables se salen de los límites establecidos o  
+márgenes de tolerancia que permitan asegurar lo que hacemos, a nuestros clientes. Cuando  
+se esté fuera de límites, el cliente no estará satisfecho, quedando en evidencia que no se  
+controla lo que se hace.
+Servirán también para definir las necesidades de introducir cambios y poder evaluar  
+sus  consecuencias,  como  así  para  planificar  actividades  destinadas  a  dar  respuesta  a 
+nuevas necesidades. Se plantea por lo tanto la necesidad de definir indicadores dando  
+respuesta a las siguientes preguntas: 
+• ¿Qué debemos medir? 
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010• ¿Dónde es conveniente medir? 
+• ¿Cuándo hay que medir? ¿En qué  momento o con qué frecuencia? 
+• ¿Quién debe medir? 
+• ¿Cómo se debe medir? 
+• ¿Cómo se van a difundir los resultados? 
+• ¿Quién y con qué frecuencia va a revisar y/o auditar el sistema de obtención de  
+datos? 
+Luego  deberá  evaluarse  el  conjunto  de  variables  o  indicadores  definidos  para  el 
+proceso, mediante la comparación con el nivel deseado que ofrece el estándar, identificando  
+en términos cuantitativos las brechas entre el nivel real de los indicadores y su tendencia  
+deseada, lo que permite comprobar el desempeño en todas las dimensiones del proceso.
+Beneficios de la Gestión por Procesos
+Al establecer un riguroso diseño de cada proceso, el rendimiento aumenta porque no  
+se malgastan recursos ni tiempo en esfuerzos inútiles. La gestión por procesos también  
+aporta  beneficios  mediante  la  alineación  para  alcanzar  un  objetivo  común  orientado  al 
+cliente, brindando un marco para el rediseño del trabajo (reingeniería). 
+Así el éxito de una empresa en definitiva, dependerá de la correcta ejecución de sus  
+procesos bien diseñados.
+Los sistemas de gestión tradicionales, generalmente no priorizan a los procesos y  
+fueron diseñados y aplicados para estructuras organizadas por funciones, pero a medida  
+que este esquema orientado a la gestión de procesos empieza a arraigarse,  todos los  
+sistemas de la organización se reenfocan para dar soporte a los procesos. Los empleados  
+trabajan en equipos, no en departamentos, su remuneración está vinculada a los resultados,  
+no a las actividades que realizan ni a su antigüedad en la empresa, los gerentes en lugar de  
+supervisar, brindan asistencia a sus subordinados, los sistemas informáticos se integran  
+para dar apoyo a los procesos en todas sus etapas, no a departamentos específicos y la  
+cultura de la organización alienta tanto la responsabilidad individual como la colectiva. 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010Además de contribuir a un mejor rendimiento, la gestión basada en procesos aporta un 
+marco para integrar iniciativas de mejoras, con una orientación mucho más estratégica. 
+CONCLUSIÓN
+Para  finalizar  el  presente  trabajo,  puede  afirmarse  que  dentro  de  los  múltiples 
+enfoques  existentes  para  su  aplicación  a  la  Administración  en  el  ámbito  de  las 
+organizaciones,  la  gestión  basada  en  los  procesos  se  presenta  como  una  adecuada 
+herramienta, que puede considerarse como fundamental para orientar a una organización  
+hacia el logro de sus objetivos. 
+Su aplicación genera el análisis detallado de los procesos en organizaciones de todo  
+tipo, incluyéndose aquellas prestadoras de servicios, las cuales pueden modelar su forma de 
+operación, permitiendo mejorar la gestión de cada proceso y del conjunto de procesos, para  
+optimizar las prestaciones hacia los clientes internos y externos.
+El esquema planteado permite además, adoptar un sistema de Gestión de Calidad,  
+fundamentado en los requisitos de las normas ISO 9000 o similares, que facilite llevar a  
+cabo el despliegue de las políticas que en tal sentido, se plantee la organización, mediante  
+la identificación dentro de la estructura de procesos establecida, de aquellos procesos clave  
+que son esenciales para alcanzar los objetivos.
+Se ha podido comprobar en experiencias de aplicación, que la metodología propuesta,  
+es realmente una herramienta adecuada para el perfeccionamiento de los procesos, lo que  
+queda evidenciado en la  mejora de los mismos, motivando además un alto compromiso de  
+los  recursos  humanos  participantes  independientemente  de  su  nivel  jerárquico,  
+demostrando así su utilidad como herramienta para una gestión eficiente.
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010CITAS BIBLIOGRÁFICAS
+(1) CARRASCO, J. B. (2001). Gestión de Procesos, Santiago, Chile, Ed. Evolución S.A. Pg 
+11.
+(2)  CHANDLER, A. (1962). Strategy & Structure: Chapters in the History of the Industrial  
+Enterprise, Cambridge, MIT Press, pg.16.
+BIBLIOGRAFÍA
+CARRASCO, J. B. (2001). Gestión de Procesos. Santiago, Chile, Ed. Evolución S. A.
+CASELLES, Josep M. (2003). exposición en el 2° Congreso Nacional de Estadísticas e  
+Investigación Operativa, Lérida, España.
+DIEZ DE CASTRO, E. et al. (2001). Administración y Dirección, Madrid, Ed. Mc Graw - Hill /  
+Interamericana de España S.A.U. 
+GARZA TREVIÑO, J. G. (2000). Administración Contemporánea, 2° ed., México, Ed. Mc  
+Graw – Hill.
+GIBSON, J. et al. (2002). Las Organizaciones - Comportamiento, Estructura, Procesos, 11°  
+Edición, Chile, Ed. Mc Graw - Hill / Irwin.
+HAX, A. et al. (1994). Gestión de Empresa con una visión estratégica. Santiago de Chile, Ed. 
+Dolmen.
+KOONTZ, H. et al. (2009). Administración: una perspectiva global. México, Ed. Mc Graw -  
+Hill.
+LARDENT, A. R.,(2001). Sistemas de información para la gestión empresaria. Buenos Aires,  
+Ed. Pearson Education.
+LAURÍA, E., “El achatamiento de las pirámides. Hacia una nueva cultura empresaria”, La  
+Nación, agosto 1991.
+MINTZBERG, H. (2004). Diseño de organizaciones eficientes, Buenos Aires, El Ateneo. 
+Mallar Miguel Ángel 
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010OSTROFF,  F.,  “La  organización  horizontal”  Harvard  Deusto  Business  Review,  Enero/ 
+Febrero 2000.
+PORTER, M. et al. “Strategy and Society: The Link Between Competitive Advantage and  
+Corporate Social Responsibility”, Harvard Business Review, December 2006.
+SERPELL BLEY, A. et al (2006). Planificación y Control de Proyectos. Santiago de Chile,  
+Ed. Universidad Católica de Chile.
+SLATER, P. et al, “Democracy is Inevitable”, Harvard Business Review, Setiembre 1990.
+La Gestión por Procesos: Un Enfoque de Gestión Eficiente
+“Visión de Futuro” Año 7, Nº1, volumen Nº13, Enero - Junio 2010

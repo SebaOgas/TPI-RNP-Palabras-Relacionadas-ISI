@@ -1,0 +1,2105 @@
+ 
+P á g i n a  1 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Unidad Temática 1: DISEÑO CENTRADO EN EL USUARIO 
+Diseño centrado en el usuario (DCU). Diseño Centrado en la Persona. Introducción 
+general a UX/UI. Relación entre UX/UI. El diseño de experiencia como un proceso 
+sistemático: roles, participantes, tiempos y actividades. Usuario. Elementos de 
+diseño. Principios de diseño aplicados a productos digitales. 
+Mapa de conceptos 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+¿Qué es UX?  
+La experiencia del usuario , también conocida como UX (user experience ), se 
+centra en la experiencia general del usuario final, incluidas sus percepciones, 
+emociones y respuestas en relación con un producto, sistema o servicio.  
+ 
+UX es un conjunto de factores y elementos relativos a la interacción del usuario con 
+un entorno o dispositivo concretos, dando como resultado una percepción positiva o 
+negativa de dicho servicio, producto o dispositivo. Dicha percepción depende no solo 
+de los factores relativos al diseño (hardware, software, usabilidad, diseño de  
+ 
+Diseño Centrado en 
+el Usuario 
+Interacción UX 
+UI 
+Analizar Diseñar Validar 
+Usabilidad 
+Factores que 
+construye UX 
+iterar  
+P á g i n a  2 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+interacción, accesibilidad, diseño gráfico y comunicación visual, calidad de los 
+contenidos, buscabilidad o encontrabilidad, utilidad, etc.); sino también de los 
+aspectos relativos como las emociones, los sentimientos, construcción y transmisión 
+de la marca, confiabilidad del producto, etc.  
+ 
+UX se refiere a lo que experimenta el usuario antes, durante y después de usar el 
+producto. El diseño UX abarca aspectos como usabilidad, entrevistas, recopilación de 
+información sobre el producto y estudio de la interacción con el usuario. 
+ 
+La experiencia de usuario como disciplina, se aplicó tradicionalmente a los sistemas 
+informáticos y en particular al diseño de páginas web, pero, hoy en día, se ve ampliada 
+a otros campos de diseño. Hoy por hoy, la experiencia de usuario no es solo un campo 
+nuevo, sino también variable: cambia rápidamente debido a los avances tecnológicos, 
+a los nuevos tipos de interacciones y a las preferencias del usuario. 
+ 
+Los clientes de hoy quieren formas rápidas y simples de satisfacer sus necesidades 
+y resolver sus puntos débiles. Por ejemplo, el 53 % de las veces los usuarios de 
+móviles se irán de una página web que tarde más de 3 segundos en cargar. Es por eso 
+que la UX se ha vuelto tan importante. Los clientes pierden el interés en una marca en 
+cuestión de segundos si no lo encuentran útil y fácil de usar. De hecho, la mayoría de 
+los visitantes pueden determinar si quieren o no permanecer en un sitio en menos de 
+15 segundos. 
+ 
+UX es un conjunto de metodologías orientadas a diseñar un servicio o producto 
+desde la perspectiva de quién será el usuario final, no desde quién lo está 
+desarrollando. Estas metodologías abarcan un amplio espectro de especialidades, 
+cada una con sus respectivos roles, responsabilidades y entregables. 
+ 
+“SIN TENER EN CUENTA AL USUARIO, NO SE PUEDE HACER UX” 
+ 
+                                      https://youtu.be/9BdtGjoIN4E?t=10 
+ 
+ 
+ 
+ 
+  
+P á g i n a  3 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+¿Qué es UI?  
+UI se refiere a todo con lo que los usuarios interactúan de forma directa (la capa 
+externa de un producto digital). Es todo lo que vemos y tocamos en una página web, 
+una aplicación o un dispositivo. 
+ 
+Video: Diferencia entre UX y UI https://www.youtube.com/watch?v=5KUNmgt_pvY 
+Diseño UX  
+Está presente en todo el desarrollo del diseño del producto, desde el inicio, desde que 
+se piensa, se analiza e investiga hasta el final del proyecto con las pruebas de 
+usabilidad y sus mejoras.  
+ 
+Actividades: 
+• Investigación / Estadísticas 
+• Entrevistas y Definición de Personas 
+• Pruebas de Usuarios 
+• Redacción de Textos 
+• Diseño de interacción 
+• Arquitectura de Información 
+• Usabilidad 
+• Prototipado 
+ 
+Roles: 
+• UX Researcher: encargado de llevar adelante la investigación inicial. 
+• UX Tester: crea una serie de prototipos para determinar la usabilidad de un 
+producto, aplicación o sitio web. 
+ 
+P á g i n a  4 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+ 
+Diseño UI 
+Comienza en una segunda etapa y va a incorporar al UX, todos los elementos visuales 
+y gráficos. Va a aportar la Estética y el diseño a la interfaz 
+ 
+• Diseño Visual 
+• Diseño de Interfaz 
+• Colores, Tipografía, Ilustraciones, Iconos. 
+• Estilo Visual 
+• Definición de Estructuras 
+ 
+Roles: 
+• UI Designer (Visual designer): relaciona coherentemente todos los 
+elementos de diseño (tipografía, color, iconos, ilustraciones, etc) 
+• UI Frontend Developer: crea interfaces de usuario diseñadas por los 
+diseñadores UX. 
+• UI Motion: construye la acción que la interfaz va a realizar para dar 
+feedback a los usuarios. 
+ 
+ 
+El papel de un diseñador de UX principiante 
+Aquí, exploraremos las diferentes responsabilidades que los diseñadores de UX de 
+nivel básico suelen asumir durante un proyecto. También las diferencias entre 
+diseñadores de UX generalistas, especialistas y generalistas-especializados. 
+ 
+Responsabilidades de un diseñador de UX de nivel básico 
+1. Investigación de usuarios: la investigación de usuarios trata de comprender a 
+las personas que usan un producto. A través de la investigación, aprenderás 
+sobre los antecedentes, los aspectos demográficos, las motivaciones, las 
+dificultades, las emociones y los objetivos de los usu arios. Los métodos de 
+investigación pueden incluir encuestas, observaciones y entrevistas.  
+ 
+2. Arquitectura de la información : la arquitectura de la información (IA) implica 
+decidir cómo está organizado y estructurado un producto. La IA es como un 
+esqueleto que describe cómo interactúan los usuarios con un producto. Todo 
+lo que un producto contiene debe organizarse de manera que  tenga sentido 
+para el usuario y cumpla con sus expectativas.  
+P á g i n a  5 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+3. Creación de esquemas : un esquema es un bosquejo o boceto básico de un 
+producto o una pantalla, como una aplicación o un sitio web. Los esquemas 
+también se conocen a veces como «modelos de alambre», ya que parecen 
+hechos con simples alambres. Consisten principalmente en líneas  y formas, 
+con algo de texto. Los esquemas pueden dibujarse a mano o crearse 
+digitalmente mediante software. Crear ayuda a dar vida a las ideas de diseño 
+para que otras personas puedan hacer comentarios.  
+ 
+4. Prototipado: un prototipo es un modelo inicial de un producto que demuestra 
+su funcionalidad. Los prototipos pueden estar en formatos físicos o digitales y 
+pueden tener distintos grados de complejidad. A veces, se crea un prototipo 
+para demostrar una característica e specífica de un producto, como la 
+transición entre pantallas o el aspecto físico del producto y la interacción con 
+él. Se suelen hacer varios prototipos de un producto dado a lo largo del proceso 
+del diseño. 
+ 
+5. Diseño visual : el diseño visual se centra en la apariencia del producto o la 
+tecnología.  
+ 
+6. Comunicación efectiva : la comunicación efectiva como diseñador de UX 
+implica conectarte con todos los involucrados a través de correos electrónicos, 
+reuniones, presentaciones y software de diseño. El diseño de UX es un campo 
+muy colaborativo, por lo que es importante comunicar se bien tanto 
+digitalmente como cara a cara. También es importante saber  escuchar, ser 
+abierto a los comentarios y compartir ideas de forma clara. 
+ 
+Diseñadores especialistas y generalistas 
+Especialista: un especialista profundiza en un tipo específico de diseño de UX, como 
+el diseño de interacción, el diseño visual o el diseño de movimiento, y se convierte en 
+un experto en este campo. Los diseñadores de UX especialistas son comunes en las 
+grandes empresas que tienen muchos diseñadores, como Google. Estos son algunos 
+de los beneficios de convertirse en especialista: 
+● Centrarse en un tipo de diseño que se disfrute más que otros. 
+● Adquirir un profundo conocimiento de un tipo de diseño. 
+● Ser conocido en la industria por la experiencia en un tipo particular de diseño. 
+ 
+Generalista: un generalista tiene un amplio número de responsabilidades. La mayoría 
+de los trabajos de diseño de UX son puestos generalistas, especialmente en las 
+empresas que tienen pocos diseñadores de UX. Por lo general, los diseñadores de UX   
+P á g i n a  6 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+de nivel básico trabajan en roles generalistas y algunas personas optan por 
+permanecer en funciones de este tipo durante toda su carrera profesional. Ser 
+diseñador de UX generalista tiene muchos beneficios, como los siguientes:  
+● Ampliar destrezas en muchos tipos diferentes de trabajos de UX. 
+● Probar una variedad de responsabilidades.  
+ 
+Generalista-especializado: un diseñador generalista -especializado es un diseñador 
+especialista que también tiene muchas capacidades en otras áreas. También se los 
+conoce como «diseñadores en forma de T», donde la línea vertical de la «T» representa 
+su experiencia en un área especí fica, mientras que la línea horizontal simboliza sus 
+habilidades complementarias en muchas otras áreas.  
+ 
+Todos los diseñadores tienden a tener algo de generalistas y especialistas en sus 
+destrezas, incluso al comienzo de su carrera.  
+ 
+Los factores de la experiencia de usuario 
+En 2004 Peter Morville  quiso explicar el significado de experiencia de usuario. Para 
+ello definió lo que llamamos  Panal de la Experiencia de Usuario de Peter Morville  (o 
+en inglés  Peter Morville’s User Experience Honeycomb). En él se explica que los 
+principios de usabilidad son  7 factores que entrelazados constituyen la experiencia 
+de usuario.  
+ 
+ 
+ 
+ 
+Peter Morville: 
+Pionero en la 
+experiencia de usuario y 
+arquitectura de 
+información, autor de 
+varios libros. Peter describe 
+7 (siete) facetas o factores que 
+construyen la experiencia de usuario.                           
+Panal de los factores de la experiencia de  
+usuario por Peter Morville 
+ 
+ 
+ 
+Útil: Si no tiene un propósito definido, en base a la utilidad que el usuario pueda lograr 
+con ese producto o servicio, es poco probable que pueda obtener su atención dentro  
+ 
+P á g i n a  7 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+de un mercado.  Es i mportante analizar la funcionalidad de cada elemento y no 
+quedarse con cosas sólo porque son bonitas o llenan espacios. 
+ 
+• ¿Es útil lo que estamos desarrollando o  
+es un capricho de la dirección o del cliente?  
+ 
+• ¿Es innovador verdaderamente?  
+ 
+• ¿Le servirá a alguien? 
+ 
+Ejemplo: ¿Más útil que Wikipedia? Imposible. 
+ 
+ 
+ 
+ 
+Usable: Se refiere a la facilidad con la que un usuario puede usar un producto, un 
+servicio o el sitio web de una marca o una app. Trata de poner a disposición las 
+herramientas indispensables para que las personas interactúen de forma intuitiva y 
+no requieran de tantas explicaciones, a la vez que ahorren tiempo. El producto debe 
+ser fácil de usar por cualquier persona. La facilidad de uso de una interfaz y sus 
+contenidos determina si las personas podrán o no realizar las acciones de forma 
+eficiente. Un producto debe ser útil, pero es importante también que sea usable para 
+el usuario, de manera eficiente y efectiva. Muchas veces, la mala usabilidad se 
+asocia con la primera generación de un producto ya que es el primer modelo que se 
+lanza al mercado, poniendo a prueba y recibiendo el feedback de más usuarios. 
+Ejemplo: Google ¿Así o más sencillo? 
+ 
+ 
+P á g i n a  8 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+ 
+ 
+Encontrable: Ya sean productos físicos o digitales, estos deben ser de fácil 
+acceso para el usuario, porque puede que el producto cumpla con los 2 primeros 
+factores; sin embargo, si el usuario no puede acceder a este de manera sencilla, 
+podría perderse un potencial consumidor. El contenido necesita ser navegable y 
+ubicable dentro del sitio. Si los usuarios no pueden encontrar lo que buscan, se 
+sentirán frustrados y abandonarán. 
+ 
+Ejemplo: Sin duda Apple es una muestra clara de una tienda ordenada, no es de 
+extrañarse pues siempre ha sido una marca para la que el diseño es una prioridad. 
+ 
+ 
+ 
+ 
+P á g i n a  9 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Creíble: La credibilidad está relacionada con la capacidad que tiene el usuario para 
+creer y confiar en el producto proporcionado que involucra toda la experiencia: que el 
+producto cumpla con las características ofrecidas, tenga un tiempo de duración 
+razonable o que sea preciso y adecuado para su propósito. Hoy en día, los usuarios 
+no dan una segunda oportunidad luego de un engaño, por lo que es importante tener 
+muy en cuenta este punto.  Cuando se pierde la confianza de un usuario, lo más 
+probable es que lo pierdas para siempre. 
+ 
+Ejemplo: Los contenidos de Harvard Business Review, así como la combinación 
+de colores sobrios y la composición impecable la posicionan como una institución 
+académica confiable.  
+ 
+ 
+ 
+Deseable: Este factor se puede lograr a través del diseño de la marca: desde la 
+imagen que esta transmite hasta el diseño del producto o servicio, relacionado con la 
+estética y diseño emocional. Imagen, identidad y otros diseños son utilizados para 
+evocar emociones. El diseño debe ser atractivo y amigable. Mientras más deseable 
+es un producto, mayor probabilidad hay de que el usuario que lo obtiene se jacte de 
+este y más personas quieran obtenerlo. 
+ 
+P á g i n a  10 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Ejemplo: El Informe anual de MailChimp 
+ 
+ 
+ 
+Accesible: Se refiere a la posibilidad de que pueda ser usado sin problemas por el 
+mayor número de personas posibles, independientemente de las limitaciones propias 
+del individuo o de las derivadas del contexto de uso. Consiste en proporcionar una 
+experiencia que permita a diversos usuarios acceder al producto y/o servicio.  
+ 
+Abarca aspectos de diseño responsivo e inclusividad. Es decir, toma en consideración 
+desde qué dispositivo se usa (móvil, laptop, tablet, etc.) y si el usuarios tiene una 
+discapacidad (física, visual, motriz, auditiva o cognitiva) para adaptar sus canales.  
+ 
+Algunas empresas no suelen considerar el diseño para la accesibilidad ya que 
+consideran que las personas con discapacidades constituyen un pequeño segmento 
+de la población. ¿Sabías que más de 10% de la población tiene problemas de algún 
+tipo de discapacidad? ¿Cómo facilitaremos el uso de la web o producto para ellos? 
+ 
+Ejemplo: La tienda electrónica de FranklinPlanner independientemente de mostrar 
+la fotografía, siempre especifica de qué color es el producto, lo cual ayuda a las 
+personas que no pueden distinguir colores a escoger el adecuado. 
+ 
+ 
+P á g i n a  11 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+ 
+ 
+Valioso: Finalmente, el producto debe ofrecer valor a los usuarios. Sin valor, es muy 
+probable que el éxito de un producto se vea debilitado. Debemos contribuir al objetivo 
+principal que es mejorar la satisfacción del usuario. 
+ 
+Ejemplo: Google Maps no 
+solo muestra un mapa de una 
+ciudad, sino incluso se pueden 
+colocar marcadores personales 
+para ir de un punto a otro y el 
+sistema da opciones de ruta, 
+guía mediante voz e incluso 
+comentarios respecto al tráfico. 
+ 
+ 
+ 
+ 
+ 
+ 
+P á g i n a  12 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Principios útiles: 
+Como parte de un trabajo de investigación, Google estudió las experiencias de usuario 
+tanto en apps de compra como en sitios móviles, analizando actividades comunes 
+como búsqueda de productos, navegación por sitios/aplicaciones, exploración de 
+páginas de productos y compras. El resultado de su estudio fu e una lista de 25 
+principios útiles para diseñar sitios móviles de compra y apps. Están organizados en 
+cinco temas basados en el comportamiento del comprador móvil común y sus 
+expectativas. 
+ 
+1) Exploración y búsqueda 
+ 
+• Asegurar que el sitio móvil o aplicación cargue rápidamente. La paciencia es 
+una virtud que no todos la tiene. Muchos compradores utilizan sus teléfonos 
+para hacer compras mientras están fuera de casa y tienen poca paciencia para 
+las aplicaciones y los sitios que se cargan lentamente. 
+ 
+ 
+• Dejar clara la utilidad 
+antes de pedir a los 
+usuarios que se registren. 
+Sólo pedir a un usuario 
+que se registre si es 
+esencial. Los usuarios a 
+menudo abandonan una 
+aplicación que les pide 
+que proporcionen 
+información personal por 
+adelantado a menos que 
+haya algún tipo de 
+beneficio inmediato. 
+ 
+ 
+ 
+ 
+• Habla r el mismo idioma que los usuarios. Palabras técnicas, términos 
+ambiguos o frases desconocidas hacen confusa la lectura para el usuario. La 
+comunicación clara y la funcionalidad siempre deben manejar las llamadas a 
+la acción. 
+ 
+P á g i n a  13 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+• Utilizar una indexación de búsqueda eficaz. Garantizar que los resultados de 
+la búsqueda sean útiles. Dada la frecuencia con la que recurren a la función de 
+búsqueda para tareas específicas, los usuarios esperan obtener la misma 
+eficacia que con Google. Algunas funciones útiles incluyen las correcciones 
+automáticas de la ortografía, el reconocimiento de la raíz de las palabras, la 
+predicción de texto y las sugerencias ofrecidas mientras el usuario ingresa los 
+términos de la búsqueda. Estas herrami entas pu eden reducir las 
+probabilidades de errores de los usuarios. También agilizarán el proceso de 
+búsqueda y mantendrán a los usuarios enfocados en su tarea dentro de la app 
+o site, de modo que concluyan la conversión. 
+ 
+• No permit ir que las promociones se roben el show. Proporcionar una 
+experiencia con engagement en el sitio móvil es la mejor manera de animar a 
+los usuarios a optar por descargar e interactuar con una aplicación.  
+ 
+El engagement es el nivel de compromiso, entusiasmo y lealtad que tiene una 
+audiencia con una marca. Implica que una persona siga a la marca en redes 
+sociales o dé «me gusta» a sus publicaciones, pero que también comparta, 
+comente y realice las acciones que se sugieren. 
+ 
+P á g i n a  14 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+2) Datos del producto y Comentarios 
+ 
+• Proporciona r los detalles del producto. Los usuarios aprecian cuando se 
+muestra toda la información disponible del producto: disponibilidad de stock, 
+tamaños, opciones de color, descripciones, fotos, vídeos y mucho más. 
+ 
+• Dejar que el usuario controle el nivel de zoom. Permite que los usuarios 
+tengan el control de ampliar la imagen como lo prefieran. 
+ 
+• Mostrar a los usuarios cuánto están ahorrando en productos con descuento. 
+ 
+ 
+ 
+Para sacar el máximo provecho de las promociones, visualizar el precio de 
+venta y el precio original como comparación.  
+ 
+GearBest lo hace de forma excelente, proporcionando la mayor cantidad 
+posible de información para el usuario y fotos en product shot y life style.  
+ 
+• Mostrar la disponibilidad en tiendas en las páginas de productos. Permite a 
+los usuarios seleccionar una tienda preferida fácilmente y muestra la 
+disponibilidad local. 
+ 
+ 
+ 
+P á g i n a  15 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+• Mostrar gastos de envío y fechas de entrega  en la página del artículo. Los 
+usuarios esperan que los costos de envío y tiempos de entrega sean claros y 
+se presenten tan pronto como sea posible, pues ahora es un factor en la toma 
+de decisiones. 
+ 
+• Permitir que los comentarios de los usuarios pueden ser vistos y filtrados. Un 
+gran número de comentarios (buenos y malos) ofrece a los compradores 
+potenciales más confianza. Agrega r los puntajes por distribución y permit ir a 
+los usuarios ordenar y filtrar para que puedan obtener la «historia real» sobre 
+un artículo. 
+ 
+• Fomentar el contenido generado por los consumidores . El contenido 
+generado por el usuario como fotos, preguntas -y-respuestas, o datos 
+agregados, ayuda a las personas a tomar decisiones. 
+ 
+• Productos relacionados en los momentos oportunos . Cuando los usuarios 
+están pensando en reemplazar o agregar productos aprecian 
+recomendaciones de productos de referencia en las páginas de productos, en 
+el carro, o antes de salir. 
+ 
+3) Pedidos y Pagos 
+ 
+• Permitir a los compradores seguir comprando  
+después de añadir un elemento al carrito. Confirma r 
+que el artículo ha sido añadido a la canasta y permit ir 
+a los usuarios seguir comprando. 
+ 
+• Permitir a los compradores editar el carro . Cuando 
+los usuarios accidentalmente añaden un elemento o 
+un número incorrecto de un elemento, pueden 
+frustrarse si no pueden hacer correcciones de forma 
+intuitiva y fácil desde el carro en sí. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+P á g i n a  16 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+• Presentar nuevamente las promociones, ofertas y cupones al momento de 
+pagar. Evita la pérdida de compradores que todavía tienen que hacer una 
+compra brindándoles promociones, ofertas y cupones que pueden ser 
+utilizados de inmediato al momento de pagar. 
+ 
+• Permitir que los usuarios compren como invitado . La recomendación para 
+crear una cuenta que permita a los usuarios rastrear las compras, recibir 
+ofertas o hacer que la experiencia sea más eficiente, se puede realizar después 
+del proceso de pago, no como condicionante. Cinemex permite comprar como 
+invitado, pero no es usable, la opción queda escondida al final de la pantalla. 
+ 
+ 
+ 
+• Mostrar a los usuarios que el proceso de pago es seguro . Asegurar que el 
+sitio o aplicación es segura, siguiendo las mejores prácticas modernas de 
+seguridad de datos (como https y el cifrado de la contraseña) y proporcionando 
+un indicador de seguridad visual. 
+ 
+• Proporcionar múltiples opciones de pago.  Aplicaciones y sitios móviles que 
+proporcionan opciones de pago como PayPal, etc, simplifican la salida y 
+pueden proporcionar una mayor sensación de seguridad. 
+ 
+. Proporcionar un resumen detallado después de la compra. Proporciona r un 
+resumen detallado de la transacción con toda la información que pueda 
+necesitar un usuario para verificar la compra. También se debe permitir a los  
+ 
+P á g i n a  17 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+usuarios la capacidad de corregir cualquier error, proporcionando detalles 
+claros de cómo hacerlo después de la compra. 
+ 
+4) Compras sin fricción 
+ 
+• Construir formas favorables al consumidor.   Diseñar pantallas que puedan 
+interpretar varios formatos de entrada en lugar de hacer que el usuario se 
+adapte a las limitaciones de la aplicación. Es una buena idea incluir también al 
+rellenar de forma automática, el uso de auto -mayúsculas y la captura de 
+tarjetas de crédito.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+P á g i n a  18 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+ 
+ 
+• Reducir el riesgo de abandono al minimizar el número de pasos necesarios o 
+utiliza diferentes métodos de autenticación tales huellas digitales. 
+ 
+• Pedir permisos en contexto . Las aplicaciones deben pedir permisos en su 
+contexto y comunicar el valor que el acceso proporcionará a los usuarios para 
+evitar que queden atascados. 
+ 
+ 
+ 
+ 
+ 
+P á g i n a  19 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+5) Información de servicio al cliente localizable 
+ 
+• Los usuarios tienden a mirar a la parte inferior del sitio o la aplicación por 
+primera vez cuando buscan ayuda. Habilitar varios métodos para recibir ayuda 
+permite a los usuarios elegir la mejor opción para ellos y evita el abandono. 
+ 
+• Resaltar los valores añadidos en toda la experiencia de compra.  Los 
+minoristas que ofrecen un valor añadido, tal como el transporte marítimo u 
+ofertas libres, necesitan reiterarlos en todos los puntos posibles durante la 
+experiencia de compra. 
+ 
+Las compras a través de  apps son cada vez más habituales entre los 
+consumidores conectados. Ya no es suficiente para los minoristas, 
+simplemente tener un sitio o app. Ahora es necesario diseñar cuidadosamente 
+la experiencia basada en las intenciones del cliente, el contexto y las 
+expectativas de inmediatez.  Tener un a app que genere una experiencia 
+agradable se ha convertido en un componente crítico en la conducción no sólo 
+de las conversaciones, sino también de la construcción de marcas fuertes y 
+relaciones significativas con los clientes.  
+ 
+Algunos números  compartidos por We Are Social en base al informe “State of 
+Mobile 2024”, de Meltwater. 
+ 
+Resumen del mercado de aplicaciones móviles (anual) 
+ 
+ 
+ 
+P á g i n a  20 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Ranking de aplicaciones móviles 
+ 
+ 
+ 
+Las diferencias entre el diseño de experiencia de usuario (UX) y el diseño 
+de interfaz de usuario (UI) 
+ 
+El diseño de experiencia de usuario (UX) se enfoca en el recorrido del usuario en una 
+aplicación o proceso, y en la forma y función general de un producto o tecnología. En 
+cambio, el diseño de interfaz de usuario  (UI) se centra en cómo se ve y funciona el 
+exterior de un producto (los elementos tangibles del proceso). 
+ 
+Aunque el diseño de la experiencia de usuario y el diseño UI tienen definiciones 
+similares, es importante tener en cuenta las diferencias clave que los separan. 
+Nuevamente, UI se enfoca en las apariencias y superficies de un producto, mientras 
+que UX está más preocupado por cómo las personas interactúan con un sitio.  
+ 
+Estos son algunos términos comunes de UI para comprender mejor cómo se 
+diferencian: 
+ 
+Componentes informativos: se usan para mejorar la experiencia de lectura o dar 
+más información. Algunos ejemplos de componentes informativos son las barras de 
+progreso, las notificaciones y los cuadros de mensaje. Los diseñadores los usan  
+ 
+ 
+P á g i n a  21 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+cuando quieren dejar claro al usuario que ha completado una tarea o si desean 
+notificarle que es necesaria cierta acción de su parte.  
+ 
+Navegación por breadcrumbs:  las breadcrumbs, o migas de pan, son una 
+herramienta de diseño utilizada a menudo por los diseñadores UI para aumentar 
+visualmente la usabilidad de un sitio web. Permiten a los usuarios ver su ubicación en 
+un sitio con base en una estructura jerárquica. N o necesitan tener características 
+visuales especiales o un diseño exagerado: tan solo debe indicar claramente dónde 
+se encuentra una persona en un sitio. Estos enlaces suelen estar en la parte superior 
+de una página web mientras se compra en línea o en otro sitio. 
+ 
+Controles de entrada: brindan a las personas múltiples opciones en respuesta a 
+una pregunta. Pueden ser casillas de verificación, listas desplegables y toggles. Hay 
+que mantener simple la información que se solicita en los  controles de entrada, para 
+que el usuario encuentre fácilmente lo que necesita. 
+ 
+Por ejemplo, el sitio web de la NASA desenfoca las líneas entre una barra de 
+navegación secundaria y las breadcrumbs para ayudar a los usuarios a obtener 
+contexto sobre lo que ven. También les muestra qué otras cosas podrían encontrar al 
+seguir en una misma categoría. 
+ 
+ 
+ 
+Video: Diseño centrado en el usuario 
+https://www.youtube.com/watch?v=mwgDklH0UdA 
+ 
+ 
+ 
+P á g i n a  22 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Actividad práctica:  
+Constituir grupos de trabajo de 4 o 5 alumnos cada uno. Cada grupo deberá:  
+Seleccionar apps que cumplan con los factores de Peter Morville. Indicar cual y 
+justificar.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+P á g i n a  23 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+DISEÑO CENTRADO EN EL USUARIO (DCU) 
+HACIA UN MODELO CENTRADO EN EL USUARIO 
+Introducción 
+El Diseño Centrado en Usuarios (DCU) es una manera de diseñar que consiste en 
+lograr que los productos se adapten a las personas, y no al revés. Se trata de poner 
+en primer lugar, al usuario en vez de al producto. 
+ 
+En muchos proyectos de diseño, se da el caso de que el  producto va respondiendo a 
+todos los requisitos técnicos, las limitaciones de viabilidad en la fabricación, las 
+barreras económicas, etc., pero termina convirtiéndose  en un dispositivo que no 
+cumple con el requisito más importante, su usabilidad. 
+ 
+La usabilidad, hace referencia a la  facilidad con la que los usuarios utilizan una 
+herramienta o producto, y es una característica fundamental que 
+deberían tener todos los diseños. 
+ 
+El DCU, es una actividad multidisciplinar que se puede extrapolar a muchos sectores, 
+ya que la idea de poner al usuario en el foco es esencial para lograr un buen diseño de 
+casi cualquier producto, servicio o experiencia. 
+ 
+En el DCU no solo se estudia la vivencia del usuario, sino  la de todas las personas o 
+stakeholders que influyen en el proyecto. Son todas las personas, grupos o individuos 
+que tienen el poder de afectar o ser afectados por el proyecto de diseño en el que está 
+involucrado. Van desde el jefe de la organización o el  grupo principal de usuarios, 
+hasta el hombre de la calle  que puede experiment ar algunos efectos de lo que  se 
+propuso hacer. Los stakeholders también incluyen a  todas las personas que forman 
+parte tanto del problema como de la solución de diseño abordado. 
+ 
+Se trata de entender dicho problema como un sistema  complejo donde hay muchas 
+partes interactuando entre sí. 
+ 
+Definición 
+El DCU, es definido por la Usability Professionals Association (UPA) como un enfoque 
+de diseño cuyo proceso está dirigido por información sobre las personas  que van a 
+hacer uso del producto. 
+  
+P á g i n a  24 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Es un proceso de diseño iterativo en el que los diseñadores se centran en los usuarios 
+y sus necesidades en cada fase del proceso de diseño. En DCU, los equipos de diseño 
+involucran a los usuarios a lo largo del proceso de diseño a través de una variedad de 
+técnicas de investigación y diseño , para crear productos altamente  utilizables y 
+accesibles para ellos. 
+ 
+El DCU, se define, por tanto, como un enfoque del diseño  que se centra en hacer los 
+sistemas interactivos de una forma más fácilmente utilizable. 
+ 
+Con los sistemas interactivos, no solo se refiere a la  interacción con dispositivos 
+digitales, sino a la interacción  con cualquier producto, objeto, espacio, servicio, etc. 
+Por ejemplo, los usuarios pueden realizar una interacción con una pantalla táctil de un 
+dispositivo electrónico, pero también existe interacción con un libro, con los botones 
+de un ascensor, con las diferentes salas o recorrido de un museo, etc. 
+ 
+Importancia del DCU 
+El DCU se ha convertido en una  práctica necesaria para un diseño ético, efectivo, 
+servicial y optimizado. Se puede decir que hay tres grandes  motivaciones que 
+justifican la necesidad de implementarlo  en cualquier proyecto de diseño y de otras 
+áreas: 
+1. Solucionar problemas reales 
+El diseño centrado en personas y su metodología propicia la búsqueda de las 
+necesidades reales que  tienen las personas. No se trata solo de diseñar de 
+forma ergonómica o adaptada a los gustos de los usuarios.  
+Por el contrario, es una herramienta que parte de una  investigación en 
+profundidad en la que se persigue conocer las preocupaciones y deseos de las 
+personas individuales y las comunidades de usuarios. Se busca encontrar los 
+problemas reales de dichas personas, y comenzar el proceso de diseño 
+partiendo de los problemas descubiertos . No se trata de hacer “pintaditas” a 
+los productos que ya existen, sino inventar nuevas soluciones completamente 
+dirigidas a estos problemas reales. 
+ 
+2. Aceptación del usuario 
+Para que un producto exista, tiene que ser fabricado,  comprado y, finalmente 
+utilizado. Si un producto no está  diseñado desde el principio pensando en las 
+necesidades reales de las personas, no se logrará la aceptación de los  
+usuarios. El comportamiento de las personas es muy difícil de predecir, pero 
+sus conductas están guiadas por sus necesidades e intereses , por lo que el 
+producto también debe estar diseñado en función de éstos. El diseño centrado  
+P á g i n a  25 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+en el usuario busca lograr una alineación entre la propuesta  de diseño y las 
+necesidades de los usuarios, todo ello para  lograr la aceptación por parte de 
+estos. 
+ 
+3. Reducción del coste de desarrollo 
+El diseño centrado en el usuario no consiste sólo en mejorar la calidad de vida 
+de las personas. En el sistema económico  actual los proyectos de diseño 
+suelen estar envueltos en  un modelo de negocio que necesita obtener un 
+rendimiento para existir. En este sentido, el diseño centrado en el usuario 
+es muy interesante, ya que, al focalizar los esfuerzos en  satisfacer al usuario 
+desde el principio, se pretende llegar  a “dar en el clavo” lo antes posible. La 
+estrategia, a grandes rasgos, consiste en buscar exactamente lo que el usuario 
+quiere y necesita para entonces diseñarlo de forma ágil  e iterativa, teniendo 
+como resultado una optimización en  los esfuerzos, tiempos, recursos e 
+inversiones, dirigidas a obtener el producto que los usuarios desean. 
+ 
+Orígenes del DCU  
+El origen del DCU se le atribuye a Donald Norman científico cognitivo e ingeniero de 
+usabilidad. Gran parte de su trabajo se basa en la investigación y la defensa del diseño 
+centrado en el usuario. Norman  es cofundador de Nielsen Norman Group, una firma 
+de consultoría e investigación de experiencia de usuario  actualmente pionera y líder 
+en DCU. 
+ 
+Hizo una gran contribución a la transformación del  pensamiento del diseño cuando 
+reformó el diseño  participativo en lo que se conoció como Diseño Centrado en  el 
+Usuario. Las pruebas se centraron menos en la usabilidad  y más en los intereses de 
+los usuarios y sus necesidades. 
+ 
+Este enfoque humanizó el diseño participativo y del  sistema que hizo las cosas más 
+deseables. Esto se hizo para que los usuarios pudieran descubrir problemas y  luego 
+tener la oportunidad de resolverlos. 
+ 
+Norman trabajó en Apple donde se lo consideró como el “Arquitecto de la experiencia 
+del usuario” en 1993 porque quería “cubrir todos los  aspectos de la experiencia del 
+usuario con un sistema”. 
+ 
+El libro de Norman de 1988 The Design of Everyday Things  sigue siendo una especie 
+de biblia de la experiencia  de usuario, que promociona el desarrollo iterativo y las  
+relaciones fluidas entre el usuario y el objeto.  
+P á g i n a  26 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+El DCU colocó al usuario en  el centro del proceso de desarrollo, lo que mostró los  
+beneficios de comprender la experiencia del usuario. 
+ 
+Principios de DCU 
+De forma genérica, se puede decir que el DCU tiene una serie de principios a seguir. 
+ 
+• Centrarse desde el principio en los usuarios  y su comportamiento: estudiar 
+directamente las características cognitivas, conductuales,  antropomórficas y 
+actitudinales de los usuarios. 
+Todo el diseño debe estar basado en la investigación  realizada alrededor del  
+comportamiento de las personas. El proceso de diseño, parte de una fase  de 
+estudio antropológico y sociológico donde  se pretende conocer cómo se 
+comportan los consumidores, cuáles son sus problemáticas y qué soluciones 
+desean. 
+ 
+• Medición empírica: idealmente, las reacciones y rendimiento de los usuarios 
+a los escenarios, manuales, simulaciones y prototipos se observan, registran y 
+analizan. Son los datos empíricos los que permiten tomar decisiones concretas 
+que mejoran  aspectos específicos o que permiten realizar  comparaciones 
+relativamente objetivas y fiables. 
+ 
+• Diseño iterativo: el diseño centrado en el usuario  debe plantearse como un 
+constante prototipo que se actualice en función del propio uso que le vaya  
+dando el usuario. Los diseños deben ser probados  y testeados directamente 
+con los usuarios y cuando  se encuentran problemas, se solucionan y se 
+realizan más pruebas. De esta manera, el producto siempre  estará 
+actualizándose en función de los usuarios. 
+Este proceso iterativo es más eficiente en productos  digitales que pueden ser 
+actualizados y no existe un  proceso de fabricación y desarrollo que convierta 
+el proceso de diseño en una secuencia lineal. 
+ 
+De esta manera, el DCU pone al usuario en el foco y  éste es el que determina las 
+decisiones de diseño. Sin embargo, es importante tener claro que el usuario no es 
+el diseñador. Las personas tienen una serie de deseos y  necesidades que se deben 
+tener en cuenta para lograr un diseño que resuelva una problemática real y cumpla 
+las expectativas e ilusiones de los usuarios. Pero los  usuarios muchas veces no son 
+conscientes de cuáles son las frustraciones y motivaciones verdaderas. 
+  
+P á g i n a  27 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Es trabajo del diseñador es conocer al usuario incluso  más que este a sí mismo y 
+poder ofrecerle lo que necesita, incluso sin que él lo sepa. Para ello, se debe  realizar 
+un trabajo de investigación y profundización en el comportamiento de las personas.  
+ 
+• Procesos de diseño 
+ 
+El proceso comienza con un estudio cuidadoso de los comportamientos, intenciones, 
+necesidades y actitudes de las personas. 
+ 
+Para ello, los diseñadores emprenden una mezcla diversa  de investigación 
+cuantitativa y cualitativa  sobre sus  usuarios previstos y aplican técnicas como 
+encuestas, entrevistas, observaciones o inmersiones. 
+ 
+Después de un período de análisis y síntesis de los resultados de la investigación, los 
+profesionales inician  el proceso de ideación. La colaboración con equipos  
+multidisciplinarios brinda conocimiento sobre el  contexto de uso, pero también es 
+crucial para identificar  la viabilidad tecnológica y las restricciones económicas  del 
+diseño. Además, la colaboración con los propios usuarios ayuda a los diseñadores a 
+comprender mejor sus prácticas, necesidades y preferencias. 
+ 
+Por lo general, se desarrolla y testea un prototipo para evaluar los supuestos de diseño 
+sobre el uso y el usuario. 
+ 
+Antes de implementar el diseño, es una práctica común ejecutar varias iteraciones del 
+proceso de diseño centrado en el usuario. Cada iteración incorpora conocimientos 
+e investigaciones de intentos anteriores para mejorar y refinar el producto o servicio. 
+ 
+• Deseabilidad, factibilidad y viabilidad 
+ 
+Para poder implementar una propuesta de diseño e innovación, es necesario atender 
+al equilibrio entre la deseabilidad, la factibilidad y la viabilidad. 
+ 
+Cuando se logra dicho equilibrio se aumenta el valor de las soluciones de diseño. Sin 
+embargo, es difícil saber  si se han cumplido estos requisitos. He aquí algunas  
+preguntas que ayudan a mantener el rumbo al principio de cualquier proyecto: 
+ 
+Deseabilidad 
+ 
+• ¿Satisface esta solución una necesidad? un buen punto de partida es comprobar si 
+el proyecto añade valor al mundo, si resuelve alguna necesidad. 
+  
+P á g i n a  28 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+• ¿Encajará en la vida de la gente? entender a las  personas que utilizan la solución 
+indica cómo viven y de qué manera dicha solución apoya o entra en  conflicto con su 
+estilo de vida y sus casos de uso. Hay muchos productos que han surgido de una gran 
+idea y que luego no han triunfado porque no encajan  con los hábitos, costumbres y 
+conductas de las personas que supuestamente deberían usarlos. 
+ 
+• ¿Les resultará atractiva? aunque no debería ser la única consideración, tampoco se 
+puede descuidar el factor del atractivo por completo. Los consumidores son personas 
+que se rigen, como todas, por impulsos  emocionales que relacionan conceptos 
+visuales y estéticos con hábitos, estilos de vida, objetivos,  etc. La estética de un 
+producto puede determinar un rechazo o una aceptación por parte del usuario según 
+la interpretación de su atractivo. 
+ 
+• ¿Lo querrán realmente? no tiene sentido tomarse  la molestia (y los recursos, 
+esfuerzos, tiempos,  inversiones, etc.) de diseñar y ejecutar un proyecto  que nadie 
+quiere. Es importante asegurarse de que  los productos diseñados están dirigidos a 
+satisfacer aquello que los usuarios quieren. Para ello, no queda  otra opción que 
+testear los posibles diseños con los usuarios directamente y pivotar la idea hasta dar 
+con la propuesta que sí genera interés. 
+ 
+Factibilidad 
+ 
+• ¿Está disponible la tecnología necesaria para  impulsar la solución de diseño? a 
+veces el objetivo es crear una nueva tecnología, pero otras veces hay que trabajar con 
+lo que se dispone. Es importante determinar desde el principio cuál es el objetivo en 
+este aspecto. 
+ 
+• ¿Cuánto tiempo llevará? el tiempo es uno de los  recursos más preciados en el 
+desarrollo de los proyectos. Además, cuanto más tiempo se tarde en lanzar un nuevo 
+producto, mayor incertidumbre respecto a su respuesta en el mercado, puesto que se 
+trata de un escenario futuro desconocido. Por  ello, cuando una idea parece factible 
+pero el plazo para realizarla es muy elevado, deja de serlo. 
+No se debe ampliar el plazo de desarrollo  simplemente para acomodar los ideales 
+propios, sino  que debe ajustarse lo máximo a las posibilidades y  requerimientos 
+específicos de cada proyecto. En ocasiones, es más factible una opción simplemente 
+por poder realizarse en un plazo breve de tiempo. 
+ 
+• ¿Puede la organización hacerlo realidad? Durante la fase de ideación de un proyecto, 
+el equipo  encargado de la ideación debe cuestionarse si la  solución puede ser 
+gestionada por los equipos correspondientes que en etapas posteriores serán  
+  
+P á g i n a  29 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+responsables de gestionar las soluciones propuestas  y de mantenerlas vivas. A lo 
+largo del tiempo. Una  solución sólo funciona cuando el equipo puede  realmente 
+hacerla funcionar a largo plazo. 
+ 
+Viabilidad 
+ 
+• ¿La solución diseñada se ajustará a los objetivos  de la empresa? si se entiende lo 
+que la empresa quiere lograr, se puede concentrar la energía en la dirección correcta. 
+ 
+• ¿Se ajusta esta solución al presupuesto del cliente?  prácticamente todos los 
+proyectos tienen trabajar  con presupuestos, e incluso si se tiene la mejor idea  del 
+mundo, si está fuera del presupuesto del cliente, la solución no es viable. 
+ 
+• ¿Cómo será el retorno de la inversión? no sólo referido al dinero. Es útil medir el 
+esfuerzo necesario para ejecutar una solución con la posible recompensa en términos 
+de resultados deseados, ya sean monetarios o cualquier otra medida cuantificable. Si 
+la inversión supera con creces los beneficios, puede  valer la pena centrarse en una 
+solución diferente. 
+ 
+Disciplinas 
+Actualmente existen múltiples disciplinas relacionadas con el diseño centrado en el 
+usuario, sobre todo desde las últimas  décadas, donde se ha visto un desarrollo 
+exponencial de las tecnologías digitales.  
+ 
+• Diseñadores de interacción (UI): personas involucradas en el diseño de todos los 
+aspectos interactivos de un producto. 
+ 
+• Ingenieros de usabilidad: personas que se enfocan en evaluar productos, 
+utilizando métodos y principios de usabilidad. 
+ 
+• Arquitecto de la información: personas que aportan ideas sobre cómo planificar y 
+estructurar productos interactivos. 
+ 
+• Diseñadores de experiencia de usuario (UX): personas que realizan tareas 
+relacionadas con todo lo anterior, pero de forma que se focalizan en la experiencia 
+del usuario, aplicando estudios de campo para informar el diseño de productos. 
+ 
+ 
+  
+P á g i n a  30 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Fundamentos de DCU 
+Los fundamentos en los que se basa el diseño UX para optimizar la interacción de las 
+personas con el producto son la usabilidad, la accesibilidad y la interacción. 
+ 
+Usabilidad 
+La usabilidad es un atributo de calidad que evalúa la facilidad de uso de las interfaces 
+de usuario. La palabra  “usabilidad” también se refiere a métodos para mejorar  la 
+facilidad de uso durante el proceso de diseño. La  usabilidad se define por 5 
+componentes de calidad: 
+ 
+• Aprendizaje: qué tan fácil es para el usuario  completar tareas básicas y 
+puntuales la primera vez que utilizan la interfaz. 
+ 
+• Eficiencia: una vez que conocen el funcionamiento  de la interfaz, qué tan 
+rápido pueden completar dichas tareas. 
+ 
+• Memorizabilidad: luego de un tiempo de no utilizar la interfaz, cuánto tardan 
+los usuarios en recuperar su capacidad previa. 
+ 
+• Errores: cuántos errores cometen los usuarios, qué  tan graves son estos 
+errores y con qué facilidad pueden recuperarse de los errores. 
+ 
+• Satisfacción: cuán agradable es para el usuario utilizar la interfaz. 
+ 
+Hay muchos otros atributos de calidad importantes. Una  clave es la utilidad, que se 
+refiere a la funcionalidad del diseño: ¿Hace lo que los usuarios necesitan? 
+ 
+La usabilidad y la utilidad son igualmente importantes y  juntas determinan si algo es 
+útil: poco importa que algo sea fácil si no es lo que quieres. Tampoco es bueno si 
+el sistema puede hipotéticamente hacer lo que quieres,  pero no puedes hacer que 
+suceda porque la interfaz de usuario es demasiado difícil. 
+ 
+Accesibilidad 
+ 
+La accesibilidad refiere a la capacidad de interacción  de la persona con la interfaz, 
+considera tanto el contexto de uso, como las propias aptitudes del usuario. Teniendo 
+en cuenta que el fin del UX es  asegurar una experiencia satisfactoria, eficiente  y 
+funcional, en muchos casos deben hacerse  adaptaciones para que personas con 
+algún tipo de discapacidad o pertenecientes a un grupo  demográfico particular con  
+P á g i n a  31 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+necesidades puntuales,  puedan completar las mismas tareas sin hacer  mayores 
+esfuerzos o caer en múltiples errores.  
+ 
+Desde unas zapatillas que se ponen y se sacan casi automáticamente, sin necesidad 
+de utilizar las manos en ningún punto del proceso, hasta aplicaciones que definen con 
+propósito los colores  de los botones pensando en los contrastes  y posibilidades 
+perceptivas de personas con  daltonismo, por mencionar algo, son uno de los  tantos 
+ejemplos de accesibilidad o diseño inclusivo.  
+ 
+De hecho, el diseño inclusivo no es meramente una  acción “solidaria” con las 
+personas que tienen algún  tipo de dificultad especial, sino que sirve para facilitar la  
+interacción al total de la comunidad de usuarios. 
+ 
+Por ejemplo, si se diseña un producto como el picaporte de una puerta satisfaciendo 
+las necesidades de los extremos  de los percentiles de altura globales (las personas  
+extremadamente altas y las personas extremadamente  bajas), se estará incluyendo 
+las necesidades del resto de la población dentro de dicho diseño. Por ello, en vez  de 
+diseñar para la media, una buena práctica es diseñar para los extremos.  
+ 
+De igual manera, si se diseña una interfaz con un texto sobre  un fondo de color, y se 
+selecciona un contraste que permita  una correcta visualización por parte de las 
+personas con mayor dificultad en este sentido, se estará creando un  producto que 
+beneficia a todo el conjunto de los usuarios, ya que el hecho de que lo puedan leer los 
+daltónicos o los  discapacitados visuales significa que será más fácilmente  legible 
+para los perfiles con buena visibilidad. 
+ 
+Interacción 
+ 
+Este pilar es el que guía la planificación y creación de los puntos de contacto, es decir, 
+los puntos de interacción entre la interfaz y el usuario. 
+ 
+Las user-personas son usuarios arquetípicos ficticios  cuyos objetivos y 
+características representan las necesidades de un grupo más grande de usuarios. El 
+user-persona se elabora para determinar qué se va a  hacer o cómo se va a utilizar el 
+producto. 
+ 
+El diseño de la experiencia debe ser capaz de guiar u  orientar el comportamiento del 
+user-persona de una forma no invasiva. 
+ 
+Se dice que el buen diseño UX es aquel que no se  percibe, ya que la experiencia se 
+vuelve fluida y casi intuitiva, dejando al usuario satisfecho, con una  
+P á g i n a  32 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+impresión y sentimientos positivos en relación con la marca u organización (Abraham, 
+N. 2022). 
+ 
+Usabilidad en procesos digitales 
+En los entornos digitales, se hace especialmente evidente  la importancia de la 
+usabilidad. 
+Según Jakob Nielse, cofundador de NN Group:  
+ 
+En la Web, la usabilidad es una condición necesaria para la supervivencia. Si un 
+sitio web es difícil de usar, la gente se va. Si la página de inicio no  establece 
+claramente lo que ofrece una empresa y  lo que los usuarios pueden hacer en 
+el sitio, la gente se va. Si los usuarios se pierden en un sitio web, lo abandonan. 
+Si la información de un sitio web es difícil de leer o no responde a las preguntas 
+clave de los usuarios, se van. No existe tal cosa como  que un usuario lea el 
+manual de un sitio web o pase  mucho tiempo t ratando de descubrir una 
+interfaz. Hay muchos otros sitios web disponibles; irse es  la primera línea de 
+defensa cuando los usuarios encuentran una dificultad (Jakob Nielsen). 
+ 
+Para los softwares y herramientas digitales, la usabilidad  es una cuestión de 
+productividad. El tiempo que los usuarios desperdician perdiéndose en su interfaz o 
+reflexionando sobre instrucciones difíciles es tiempo (y  en ocasiones dinero) que se 
+desperdicia. 
+ 
+Cómo mejorar la usabilidad 
+Hay muchos métodos para estudiar la usabilidad, pero el más básico y útil es el test 
+de usuario, que tiene 3 fases a seguir: 
+ 
+• Conseguir algunos usuarios representativos, como clientes para un sitio de 
+comercio electrónico o empleados para aplicación interna. 
+ 
+• Pedir a los usuarios que interactúen y realicen tareas representativas con el 
+diseño propuesto. 
+ 
+• Observar  lo que hacen los usuarios, dónde tienen  éxito y dónde tienen 
+dificultades con la interfaz de usuario. Es importante observar de forma pasiva 
+y deja que los usuarios hablen. 
+ 
+Es importante evaluar a los usuarios individualmente y dejar que resuelvan cualquier 
+problema por su cuenta.  
+P á g i n a  33 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Si se les ayuda o dirige su atención a cualquier parte  particular de la pantalla, se 
+contaminan los resultados de la prueba. 
+ 
+Para identificar los problemas de usabilidad  más importantes de un diseño, 
+normalmente es suficiente probar a grupos pequeños de 5 o 10 usuarios, por ejemplo. 
+En lugar de realizar un estudio grande y costoso, es mejor el uso de los recursos para 
+ejecutar muchas pruebas pequeñas y revisar el diseño entre cada una  para que se 
+puedan corregir los errores de usabilidad a medida que se identifican. 
+ 
+El diseño iterativo es la mejor manera de aumentar la calidad  de la experiencia del 
+usuario. Cuantas más versiones e  ideas de interfaz se prueben con los usuarios, 
+mejor. 
+ 
+Las pruebas de usuario son diferentes de los focus group, o grupos focales.  Este 
+método de investigación es  una técnica cualitativa que reúne participantes de una  
+entrevista grupal, en la cual se exponen opiniones sobre productos o servicios. 
+ 
+Es una metodología que puede ser deficiente a la hora  de evaluar la usabilidad del 
+diseño. Los focus group son técnicas destinadas a la investigación de mercado  para 
+detectar necesidades previas al diseño y elaborar hipótesis para crear prototipos que 
+luego se pueden testear con los usuarios. 
+ 
+Sin embargo, para evaluar los diseños de interacción debe observarse de cerca a los 
+usuarios individuales mientras realizan las tareas con la interfaz ya prototipada. 
+ 
+Escuchar lo que dicen las personas puede ser engañoso: es necesario observar lo que 
+realmente hacen. 
+ 
+Comportamiento humano 
+Objetivos: Entender las características básicas del comportamiento humano. 
+Conocer cómo se realiza la investigación del comportamiento humano. 
+Comprender el comportamiento humano es muy importante en la sociedad. El 
+conocimiento hace visibles los patrones y las razones por las que las personas toman 
+ciertas decisiones.  
+Tanto en el ámbito de la investigación académica como en el ámbito de las acciones 
+del marketing, las empresas aspiran a comprender mejor cómo actúan, toman 
+decisiones, planifican y memorizan los seres humanos.  
+  
+P á g i n a  34 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Esto, por supuesto, también es aplicable al Diseño Centrado en el Usuario, el cual tiene 
+el reto de investigar este comportamiento como parte del proceso de creación de 
+productos. No solo para satisfacer las necesidades de la sociedad a la que sirve, sino 
+para lograr proyectos de éxito que reporten beneficios económicos y empresariales a 
+los equipos, inversores, participantes y empresas que los llevan a cabo. 
+El comportamiento humano se refiere a la forma en que los humanos actúan e 
+interactúan. Se basa e influye en varios factores, como la composición genética, la 
+cultura, los valores y actitudes individuales.  
+El comportamiento humano es un tema intrínsecamente complejo, el cual se 
+relaciona con la manera y las razones detrás de las acciones de las personas. Por 
+supuesto, existen innumerables teorías asociadas con el comportamiento humano y 
+varios tipos de conducta.  
+Los avances en la tecnología de la investigación, junto con los procedimientos de 
+adquisición y análisis de datos, han permitido a los investigadores de todo el mundo 
+acceder a determinada información del cerebro y la mente de los humanos, la cual 
+hasta hace pocos años era desconocida.  
+Sin embargo, el reto más importante es la observación e interpretación sistemática 
+de cómo los procesos cerebrales se relacionan con los comportamientos naturales, 
+activos y cambiantes.  
+Todas las personas son individuos activos que intentan continuamente satisfacer sus 
+necesidades corporales y deseos mentales en un entorno complejo y siempre 
+cambiante, mientras interactúan con el mundo que les rodea.  
+Medición del comportamiento humano 
+ 
+Para describir e interpretar el comportamiento humano, los investigadores 
+académicos y comerciales han desarrollado técnicas que permiten recoger datos 
+indicativos de los rasgos de personalidad, los estados cognitivo -afectivos y las 
+estrategias de resolución de problemas.  
+ 
+En general, las técnicas de investigación empleadas pueden clasificarse en 
+procedimientos cualitativos y cuantitativos.  
+ 
+- Estudios cualitativos : Los estudios cualitativos recogen información no 
+numérica, por ejemplo, mediante el análisis de los comentarios en las entradas 
+en un blog, el uso de cuestionarios abiertos, las entrevistas no estructuradas o 
+las observaciones. Los estudios cualitativos de campo o de usabilidad , por 
+ejemplo, pretenden comprender cómo ven el mundo los usuarios y por qué 
+reaccionan de una manera determinada , en lugar de contar las respuestas y 
+analizar los datos estadísticamente.   
+P á g i n a  35 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+- Estudios cuantitativos : Los estudios cuantitativos se caracterizan por las 
+técnicas estadísticas, matemáticas o computacionales que utilizan números 
+para describir y clasificar el comportamiento humano.  Algunos ejemplos de 
+técnicas cuantitativas son las encuestas estructuradas y las observaciones 
+con esquemas de codificación específicos. Asimismo, las mediciones 
+fisiológicas como actividad del cerebro, frecuencia cardíaca  y otros sensores 
+producen resultados cuantitativos, lo que permite a los investigadores traducir 
+las observaciones del comportamiento en números discretos y resultados 
+estadísticos.  
+ 
+Observación del comportamiento humano  
+ 
+La observación del comportamiento es una de las herramientas más antiguas para la 
+investigación psicológica del comportamiento humano. Los investigadores visitan a 
+las personas en su entorno natural (estudio de campo) o invitan a individuos o grupos 
+al laboratorio.  
+ 
+• Observación en el terreno : Las observaciones sobre el terreno tienen varias 
+ventajas. Los participantes suelen estar más relajados y menos cohibidos 
+cuando se les observa en casa, en la escuela o en el lugar de trabajo. Todo les 
+resulta familiar, lo que permite una observación, rel ativamente sin filtros, del 
+comportamiento que está integrado en el entorno natural del individuo o grupo 
+de interés.  
+ 
+Sin embargo, siempre existe el riesgo de distracción: vecinos que gritan o 
+teléfonos que suenan. Las observaciones de campo son un punto de partida 
+ideal para cualquier estudio de investigación del comportamiento. El mero 
+hecho de sentarse y observar a las  personas ofrece una enorme cantidad de 
+información si se puede centrar en una pregunta o aspecto específico del 
+comportamiento. 
+ 
+• Observación en el laboratorio : La observación en el laboratorio, por el 
+contrario, permite un control mucho más propio de un experimento científico. 
+Se puede excluir cualquier aspecto no deseado, eliminar las distracciones de 
+los teléfonos inteligentes, controlar la disposición de la sala y asegurar que se 
+dispone de todo lo necesario para unas condiciones adecuadas de grabación, 
+por ejemplo. Se pueden crear entornos de laboratorio casi realistas: construir 
+una típica sala de estar familiar, un espacio de oficina o una zona creativa, por 
+ejemplo, para que los encuestados se sientan a gusto y se les facilite un 
+comportamiento más natural.   
+P á g i n a  36 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Encuestas y cuestionarios  
+ 
+Las encuestas y los cuestionarios son una excelente herramienta para captar los 
+comportamientos y habilidades  auto declaradas, los estados mentales o 
+emocionales, así como los perfiles de personalidad de los encuestados. Sin embargo, 
+los cuestionarios son siempre meras instantáneas y solo captan ciertos aspectos del 
+comportamiento, los pensamientos y las emociones de una persona . Además, es 
+importante tener en cuenta que lo que las personas dicen y declaran en las preguntas 
+de los cuestionarios no siempre corresponde con lo que realmente piensan o con sus 
+comportamientos reales. Las encuestas y los cuestionarios suelen medir lo que 
+Kahneman describiría como procesos del sistema 2 (pensamientos que se llevan a 
+cabo de forma lenta y deliberada). Los procesos del sistema 1 (pensamientos rápidos 
+y automáticos) pueden medirse con otros métodos que detectan cambios fisiológicos 
+rápidos.  
+ 
+Focus group  
+ 
+En la investigación de mercados, los focus group (en español, grupos focales o grupos 
+de discusión) suelen estar formados por un pequeño número de encuestados (entre 
+4 y 15 aproximadamente) reunidos con un moderador para centrarse en las creencias 
+y actitudes hacia un producto, servicio, concepto, anuncio, idea, envase, entre otros.  
+ 
+Los grupos de discusión son herramientas cualitativas, ya que su objetivo es debatir 
+en el grupo, no precisamente llegando a conclusiones individuales.  
+ 
+Todas estas cuestiones pueden abordarse en un grupo focal:  
+ 
+• ¿Cuáles son los beneficios de un producto?  
+• ¿Cuáles son los inconvenientes?  
+• ¿Dónde podría optimizarse?  
+• ¿Quiénes son las poblaciones objetivo ideales?, etc.  
+ 
+Más allá de las encuestas y los focus group  
+ 
+Aunque las encuestas y los grupos de discusión pueden ser fundamentales para 
+comprender los pensamientos y emociones conscientes, el comportamiento humano 
+es mucho más de lo que parece. La mente subconsciente determina cómo se lleva a 
+cabo el comportamient o en última instancia, en donde solo una pequeña parte es 
+accesible a partir de las metodologías tradicionales.  
+  
+P á g i n a  37 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Como afirman algunos investigadores, hasta el 90 % de las acciones están guiadas 
+por el subconsciente. Aunque el otro 10 % es importante, está claro que hay mucho 
+que ganar si se indaga más allá de lo que se comprueba con los métodos 
+tradicionales. Los enf oques modernos pretenden explorar el territorio oculto e 
+inexplorado del subconsciente, midiendo resultados fiables que proporcionen 
+información más profunda sobre lo que alguien está pensando realmente . Estos son 
+los biosensores.  
+ 
+Además de observar el comportamiento manifiesto, se pueden utilizar biosensores y 
+dispositivos de medición para entender cómo interactúan la mente, el cerebro y el 
+cuerpo. Los biosensores permiten acceder a procesos que de otro modo quedarían 
+ocultos. Estos procesos, normalmente ocultos (al menos para un observador), pueden 
+dar indicaciones sobre los procesos de pensamiento que Daniel Kahneman describiría 
+como pertenecientes al Sistema 1: reacciones rápidas y en gran medida impulsadas 
+por las emociones. Estas reacciones son procesos rápidos que subyacen a una gran 
+parte de la toma de decisiones y comportamientos resultantes. Algunos ejemplos: 
+ 
+• El seguimiento ocular: Ofrece una visión increíble de la atención visual más allá 
+de cualquier otro método experimental. Si bien el seguimiento ocular se utiliza 
+habitualmente para controlar hacia dónde dirigen las personas sus 
+movimientos oculares en un momento determinado, t ambién hace un 
+seguimiento de la dilatación de la pupila. 
+ 
+• Actividad electrodérmica:  Refleja la cantidad de secreción de sudor de las 
+glándulas sudoríparas de la piel. El aumento de la sudoración se traduce en 
+una mayor conductividad de la piel. Cuando las personas se exponen a una 
+estimulación emocional, "sudan emocionalmente", sobre todo en la frente, las 
+manos y los pies.  
+ 
+• Análisis de expresiones faciales : Dado que las expresiones faciales están 
+ligadas a las emociones internas, y que las emociones rigen gran parte del 
+comportamiento, el estudio de las expresiones faciales ayuda a conocer las 
+razones de las acciones. El análisis de las expresiones faciales es un método 
+no intrusivo que evalúa la posición y orientación de la cabeza, las micro 
+expresiones (como el levantamiento de las cejas o la apertura de la boca) y las 
+expresiones faciales globales de las emociones básicas ( alegría, enfado, 
+sorpresa, etc.) mediante una cámara colocada delante del encuestado. Los 
+datos faciales son extremadamente útiles para validar las métricas de 
+compromiso, carga de trabajo o somnolencia con respecto a una tarea, por 
+ejemplo. 
+  
+P á g i n a  38 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Diseño de producto digital  
+Lo ideal es que el manejo del software y la navegación por los sitios web sean una 
+experiencia agradable: los niveles de frustración y confusión deben 
+mantenerse lo más bajos posible. 
+ 
+ El seguimiento del comportamiento de los usuarios, por ejemplo, basado en el 
+desplazamiento o la proporción de clics, así como en las expresiones faciales, 
+mientras los probadores navegan por sitios web o ventanas de un software, puede 
+proporcionar inform ación sobre la satisfacción emocional del grupo objetivo de 
+usuarios.  
+ 
+El seguimiento de los ojos es una tecnología especialmente útil, ya que ayuda a 
+determinar con exactitud lo que la persona está mirando durante su experiencia con 
+el sitio web. Cuando se combina con otras medidas, permite conocer qué es 
+exactamente lo que les produjo una sensación positiva o negativa durante la 
+interacción.  
+ 
+El comportamiento humano es un campo de estudio polifacético y dinámico que 
+requiere muchos enfoques diferentes para obtener conocimientos objetivos, fiables y 
+prácticos para el Diseño Centrado en el Usuario.  
+ 
+Los procesos de aprendizaje sientan las bases para determinar muchos de los 
+comportamientos humanos, aunque las personas cambian constantemente en 
+respuesta a su entorno. Comprender los comportamientos de los usuarios es una 
+tarea complicada, pero cada vez  hay más métodos, herramientas y técnicas para 
+lograrlo. Los métodos tradicionales de estudio han sentado las bases del estudio de 
+las conductas en muchos aspectos, en donde cada vez más los biosensores y las 
+tecnologías pueden aportar nueva información. 
+ 
+Observación activa :  El método de observación activa o participativa requiere 
+comprometerse activamente en lo que hacen las personas observadas. No se trata 
+de una observación pasiva, sino inmersiva e interactiva. Este método pone énfasis en 
+que los diseñadores trabajen con las personas observadas, en lugar de hacer que las 
+personas trabajen con los diseñadores. Para aprender más sobre los usuarios, deben 
+observarse en su propio entorno y para ello el diseñador participa en sus actividades. 
+Tal y como expli ca Ashley Crossman en su texto: El objetivo de la observación 
+participante es obtener una comprensión profunda y familiarizarse con un 
+determinado grupo de personas, sus valores, creencias y forma de vida . A menudo, 
+el grupo en cuestión es una subcultura de una sociedad mayor, como un grupo 
+religioso, ocupacional o comunitario en particular. Para realizar la observación activa  
+P á g i n a  39 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+el investigador a menudo vive dentro del grupo, se convierte en parte de él y actúa 
+como miembro del grupo durante un período prolongado de tiempo, lo cual le permite 
+acceder a los detalles íntimos y los acontecimientos del grupo y su comunidad 
+(Crossman, A.2019).  
+ 
+• Procedimiento: Se debe conocer a las personas a las que se va a observar y 
+establecer una relación con ell as. Es importante hacer que los usuarios se 
+sientan cómodos con el diseñador observándolos y trabajando con ellos, para 
+que no se sientan influidos por su presencia, o bien, que la influencia sea la 
+mínima posible. Se debe participar de forma activa en las actividades. Es 
+aconsejable contar con la ayuda de una persona que sirva de guía para 
+introducirse en las actividades del usuario. Es interesante encontrar diferentes 
+situaciones para ser parte de la comunidad y desarrollar mejores relaciones 
+con los individuos. Se debe registrar todas las observaciones posibles. Anotar 
+cualquier cosa que se encuentre relevante, interesante o sorprendente. Si algo 
+aparece repetidamente, probablemente ayude a identificar patrones.  
+ 
+• Interpretación : Las experiencias personales, observaciones y notas de las 
+sesiones ayudarán a analizar mejor la problemática y obtener diferentes 
+perspectivas para abordar el proyecto. 
+ 
+Resumen 
+A modo de resumen, se puede decir que, aunque muchos comportamientos humanos 
+parezcan racionales, voluntarios, manifiestos y conscientes, la mayoría de ellos no lo 
+son y, de hecho, a menudo están altamente guiados por las emociones. Por todo ello, 
+el comportamiento humano es muy complejo y difícil de investigar y predecir, lo cual 
+es un problema para el proceso de Diseño Centrado en el Usuario, el cual parte de la 
+investigación y el entendimiento de cómo se comportan las personas, para así poder 
+descubrir c uáles son sus necesidades reales y lograr diseñar productos 
+verdaderamente útiles y que funcionen. Para abordar este problema, la solución es 
+realizar una investigación en profundidad que combina dos vías de investigación 
+diferente: la investigación cuanti tativa que recoge datos, estadísticas e información 
+objetiva de las fenomenologías del comportamiento; y, por otro lado, en mayor 
+profundidad, la investigación cualitativa, que recoge mediante métodos etnográficos 
+las opiniones, sugestiones y subjetividade s, además de descubrir las razones y el 
+porqué del comportamiento de los usuarios. 
+ 
+ 
+ 
+  
+P á g i n a  40 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Procesos y Fases del DCU 
+Introducción 
+ 
+El mercado se inunda cada vez de más y más de productos. Pocas veces, cuando se 
+va a adquirir alguno en particular, se ve una única opción. Sin embargo, la mayoría de 
+las alternativas son, en esencia, iguales, y  es el componente de diseño (a nivel 
+funcional y a nivel  estético) lo que los hace diferentes: coches, lavadoras,  teléfonos 
+móviles, tabletas, etc. Todos ellos han  sido creados para desarrollar las mismas 
+funciones principales, pero el proceso y los criterios de diseño que  han permanecido 
+hacen que el resultado final sea muy  diferente. En este proceso, tener en cuenta la 
+usabilidad y la experiencia de usuario son aspectos que claramente  marcan la 
+diferencia entre diferentes opciones de un  mismo producto y hace que se prefiera 
+utilizar uno u otro. 
+ 
+Un elemento clave para alcanzar esta satisfacción es conocer y tener en cuenta a los 
+usuarios finales del producto en todas las etapas del proceso de diseño  (incluyendo 
+también el packaging y el servicio posventa). 
+ 
+Para ello, hay que aproximarse al diseño de una manera  holística, para conocer las 
+necesidades, características y  limitaciones de las personas que van a usar el 
+producto, así como el contexto en el que van a usarlo y mejorando  de manera 
+progresiva su diseño hasta que se tenga la  certeza de que el resultado final 
+corresponde al objetivo primordial: proporcionar una buena experiencia de usuario. 
+ 
+El diseño centrado en el usuario (DCU) consiste en enfocar el diseño de un producto  
+con toda aquella información necesaria que necesiten  las personas a las que va 
+dirigido. La funcionalidad  que aportan los objetos es mucho mayor, puesto que  se 
+ajustan a las necesidades que los usuarios están  buscando, respondiendo a 
+preguntas sobre quién  utilizará ese objeto y para qué. Aun así, crear un producto  
+centrándose en las necesidades del usuario no llega a ser suficiente, ya que también 
+se tienen que buscar las  necesidades reales que dicho producto pueda aportar al  
+mercado. Para ello se debe que llevar a cabo estudios y evaluar las respuestas de los 
+propios usuarios.  
+ 
+Por ejemplo, se puede realizar un test de usuario, que se  refiere a las pruebas que 
+realizan los propios usuarios  con los nuevos productos para detectar los posibles  
+fallos y errores que se hayan cometido. Este tipo de test  se puede realizar de forma 
+individual o en grupo, para saber cómo se va a utilizar el objeto diseño. Una vez que  
+P á g i n a  41 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+se haya obtenido el feedback de todos los participantes,  se sabrá si el diseño del 
+producto es el más adecuado o por la contra, se tendrá que modificar. Por otro lado,  
+también se pueden realizar estudios etnográficos, en  los que se puede estudiar a un 
+sector de la población utilizando el producto y observando cómo lo integran en su día 
+a día. Esto servirá para observar la funcionalidad  que proporciona a la sociedad y al 
+conjunto de personas que interactúan con el propio usuario. 
+ 
+Otros métodos para saber si se están desarrollando bien  los productos son las 
+entrevistas y las encuestas . Las  entrevistas sirven para evaluar la respuesta  
+inmediata como individuo, mientras que las encuestas sirven  para cuantificar el 
+número de personas que utilizarían  dicho producto. Al igual que la experiencia de 
+usuario dentro de la propia web, el diseño centrado en el usuario  permitirá ahorrar 
+costos en producir productos que  están destinados al fracaso. Además, el poder 
+realizar tests, ayudará a mejorar las deficiencias que el  equipo no pudo detectar 
+mientras lo desarrollaba.  
+ 
+ 
+ 
+Definición del concepto 
+¿Qué es el diseño centrado en el usuario? 
+ 
+El diseño centrado en el usuario (DCU) es una aproximación al diseño de productos y 
+aplicaciones que  sitúa al usuario en el centro de todo el proceso. Así, se  puede 
+entender el DCU como una filosofía cuya premisa  es que, para garantizar el éxito de 
+un producto, hay que tener en cuenta al propio usuario en todas las fases del diseño.  
+ 
+P á g i n a  42 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Además, también se puede interpretar al DCU  como una metodología de desarrollo: 
+una forma de planificar los proyectos y un conjunto de métodos que se pueden utilizar 
+en cada una de las principales fases.  
+ 
+El término de “diseño centrado en el usuario” nació en el laboratorio de investigación 
+de Donald A. Norman en la Universidad de California San Diego. Su amplia difusión se 
+produjo después de la publicación del libro User  centered system design: new 
+perspectives on human - computer interaction, y se consolidó posteriormente en  el 
+libro de Norman The design of everyday things (disponible en el campus como 
+material complementario de lectura) , aunque en su edición original fue titulado The 
+psychology of everyday things. Esta obra es un referente en el ámbito  del DCU y las 
+propias disciplinas como la interacción persona-ordenador, el diseño y la experiencia 
+de usuario.  
+ 
+Aunque el paradigma del diseño centrado en el  usuario es aplicable al desarrollo de 
+cualquier tipo de producto, ha sido en los productos con un  fuerte componente 
+tecnológico (tanto hardware  como software) donde tiene especial importancia  y a 
+donde apunta esta materia electiva.  
+ 
+El diseño centrado en el usuario involucra al usuario en  todas las fases a lo largo de 
+las que se desarrolla un producto, desde su fase de conceptualización hasta su fase 
+de evaluación, incluyendo, en muchos casos, su  propio desarrollo. El objetivo del 
+diseño centrado en el  usuario es nada más y nada menos que la creación de 
+productos que los usuarios encuentren útiles y fácilmente usables , es decir, que 
+satisfagan todas sus necesidades teniendo en cuenta sus propias características.  
+ 
+Para ello, el proceso y las etapas o fases del proceso  son claves en el DCU, ya que 
+ayudan a tener en cuenta a las personas  que utilizarán productos o sistemas 
+interactivos. Estas fases son un elemento imprescindible durante el proceso  y que 
+ayudan a planificar, especialmente sabiendo  qué hacer en cada momento. Estas 
+etapas se llevan a cabo de manera iterativa hasta alcanzar los objetivos deseados.  
+ 
+El diseño del objeto está basado en entender previamente a los usuarios, las tareas y 
+hasta el entorno en el que  los utilizan. El proceso de diseño incluye a los usuarios  
+utilizando los propios objetos y observando si estos  responden al diseño de los 
+productos; posteriormente, el equipo de diseño incluye otros aspectos relevantes.  
+ 
+A continuación, se pueden observar algunas de las  características principales del 
+diseño centrado en el usuario:  
+  
+P á g i n a  43 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+• Especificar el contexto del uso. Lo que se refiere a identificar las personas que van 
+a utilizar el objeto, por qué lo utilizarán y bajo qué circunstancias. 
+ 
+• Incluir los requisitos.  Engloba aquellos requisitos  que buscan tanto las empresas 
+como los usuarios para conseguir las expectativas establecidas. 
+ 
+• Desarrollar soluciones. Este proceso se debe de llevar a cabo en las distintas fases 
+de desarrollo del producto. 
+ 
+• Evaluar el diseño. Evaluar antes de lanzar el producto al mercado se hará necesario 
+para comprobar la viabilidad del producto. 
+ 
+Entendido esto, es importante mencionar la diferencia  entre usabilidad y el diseño 
+centrado en el usuario. 
+ 
+Suele haber confusión respecto a la experiencia del  usuario en un sitio web, que 
+muchas veces no está  ligado directamente con el diseño. A pesar de que dicha  
+experiencia sea satisfactoria, lo que se pretende con el diseño centrado en el usuario 
+es poder satisfacer todas las necesidades de aquellos que visitan la web.  
+  
+El aspecto iterativo es otra de las cuestiones clave del  DCU. Así, aunque a grandes  
+rasgos se puede considerar que hay tres grandes fases en cualquier proyecto de DCU 
+(investigación y análisis de los usuarios, diseño y  evaluación), nunca han de verse 
+como fases estáticas o  sucesivas. El diseño centrado en el usuario se basa en  un 
+modelo de proceso que se divide en fases o etapas, y  se realizan o llevan a cabo de 
+manera. 
+ 
+La investigación y análisis de los usuarios permite recoger los requisitos de usuario y, 
+por ello, es una etapa  clave en cualquier proceso de DCU. Si no se conocen los  
+usuarios de una aplicación o producto, sus necesidades,  limitaciones y deseos, es 
+prácticamente imposible dar una respuesta adecuada a dichas necesidades teniendo 
+en cuenta sus limitaciones y características. 
+ 
+Otro aspecto imprescindible es el contexto de uso. Por  ello, muchas de las 
+metodologías del DCU, sobre todo  las referentes a la recogida de requisitos de 
+usuario, están basadas en la observación del usuario en su  contexto natural. La 
+consideración del contexto como elemento clave es cada vez más relevante con las  
+tecnologías móviles. Las fases de diseño y evaluación  son posteriores a la 
+investigación de usuarios, y son  esencialmente iterativas. Los requisitos de usuario 
+se traducen habitualmente en perfiles, personas, escenarios y/o análisis de tareas, y 
+todo ello alimenta la fase inicial del diseño: el denominado diseño conceptual.   
+P á g i n a  44 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+El DCU es una aproximación empírica al desarrollo de  productos interactivos. Para 
+cada tipología de proyecto, el proceso y los métodos que se utilicen serán distintos y 
+se adaptarán a sus características (como el tiempo  disponible, presupuesto, perfiles 
+involucrados, etc.). 
+ 
+Pero siempre deberá haber un acercamiento a los usuarios objetivo y a los contextos 
+de uso. El DCU no  es un proceso genérico independiente del proyecto, sino  que está 
+estrechamente vinculado a cada conjunto de usuarios, funcionalidades y contexto. 
+ 
+El diseño centrado en el usuario es una filosofía y un proceso de desarrollo que sitúa 
+las necesidades y características del usuario en el centro de cada una de  las etapas 
+de diseño. Dichas etapas suelen consistir en:  
+ 
+1. Investigación y análisis de los usuarios,  
+2. Diseño 
+3. Evaluación 
+ 
+Se trata además de un proceso iterativo,  dado que en cada fase se retroalimenta de 
+la respuesta de los usuarios para mejorar y adaptar los elementos diseñados hasta el 
+momento. En inglés, se conoce como el target. De este modo, los procesos de diseño 
+centrados en los usuarios se focalizan en los usuarios para definir la planificación del 
+proyecto, y durante  el diseño y el desarrollo de un producto o sistema. En  
+consecuencia, el DCU se relaciona estrechamente con  la utilidad de los productos y 
+sistemas y su usabilidad,  y se basa primordialmente en la información sobre las  
+personas que utilizarán el producto.  
+ 
+Otro modo de ver el DCU que puede ayudar a entenderlo  es tomar en consideración 
+aquellos elementos ajenos al propio concepto de DCU.  
+ 
+• Un primer aspecto son aquellas personas que lo van a utilizar y son,  por tanto, para 
+quienes se diseña. A veces se habla de usuario final para clarificar que se trata de la 
+persona que acabará realmente interactuando con el producto, no los intermediarios 
+que permitirán que el usuario lo pueda utilizar. 
+ 
+• En cualquier proceso de DCU se tienen en cuenta  los requisitos tanto del usuario 
+como del cliente o empresa, y del producto.  
+ 
+• El DCU no es ingeniería del software, ya que está  especialmente muy alejado del 
+desarrollo en cascada de aplicaciones.   
+P á g i n a  45 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+• El DCU no es marketing ni estudios de mercado. 
+ 
+Ambas disciplinas pueden y deben interactuar y  retroalimentarse; sin embargo, la 
+aproximación al usuario es muy distinta y sus objetivos también lo son. 
+ 
+• Aunque muy a menudo el DCU sirve para descubrir  necesidades de los usuarios no 
+cubiertas hasta el momento, esta disciplina no debe confundirse con  el new product 
+development, que es muy propio del marketing.  
+ 
+Disciplinas relacionadas 
+ 
+Algunos de los conceptos y disciplinas relacionados con  el diseño centrado en el 
+usuario son los siguientes: 
+ 
+• Factores humanos: es la disciplina encargada de estudiar el papel de los humanos 
+en los sistemas persona-máquina y cómo dichos sistemas pueden funcionar bien con 
+las personas, especialmente en relación con la seguridad y la eficiencia. 
+ 
+Tradicionalmente, esta disciplina ha sido abordada  desde la perspectiva de la 
+ingeniería y el diseño  industrial y ha sido aplicada a sistemas industriales  como los 
+controles de los aviones, los sistemas industriales y el diseño de coches.  
+ 
+• Ergonomía: es la  disciplina científica responsable de entender las  interacciones 
+entre los humanos y los elementos de los sistemas, así como la profesión que aplica 
+teorías, principios, datos y métodos para diseñar  con el objetivo de optimizar el 
+bienestar de los  humanos y el rendimiento global del sistema entre  la persona y la 
+máquina. Dicha asociación divide  el ámbito de la ergonomía en ergonomía física,  
+ergonomía cognitiva y ergonomía organizacional. 
+ 
+En este sentido, la ergonomía se encarga de estudiar cómo diseñar sistemas persona-
+máquina teniendo en cuenta las necesidades de los humanos  y centrándose 
+específicamente en los entornos de trabajo, la eficiencia y la seguridad. 
+ 
+• Interacción persona -ordenador (IPO):  es aquella  disciplina que estudia la 
+interacción de los humanos  con los propios ordenadores y cómo éstos pueden  ser 
+diseñados para ayudar a las personas a utilizarlos de la forma más eficaz posible. La 
+IPO puede considerarse como un ámbito de los factores  humanos, aquel que se 
+ocupa de los factores  humanos de los ordenadores. Es la intersección  entre la 
+informática, la psicología y el diseño, así como otras disciplinas relacionadas con las  
+P á g i n a  46 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ciencias humanas y la informática. La Association for Computing Machinery define la 
+interacción persona-ordenador como la disciplina que se ocupa  del diseño, la 
+evaluación y la implementación de  sistemas informáticos interactivos para ser 
+usados por personas y teniendo en cuenta el estudio de  todos los fenómenos 
+relacionados con este uso.  
+ 
+• Experiencia de usuario (UX): se trata del  conjunto de sensaciones, percepciones,  
+razones y satisfacciones de cualquier usuario  que interaccione con un producto o 
+sistema. La experiencia de usuario pone el énfasis en los aspectos más relacionados 
+con la experiencia, la  afectividad, el significado y el valor de la interacción  persona-
+ordenador, aunque también tiene en cuenta  las percepciones del usuario en relación 
+con los aspectos más prácticos como la utilidad, la facilidad de uso y la eficiencia de 
+un sistema. Al contrar io que las disciplinas precedentes, la experiencia de  usuario 
+nace de una perspectiva menos científica,  más subjetiva y centrada en el placer que 
+en el rendimiento.  
+ 
+• Usabilidad: se trata la característica primordial de la facilidad de uso, esencialmente 
+aplicada al software, pero relevante para cualquier artefacto  humano. En términos 
+generales, un producto u aplicación es mucho más fácil de utilizar cuando  responde 
+efectivamente a la tarea para la cual es  utilizada. La facilidad de uso puede ser 
+cuantificada por el tiempo que se tarde en cumplir una tarea, por el número de errores 
+que se cometen, por lo rápido que se aprende a utilizar un sistema y por la satisfacción 
+de los usuarios. La ingeniería de  la usabilidad se refiere a todo aquel pro ceso de  
+investigación y diseño, que asegura la correcta usabilidad de un producto. 
+ 
+• Arquitectura de la información (IA): es una disciplina que se encarga de estudiar la 
+organización de la información y cómo estructurarla de la forma más efectiva posible 
+para que las personas  encuentren y usen la información. La arquitectura  de la 
+información está centrada en aspectos como  la navegación, el etiquetado de las 
+páginas y las secciones o la organización general del contenido. 
+ 
+El diseño centrado en el usuario y la usabilidad 
+ 
+La usabilidad es una de las disciplinas que mayor auge  han tenido de la mano del 
+desarrollo, cada vez más  perfeccionado, de los recursos de información digital  para 
+internet. Sin embargo, es necesario establecer las  diferencias entre los procesos de 
+diseño y la propia  usabilidad, ya que, como tal, es un conjunto de técnicas  para 
+asegurar la calidad de uso para el usuario final, pero  no es, por sí misma, un modelo 
+de diseño y creación. 
+  
+P á g i n a  47 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Un estudio detallado de los métodos de usabilidad  (Tramullas, 2002) revela que, en 
+realidad, son un conjunto de técnicas que se aplican durante los procesos de  diseño 
+y desarrollo, como una serie de criterios de  calidad y de validación, desde la 
+perspectiva del usuario final. Evidentemente, la usabilidad tiene que integrarse en los 
+procesos de diseño orientado al propio usuario, ya  que es un componente 
+fundamental de evaluación, pero  no puede, por sí sola, sustituir a los métodos y 
+técnicas de desarrollo e implementación.   
+ 
+Un modelo más clásico, en cuanto responde a las  premisas de la ingeniería del 
+software, es el propuesto  por Lorés, Granollers y Lana (2001), al que denominan  
+Modelo de Proceso de la Ingeniería de la Usabilidad y la Accesibilidad. 
+ 
+ 
+ 
+https://mpiua.invid.udl.cat/fases-mpiua/ 
+ 
+Este modelo incorpora tres núcleos principales de actividad, correspondientes a 
+las siguientes pautas (Lorés et al., 2001, en Tramullas, 2003): 
+ 
+• Ciclo de vida del software , con las fases clásicas  que engloban el análisis de 
+requisitos, diseño, implementación y lanzamiento. 
+ 
+ 
+P á g i n a  48 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+• El prototipado, mediante el cual, en relación con las fases de análisis de requisitos y 
+diseño, se  prepara una serie de propuestas de la interfaz de  la aplicación, y se 
+evaluación para proceder a su aceptación, mejora o rechazo. 
+ 
+• Evaluación, en la que se llevan a cabo actividades  para asegurar la usabilidad y la 
+accesibilidad del producto, desde la perspectiva del usuario final. 
+ 
+En la imagen de arriba, se puede apreciar el funcionamiento del modelo, y la iteración 
+existente entre los tres elementos componentes nucleares . En la fase de análisis de 
+requerimientos, se atendería al  estudio del contexto social del usuario en su 
+organización, de sus objetivos, de las tareas que debe desarrollar, etc., hasta obtener 
+un perfil detallado del mismo. El diseño analizaría las tareas, para proponer su mejora, 
+mediante la definición de una interfaz dada, con un estilo propio y ajustado al perfil de 
+usuario, por lo que, se obtendría  un modelo conceptual de la interfaz, que pasaría a 
+ser objeto del prototipado. En esta fase se obtendría una  visión previa de la interfaz, 
+que sería analizada mediante  la evaluación, la cual, a su vez, puede utilizar técnicas  
+de inspección, de indagación y de test. Este sería el momento en el cual se aplicarían, 
+en toda su amplitud  y potencial, las técnicas de análisis de usabilidad y de  
+accesibilidad. Una vez el prototipo haya sido estudiado  y afinado, hasta ajustarse a 
+las necesidades de los  usuarios, y a los estándares establecidos de usabilidad y  
+accesibilidad, se da paso a las fases de implementación y lanzamiento.  
+ 
+Los modelos fundamentados en la ingeniería del  software, si bien tienen la virtud de 
+introducir un notable rigor en el proceso de diseño centrado en el usuario,  muestran 
+sus carencias cuando se trata de abordar el diseño de interfaces, o cuando es difícil 
+establecer los verdaderos requerimientos y necesidades de los potenciales usuarios.  
+Esta situación ha motivadola aparición de técnicas y métodos especialmente  
+orientados a identificar los usuarios potenciales, y las tareas que deben llevar a cabo 
+mediante la interfaz.  
+ 
+Las principales líneas de actividad son:  
+ 
+• Análisis de usuarios: engloba un estudio y análisis detallado de los usuarios reales 
+y potenciales, así como de los contextos personales, sociales y  organizativos en los 
+que se encuentran, utilizando para ello técnicas específicas.  
+ 
+• Análisis de tareas: engloba el estudio y la evaluación  de las tareas que deben que 
+pueden llevar a cabo, mediante la interfaz. Se pone especial énfasis en identificar los 
+objetivos y la motivación de las tareas, los procesos a llevar a cabo para su ejecución 
+y su relación o dependencia de otras tareas.  
+  
+P á g i n a  49 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+Estos enfoques ponen especial interés en la observación  y en la interacción directa 
+con el usuario, antes que en la evaluación clásica realizada por expertos. Sin embargo, 
+un exceso en el énfasis exclusivo en el usuario también puede producir disfunciones, 
+por lo que otros autores proponen centrarse en el diseño del uso, derivado del 
+enfoque a tareas.  
+ 
+Esta integración es especialmente necesaria cuando se  está frente a productos y 
+servicios de información para el entorno web. En este caso, no se puede olvidar que 
+la información es inseparable de la aplicación, y que la propia información forma parte 
+activa de la interfaz de  usuario, diferencia fundamental frente al desarrollo de  
+interfaces para aplicaciones tradicionales, como un  procesador de textos o un 
+sistema de gestión. A ello hay  que añadir que el estudio de los grupos de usuarios y 
+de sus tareas resulta mucho más complejo en este caso,  ya que es más dificultoso 
+determinar, en cada caso, los grupos de potenciales usuarios, los objetivos de  estos 
+y los diferent es contextos personales, sociales y  organizativos en los que se 
+encuadran. 
+ 
+La formulación más detallada de la aplicación del diseño centrado en el usuario para 
+sedes web es la propuesta  por Garret (2002). Su principal idea consiste en crear  
+experiencias agradables para el usuario, con la premisa  de estudiar cómo se 
+comportan los usuarios que utilizan  un producto, y cuáles son los factores que 
+intervienen tanto en el comportamiento frente al objeto, como en la utilización de este.  
+ 
+Es decir, la interacción entre el objeto, y sus componentes, y el usuario, en virtud de 
+la interacción que se establece entre los mismos. Este  tipo de análisis es 
+especialmente importante en los  espacios y productos de información digital que, 
+como acertadamente ha señalado Garret, vienen sin manual y sin servicio de atención 
+al cliente. 
+ 
+Son numerosas las recopilaciones y clasificaciones  de los métodos y técnicas que 
+pueden aplicarse en un enfoque centrado en el usuario. Muchas han sido divulgadas 
+desde el aumento de la preocupación por la usabilidad de los recursos y productos de 
+información digital, lo cual explica que la mayor parte se engloben  dentro de 
+recopilaciones de técnicas de usabilidad.  
+ 
+Los métodos del diseño centrado en el usuario 
+ 
+El diseño centrado en el usuario se nutre de un conjunto de métodos o metodologías 
+que sitúan a los usuarios en  el centro de todas las fases del diseño. Los principales  
+métodos utilizados en las diferentes etapas se pueden ver en la siguiente figura.  
+  
+P á g i n a  50 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+ 
+ 
+ 
+A continuación, se presentan brevemente los principales  métodos agrupados según 
+un proceso clásico del DCU:  investigación y requisitos de usuario para definir el  
+producto e informar del diseño, la creación y el desarrollo  de la arquitectura de 
+información y las maquetas, y la evaluación de los elementos diseñados.  
+ 
+Métodos de indagación: investigación y requisitos de usuario 
+ 
+Los métodos de indagación se llevan a cabo en las  etapas de especificación del 
+contexto de uso y de los  requisitos. Se basan en involucrar a los usuarios en  las 
+diferentes actividades que se llevan a cabo y están  orientados a la obtención de 
+información para definir el producto o servicio. El conocimiento sobre los usuarios, 
+sus contextos de uso, sus necesidades, objetivos y actitudes  son imprescindibles 
+para un diseño centrado  en el usuario y para desarrollar aplicaciones y entornos  
+usables. Pueden clasificarse por el tipo de información  que permiten recoger: desde 
+métodos cualitativos (como la observación, entrevistas y dinámicas de grupo), hasta 
+métodos cuantitativos (formados por encuestas y cuestionarios). Es muy importante 
+tener claro que cada  tipología permite obtener un tipo de información distinta  y que 
+debe ser analizada teniendo en cuenta sus ventajas y limitaciones. 
+ 
+ 
+ 
+ 
+P á g i n a  51 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+• ¿Qué es el logging? 
+Las técnicas de registro informático están basadas  en la monitorización de la 
+actividad de los usuarios y consisten en recoger y analizar los datos del registro de su 
+actividad en un sistema o sitio web. 
+ 
+Normalmente, la recogida y procesado de los datos  se lleva a cabo mediante un 
+sistema automatizado,  que pasa desapercibido al usuario. Muchas veces  se 
+aprovechan los propios ficheros de registro de  actividad o pistas de auditoría  del 
+sistema. Tradicionalmente, estos  ficheros tienen la extensión log, y de ahí toman el  
+nombre en inglés de estas técnicas.  
+ 
+En los sitios web, el procesamiento y análisis de los  ficheros de log o de registro de 
+actividad permite conocer el comportamiento de los usuarios, las funcionalidades que 
+utilizan, cuánto tiempo destinan a visualizar páginas, cuánto dura la visita al sitio web, 
+y cuál es su itinerario de navegación. Esta información es muy útil y puede ser utilizada 
+para modificar y mejorar los diseños y la estructura de la  web. No obstante, aun 
+conociendo las páginas que visitan y por las que navegan los usuarios, desde el punto 
+de vista de la evaluación de la usabilidad  este método presenta el inconveniente de 
+que se desconocen los objetivos de los usuarios. Es,  de hecho, un método que se 
+puede clasificar de observacional.  
+ 
+La principal ventaja que ofrece el registro  informático es que, con un coste 
+relativamente bajo, puede proporcionar información detallada de  las acciones y los 
+itinerarios de navegación reales  de los usuarios. Es una técnica muy indicada para  
+conocer el qué, pero no proporciona información  del porqué. Por esta razón, debe 
+combinarse con otras técnicas de indagación que proporcionen  información acerca 
+de los objetivos de los usuarios y sus motivaciones.  
+ 
+De la indagación al diseño 
+ 
+Los perfiles de usuario, los personajes o personas y los  escenarios son técnicas que 
+acercan a los usuarios y a sus motivaciones, objetivos y situaciones de uso. Se  trata 
+de una serie de técnicas que sirven para entender y analizar los usuarios y el uso que 
+hacen de los sistemas  interactivos y que se utilizan principalmente para orientar  el 
+diseño.  
+ 
+Para poder definir perfiles de usuario, personas y  escenarios es necesario haber 
+realizado previamente una recogida de requisitos y de análisis de los usuarios.  Los 
+resultados de entrevistas, observaciones, encuestas, dinámicas de grupo, etc., donde  
+P á g i n a  52 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ambos son analizados  y adaptados para crear los modelos de usuario que se  
+describen a continuación. 
+ 
+• Perfil de usuario 
+ 
+Se refiere a una serie de agrupaciones de usuarios  según sus características. 
+Normalmente, son el resultado de un estudio cuantitativo que ha permitido definir los 
+porcentajes de cada perfil y agruparlos por elementos comunes. Estas características 
+pueden basarse en aspectos sociodemográficos, actitudinales, de expectativas, etc. 
+ 
+• Personas o personajes  
+ 
+Se trata de la descripción de un usuario arquetípico que puede servir como guía en el 
+proceso de diseño. La técnica de los personajes se desarrolló  originalmente como 
+una técnica de ayuda al diseño,  propuesta por Alan Cooper en su aproximación al  
+desarrollo de sistemas que tienen en cuenta al  usuario, denominada goal -directed 
+design. Un  personaje se construye con precisión y rigor a partir  de la información 
+cuantitativa y cualitativa de la  investigación de usuarios: segmentación, perfil  de 
+usuarios, observación, encuestas, entrevistas  y dinámicas de grupo. Por lo que 
+primero es  necesario investigar a los usuarios, analizar los  datos obtenidos y, 
+finalmente, modelar los usuarios en personajes. Se considera, de esta forma que un 
+personaje es un modelo de usuario.  
+ 
+• Escenarios 
+ 
+Un escenario es la descripción de un personaje en una situación de uso del sistema o 
+del producto  interactivo con unos objetivos concretos, cuya  descripción incluye el 
+contexto en el que tiene  lugar la acción y la secuencia de acciones que se  realizan. 
+Las situaciones concretas que se generan  a partir de estos elementos son de gran 
+ayuda para explorar ideas y considerar aspectos del diseño.  
+ 
+Los escenarios son una herramienta que facilita  realizar hipótesis sobre las 
+situaciones en las que se encontrarán los usuarios y las necesidades que tendrán para 
+llevar a cabo sus objetivos. No son una  forma de documentar las interacciones 
+concretas de un usuario, sino de poner de manifiesto el contexto de uso y los objetivos 
+de los usuarios con  sus motivaciones. Para construir los escenarios es  necesario 
+también un tipo de información que, en  parte, es diferente al que se utiliza para la 
+creación de perso najes. Los escenarios también se utilizan  en la ingeniería del 
+software, de manera mucho  más formal y específica, para modelar los requisitos  y 
+describir las funcionalidades del sistema. Desde  la perspectiva de la interacción 
+persona-ordenador y el diseño centrado en el usuario, es todo un recurso para ayudar  
+P á g i n a  53 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+a entender al usuario y el uso  que hará del sistema, y no una descripción de sus  
+funcionalidades. 
+ 
+Métodos de evaluación: tests con usuarios y métodos de inspección 
+ 
+Los métodos de evaluación permiten obtener cierta información sobre los diseños y 
+de esta forma, mejorarlos  y validarlos. La iteración en los procesos de diseño es  un 
+aspecto clave en el DCU y es en esta combinación  diseño-evaluación donde es más 
+importante. Así, desde  los primeros prototipos, estos deben incluirse puntos  de 
+evaluación para trabajar siempre teniendo en cuenta  las necesidades, los deseos y 
+las limitaciones de los usuarios. 
+ 
+• Tests con usuarios 
+ 
+Los métodos de evaluación de la usabilidad por  comprobación permiten realizar 
+experimentos con los diseños y llevar a cabo pruebas y comprobaciones sobre ellos. 
+A estos métodos y a sus diferentes modalidades se les denomina tests con usuarios. 
+En general, el objetivo de un test con  usuarios consiste en proporcionar información  
+de carácter cualitativo, que no cuantitativo o  estadístico. Así pues, normalmente hay 
+que dar más importancia a la interpretación de los resultados que a la elaboración de 
+métricas o estadísticas. Mediante el test con usuarios se comprueba si las interfaces 
+y los procesos están bien diseñados y si  los usuarios encuentran obstáculos y 
+dificultades para lograr sus objetivos.  
+ 
+ 
+• Métodos de inspección 
+ 
+También son denominados métodos de  evaluación de la usabilidad sin usuarios, 
+consisten fundamentalmente en que unos evaluadores  expertos en usabilidad 
+estudian y examinan el sistema que se quiere evaluar. Los métodos de evaluación por 
+inspección requieren de uno o  más expertos en usabilidad que lleven a cabo las 
+evaluaciones, y poseen la ventaja de que pueden efectuarse una que vez el diseño ya 
+está hecho,  antes de que el sistema esté completamente  implementado. Por otra 
+parte, presentan el inconveniente de que no todos ellos involucran directamente a los 
+usuarios, y esto resulta muchas veces contraproducente.  
+ 
+- Evaluación heurística: consiste en el estudio y evaluación de la interfaz por parte de 
+uno o más expertos en usabilidad de acuerdo con un  conjunto de reglas y principios 
+de usabilidad previamente establecidos. Estos principios de usabilidad que sirven de 
+base para la evaluación se denominan heurísticos.  
+  
+P á g i n a  54 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+- Recorrido cognitivo: en el recorrido cognitivo, un experto construye escenarios con 
+las tareas  que el usuario deberá realizar y las ejecuta  asumiendo el rol del propio 
+usuario. Durante la  ejecución de esta técnica, se analizan las tareas  que el usuario 
+debe llevar a cabo y se simula el proceso de resolución de problemas con los que se 
+encuentra en cada etapa del proceso de  interacción. De esta forma, se podrá 
+comprobar si los objetivos simulados y la carga cognitiva  podrán ser asumidos con 
+vistas a que el usuario realice una nueva acción correcta.  
+ 
+- Inspección de estándares: consiste en la inspección de estándares, un experto en 
+usabilidad examina si la interfaz sigue las especificaciones y los estándares definidos 
+por la industria o por las organizaciones internacionales.  
+ 
+- Inspección de características: en la inspección  de características se analiza un 
+conjunto de  propiedades y características extraídas a partir  de la definición de un 
+escenario y de sus tareas asociadas. Cada conjunto de características es analizado y 
+se evalúa teniendo en cuenta su utilidad, disponibilidad y comprensibilidad.  
+ 
+- Inspección de consistencia: en la inspección de consistencia se evalúa si un diseño 
+está en concordancia con otros diseños que también  se deben presentar al usuario. 
+Un experto en usabilidad analiza los diferentes diseños e  interfaces de usuario para 
+comprobar que las interacciones se realizan de forma coherente y similar entre ellos. 
+Es recomendable llevar a cabo esta evaluación en las primeras etapas del proyecto y 
+así evitar desarrollos que más tarde se tengan que corregir.  
+ 
+Resumen 
+ 
+El DCU consiste en enfocar el diseño de un producto  con toda aquella información 
+necesaria que necesiten  las personas a las que va dirigido. La funcionalidad  que 
+aportan los objetos es mucho mayor, puesto que se ajustan a las necesidades que los 
+usuarios están buscando, respondiendo a preguntas sobre quién utilizará ese objeto 
+y para qué. El término de “diseño centrado en  el usuario” nació en el laboratorio de 
+investigación de  Donald A. Norman en la Universidad de California San  Diego. El 
+diseño centrado en el usuario involucra al usuario en todas las fases a lo largo de las 
+que se desarrolla un producto, desde su fase de conceptualización hasta su  fase de 
+evaluación, incluyendo, en muchos casos, su propio desarrollo. El objetivo del diseño 
+centrado en el usuario es nada más y nada menos que la creación de  productos que 
+los usuarios encuentren útiles y fácilmente usables, es decir, que satisfagan todas sus 
+necesidades teniendo en cuenta sus propias características. Se trata de una filosofía 
+y un proceso de desarrollo que sitúa las necesidades y características del usuario en 
+el centro de cada una de las etapas de diseño.  
+  
+P á g i n a  55 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+La usabilidad es una de las disciplinas que mayor auge  han tenido de la mano del 
+desarrollo, cada vez más  perfeccionado, de los recursos de información digital  para 
+internet. Sin embargo, es necesario establecer las  diferencias entre los procesos de 
+diseño y la propia  usabilidad, ya que, como tal, es un conjunto de técnicas  para 
+asegurar la calidad de uso para el usuario final, pero  no es, por sí misma, un modelo 
+de diseño y creación. 
+ 
+Evidentemente, la usabilidad tiene que integrarse en los procesos de diseño orientado 
+al propio usuario, ya que  es un componente fundamental de evaluación, pero no  
+puede, por sí sola, sustituir a los métodos y técnicas de desarrollo e implementación. 
+Los principales métodos  agrupados según un proceso clásico del DCU son la  
+investigación y los requisitos de usuario para definir el producto e informar del diseño, 
+la creación y el desarrollo  de la arquitectura de información y las maquetas, y la  
+evaluación de los elementos diseñados. 
+ 
+HERRAMIENTAS 
+ 
+Cómo medir la experiencia de usuario en una página web 
+Medir la experiencia del usuario en la página web es fundamental para detectar 
+posibles mejoras. Esto resulta útil tanto cuando la página web funciona, permitiendo 
+potenciar los aspectos que mejor funcionan, y por supuesto cuando hay partes 
+mejorables, detectando debilidades para conseguir mejores resultados. 
+La usabilidad web debe hacerse para el usuario y  por tanto, tomar datos sobre su 
+experiencia es fundamental para conseguir buenos resultados. La forma de obtener 
+información para analizar la usabilidad web puede llegar de forma cuantitativa y 
+cualitativa y, consiguiendo conclusiones que partan de este a nálisis, será posible 
+obtener las bases para un diseño que no hace más que mejorar en la búsqueda de la 
+excelencia en la experiencia del usuario. 
+La usabilidad web se basa en 6 factores clave : análisis de la interacción del usuario, 
+comprensión, navegabilidad del sitio, accesibilidad, velocidad y experiencia del 
+usuario. Vamos a ver en qué consisten y cómo pueden medirse. 
+  
+P á g i n a  56 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+1 Análisis de la interacción del usuario 
+En esta parte se trata de ver de qué forma el usuario interactúa en la página web. Las 
+diferentes herramientas permiten arrojar datos variados, como los procesos que se 
+llegan a completar o el tiempo que el usuario invierte en cada una de las fases. De 
+este modo, se puede saber, por ejemplo, si los procesos están siendo demasiado 
+largos, de forma que quizás sea necesario mejorar las instrucciones, o en qué partes 
+el usuario abandona la acción, lo que muestra que algo está fallando. 
+Para el análisis de la interacción del usuario se puede utilizar Intuition HQ, que permite 
+ver cómo el usuario interactúa con la web y graba la duración de cada una de las 
+acciones que complete. 
+ 
+P á g i n a  57 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+O Usabilla, una aplicación para medir los tiempos que cada usuario tarda en 
+completar una acción asignada, pudiendo así medir la eficacia del proceso. 
+ 
+2 Comprensión 
+La importancia del texto se basa tanto en su optimización para los buscadores como 
+en hacerlo comprensible para los usuarios, consiguiendo lograr los objetivos porque 
+los usuarios deben saber qué pueden esperar y cómo hacerlo. 
+En este sentido, se puede utilizar Juicy Studios, una herramienta de uso gratuito que 
+ofrece índices de legabilidad sobre los algoritmos de evaluación más populares 
+simplemente introduciendo la URL. 
+ 
+P á g i n a  58 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Otra opción es  Check My Colours , herramienta que permite testear el contraste del 
+texto sobre el fondo. Es muy sencillo probarlo. Se añade la URL de la web, y el 
+contenido se pone a prueba a base de algoritmos de contraste de color 
+del W3C óptimos. Si hay un mayor contraste, entonces el texto será legible. 
+ 
+3 Navegabilidad del sitio 
+La navegabilidad de un sitio web es fundamental para mejorar la experiencia del 
+usuario, evitando que estos abandonen sin completar las acciones esperadas. 
+Para ello, se puede utilizar Navflow que permite ver cómo los usuarios se mueven por 
+la web. 
+ 
+P á g i n a  59 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+Y Write Maps para generar, administrar y compartir mapas del sitio web. 
+ 
+4 Accesibilidad 
+Está enfocado  a hacer visible el contenido para personas con dificultades  en la 
+visión. Para ello se puede utilizar W3C Markup Validation Service  que verifica el 
+estado de la web y detecta posibles errores en el código HTML. 
+ 
+Por último,  Examinator, examina la accesibilidad web según la Pautas de 
+Accesibilidad para el Contenido Web (WCAG) 2.0 
+ 
+P á g i n a  60 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+5 Velocidad de la página 
+La velocidad con la que carga la página es fundamental para una buena experiencia 
+del usuario. Si la página tarda demasiado en cargar puede ser abandonada  incluso 
+antes de ver la, o también ser abandonada en el momento de completar cualquier 
+proceso. 
+Para medir este parámetro, se puede utilizar Pingdom, una herramienta gratuita en la 
+que solo hay que añadir la URL de la web para acceder a un informe con los tiempos 
+de respuesta por página. 
+ 
+Otra opción es Web Page Test, donde añadiendo la URL puedes probar la velocidad 
+de carga de tu site desde diferentes ubicaciones. 
+ 
+P á g i n a  61 | 61  –  P r o f e s o r e s :  C a r i n a  R o t e l l a  y  A n d r e a  R o t e l l a   
+ 
+ 
+6 Experiencia del usuario 
+Por último, una de las claves para la mejora es contar con la  opinión directa de los 
+usuarios sobre su experiencia en la web. Para ello, podemos contar con UserVoice, 
+que ofrece opciones como la opción de hacer aparecer la opinión del público y permitir 
+que otros usuarios voten. También permite ver las opiniones más populares y las 
+opiniones comunes entre varios usuarios. 
+ 
+ 

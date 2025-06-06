@@ -1,0 +1,302 @@
+TEMA 6  
+ 
+Sistema de Inventario 
+ 
+PRODUCTOS: 
+ 
+ Materia prima: son todos aquellos materiales que se utilizan en la fabricación 
+de un determinado producto y que sufre una transformación posterior. 
+ 
+ Elementos componentes: son aquellos materiales que forman parte del 
+producto final sin sufrir ninguna transformación y se pueden vender como 
+repuestos. Ej. Puerta: picaporte, bisagra, etc. 
+ 
+ Producto en proceso de fabricación o semielaborado: es muy utilizado a los 
+fines contable dado que son productos o materiales que no son materia prima 
+ni productos elaborados porque en el momento del inventario se encuentran 
+formando parte del proceso productivo. 
+ 
+ Producto terminado: son aquellos productos que no sufren ninguna 
+transformación posterior y están listos para la venta. 
+ 
+La actividad de control de existencias en las empresas industriales es una de 
+las más completas y complejas, y de mayor alcance en las empresas dado que 
+involucra a todas las áreas de la empresa: ventas, producción, tecnología, contable, 
+etc. Afecta también en forma directa a nuestros clientes por calidad de servicio y por 
+precios, porque puede encarecer nuestros costos. Existen otros dos factores 
+importantes que se generan a partir de la adopción de una política de inventario. 
+Depende del nivel de existencias que tenga de productos terminados, se producirán 
+o no conflictos entre el sector de ventas y de producción.                                          
+Para solucionar esto se tiende: 
+ 
+ Aumentar el stock (por lo tanto el capital inmovilizado), asegura la 
+producción. Tener un número elevado de existencias aumenta la 
+probabilidad de perdida por robo u obsolescencia (deterioro). 
+ Si el stock es mínimo (por lo tanto el capital inmovilizado), se corre el 
+riesgo de detener la línea de producción por faltante. El sistema de inventario a desarrollar debe tener los siguientes alcances: 
+actuar sobre los productos de la empresa (materia prima, producto terminado, etc.), 
+pero también los elementos que se usan para embalar y despachar esos productos y 
+los suministros, o sea aquellos materiales que se almacenan en la empresa para 
+mantener la infraestructura, máquinas, edificios, artículos de oficina que se 
+almacenan en la empresa, etc. 
+ 
+Objetivos de desarrollar un sistema de inventario 
+ 
+1. Financiero: es alcanzar un nivel de existencia compatible con los fondos de la 
+empresa y no llevar por aumento de existencia a una situación financiera 
+comprometida. 
+ 
+2. Protección: no permite robos, evitar obsolescencia, evitar usos no autorizados 
+de los elementos almacenados y asegurar que todos los movimientos de 
+almacenes estén registrados en nuestros libros contables. 
+ 
+3. Operativo: permite un equilibrio entre costos de producción, servicios al 
+cliente y nivel de existencia, es decir equilibrio entre producción y ventas. 
+ 
+Beneficios de un sistema informático de inventario 
+ 
+ Permite mejorar las relaciones con los clientes, entregas oportunas y seguras 
+ 
+ Mejora las relaciones de la empresa con la comunidad ya que al tener una 
+producción estable no hay que formar y despedir empleados. 
+ 
+ Reducción efectiva de los costos de producción porque se disminuye los 
+tiempos de ocio de nuestro aparato productivo, por contar con las materias 
+primas en tiempo y forma. 
+ 
+ Se aumenta el factor de servicios de nuestras máquinas y equipos y cuando 
+mande a fabricar será en lotes económicos de fabricación. 
+ 
+ Reduce los costos de la materia prima y artículos que compramos, porque se 
+compra en lotes óptimos de compra. 
+ 
+ El capital inmovilizado será el mínimo, que asegure el proceso productivo 
+ ¿Cómo se determina si los sistemas y políticas de inventarios de nuestra 
+empresa son eficientes y necesitan un sistema de gestión de 
+inventarios? 
+ 
+ Compro ordenes severas y periódicas por estar imposibles todos de cumplir 
+con nuestros clientes (cambios en las ordenes de que producir). 
+ 
+ Crecimiento permanente de nuestras existencias y capacidad de almacenes 
+para un mismo nivel de negocio. 
+ 
+ Anulaciones de órdenes o reclamos frecuentes de nuestros clientes. 
+ 
+ Régimen de producción no estabilizado con frecuentes despidos y 
+contratación de personal, recurrir frecuentes horas extras. 
+ 
+ Operaciones de producción de costos elevados son frecuentes. 
+ 
+ Tiempos de ocio prolongados de nuestro aparato productivo. 
+ 
+ Falta de espacio frecuente en los almacenes. 
+ 
+ Depreciación frecuente de las existencias de nuestros productos por una 
+disminución de precio, por robo, por obsolescencia, etc. 
+ 
+Funciones a cumplir 
+ 
+Una de las principales es definir cuando comprar y cuanto comprar, cuando y 
+que cantidad fabricar. 
+En un sistema de gestión de inventario, el costo de la gestión de inventario 
+tiene al menos 3 componentes: 
+ 
+           CGI = Costo de compra + Costo de Almacenamiento + Costo de Pedido 
+ 
+ Costo de compra: se define (por lo general) a través del precio de un  
+artículo por la cantidad que compro de él (P*Q). 
+Los componentes del precio son: valor de mercado del artículo, gasto de fletes, 
+aduanas, gastos bancarios en los que incurrí para adquirir el artículo. 
+ 
+ Costo de almacenamiento: En forma constante tuve almacenado la  
+mitad del inventario máximo es decir una existencia estable que es capital 
+inmovilizado, también tendremos en cuenta: los seguros contratados, mantenimiento de los locales de almacenes, transportes, manipulaciones, personal de almacenes, 
+perdidas por robo, depreciación del inventario, perdida por obsolescencia, etc. 
+ 
+(Sistema ideal) 
+ 
+ 
+ 
+Costo de almacenar una unidad por el número de unidades que tendré en el 
+tiempo (Q/2) 
+ 
+ 
+ Costo de pedido: requerimos satisfacer una demanda para un  
+período con la configuración anterior, o bien con compras más frecuentes. 
+ Hacer una compra tiene un costo que se inicia cada vez que hago un pedido, 
+por lo que si realizo N compras incurro N veces en el costo de pedido, el número de 
+pedidos depende de la demanda y de la cantidad que pido. 
+ También se incluye: gasto de personal que hace las compras, gastos 
+asociados a la elección de un proveedor, (pedir cotizaciones, publicaciones), gastos 
+administrativos, envíos de correspondencias (invitación a los proveedores), 
+recepción y estudio de las ofertas, pago de sellados, seguimiento de proveedores, 
+colocar la orden de compra, recepción del pedido, gastos desde la recepción hasta 
+el pago de la factura. 
+ 
+ 
+CGI = P*Q + Ca * Q/2 + Cp * D/Q 
+ 
+El CGI depende de la cantidad que decido comprar. Supongamos que el precio no 
+cambia, en función de la cantidad de artículos que compro y además queremos que 
+los diferentes costos sean mínimos: 
+  
+ 
+                  δCT/ δQ = 0   Derivando por segunda vez  
+ 
+ 
+                 Q0 es mínimo.           Q0 =      
+ 
+   
+ 
+ 
+Pero para cada artículo debo definir los lapsos de tiempo que hay entre una compra 
+y otra: 
+ 
+                  N0 = D/Q0             (Número de compras) 
+ 
+                 T0 = 365 / N0      (Lapso de tiempo entre compra y compra) 
+ 
+ 
+Esto nos lleva a un costo de gestión interno mínimo: 
+ 
+ 
+      Ca * Q/2 + Cp/Q*D       se llama costo interno de gestión de inventario. 
+ 
+Si me hicieran descuento por cantidad (entonces compro Q), no me conviene si el 
+beneficio por cantidad no equilibra el costo de gestión interno, (ΔCT: variación de 
+costo interno) 
+Descuento por cantidad 
+ 
+ Podemos obtener distintos precios de nuestro producto dependiendo de la 
+cantidad que compremos y en el momento en que compremos. Para saber que nos 
+conviene hay que analizar el ahorro que tendremos en ese concepto, respecto al 
+incremento en el costo de nuestra gestión interna. 
+ 
+                       
+                                   ΔCompra = D (PQ0 – P0) 
+ 
+ 
+ 
+ 
+ 
+En realidad no se dan las cosas óptimas, el tiempo del proveedor no es nulo y 
+la demanda no es constante. El problema del atraso del proveedor se soluciona con 
+una existencia que debemos tener disponible mientras el proveedor entrega la nueva 
+mercadería. Eso haría que tuviera mayores costos, entonces lo mejor es adelantar el 
+pedido. 
+ 
+ 
+ 
+ 
+ 
+T2: tiempo de demora 
+ 
+                       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Entonces el problema se soluciona definiendo un nivel de inventario que contemple 
+las demoras del proveedor, a este punto se llama:    Punto de Pedido (PP).  
+ 
+SISTEMA DE LOTE FIJO - SISTEMA DE INTERVALO DE PEDIIO FIJO 
+ 
+La demanda y el tiempo de proveedor varía ¿Cómo lo salvo? De comprar:  
+  
+ Cantidad fija 
+ Intervalo fijo de tiempo.  
+ 
+Debo elegir a cual le doy flexibilidad. Esto depende de cuál de los costos, 
+almacenamiento o pedido, tiene mayor relevancia.                                           
+Hay dos políticas de gestión de compra: 
+ 
+ Sistema de Tamaño Fijo de Lote: 
+Si el costo de almacenamiento es importante, entonces dejare fija la cantidad a 
+comprar y variaré los momentos de compra. 
+ Sistema de Intervalo de Pedido Fijo. 
+ 
+ Si el costo de emisión de pedido es el más importante o realizo compras a modo 
+general, donde puedo obtener descuentos significativos por las cantidades que 
+compre, me conviene hacer compras en momentos de tiempo preestablecidos.  
+ Modelo Ideal:            Q0,T0  
+ 
+ Sistema de Lote Fijo:            Q0,Tv …………….Ca >     
+ 
+ Sistema de Intervalo Fijo:   Qv,T0…………….Cp  >     
+ 
+En los dos primeros modelos la incertidumbre es la Demanda y el Tiempo de 
+pedido. Estas políticas se usan para reducir la incertidumbre que se tiene para la 
+variación de la demanda y del tiempo del proveedor. 
+ 
+ 
+Modelo de Lote Fijo 
+ 
+Calcularemos T0 y Q0 en función de ese valor esperado de demanda. 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Vemos que la incertidumbre para cubrir la Demanda sólo queda reducida al 
+tiempo de demora del proveedor. Entonces compro cuando el valor llega al punto de 
+pedido, PP comprar Q0 
+       
+Modelo de intervalos fijos 
+ 
+ 
+ 
+ 
+ 
+Cuando el nivel de mis almacenes llega a PP comprar Q0 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

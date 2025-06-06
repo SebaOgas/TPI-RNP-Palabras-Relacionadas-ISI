@@ -1,0 +1,184 @@
+ 
+           
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Administración de Sistemas de Información  
+ 
+ 
+UNIDAD IV: Administración y gestión de Hardware 
+ 
+INTEGRANTES: Asis Pesce Franco Emanuel, Colombo Tomas,   Garvagnate Andrés Maximiliano,  
+Ilardo Bertola Valentina, Manrique Sarmiento Nicolás Hugo 
+TEMA:  
+ 
+ 
+Benchmarking 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Definiciones 
+ 
+Benchmarking es una herramienta destinada a lograr comportamientos 
+competitivos (eficientes) en la oferta de los mercados monopolísticos que consiste 
+en la comparación del desempeño de las empresas, a través de la métrica por 
+variables, indicadores y coeficientes.  
+En la práctica, se utilizan diversos mecanismos de incentivos al 
+comportamiento eficiente, como los resultados de las comparaciones (nadie quiere 
+ser el peor) o con la utilización de mecanismos que transforman esos resultados 
+comparativos en premios o castigos sobre los ingresos del empresario. 
+ 
+El benchmarking es “un proceso de medición continuo y sistemático, que 
+mide y compara continuamente los procesos empresariales de una organización 
+contra los procesos de los líderes (siempre y cuando exista una compatibilidad entre 
+las empresas que realizan dicho estudio) para obtener información que ayude a la 
+organización a desarrollar acciones que mejoren su presentación” .  
+Otra definición importante es " El proceso de investigación industrial que 
+permite a los gerentes desarrollar comparaciones entre compañías sobre procesos y 
+prácticas que permitan identificar lo mejor de lo mejor y obtener con ello un nivel de 
+superioridad y ventaja competitiva." 
+ Entonces, podemos resumir que es la búsqueda de las buenas prácticas de 
+la industria que conducen a un desempeño excelente. 
+ 
+Surgimiento 
+ 
+El concepto benchmarking surgió a partir de los años ochenta, cuando la 
+compañía Xerox se interesó en investigar cómo comparaba su desempeño en 
+relación con sus competidores. 
+ 
+La utilización del benchmarking se ha circunscrito tradicionalmente en las 
+organizaciones empresariales, pero actualmente se ha extendido a diferentes 
+ámbitos, con las consiguientes modificaciones de su puesta en práctica. Éste es el 
+caso de su utilización por administraciones públicas (benchmarking público) y 
+agencias gubernamentales para mejorar sus procesos y sistemas de gestión y 
+evaluar la implementación de las actuaciones políticas, la gestión estratégica, etc. 
+ 
+Xerox es la empresa pionera que popularizó el concepto moderno de 
+benchmarking, pero después de su éxito, compañías de diversas industrias 
+empezaron a aplicar estos principios. Además de Xerox, otras empresas como 
+Toyota, Motorola y General Electric fueron influenciadas por el benchmarking, 
+aplicándolo en sus esfuerzos de mejora de procesos y competitividad global. 
+ 
+ 
+  
+El valor del benchmarking: 
+ 
+La importancia del benchmarking no se encuentra en la detallada mecánica 
+de la comparación, sino en la medición del impacto que pueden tener estas 
+comparaciones sobre los comportamientos. Se puede considerar como un proceso 
+útil y necesario para llegar a realizar mejoras y cambios. 
+ 
+Por otro lado, cabe destacar la faceta innovadora de este tipo de gestión 
+denominada benchmarking. Hablamos de innovación encontrando su sentido como 
+herramienta que busca nuevas ideas, lo cual realiza copiando, rastreando, 
+comparando, dentro de la legalidad y entre los principales líderes del sector, entre 
+los competidores dentro de un mismo mercado. 
+ 
+Este proceso continuo de comparar actividades, tanto en la misma 
+organización como en otras empresas, lleva a encontrar la mejor solución ; para 
+luego intentar copiar esta actividad generando el mayor valor agregado posible. Hay 
+que mejorar las actividades que generan valor y reasignar los recursos liberados al 
+eliminar o mejorar actividades que no generen valor (o no sea el deseado). Dentro 
+de este tema influye la globalización y el uso de las nuevas tecnologías de la 
+información y comunicación (TIC) hacen que las organizaciones busquen nuevas 
+fuentes de competitividad. Una de las técnicas más utilizadas por las organizaciones 
+es el benchmarking. 
+ 
+En conclusión, el benchmarking es una técnica que sirve en lo absoluto 
+gracias a su creador , además de ser una herramienta en la mejora de procesos y la 
+cual quedó definida por "David Kearns" como la toma de referencia de los mejores 
+y lograr adoptar sus métodos y estrategias, dentro de la legalidad establecida. 
+ 
+¿Qué tipos de benchmark hay? 
+Existen diferentes tipos de benchmarking según el enfoque: 
+● Interno: Comparar diferentes departamentos o unidades dentro de la misma 
+organización. Es útil para identificar las mejores prácticas internas. 
+● Competitivo: Comparar el desempeño con empresas competidoras directas. 
+Se utiliza para medir la posición relativa en el mercado. 
+● Funcional: Comparar procesos similares entre empresas que no 
+necesariamente son competidoras directas, pero que tienen procesos afines. 
+● Genérico: Comparar el rendimiento en procesos generales como gestión de 
+recursos humanos, financieros o tecnología, sin importar la industria. 
+  
+Métodos de evaluación y cómo aplicarlos a la Tecnología y al mundo IT 
+En el ámbito de la tecnología y las TI, los métodos de evaluación más comunes 
+incluyen: 
+● Pruebas de rendimiento (Performance benchmarking): Se utiliza para 
+medir el rendimiento de hardware, software o sistemas en términos de 
+velocidad, eficiencia o capacidad de respuesta. Se aplican pruebas de estrés 
+a los servidores, redes o aplicaciones para evaluar su capacidad bajo carga. 
+● Pruebas de carga (Load testing): Evalúa cómo un sistema maneja la 
+demanda en términos de usuarios simultáneos o volumen de datos. Se utiliza 
+mucho en sistemas web o aplicaciones en la nube. 
+● Comparaciones funcionales (Functional benchmarking): En IT, implica la 
+comparación de funcionalidades o características entre diferentes 
+plataformas, software o servicios, para determinar cuál ofrece el mejor valor. 
+● Benchmarking de seguridad (Security benchmarking): Se enfoca en 
+evaluar la robustez de los sistemas frente a amenazas, brechas de seguridad 
+y ataques cibernéticos. 
+Cómo aplicarlos: 
+1. Definir métricas clave: En tecnología, puedes medir el tiempo de respuesta, 
+rendimiento de CPU, latencia de la red, etc. 
+2. Recopilar datos de referencia: A través de herramientas como Geekbench 
+o PassMark en hardware, o JMeter para aplicaciones web, puedes establecer 
+una línea base. 
+3. Comparar con la competencia o estándares: Los resultados se comparan 
+con los mejores en la industria o con las métricas de otros productos 
+similares. 
+4. Analizar las brechas y planificar mejoras: Identificar dónde hay áreas de 
+oportunidad para mejorar rendimiento o eficiencia. 
+ 
+ 
+Ejemplo de un método de evaluación y su funcionamiento 
+Veamos el Benchmark de rendimiento en servidores web usando una prueba de 
+carga: 
+● Método: Se utiliza una herramienta como Apache JMeter para simular 
+cientos o miles de usuarios intentando acceder a un servidor web al mismo 
+tiempo. El servidor se somete a un estrés creciente para ver cómo maneja la 
+demanda. Se miden parámetros como:  
+○ Tiempo de respuesta: Cuánto tiempo tarda el servidor en responder a 
+una solicitud. 
+○ Throughput: Cantidad de transacciones que el servidor puede 
+manejar en un período de tiempo. 
+○ Errores: Cantidad de solicitudes fallidas bajo condiciones de carga. 
+● Resultado: El servidor puede manejar 10,000 usuarios simultáneos con un 
+tiempo de respuesta de 200 ms y sin errores significativos. Esto se compara 
+con un estándar de la industria que puede manejar 12,000 usuarios con 
+tiempos de respuesta menores a 150 ms. Aquí, se identifican áreas donde el 
+servidor puede mejorar para alcanzar el estándar. 
+Conclusión 
+El benchmark es una estrategia invaluable para las organizaciones que 
+buscan mejorar su rendimiento y mantenerse competitivas en un entorno 
+empresarial en constante cambio. A través de la comparación sistemática de 
+procesos y prácticas con otras empresas, las organizaciones pueden identificar 
+áreas de oportunidad, adoptar innovaciones y optimizar su eficiencia. Este enfoque 
+no solo facilita la identificación de las mejores prácticas, sino que también fomenta 
+una cultura de aprendizaje y adaptación. Al integrar el benchmark en su gestión, las 
+empresas pueden fortalecer su posición en el mercado, impulsar la satisfacción del 
+cliente y garantizar un crecimiento sostenible a largo plazo. 
+Bibliografía 
+ 
+https://es.wikipedia.org/wiki/Benchmarking 
+https://tableau.com/es-es/learn/articles/what-is-a-benchmark 
+Benchmarking: tipos y ejemplos de cómo hacerlo (doofinder.com) 
+¿Qué es un benchmark y para qué sirve? - Definición (geeknetic.es) 

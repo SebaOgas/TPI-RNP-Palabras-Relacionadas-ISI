@@ -1,0 +1,1163 @@
+103 
+  C A P Í T U L O  4 
+Recopilación de información: 
+métodos interactivos 
+    O BJETIVOS  DE  APRENDIZAJE 
+ 
+Al completar este capítulo usted podrá: 
+   1.  Reconocer el valor de los métodos interactivos para recopilar información. 
+   2.  Elaborar preguntas para conocer mediante entrevistas los requerimientos humanos de 
+información. 
+   3.  Estructurar las entrevistas de una manera significativa para los usuarios.  
+   4.  Comprender el concepto de JAD y cuándo hay que usarlo.  
+   5.  Redactar preguntas efectivas para entrevistar a los usuarios sobre su trabajo.  
+   6.  Diseñar y administrar cuestionarios efectivos.   
+Hay tres métodos interactivos clave que puede usar para obtener los requeri- 
+mientos humanos de información de los miembros de la organización: entre- 
+vistas, diseño de aplicaciones conjuntas (JAD) y en cuestas aplicadas a las 
+personas mediante cuestionarios. Aunque son distintos en su implementación, 
+estos métodos tienen muchas cosas en común. La base de sus propiedades 
+compartidas es hablar con las personas en la organización y escucharlas para comprender sus in- 
+teracciones con la tecnología, a través de una serie de preguntas cuidadosamente elaboradas. 
+Cada uno de los tres métodos interactivos para recopilar información cuenta con su propio 
+proceso establecido; usted debe seguirlo para interactuar con los usuarios. La observancia de 
+estas metodologías sistemáticas ayudan a asegurar el diseño y la implementación apropiados 
+de las entrevistas, los talleres de trabajo de JAD y los cuestionarios; además respaldarán un 
+análisis lúcido de los datos resultantes. En un capítulo posterior veremos los métodos discretos 
+(muestreo, investigación y observación del comporta miento del encargado de tomar las deci- 
+siones junto con su entorno físico) que no requiere n el mismo grado de interactividad entre 
+analistas y usuarios. El uso de métodos interactivos con métodos no discretos le permitirá ob- 
+tener una descripción más completa de los requerimi entos de información de la organización.   
+    P A R T E  I I 
+Análisis 
+de los requerimientos 
+de información 
+ENTREVISTAS 
+Es conveniente que se entreviste a usted mismo antes de hacerlo con alguien más. Necesita 
+reconocer sus predisposiciones y la forma en que éstas afectarán a sus percepciones. Su educa- 
+ción, intelecto, crianza, emociones y marco ético constituyen filtros relevantes para lo que usted 
+escuchará en sus entrevistas. 
+Piense en el proceso completo de la entrevista antes de llevarla a cabo. Visualice por qué la hará, 
+las preguntas que formulará y qué la convertirá en una entrevista exitosa de acuerdo con su criterio. 
+Además debe planear cómo hacer de la entrevista un suceso satisfactorio para el entrevistado. 
+Una entrevista para recopilar información es una conversación dirigida con un propósito 
+específico, en la cual se usa un formato de preguntas y respuestas. En la entrevista hay que ob- 
+tener las opiniones del entrevistado y lo que siente sobre el estado actual del sistema, los obje- 
+tivos de la organización y los personales, y los pr ocedimientos informales para interactuar con 
+las tecnologías de la información. 
+/g1/g1 www.xlibros.com 104     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+1.     Leer el material sobre los antecedentes. 
+2.     Establecer los objetivos de la entrevista. 
+3.     Decidir a quién entrevistar. 
+4.     Preparar al entrevistado. 
+5.     Decidir sobre los tipos de preguntas y su estructura. 
+Pasos para planear la entrevista 
+  FIGURA 4.1     
+Pasos que debe seguir el analista 
+de sistemas para planear la 
+entrevista. 
+Sobre todo busque las opiniones del entrevistado. É stas pueden ser más importantes y reveladoras que l os 
+hechos. Por ejemplo, suponga que pregunta a la prop ietaria de una tienda convencional, quien acaba de instau- 
+rar una tienda en línea, cuántos clientes piden com únmente el reembolso de sus transacciones vía Web c ada 
+semana. Ella le responde: “Entre 20 y 25 por semana ”. Cuando usted supervisa las transacciones y descu bre 
+que el promedio es de sólo 10.5 por semana, tal vez  concluya que la propietaria está exagerando los he chos y 
+el problema. 
+Ahora imagine que en vez de lo anterior pregunta a la propietaria cuáles son sus principales preocupaciones 
+y ella le contesta: “En mi opinión, las devoluciones de los clientes que compran artículos a través del sitio Web 
+son demasiado altas”. Al buscar opiniones en vez de hechos, descubrió un problema clave que la propietaria de- 
+sea solucionar. 
+Además de las opiniones hay que tratar de capturar los sentimientos del entrevistado. Recuerde que éste 
+conoce mejor la organización que usted. Para que us ted pueda entender mejor la cultura de organización  debe 
+escuchar los sentimientos del que responde a la entrevista. 
+Los objetivos son información importante que podemos obtener de las entrevistas. Los datos “duros” pueden 
+explicar el desempeño en el pasado, pero los objetivos proyectan el futuro de la organización. Trate de averiguar 
+a través de las entrevistas la mayor cantidad posible de objetivos de la organización, pues tal vez no pueda deter- 
+minarlos mediante los otros métodos de recopilación de datos. 
+La entrevista también es un valioso momento para explorar las cuestiones sobre HCI (interacción humano- 
+computadora), incluyendo los aspectos ergonómicos, la capacidad de uso del sistema, qué tan placentero y diver- 
+tido es el sistema, y qué tan útil es para apoyar las tareas individuales. 
+En la entrevista debemos establecer una relación co n un extraño. Hay que generar confianza y compren- 
+sión rápidamente y, al mismo tiempo, mantener el co ntrol de la entrevista. También necesitamos vender el 
+sistema, para lo cual hay que proveer información n ecesaria al entrevistado. Planear previamente la en trevista 
+le facilitará dirigirla. Por fortuna podemos aprende r a realizar entrevistas en forma efectiva. A medid a que 
+practique, usted mismo podrá ver cómo va mejorando.  Más adelante en el capítulo hablaremos sobre el di seño 
+de aplicaciones conjuntas (JAD), que nos puede serv ir como alternativa a las entrevistas cara a cara e n ciertas 
+situaciones. 
+Los cinco pasos para la preparación de una entrevista 
+En la figura 4.1 se muestran los cinco pasos principales en la preparación para una entrevista; incluyen activida- 
+des que van desde recopilar material sobre antecedentes básicos hasta decidir a quién vamos a entrevistar. 
+ENTÉRESE DE LOS ANTECEDENTES Lea y comprenda todo lo que pueda sobre los antecedentes de los entrevistados 
+y la organización. El sitio Web corporativo, un informe anual actualizado, un boletín de noticias corporativo o 
+cualquier publicación que se emita para explicar el funcionamiento de la empresa al público son fuentes útiles de 
+información. Puede revisar en Internet cualquier información corporativa, como la que se encuentra en Standard 
+and Poor’s. 
+En esta fase de investigación ponga especial atenci ón al lenguaje utilizado por los integrantes corpor ativos 
+para describirse a sí mismos y a la compañía. Trate de recopilar un vocabulario común que le permita expresar 
+preguntas de forma que sus entrevistados puedan comprender inmediatamente. Otro beneficio de investigar la 
+organización es aprovechar al máximo el tiempo invertido en las entrevistas, al no tener que hacer preguntas ge- 
+nerales sobre antecedentes. 
+ESTABLEZCA LOS OBJETIVOS DE LA ENTREVISTA Defina los objetivos de la entrevista a partir de los antecedentes 
+investigados y de su propia experiencia. Debe haber de cuatro a seis áreas clave concernientes a HCI, el 
+procesamiento de información y el comportamiento de los encargados de tomar las decisiones, sobre lo cual será 
+conveniente interrogar. Estas áreas incluyen cuestiones sobre HCI (la utilidad y capacidad de uso del sistema, 
+cómo se ajusta a los aspectos físicos, cómo se adapta a las capacidades cognitivas de un usuario, si es interesante 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   105 
+Preguntas abiertas en las entrevistas 
+• ¿Qué opina sobre el estado actual del comercio electrónico de negocio a 
+ negocio en su empresa? 
+• ¿Cuáles son los objetivos críticos de su departamento? 
+• Una vez que se envían los datos a través del sitio Web, ¿cómo se procesan? 
+• Describa el proceso de monitoreo disponible en línea. 
+• ¿Cuáles son algunos de los errores comunes al introducir datos que se 
+ cometen en este departamento? 
+• ¿Cuáles son las mayores frustraciones que ha experimentado durante la 
+ transición al comercio electrónico? 
+  FIGURA 4.2     
+Las preguntas abiertas en las 
+entrevistas ofrecen opciones 
+abiertas para que el entrevistado 
+responda. Los ejemplos se 
+seleccionaron de distintas 
+entrevistas y no se muestran en 
+ningún orden específico. 
+o estéticamente atractivo, y si al utilizar el sistema se obtienen o no las consecuencias deseadas), fuentes de 
+información, formatos de información, frecuencia de la toma de decisiones, calidades de la información y el 
+estilo de la toma de decisiones. 
+DECIDA A QUIÉN ENTREVISTAR Incluya personas clave de todos los niveles que se vean afectados por el sistema 
+en cierta forma. Trate de que la muestra sea representativa para indagar sobre la mayor cantidad posible de 
+necesidades de usuario. Su contacto de la organización también le puede dar ideas sobre las personas que debe 
+entrevistar. 
+PREPARE AL ENTREVISTADO Para preparar a la persona que va a entrevistar, llame por teléfono o envíe un 
+mensaje de correo electrónico con anticipación, de manera que el entrevistado esté preparado; si la entrevista es 
+muy detallada, envíe previamente el cuestionario por correo electrónico para que el entrevistado pueda pensar 
+en sus respuestas. En todo caso, como hay que cumplir muchos objetivos en la entrevista (como crear confianza 
+y observar el lugar de trabajo), las entrevistas se deben realizar por lo general en persona y no a través de 
+correo electrónico. Deben durar de 45 minutos a 1 hora como máximo. Sin importar cuánto se quieran extender 
+los entrevistados más allá de ese límite, recuerde que cuando invierten tiempo con usted no están haciendo 
+su trabajo. Si las entrevistas exceden de una hora, es probable que los entrevistados resientan la intrusión, 
+independientemente de si se lo hacen saber o no. 
+DECIDA SOBRE LOS TIPOS DE PREGUNTAS Y SU ESTRUCTURA Redacte preguntas para cubrir las áreas clave de 
+la HCI y el proceso de toma de decisiones que haya descubierto al momento de determinar los objetivos de la 
+entrevista. Las técnicas de interrogación apropiadas son la base de la entrevista. Las preguntas tienen ciertas 
+formas básicas que necesitamos conocer. Los dos tipos básicos de preguntas son abiertas y cerradas. Cada tipo 
+de pregunta puede lograr algo ligeramente distinto que los otros, y cada uno tiene sus beneficios y desventajas. 
+Debe pensar sobre el efecto que cada tipo de pregunta tendrá. 
+Es posible estructurar la entrevista en tres patrones: estructura de pirámide, estructura de embudo o estruc- 
+tura de diamante. Cada estructura es apropiada bajo distintas condiciones y sirve a un propósito diferente; habla- 
+remos sobre cada una de ellas más adelante en este capítulo. 
+Tipos de preguntas 
+PREGUNTAS ABIERTAS Las preguntas abiertas son del tipo: “¿Qué piensa e n cuanto a poner a todos los 
+gerentes en una intranet?”, “Por favor explique cómo  toma una decisión sobre la programación de tiempos 
+y fechas.”, “¿En qué formas extiende el sistema su capacidad de realizar tareas que no sería posible r ealizar 
+mediante algún otro medio?”. A b i e r t a s describe las opciones que tiene el entrevistado par a responder. La 
+respuesta puede constar de dos palabras o de dos pá rrafos. En la figura 4.2 se muestran algunos ejempl os de 
+preguntas abiertas. 
+Los beneficios de utilizar preguntas abiertas son muchos, entre los cuales tenemos: 
+ 1. El entrevistado baja la guardia. 
+ 2. El entrevistador puede percibir el vocabulario del entrevistado, lo cual refleja su educación, valores, posturas 
+y creencias. 
+ 3. Se proveen muchos detalles. 
+ 4. Se descubren vías de cuestionamiento adicionales que de otra manera no se hubieran explotado. 
+ 5. El entrevistado encuentra el proceso más interesante. 
+ 6. Se permite una mayor espontaneidad. 
+/g1/g1 www.xlibros.com 106     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+Preguntas bipolares en entrevistas 
+•  ¿Usa la Web para proveer información a los distribuidores? 
+•  ¿Está de acuerdo o en desacuerdo en cuanto a que el comercio 
+ electrónico en Web carece de seguridad? 
+•  ¿Desea recibir un documento impreso de su estado de cuenta cada mes? 
+•  ¿Mantiene su sitio Web una página de preguntas frecuentes (FAQ) para 
+ los empleados con preguntas sobre su nómina? 
+•  ¿Está completo este formulario? 
+  FIGURA 4.4     
+Las preguntas bipolares en las 
+entrevistas son un tipo especial de 
+pregunta cerrada. Los ejemplos se 
+seleccionaron de distintas 
+entrevistas y no se muestran en 
+ningún orden específico. 
+Preguntas cerradas en entrevistas 
+•  ¿Cuántas veces por semana se actualiza el repositorio del proyecto? 
+•  En promedio, ¿cuántas llamadas recibe el centro de atención al mes? 
+•  ¿Cuál de las siguientes fuentes de información es más valiosa para usted? 
+        □   Formularios completos de quejas de los clientes 
+        □   Quejas por correo electrónico de los consumidores que visitan el sitio Web 
+        □   Interacción cara a cara con los clientes 
+        □   Mercancía devuelta 
+•  Enliste sus dos principales prioridades para mejorar la infraestructura de tecnología. 
+•  ¿Quién recibe esta entrada? 
+  FIGURA 4.3     
+Las preguntas cerradas en las 
+entrevistas limitan las opciones del 
+que responde. Los ejemplos se 
+seleccionaron de distintas 
+entrevistas y no se muestran en 
+ningún orden específico. 
+ 7. El entrevistador puede expresar mejor las preguntas. 
+ 8. El entrevistador puede recurrir a ellas en caso de que tenga que improvisar. 
+Como puede ver, hay varias ventajas en cuanto al uso de preguntas abiertas. Sin embargo, también hay muchas 
+desventajas: 
+ 1. Las preguntas pueden generar muchos detalles irrelevantes. 
+ 2. Se puede llegar a perder el control de la entrevista. 
+ 3. Se permiten respuestas que pueden requerir demasiado tiempo debido a la cantidad obtenida de información 
+útil. 
+ 4. Podría parecer que el entrevistador no está preparado. 
+ 5. Puede darse la impresión de que el entrevistador “anda de pesca”, sin objetivos bien definidos. 
+Debe considerar con cuidado las implicaciones de usar preguntas abiertas en las entrevistas. 
+PREGUNTAS CERRADAS La otra alternativa la constituyen las preguntas cerradas; asumen las formas básicas “¿Es 
+fácil usar el sistema actual?” y “¿Cuántos subordinados tiene a su cargo?”. Las posibles respuestas son cerradas 
+para el entrevistado, debido a que sólo puede responder con un número finito tal como “Ninguna”, “Una” o 
+“Quince”. En la figura 4.3 se muestran ejemplos de preguntas cerradas. 
+Una pregunta cerrada limita el entrevistado la respuesta disponible. Tal vez usted esté familiarizado con las 
+preguntas cerradas debido a los exámenes de opción múltiple de la universidad. Se le proporciona una pregunta y 
+cinco respuestas, y no puede anotar una respuesta propia ya que se considerará equivocada. 
+Hay un tipo especial de pregunta cerrada: la pregunta bipolar. Este tipo de pregunta limita incluso más al 
+entrevistado, ya que sólo le permite elegir uno de dos polos, como sí o no, verdadero o falso, de acuerdo o en 
+desacuerdo. En la figura 4.4 se muestran ejemplos de preguntas bipolares. 
+Los beneficios de usar preguntas cerradas de cualquier tipo incluyen: 
+ 1. Ahorro de tiempo. 
+ 2. Se pueden comparar las entrevistas con facilidad. 
+ 3. Van directo al grano. 
+ 4. Se mantiene el control sobre la entrevista. 
+ 5. Se cubre mucho terreno con rapidez. 
+ 6. Se obtienen datos relevantes. 
+www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   107 
+Sin embargo, las desventajas de usar preguntas cerradas son substanciales. Entre las más comunes tenemos: 
+ 1. Son aburridas para el entrevistado. 
+ 2. No proporcionan detalles adicionales (debido a que el entrevistador provee el marco de referencia para el 
+entrevistado). 
+ 3. Se pierden las ideas principales por la razón anterior. 
+ 4. No se puede generar una buena comunicación entre el entrevistador y el entrevistado. 
+Por lo tanto, como entrevistador usted debe considerar con cuidado los tipos de preguntas que piensa utilizar. 
+Tanto las preguntas abiertas como las cerradas tienen ventajas y desventajas, como se muestra en la figura 
+4.5. Tenga en cuenta que se deben hacer ciertas concesiones al elegir un tipo de respuesta en vez del otro; aunque 
+una pregunta abierta ofrece amplitud y profundidad en la respuesta, este tipo de respuestas son más difíciles de 
+analizar. 
+SONDEOS El tercer tipo de pregunta es el sondeo o seguimiento. El sondeo más sólido es el más simple: la 
+pregunta “¿Por qué?”. Otros sondeos son: “¿Me puede dar un ejemplo de un momento en el que el sistema no 
+le haya parecido confiable?” y “¿Podría explicarme eso?”. En la figura 4.6 se muestran ejemplos de preguntas 
+de sondeo. El propósito del sondeo es ir más allá de la respuesta inicial para obtener más detalles significativos, 
+aclarar la información, y ampliar el punto del entrevistado. Los sondeos pueden ser preguntas abiertas o 
+cerradas. 
+Es imprescindible realizar sondeos. La mayoría de los entrevistadores principiantes son reticentes en cuanto 
+a realizar sondeos y con frecuencia aceptan respuestas superficiales. Por lo general están más agradecidos por el 
+hecho de que los entrevistados hayan concedido las entrevistas y se sienten en parte obligados a aceptar declara- 
+ciones sin argumentos con amabilidad. 
+Ordenar las preguntas en una secuencia lógica 
+Así como hay dos formas generalmente reconocidas de razonamiento (inductivo y deductivo), también hay dos 
+formas similares de organizar las entrevistas. Además existe una tercera forma que combina los patrones induc- 
+tivo y deductivo. 
+CerradasAbiertas 
+Bajo 
+Bajo 
+Bajo 
+Mucha 
+Mucha 
+Difícil 
+Alto 
+Alto 
+Alto 
+Poca 
+Poca 
+Fácil Facilidad de análisis 
+Confiabilidad de los datos 
+Uso eficiente del tiempo 
+Precisión de los datos 
+Amplitud y profundidad 
+Se requiere habilidad del entrevistador 
+  FIGURA 4.5     
+Atributos de las preguntas abiertas 
+y las preguntas cerradas. 
+Sondeos 
+•
+•
+•
+•
+•
+•
+¿Por qué? 
+Mencione un ejemplo de cómo se ha integrado el comercio electrónico en 
+sus procesos de negocios. 
+Ilustre el tipo de problemas de seguridad que experimenta con su sistema 
+de pagos de facturas en línea. 
+Mencionó una solución tanto de intranet como de extranet. Por favor muestre 
+un ejemplo de la forma en que piensa que difiere cada una de estas soluciones. 
+¿Qué lo hace sentir así? 
+Dígame paso a paso qué ocurre después de que un cliente hace clic en el 
+botón “Enviar” en el formulario de registro Web. 
+  FIGURA 4.6     
+Los sondeos permiten al analista 
+de sistemas dar seguimiento a las 
+preguntas para obtener respuestas 
+más detalladas. Los ejemplos se 
+seleccionaron de distintas 
+entrevistas y no se muestran en 
+ningún orden específico. 
+/g1/g1 www.xlibros.com 108     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+USO DE UNA ESTRUCTURA DE PIRÁMIDE La organización inductiva de las preguntas de la en trevista se puede 
+visualizar en forma de pirámide. El entrevistador empieza con preguntas muy detalladas, a menudo cerradas. Después 
+expande los temas al permitir preguntas abiertas y respuestas más generalizadas, como se muestra en la figura 4.7. 
+Utilice una estructura de pirámide si cree que su entrevistado necesita entrar en calor en cuanto al tema. 
+También es conveniente usar una estructura de pirámide para las secuencias de preguntas si desea una determina- 
+¿Cuál es 
+el problema 
+específico que está 
+experimentando 
+con su firewall? 
+¿Ha considerado otros 
+métodos para mejorar la seguridad 
+de los datos corporativos? 
+De acuerdo con su punto de vista, 
+¿qué mejoraría la efectividad de la seguridad aquí? 
+En general, ¿cómo se siente en cuanto a la seguridad de los 
+datos en comparación con la importancia del acceso a Internet? 
+Las estructuras 
+de pirámide empiezan 
+con una pregunta 
+específica… 
+… y terminan con 
+una pr egunta 
+general. 
+  FIGURA 4.7     
+La estructura de pirámide para las 
+entrevistas pasa de preguntas 
+específicas a generales. 
+O P O R T U N I D A D  D E  C O N S U L T O R Í A   4 . 1  
+Fortalezca sus tipos de preguntas  
+S   trongbodies, una enorme cadena local de clubes deportivos, ha 
+experimentado un crecimiento fenomenal en los últimos cinco años. 
+A la gerencia le gustaría refinar su proceso de toma de decisiones 
+para comprar nuevo equipo de fisicoculturismo. En la actualidad, 
+los gerentes escuchan a los clientes, asisten a exposiciones, ven 
+anuncios publicitarios y solicitan la compra de nuevos equipos con 
+base en sus percepciones subjetivas. Después, Harry Mussels se 
+encarga de aprobar o rechazar estas solicitudes. 
+Harry es la primera persona a quien entrevistará. Es un gerente 
+de división de 37 años que dirige cinco clubes en el área. Viaja por 
+toda la ciudad para visitar sus ubicaciones esparcidas ampliamente. 
+Tiene una oficina en la ubicación este, aunque está ahí menos de una 
+cuarta parte del tiempo. 
+Además, cuando Harry se encuentra en un club está o cu- 
+pado contestando llamadas telefónicas relacionadas con los ne- 
+gocios, resolviendo problemas inmediatos que le pre sentan los 
+gerentes e interactuando con los miembros del club.  Cuenta con 
+poco tiempo y, para compensar, se ha convertido en un gerente 
+divisional en extremo organizado y eficiente. No le puede con- 
+ceder mucho tiempo en la entrevista. Pero su aporta ción es im- 
+portante y siente que sería el principal beneficiari o del sistema 
+propuesto. 
+¿Qué tipo de pregunta sería el más adecuado para su  entre- 
+vista con Harry? ¿Por qué sería el tipo más apropia do? ¿Cómo 
+afectará el tipo de pregunta que usted seleccione e n la cantidad de 
+tiempo que invertirá en su preparación para entrevi star a Harry? 
+Escriba de 5 a 10 preguntas de este tipo. ¿Qué otra s técnicas po- 
+dría utilizar para complementar la información que no esté dispo- 
+nible por medio de ese tipo de pregunta? Escriba un  párrafo para 
+explicar. 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   109 
+ción final sobre el tema. Tal es el caso en la pregunta final: “En general, ¿cómo se siente en cuanto a la seguridad 
+de los datos en comparación con la importancia del acceso a Internet?”. 
+USO DE UNA ESTRUCTURA DE EMBUDO En el segundo tipo de estructura, el entrevistador usa un enfoque 
+deductivo al empezar con preguntas generalizadas y abiertas, para después reducir la cantidad de respuestas 
+posibles mediante el uso de preguntas cerradas. Esta estructura de entrevista se puede representar en forma 
+de embudo, como se muestra en la figura 4.8. El método de la estructura de embudo ofrece una manera fácil 
+y amigable de empezar una entrevista. También es conveniente usar una secuencia de preguntas en forma de 
+embudo cuando el entrevistado está relacionado sentimentalmente con el tema y necesita libertad para expresar 
+esos sentimientos. 
+USO DE UNA ESTRUCTURA EN FORMA DE DIAMANTE A menudo es mejor utilizar una combinación de las 
+dos estructuras anteriores, a lo cual se le conoce como estructura de entrevista en forma de diamante. En esta 
+estructura la entrevista empieza de una manera muy específica y después se examinan las cuestiones generales, 
+para finalmente llegar a una conclusión muy particu larizada, como se muestra en la figura 4.9. 
+El entrevistador empieza con preguntas fáciles y ce rradas que permiten al entrevistado entrar en calor ; a 
+la mitad se le pregunta lo que opina sobre temas am plios que obviamente no tienen sólo una respuesta “ co- 
+rrecta”. Después, el entrevistador restringe inclus o más las preguntas para obtener respuestas específ icas, con 
+lo cual se produce un cierre tanto para el entrevis tado como para el entrevistador. La estructura de d iamante 
+combina las ventajas de los otros dos métodos pero tiene la desventaja de que toma más tiempo que las otras 
+dos estructuras. 
+El final de la entrevista parecería un punto lógico para hacer una pregunta clave —“¿Hay algo de lo que no 
+hayamos hablado que usted considere importante?”—, pero como el entrevistado la considera una pregunta de 
+fórmula, la mayor parte de las ocasiones la respuesta será “No”. Por ende, usted debe identificar las coyunturas 
+en que esta pregunta pueda soltarle la lengua al entrevistado. 
+Al concluir la entrevista, haga un resumen y provea retroalimentación sobre sus impresiones en general. In- 
+forme al entrevistado sobre los pasos a seguir, y lo que harán usted y los demás miembros del equipo a continua- 
+ción. Pregunte al entrevistado con quién debería usted hablar en adelante. Establezca citas para dar seguimiento a 
+las entrevistas, agradezca al entrevistado por su tiempo y despídase de mano. 
+Cómo escribir el informe de la entrevista 
+Aunque la entrevista esté completa, apenas empieza su trabajo sobre los datos que obtuvo. Necesita capturar la 
+esencia de la entrevista por medio de un informe escrito. Es imperativo que escriba el informe tan pronto como 
+sea posible después de la entrevista. Este paso es otra manera en la que puede asegurar la calidad de los datos 
+obtenidos de la entrevista: entre más tiempo espere para escribir su entrevista, más borrosa se volverá la calidad 
+de sus datos. 
+¿Qué artículos se podrán comprar 
+en el sitio Web? 
+¿Cuáles son sus reacciones en cuanto al nuevo 
+sistema de adquisiciones basado en Web? 
+¿Hay algún artículo esencial 
+que se haya excluido 
+del sitio? 
+Las estructuras de 
+embudo empiezan 
+con una pregunta 
+general … 
+… y terminan con 
+una pr egunta 
+específica. 
+¿Qué  departamentos está n involucrados en su 
+implementació n?
+  FIGURA 4.8     
+La estructura de embudo para las 
+entrevistas empieza con preguntas 
+amplias y después se restringe a 
+preguntas específicas. 
+/g1/g1 www.xlibros.com 110     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+O P O R T U N I D A D  D E  C O N S U L T O R Í A   4 . 2  
+Un vistazo a la superficie 
+ E  stá a punto de salir de la lechería SureCheck Dairy, después de 
+un recorrido preliminar, cuando otro miembro de su equipo de aná- 
+lisis de sistemas le llama para decirle que, por enfermedad, no podrá 
+presentarse para entrevistar al gerente de la planta, como lo había 
+convenido. El gerente es una persona muy ocupada y usted desea 
+mantener su entusiasmo por el proyecto haciendo las cosas según lo 
+planeado. También se da cuenta de que sin los datos de la entrevista 
+inicial, se atrasará el resto del proceso de recopilación de datos. 
+Aunque no tiene preparadas las preguntas para la entrevista, decide 
+ir y entrevistar al gerente de la planta en el acto. 
+Lo que usted ha aprendido sobre SureCheck es que están inte- 
+resados en procesar sus propios datos sobre las cantidades y tipos 
+de productos lácteos que se venden, de manera que el personal 
+pueda utilizar esa información para controlar mejor la producción 
+de la extensa línea de productos de la empresa (leche entera, descre- 
+mada, con 1% de grasa, con 2% de grasa, mitad y mitad, queso 
+cottage, yogurt y productos congelados novedosos). En la actuali- 
+dad, los gerentes de ventas envían sus cifras a las oficinas generales, 
+situadas a 600 millas, y el ciclo de procesamiento de las mismas se 
+ve lento. Usted basará sus preguntas improvisadas en lo que acaba 
+de descubrir en el recorrido. 
+Durante los pocos minutos que quedan antes de la hora de la 
+entrevista, decida la estructura que utilizará (de embudo, de pirá- 
+mide o de diamante). Justifique en un párrafo su elección conside- 
+rando las inesperadas condiciones. Escriba una serie de preguntas y 
+organícelas en la estructura que eligió. 
+¿Cuáles son 
+los cinco tipos de 
+información que rastrea el 
+servicio gratuito de uso de 
+sitios Web que usted utiliza? 
+¿Cuáles son las actividades promocionales que 
+usted ofrece en su sitio a cambio de este servicio?
+¿Cuál es el valor de la información sobre el uso de
+su sitio Web para usted como webmaster? 
+¿Cuáles son dos puntos sorprendentes en relación con el 
+comportamiento de los usuarios en su sitio que haya
+descubierto mediante el uso de este servicio? 
+¿Son los “cookies” una mejor 
+forma de medir la forma en 
+que los usuarios finales 
+utilizan el sitio? 
+Las estructur as 
+de diamante 
+empiezan con una 
+pr egunta específica … 
+… pasan a 
+pr eguntas 
+gener ales … 
+… y terminan con 
+una pregunta 
+específica. 
+  FIGURA 4.9     
+La estructura en forma de 
+diamante para las entrevistas 
+combina las estructuras de 
+pirámide y de embudo. 
+Después de este resumen inicial, elabore otro más detallado donde exprese los puntos principales de la en- 
+trevista y sus propias opiniones. Revise el informe con el entrevistado en una reunión de seguimiento. Este paso 
+ayuda a aclarar el significado que tenía el entrevistado en mente y le hace saber que usted tiene el suficiente inte- 
+rés como para tomarse el tiempo de comprender su punto de vista y sus percepciones. 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   111 
+DISEÑO DE APLICACIÓN CONJUNTA 
+Sin importar qué tan experto se vuelva como entrevi stador, se cruzará con situaciones en las que las e ntre- 
+vistas cara a cara no resulten tan convenientes com o esperaba. Las entrevistas personales consumen tie mpo 
+y son propensas a errores, por lo cual sus datos se  pueden malinterpretar. IBM desarrolló una metodolo gía 
+alternativa para entrevistar a los usuarios uno a u no, conocida como diseño de aplicación conjunta (JA D). 
+Los motivos para usar JAD son reducir el tiempo (y p or ende el costo) requerido por las entrevistas per so- 
+nales, mejorar la calidad de los resultados de la e valuación de los requerimientos de información y me jorar 
+el grado de identificación del usuario con los nuevos  sistemas de información como resultado de los proc e- 
+sos participativos. 
+Aunque JAD se puede sustituir por las entrevistas p ersonales en cualquier momento apropiado durante 
+el SDLC, por lo general se emplea como técnica que le permite a usted, como analista de sistemas, realizar el 
+análisis de requerimientos y diseñar la interfaz de usuario en forma conjunta con los usuarios, en un a mbiente 
+de grupo. Las diversas complejidades de esta metodo logía se pueden aprender sólo en un seminario pagad o 
+en el que se demuestren métodos propietarios. No ob stante, aquí proporcionamos orientación suficiente p ara 
+que usted conozca algunos de sus beneficios y desven tajas en comparación con las entrevistas cara a car a. 
+Condiciones que respaldan el uso de JAD 
+La siguiente lista de condiciones le ayudará a decidir cuándo puede ser fructífero el uso de JAD. Considere el 
+uso del diseño de aplicación conjunta cuando: 
+ 1. Los grupos de usuarios estén inquietos y deseen algo nuevo, no una solución estándar para un problema 
+común. 
+ 2. La cultura de la organización apoya los comportamientos de solución de problemas conjuntos entre varios 
+niveles de empleados. 
+ 3. Los analistas pronostican que la cantidad de ideas generadas mediante las entrevistas cara a cara no será tan 
+abundante como el número de ideas posibles mediante un ejercicio de grupo extendido. 
+ 4. El flujo de trabajo permita la ausencia del personal clave durante un periodo de dos a cuatro días. 
+¿Quién está involucrado? 
+Las sesiones de diseño de aplicaciones conjuntas incluyen a varios participantes (analistas, usuarios, ejecutivos, 
+etcétera), quienes aportarán sus distintos antecedentes y capacidades. Su principal preocupación aquí es que to- 
+dos los miembros del equipo del proyecto se comprometan con la metodología JAD. Seleccione un patrocinador 
+ejecutivo, algún superior que introduzca y concluya la sesión JAD. De preferencia seleccione un ejecutivo del 
+grupo de usuarios que tenga cierto tipo de autoridad sobre el personal de sistemas de información implicado en 
+el proyecto. Esta persona será un símbolo importante y visible del compromiso de la organización con el pro- 
+yecto de sistemas. 
+Debe haber por lo menos un analista de sistemas de información presente, aunque por lo general asume un 
+rol pasivo, a diferencia de las entrevistas tradicionales, donde el analista controla la interacción. Como analista 
+del proyecto, usted debería estar presente durante el JAD para escuchar qué dicen los usuarios y qué requieren. 
+Además podría ser necesaria su opinión experta sobre costos desproporcionados de posibles soluciones propues- 
+tas durante la sesión. Sin este tipo de retroalimentación inmediata, pueden surgir soluciones irreales con costos 
+excesivos en la propuesta, que serán difíciles de descartar más adelante. 
+Puede elegir de ocho a doce usuarios de cualquier rango para que participen en las sesiones JAD. Trate de 
+seleccionar a los que puedan articular la información que necesitan para realizar sus trabajos, así como lo que 
+desean en un sistema de cómputo nuevo o mejorado. 
+El líder de la sesión no debe ser un experto en el análisis y diseño de sistemas, sino alguien con excelentes 
+habilidades de comunicación como para poder facilitar las interacciones apropiadas. Tenga en cuenta que no 
+le conviene usar un líder de sesión que se reporte con otra persona en el grupo. Para evitar que esto ocurra, tal 
+vez la organización esté de acuerdo en retener un consultor administrativo externo para que actúe como líder de 
+sesión. El objetivo es contar con alguien que pueda atraer la atención del grupo para tratar con las cuestiones 
+importantes de sistemas, negociar y resolver conflictos en forma satisfactoria y ayudar a que los miembros del 
+grupo lleguen a un consenso. 
+Su sesión JAD también debe incluir uno o dos observadores que sean analistas o expertos técnicos de otras 
+áreas funcionales para ofrecer explicaciones técnicas y consejos al grupo durante las sesiones. Además debe ha- 
+ber un escriba del departamento de sistemas de información en las sesiones JAD para escribir formalmente todo 
+lo que se haga. 
+/g1/g1 www.xlibros.com 112     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+E X P E R I E N C I A  D E  H Y P E R C A S E ®   4 . 1   
+“ B    ueno, le advertí que no siempre estaba todo tranquilo aquí en 
+MRE. Seguramente ya habrá conocido a muchos de nuestros em- 
+pleados clave y está empezando a comprender cómo son realmente 
+las cosas. ¿Quién hubiera pensado que unas inocentes decisiones 
+sobre sistemas, como en dónde comprar un COMTEX o Shiroma, 
+crearían tanta hostilidad? Bueno, vivir y aprender, es lo que siempre 
+digo. ¡Por lo menos ahora sabrá a lo que se enfrent a cuando tenga 
+que empezar a recomendar software y hardware!”. 
+“Es curioso: hay de preguntas a preguntas. Yo mismo estoy a 
+favor de las preguntas abiertas, pero cuando tengo que responderlas, 
+no siempre es fácil”. 
+Preguntas de   HYPERCASE 
+    1.  Use las preguntas de entrevistas que se plantean en HyperCase 
+para dar cinco ejemplos de preguntas abiertas y cinco ejemplos de 
+preguntas cerradas. Explique por qué sus ejemplos se clasifican 
+correctamente como tipos de preguntas abiertas o cerradas. 
+    2.  Mencione tres preguntas de sondeo que sean parte de la 
+entrevista a Daniel Hill. En especial, ¿qué aprendió al dar 
+seguimiento a las preguntas que hizo a Daniel?   
+    3.  Mencione tres preguntas de sondeo que sean parte de la 
+entrevista a Snowden Evans. En especial, ¿qué aprendió al 
+dar seguimiento a las preguntas que hizo a Snowden? 
+  FIGURA 4.HC1     
+Al colocar el puntero en una pregunta de HyperCase se revelará una respuesta. 
+Ubicación de las reuniones JAD 
+Le recomendamos que, de ser posible, realice las sesiones fuera del sitio con una duración de dos a cuatro días 
+fuera del sitio, lejos de la organización, en un ambiente cómodo. Algunos grupos utilizan centros ejecutivos o 
+incluso instalaciones de soporte de decisiones en grupo disponibles en las principales universidades. La idea es 
+minimizar las distracciones y responsabilidades diarias del trabajo regular de los participantes. La sala debe alo- 
+jar cómodamente a las personas invitadas. El equipo mínimo para apoyar la presentación incluye dos proyectores 
+(apropiados para los materiales a presentar: acetatos, presentaciones electrónicas, hojas impresas, etcétera), un 
+pizarrón blanco, un rotafolios y acceso a una copiadora. Las salas de soporte de decisiones en grupo también 
+proporcionan PC en red, un sistema de proyección y software escrito para facilitar la interacción en grupo, al 
+tiempo que se minimizan los comportamientos en grupo improductivos. 
+Programe su sesión JAD cuando todos los participantes se puedan comprometer a asistir. No lleve a cabo las 
+sesiones a menos que realmente puedan asistir todos los convocados. Esta regla es imprescindible para el éxito 
+de las sesiones. Asegúrese de que todos los participantes reciban una agenda antes de la reunión y considere lle- 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   113 
+var a cabo una reunión de orientación de medio día, cuando menos una semana antes del taller para que los que 
+estén involucrados sepan lo que se espera de ellos. Dicha reunión previa le permitirá avanzar con rapidez y actuar 
+con confianza una vez que se convoque la verdadera reunión. 
+Obtención de un análisis estructurado de las actividades del proyecto 
+IBM recomienda que las sesiones JAD examinen estos puntos en el proyecto de sistemas propuesto: planeación, 
+recepción, procesamiento/rastreo de recibos, monitoreo y asignación, procesamiento, registro, envío y evalua- 
+ción. Para cada tema también hay que formular y responder las preguntas quién, qué, cómo, dónde y por qué. En 
+definitiva, los sistemas interactivos ad hoc, como los sistemas de soporte de decisiones y otros tipos de sistemas 
+dependientes del estilo del encargado de tomar las decisiones (incluyendo los sistemas de prototipos), no se ana- 
+lizan con tanta facilidad con la metodología estructurada de JAD. 
+Como analista involucrado con las sesiones JAD, usted debe consultar las notas, que alguien designado tome 
+durante la reunión, para preparar un documento de especificaciones con base en lo que ocurrió en ella. Presente 
+en forma sistemática los objetivos de la administración, así como el alcance y los límites del proyecto. Incluya 
+también los aspectos específicos del sistema, como los detalles en pantalla y los esquemas de los informes. 
+Beneficios potenciales al usar JAD en vez de las entrevistas tradicionales 
+Existen cuatro beneficios potenciales que usted, los usuarios y su equipo de análisis de sistemas deben tener en con- 
+sideración al sopesar las posibilidades de usar el diseño de aplicación conjunta. El primer beneficio potencial es el 
+ahorro de tiempo en comparación con las entrevistas tradicionales cara a cara. Algunas organizaciones han estimado 
+que las sesiones JAD permiten ahorrar el 15 por ciento del tiempo en comparación con el método tradici onal. 
+Además del ahorro en tiempo es posible efectuar un desarrollo rápido a través de JAD: como las entrevistas 
+a los usuarios no se llevan a cabo en forma serial durante un periodo de semanas o meses, el desarrollo puede 
+avanzar con mayor rapidez. 
+Un tercer beneficio a considerar es la posibilidad de mejorar la posesión del sistema de información. Como 
+analistas, nos esforzamos siempre en involucrar a los usuarios de manera significativa y los alentamos a que 
+tomen posesión de los sistemas diseñados lo antes posible. Debido a su naturaleza interactiva y alto grado de 
+visibilidad, JAD ayuda a los usuarios a que se involucren lo más pronto posible en los proyectos de sistemas y 
+considera seriamente su retroalimentación. La participación en una sesión JAD ayuda en un momento dado a re- 
+flejar las ideas del usuario en el diseño final. 
+Un beneficio final de participar en las sesiones JAD es el desarrollo creativo de los diseños. El carácter in- 
+teractivo de JAD tiene mucho en común con las técnicas de lluvias de ideas que generan nuevas propuestas y 
+combinaciones entre ellas, debido al entorno dinámico y estimulante. Los diseños pueden evolucionar a través de 
+interacciones facilitadas, en vez de hacerlo en un aislamiento relativo. 
+Desventajas potenciales de JAD 
+Hay tres desventajas u obstáculos que también debemos sopesar al decidir si usaremos las entrevistas conven- 
+cionales o JAD. La primera desventaja es que JAD requiere que todos los participantes comprometan mucho 
+tiempo. Como JAD requiere su dedicación durante un periodo de dos a cuatro días, no es posible realizar nin- 
+O P O R T U N I D A D  D E  C O N S U L T O R Í A   4 . 3  
+ Analista de sistemas, supongo 
+ “¿ S  abe qué pienso del trabajo del último equipo de análisis de 
+sistemas? Los documentos impresos que crearon son una jungla. 
+Para averiguar el costo de la materia prima para nosotros, tengo que 
+abrirme paso a golpe de pluma por el exceso de datos. V oy tachando 
+todo lo irrelevante y algunas veces tengo que arrancar demasiada  
+maleza para llegar a las cifras que necesito”, dice  Henry Stanley, 
+supervisor de contabilidad para Zenith Glass Company, mientras 
+apunta descontento hacia una desordenada pila de documentos im- 
+presos mutilados que brotan a un lado de su escritorio.  
+Identifique la metáfora primordial que utiliza Henry para des- 
+cribir los documentos impresos que recibe, además de la accesibili- 
+dad a la información en ellos. Describa en un párrafo cómo le puede 
+ayudar este paso a comprender la postura de Henry en relación con 
+cualquier trabajo propuesto por su equipo de análisis de sistemas. 
+En un párrafo, adopte la metáfora de Henry y extiéndala en un sen- 
+tido más positivo durante su entrevista con él. 
+/g1/g1 www.xlibros.com 114     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+guna otra actividad en forma concurrente ni postergar actividades, como se realiza comúnmente en las entrevistas 
+cara a cara. 
+El segundo obstáculo se produce cuando la preparación para las sesiones JAD es inadecuada en cualquier as- 
+pecto, o si el informe de seguimiento y la documentación de las especificaciones están incompletos. En estos ca- 
+sos, los diseños resultantes podrían ser insatisfactorios. Es necesaria la conjunción de muchas variables correctas 
+para que el JAD sea exitoso; en contraste, muchas cosas podrían salir mal. El éxito de los diseños que resultan de 
+las sesiones JAD es menos predecible que el que se logra mediante las entrevistas estándar. 
+Por último, tal vez las habilidades necesarias de la organización y su cultura no estén lo bastante desarrolla- 
+das como para permitir el esfuerzo concertado requerido para ser productivos en un entorno JAD. Al final tendrá 
+que juzgar si la organización realmente está compro metida y preparada para esta metodología.   
+USO DE CUESTIONARIOS 
+El uso de cuestionarios es una técnica de recopilación de información que permite a los analistas de sistemas 
+estudiar las posturas, las creencias, el comportamiento y las características de varias personas clave en la organi- 
+zación que se pueden ver afectadas por los sistemas actual y propuesto. Las posturas son lo que las personas en 
+la organización dicen desear (en un nuevo sistema, por ejemplo); las creencias son lo que las personas dan por 
+cierto; el comportamiento es lo que hacen los miembros de la organización, y las características son las propie- 
+dades de las personas u objetos. 
+Las respuestas obtenidas a través de cuestionarios (también conocidos como encuestas) en los que se utili- 
+zan preguntas cerradas se pueden cuantificar. Si encuesta personas a través del correo electrónico o Web, puede 
+usar software para convertir las respuestas electrónicas directamente en tablas de datos para analizarlas mediante 
+una aplicación de hoja de cálculo o paquetes de software estadísticos. Las respuestas a los cuestionarios en los 
+que se utilizan preguntas abiertas se analizan e interpretan de otras formas. Las respuestas a las preguntas sobre 
+posturas y creencias son sensibles a las palabras elegidas por el analista de sistemas. 
+Por medio del uso de cuestionarios, el analista puede buscar cuantificar lo que encontró en las entrevistas. 
+Además, es posible usar cuestionarios para determinar qué tan difundido o limitado está realmente un senti- 
+miento expresado en una de las entrevistas. Por lo contrario, se pueden utilizar cuestionarios para encuestar a una 
+muestra grande de usuarios de sistemas con el fin de detectar problemas o llevar a la mesa de discusión cuestio- 
+nes importantes antes de programar las entrevistas. 
+En este capítulo vamos a comparar y contrastar los cuestionarios con las entrevistas. Hay muchas similitudes 
+entre las dos técnicas y tal vez lo ideal sería utilizarlas en conjunto, ya sea para dar seguimiento a las respuestas 
+confusas de un cuestionario con una entrevista, o para diseñar el primero con base en lo que se descubrió en la 
+entrevista. Sin embargo, cada técnica tiene sus propias funciones específicas, por lo que no siempre es necesario 
+o conveniente utilizar ambas. 
+Planeación del uso de cuestionarios 
+A primera vista, tal vez los cuestionarios parezcan una forma rápida de recopilar cantidades masivas de  datos 
+sobre la forma en que los usuarios valoran el siste ma actual, los problemas que experimentan con su tra bajo 
+y lo que las personas esperan de un sistema nuevo o  modificado. Aunque es cierto que podemos recopilar 
+mucha información a través de los cuestionarios sin  invertir tiempo en las entrevistas cara a cara, par a de- 
+sarrollar un cuestionario útil se requiere mucho ti empo de planeación. Cuando decidimos encuestar a lo s 
+usuarios por correo electrónico o a través de Web, debemos tomar en cuenta ciertos aspectos de planeac ión 
+adicionales relacionados con la confidencialidad, la autenticación de la identidad y los problemas de respuestas 
+múltiples. 
+Primero hay que decidir lo que planeamos conseguir a través del uso de una encuesta. Por ejemplo, si desea 
+conocer el porcentaje de usuarios que prefieren una  página FAQ para informarse sobre nuevos paquetes d e 
+software, un cuestionario podría ser la técnica apr opiada; si desea un análisis detallado del proceso de toma 
+de decisiones de un gerente, la entrevista es una mejor opción. 
+He aquí algunos lineamientos para ayudarlo a decidir si es apropiado utilizar cuestionarios. Considere el uso 
+de cuestionarios si: 
+ 1. Las personas a quienes necesita interrogar están esparcidas en un área amplia (distintas sucursales de la 
+misma corporación). 
+ 2. Hay gran cantidad de personas involucradas en el proyecto de sistemas, por lo que es importante saber qué 
+proporción de un grupo dado (por ejemplo, la gerencia) aprueba o desaprueba una característica específica 
+del sistema propuesto. 
+ 3. Piensa realizar un estudio exploratorio y desea medir la opinión general antes de que el proyecto de sistemas 
+tome cualquier dirección específica. 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   115 
+ 4. Desea estar seguro de que se identifiquen y consideren los problemas con el sistema actual en las entrevistas 
+de seguimiento. 
+Una vez que haya determinado que tiene buenos motivos para usar un cuestionario y después de que haya 
+señalado los objetivos a cumplir por medio de éste, podrá empezar a formular las preguntas. 
+Escribir las preguntas 
+La mayor diferencia entre las preguntas que se utilizan en la mayoría de las entrevistas y las que se utilizan en 
+cuestionarios es que las entrevistas permiten la interacción entre las preguntas y sus significados. En una entre- 
+vista, el analista tiene la oportunidad de refinar una pregunta, definir un término confuso, cambiar el curso del 
+cuestionamiento, responder a una mirada desconcertada y en general, controlar el contexto. 
+En un cuestionario, muy pocas de estas oportunidades son posibles. Por lo tanto, para el analista las pregun- 
+tas deben ser tan claras como el agua, el flujo del cuestionario debe ser convincente, se debe anticipar a las pre- 
+guntas del encuestado, y la administración del cuestionario se debe planear con detalle (el encuestado es la persona 
+que responde o contesta el cuestionario). 
+Los tipos de preguntas básicas que se utilizan en el cuestionario son abiertas y cerradas, como vimos en las 
+entrevistas. Debido a las restricciones que se imponen en los cuestionarios, se justifica un análisis adicional sobre 
+los tipos de preguntas. 
+PREGUNTAS ABIERTAS Recuerde que las preguntas (o declaraciones) abiertas son las que dejan abiertas todas las 
+posibles opciones de respuesta para el encuestado. Por ejemplo, las preguntas abiertas en un cuestionario podrían 
+ser: “Describa los problemas que experimenta en la actualidad con los informes de las salidas”, o “En su opinión, 
+¿qué tan útiles son los manuales de usuario para la aplicación de contabilidad del sistema actual?” 
+Al escribir preguntas abiertas para un cuestionario, debemos anticiparnos al tipo de respuesta que obten- 
+dremos. Por ejemplo, si hace una pregunta como: “¿Cómo se siente en relación con el nuevo sistema?”, las res- 
+puestas pueden ser demasiado amplias como para obtener una interpretación o comparación precisa. Por lo tanto, 
+incluso cuando escriba una pregunta abierta, ésta d ebe ser lo suficientemente estrecha como para guiar  a los 
+encuestados a responder en cierta forma específica (en la figura 4.10 hay ejemplos de preguntas abiertas). 
+En particular, las preguntas abiertas son adecuadas para las situaciones en las que queremos conocer las 
+opiniones de los miembros de la organización sobre cierto aspecto del sistema, ya sea un producto o un proceso. 
+En tales casos es conveniente utilizar preguntas abiertas cuando es imposible enlistar con efectividad todas las 
+posibles respuestas a la pregunta. 
+PREGUNTAS CERRADAS Recuerde que las preguntas (o declaraciones) cerradas son aquellas que limitan o cierran 
+las opciones de respuestas disponibles para el encuestado. Por ejemplo, en la figura 4.11 la declaración en la 
+pregunta 23 (“A continuación se muestran los seis paquetes de software disponibles en este momento. Marque 
+el (los) paquete(s) de software que utiliza personalmente con más frecuencia”) es cerrada. Observe que a los 
+encuestados no se les pregunta por qué prefieren el paquete, ni se les pide que seleccionen más de uno, incluso 
+aunque esa sea una respuesta más representativa. 
+Hay que utilizar preguntas cerradas cuando el analista de sistemas pueda enlistar de manera efectiva todas 
+las posibles respuestas a la pregunta y cuando todas éstas sean mutuamente exclusivas (al elegir una de ellas se 
+descarta la posibilidad de elegir cualquier otra). 
+Use preguntas cerradas cuando desee encuestar a una amplia muestra de personas. La razón se vuelve obvia 
+al momento de imaginar cómo se verán los datos que vamos a recolectar. Si utiliza sólo preguntas abiertas para 
+cientos de personas, sería imposible lograr un análisis e interpretación correctos de sus respuestas sin la ayuda de 
+un programa de análisis de contenido computarizado. 
+Elegir uno u otro tipo de preguntas implica sacrificar unas ventajas para lograr otras. La figura 4.12 sintetiza 
+la relación entre las ventajas de un tipo y la ventajas del otro. Tenga en cuenta que las respuestas a las preguntas 
+abiertas pueden ayudar a los analistas a obtener una visión detallada y preliminar, así como amplitud y profundi- 
+dad sobre un tema. Aunque las preguntas abiertas se pueden escribir con facilidad, las respuestas para ellas son 
+difíciles y se requiere tiempo para analizarlas. 
+Al referirnos a la escritura de preguntas cerradas con respuestas ordenadas o desordenadas, a menudo 
+nos referimos al proceso como escalar. En una secci ón posterior hablaremos sobre el uso de escalas en las 
+encuestas. 
+TERMINOLOGÍA DE LAS PREGUNTAS Al igual que en el caso de las entrevistas, el lenguaje de los cuestionarios 
+es un aspecto en extremo importante de su efectividad. Incluso si el analista de sistemas cuenta con un conjunto 
+estándar de preguntas relacionadas con el desarrollo de sistemas, es conveniente escribirlas de manera que 
+reflejen la terminología propia de la empresa. 
+/g1/g1 www.xlibros.com 116     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+Los encuestados aprecian los esfuerzos de alguien que se molesta en escribir un cuestionario que refleje su 
+propio uso del lenguaje. Por ejemplo, si la empresa utiliza el término supervisor es  en vez de g er entes , o unidades  
+en vez de departamentos , al incorporar los términos preferidos al cuestionario los encuestados se relacionan me- 
+jor con el significado de las preguntas. Será más fácil interpretar las respuestas con precisión y los encuestados 
+serán más entusiastas en general. 
+Para verificar que el lenguaje utilizado en el cuestionario sea el de los encuestados, pruebe varias preguntas 
+de muestra en un grupo piloto (de prueba). Pídales que pongan especial atención en cuanto a la precisión de las 
+palabras y que cambien cualquier palabra que no suene adecuada. 
+He aquí algunos lineamientos que puede utilizar al elegir el lenguaje para su cuestionario: 
+ 1. Use el lenguaje de los encuestados siempre que sea posible. Mantenga un vocabulario simple. 
+ 2. Concéntrese en ser específico en vez de utilizar palabras imprecisas. Evite también las preguntas demasiado 
+específicas. 
+53. ¿Cuáles son los problemas más frecuentes que 
+experimenta con la salida de la computadora? 
+A. 
+B. 
+C. 
+54. 
+De los problemas que enlistó en la pregunta anterio
+r,
+¿cuál es el más difícil de resolver? 
+55. ¿Por qué? 
+Las preguntas abier 
+tas 
+pueden pedir al 
+encuestado que haga 
+listas… 
+… o respuestas 
+detalladas … 
+… o respuestas 
+cortas .
+A continuación hay preguntas sobre usted. Llene los
+ espacios 
+en blanco lo mejor que pueda. 
+67. ¿Cuánto tiempo lleva trabajando para esta empresa? 
+años y meses 68. ¿Cuánto tiempo lleva trabajando en la misma industr
+ia? años y meses 69. ¿En qué otras industrias ha trabajado? 
+  FIGURA 4.10     
+Preguntas abiertas que se utilizan 
+para los cuestionarios. 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   117 
+Responda a las preguntas 23 y 24 marcando la casilla apropiada. 
+23. A continuación se muestran los seis paquetes de so
+ftware 
+disponibles en este momento. Marque el (los) paquet
+e(s) 
+de software que utiliza personalmente con más frecu
+encia [ ] Microsoft Excel [ ] Microsoft Access 
+[ ] Microsoft PowerPoint [ ] Microsoft Windows Live Mail 
+[ ] Oracle SCM [
+] Visible Analyst 
+24. “Por lo general las cifras de ventas están retrasadas". 
+[ ] De acuerdo 
+[ ] En desacuerdo Responda a las preguntas 25 y 26 encerrando en un c
+ír culo el número 
+apropiado. 
+25. “Cuando los servicios de datos de cómputo preparan las 
+cifras de ventas, se retrasan". 
+Nunca Raras veces A veces A menudo Siempre 
+1 2 3 4 
+5
+Responda a las preguntas 45-48 encerrando en un círculo la 
+respuesta apropiada. 
+45. La división en la que me encuentro en la actualidad se llama 
+Inversiones 
+Operaciones 
+Marketing 
+46
+. Mis antecedentes académicos se pueden describir mejor 
+como 
+Preparatoria 
+Estudios universitarios par 
+ciales Licenciatura 
+Maestría o superior 
+Mi género es 
+Masculino 
+Femenino 
+Las preguntas cerradas 
+pueden pedir al 
+encuestado que marque 
+una casilla … 
+... o que encierr e
+un número … 
+… o encerrar 
+toda la respuesta. 
+  FIGURA 4.11     
+Las preguntas cerradas en los 
+cuestionarios ayudan a asegurar 
+las respuestas. 
+Abiertas Cerradas 
+Lento Rápido 
+Alto Bajo 
+Alto Bajo 
+Fácil Difícil 
+Difícil Fácil 
+Velocidad de llenado 
+Naturaleza exploratoria 
+Amplitud y profundidad 
+Facilidad de preparación 
+Facilidad de análisis 
+  FIGURA 4.12     
+Las ventajas que sacrifica al elegir 
+uno y otro tipo de preguntas. 
+/g1/g1 www.xlibros.com 118     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+ 3. Trate de mantener las preguntas cortas. 
+ 4. No use un tono condescendiente, al usar opciones redactadas en lenguaje de bajo nivel, para dirigirse a los 
+encuestados. 
+ 5. Evite la predisposición en sus palabras. Esto también significa evitar preguntas censurables. 
+ 6. Dirija las preguntas a los encuestados apropiados (es decir, los que sean capaces de responder). No suponga 
+que conocen demasiado. 
+ 7. Asegúrese de que las preguntas sean correctas en el sentido técnico antes de incluirlas. 
+ 8. Use software para verificar si el nivel de lectura es apropiado para los encuestados. 
+Uso de escalas en los cuestionarios 
+Escalar es el proceso de asignar números u otros sí mbolos a un atributo o característica, con el fin de medirlos. 
+A menudo las escalas son arbitrarias y pueden no se r únicas. Por ejemplo, la temperatura se mide en va rias for- 
+mas, por ejemplo, en escala Fahrenheit (en donde el agua se congela a 32 grados y hierve a 212 grados) y en 
+escala Celsius (en donde el congelamiento ocurre a 0 grados y el hervor a 100 grados). 
+MEDICIÓN Hay dos formas de escalas de medición que los analistas de sistemas utilizan por lo general: 
+    1. Escalas nominales  
+   2. Escalas de intervalo   
+Las escalas nominales se utilizan para clasificar cosas. Una pregunta tal como: 
+¿Qué tipo de softw are utiliza más? 
+   1   /H11005 Un procesador de palabras  
+  2   /H11005 Una hoja de cálculo  
+  3   /H11005 Una base de datos  
+  4   /H11005 Un programa de correo electrónico      
+utiliza una escala nominal. En definitiva, las escalas nominales son las formas más débiles de medición. Por lo 
+general, todo lo que el analista puede hacer con ellas es obtener los totales de cada clasificación. 
+Las escalas de intervalo poseen la característica de que los intervalos entre cada uno de los números son 
+iguales. Debido a ello, se pueden realizar operaciones matemáticas con los datos del cuestionario para obtener un 
+análisis más completo. Las escalas Fahrenheit y Celsius son ejemplos de escalas de intervalo, las cuales miden 
+la temperatura. 
+El ejemplo antes mencionado del Centro de información no es en definitiva el de una escala de intervalo, 
+pero si anclamos la escala en uno de sus extremos, tal vez el analista quiera suponer que el encuestado percibe 
+que los intervalos son iguales: 
+¿Qué tan útil es el soporte proporcionado por el Grupo de soporte técnico? 
+No es nada útil Extremadamente útil     
+    1     2     3     4     5       
+Si el analista de sistemas hace esta suposición, es posible un análisis más cuantitativo. 
+VALIDEZ Y CONFIABILIDAD Al construir escalas podemos usar dos medidas de re ndimiento: validez y 
+confiabilidad. El analista de sistemas debe estar consciente de estas dos cuestiones. 
+La validez es el grado con el que la pregunta mide lo que el analista requiere. Por ejemplo, si el propósito 
+del cuestionario es determinar si la organización está lista o no para un cambio importante en las operaciones de 
+cómputo, ¿los cuestionarios miden eso? 
+La confiabilidad implica consistencia. Si el cuestionario se aplicó una vez y después se volvió a aplicar bajo 
+las mismas condiciones, y se obtuvieron los mismos resultados en ambas ocasiones, se dice que el instrumento 
+tiene consistencia externa. Si el cuestionario contiene subpartes y éstas tienen resultados equivalentes, se dice 
+que el instrumento tiene consistencia interna. Es importante tener consistencia externa e interna.  
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   119 
+CONSTRUCCIÓN DE ESCALAS La construcción de escalas es una tarea seria. Si construye las escalas con poco 
+cuidado se producirá uno de los siguientes problemas: 
+    1. Indulgencia.  
+   2. Tendencia central.  
+   3. Efecto halo.   
+La indulgencia es un problema que provocan los encuestados que califican en forma superficial. Para evitar 
+el problema de la indulgencia, el analista de siste mas puede desplazar la categoría “promedio” a la iz quierda 
+(o derecha) del centro. 
+La tendencia central es un problema que ocurre cuando los encuestados califican todo como promedio. Para 
+mejorar la escala, el analista puede 1) hacer las diferencias más pequeñas en los dos extremos, 2) ajustar la soli- 
+dez de los descriptores o 3) crear una escala con más puntos. 
+El efecto halo es un problema que surge cuando la impresión que se forja en una pregunta se acarrea hasta 
+la siguiente. Por ejemplo, si va a calificar un empleado del que tiene una impresión favorable, tal vez le otorgue 
+una calificación alta en todas las categorías o rasgos, sin importar que sea o no realmente una de sus mejores ca- 
+racterísticas. La solución es colocar un rasgo y varios empleados en cada página, en vez de un empleado y varios 
+rasgos en una página. 
+Diseño de los cuestionarios 
+Muchos de los mismos principios relevantes para el diseño de formularios para introducir datos (como veremos 
+en el capítulo 12) también son importantes aquí. Aunque la intención del cuestionario es recopilar información 
+sobre posturas, creencias, comportamiento y características cuyo impacto pueda alterar el trabajo del usuario en 
+forma considerable, los encuestados no siempre se ven motivados a responder. Recuerde que los miembros de la 
+organización reciben demasiadas encuestas en general, muchas de las cuales son con frecuencia malintenciona- 
+das y triviales. 
+Un cuestionario bien diseñado y relevante puede ayudar a vencer parte de esta resistencia a responder. He 
+aquí algunas reglas para diseñar un buen cuestionario: 
+    1. Incluya mucho espacio en blanco.  
+   2. Incluya mucho espacio para escribir o teclear las respuestas.  
+   3. Facilite a los encuestados la acción de marcar con claridad sus respuestas.  
+   4. Mantenga un estilo consistente.   
+Al diseñar cuestionarios para Web, aplique las mismas reglas que utiliza al diseñar cuestionarios en papel. 
+La mayoría de los paquetes de software permiten insertar uno de los formatos de entrada de datos de uso común 
+que se muestran en la figura 4.13. Siga los cuatro lineamientos anteriores para obtener una mejor tasa de respues- 
+tas en el cuestionario. 
+Cuadro de texto 
+de una línea 
+Nombre Propósito Apariencia 
+Cuadro de texto 
+desplazable 
+Casilla de 
+verificación 
+Botón de 
+opción 
+Menú 
+desplegable 
+Botón 
+Se utiliza para obtener una pequeña cantidad de texto y 
+limitar la respuesta a unas cuantas palabras 
+Se utiliza para obtener uno o más párrafos de texto 
+Se utiliza para obtener una respuesta del tipo sí-no (por 
+ejemplo, ¿Desea que lo incluyamos en la lista de correo?) 
+Se utiliza para obtener una respuesta del tipo sí-no o 
+verdadero-falso 
+Se utiliza para obtener resultados más consistentes (el 
+encuestado puede elegir la respuesta apropiada de una 
+lista predeterminada; por ejemplo, una lista de abreviaturas 
+de estados) 
+Se utiliza con frecuencia para una acción (por ejemplo, 
+el encuestado hace clic en un botón marcado como 
+“Enviar” o “Borrar”) 
+  FIGURA 4.13     
+Al diseñar una encuesta Web, 
+tenga en cuenta que hay distintas 
+maneras de capturar las respuestas. 
+/g1/g1 www.xlibros.com 120     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+O P O R T U N I D A D  D E  C O N S U L T O R Í A   4 . 4  
+El cuestionario insoportable 
+ “V oy a entrar en depresión o, por lo menos, voy a estar desani- 
+mado si alguien no averigua esto pronto”, dice Penny  Stox, ge- 
+rente de oficina para Carbon, Carbon & Rippy, una ca sa de bolsa 
+de tamaño considerable. Penny está sentada en una m esa de 
+conferencias frente a usted y dos de sus ejecutivos de cuenta más 
+productivos, By Lowe y Sal Hy. Todos están reflexion ando sobre 
+las respuestas a un cuestionario que se distribuyó e ntre los eje- 
+cutivos de cuenta de la empresa, el cual se muestra en la figura 
+4.C1. 
+“Necesitamos una bola de cristal para entenderlos”, dicen By 
+y Sal al mismo tiempo. 
+“Tal vez refleje cierto tipo de ciclo optimista, o algo así”, dice 
+Penny al tiempo que lee más respuestas. “Por cierto, ¿quién diseñó 
+esta joya?” 
+“Rich Kleintz”, dicen By y Sal al unísono. 
+“Bueno, como pueden ver, ¡no nos dice nada!”, exclama Penny. 
+Penny y su personal están insatisfechos con las respuestas que 
+recibieron en el cuestionario insoportable; además sienten que las 
+respuestas son reflexiones poco realistas de la cantidad de informa- 
+ción que desean los ejecutivos de cuenta. Explique en un párrafo por 
+qué están ocurriendo estos problemas. En una hoja aparte, cambie 
+la escala de las preguntas para evitar estos problemas. 
+Cir cule el número apropiado para cada fuente de información descrita. 
+1. Informes industriales 
+Aproximadamente 
+igual 
+Menos 
+Más 1 2 
+3 4 
+52. Análisis de tendencias 
+Aproximadamente 
+igual 
+Menos 
+Más 1 2 3 4 
+53. Gráficos generados por computadora 
+Aproximadamente 
+igual 
+Menos 
+Más 1 2 
+3 4 
+54. Servicios de asesoría en inversiones 
+Aproximadamente 
+igual 
+Menos 
+Más 1 2 3 4 
+5
+5. Gráficos de puntos y figuras 
+Aproximadamente 
+igual 
+Menos 
+Más 
+1 2 
+3 4 5
+6. Análisis de cartera de clientes computarizada 
+Aproximadamente 
+igual 
+Menos 
+Más 
+1 2 
+3 4 57. Información actualizad 
+a 
+Aproximadamente 
+igual 
+Menos 
+Más 
+1 2 
+3 4 
+5
+Necesitamos 
+cambiar este 
+cuestionario.
+  FIGURA 4.C1     
+Cuestionario desarrollado para la casa de bolsa Carbon, Carbon & Rippy, por Rich Kleintz. 
+/g1/g1 www.xlibros.com  CAPÍTULO 4 • RECOPILACIÓN DE INFORMACIÓN: MÉTODOS INTERACTIVOS   121 
+ORDEN DE LAS PREGUNTAS No existe una forma de ordenar las preguntas en el cuestionario que sea la mejor 
+de todas. Una vez más, al ordenar preguntas debe tener en cuenta sus objetivos al usar el cuestionario y después 
+determinar la función de cada pregunta para ayudarle a obtener sus objetivos. También es importante ver el 
+cuestionario a través de los ojos del encuestado. Algunos lineamientos para ordenar preguntas son: 
+    1. Coloque primero las preguntas que sean importantes para los encuestados. 
+   2. Agrupe elementos de contenido similar.  
+   3. Introduzca primero las preguntas menos controversiales. 
+Es conveniente que los encuestados no se sientan amenazados y que se interesen en las preguntas lo más que se 
+pueda, sin que se alteren por alguna cuestión específica.       
+O P O R T U N I D A D  D E  C O N S U L T O R Í A   4 . 5  
+Orden en las cortes 
+ “M  e encanta mi trabajo”, dice Tennys para empezar la entrevista 
+con una volea. “Es muy parecido a un juego. Mantengo mi vista en 
+la pelota y nunca me distraigo”, continúa. Tennyson “Tennys” Courts 
+es gerente de Global Health Spas, Inc., una empresa que cuenta con 
+spas medicinales y recreativos populares en todo el mundo. 
+“Ahora que terminé mi MBA, siento que estoy en la cima del 
+mundo con Global”, dice Tennys. “Creo que realmente puedo ayu- 
+dar a poner en forma este negocio con sus computadoras y spas 
+medicinales”. 
+Tennys está tratando de ayudarle a usted y a su grupo de siste- 
+mas, que están desarrollando un sistema para que lo utilicen las 80 
+sucursales (en donde en la actualidad cada grupo administra su 
+propio papeleo). “¿Le puedo pasar esto?”, Tennys pregunta a Terri 
+Towell, miembro del equipo de analistas de sistemas que usted di- 
+rige. “Es un cuestionario que diseñé para distribuirlo a todos los 
+gerentes de los spas”. 
+Terri, que siempre ha sido buena deportista, le dice a Tennys 
+que le encantaría dar un vistazo al formulario. Pero de vuelta en la 
+oficina, Terri le devuelve la pelota. Critique de manera sistemática 
+la técnica de Tennys según lo descrito en la figura 4.C2 y explíquele 
+punto por punto lo que necesita para ser un cuestionario sin igual 
+con un formulario ganador. Con base en la crítica que elabore, diga 
+a Tennys lo que debe hacer para volver a escribir el formulario, esta 
+vez en forma de encuesta Web. 
+CUESTIONARIO PARA TODOS LOS GERENTES DE SPAS MEDICINALES 
+*** URGENTE *** LLENE EL CUESTIONARIO DE INMEDIATO Y 
+ENTRÉGUELO EN PERSONA A SU GERENTE DE DIVISIÓN. SE RETENDRÁ 
+SU SIGUIENTE NÓMINA HASTA QUE SE CONFIRME QUE LO ENTREGÓ. 
+En 10 palabras o menos, ¿qué quejas ha presentado en relación con el 
+sistema de cómputo actual durante el periodo de los últimos seis meses 
+a un año? 
+¿Hay otras personas que se sientan igual que usted en su sucursal? 
+¿Quiénes? Haga una lista de sus nombres y puestos. 
+1.                                                      2. 
+3.                                                      4. 
+5. 
+7. 
+¿Cuál es el mayor problema que tiene al comunicar sus 
+requerimientos de información a las oficinas generales? 
+Descríbalo en forma breve. 
+¿Cuánto tiempo de inactividad en las computadoras 
+experimentó el año pasado? 
+1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 
+¿Hay equipo de cómputo que nunca utiliza? 
+Descripción    Número de serie 
+¿Desea que se lo lleven?  De acuerdo  Neutral  En desacuerdo 
+En su opinión, ¿qué hay que hacer ahora en cuanto a  las 
+computadoras y Global Health Spas? 
+Gracias por llenar este cuestionario.   • • • • • • • • • • • • • • • • 
+Terri 
+     P or favor ayúdeme 
+a mejor ar este 
+formulario .
+     Tennys 
+  FIGURA 4.C2     
+Cuestionario desarrollado para los gerentes de Global Health Spas, por Tennys Courts. 
+/g1/g1 www.xlibros.com 122     PARTE II ANÁLISIS DE LOS REQUERIMIENTOS DE INFORMAC IÓN 
+Administración de los cuestionarios 
+ENCUESTADOS El proceso de decidir quién recibirá el cuestionario se lleva a cabo en conjunto con la tarea de establecer 
+objetivos para sus resultados. El muestreo (que veremos en el capítulo 5) ayuda al analista de sistemas a determinar 
+el tipo de representación necesario y, en consecuencia, el tipo de encuestados que deben recibir el cuestionario. 
+A menudo se eligen encuestados que sean representativos debido a su rango, el tiempo que han estado con 
+la empresa, sus responsabilidades laborales o el interés especial en el sistema actual o propuesto. Asegúrese de 
+incluir suficientes encuestados para obtener un muestreo razonable en caso de que no se devuelvan algunos cues- 
+tionarios o de que algunas hojas de respuesta se llenen de manera incorrecta y por ende haya que descartarlas. 
+MÉTODOS PARA ADMINISTRAR EL CUESTIONARIO El analista de sistemas cuenta con varias opciones para 
+administrar el cuestionario; a menudo la elección del método administrativo se determina en base a la situación 
+de negocios existente. Las opciones para administrar el cuestionario son: 
+    1. Convocar al mismo tiempo a todos los encuestados concernientes. 
+   2. Entregar cuestionarios en blanco en forma personal y recoger los cuestionarios que ya estén llenos.  
+   3. Permitir que los encuestados administren su propio cuestionario en el trabajo y lo depositen en una caja 
+ubicada en un lugar céntrico. 
+   4. Enviar por correo los cuestionarios a los empleados en las sucursales y proveer una fecha de entrega, 
+instrucciones y un sobre con franqueo pagado.  
+   5. Administrar el cuestionario en forma electrónica, ya sea a través de correo electrónico o Web.   
+Cada uno de estos cinco métodos tiene ventajas y desventajas. Es común permitir que los encuestados ad- 
+ministren su propio cuestionario. Las tasas de respuesta con este método son un poco más bajas que con los 
+otros métodos, debido a que las personas a veces se olvidan del formulario, lo pierden o lo ignoran de manera 
+intencional. Sin embargo, al administrar su propio cuestionario, las personas sienten que tienen asegurado su 
+anonimato y es posible que algunos encuestados den respuestas menos cautelosas. Las encuestas por correo elec- 
+trónico y Web se encuentran en la categoría de cuestionarios autoadministrados. 
+Administrar el cuestionario vía electrónica, ya sea por correo electrónico o a través de un sitio Web, es una 
+manera de llegar rápidamente a los usuarios del sistema actual. Se minimizan los costos de tener que sacar copias. 
+Además, el encuestado puede responder a su propia conveniencia para después recolectar todos los cuestionarios 
+en forma automática y almacenarlos en medios electrónicos. Hay cierto software que permite a los encuestados 
+empezar a contestar una encuesta, guardar sus respuestas y regresar más tarde para terminar de contestar en caso 
+de interrupciones. Se pueden enviar recordatorios a los encuestados de una manera fácil y económica por me- 
+dio de correo electrónico, al igual que las notificaciones para hacer saber al analista cuando el encuestado haya 
+abierto el correo electrónico. También hay software que convierte los datos de los correos electrónicos en tablas 
+para usarlas en software de hojas de cálculo o de análisis estadístico. Hay un servicio popular que los consultores 
+utilizan para crear y administrar encuestas en línea. SurveyMonkey.com (www.surveymonkey.com) es una em- 
+presa ubicada en Portland, Oregon que empezó en 1999 y hace poco agregó a sus ofrecimientos de productos un 
+servicio de marketing por email conocido como MailChimp. 
+La investigación muestra que los encuestados están dispuestos a responder, a través de Internet, preguntas 
+sobre cuestiones delicadas. Por ende, es probable que las preguntas que tal vez sean difíciles de plantear en per- 
+sona en relación con los problemas de sistemas, sí se puedan plantear en una encuesta Web. 
+Este capítulo aborda tres de los métodos interactivos clave 
+para recopilar información y que el analista de sistemas puede 
+utilizar: entrevistas, JAD y cuestionarios. Durante el proceso de 
+la entrevista, los analistas esperan escuchar cuestiones de HCI 
+relacionadas con la ergonomía, la estética, la capacidad de uso 
+y la utilidad, así como los objetivos, sentimientos, opiniones y 
+procedimientos informales en las entrevistas con lo s encarga- 
+dos de tomar las decisiones en la organización. Las  entrevistas 
+son diálogos planeados de preguntas y respuestas entre dos 
+personas. Los analistas utilizan la entrevista para desarrollar 
+su relación con un cliente, observar el entorno de trabajo y 
+recolectar datos. Es preferible llevar a cabo las entrevistas en 
+persona. 
+Los cinco pasos a seguir para planear la entrevista son leer 
+el material sobre los antecedentes, establecer los objetivos de 
+la entrevista, decidir a quiénes entrevistar, preparar al entrevis- 
+tado y decidir sobre los tipos y la estructura de las preguntas. 
+Las preguntas son de dos tipos básicos: abiertas o cerradas. 
+Las preguntas abiertas permiten todas las opciones de respuesta 
+para el entrevistado. Las preguntas cerradas limitan las posibles 
+opciones de respuesta. Las preguntas de sondeo o de seguimiento 
+pueden ser cerradas o abiertas, pero le piden al entrevistado una 
+contestación más detallada. 
+Las entrevistas se pueden estructurar en tres forma s: pirá- 
+mide, embudo o diamante. Las estructuras de pirámide empiezan 
+con preguntas cerradas detalladas y se amplían con preguntas 
+más generalizadas. Las estructuras de embudo empiez an con 
+preguntas abiertas generales y después se restringen a preguntas 
+cerradas más específicas. Las estructuras en forma de diamante 
+combinan las ventajas de las otras dos estructuras, pero se requiere 
+RESUMEN 
+/g1/g1 www.xlibros.com 
