@@ -33,7 +33,7 @@ def load_model_components():
                 return pred
         
         # Load vocabulary
-        vocabulary_path = "../data/vocabulary.txt"
+        vocabulary_path = "data/vocabulary.txt"
         vocabulary = []
         
         with open(vocabulary_path, "rb") as cf:
@@ -41,7 +41,7 @@ def load_model_components():
             vocabulary = [ast.literal_eval(l) for l in lines]
         
         # Load model
-        model_path = "../data/models/100-1-256-256.pt"
+        model_path = "data/models/100-1-256-256.pt"
         model = SkipGram(vocabulary, 256)
         model.load_state_dict(torch.load(model_path, weights_only=True, map_location='cpu'))
         model.eval()
@@ -85,19 +85,25 @@ if 'score' not in st.session_state:
     st.session_state.score = 0
 if 'attempts' not in st.session_state:
     st.session_state.attempts = 0
+if 'vidas' not in st.session_state:
+    st.session_state.vidas = 3
 
 # Game interface
 st.header("🎯 Encuentra las palabras relacionadas")
 
-concept_idx = random.randint(0, len(vocabulary) - 1)
-st.session_state.current_concept = concept_idx
-st.session_state.related_concepts = get_related_concepts(
-                    concept_idx, 10, model.central_embedding, vocabulary, torch
-                )
+# Generar nuevo concepto si es necesario
+if st.session_state.current_concept is None:
+    concept_idx = random.randint(0, len(vocabulary) - 1)
+    st.session_state.current_concept = concept_idx
+    st.session_state.related_concepts = get_related_concepts(
+                        concept_idx, 10, model.central_embedding, vocabulary, torch)
 
+# Mostrar concepto actual
 if st.session_state.current_concept is not None:
     current_concept = vocabulary[st.session_state.current_concept]
     st.header(f"🎮 Concepto actual: {' + '.join(current_concept)}")
+
+   
     
     """
     JUST FOR TESTING BLOCK
@@ -112,31 +118,64 @@ if st.session_state.current_concept is not None:
     """
     END OF JUST FOR TESTING BLOCK
     """
-    
-    st.subheader("Tu turno")
-    user_guess = st.text_input("Ingresa palabras separadas por comas que crees que están relacionadas:", 
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown(f"<div style='text-align:center; font-size:20px;'>🏆 Puntaje { st.session_state.score}</div>", unsafe_allow_html=True)
+
+    with col2:
+        hearts = "❤️" * st.session_state.vidas + "🤍" * (3 - st.session_state.vidas)
+        st.markdown(f"<div style='text-align:center; font-size:20px;'>Vidas {hearts}</div>", unsafe_allow_html=True)
+
+st.subheader("Tu turno")
+
+
+
+user_guess = st.text_input("Ingresa palabras separadas por comas que crees que están relacionadas:", 
                               placeholder="Ej: servidor, protocolo")
     
+verificar_disabled = st.session_state.vidas == 0
 
-    if user_guess and st.button("Verificar respuesta"):
+if verificar_disabled:
+    st.info("🛑 Ya no tienes más intentos. Reinicia el juego para seguir jugando.")
+    st.write("**Top 10 conceptos más relacionados:**")
+
+    # Show the related concepts
+    for i, related_concept in enumerate(st.session_state.related_concepts, 1):
+        concept_str = " + ".join(related_concept)
+        st.write(f"{i}. {concept_str}")
+
+
+if user_guess:
+    if st.button("Verificar respuesta", disabled=verificar_disabled):
         # parsing user's input
         guess_words = [word.strip().lower() for word in user_guess.split(",")]
         guess_tuple = tuple(sorted(guess_words))
         
         found = False
-        for related_concept in st.session_state.related_concepts:
+        puntos = 0
+
+        for idx ,related_concept in enumerate(st.session_state.related_concepts):
             related_tuple = tuple(sorted([word.lower() for word in related_concept]))
             if guess_tuple == related_tuple:
                 found = True
+                puntos = 10 - idx  # Top1 = 10 pts, Top10 = 1 pt
+                st.session_state.score += puntos
+                st.success(f"¡Correcto! Ganaste {puntos} puntos 🎉") #TODO -  no se estan mostrando estos msj por el rerun
+                # Pasar a nuevo concepto
+                st.session_state.current_concept = None
+                st.rerun()
                 break
         
         st.session_state.attempts += 1
         
-        if found:
-            st.session_state.score += 1
-            st.success("¡Correcto! 🎉")
-        else:
-            st.error("No está en el top 10. ¡Intenta de nuevo!")
+   
+        if not found:
+            st.session_state.vidas = max(0, st.session_state.vidas - 1)
+            st.error("No está en el top 10. ¡Intenta de nuevo!") #TODO -  no se estan mostrando estos msj por el rerun
+            st.rerun()
+
+#TODO -  no se elimina el contenido del input luego de verificar la rta
 
 # Reset game button
 if st.button("Nuevo juego", type="secondary"):
@@ -144,4 +183,5 @@ if st.button("Nuevo juego", type="secondary"):
     st.session_state.related_concepts = []
     st.session_state.score = 0
     st.session_state.attempts = 0
+    st.session_state.vidas = 3
     st.rerun()

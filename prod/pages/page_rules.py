@@ -15,7 +15,9 @@ Se juega de forma individual y el jugador consta de n vidas, que son intentos pa
 
 ## ¿Cómo jugar?
 Se presenta un concepto al jugador, el jugador deberá ingresar el concepto
-que crea ser el más relacionado a ese. Una vez ingresado se dan dos situaciones:
+que crea ser el más relacionado a ese. 
+            
+Una vez ingresado se dan dos situaciones:
             
             
 1. El jugador acierta entre una de los 10 conceptos más relacionados.
@@ -26,11 +28,19 @@ En la primera situación el jugador pasa a la siguiente ronda y suma un puntaje.
             ingresado con el concepto de la ronda.
             
             
-// TODO: Insertar equivalencias entre puntajes
 
+Cálculo de los puntajes:
+
+* Top 1 = 10 puntos,
+
+* Top 2 = 9 puntos,
+
+ ...
+
+* Top 10 = 1 punto.
+ 
             
-            
-En la segunda situación, el jugador pierde una vida. Si pierde sus n vidas entonces termina el juego, sino, pasa a la
+En la segunda situación, el jugador pierde una vida. Cada jugador tiene 3 vidas. Si pierde sus 3 vidas entonces termina el juego, sino, pasa a la
 siguiente ronda.
 
             """)
