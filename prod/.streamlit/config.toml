@@ -1,0 +1,6 @@
+[theme]
+base="dark"
+baseRadius="full"
+
+[theme.sidebar]
+base="dark"
