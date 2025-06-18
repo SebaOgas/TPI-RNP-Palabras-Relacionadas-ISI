@@ -31,7 +31,7 @@ def load_model_components():
                 return pred
         
         # Load vocabulary
-        vocabulary_path = "../data/vocabulary.copy.txt"
+        vocabulary_path = "../data/vocabulary.txt"
         vocabulary = []
         
         with open(vocabulary_path, "rb") as cf:

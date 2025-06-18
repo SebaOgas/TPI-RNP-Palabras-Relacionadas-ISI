@@ -19,7 +19,7 @@ pages = {
         st.Page("pages/page_rules.py", title="Reglas", icon=":material/info:"),
     ], 
     "Extras": [
-
+        st.Page("pages/page_embedding.py", title="Embedding")
     ]
    
 }
