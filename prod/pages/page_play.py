@@ -1,13 +1,11 @@
 import streamlit as st
 import os
 import random
+import pandas as pd
+import time
 
-st.title("ISINet Quizz - Juego")
+st.title("Juego")
 st.caption("¡Adivina las palabras relacionadas a temas de Ingeniería en Sistemas de Información!")
-
-# Add a back button to return to main page
-if st.button("Volver al inicio", icon=":material/arrow_back:", use_container_width=True):
-    st.switch_page("streamlit_app.py")
 
 @st.cache_resource
 def load_model_components():
@@ -33,7 +31,7 @@ def load_model_components():
                 return pred
         
         # Load vocabulary
-        vocabulary_path = "data/vocabulary.txt"
+        vocabulary_path = "../data/vocabulary.copy.txt"
         vocabulary = []
         
         with open(vocabulary_path, "rb") as cf:
@@ -41,7 +39,7 @@ def load_model_components():
             vocabulary = [ast.literal_eval(l) for l in lines]
         
         # Load model
-        model_path = "data/models/100-1-256-256.pt"
+        model_path = "../data/models/100-1-256-256.pt"
         model = SkipGram(vocabulary, 256)
         model.load_state_dict(torch.load(model_path, weights_only=True, map_location='cpu'))
         model.eval()
@@ -101,87 +99,111 @@ if st.session_state.current_concept is None:
 # Mostrar concepto actual
 if st.session_state.current_concept is not None:
     current_concept = vocabulary[st.session_state.current_concept]
-    st.header(f"🎮 Concepto actual: {' + '.join(current_concept)}")
-
-   
     
-    """
-    JUST FOR TESTING BLOCK
-    """
-    st.write("**Top 10 conceptos más relacionados:**")
-    
+    # JUST FOR TESTING BLOCK
+    os.write(1, "Top 10 conceptos más relacionados:\n".encode())
     # Show the related concepts
     for i, related_concept in enumerate(st.session_state.related_concepts, 1):
         concept_str = " + ".join(related_concept)
-        st.write(f"{i}. {concept_str}")
+        os.write(1, f"{i}. {concept_str}\n".encode())
+   # END OF JUST FOR TESTING BLOCK
 
-    """
-    END OF JUST FOR TESTING BLOCK
-    """
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2, border=True)
+
+    hearts = "❤️" * st.session_state.vidas + "🤍" * (3 - st.session_state.vidas)
 
     with col1:
-        st.markdown(f"<div style='text-align:center; font-size:20px;'>🏆 Puntaje { st.session_state.score}</div>", unsafe_allow_html=True)
+        st.html(f"<div style='text-align:center; font-size:20px;'>🏆 Puntaje {st.session_state.score}</div>")
 
     with col2:
-        hearts = "❤️" * st.session_state.vidas + "🤍" * (3 - st.session_state.vidas)
-        st.markdown(f"<div style='text-align:center; font-size:20px;'>Vidas {hearts}</div>", unsafe_allow_html=True)
+        st.html(f"<div style='text-align:center; font-size:20px;'>Vidas {hearts}</div>")
+
+    st.header(f"🎮 Concepto -> {' + '.join(current_concept)}")
 
 st.subheader("Tu turno")
-
-
-
-user_guess = st.text_input("Ingresa palabras separadas por comas que crees que están relacionadas:", 
-                              placeholder="Ej: servidor, protocolo")
     
-verificar_disabled = st.session_state.vidas == 0
+# Play Again Btn Component
+def play_again_btn(key):
+    if st.button("Nuevo juego", type="secondary", key=key,use_container_width=True, icon=":material/sports_esports:"):
+        st.session_state.current_concept = None
+        st.session_state.related_concepts = []
+        st.session_state.score = 0
+        st.session_state.attempts = 0
+        st.session_state.vidas = 3
+        st.rerun()
 
-if verificar_disabled:
-    st.info("🛑 Ya no tienes más intentos. Reinicia el juego para seguir jugando.")
-    st.write("**Top 10 conceptos más relacionados:**")
+# Loose Dialog Component
+@st.dialog("🛑 Ya no te quedan más vidas")
+def loose_dialog():
+    play_again_btn("no-lifes")
+    st.header("**Top 10 conceptos relacionados**")
 
+    conceptos = []
     # Show the related concepts
-    for i, related_concept in enumerate(st.session_state.related_concepts, 1):
+    for related_concept in st.session_state.related_concepts:
         concept_str = " + ".join(related_concept)
-        st.write(f"{i}. {concept_str}")
+        conceptos.append(concept_str)
+
+    dt = pd.DataFrame({
+        "puestos" : range(1, len(conceptos) + 1),
+        "conceptos" : conceptos
+    })
+
+    st.dataframe(dt, hide_index=True, column_config= {
+        "puestos": st.column_config.Column(
+            "Puestos",
+            width = "small",
+        ),
+        "conceptos": st.column_config.Column(
+            "Conceptos",
+            width = "large"
+        )
+    })
+
+def get_guess_points(user_guess):
+    # parsing user's input
+    guess_words = [word.strip().lower() for word in user_guess.split(",")]
+    guess_tuple = tuple(sorted(guess_words))
+
+    for idx ,related_concept in enumerate(st.session_state.related_concepts):
+        related_tuple = tuple(sorted([word.lower() for word in related_concept]))
+        if guess_tuple == related_tuple:
+            puntos = 10 - idx  # Top1 = 10 pts, Top10 = 1 pt
+            return puntos  
+
+    return 0 # player didn't guess          
 
 
-if user_guess:
-    if st.button("Verificar respuesta", disabled=verificar_disabled):
-        # parsing user's input
-        guess_words = [word.strip().lower() for word in user_guess.split(",")]
-        guess_tuple = tuple(sorted(guess_words))
-        
-        found = False
-        puntos = 0
+player_lost = st.session_state.vidas == 0
 
-        for idx ,related_concept in enumerate(st.session_state.related_concepts):
-            related_tuple = tuple(sorted([word.lower() for word in related_concept]))
-            if guess_tuple == related_tuple:
-                found = True
-                puntos = 10 - idx  # Top1 = 10 pts, Top10 = 1 pt
-                st.session_state.score += puntos
-                st.success(f"¡Correcto! Ganaste {puntos} puntos 🎉") #TODO -  no se estan mostrando estos msj por el rerun
-                # Pasar a nuevo concepto
-                st.session_state.current_concept = None
-                st.rerun()
-                break
-        
-        st.session_state.attempts += 1
-        
-   
-        if not found:
-            st.session_state.vidas = max(0, st.session_state.vidas - 1)
-            st.error("No está en el top 10. ¡Intenta de nuevo!") #TODO -  no se estan mostrando estos msj por el rerun
-            st.rerun()
+if player_lost:
+    loose_dialog()
 
+col1, col2 = st.columns([12, 1], vertical_alignment="bottom")
+user_guess = col1.text_input("Ingresa palabras separadas por comas que crees que están relacionadas:", 
+                              placeholder="Ej: servidor, protocolo")
+
+if col2.button("", disabled=player_lost, icon=":material/keyboard_return:"):
+    
+    
+    points = get_guess_points(user_guess)
+    st.session_state.score += points
+    
+    if points == 0:
+        st.session_state.vidas = max(0, st.session_state.vidas - 1)
+        st.error("No está en el top 10. ¡Intenta de nuevo!") #TODO -  no se estan mostrando estos msj por el rerun
+        time.sleep(1.5)
+        st.rerun()
+
+
+    
+    st.success(f"¡Correcto! Ganaste {points} puntos 🎉") #TODO -  no se estan mostrando estos msj por el rerun
+    # Pasar a nuevo concepto
+    st.session_state.current_concept = None
+    time.sleep(1.5)
+    st.rerun()
+    
 #TODO -  no se elimina el contenido del input luego de verificar la rta
 
 # Reset game button
-if st.button("Nuevo juego", type="secondary"):
-    st.session_state.current_concept = None
-    st.session_state.related_concepts = []
-    st.session_state.score = 0
-    st.session_state.attempts = 0
-    st.session_state.vidas = 3
-    st.rerun()
+play_again_btn("always-shown")

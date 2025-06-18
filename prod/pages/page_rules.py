@@ -1,46 +1,24 @@
 import streamlit as st
+import pandas as pd
 
-st.title("ISINet Quizz - Reglas")
-
-if st.button("Volver al inicio", icon=":material/arrow_back:", use_container_width=True):
-    st.switch_page("streamlit_app.py")
+st.title("ⓘ Reglas")
 
 st.markdown("""
-**ISINet Quizz** es un juego que consiste en relacionar conceptos de temas de Ingeniería de Sistemas. 
-            Se presenta un concepto y el jugador tiene que adivinar un concepto relacionado que al menos
-            esté entre los **top 10 de conceptos más relacionados al propuesto**.
+**ISINet Quizz** es un juego basado en la ISINet, que consiste en relacionar conceptos sobre temas de Ingeniería de Sistemas de Información. 
 
-Se juega de forma individual y el jugador consta de n vidas, que son intentos para adivinar el concepto entre 
-            el top 10.
+### Ronda
+Se presenta un concepto a fin y **el jugador deberá ingresar conceptos relacionados**. Para pasar a la siguiente ronda, el concepto
+relacionado deberá estar en el **top 10 de conceptos más relacionados al propuesto**.
 
-## ¿Cómo jugar?
-Se presenta un concepto al jugador, el jugador deberá ingresar el concepto
-que crea ser el más relacionado a ese. 
+### Vidas
+El juego es individual y **el jugador posee de 3 vidas**. Por cada intento fallido (el concepto ingresado no pertenece al top 10) pierde una vida.
+El jugador pierde el juego una vez perdida sus 3 vidas, por lo que deberá iniciar uno nuevo.
             
-Una vez ingresado se dan dos situaciones:
-            
-            
-1. El jugador acierta entre una de los 10 conceptos más relacionados.
-2. El jugador no acierta.
-            
+### Puntuación
+Cuando el jugador acierta entre uno de los 10 conceptos más relacionados, pasa a la siguiente ronda y consigue sumar puntos. El cálculo
+del puntaje procede según la posición en el top que ocupe el concepto ingresado, siendo la **puntuación máxima de 10 para el top 1** y la **mínima 1 para el top 10**.
+""")
 
-En la primera situación el jugador pasa a la siguiente ronda y suma un puntaje. Dicho puntaje se calcula en función de que tan relacionado fue el concepto
-            ingresado con el concepto de la ronda.
-            
-            
 
-Cálculo de los puntajes:
-
-* Top 1 = 10 puntos,
-
-* Top 2 = 9 puntos,
-
- ...
-
-* Top 10 = 1 punto.
- 
-            
-En la segunda situación, el jugador pierde una vida. Cada jugador tiene 3 vidas. Si pierde sus 3 vidas entonces termina el juego, sino, pasa a la
-siguiente ronda.
-
-            """)
+if st.button("Jugar", icon=":material/sports_esports:", use_container_width=True):
+    st.switch_page("pages/page_play.py")
