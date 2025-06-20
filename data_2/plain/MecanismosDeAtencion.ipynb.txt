@@ -1,0 +1,94 @@
+Mecanismos de Atención
+
+Queries, Keys, and Values
+
+Pensemos un poco en las bases de datos. En su forma más simple son colecciones de claves () y valores (). Por ejemplo, nuestra base de datos  podría consistir en tuplas {("Zhang", "Aston"), ("Lipton", "Zachary"), ("Li", "Mu"), (" Smola", "Alex"), ("Hu", "Rachel"), ("Werness", "Brent")} siendo el apellido la clave y el nombre el valor. Podemos operar en , por ejemplo con la consulta exacta () para "Li" que devolvería el valor "Mu". Si ("Li", "Mu") no fuera un registro en , no habría una respuesta válida. Si también permitiéramos coincidencias aproximadas, recuperaríamos ("Lipton", "Zachary") en su lugar. Sin embargo, este ejemplo bastante simple y trivial nos enseña una serie de cosas útiles:
+Podemos diseñar consultas  que operen en pares (,) de tal manera que sean válidas independientemente del tamaño de la base de datos.
+Una misma consulta puede recibir diferentes respuestas, según el contenido de la base de datos.
+El "código" que se ejecuta para operar en un espacio de estado grande (la base de datos) puede ser bastante simple (por ejemplo, coincidencia exacta, coincidencia aproximada, top-).
+No es necesario comprimir ni simplificar la base de datos para que las operaciones sean efectivas.
+
+Claramente no habríamos introducido aquí una base de datos simple si no fuera con el propósito de explicar el aprendizaje profundo. De hecho, esto conduce a uno de los conceptos más interesantes introducidos en el aprendizaje profundo en la última década: el mecanismo de atención. Por ahora, simplemente considere lo siguiente: sea  una base de datos de  tuplas de claves y valores. Además, denota por  una consulta. Entonces podemos definir la atención sobre  como
+
+donde  () son pesos de atención escalares. La operación en sí se suele denominar agrupación de atención. El nombre atención deriva del hecho de que la operación presta especial atención a los términos para los cuales el peso  es significativo (es decir, grande). Como tal, la atención sobre  genera una combinación lineal de valores contenidos en la base de datos. De hecho, esto contiene el ejemplo anterior como un caso especial en el que todos los pesos menos uno son cero. Tenemos una serie de casos especiales:
+Los pesos  forman una combinación convexa, es decir,  y  para todos los . Esta es la configuración más común en el aprendizaje profundo.
+Exactamente uno de los pesos  es , mientras que todos los demás son . Esto es similar a una consulta de base de datos tradicional.
+Todos los pesos son iguales, es decir,  para todos los . Esto equivale a promediar toda la base de datos, también llamado average pooling en aprendizaje profundo.
+
+Una estrategia común para garantizar que los pesos sumen  es normalizarlos mediante
+
+En particular, para garantizar que las ponderaciones tampoco sean negativas, se puede recurrir a la exponenciación. Esto significa que ahora podemos elegir cualquier función  y luego aplicarle la operación softmax utilizada para los modelos multinomiales mediante
+
+Esta operación está disponible en todos los marcos de aprendizaje profundo. Es diferenciable y su gradiente nunca desaparece, todas las cuales son propiedades deseables en un modelo.
+
+where weights are derived according to the compatibility between a query  and keys .
+
+Lo que es bastante notable es que el "código" real para ejecutar en el conjunto de claves y valores, es decir, la consulta, puede ser bastante conciso, aunque el espacio para operar es significativo. Esta es una propiedad deseable para una capa de red, ya que no requiere demasiados parámetros para aprender. Igual de conveniente es el hecho de que la atención puede operar en bases de datos arbitrariamente grandes sin la necesidad de cambiar la forma en que se realiza la operación de agrupación de atención.
+
+Visualización
+
+Uno de los beneficios del mecanismo de atención es que puede ser bastante intuitivo, particularmente cuando los pesos no son negativos y suman . En este caso podríamos interpretar pesos grandes como una forma para que el modelo seleccione componentes de relevancia. Si bien esta es una buena intuición, es importante recordar que es sólo eso, una intuición. De todos modos, es posible que queramos visualizar su efecto en el conjunto de claves dado al aplicar una variedad de consultas diferentes. Esta función será útil más adelante.
+
+Así definimos la función show_heatmaps. Tenga en cuenta que no toma una matriz (de pesos de atención) como entrada, sino un tensor con cuatro ejes, lo que permite una variedad de consultas y pesos diferentes. En consecuencia, las "matrices" de entrada tienen la forma (número de filas para mostrar, número de columnas para mostrar, número de consultas, número de claves). Esto será útil más adelante cuando queramos visualizar el funcionamiento del diseño de Transformers.
+
+Como comprobación rápida de cordura, visualicemos la matriz de identidad, que representa un caso en el que el peso de atención es  solo cuando la consulta y la clave son las mismas.
+
+Atención de Producto Punto
+En la sección anterior dijimos que podíamos elegir cualquier función  y luego aplicarle la operación softmax  para asegurar que los pesos de atención se comportaran como distribuciones de probabilidad. En esta sección vamos a algunos ejemplos típicos para  conocidas como Funciones de Puntuación de Atención (Attention Scoring Functions).
+
+Supongamos que todos los elementos de la consulta  y la clave  son independientes y se dibujan aleatoriamente de forma idéntica. variables con media cero y varianza unitaria. El producto escalar entre ambos vectores tiene media cero y una varianza de . Para garantizar que la varianza del producto escalar siga siendo  independientemente de la longitud del vector, utilizamos la función de puntuación atención del producto escalar. Es decir, reescalamos el producto escalar en . Llegamos así a la primera función de atención comúnmente utilizada que se utiliza
+
+Tenga en cuenta que los pesos de atención  aún necesitan normalizarse. Podemos simplificar esto aún más mediante
+
+Resulta que todos los mecanismos de atención populares utilizan softmax, por lo que nos limitaremos a eso en el resto de este capítulo.
+
+Funciones Útiles
+
+Necesitamos algunas funciones para que el mecanismo de atención sea eficiente de implementar. Esto incluye herramientas para manejar cadenas de longitudes variables (comunes para el procesamiento del lenguaje natural) y herramientas para una evaluación eficiente en minibatches (multiplicación de matrices por lotes).
+
+Operación Softmax enmascarada
+
+Una de las aplicaciones más populares del mecanismo de atención son los modelos que procesan secuencias. Por tanto, necesitamos poder tratar con secuencias de diferentes longitudes. En algunos casos, dichas secuencias pueden terminar en el mismo minibatch, lo que requiere rellenar con tokens ficticios para secuencias más cortas. Estas fichas especiales no tienen significado. Por ejemplo, supongamos que tenemos las siguientes tres oraciones:
+
+Dive  into  Deep    Learning
+Learn to    code    <blank>
+Hello world <blank> <blank>
+
+Como no queremos que nuestro modelo preste atención a los espacios en blanco, simplemente necesitamos limitar  a  donde , es el tamaño real de la oración. Dado que es un problema tan común, tiene un nombre: operación softmax enmascarada.
+
+Implementémoslo. En realidad, la implementación hace un ligero truco al establecer los valores de , para , en cero. Además, establece los pesos de atención en un número negativo grande, como , para que su contribución a los gradientes y valores desaparezca en la práctica. Esto se hace porque los núcleos y operadores de álgebra lineal están muy optimizados para las GPU y es más rápido desperdiciar un poco el cálculo que tener código con declaraciones condicionales (if then else)
+
+Para ilustrar cómo funciona esta función, considere un minilote de dos ejemplos de tamaño , donde sus longitudes válidas son  y , respectivamente. Como resultado de la operación softmax enmascarada, los valores más allá de las longitudes válidas para cada par de vectores se enmascaran como cero.
+
+Si necesitamos un control más detallado para especificar la longitud válida para cada uno de los dos vectores de cada ejemplo, simplemente usamos un tensor bidimensional de longitudes válidas. Esto produce:
+
+Multiplicación de matrices por lotes
+Otra operación comúnmente utilizada es multiplicar lotes de matrices entre sí. Esto resulta útil cuando tenemos minilotes de consultas, claves y valores. Más específicamente, supongamos que
+
+Luego, la multiplicación de matrices por lotes (BMM) calcula el producto elemento a elemento
+
+Veamos cómo se hace esto en PyTorch.
+
+Implementación como Capa
+
+Volvamos a la atención del producto  introducida.
+En general, requiere que tanto la consulta como la clave tengan la misma longitud de vector, digamos , aunque esto se puede solucionar fácilmente reemplazando  con  donde  es una matriz adecuadamente elegida para traducir entre ambos espacios. Por ahora supongamos que las dimensiones coinciden.
+
+En la práctica, a menudo pensamos en minilotes para lograr eficiencia, como calcular la atención para  consultas y  pares clave-valor.
+donde las consultas y las claves tienen una longitud  y los valores tienen una longitud . La atención del producto escalar escalado de consultas , claves  y valores  por lo tanto se puede escribir como
+
+Tenga en cuenta que al aplicar esto a un minibatch, necesitamos la multiplicación de matrices por lotes introducida anteriormente. En la siguiente implementación de la atención del producto escalado, utilizamos dropout para la regularización del modelo.
+
+Para ilustrar cómo funciona la clase DotProductAttention, asumimos que tenemos un tamaño de minibatch de , un total de  claves y valores, y que la dimensionalidad de los valores es . Por último, asumimos que la longitud válida por observación es  y  respectivamente. Dado eso, esperamos que la salida sea un tensor , es decir, una fila por ejemplo del minibatch.
+
+Vamos a comprobar si los pesos de atención realmente desaparecen para cualquier cosa más allá de la segunda y sexta columna respectivamente (debido a establecer la longitud válida en  y ).
+
+Atención aditiva
+
+Cuando las consultas  y las claves  son vectores de diferente dimensión, podemos usar una matriz para abordar la discrepancia mediante , o podemos usar atención aditiva como función de puntuación. Otro beneficio es que, como su nombre indica, la atención es aditiva. Esto puede generar algunos ahorros computacionales menores. Dada una consulta  y una clave , la función de puntuación de atención aditiva  está dado por
+
+donde ,  y  son los parámetros que se pueden aprender. Luego, este término se introduce en un softmax para garantizar tanto la no negatividad como la normalización. Usando  como función de activación y deshabilitando los términos de sesgo, implementamos la atención aditiva de la siguiente manera:
+
+Veamos cómo funciona "AdditiveAttention". En nuestro ejemplo de juguete, elegimos consultas, claves y valores de tamaño,  y , respectivamente. Esto es idéntico a nuestra elección para DotProductAttention, excepto que ahora las consultas tienen una dimensión de . Del mismo modo, elegimos  como las longitudes válidas para las secuencias del minibatch.
+
+Al revisar la función de atención vemos un comportamiento cualitativamente bastante similar al de DotProductAttention. Es decir, sólo los términos dentro de la longitud válida elegida  son distintos de cero.

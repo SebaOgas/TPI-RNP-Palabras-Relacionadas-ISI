@@ -1,0 +1,90 @@
+Single Shot Multibox Detection
+
+En las secciones anteriores introdujimos conceptos clave como las bounding boxes, anchor boxes, la detección de objetos a múltiples escalas y el conjunto de datos para la detección de objetos. Ahora estamos listos para utilizar este conocimiento de fondo para diseñar un modelo de detección de objetos: la Detección Multibox de Disparo Único (SSD, por sus siglas en inglés) Liu et. al, 2015. Este modelo es simple, rápido y ampliamente utilizado. Aunque este es solo uno de una gran cantidad de modelos de detección de objetos, algunos de los principios de diseño y detalles de implementación en esta sección también son aplicables a otros modelos.
+Modelo
+
+La Figura  nos brinda una visión general del diseño de la detección de SSD. Este modelo consta principalmente de una red base seguida de varios bloques de mapas de características a múltiples escalas. La red base se utiliza para extraer características de la imagen de entrada, por lo que puede utilizar una CNN profunda. Por ejemplo, el artículo original adopta una red VGG truncada antes de la capa de clasificación, aunque ResNet también se ha utilizado comúnmente. A través de nuestro diseño, podemos hacer que la red base produzca mapas de características más grandes para generar más anchor boxes para detectar objetos más pequeños. Posteriormente, cada bloque de mapas de características a múltiples escalas reduce (por ejemplo, a la mitad) la altura y el ancho de los mapas de características del bloque anterior, y permite que cada unidad de los mapas de características aumente su campo receptivo en la imagen de entrada.
+
+En resumen, a través de su red base y varios bloques de mapas de características a múltiples escalas, la detección multibox de disparo único genera una cantidad variable de anchor boxes con diferentes tamaños y detecta objetos de diferentes tamaños prediciendo las clases y desplazamientos de estas anchor boxes (y por ende las bounding boxes); por lo tanto, este es un modelo de detección de objetos a múltiples escalas.
+
+En lo siguiente, describiremos los detalles de implementación de los diferentes bloques en la Figura . Para empezar, discutimos cómo implementar la predicción de clases y bounding boxes.
+
+Capa de Predicción de Clases
+
+Supongamos que el número de clases de objetos es . Luego, las anchor boxes tienen  clases, donde la clase 0 es el fondo. A alguna escala, supongamos que la altura y el ancho de los mapas de características son  y , respectivamente. Cuando se generan  anchor boxes con cada posición espacial de estos mapas de características como su centro, un total de  anchor boxes necesitan ser clasificadas. Esto a menudo hace que la clasificación con capas densas sea inviable debido a los probables costos de parametrización pesados.
+
+Recordemos cómo usamos los canales de las capas convolucionales para predecir clases. La detección de un solo disparo con múltiples cajas utiliza la misma técnica para reducir la complejidad del modelo.
+
+Específicamente, la capa de predicción de clases utiliza una capa convolucional sin alterar el ancho o la altura de los mapas de características. De esta manera, puede haber una correspondencia uno a uno entre las salidas y las entradas en las mismas dimensiones espaciales (ancho y alto) de los mapas de características. Más concretamente, los canales de los mapas de características de salida en cualquier posición espacial  representan predicciones de clase para todas las anchor boxes centradas en  de los mapas de características de entrada. Para producir predicciones válidas, debe haber  canales de salida, donde para la misma posición espacial el canal de salida con índice  representa la predicción de la clase  () para la anchor box  ().
+
+A continuación, definimos una capa de predicción de clases de esta manera, especificando  y  a través de los argumentos numanchors y numclasses, respectivamente. Esta capa utiliza una capa convolucional de  con un relleno de 1. El ancho y la altura de la entrada y salida de esta capa convolucional permanecen sin cambios.
+
+Capa de Predicción de Bounding Boxes
+
+El diseño de la capa de predicción de bounding boxes es similar al de la capa de predicción de clases. La única diferencia radica en el número de salidas para cada anchor box: aquí necesitamos predecir cuatro desplazamientos en lugar de ( q+1 ) clases.
+
+Concatenando Predicciones para Multiples Escalas
+
+Como mencionamos, SSD utiliza mapas de características multinivel para generar anchor boxes y predecir sus clases y desplazamientos. En diferentes escalas, las formas de los mapas de características o el número de anchor boxes centradas en la misma unidad pueden variar. Por lo tanto, las formas de las salidas de predicción en diferentes escalas pueden variar.
+
+En el siguiente ejemplo, construimos mapas de características en dos escalas diferentes, Y1 y Y2, para el mismo minibatch, donde la altura y el ancho de Y2 son la mitad de los de Y1. Tomemos la predicción de clase como ejemplo. Supongamos que se generan 5 y 3 anchor boxes para cada unidad en Y1 y Y2, respectivamente. Supongamos además que el número de clases de objetos es 10. Para los mapas de características Y1 y Y2, los números de canales en las salidas de predicción de clase son  y , respectivamente, donde la forma de salida es (tamaño del lote, número de canales, altura, ancho).
+
+Como podemos ver, excepto por la dimensión del tamaño del lote, las otras tres dimensiones tienen tamaños diferentes. Para concatenar estas dos salidas de predicción para una computación más eficiente, transformaremos estos tensores en un formato más consistente.
+
+Nota que la dimensión del canal contiene las predicciones para las anchor boxes con el mismo centro. Primero movemos esta dimensión hacia la más interna. Dado que el tamaño del lote permanece igual para diferentes escalas, podemos transformar la salida de predicción en un tensor bidimensional con forma (tamaño del lote, altura  ancho  número de canales). Luego podemos concatenar tales salidas en diferentes escalas a lo largo de la dimensión 1.
+
+De esta manera, aunque Y1 y Y2 tienen tamaños diferentes en canales, alturas y anchuras, aún podemos concatenar estas dos salidas de predicción en dos escalas diferentes para el mismo minibatch.
+
+Bloque de Downsampling
+
+Para detectar objetos en múltiples escalas, definimos el siguiente bloque de downsampling downsampleblk que reduce a la mitad la altura y anchura de los mapas de características de entrada. De hecho, este bloque aplica el diseño de los bloques VGG. Más concretamente, cada bloque de downsampling consiste en dos capas convolucionales de  con padding de 1 seguidas por una capa de max-pooling de  con un stride de 2. Como sabemos, las capas convolucionales de  con padding de 1 no cambian la forma de los mapas de características. Sin embargo, el max-pooling de  subsecuente reduce la altura y anchura de los mapas de características de entrada a la mitad.
+
+Para los mapas de características de entrada y salida de este bloque de downsampling, debido a que , cada unidad en la salida tiene un campo receptivo de  en la entrada. Por lo tanto, el bloque de downsampling amplía el campo receptivo de cada unidad en sus mapas de características de salida.
+
+En el siguiente ejemplo, nuestro bloque de downsampling construido cambia el número de canales de entrada y reduce a la mitad la altura y la anchura de los mapas de características de entrada.
+
+Bloque Base de la Red
+
+El Bloque Base de la Red se utiliza para extraer características de las imágenes de entrada. Para simplificar, construimos un bloque de red base pequeño que consiste en tres bloques de downsampling que duplican el número de canales en cada bloque. Dada una imagen de entrada de  píxeles, este bloque base de la red produce mapas de características de  píxeles ().
+
+El Modelo Completo
+
+El modelo completo de SSD consiste en cinco bloques. Los mapas de características producidos por cada bloque se utilizan tanto para (i) generar anchor boxes como (ii) para predecir las clases y desplazamientos de estos anchor boxes.
+
+ Entre estos cinco bloques, el primero es el bloque base de la red, el segundo al cuarto son bloques de downsampling, y el último bloque utiliza un downsampling global para reducir tanto la altura como el ancho a 1. Técnicamente, el segundo al quinto bloques son todos aquellos bloques de mapas de características multinivel en la fig_ssd.
+
+Ahora definimos la propagación hacia adelante para cada bloque. A diferencia de las tareas de clasificación de imágenes, las salidas aquí incluyen (i) mapas de características CNN Y, (ii) anchor boxes generadas usando Y en la escala actual, y (iii) clases y desplazamientos predichos (basados en Y) para estas anchor boxes.
+
+Recuerda que un bloque de mapas de características multinivel que está más cerca de la parte superior es para detectar objetos más grandes; por lo tanto, necesita generar anchor boxes más grandes. En la propagación hacia adelante anterior, en cada bloque de mapas de características multinivel, pasamos una lista de dos valores de escala a través del argumento sizes de la función multibox_prior. En lo siguiente, el intervalo entre 0.2 y 1.05 se divide uniformemente en cinco secciones para determinar los valores de escala más pequeños en los cinco bloques: 0.2, 0.37, 0.54, 0.71 y 0.88. Luego, sus valores de escala más grandes se dan por , , y así sucesivamente.
+
+Ahora podemos definir el modelo completo TinySSD de la siguiente manera.
+
+Creamos una instancia del modelo y la usamos para realizar la propagación hacia adelante en un lote de imágenes de  X.
+
+Como se mostró anteriormente en esta sección, el primer bloque produce mapas de características de . Recordemos que los bloques de downsampling segundo al cuarto dividen a la mitad la altura y el ancho, y el quinto bloque utiliza pooling global. Dado que se generan 4 anchor boxes para cada unidad a lo largo de las dimensiones espaciales de los mapas de características, en las cinco escalas se generan un total de  anchor boxes para cada imagen.
+
+Entrenamiento
+Ahora explicaremos cómo entrenar SSD para la detección de objetos.
+
+Lectura del Conjunto de Datos e Inicialización del Modelo
+Para comenzar, vamos a leer el conjunto de datos de detección de plátanos descrito en los videos anteriores.
+
+Solo hay una clase en el conjunto de datos de detección de plátanos. Después de definir el modelo, necesitamos inicializar sus parámetros y definir el algoritmo de optimización.
+
+Definiendo Funciones de Pérdida y Evaluación
+
+La detección de objetos tiene dos tipos de pérdidas. La primera pérdida se refiere a las clases de las bounding boxes: su cálculo puede simplemente reutilizar la función de pérdida de entropía cruzada que usamos para la clasificación de imágenes. La segunda pérdida se refiere a los desplazamientos de las bounding boxes positivas (no de fondo): esto es un problema de regresión. Sin embargo, para este problema de regresión, aquí no utilizamos el error cuadrático medio. En cambio, usamos la pérdida de la norma , el valor absoluto de la diferencia entre la predicción y el valor real. La variable de máscara bboxmasks filtra las bounding boxes negativas y las bounding boxes de relleno en el cálculo de la pérdida. Al final, sumamos la pérdida de clase de la bounding box y la pérdida de desplazamiento de la bounding box para obtener la función de pérdida del modelo.
+
+Podemos utilizar el accuracy para evaluar los resultados de clasificación. Debido al uso de la pérdida de norma  para los desplazamientos, utilizamos el error absoluto medio para evaluar las bounding boxes predichas. Estos resultados de predicción se obtienen a partir de las anchor boxes generadas y los desplazamientos predichos para ellas.
+
+Entrenamiento del Modelo
+
+Cuando entrenamos el modelo, necesitamos generar anchor boxes multiscale (anchors) y predecir sus clases (clspreds) y desplazamientos (bboxpreds) en la propagación hacia adelante. Luego etiquetamos las clases (clslabels) y desplazamientos (bboxlabels) de dichas anchor boxes generadas basadas en la información de las etiquetas Y. Finalmente, calculamos la función de pérdida utilizando los valores predichos y etiquetados de las clases y desplazamientos. Para implementaciones concisas, la evaluación del conjunto de datos de prueba se omite aquí.
+
+Predicción
+
+Durante la predicción, el objetivo es detectar todos los objetos de interés en la imagen. A continuación, leemos y redimensionamos una imagen de prueba, convirtiéndola en un tensor de cuatro dimensiones que es necesario para las capas convolucionales.
+
+Utilizando la función multibox_detection a continuación, las bounding boxes predichas se obtienen a partir de los anchor boxes y sus desplazamientos predichos. Luego se utiliza la supresión de no máximos para eliminar bounding boxes predichas similares.
+
+Finalmente, mostramos todas las bounding boxes predichas con una confianza de 0.9 o superior como salida.

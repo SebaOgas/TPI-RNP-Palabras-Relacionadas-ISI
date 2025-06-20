@@ -1,0 +1,45 @@
+Detección de Objetos y Bounding Boxes
+
+En clases anteriores, introdujimos varios modelos para la clasificación de imágenes. En las tareas de clasificación de imágenes, asumimos que hay solo un único objeto principal en la imagen y solo nos enfocamos en cómo reconocer su categoría. Sin embargo, a menudo hay múltiples objetos en la imagen de interés. No solo queremos conocer sus categorías, sino también sus posiciones específicas en la imagen. En visión por computadora, nos referimos a estas tareas como detección de objetos (o reconocimiento de objetos).
+
+La detección de objetos se ha aplicado ampliamente en muchos campos. Por ejemplo, la conducción autónoma necesita planificar rutas de viaje detectando las posiciones de vehículos, peatones, carreteras y obstáculos en las imágenes de video capturadas. Además, los robots pueden utilizar esta técnica para detectar y localizar objetos de interés a lo largo de su navegación en un entorno. Además, los sistemas de seguridad pueden necesitar detectar objetos anormales, como intrusos o bombas.
+
+En esta clase, presentaremos varios métodos de aprendizaje profundo para la detección de objetos. Comenzaremos con una introducción a las posiciones (o ubicaciones) de los objetos.
+
+Cargaremos la imagen de muestra que se utilizará en esta sección. Podemos ver que hay un perro en el lado izquierdo de la imagen y un gato en el lado derecho.
+
+Bounding Boxes
+
+En la detección de objetos, generalmente usamos un bounding box para describir la ubicación espacial de un objeto. El bounding box es rectangular y se determina por las coordenadas  e  de la esquina superior izquierda del rectángulo y las coordenadas correspondientes de la esquina inferior derecha. Otra representación comúnmente usada del bounding box es la coordenada del centro  del bounding box, junto con el ancho y la altura de la caja.
+
+Aquí definimos funciones para convertir entre estas dos representaciones: boxcornertocenter convierte de la representación de dos esquinas a la presentación centro-ancho-altura, y boxcentertocorner viceversa. El argumento de entrada boxes debe ser un tensor bidimensional de forma (, 4), donde  es el número de bounding boxes.
+
+Definiremos los bounding boxes del perro y del gato en la imagen basándonos en la información de las coordenadas. El origen de las coordenadas en la imagen es la esquina superior izquierda de la imagen, y hacia la derecha y hacia abajo son las direcciones positivas de los ejes  e , respectivamente.
+
+Podemos verificar la corrección de las dos funciones de conversión de bounding boxes convirtiendo dos veces.
+
+Vamos a dibujar los bounding boxes en la imagen para comprobar si son precisos.
+Antes de dibujar, definiremos una función auxiliar bboxtorect. Representa el bounding box en el formato de bounding box del paquete matplotlib.
+
+Después de agregar los bounding boxes en la imagen, podemos ver que el contorno principal de los dos objetos está básicamente dentro de los dos cuadros.
+
+El Conjunto de Datos para la Detección de Objetos
+
+No existe un conjunto de datos pequeño como MNIST y Fashion-MNIST en el campo de la detección de objetos. Para demostrar rápidamente los modelos de detección de objetos, hemos recopilado y etiquetado un pequeño conjunto de datos. Primero, tomamos fotos de bananas gratuitas de nuestra oficina y generamos 1000 imágenes de bananas con diferentes rotaciones y tamaños. Luego colocamos cada imagen de banana en una posición aleatoria sobre alguna imagen de fondo. Finalmente, etiquetamos las cajas delimitadoras para esas bananas en las imágenes.
+Descargando el Conjunto de Datos
+
+El conjunto de datos de detección de bananas con todas las imágenes y archivos de etiquetas csv se puede descargar directamente de Internet.
+
+Leyendo el dataset
+
+Vamos a leer el conjunto de datos de detección de bananas en la función readdatabananas a continuación. El conjunto de datos incluye un archivo csv para etiquetas de clases de objetos y coordenadas de las cajas delimitadoras ground-truth en las esquinas superior izquierda e inferior derecha.
+
+Usando la función readdatabananas para leer imágenes y etiquetas, la siguiente clase BananasDataset nos permitirá crear una instancia personalizada de Dataset para cargar el conjunto de datos de detección de bananas.
+
+Finalmente, definimos la función loaddatabananas para retornar dos instancias de iteradores de datos, una para el conjunto de entrenamiento y otra para el conjunto de prueba. Para el conjunto de prueba, no es necesario leerlo en un orden aleatorio.
+
+Vamos a leer un minibatch e imprimir las formas tanto de las imágenes como de las etiquetas en este minibatch. La forma del minibatch de imágenes, (tamaño del lote, número de canales, altura, ancho), parece familiar: es la misma que en nuestras tareas anteriores de clasificación de imágenes. La forma del minibatch de etiquetas es (tamaño del lote, , 5), donde  es el número máximo posible de bounding boxes que cualquier imagen tiene en el conjunto de datos.
+
+Aunque la computación en minibatches es más eficiente, requiere que todos los ejemplos de imagen contengan el mismo número de bounding boxes para formar un minibatch mediante concatenación. En general, las imágenes pueden tener un número variable de bounding boxes; por lo tanto, las imágenes con menos de  bounding boxes se rellenarán con bounding boxes falsas hasta alcanzar . Luego, la etiqueta de cada bounding box está representada por un array de longitud 5. El primer elemento en el array es la clase del objeto en la bounding box, donde -1 indica una bounding box falsa para el relleno. Los cuatro elementos restantes del array son los valores de las coordenadas (, ) de la esquina superior izquierda y la esquina inferior derecha de la bounding box (el rango está entre 0 y 1). Para el conjunto de datos de bananas, dado que solo hay una bounding box en cada imagen, tenemos .
+
+Demostremos diez imágenes con sus bounding boxes de ground truth etiquetados. Podemos ver que las rotaciones, tamaños y posiciones de los plátanos varían en todas estas imágenes. Por supuesto, este es solo un conjunto de datos artificial simple. En la práctica, los conjuntos de datos del mundo real suelen ser mucho más complicados.

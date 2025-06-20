@@ -1,0 +1,215 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/DeepLearning/2RedesDeUnaCapa/2clasificacionsoftmax.ipynb" target="parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a>
+
+Regresión Softmax
+
+Al igual que dijimos antes, esperamos que al llegar aquí sepas que es una regresión logística. Esto es porque una regresión softmax es la generalización de la regresión logística, pero para muchas clases, en lugar de solo una.
+
+Una regresión logística es una técnica de apendizaje automático para clasificación binaria. En este típo de problemas hay solo dos resultados. Por ejemplo, podríamos estar interesados en tratar de predecir si una persona tiene una determinada enfermedad. Así por ejemplo podríamos considerar una serie de datos como los siguientes:
+
+||temperatura|oxigenación|decaimiento|dolores|bultos en pulmones|presenta enfermedad|
+|---|:-:|:-:|:-:|:-:|:-:|:-:|
+|paciente 1| 36.7| 0.88| 0|1|1|1|
+|paciente 2| 38.0| 0.98| 1|0|0|0|
+
+Hasta aquí, esto parece una regresión lineal como lo vimos antes. Tenemos nuestras variables y nuestra repuesta esperada. Presentamos una matriz de diseño, una serie de valores reales o grounding truth, tenemos parametros de nuestro modelo...
+
+Sin embargo, la mayor diferencia es que en una regresión logística lo que queremos es un probabilidad de estar enfermo. Eso hace que no podamos usar la regresión lineal para este problema. Además, dado que necesitamos una salida que sea una probabilidad, necesitamos entregar un valor entre 1 y 0.
+
+Es por esto que en regresión logística el modelo tiene otra forma:
+
+Donde  es nuestra predicción,  nuestros parametros y  nuestro bias. La principal diferencia es que ahora a nuestro valor los metemos adentro de una función llamada sigmodea:
+
+Esta función es la que ahora nos asegura que nuestra prediccion sea una probabilidad.
+
+La otra diferencia es que ahora, para encontrar los los parametros no usaremos mínimos cuadrados, sino otra herramienta. Pero esto lo explicaremos más adelante.
+
+Dijimos que una regresión lineal era una neurona
+
+
+
+Ahora, ¿podemos decir que una regresión logística es una neurona?
+
+En principio, la única diferencia es que a la salida del modelo lineal, agregamos una función adicional. De esta manera, podemos pensar una regresión logística como un tipo especial de neurona.
+
+Hasta recien trabajamos con dos clases. Esto era proque la regresión lógistica solo nos permite trabajar con dos clases. Si trabajaramos con varias clases, ¿podríamos seguir pensando en que esto es una neurona o una red neuronal?
+
+
+
+En breve veremos que sí es posible, pero para esto vamos a usar otra función distinta a la sigmoidea. Esta función, llamada Softmax, nos entregará un vector numérico. Cada componente del vector corresponde a la probabilidad de que nuestro ejemplo corresponde a cada clase.
+
+Presentando el problema
+
+Al igual que en el caso anterior, primero haremos una implementación desde 0 y luego una implementación usando las herrameintas de nuestro framework. Como dijimos, nuestro objetivo con esto es  a perderle el miedo a los frameworks.
+
+Hemos elegido un dataset preexistente conocido como FashionMNIST
+
+Estos datos son imágenes de  píxeles de indumentaria. Cada imagen tiene asociada una clase. En total hay 10 clases
+
+Nuestra propuesta de clasificador consistira en tomar los valores de los píxeles, tratarlos como vectores y multiplicarlos por los pesos correspondiente para obtener un conjunto de valores. Esos valores serán la probabilidad de que pertenezcan a cada una de las clases definidas en nuestros datos.
+
+Como estamos trabajando con imágenes, en este caso nuestros features son los valores de cada píxel. Cada imagen es de   píxeles, por lo que en total tenemos  features. Por otro lado, estás imágenes de indumentaria tienen etiquetas correspondientes a  clases en total. Esto significa que nuestra matriz de pesos ahora tendra  un tamaño de
+
+
+
+Dicho de otro modo. Vamos a necesitar 10 neuronas que miren nuestros píxeles y a partir de los que vean traten de devolvernos valores que de alguna manera luego transformaremos en probabilidades. Es decir, vamos a trabajar con una capa de neuronas y no con una única neurona.
+
+Con esto hemos definido los pesos de la parte lineal de nuestro modelo, ahora necesitamos definir alguna función que nos permita convertir nuestras salidas en probabilidades. Además esta función debe ser análoga a lo que hacía la sigmoidea en la regresión logística.
+
+La función que usamos para esto es la función softmax:
+
+Softmax, nos devuelve un vector . Se puede ver que, para la definición componente a componente la suma de los  es .  Además  nunca es negativo. Es decir, describen un vector de probabilidades. Si lo entrenamos correctamente  nos dice que tan probable es que nuestro ejemplo pertenezca a la clase .
+
+Se puede demostrar que Softmax para dos clases recupera el comportamiento de la sigmoidea. En este sentido es una generalización de la clasificación logística.
+
+Definiendo softmax
+
+
+
+
+
+
+
+
+
+Las figuras anteriores muestran como es el proceso de cálculo de Softmax:
+aplicamos exponencial a cada salida de nuestras estimaciones (de  a )
+sumamos para cada ejemplo (representado en la fila) (de  a )
+dividimos el valor obtenido en 2 para cada ejemplo con cada esimación (flechas desde  y  a )
+
+Inicialización de parámetros.
+
+Definiendo softmax
+
+Esta implementación no es perfecta, y de hecho puede generar problemas numéricos.
+
+Para más información referimos a link.
+Definiendo el modelo.
+
+A continuación mostramos como se ve nuestro modelo luego de aplicar las sucesivas operaciones.
+
+¿Entiende porque es que reshape tiene las entradas que aparecen?
+
+La función reshape en el fondo lo que hace es convertir nuestros datos de un conjunto de matrices, a un conjunto de vectores
+
+Definiendo la función de pérdida
+
+Al igual que con la regresión logística, la función de pérdida a minimizar es la entropía cruzada. La entropía cruzada tiene la propiedad de que su gradiente es la función Softmax. Por esto también es una función muy muy útil
+
+A continuación discutiremos la utilidad la noción de entropía en estadística y su relación con la noción de información.
+
+Entropía e información
+
+A continuación proponemos un un juego para dos jugadores:
+Materiales:
+una bolsa o recipiente opaco
+4 pelotas con los números 1, 2, 3, 4
+Preparativos:
+Se colocan las pelotas en la bolsa
+El primer jugador saca una de las pelotas de la bolsa
+Objetivo general: Adivinar con el menor número de preguntas posibles cuál el número de la pelota que tiene el primer jugador .
+Solo pueden hacerse preguntas que tengan como respuestas sí o no.
+
+No es dificil ver que este juego tiene la siguiente estrategia optima:
+Preguntar: "¿El número es par?"
+  A. Si la respuesta es sí, preguntar: "¿Es el número 4?"
+    a. Si la respuesta es sí, sabemos que es el número 4, hemos ganado.
+    b. Si la respuesta es no, sabemos que es el número 2, hemos ganado.
+  B. Si la respuesta es no, preguntar: "¿Es el número 3?"
+    a. Si la respuesta es sí, sabemos que es el número 3, hemos ganado.
+    b. Si la respuesta es no, sabemos que es el número 1, hemos ganado.
+
+En este juego, es fácil ver que está solución es optima porque solo hay una copia de cada pelota. Dicho de otro modo, nuestra estrategia podría cambiar si dentro de la bolsa, hubieran otras pelotas o si las distribución de las pelotas cambiara.
+
+El punto central de este ejercicio es que para este caso de 4 categorías equiprobables necesitamos 2 preguntas.
+
+Veamos esto:
+
+||||||total|
+|---|---|---|---|---|:-:|
+|probabilidad de ocurrir|||||-|
+|número de preguntas|||||-|
+|producto||||||
+
+Cambiemos ahora nuestro juego de la siguiente manera:
+Materiales:
+8 pelotas con los números 1, 1, 1, 1, 2, 2, 3, 4
+
+El hecho de que ahora cambiemos nuestra distribución de pelotas, hace que ahora la estrategia optima cambie:
+Preguntar: "¿Es el número 1?"
+  A. Si la respuesta es sí, hemos ganado."
+  B. Si la respuesta es no, preguntar: "¿Es el número 2?"
+    a. Si la respuesta es sí, hemos ganado.
+    b. Si la respuesta es no, preguntar: "¿Es el número 3?.
+      I. Si la respuesta es sí, sabemos que es el número 3, hemos ganado.
+      I. Si la respuesta es no, sabemos que es el número 4, hemos ganado.
+
+||||||total|
+|---|---|---|---|---|:-:|
+|probabilidad de ocurrir|||||-|
+|número de preguntas|||||-|
+|producto||||||
+
+El lector perpicaz debería notar las siguientes cosas:
+Lo que hemos hecho es exactamente lo mismo que uno hace cuando analiza algo con árboles de deciciones
+El número de preguntas se corresponde a la entropía estadística de la distribución
+
+El resultado que hemos obtenido es similar a encontrar un código de Huffman para la pelotas
+
+Es esta relación entre número de preguntas y distribuciones lo que da lugar a la noción de entropía dentro de la teoría de la información de Shannon
+Entropía cruzada
+
+Ahora, la siguiente pregunta que nos podemos hacer es que pasaría si uno de los jugadores del primer juego, tratara de jugar el segundo. Es decir, ¿que pasa si usamos la estrategia optima del primer juego en el segundo juego? Lo que hay que ver es que en este paso usaremos el número de preguntas del primer juego con la probabilidad del segundo.
+
+||||||total|
+|---|---|---|---|---|:-:|
+|probabilidad de ocurrir|||||-|
+|número de preguntas|||||-|
+|producto||||||
+
+El número promedio de preguntas ha aumentado.
+
+Esto último puede parecer un mero ejercicio teórico, pero en realidad nos está diciendo mucho. En general cuando clasificamos, no conocemos las distribución real de las clases de nuestro problema. Del mismo modo, nuestro clasificador, implicitamente supone una distribución probabilistica (asociada a nuestra muestra). Es decir estamos en una situación donde creemos que estamos en un juego como el primero, pero podríamos estar un juego como el segundo. Es en este sentido que tiene sentido calcular la entropia a partir de dos distribuciones distintas. La de nuestro clasificador y la de nuestros datos. Esto es lo que minimizamos con la entropía cruzada: Dado nuestro modelo, que tan bueno es reproduciendo los valores reales.
+
+ es la distribución probabilística de nuestro modelo, , la de nuestros datos
+
+En este último caso pusimos el logaritmo neperiano en lugar del logaritmo de base 2. Esto en el fondo es irrelevante, la fórmula del cambio de base, no dice que esto solo afecta en una contante multiplicativa. Por lo tanto, nuestro mínimo sera el mismo.
+
+Implementación de la Entropía Cruzada
+
+Por la forma que tienen nuestros datos, es posible usar una serie de trucos para calcular más rápidamente la entropia cruzada.
+
+Es facil ver que como estamos usando one-hot vectors,  solo vale  para la clase correcta o  para las demás. Por lo tanto solo debemos calcular el logaritmo para la clase correcta.
+
+Accuracy
+
+Por lo general tomamos al valor más alto de las probabilidades como el valor correcto. Al trabajar de esta manera debemos tratar de ver cuantas veces acertamos en nuestras predicciones. Para ellos definimos el Accuracy
+
+Definiendo el algoritmo de optimización
+
+Tomamos el mismo código de sgd discutido antes.
+
+Entrenamiento
+
+Ahora, analicemos como haríamos esto usando la las herramientas de nuestro framework
+
+Regresión Softmax concisa
+
+Por ahora la mayor parte del código que revisaremos es casi identico a lo que ya conocemos.
+
+Inicialización.
+
+¿Qué hace Flatten?
+
+Convierte la matriz de píxeles a un vector de números.
+
+Softmax
+
+Dijimos anterioremente que nuestre primera implementación de Softmax era inestable computacionalmente. Por esta razón, los frameworks preexistentes hacen uso de otras implementaciones que evitan estas inestabilidades. Para más información, dejamos el siguiente link
+
+"LogSumExp trick".
+
+Algoritmo de optimización.
+
+Entrenamiento
+
+Como vemos, no hay mucho más que discutir y analizar.

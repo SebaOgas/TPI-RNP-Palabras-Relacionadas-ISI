@@ -1,0 +1,298 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/CV/2Convoluciones/CapasConvolucionales.ipynb"> <img src='https://colab.research.google.com/assets/colab-badge.svg' /> </a>
+
+Ejemplo Motivacional
+
+Supongamos que queremos generar un sistema que reconozca números escritos a mano. Una forma de hacerlo es contar la cantidad de formas simples que existen dentro del número y verificar a cuál número corresponde su conteo en la siguiente tabla.
+
+
+
+De esta manera, dado un número nuevo, simplemente deberemos contar la cantidad de formas que aparecen en él para predecir su valor.
+
+
+
+El problema con este método es cómo determinar si una forma está presente en la imagen. Esto es posible si pensamos en las imágenes como matrices. Cada celda de la matriz representa la intensidad del píxel desde 0 (que representa el negro) hasta 255 (que representa un píxel blanco puro).
+
+
+
+Para descubrir qué patrón se muestra en una imagen (en este caso el 8 escrito a mano) usaremos una especie de scanner. En el aprendizaje automático, estos scanners se llaman filtros. El filtro se utiliza para realizar un cálculo de convolución de matrices clásico. Esta operación dará como resultado un número alto si el patrón definido en el filtro se parece al sector de la imagen escaneado, sino dará un número bajo.
+
+
+
+En la figura de arriba imaginemos que la matriz verde es un imagen con un cuadrado negro en el centro (los ceros son pixeles negros) rodeado por un borde blanco (los unos con pixeles blancos)y luego por otro borde negro. La matriz amarilla representa un filtro que es un cuadrado blanco de 3x3. Al escanear la imagen con el filtro nos tirará para cada pixel un valor que nos dirá qué tanto se parece ese sector de 3x3 a un cuadrado blanco.
+
+
+
+Luego de haber escaneado la imagen completa obtendremos un resultado como este.
+
+Pero ¿qué pasa con las esquinas? Aquí necesitamos Padding (relleno). El padding prácticamente extiende la matriz para atender los valores del borde como se describe en la imagen a continuación. La capa rosa no forma parte de la matriz originals, pero ayuda en la convolución.
+En el siguiente ejemplo, el relleno se toma como 0.
+
+
+
+El resultado final es el siguiente.
+
+Podemos interpretar la salida del filtro como otra imagen donde los valores más blancos indican sectores más parecidos al patrón del filtro.
+
+Así como hicimos un filtro que detecte cuadrado9s blancos, podemos diseñar filtros que detecten las formas que necesitamos para reconocer los números o cualquier otra forma. Más aun, podríamos entrenar una red para que aprenda qué filtros necesita detectar para reconocer los números en lugar de tener que estar diseñándolos nosotros.
+
+Redes neuronales convolucionales.
+
+En la sección anterior vimos las convoluciones eran una herramienta muy útil en procesamiento de imágenes. La gran utilidad que tienen estas herramientas eventualmente dio lugar a crear eventualmente a las redes neuronales convolucionales. La diferencia entre estas redes y los MLP que habíamos visto anteriormente es que aquí los parametro  a ser aprendidos son los kernels que realizan las convoluciones.
+
+Veamos un ejemplo de esto empezando con un ejemplo de una cuadricula de  a la que le aplicamos un kernel de 
+
+Analicemos como hemos llegado al tamaño final
+
+Tenga en cuenta que a lo largo de cada eje, el tamaño de salida es ligeramente más pequeño que el tamaño de entrada. Debido a que el kernel tiene ancho y alto mayor que uno, solo podemos calcular correctamente la convolución para ubicaciones donde el kernel encaja completamente dentro de la imagen, el tamaño de salida viene dado por el tamaño de entrada  menos el tamaño del kernel de convolución  a través de
+
+Este es el caso ya que necesitamos suficiente espacio para "mover" el kernel de convolución a través de la imagen. Más adelante veremos cómo mantener el tamaño sin cambios. rellenando la imagen con ceros alrededor de su borde para que haya suficiente espacio para el kernel. A continuación, implementamos este proceso en la función corr2d, que acepta un tensor de entrada X y un tensor kernel K y devuelve un tensor de salida Y.
+
+Capas convolucionales
+
+Una capa convolucional aplica la función anterior y un sesgo escalar para producir una salida. Los dos parámetros de una capa convolucional
+son el núcleo y el sesgo escalar. Al entrenar modelos basados en capas convolucionales, normalmente inicializamos los núcleos al azar, tal como lo haríamos con una capa completamente conectada.
+
+Ahora estamos listos para implementar una capa convolucional bidimensional basado en la función corr2d definida anteriormente. En el método constructor init, declaramos weight y bias como los dos parámetros del modelo. La función de propagación directa
+llama a la función corr2d y agrega el sesgo.
+
+Primer ejemplo: Detector de bordes verticales.
+
+Tomemos un momento para analizar una aplicación simple de una capa convolucional:
+detectar el borde de un objeto en una imagen. Para ellos buscamos la ubicación del cambio de píxel.
+Primero, construimos una "imagen" de  píxeles.
+Las cuatro columnas del medio son negras (0) y el resto son blancas (1).
+
+A continuación, construimos un núcleo K con una altura de 1 y un ancho de 2. Cuando realizamos al aplicar la convolución,
+si los elementos adyacentes horizontalmente son iguales,
+la salida es 0. De lo contrario, la salida es distinta de cero.
+Tenga en cuenta que este kernel es un caso especial de un operador de diferencias finitas. En la ubicación  calcula , es decir, calcula la diferencia entre los valores de los píxeles adyacentes horizontalmente. Esta es una aproximación discreta de la primera derivada en la dirección horizontal.
+
+Estamos listos para realizar una convolución con argumentos X (nuestra entrada) y K (nuestro kernel). Como puede ver, detectamos 1 para el borde de blanco a negro y -1 para el borde de negro a blanco. Todas las demás salidas toman valor 0.
+
+Al aplicar el kernel transpuesto obtenemos ceros. La versión transpuesta del kernel detecta bordes verticales y nuestra imagen no los tiene
+
+Aprendiendo un kernel
+
+Diseñar un detector de bordes por diferencias finitas [1, -1] puede ser útil si sabemos que esto es precisamente lo que estamos buscando. Sin embargo, a medida que observamos núcleos más grandes, y considerar capas sucesivas de convoluciones, puede ser imposible especificar
+precisamente lo que cada filtro debe hacer manualmente.
+
+Ahora veamos si podemos aprender el núcleo que generó Y a partir de X mirando solo los pares de entrada-salida. Primero construimos una capa convolucional e inicializa su kernel como un tensor aleatorio. A continuación, en cada iteración, usaremos el error al cuadrado para comparar Y con la salida de la capa convolucional. Luego podemos calcular el gradiente para actualizar el kernel. Por el bien de la simplicidad,
+en el siguiente usamos la clase incorporada para capas convolucionales bidimensionales e ignorar el sesgo.
+
+Tras 10 iteraciones tenemos una buena aproximación al kernel esperado.
+
+Correlación cruzada y convoluciones.
+
+Hasta aquí hemos hablado de convoluciones, pero en realidad hay una diferencia entre nuestra operación y una convolución propiamente dicha. La operación que realizamos es en realidad una correlación cruzada. ¿Qué pasaría si estas capas realizaran operaciones de convolución estrictas en lugar de correlaciones cruzadas? Para obtener el resultado de la operación de convolución estricta, solo necesitamos voltear el tensor kernel bidimensional tanto horizontal como verticalmente, y luego realizar la operación de correlación cruzada con el tensor de entrada.
+
+Cabe señalar que, dado que los núcleos se aprenden a partir de datos en el aprendizaje, las salidas de las capas convolucionales no se ven afectadas no importa si llevamos a cabo convoluciones estrictas o las operaciones de correlación cruzada.
+
+De acuerdo con la terminología estándar con la literatura de aprendizaje profundo, seguiremos refiriéndonos a la operación de correlación cruzada
+como una convolución aunque, estrictamente hablando, es ligeramente diferente. Además, usamos el término elemento para referirnos a una entrada (o componente) de cualquier tensor que represente una representación de capa o un núcleo de convolución.
+Mapa de características y Campo receptivo.
+
+La salida de la capa convolucional a veces se llama un mapa de características, pues son representaciones aprendidas (características) en las dimensiones espaciales (por ejemplo, ancho y alto) que se alimentan a la capa subsiguiente. En las CNN, para cualquier elemento  de alguna capa, su campo receptivo se refiere a todos los elementos (de todas las capas anteriores) que puede afectar el cálculo de  durante la propagación directa. Tenga en cuenta que el campo receptivo puede ser mayor que el tamaño real de la entrada.
+
+Sigamos usando la figura anterior para explicar el campo receptivo.
+
+Dado el kernel o núcleo de convolución , el campo receptivo del elemento de salida sombreado (de valor ) es los cuatro elementos en la parte sombreada de la entrada. Ahora vamos a denotar la salida de forma  como  y considere una CNN más profunda con una capa convolucional adicional de  que toma  como su entrada, salida un solo elemento . En este caso, el campo receptivo de  en  incluye los cuatro elementos de , mientras que el campo receptivo en la entrada original incluye los nueve elementos de entrada. De este modo, cuando un elemento en un mapa de características necesita un campo receptivo más grande podemos construir una red más profunda.
+
+Los campos receptivos derivan su nombre de la neurofisiología. En una serie de experimentos en una variedad de animales y diferentes estímulos, Hubel y Wiesel exploraron la respuesta de la corteza visual sobre dichos estímulos. En general encontraron que los niveles inferiores responden a los bordes y  formas relacionadas. Posteriormente, se ilustró este efecto sobre la naturaleza imágenes con, lo que solo se puede llamar, núcleos convolucionales.
+
+Resulta que esta relación incluso es válida para las características calculadas por capas más profundas de redes entrenadas en tareas de clasificación de imágenes.  Baste decir que las circunvoluciones han demostrado ser una herramienta increíblemente poderosa para la visión por computadora, tanto en biología como en código. Como tal, no sorprende (en retrospectiva) que anunciaran el éxito reciente en el aprendizaje profundo.
+
+Padding y Stride
+
+Volvamos a la figura anterior.
+
+La entrada tenía una altura y un ancho de 3 y el núcleo de convolución tenía una altura y un ancho de 2, produciendo una representación de salida con dimensión . Dijimos que para una entrada  la forma  y kernel de la forma , la forma de salida será . Solo podemos mover el kernel hasta que se agote los píxeles a los que aplicar la convolución.
+
+A continuación exploraremos una serie de técnicas, incluyendo relleno y convoluciones con strides o trancos, que ofrecen más control sobre el tamaño de la salida. Como motivación, tenga en cuenta que dado que los núcleos generalmente tienen ancho y alto mayor que , después de aplicar muchas convoluciones sucesivas, tendemos a terminar con resultados que son
+considerablemente más pequeño que nuestra entrada. Si comenzamos con una imagen de  píxeles, tras  capas de  convoluciones, la imágen se recude a  píxeles, cortando  de la imagen y con ella borrando cualquier información interesante
+en los límites de la imagen original. Padding o agregar relleno es la herramienta más popular para manejar este problema. En otros casos, podemos querer reducir la dimensionalidad drásticamente, por ejemplo, si encontramos que la resolución de entrada original es difícil de manejar. Las convoluciones con strides o trancos son una técnica popular que puede ayudar en estos casos.
+Padding
+
+Como se describió anteriormente, un problema al aplicar capas convolucionales es que tendemos a perder píxeles en el perímetro de nuestra imagen. Considere la próxima imagen que representa la utilización de píxeles como una función del tamaño del kernel de convolución y la posición dentro de la imagen. Los píxeles de las esquinas apenas se utilizan.
+
+Dado que normalmente usamos núcleos pequeños, para cualquier convolución dada, es posible que solo perdamos unos pocos píxeles. Pero el número de píxeles crece a medida que aplicamos muchas capas convolucionales sucesivas Una solución directa a este problema es agregar píxeles adicionales de relleno alrededor del límite de nuestra imagen de entrada, aumentando así el tamaño efectivo de la imagen. Por lo general, establecemos los valores de los píxeles adicionales en cero. En la siguiente imágen rellenamos una entrada de , aumentando su tamaño a . La salida correspondiente luego aumenta a una matriz de . Las partes sombreadas son el primer elemento de salida, así como los elementos de entrada y de kernel utilizados para el cálculo de salida:
+
+.
+
+En general, si agregamos  filas de relleno  (mitad arriba, mitad abajo)
+ y  columnas de relleno (mitad a la izqueirda, mitad a al derecha),
+la salida será:
+
+Esto significa que la altura y el ancho de la salida aumentará en  y , respectivamente.
+
+En muchos casos, querremos configurar  y  para dar a la entrada y salida la misma altura y anchura. Esto facilitará la predicción de la forma de salida de cada capa al construir la red. Asumiendo que  es impar aquí, rellenaremos  filas en ambos lados de la altura. Si  es par, una posibilidad es pad  filas en la parte superior de la entrada y  filas en la parte inferior. Rellenaremos ambos lados del ancho de la misma manera.
+
+Las CNN suelen utilizar núcleos de convolución con valores impares de alto y ancho, como 1, 3, 5 o 7. Elegir tamaños de kernel impares tiene la ventaja
+que podemos preservar la dimensionalidad mientras rellena con el mismo número de filas en la parte superior e inferior, y el mismo número de columnas a izquierda y derecha.
+
+Además, esta práctica de usar núcleos impares y padding para preservar con precisión la dimensionalidad ofrece un beneficio adicional. Para cualquier tensor bidimensional X, cuando el tamaño del núcleo es impar: *
+el número de filas y columnas de relleno por los bordes son iguales
+la salida tiene la misma forma entrada
+el campo receptivo de la salida Y[i, j] se calcula con una ventana centrada en X[i, j] a partir del kernel
+
+En el siguiente ejemplo, creamos una capa convolucional bidimensional
+con un kernel de altura y ancho igual a 3. Además agregamos 1 píxel de relleno en todos los bordes. Dada una entrada con una altura y un ancho de 8, encontramos que la altura y el ancho de la salida también es 8.
+
+Ahora podemos hacer el mismo truco para cualquier kernel de tamaño impar
+
+Stride o trancos
+
+Al calcular convoluciones, empezamos con la ventana de convolución en la esquina superior izquierda del tensor de entrada, y luego deslizamos sobre todas las ubicaciones tanto hacia abajo como hacia la derecha. En los ejemplos anteriores, por defecto deslizamos un elemento a la vez. Sin embargo, a veces, ya sea por eficiencia computacional o porque deseamos reducir la muestra, movemos nuestra ventana más de un elemento a la vez, saltándose las ubicaciones intermedias. Esto es particularmente útil si la el kernel de la convolución es grande ya que captura una gran área de la imagen subyacente.
+
+Nos referimos al número de filas y columnas atravesadas por calculo como stride o tranco. Hasta ahora, hemos usado trancos de 1, tanto para la altura como para el ancho. A veces, podemos querer usar un paso más grande.
+En la siguiente figura se muestra un ejemplo con un tranco 3 en vertical y 2 en horizontal. Las partes sombreadas son los elementos de salida, así como los elementos del kernel y de la entrada utilizados para el cálculo de salida:
+
+Podemos ver que cuando se genera el segundo elemento de la primera columna,
+la ventana de convolución se desliza hacia abajo tres filas. La ventana de convolución desliza dos columnas a la derecha cuando se genera el segundo elemento de la primera fila. Cuando la ventana de convolución continúa deslizando dos columnas hacia la derecha en la entrada, no hay salida porque el elemento de entrada no puede llenar la ventana (a menos que agreguemos otra columna de relleno).
+
+En general, para un tranco de alto  y de ancho  la salida es de la forma
+
+Fijando  y , la salida se reduce a
+.
+Si el ancho y el alto de entrada es divisible por el ancho y el alto del tranco encontes la expresión se reduce aun más a .
+
+Por ejemplo, podemos fijar el ancho y el alto de nuestro tranco en 1
+
+O hace cosas más complejas.
+
+Entradas y salidas multicanal
+
+Hasta aquí hemos ignorado completamente la naturaleza tridimensional de las imágenes. Las imágenes en color tradicionales tienen los canales RGB para indicar la intensidad de rojo, verde y azul. Por esto tenemos 3 indices: ancho, alto y canal. Hasta ahora, hemos simplificado todos nuestros ejemplos numéricos trabajando con un solo canal a la entrada y un solo canal de salida. Esto nos permitió pensar en nuestras entradas, núcleos de convolución, y generar cada uno como tensores bidimensionales.
+
+Cuando agregamos canales a la mezcla, nuestras entradas y representaciones ocultas ambos se convierten en tensores tridimensionales. Por ejemplo, cada imagen de entrada RGB tiene la forma . Nos referimos a este eje, con un tamaño de 3, como la dimensión canal. La noción de
+canales es tan antiguo como las propias CNN.
+En esta sección, vamos a echar un vistazo más profundo a las convoluciones con múltiples canales de entrada y salida.
+Entrada multicanal
+
+Cuando los datos de entrada contienen múltiples canales, necesitamos construir una convolución con el mismo número de canales que los datos de entrada, para que pueda realizar una convolución con los datos de entrada. Suponiendo que el número de canales para los datos de entrada es , el número de canales de entrada del kernel de convolución también debe ser . Si la forma de la ventana de nuestro kernel de convolución es , entonces cuando , podemos pensar en nuestro kernel de convolución como un tensor bidimensional de forma .
+
+Sin embargo, cuando , necesitamos un kernel que contenga un tensor de forma  para *cada* canal de entrada. Concatenando estos tensores  juntos produce un kernel de convolución de forma . Dado que el tensor de entrada y el de convolución tienen canales , podemos realizar una convolución
+en el tensor bidimensional de la entrada y el tensor bidimensional del kernel de convolución para cada canal, sumando los resultados de  juntos (suma sobre los canales) para producir un tensor bidimensional.
+Este es el resultado de una convolución bidimensional
+entre una entrada multicanal y un núcleo de convolución de múltiples canales de entrada.
+
+En la siguiente figura hay un ejemplo de una convolucion bidimensional con dos canales de entrada. Las partes sombreadas son el primer elemento de salida. así como los elementos de tensor de kernel y de entrada utilizados para el cálculo de salida:
+
+Tratemos de implementar un ejemplo de esto. Recordemos que solo es una convolución por cada canal y luego sumamos por cada canal
+
+Tratemos de reproducir los resultados de la figura para validar que la función actúe correctamente.
+
+Salidas con múltiples canales
+
+Independientemente del número de canales de entrada, hasta ahora siempre terminamos con un canal de salida. Sin embargo, resulta esencial tener múltiples canales en cada capa. En las arquitecturas de redes neuronales más populares, en realidad aumentamos la dimensión del canal a medida que profundizamos en la red neuronal. Típicamente reducimos el tamaño de la imagen y para compensar la perdida de resolución espacial aumentamos la profundidad de canal. Intuitivamente, se puede pensar en cada canal como respondiendo a un conjunto diferente de características. La realidad es un poco más complicada que esto. Una interpretación ingenua sugeriría que las representaciones se aprenden de forma independiente por píxel o por canal. En cambio, los canales están optimizados para ser útiles en conjunto. Esto significa que en lugar de asignar un solo canal a un detector de borde,puede significar simplemente que alguna dirección en el espacio del canal corresponde a la detección de bordes.
+
+Denotamos por  y  el número de canales de entrada y salida, respectivamente, y  y  la altura y el ancho del kernel.
+Para obtener una salida con múltiples canales, podemos crear un tensor kernel de forma  para cada canal de salida.
+Los concatenamos en la dimensión del canal de salida, de modo que la forma del núcleo de convolución es . En las operaciones de convolución, se calcula el resultado en cada canal de salida
+del kernel de convolución correspondiente a ese canal de salida
+y toma entrada de todos los canales en el tensor de entrada.
+
+Implementamos una función de convolución
+para calcular la salida de múltiples canales como se muestra a continuación.
+
+Podemos armar un ejemplo de un kernel con muchos canales de salida por ejemplo como mostramos en el siguiente código
+
+Ahora aplicamos la función que recien armamos al tensor recien creado. Ahora la salida tiene 3 canales. Podemos ver, en este caso que el primer canal de salida coincide con lo calculado anteriormente.
+
+Convoluciones... ¿de tamaño ?
+
+Al principio, una convolución , es decir, ,
+no parece tener mucho sentido. Después de todo, una convolución analiza píxeles adyacentes. Una convolución de  obviamente no lo hace. No obstante, son operaciones populares que a veces se incluyen
+en los diseños de redes profundas complejas. Veamos con cierto detalle lo que realmente hace.
+
+Debido a que se utiliza la ventana mínima, la convolución  pierde la capacidad de capas convolucionales más grandes reconocer patrones que consisten en interacciones entre elementos adyacentes en las dimensiones de alto y ancho. El único cálculo de la convolución  ocurre en la dimensión del canal.
+
+La siguiente figura muestra el cálculo de una convolución usando el núcleo de convolución  con 3 canales de entrada y 2 canales de salida. Las entradas y salidas tienen la misma altura y anchura. Cada elemento de la salida se deriva de una combinación lineal de elementos en la misma posición en la imagen de entrada. La capa convolucional  podría pensarse como una capa densa aplicada en cada ubicación de píxel
+para transformar los valores de entrada correspondientes de  en valores de salida de . Debido a que esta sigue siendo una capa convolucional, los pesos están vinculados a través de la ubicación del píxel. Por lo tanto, la capa convolucional  requiere pesos  (más el sesgo). Las capas convolucionales, como toda capa, es continuada por una función de activación. Esto asegura que las convoluciones de  no pueden ser imitadas por convoluciones.
+
+Veamos como esto se implementa en la práctica. Consideremos una capa densa aplicada a una convolución , Slo necesitamos adaptar la entrada ya la salida antes de la multiplicacion de matrices.
+
+El resultado es indistinguible de lo descripto hasta aquí. De hecho podemos hacer la compración.
+
+Pooling
+
+En muchos casos, nuestra tarea final plantea alguna pregunta global sobre la imagen, por ejemplo, ¿contiene un gato?. En consecuencia, las unidades de nuestra capa final debe ser sensible a toda la entrada. Agregando información gradualmente, produciendo campos receptivos cada vez más grandes, logramos este objetivo de finalmente aprender una representación global, manteniendo todas las ventajas de las capas convolucionales en las capas intermedias de procesamiento. Cuanto más nos adentramos en la red, cuanto mayor sea el campo receptivo (en relación con la entrada) a la que cada nodo oculto es sensible. Reducir la resolución espacial acelera este proceso, ya que los núcleos de convolución cubren un área efectiva más grande.
+
+Además, al detectar características de nivel inferior, como bordes a menudo queremos que nuestras representaciones sean algo invariables a la translación. Por ejemplo, si tomamos la imagen X con una delimitación nítida entre blanco y negro y desplazamos toda la imagen un píxel a la derecha, es decir, Z[i, j] = X[i, j + 1], entonces la salida para la nueva imagen Z podría ser muy diferente. El borde se habrá desplazado un píxel. En realidad, los objetos casi nunca se encuentran exactamente en el mismo lugar. De hecho, incluso con un trípode y un objeto estacionario,
+vibración de la cámara debido al movimiento del obturador podría cambiar todo por un píxel más o menos (Las cámaras de gama alta están cargadas con características especiales para abordar este problema).
+
+Hablaremos ahora de capas de pooling, que sirven al doble propósito de
+mitigar la sensibilidad de las capas convolucionales a la ubicación y de representaciones de reducción de muestreo espacial.
+Pooling con máximos y con promedios
+
+Al igual que las capas convolucionales, los operadores pooling
+consisten en una ventana de forma fija que se desliza sobre
+todas las regiones de la entrada con un stride y calcula una sola salida para cada ubicación atravesada por la ventana de forma fija (a veces conocida como la ventana de pooling). Sin embargo, a diferencia del cálculo de convoluciones, la capa de pooling no contiene parámetros (no hay kernel). En cambio, los operadores de pooling son deterministas, típicamente calculando el valor máximo o el promedio de los elementos en la ventana de pooling. Estas operaciones se denominan pooling con máximo (max-pooling para abreviar) y pooling con promedio, respectivamente.
+
+El pooling con promedio es esencialmente tan antigua como las CNN. La idea es similar a reducir la resolución de una imagen. En lugar de simplemente tomar el valor de cada segundo (o tercio) píxel para la imagen de menor resolución, podemos promediar los píxeles adyacentes para obtener
+una imagen con mejor relación señal/ruido ya que estamos combinando la información de múltiples píxeles adyacentes. Max-pooling se introdujo  en el contexto de la neurociencia cognitiva para describir cómo la agregación de información podría agregarse jerárquicamente para el propósito de reconocimiento de objetos, y una versión anterior en reconocimiento de voz. En casi todos los casos, max-pooling, es preferible.
+
+En ambos casos, al igual que con la convolución, podemos pensar en la ventana de pooling partiendo de la parte superior izquierda del tensor de entrada deslizándose por el tensor de entrada de izquierda a derecha y de arriba a abajo. En cada ubicación a la que llega la ventana de pooling, calcula el máximo o el promedio valor del subtensor de entrada en la ventana, dependiendo de si se emplea la pooling con máximo o con promedio.
+
+El tensor de salida en la figura tiene tamaño . Los elementos fueron calulados de la siguiente manera:
+
+En términos más generales, podemos definir una capa de pooling  sobre una región de dicho tamaño. Volviendo al problema de la detección de bordes, podemos usar la salida de la capa convolucional como entrada para  max-pooling. Denotaremos con X la entrada de la capa convolucional y Y la salida de la capa de pooling. Independientemente de si los valores de X[i, j], X[i, j + 1], X[i+1, j] y X[i+1, j + 1] son diferentes, la capa de pooling siempre genera Y[i, j] = 1. Es decir, usando la capa de pooling con máximo , podemos detectar si el patrón reconocido por la capa convolucional no mueve más de un elemento en altura o anchura.
+
+En el siguiente código, implementamos la propagación directa de la capa de pooling en la función pool2d. Esta función es similar a la función corr2d. Sin embargo, no se necesita kernel, calculando la salida como el máximo o el promedio de cada región en la entrada.
+
+Veamos dos ejemplos para validar esta función.
+
+Padding y Stride
+
+Al igual que con las capas convolucionales, las capas de pooling cambian la forma de salida. Y como antes, podemos ajustar la operación para lograr la forma de salida deseada rellenando la entrada y ajustando el stride.
+Podemos demostrar el uso de padding y stride en capas de pooling a través de la capa de max pooling de pytorch. Primero construimos un tensor de entrada X cuya forma tiene cuatro dimensiones, donde el número de ejemplos (tamaño del lote) y el número de canales son ambos 1.
+
+Como la capa de pooling agrupa ingomación de una misma area la mayoría de los frameworks supone que el tamaño de la ventana de pooling coincide con los strides. Por ejemplo, para una ventana (3, 3) pytorch supone un
+stride por defecto de  (3, 3).
+
+Por supuesto, podemos modificar esto de cualquier manera que querramos.
+
+Trabajando con múltiples canales
+
+Al procesar datos de entrada multicanal, la capa de pooling agrupa cada canal de entrada por separado, en lugar de sumar las entradas en los canales como en una capa convolucional. Esto significa que el número de canales de salida para la capa de pooling es el mismo que el número de canales de entrada. A continuación, concatenaremos los tensores X y X + 1 en la dimensión del canal para construir una entrada con 2 canales.
+
+Como dijimos el número de canales de entrada es el mismo que de salido.
+
+LeNet
+
+Ya tenemos todos los ingredientes necesarios para armar una CNN totalmente funcional. Cuando trabajamos anteriormente con imágenes, habíamos usado
+un modelo lineal con regresión softmax y un MLP a imágenes de ropa en el dataset Fashion-MNIST. Para hacer que estos datos sean manejables, primero aplanamos cada imagen de una matriz de  en un vector dimensional de  de longitud fija, y luego los procesó en capas completamente conectadas. Ahora que tenemos un control sobre las capas convolucionales, podemos retener la estructura espacial en nuestras imágenes. Como beneficio adicional de reemplazar capas completamente conectadas con capas convolucionales, nuestros modelos requieren muchos menos parámetros.
+
+En esta sección, presentaremos LeNet, entre las primeras CNN publicadas para capturar una amplia atención por su desempeño en tareas de visión por computadora. El modelo fue presentado por (y nombrado por) Yann LeCun,
+entonces investigador en AT&T Bell Labs, con el propósito de reconocer dígitos del 0 al 9 escritos a mano en imágenes. El dataset con el que trabajó LeCun y su equipo se lo conoce como MNIST y es un modelo tan conocido y probado, que muchos especialista argumenta que carece de sentido usarlo. Por esto Fashion MNIST se ha propuesto como una alternativa.
+
+En ese momento, LeNet logró resultados sobresalientes equiparar el rendimiento de las máquinas de vectores de soporte, luego un enfoque dominante en el aprendizaje supervisado, logrando una tasa de error de menos del 1% por dígito.
+
+LeNet
+
+A grandes rasgos LeNet tiene dos partes. Una parte consistente de un encoder convolucional de dos capas y un MLP de 3 capas
+
+Decimos que es un encoder convolucional, porque toma imágenes y las transforma en vectores de 120 componentes que representa la información contenida en la imágen.
+
+Las unidades básicas en cada bloque convolucional son una capa convolucional, una función de activación sigmoidea, y una posterior operación de pooling con promedios. Tenga en cuenta que, si bien las ReLU y MaxPooling funcionan mejor, estos descubrimientos aún no se habían hecho al momento de publicación de LeNet. Cada capa convolucional usa un kernel  y una función de activación sigmoidea. Observé también que a la salida de cada capa connvolucional aumenta el número de canales a la salida. La primera capa convolucional tiene 6 canales de salida, mientras que el segundo tiene 16. Cada operación de pooling  (stride 2) reduce la dimensionalidad por un factor de  a través de la reducción de resolución espacial. El bloque convolucional emite una salida con forma dada por (tamaño de lote, número de canal, alto, ancho).
+
+Para pasar la salida del bloque convolucional al MLP,
+debemos aplanar cada ejemplo en el minilote. En otras palabras, tomamos esta entrada de cuatro dimensiones y la transformamos en la entrada bidimensional esperada por el MLP: como recordatorio, este tensor tiene la forma [tamaño de minilote, dim plana]. En número dim plana es el número de dimensiones del vector utilizado para la representación vectorial plana de cada ejemplo El bloque denso de LeNet tiene tres capas completamente conectadas, con 120, 84 y 10 salidas, respectivamente.
+Debido a que todavía estamos realizando la clasificación, la capa de salida de 10 dimensiones corresponde al número de posibles clases de salida.
+
+A pesar de lo tortuoso que puede parecer la descripción anterior, la implementación usando torch es sencilla y no necesitaremos nada más que un método Sequential
+
+Para aquellos que quieran analizar el paper de LeCunn, podrán ver que solo hemos hecho una pequeña modificación. LeCunn y su equipo usaron un clasificación gaussiano, mientras que nosotros usaremos SoftMax como lo hemos hecho hasta ahora.
+
+A continuación mostramos como cambia la forma del tensor entrante y saliente con cada una de las capas usadas.
+
+Cargando los datos.
+
+Como dijimos, vamos a trabajar con Fashion MNIST. Para ello cargaremos le dataset desde la biblioteca de torch.
+
+También calcularemos el accuracy de nuestro modelo.
+
+Definiremos una función de entrenamiento y evaluación como las que habíamos usado antes.
+
+y una función para calcular el tiempo de cálculo
+
+Entrenamiento

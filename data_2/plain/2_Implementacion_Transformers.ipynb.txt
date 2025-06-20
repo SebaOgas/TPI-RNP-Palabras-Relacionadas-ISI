@@ -1,0 +1,227 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/NLP/6Transformers/2Implementacion.ipynb"> <img src='https://colab.research.google.com/assets/colab-badge.svg' /> </a>
+
+Implementación de un Transformer con PyTorch
+
+En esta clase implementaremos una versión (ligeramente modificada) del modelo Transformer del paper Attention is All You Need. Todas las imágenes de este notebook se tomaron del paper de Transformer. Para obtener más información sobre el Transformer, mirá estos tres artículos.
+
+Introducción
+
+Los Transformers no utilizan ningún tipo de recurrencia. En cambio, el modelo está compuesto por capas lineales, mecanismos de atención y normalización.
+
+Al momento de creación de este práctico (Septiembre del 2022), los Transformers son la arquitectura dominante en NLP, se utilizan para lograr resultados del estado del arte en muchas tareas y parece que se seguirán utilizando en un futuro próximo.
+
+La variante de Transformer más popular es BERT (Bidirectional Encoder Representations from Transformers) y sus versiones pre-entrenadas se utilizan comúnmente para reemplazar las capas de embedding, si no más, en los modelos de NLP.
+
+Las diferencias entre la implementación en este notebook y el paper son:
+utilizamos una codificación posicional aprendida en lugar de una estática
+utilizamos el optimizador Adam estándar con una tasa de aprendizaje estático en lugar de uno con pasos de calentamiento y enfriamiento
+no usamos suavizado de etiquetas.
+
+Realizamos todos estos cambios ya que siguen de cerca la configuración de BERT y la mayoría de las variantes de Transformer utilizan una configuración similar.
+
+Cargando los Datos
+
+Vamos a entrenar un modelo que traduzca al español frases escritas en inglés. Para eso necesitamos un dataset que tenga frases escritas en ambos idiomas para usar como datasets de origen y destino.
+
+Usaremos el dataset publicado por la organización Tatoeba que vamos a descargar en la siguiente celda.
+
+readtokenizetatoeba
+
+La función readtokenizetatoeba es responsable de leer el archivo de texto fuente que contiene las frases en inglés y español, y luego realizar la tokenización de cada frase para que se pueda utilizar en el modelo de traducción. Esta función cumple varios propósitos clave: cargar los datos, limpiar el texto eliminando información adicional innecesaria, y tokenizar cada frase en secuencias de tokens manejables.
+
+En primer lugar, la función lee cada línea del archivo de texto y utiliza una serie de expresiones regulares para limpiar el contenido. Se eliminan marcas innecesarias, como la licencia y caracteres no deseados que podrían interferir con el entrenamiento. Posteriormente, se utilizan los modelos de spaCy para tokenizar el texto en inglés y español, lo cual es crucial para preparar el modelo de traducción.
+
+La salida de la función incluye secuencias tokenizadas de las frases en inglés (engrows) y español (sparows), que son listas de tokens con elementos especiales como <bos> (beginning of sentence) y <eos> (end of sentence), necesarios para que el modelo sepa dónde comienzan y terminan las frases. Esta forma estructurada de representar los datos facilita el entrenamiento del modelo y mejora la calidad de las predicciones al asegurar que cada frase esté completamente comprendida.
+
+En la función readtokenizetatoeba, se observa que las oraciones de origen (src) no incluyen el token <bos> (beginning of sentence) al inicio de las secuencias. Esta decisión se debe a que el token <bos> es utilizado principalmente para indicar al modelo de traducción cuándo debe comenzar a generar una secuencia de salida (target). En cambio, las oraciones de origen se proporcionan al modelo tal cual, ya que su propósito es simplemente ser procesadas por la red sin requerir un marcador explícito del inicio de la oración.
+
+Tatoeba_Vocab
+La clase Tatoeba_Vocab es responsable de construir el vocabulario a partir de los datos cargados. Se encarga de contar la frecuencia de los tokens y de definir un índice para cada uno de ellos. Esto permite tener un control preciso sobre los tokens más frecuentes que se incluirán en el vocabulario y los tokens reservados que deben ser utilizados durante el entrenamiento. Esta estructura garantiza que se capturen los elementos más relevantes del corpus de texto y se eviten palabras poco frecuentes que podrían agregar ruido al modelo.
+
+TatoebaDataset
+
+La clase TatoebaDataset se utiliza para cargar los datos desde el archivo fuente, dividirlos en conjuntos de entrenamiento, validación y prueba, y preparar las secuencias para el modelo. Esta clase facilita la lectura y tokenización del texto, dividiéndolo en frases en inglés y español que se utilizarán como pares de origen y destino para el entrenamiento. Además, el dataset se divide en subconjuntos específicos para asegurar una correcta evaluación y prueba del rendimiento del modelo.
+
+BucketSampler
+
+La implementación del BucketSampler permite agrupar los ejemplos por longitud similar, lo cual mejora la eficiencia durante el entrenamiento al minimizar la cantidad de padding necesario. Este enfoque asegura que el modelo procese ejemplos más uniformes en términos de longitud, lo que reduce el desperdicio de capacidad computacional y mejora la convergencia del modelo.
+
+collate_batch
+
+Para la preparación de los datos antes de ser pasados al modelo, se ha implementado la función collatebatch. Esta función toma los ejemplos individuales del dataset y los convierte en minilotes que pueden ser procesados en paralelo por el modelo. Utiliza padsequence para asegurar que todas las secuencias en el minilote tengan la misma longitud, añadiendo tokens de padding cuando sea necesario. Esto permite que el modelo procese los datos de manera más eficiente y evita errores que podrían surgir de secuencias de longitud desigual.
+
+DataLoaders
+Ahora podemos crear los DataLoaders e imprimir su contenido.
+
+Capas Necesarias para el Modelo
+
+Antes de armar el modelo, vamos a explicar algunas capas introducidas en el paper que forman una parte esencial tanto dentro del encoder como del decoder.
+
+Capa de atención de múltiples cabezales
+
+Uno de los conceptos clave y novedosos introducidos por el documento Transformer es la capa de atención de múltiples cabezales.
+
+La atención se puede considerar como consultas (queries), claves (keys) y valores (values), donde la consulta se usa junto a la clave para obtener un vector de atención (generalmente el resultado de una operación softmax y tiene todos los valores entre 0 y 1 y que, en total, suman 1) que luego se usa para obtener una suma ponderada de los valores.
+
+El Transformer utiliza atención de producto punto escalada, donde la consulta y la clave se combinan tomando el producto punto entre ellas, luego aplicando softmax y escalando por  antes de finalmente multiplicar por el valor. La constante  es la dimensión de la cabeza, head_dim, que explicaremos con más detalle en breve.
+
+Esto es similar a la atención de producto punto estándar pero escalada por , que según el documento se usa para evitar que los resultados de los productos punto se hagan demasiado grandes, y por lo tanto los gradientes se vuelvan demasiado pequeños.
+
+Sin embargo, la atención de producto punto escalada no se aplica simplemente a las consultas, claves y valores. En lugar de realizar una aplicación de atención única, las consultas, claves y valores tienen su hiddim dividido en * cabezas* y la atención de producto punto escalada se calcula sobre todas las cabezas en paralelo. Esto significa que en lugar de prestar atención a un concepto por aplicación de atención, prestamos atención a  conceptos. Luego, volvemos a combinar las cabezas en su forma hiddim.
+
+ es la capa densa aplicada al final de la capa de atención de múltiples cabezales, que llamaremos en el código fco.  son las capas densas que en el código llamaremos fcq, fck y fcv.
+
+Recorriendo el código del módulo, primero calculamos ,  y  con las capas lineales, fcq,  fck y fcv, para darnos  Q,  K y V. A continuación, dividimos el hiddim de la consulta, la clave y el valor en  nheads usando .view() y los permutamos correctamente para que se puedan multiplicar juntos. Luego calculamos la energía (la atención no normalizada) multiplicando  Q y K y escalando por la raíz cuadrada de headdim, que se calcula como hiddim // nheads. Luego enmascaramos la energía para que no prestemos atención a ningún elemento de la secuencia que no deberíamos, luego aplicamos el softmax y dropout. A continuación, aplicamos la atención a los valores de los cabezales, V, antes de combinar los resultados para las  nheads . Finalmente, multiplicamos este , representado por fco.
+
+Tenga en cuenta que en nuestra implementación las longitudes de las claves y los valores son siempre los mismos, por lo tanto, cuando la matriz multiplica la salida del softmax, attention, con V siempre tendremos tamaños de dimensión válidos para la multiplicación de matrices. Esta multiplicación se lleva a cabo usando torch.matmul que, cuando ambos tensores son >2-dimensionales, hace una multiplicación matricial por lotes sobre las dos últimas dimensiones de cada tensor. Esto será una multiplicación de matriz por lotes con formas [query len, key len] x [value len, head dim]   sobre el tamaño de lote y cada cabezal que proporciona un resultado con forma [batch size, n heads, query len, head dim] .
+
+Algo que parece extraño al principio es que el dropout se aplica directamente a la atención. Esto significa que lo más probable es que nuestro vector de atención no sume 1 o que prestemos toda la atención a un solo token que puede establecerse en 0 por el dropout. Estos problemas nunca se explican, ni siquiera se mencionan, en el paper, sin embargo, es lo que se hace en la implementación oficial y todas las implementaciones de Transformer desde entonces, incluido BERT.
+
+Capa Feed-Forward Posicional
+
+La otra capa presentada en el paper es la capa feedforward posicional. Esta capa es relativamente simple en comparación con la capa de atención de múltiples cabezales. La entrada se transforma de hiddim a pfdim, donde pfdim suele ser mucho más grande que hiddim. El Transformer original usó un hiddim de 512 y un pfdim de 2048. La función de activación de ReLU y el dropout se aplican antes de que se vuelva a transformar en una representación de hid_dim.
+
+BERT usa la función de activación GELU, que se puede usar simplemente cambiando torch.relu por F.gelu.
+
+Construyendo el modelo
+
+A continuación, crearemos el modelo. Al igual que en el trabajo práctico anterior, se compone de un encoder y un decoder, con el encoder codificando la oración de entrada/origen (en inglés) en un vector de contexto y el decoder luego decodificando este vector de contexto para generar nuestra oración de salida/objetivo (en español).
+
+Bloque Encoder
+
+Los bloques Encoder son donde se encuentra toda la "magia" del Encoder.
+
+Primero pasamos la oración origen y su máscara a la capa de atención de múltiples cabezales, luego aplicamos dropout, una conexión residual y una capa de  Normalización por capas. Luego lo pasamos a través de una capa feed-forward posicional y luego, nuevamente, aplicamos dropout, una conexión residual y  la capa de normalización por capas para obtener la salida de este bloque que se alimenta al siguiente bloque. Los parámetros no se comparten entre bloques.
+
+La capa de atención de múltiples cabezales es utilizada por el bloque encoder para prestar atención a la oración origen, es decir, está calculando y aplicando atención sobre sí misma en lugar de otra secuencia, por lo que la llamamos auto-atención.
+
+Este artículo entra en más detalles sobre la normalización de capas, pero la esencia es que normaliza los valores de las features, de manera que cada feature tiene una media de 0 y una desviación estándar de 1. Esto permite que las redes neuronales con una mayor número de capas, como el Transformer, puedan entrenar más fácilmente.
+
+Encoder
+El encoder del Transformer no intenta comprimir toda la oración fuente, , en un solo vector de contexto, . En su lugar, produce una secuencia de vectores de contexto, . De esta manera, si nuestra secuencia de entrada tuviera 5 tokens de longitud, tendríamos . ¿Por qué llamamos a esto una secuencia de vectores de contexto y no una secuencia de variables ocultas? Porque una variable oculta en el momento  en una RNN solo ha visto el token  y todos los tokens anteriores. Sin embargo, cada vector de contexto aquí ha visto todos los tokens en todas las posiciones dentro de la secuencia de entrada.
+
+Primero, los tokens se pasan a través de una capa de embedding estándar. A continuación, como el modelo no tiene recurrencias, no tiene idea del orden de los tokens dentro de la secuencia. Resolvemos este problema usando una segunda capa de incrustación llamada capa de embedding posicional. Esta es una capa de embedding estándar donde la entrada no es el token en sí, sino la posición del token dentro de la secuencia, comenzando con el primer token, el token <bos> (inicio de secuencia), en la posición 0. El embedding posicional tiene un tamaño de "vocabulario" de 100, lo que significa que nuestro modelo puede aceptar oraciones de hasta 100 tokens de longitud. Esto se puede aumentar si queremos manejar oraciones más largas.
+
+La implementación del Transformer original del paper "Attention is All You Need" no aprende los embedding posicionales. En su lugar, utiliza un embedding estático fijo. Las arquitecturas modernas de Transformer, como BERT, usan embedding posicionales aprendidos en su lugar, por lo tanto, hemos decidido usarlas en estos tutoriales. Consulte esta sección para leer más sobre la codificación posicional utilizada en el modelo Transformer original.
+
+A continuación, el token y los embeddings posicionales se suman elemento a elemento para obtener un vector que contiene información sobre el token y también su posición en la secuencia. Sin embargo, antes de sumarlos, los embeddings de tokens se multiplican por un factor de escala que es , donde  es la dimensión de las capas ocultas, hid_dim. Esto supuestamente reduce la variación en los embeddings y el modelo es difícil de entrenar de manera confiable sin este factor de escala. A continuación, se aplica  dropout a los embeddings combinados.
+
+Los embeddings combinados se pasan a través de  capas de encoder para obtener , que luego se envía y puede ser utilizado por el decoder.
+
+La máscara origen, src_mask, tiene simplemente la misma forma que la oración origen pero tiene un valor de 1 cuando el token en la oración origen no es un token <pad> y 0 cuando sí lo es. Esto se usa en las capas del encoder para enmascarar los mecanismos de atención de múltiples cabezales, que se usan para calcular y aplicar atención sobre la oración origen, por lo que el modelo no presta atención a los tokens <pad>, que no contienen información útil.
+
+Decoder
+
+El objetivo del decoder es tomar la representación codificada de la oración origen, , y convertirla en tokens predichos en la oración objetivo, . Luego comparamos  con los tokens reales en la oración objetivo, , para calcular nuestra pérdida, que se usará para calcular los gradientes de nuestros parámetros y luego usamos nuestro optimizador para actualizar nuestros pesos de manera de mejorar nuestras predicciones.
+
+El decoder es similar al encoder, sin embargo, tiene dos capas de atención de múltiples cabezales. Una capa de auto-atención de múltiples cabezales enmascarada sobre la secuencia objetivo, y una capa de atención de múltiples cabezales que usa la representación del decoder como consulta y la representación del encoder como clave y valor.
+
+El decoder utiliza embedding posicionales y los combina, a través de una suma elemento a elemento, con los embeddings escalados de los tokens de destino, seguidos de dropout. Nuevamente, nuestros embeddings posicionales tienen un "vocabulario" de 100, lo que significa que pueden aceptar secuencias de hasta 100 tokens de longitud. Esto se puede aumentar si se desea.
+
+Los embeddings combinados se pasan a través de las capas del decoder , junto con la frase origen codificada, enc_src, y las máscaras de origen y destino. Tenga en cuenta que la cantidad de capas en el encoder no tiene que ser igual a la cantidad de capas en el decoder, aunque ambas se denotan con .
+
+La representación del decoder después de la última capa se pasa a través de una capa densa, fc_out. En PyTorch, la operación softmax está contenida dentro de nuestra función de pérdida, por lo que no necesitamos explícitamente usar una capa softmax aquí.
+
+Además de usar la máscara de origen, como hicimos en el encoder para evitar que nuestro modelo preste atención a los tokens <pad>, también usamos una máscara de destino. Esto se explicará con más detalle en el modelo "Seq2Seq" que encapsula tanto el encoder como el decoder, pero lo esencial es que como estamos procesando todos los tokens de destino a la vez en paralelo, necesitamos un método para evitar que el decoder "haga trampa" simplemente "mirando" cuál es el siguiente token en la secuencia de destino y emitiéndolo como salida.
+
+Nuestro bloque de decoder también genera los valores de atención normalizados para que luego podamos graficarlos para ver a qué está prestando atención nuestro modelo.
+
+Bloque Decoder
+
+Como se mencionó anteriormente, el bloque decoder es similar al bloque encoder excepto que ahora tiene dos capas de atención de múltiples cabezales, "selfattention" y "encoderattention".
+
+La primera realiza la auto-atención, como en el encoder, utilizando la representación del decoder hasta el momento como consulta, clave y valor. A esto le sigue el dropout, la conexión residual y la normalización por capas. Esta capa selfattention usa la máscara de secuencia objetivo, trgmask, para evitar que el decoder "haga trampas" prestando atención a los tokens que están "por delante" del que está procesando actualmente, ya que procesa en paralelo todos los tokens en la oración objetivo.
+
+La segunda es la manera en que realmente alimentamos la oración origen codificada, encsrc, en nuestro decoder. En esta capa de atención de múltiples cabezales, las consultas son las representaciones del decoder hasta el momento y las claves y valores son las representaciones del encoder. Aquí, la máscara de origen, srcmask se usa para evitar que la capa de atención de múltiples cabezales preste atención a los tokens  <pad>  dentro de la oración de origen. A esto le siguen la capa de dropout, la conexión residual y la capa de normalización por capas.
+
+Finalmente, pasamos esto a través de la capa feed-forward posicional y otra secuencia de dropout, conexión residual y normalización por capa.
+
+El bloque decoder no está introduciendo ningún concepto nuevo, solo usa el mismo conjunto de capas que el bloque encoder de una manera ligeramente diferente.
+
+Seq2Seq
+
+Finalmente, tenemos el módulo Seq2Seq que encapsula el encoder y decoder, además de manejar la creación de las máscaras.
+
+La máscara de origen se crea comprobando dónde la secuencia de origen no es igual a un token <pad>. Es 1 cuando el token no es un token <pad> y 0 cuando lo es. Luego se hace un unsqueeze para que se pueda aplicar correctamente el broadcast al aplicar la máscara a la "energía", que tiene forma [batch size, n heads, seq len, seq len].
+
+La máscara de destino es un poco más complicada. Primero, creamos una máscara para los tokens <pad>, como hicimos para la máscara de origen. A continuación, creamos una máscara "subsecuente", trgsubmask, usando torch.tril. Esto crea una matriz diagonal donde los elementos por encima de la diagonal serán cero y los elementos por debajo de la diagonal se establecerán en lo que sea que valga el tensor de entrada. En este caso, el tensor de entrada será un tensor lleno de unos. Entonces esto significa que nuestro trgsubmask se verá así (para un objetivo con 5 tokens):
+
+Esto muestra lo que cada token de destino (fila) está autorizado a mirar (columna). El primer token de destino tiene una máscara de [1, 0, 0, 0, 0], lo que significa que solo puede mirarse a sí mismo. El segundo token de destino tiene una máscara de [1, 1, 0, 0, 0], lo que significa que puede ver el primer y el segundo token de destino.
+
+A continuación, a la máscara "subsecuente" se le aplica un AND lógico con la máscara de relleno, esto combina las dos máscaras, lo que garantiza que no se puedan atender ni a los tokens posteriores ni a los tokens de relleno. Por ejemplo, si los dos últimos tokens fueran tokens <pad>, la máscara se vería así:
+
+Una vez creadas las máscaras, se utilizan con el encoder y el decoder junto con las oraciones de origen y destino para obtener nuestra oración de destino predicha, output, junto con la atención del decoder sobre la secuencia de origen.
+
+Entrenamiento del modelo Seq2Seq
+
+Ahora podemos definir nuestro encoder y decoder. Este modelo es significativamente más pequeño que los Transformers que se utilizan en investigación hoy en día, pero se puede ejecutar rápidamente en una sola GPU.
+
+Luego, los utilizamos para definir todo nuestro modelo de secuencia a secuencia encapsulado.
+
+Podemos verificar el número de parámetros...
+
+El documento no menciona qué esquema de inicialización de pesos se usó, sin embargo, Xavier parece ser común entre los modelos de Transformer, así que lo usamos aquí.
+
+El optimizador utilizado en el paper original de Transformer utiliza a Adam con una tasa de aprendizaje que tiene un período de "calentamiento" y luego un período de "enfriamiento". BERT y otros modelos de Transformer usan Adam con una tasa de aprendizaje fija, así que lo vamos a implementar así. Consulte  este enlace para obtener más detalles sobre la programación de la tasa de aprendizaje del Transformer original.
+
+Tenga en cuenta que la tasa de aprendizaje debe ser más baja que la predeterminada utilizada por Adam o, de lo contrario, el aprendizaje es inestable.
+
+A continuación, definimos nuestra función de pérdida, asegurándonos de ignorar las pérdidas calculadas sobre los tokens <pad>.
+
+Luego, vamos a definir nuestro ciclo de entrenamiento.
+
+Como queremos que nuestro modelo prediga el token <eos> pero que no sea una entrada en nuestro modelo, simplemente cortamos el token <eos> del final de la secuencia. Por lo tanto:
+
+ denota el elemento real de la secuencia objetivo. Luego introducimos esto en el modelo para obtener una secuencia predicha que, con suerte, debería predecir el token <eos>:
+
+ denota el elemento de secuencia objetivo predicho. Luego calculamos nuestra pérdida usando el tensor trg original con la ficha <sos>  eliminada del frente, dejando la ficha <eos> :
+
+Luego calculamos nuestras pérdidas y actualizamos nuestros parámetros como es estándar.
+
+El ciclo de evaluación es el mismo que el ciclo de entrenamiento, solo que sin los cálculos de gradiente y las actualizaciones de parámetros.
+
+Luego definimos una pequeña función que podemos usar para decirnos cuánto tarda una época.
+
+Finalmente, entrenamos nuestro modelo.
+
+Cargamos nuestros "mejores" parámetros y logramos lograr una mejor perplejidad de prueba que todos los modelos que probamos en clases anteriores.
+
+Inferencia
+
+Ahora con nuestro modelo podemos realizar traducciones con la función translate_sentence a continuación.
+
+Los pasos dados son:
+tokenizar la oración origen si no se ha tokenizado
+añadir los tokens <bos> y <eos>
+numericalizar la oración fuente (asignarle un entero a cada token)
+convertir en un tensor y agregar una dimensión de lote
+crear la máscara de la oración fuente
+alimentar la frase origen y la máscara en el encoder
+crear una lista para contener la oración de salida, inicializada con un token <sos>
+mientras no hayamos alcanzado una longitud máxima
+convertir la predicción actual de la oración de salida en un tensor con una dimensión de lote
+crear una máscara de oración de destino
+colocar la salida actual, la salida del encoder y ambas máscaras en el decoder
+obtener la próxima predicción del token de salida del decoder junto con la atención
+agregar predicción a la lista de predicciones de la oración de salida actual
+meter un break si la predicción fue un token <eos>
+convertir la oración de salida de índices a tokens
+devolver la oración de salida (con el token <sos> eliminado) y la atención de la última capa
+
+Ahora definiremos una función que muestra la atención sobre la oración fuente para cada paso de la decodificación. Como este modelo tiene 8 cabezales podemos ver la atención para cada una de ellos.
+
+Primero, obtendremos un ejemplo del conjunto de entrenamiento.
+
+Nuestra traducción se ve bastante bien, aunque nuestro modelo cambia is walking by por walks by. El significado sigue siendo el mismo.
+
+Podemos ver la atención de cada cabezal a continuación. Cada uno es ciertamente diferente, pero es difícil (quizás imposible) razonar sobre a qué ha aprendido realmente a prestar atención. Algunos cabezales prestan toda su atención a "eine" cuando traducen "a", otros no lo hacen en absoluto y otros lo hacen un poco. Todos parecen seguir el patrón similar de "escalera descendente" y la atención al sacar las dos últimas fichas se distribuye por igual entre las dos últimas fichas de la oración de entrada.
+
+A continuación, obtengamos un ejemplo con el que no se ha entrenado el modelo desde el conjunto de validación.
+
+El modelo lo traduce cambiando "is running" a simplemente "runs", pero es un intercambio aceptable.
+
+Una vez más, algunos cabezales prestan total atención a "ein" mientras que otros no le prestan atención. Una vez más, la mayoría de los cabezales parecen extender su atención tanto al punto como a los tokens <eos> en la oración de origen cuando generan el punto y el token <eos> en la oración objetivo predicha, aunque algunos parecen prestar atención a tokens cercanos del comienzo de la oración.
+
+Finalmente, veremos un ejemplo de los datos de prueba.
+
+¡Una traducción perfecta!

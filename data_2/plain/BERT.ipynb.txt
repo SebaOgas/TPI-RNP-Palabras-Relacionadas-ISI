@@ -1,0 +1,158 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/NLP/7_BERT/BERT.ipynb"> <img src='https://colab.research.google.com/assets/colab-badge.svg' /> </a>
+
+BERT
+
+El año 2018 fue  un importante punto de inflexión para los modelos de aprendizaje automático que manejan texto (o, más exactamente, Procesamiento del Lenguaje Natural o NLP para abreviar). Nuestra comprensión de la mejor forma de representar palabras y oraciones comprendiendo los significados y las relaciones subyacentes está evolucionando rápidamente. Además, la comunidad de NLP ha estado presentando componentes increíblemente poderosos que puedes descargar y usar libremente en tus propios modelos y versiones
+
+ULM-FiT no tiene nada que ver con Cookie Monster pero no se me ocurrió nada mejor 🙂
+
+Uno de los últimos hitos en este desarrollo es el lanzamiento de BERT, un evento descrito como el comienzo de una nueva era en la NLP. BERT es un modelo que rompió varios récords relativos a la forma en la que estos modelos pueden manejar tareas basadas en el lenguaje. Poco después del lanzamiento del documento que presenta Bert, el equipo liberó el código del modelo y puso a libre disposición la descarga de versiones del modelo pre-entrenadas con conjuntos de datos masivos. Este es un desarrollo trascendental, ya que permite a cualquier persona desarrollar un modelo de aprendizaje automático que involucre procesamiento del lenguaje, usando este motor como un componente fácilmente disponible, ahorrando el tiempo, la energía, el conocimiento y los recursos que habría tenido que destinar a entrenar un modelo de procesamiento del lenguaje construido desde cero.
+
+Estos son los 2 pasos a seguir para usar BERT. Primero descargas el modelo previamente entrenado con datos no anotados (PASO 1) y luego te concentras en ajustarlo (PASO 2). [Fuente de la imagen].
+
+BERT se basa en algunas buenas ideas que han ido surgiendo recientemente en la comunidad de NLP, y que incluyen, entre otros, el aprendizaje semi-supervisado (de Andrew Dai y Quoc Le), ELMo (de Matthew Peters e investigadores de AI2 y UW CSE ), ULMFiT (del fundador de fast.ai Jeremy Howard y Sebastian Ruder), transformer OpenAI (de los investigadores de OpenAI Radford, Narasimhan, Salimans y Sutskever) y los Transformer (de Vaswani et alia.) .
+
+Conviene conocer bien algunos conceptos esenciales para comprender correctamente qué es BERT. Pero comencemos por ver las formas en que puedes usar BERT, antes de ver los conceptos involucrados en el modelo en sí.
+Clasificación de oraciones
+
+La forma más directa de emplear BERT es usarlo para clasificar un fragmento de texto. El modelo tendría este aspecto:
+
+Para entrenar un modelo de este tipo, principalmente se tiene que entrenar el clasificador, con cambios mínimos en el modelo BERT durante la fase de entrenamiento. Este proceso de entrenamiento se llama Fine-Tunning y tiene sus raíces en el Aprendizaje Secuencial Semi-supervisado y ULM-FiT.
+
+Para las personas que no están versadas en el tema, dado que hablamos de clasificadores, estamos en el dominio del aprendizaje supervisado, dentro del campo del aprendizaje automático. Lo que significaría que necesitamos un conjunto de datos etiquetados para entrenar dicho modelo. Para este ejemplo de clasificador de spam, el conjunto de datos etiquetado sería una lista de mensajes de correo electrónico y una etiqueta (“spam” o “no spam” para cada mensaje).
+
+Otros ejemplos de este uso podrían incluir:
+Análisis de sentimientos
+Entrada: Reseña de película/producto. Salida: ¿la revisión es positiva o negativa?
+Conjunto de datos de ejemplo: SST
+Comprobación de hechos
+Entrada: oración. Salida: “Declaración” o “No declaración”
+Ejemplo más ambicioso/futurista:
+Entrada: Declaración. Salida: “Verdadera” o “Falsa”
+Arquitectura del modelo
+
+Ahora que sabemos en que podemos aplica BERT, echemos un vistazo más de cerca a cómo funciona.
+
+El paper original del BERT presenta dos tamaños del modelo:
+BERT BASE: comparable en tamaño al Transformer OpenAI (para comparar rendimiento)
+BERT LARGE: un modelo ridículamente enorme que logró los increíbles resultados reseñados en el paper original
+
+BERT es básicamente una pila de transformers encoders entrenados. Es posible que sea necesario revisar la clase de Transformes para continuar
+
+Ambos tamaños de modelos BERT tienen una gran cantidad de capas de encoder: 12 para la versión básica y 24 para la versión grande. Estos también tienen densas más grandes (768 y 1024 unidades ocultas respectivamente) y más cabezales de atención (12 y 16 respectivamente) que la configuración predeterminada en la implementación de referencia del Transformer en el paper inicial (6 capas de codificador, 512 unidades ocultas, y 8 cabezales de atención).
+
+|Características|Transformer|BERT base|BERT large|
+|:--|:-:|:-:|:-:|
+|Cantidad de capas|6|12|24|
+|Longitud de estados ocultos|512|768|1024|
+|Cantidad de cabezales de atención|8|12|16|
+Entradas del modelo
+
+El primer token de entrada viene con un token [CLS] especial por motivos que se aclararán más adelante. CLS aquí significa Clasificación.
+
+Al igual que el encoder vanilla del transformer, BERT toma una secuencia de palabras como entrada que avancia hacia arriba en la pila. Cada capa aplica auto atención, pasa sus resultados a través de una red de avance y luego los devuelve al siguiente encoder.
+
+En términos de arquitectura, es idéntica a la del Transformer hasta este punto (aparte del tamaño, que no deja de ser una configuraciones a elección de cada uno). Es en la salida donde empezamos a ver cómo cambian las cosas.
+Salidas del modelo
+
+Cada posición genera un vector de tamaño hidden_size (768 en BERT Base). Para el ejemplo de clasificación de oraciones que vimos anteriormente, nos enfocamos en la salida de solo la primera posición (a la que le pasamos el token [CLS] especial).
+
+Ese vector ahora se puede usar como entrada para un clasificador de nuestra elección. El documento logra excelentes resultados usando únicamente una red neuronal de una sola capa como clasificador.
+
+Si tienes más etiquetas (por ejemplo, si es un servicio de correo electrónico que etiqueta los correos electrónicos como “spam”, “no spam”, “social” y “promoción”), simplemente modifica la red clasificadora para tener más neuronas de salida que luego pasar por softmax.
+Una nueva era de integración
+
+Estos nuevos desarrollos traen consigo un nuevo cambio en la forma en que se codifican las palabras. Hasta ahora, los embeddings de palabras han sido una gran herramienta en la forma en que los principales modelos de NLP tratan el lenguaje. Métodos como Word2Vec y Glove se han utilizado ampliamente para este tipo de tareas. Recapitulemos cómo se usan antes de señalar lo que ahora ha cambiado.
+
+Resumen de embeddings de palabras
+
+Para que las palabras sean procesadas por modelos de aprendizaje automático, necesitan alguna forma de representación numérica que los modelos puedan usar en sus cálculos. Word2Vec demostró que podemos usar un vector (una lista de números) para representar correctamente las palabras de una manera que captura las relaciones semánticas o relacionadas con el significado (por ejemplo, la capacidad de saber si las palabras son similares u opuestas, o que un par de palabras como “Estocolmo” y “Suecia” tienen entre ellos la misma relación que tienen entre ellos “El Cairo” y “Egipto”), así como relaciones sintácticas o basadas en la gramática (por ejemplo, la relación entre “tenía” y “tengo” es la mismo que entre “era” y “es”).
+
+La comunidad rápidamente se dio cuenta de que era mucho mejor idea usar embeddings previamente entrenados con grandes cantidades de datos de texto, en lugar de entrenarlas junto con el modelo en lo que con frecuencia eran pequeños conjuntos de datos. De esta  manera uno descarga una lista de palabras y sus embeddings a partir del entrenamiento previo con Word2Vec o GloVe. Este es un ejemplo del embedding GloVe de la palabra “palo” (con un tamaño de vector de embedding de 200)
+
+Embedding GloVe de la palabra “palo”: un vector de 200 floats (redondeados a dos decimales). Continúa con más de doscientos valores.
+
+Dada su longitud y la gran cantidad de números, en las ilustraciones de mis publicaciones utilizo esta cuadrícula simplificada para representar vectores:
+
+ELMo: el contexto importa
+
+Si estamos usando esta representación GloVe, entonces la palabra “palo” estaría representada por este vector sin importar el contexto. Sin embargo, es claro que esto es un problema.(Peters et. al., 2017 , McCann et. al., 2017 , y una vez más Peters et. al., 2018 en el artículo de ELMo ). "Palo" tiene múltiples significados dependiendo de dónde se use. ¿Por qué no darle un embedding basado en el contexto en el que se usa, tanto para capturar el significado de la palabra en ese contexto como para otra información contextual?”. Y así nacieron los embeddings de palabras contextualizadas .
+
+Los embeddings de palabras contextualizadas pueden dar a las palabras embeddings diferentes según el significado que tengan en el contexto de la oración.
+
+En lugar de usar un embedding fijo para cada palabra, ELMo analiza la oración completa antes de asignarle un embedding a cada palabra. Utiliza un LSTM bidireccional entrenado en una tarea específica para poder crear esos embedding.
+
+ELMo supuso un paso significativo hacia la formación previa en el contexto de la NLP. El ELMo LSTM se entrenaría en un conjunto de datos masivo en el idioma de nuestro conjunto de datos, y luego podemos usarlo como componente en otros modelos que necesitan manejar el idioma.
+
+¿Cuál es el secreto de ELMo?
+
+ELMo adquirió su comprensión del idioma al ser entrenado para predecir la siguiente palabra en una secuencia de palabras, una tarea llamada Modelado del Lenguaje. Esto es muy interesante porque tenemos grandes cantidades de datos de texto de los que dicho modelo puede aprender sin necesidad de etiquetas.
+
+Uno de los pasos en el proceso de pre-entrenamiento de ELMo: dado “Lets stick to” como entrada, predecir la siguiente palabra más probable: una tarea de Modelado de Lenguaje . Cuando se entrena en un gran conjunto de datos, el modelo comienza a captar patrones de lenguaje. Es poco probable que adivine con precisión la siguiente palabra en este ejemplo. De manera más realista, después de una palabra como “pasar”, asignará una mayor probabilidad a una palabra como “tiempo” (para conformar “pasar tiempo”) que a “cámara”.
+
+Podemos entrever cada uno de los pasos de LSTM asomando por detrás de la cabeza de ELMo. Resultan muy útiles para generar embeddings de que realizar este entrenamiento previo.
+
+ELMo en realidad va un paso más allá y entrena un LSTM bidireccional, de modo que su modelo de lenguaje no solo se hace una idea de la palabra siguiente, sino también de la palabra anterior.
+
+ELMo llega al  embedding contextualizado mediante la agrupación de los estados ocultos (y el embedding inicial) de cierta manera (concatenación seguida de suma ponderada).
+
+ULM-FiT: Transferencia de Aprendizaje en PNLP
+
+ULM-FiT introdujo nuevos métodos para utilizar de manera más efectiva mucho de lo que el modelo aprende durante el entrenamiento previo, más allá de los meros embeddings e embeddings contextualizados. ULM-FiT introdujo un nuevo modelo de lenguaje y un proceso para ajustar efectivamente ese modelo de lenguaje para resolver varias tareas.
+El Transformer: yendo más allá que los LSTM
+
+La publicación del paper y el código de Transformer, y los resultados que logró en tareas como la traducción automática, comenzaron a hacer que algunos pensaran en ellos como un reemplazo de los LSTM. Esto se vio agravado por el hecho de que los Transformers manejan las dependencias a largo plazo mejor que los LSTM.
+
+La estructura Encoder-Decoder del Transformer lo hizo perfecto para la traducción automática. Pero, ¿cómo lo usarías para la clasificación de oraciones? ¿Cómo lo usaría para entrenar previamente un modelo de idioma que se puede ajustar para otras tareas (tareas posteriores es lo que el campo llama tareas de aprendizaje supervisado que utilizan un modelo o componente entrenado previamente).
+OpenAI Transformer: pre-entrenando un decoder de Transformer para Modelado de Lenguaje
+
+Resulta que no necesitamos un Transformer completo para adoptar transferencia del aprendizaje y un modelo de lenguaje ajustable para tareas de NLP. Podemos hacerlo solo con el decoder del Transformer. El decoder es una buena opción porque es una opción natural para el modelado del lenguaje (predecir la siguiente palabra) ya que está diseñado para enmascarar tokens futuros, una característica valiosa cuando genera una traducción palabra por palabra.
+
+El transformer OpenAI está integrado por la pila de decoders del Transformer
+
+El modelo apiló doce capas de decoder. Dado que no hay encoder en esta configuración, estas capas de decoder no tendrían la subcapa de atención de encoder-decoder que tienen las capas de decoder de Transformer estándar. Sin embargo, todavía tendría la capa de auto atención (enmascarada para que no alcance su punto máximo en tokens futuros).
+
+Con esta estructura, podemos proceder a entrenar el modelo en la misma tarea de modelado de lenguaje: predecir la siguiente palabra utilizando conjuntos de datos masivos sin etiquetar. ¡Métele 7.000 libros y que aprenda! Los libros son excelentes para este tipo de tareas, ya que permiten que el modelo aprenda a asociar información relacionada, incluso si están separados por mucho texto, algo que no se obtiene, por ejemplo, cuando se entrena con tweets o artículos.
+
+OpenAI Transformer listo para ser entrenado para predecir la siguiente palabra, con un conjunto de datos compuesto por 7.000 libros.
+
+Transferencia del Aprendizaje a tareas posteriores
+
+Ahora que el Transformer OpenAI está preentrenado y sus capas se han ajustado para manejar razonablemente el lenguaje, podemos comenzar a usarlo para tareas posteriores. Primero veamos la clasificación de oraciones (clasificar un mensaje de correo electrónico como “spam” o “no spam”):
+
+Cómo usar un Transformer OpenAI preentrenado para clasificar oraciones
+
+El documento de OpenAI describe una serie de transformaciones de entrada para manejar las entradas para diferentes tipos de tareas. La siguiente imagen del paper muestra las estructuras de los modelos y las transformaciones de entrada para llevar a cabo diferentes tareas.
+
+Muy inteligente, no?
+BERT: de Decodificadores a Codificadores
+
+El Transformer openAI nos brindó un modelo preentrenado ajustable con precisión basado en el Transformer. Pero faltaba algo en esta transición de LSTM a Transformers. El modelo de lenguaje de ELMo era bidireccional, pero el Transformer openAI solo entrena un modelo de lenguaje directo. ¿Podríamos construir un modelo basado en Transformers cuyo modelo de lenguaje mire tanto hacia adelante como hacia atrás (en la jerga técnica, “esté condicionado tanto en el contexto izquierdo como en el derecho”)?
+
+Modelo de lenguaje enmascarado
+
+Todo el mundo sabe que el condicionamiento bidireccional permitiría que cada palabra se viera indirectamente en un contexto de varias capas. Por eso no se usa encoders para esta tarea... ¿Pero que pasa si usamos máscaras?
+
+El proceso de modelado de lenguaje inteligente de BERT enmascara el 15% de las palabras en la entrada y le pide al modelo que prediga la palabra que falta.
+
+Es literalmente la tarea de cualquier libro de texto de lengua extranjera. Completar con la preposición correcta, con la conjugación correcta. Solo que ahora es como si le dijeramos al alumno. Podes usar todo el diccionario.
+
+Encontrar la tarea correcta para entrenar una pila de codificadores de Transformer es un obstáculo complejo que BERT resuelve adoptando un concepto de “modelo de lenguaje enmascarado” de la literatura anterior (donde se denomina tarea Cloze).
+
+Más allá de enmascarar el 15% de la entrada, BERT también mezcla un poco las cosas para mejorar la forma en que el modelo se ajusta más tarde. A veces reemplaza aleatoriamente una palabra con otra palabra y le pide al modelo que prediga la palabra correcta en esa posición.
+Tareas de dos oraciones
+
+Si miramos atrás en las transformaciones de entrada que hace el Transformer OpenAI para gestionar diferentes tareas, notaremos que algunas tareas requieren que el modelo diga algo inteligente sobre dos oraciones (por ejemplo, ¿son simplemente versiones parafraseadas una de la otra? Dada una entrada de wikipedia como entrada, y una pregunta sobre esa entrada como otra entrada, ¿podemos responder esa pregunta?).
+
+Para hacer que BERT sea mejor en el manejo de relaciones entre múltiples oraciones, el proceso de entrenamiento previo incluye una tarea adicional: dadas dos oraciones (A y B), ¿es probable que B sea la oración que sigue a A, o no?
+
+La segunda tarea en la que BERT está pre-entrenado es una tarea de clasificación de dos oraciones. La tokenización esta muy simplificada en este gráfico, ya que BERT en realidad usa WordPieces como tokens en lugar de palabras, por lo que algunas palabras se dividen en fragmentos más pequeños.
+Modelos específicos de tareas
+
+El paper de BERT muestra varias formas de usar BERT para diferentes tareas.
+
+BERT para extracción de características
+
+El enfoque de Fine-Tuning no es la única forma de utilizar BERT. Al igual que ELMo, se puede usar BERT previamente entrenado para crear embeddings de palabras contextualizadas. Luego, se puede alimentar estos embeddings a un modelo existente, un proceso que el paper muestra que produce resultados no muy lejanos del Fine-Tuning de BERT en tareas como el reconocimiento de entidades.
+
+¿Qué vector funciona mejor como embeddig contextualizada?Depende de la tarea. El documento examina seis opciones (en comparación con el modelo ajustado que logró una puntuación de 96,4):

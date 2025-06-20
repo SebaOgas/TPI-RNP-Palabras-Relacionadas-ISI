@@ -1,0 +1,241 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/DeepLearning/2RedesDeUnaCapa/1regresionlineal.ipynb" target="parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a>
+
+Redes Neuronales de Una Capa
+
+Regresión lineal desde cero
+
+Si estás acá en principio sabés que es una regresión lineal. Una regresión lineal una forma de analizar como ciertas variables dependen de otras.
+
+
+
+Una regresión lineal, nos relaciona variables independientes o features con una variable dependiente objetivo. Por medio de sumás y productos de las diferentes cantidades independientes, se busca obtener la variable dependiente.
+
+Consideremos la llamada fórmula de Dulong. La formula de Dulong es un resultado experimental surgido de analizar la energía liberda en la combustión de combustibles fósiles. La formula predice el valor de energía liberada en función la proporción de cada elemento en el combustible.
+
+Donde  es la proporción en masa de carbono en el combustible,  la proporción de hidrógeno,  la de oxígeno,  vale 1 solamente si el combustible es líquido,  vale 1 solamente si el combustible es sólido
+
+Por ejemplo, al quemar gas metáno se obtiene las siguientes proporciones, ,  y 
+
+En nuestra fórmula eso nos devuelve  frente al valor  reportado en tablas.
+Nota: esos valores provienen de lo siguiente:
+Fórmula del metano: 
+Masa molar del metano: 
+Masa molar del carbono: 
+Masa molar del hidrógeno: 
+
+ porque hay 4 hidrógenos.
+
+El punto de este comentario no es discutir un resultado de termódinámica química, sino señalar que la regresión lineal es una técnica usada desde hace años en areas de las más variopintas. Sin ir más lejos, la formula de Dulong es un resultado del siglo XIX que sigue teniendo utilidad. Tal es así que los coeficientes de la versión que hemos presentado corresponden a un resultado de 2016 La única diferencia con el otro modelo presentado es que aquí hemos decidido usar una notación con one-hot vectors para el estado del combustible.
+
+Siguiento el ejemplo anterior consideremos que hemos estudiado solo dos combustibles, el gas metano y el alcohol etílico.
+
+|||||gas|líquido|sólido|
+|---|---|---|---|---|---|---|---|
+metano|0.75|0.25|0.00|1|0|0|50.01|
+alcohol etílico ()|0.52|0.13|0.35|0|1|0|26.70|
+
+Notar que para repersentar el estado de agregación del combustible, hemos usado una codificación de one hot vectors.
+
+En la columna  reportamos el valor medido en laboratorio. Consideremos por ahora solo los valores nuestras variables independientes y pongamos la dentro de una matriz:
+
+\begin{align}
+     X = \left[\begin{array}{cccccc}
+     0.75&0.25&0.00&1&0&0\
+     0.52&0.13&0.35&0&1&0
+     \end{array}\right]
+     \end{align}
+
+Consideremos también un vector donde guardaremos los valores reales o los ground truth de nuestos datos
+
+\begin{align}
+     y = \left[\begin{array}{c}
+     50.01\
+     26.7
+     \end{array}\right]
+     \end{align}
+
+Esta matriz , se conoce como matriz de diseño y nos permite guardar toda la información de los ejemplos que quiesieramos estudiar. Además, la matriz  tiene una propiedad interesante. Condiremos lo coeficientes de la fórmula de Dulong y guardemoslos en un vector 
+
+\begin{align}
+     w^T = \left[\begin{array}{cccccc}
+     38.2&84.9&-10.6125&0&-0.5&-0.62
+     \end{array}\right]
+     \end{align}
+
+por que 
+
+Consideremos ahora el vector:
+
+\begin{align}
+     \hat{y} = \left[\begin{array}{cccccc}
+     0.75&0.25&0.00&1&0&0\
+     0.52&0.13&0.35&0&1&0
+     \end{array}\right]\left[\begin{array}{c}
+     38.2\84.9\-10.6125\0\-0.5\-0.62
+     \end{array}\right]
+     \end{align}
+\begin{align}
+     \hat{y} = \left[\begin{array}{cc}
+     49.87\
+     26.69
+     \end{array}\right]
+     \end{align}
+
+Al guardar nuestros datos y nuestros parametros en matrices, ahora podemos calcular nuestras predicciones como una mera multiplicación de matrices. Además podemos estimar el error absoluto entre nuestra predicción y el valor real como una operación matricial.
+
+De más está decir que de lo anterior podemos tratar de calcular la varianza de los valores en el vector , suponiendo que un buen modelo debe tener dispersión media igual a 0 con respecto a los valore reales.
+
+La formula anterior y todo el analisis es para señalar que es una neurona artificial
+
+
+
+La fórmula de Dulong, como toda regresión lineal, tiene una serie de variables independientes que influyen en el resultado de una variable dependiente. En el caso anterior tenemos, proporcion de diferentes átomos y estado de agregación del combustible (sólido, líquido, gas).
+
+Esta estructura es similar a una neurona que recibe 6 estimulos y produce una única respuesta. Es por esto que decimos que es una neurona.
+
+Minimizar la varianza de nuestro error abosoluto es equivalente a pedir un ajuste lineal por mínimos cuadrados. Es decir, el entrenamiento de nuestra neurona, consistirá en encontrar los parametos  que al aplicarlos sobre nuestros datos  nos permitan obtener las mejores predicciones  de tal manera que se acerque lo más posible a nuestros valores reales  En este contexto, encontrar esos parametros es equivalente a minimizar la varianza. A la cantidad a minimizar la llamaremos función de pérdida
+
+Hemos elegido un caso de análisis como es el calor liberado por un combustible en función de sus constituyentes para señalar que el principio con el que opera la técnica es tan general que puede aplicarse a un monton de otras areas. Sin ir más lejos, podríamos ir un paso más alla y en lugar de entrenar solo una neurona para que nos dé la energía liberada, podríamos entrenar una segunda neurona que nos dé la masa molar del combustible. O una tercer neurona para que nos entregue otra propiedad del combustible, como por ejemplo el índice de refracción.
+
+En caso de tener varias neuronas, nuestros parámetros deberían ser almacenados en una matriz de pesos. Es decir:
+
+\begin{align}
+     \hat{y} = \left[\begin{array}{cccccc}
+     0.75&0.25&0.00&1&0&0\
+     0.52&0.13&0.35&0&1&0
+     \end{array}\right]\left[\begin{array}{cc}
+     38.2&1\84.9&1\-1.6125&1\0&-1\-0.5&1\-0.62&2
+     \end{array}\right]
+     \end{align}
+\begin{align}
+     \hat{y} = \left[\begin{array}{cc}
+     49.87&0\
+     26.69&2
+     \end{array}\right]
+     \end{align}
+
+Donde la segunda columna corresponde a una segunda neurona que aprendió a devolver alguna otra propiedad de los combustibles
+
+Esperamos que con lo aquí descripto, se entienda que es una neurona, red de una capa de neuronas y en que consiste encontrar los parametros óptimos al problema.
+
+Presentando el pipeline
+
+Ahora, lo que describiremos será como es el proceso general para entrenar una red:
+Carga de los datos
+Separación de los datos en lotes
+Inicialización de parámetros
+Definición del modelo
+Definición de la función de pérdida
+Definición del algoritmo de optimización
+
+Para nuestro primer ejemplo lo que haremos será trabajar con datos sintéticos. Es decir, tomaremos los datos generados de un modelo lineal. Nuestra intención con esto es múltiple:
+Queremos mostrar un ejemplo que nos permita entender el significado de los parámetros de nuestro modelo.
+Queremos saber que tan buenas son nuestras estimaciones
+Queremos usar un modelo sencillo que nos permita analizar cada paso del pipeline.
+
+Este último punto es el principal motivo de esta parte. Por lo general, los frameworks de deep learning tiene multiples herramientas que nos permite simplificar cada uno de los pasos. Sin embargo, también es común que necesitemos ajustar detalles del modelo que usaremos. Es en este sentido que "reinventar la rueda", nos puede ayudar entender como funcionan las herramientas preexistentes en los frameworks que usaremos.
+
+"Dataset"
+
+Comencemos con un modelo lineal sencillo al que añadiremos ruido gaussiano
+
+Es importante ver cual es la dimensionalidad de nuestros features y nuestras etiquetas.
+
+Podemos graficar la etiqueta y una de las features para ver este comportamiento lineal
+
+Cargando los datos
+
+Dado que el entrenamiento se hace usando muchos mini-lotes de datos, es conveniente tener una función que se encarga de generar estos minilotes segun los necesitemos.
+
+Para esto necesitamos una función que tome nuestra matriz de diseño, tome nuestras etiquetas y nos genere lotes para el entrenamiento de un tamaño dado.
+
+Valores iniciales de nuestro modelo
+
+Dado que estamos estamos buscando mínimos de una fución de pérdida, podemos elegir iniciar con cualquier valor. Luego nuestro optimizador se encargará de encontrar los mínimos adecuados.
+
+Con estos parametros iniciales, estamos en condiciones de empezar a entrenar nuestra red. Es decir, buscar los parámetros que mejor representen el comportamiento de nuestros datos.
+
+Debemos recordar que detras del uso de descenso por gradiente, usamos herramientas de diferenciación automática para nuestros problemas.
+Definiendo el modelo.
+
+En este caso, nuestro modelo será análogo al usado para generar nuestros datos, es decir:
+
+Definiendo la función de pérdida
+
+Como estamos haciendo una regresión lineal, sabemos que lo que minimizamos son es la cantidad llamada mínimos cuadrados
+
+Definiendo el algoritmo de optimización
+
+A continuación mostramos un pequeño ejemplo de funciona descenso gradiente estocástico
+
+Entrenamiento
+
+A continuación esbozamos como es nuestro ciclo de entrenamiento
+Iniciamos nuestros parametros. 
+Repetimos hasta concluir
+Calculamos la función de pérdida 
+Calculamos el gradiente con minilotes 
+actualizamos los parámetros. 
+    > Nota: estos últimos dos pasos pasos los hace la función sdg definida arriba.
+
+Llamamos época a cada vez que iteramos sobre todos nuestros datos. Por otro lado el parametro  es lo que llamamos tasa de aprendizaje o learning rate. Este valor nos dice que tanto nos moveremos en la dirección hacia donde esta el mínimo. Tanto la cantidad de épocas a recorrer como la tasa de aprendizaje son hiperparametros. Encontrar lo hiperparámetros apropiados para nuestros datos y modelos no es una tarea sencilla. Por ahora daremos valores arbitrarios, pero aprender a encontrar valores correctos es todo un arte.
+
+Como nuestros datos son sintéticos, podemos comparar nuestras estimaciones con los valores reales.
+
+Regresión lineal concisa.
+
+En el notebook anterior, vimos un ejemplo de como implementar una red neuronal desde cero. Sin embargo, hacer esto es una mala idea. La principal razón por la que es una mala idea, es que muchas de las cosas que hicimos consisten en "reinventar la rueda". Hay bibliotecas que ya tienen herramientas para hacer lo que ya hicimos. Además, nuestra implementación puede no ser la más eficiente. Es decir: la implementación usada puede generar tiempos de espera que podrían ser evitados si nuestro código estuviera implementado de manera distinta. Por esta razón, es siempre recomendable usar las bibliotecas preexistentes.
+
+Recordemos que el ejemplo anterior estaba pensado para que le perdamos el miedo a las bibliotecas preexistentes, para que entendamos como funcionan y para aprender a implementar cosas nuevas (si llegamos a necesitarlo)
+
+Veamos entonces como implementariamos todo lo anterior haciendo uso de la biblioteca pytorch
+
+Datos sintéticos
+
+Misma función que usamos anteriormente
+
+Cargando nuestros datos
+
+En este caso, podemos enviar nuestros datos diferentes metodos preexistentes de pytorch para generar nuestro minilotes.
+
+Además podemos pedir nos mezcle nuestros datos o que los deje tal cual
+
+Queremos ver como se generan nuestros minilotes. Para esto debemos poder imprimierlos por pantalla. A diferencia de la implementación anterior, el método DataLoader, no genera un iterable, por esto debemos convertirlo en uno y recorrerlo segun necesitemos
+
+Definiendo el modelo
+
+A continuación presentamos la versión concisa de nuestro modelo, luego la discutiremos.
+
+La clase Sequential define todas las capas a aplicar de manera secuencial en nuestro modelo. Por ahora, como trabajamos con regresión lineal solo usaremos una capa. Sin embargo esta capa es lo que se llama una capa totalmente conectada. Es decir, esta representada por una matriz que aplica sobre vector de features. Al aplicar esta matriz encontramos la salida de nuestra neurona. En este caso, este tipo de capas se las conoce como Linear y reciben como entrada (<numerodeentradas>, <numerodesalidas>). Para nuestro modelo, esto son nuestras 2 features y nuestra etiqueta.
+
+¿Que es una capa densa?
+
+una capa densa o completamente conectada es la forma más básica de una red neuronal. Cada entrada influencia a cada salida de acuerdo a los pesos. Si nuestro modelo tiene  entradas y  salidas, la matriz de pesos sera . De igual modo el vector de sesgos o bias tendra dimensión
+
+Inicialización de parametros de nuestro modelo.
+
+Por lo general, los frameworks prexistentes tienen implementaciones por defecto para inicializar los parámetros. Sin embargo, queremos iniciarlos de manera similar a la anterior.
+
+Para ellos accedemos a la primera (y única capa) usando net[0]. Luego accedemos a los pesos y los sesgos con weight.data and bias.data. Finalmente rellenamos los valores con lo que teníamos pensado usar.
+
+Definiendo la función de pérdida
+
+Definiendo el algoritmo de optimización
+
+La principal diferencia con lo que hicimos antes, es que solamente debemos pasarle a nuestro SDG, los parametros a optimizar. El resto de los detalles ya son manejados por la implementación de pytorch. En este caso también estamos pasando la tasa de aprendizaje, pero la clase SGD de pytorch ya incluye un valor por defecto.
+
+Un optimizador en torch tiene por defecto una serie de métodos. Sin embargo ahora mismo solo nos interesan 2 de ellos, pues son los que más usaremos.
+Optimizer.step
+Este es el método es el que propiamente aplica el algoritmo SGD, o cualquier otro algoritmo que fueramos a implementar.
+Optimizer.zero_grad
+Por defecto, Optimizer suma los sucesivos gradientes calculados. Esto hace que al principio de cada época de el entrenamiento, debamos setear el gradiente en 0. Es por esto que este método existe dentro de la clase Optimizer
+
+Entrenamiento
+
+Hasta aquí veníamos reduciendo lineas de código de manera impresionante. Sin embargo, nuestro ciclo de entrenamiento será casi identico a lo que habíamos visto antes.
+Repetimos hasta concluir
+Calculamos la función de pérdida
+Calculamos el gradiente con minilotes
+Actualizamos los parámetros.
+
+Hasta aquí hemos trabajado con el problema de la regresión. Sin embargo, muchas veces lo que deseamos es clasificar segun clases discretas. De hecho, más adelante veremos que los grandes logros de las redes neuronales son en el area de clasificación. Para esto, a continuación hablaremos de Regresión Softmax y su aplicación en clasificación.

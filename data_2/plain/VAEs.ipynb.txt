@@ -1,0 +1,150 @@
+Modelos Generativos: Variational AutoEncoders
+
+Los VAEs son modelos generativos sencillos que intentan maximizar la similitud entre las imágenes generadas y las imágenes con las que han sido alimentadas. Al aprender a representar los valores de entrada en una forma diferente, pero mucho más compacta, se puede hacer un muestreo en la distribución aprendida para poder ser capaz de generar muestras de datos nuevas.
+
+Reducción de la Dimensionalidad
+
+En el aprendizaje automático, la reducción de dimensionalidad es el proceso de reducir la cantidad de características que describen algunos datos. Esta reducción puede llevarse a cabo mediante selección (solo se conservan algunas características existentes) o mediante extracción (se crea un número reducido de características nuevas basadas en las características viejas) y puede ser útil en muchas situaciones que requieren datos de baja dimensión (visualización de datos, almacenamiento, cómputos pesados, etc.). Aunque existen muchos métodos diferentes de reducción de dimensionalidad, se puede establecer un marco general que está presente en la mayoría de estos métodos (¡si no es que en todos!).
+
+Primero, llamemos encoder al proceso que produce la representación de las "características nuevas" a partir de la representación de "características viejas" (mediante selección o extracción) y decoder al proceso inverso. La reducción de la dimensionalidad se puede interpretar como una compresión de datos donde el encoder comprime los datos (desde el espacio inicial hasta el espacio codificado, también llamado espacio latente), mientras que el decoder los descomprime. Por supuesto, dependiendo de la distribución de datos inicial, la dimensión del espacio latente y la definición del codificador, esta compresión puede ser con pérdida , lo que significa que una parte de la información se pierde durante el proceso de codificación y no se puede recuperar al decodificar.
+
+
+
+El propósito principal de un método de reducción de dimensionalidad es encontrar el mejor par encoder / decoder. En otras palabras, para un conjunto dado de posibles encoders y decoders, estamos buscando el par que mantiene la máxima información al codificar y, por lo tanto, tiene el mínimo error de reconstrucción al decodificar. Si denotamos respectivamente E y D las familias de encoders y decoders que estamos considerando, entonces se puede escribir el problema de reducción de dimensionalidad como
+
+dónde  define la medida del error de reconstrucción entre los datos de entrada  y los datos codificados-decodificados .
+
+AutoEncoders
+
+Analicemos ahora los AutoEncoders y veamos cómo podemos usar las redes neuronales para reducir la dimensionalidad. La idea general de los AutoEncoders es bastante simple y consiste en establecer un Encoder y un Decoder como redes neuronales y aprender el mejor esquema de codificación-decodificación mediante un proceso de optimización iterativo. Entonces, en cada iteración alimentamos la Arquitectura del AutoEncoder (el encoder seguido del decoder) con algunos datos, comparamos la salida  con los datos iniciales (función de pérdida) y propagamos el error a través de la arquitectura para actualizar los pesos de las redes (backpropagation).
+
+Por lo tanto, intuitivamente, la Arquitectura del AutoEncoder crea un cuello de botella para los datos que garantiza que solo la parte más importante de la información pueda pasar y reconstruirse. Teniendo en cuenta el marco general, la familia E de los encoders considerados está definida por la arquitectura de red del encoder, la familia D de los decoders considerados está definida por la arquitectura de la red del decoder y la búsqueda del encoder/decoder que minimiza el error de reconstrucción se realiza por descenso de gradiente sobre los parámetros de estas redes.
+
+
+
+Implementación en PyTorch
+
+Creación del Encoder
+
+Creación del Decoder
+
+Creación del AutoEncoder
+
+Entrenamiento
+
+Utilidad Práctica
+
+Los AutoEncoders tienen tres usos directos en la práctica:
+Compresión de Imágenes: Dado que un autoencoder puede generar representaciones en espacios de dimensionalidad mucho menor a la imagen original, es un método muy eficiente para comprimir imágenes.
+Eliminar el ruido: Dado que el decoder aprende a regenerar una imagen de entrada a partir de su representación latente, se puede aplicar un ruido generado automáticamente a una imagen antes de calcular su representación latente y el decoder aprenderá a reconstruir la imagen original sin ruido (ya que la función de pérdida compara la imagen generada con la imagen de entrada que no tiene ruido)
+Reconstrucción de sectores de imágenes: Dado que existen capas llamadas Dropout que desactivan neuronas aleatorias de la red, se puede generar un efecto de "pérdida de píxeles" en las imágenes que el decoder va a saber recuperar debido a que la función de pérdida tiene en cuenta la imagen completa original.
+
+Visualización
+
+Generación de datos nuevos
+
+En este punto, una pregunta natural que viene a la mente es "¿cuál es el vínculo entre los Autoencoders y la generación de contenido?". De hecho, una vez que el Autoencoder ha sido entrenado, tenemos un Encoder y un Decoder, pero aún no hay una forma real de producir ningún contenido nuevo. A primera vista, podríamos sentir la tentación de pensar que, si el espacio latente es lo suficientemente regular (bien "organizado" por el Encoder durante el proceso de entrenamiento), podríamos tomar un punto al azar de ese espacio latente y decodificarlo para obtener un nuevo contenido.
+
+
+
+Como podemos ver en las imágenes, el espacio latente creado por el autoencoder es demasiado irregular como para generar contenido tomando cualquier punto del espacio.
+
+La regularidad que se espera del espacio latente para hacer posible el proceso generativo se puede expresar a través de dos propiedades principales:
+continuidad: dos puntos cercanos en el espacio latente no deberían dar dos contenidos completamente diferentes una vez decodificados.
+completitud: para una distribución elegida , un punto muestreado desde el espacio latente debería dar contenido "significativo" una vez decodificado.
+
+
+
+Cuanto más compleja es la arquitectura, más dimensiones se puede reducir manteniendo bajo el error de reconstrucción. Intuitivamente, si nuestro Encoder y nuestro Decoder tienen suficientes grados de libertad, podemos reducir cualquier dimensionalidad inicial a 1. De hecho, un encoder con "potencia infinita" podría tomar teóricamente nuestras N dimensiones iniciales y reducirlas a 1, 2, 3, ... hasta N dimensiones y el decoder asociado podría realizar la transformación inversa, sin pérdida durante el proceso.
+
+Acá, sin embargo, debemos tener en cuenta dos cosas. Primero, una reducción importante de la dimensionalidad sin pérdida de reconstrucción a menudo tiene un precio: la falta de estructuras interpretables y explotables en el espacio latente (falta de regularidad). En segundo lugar, la mayoría de las veces el propósito final de la reducción de la dimensionalidad no es solo reducir el número de dimensiones de los datos sino también reducir este número de dimensiones mientras se mantiene la mayor parte de la información de la estructura de datos en las representaciones reducidas.
+
+Por estas dos razones, la dimensión del espacio latente y la "profundidad" de los autoencoders (que definen el grado y la calidad de la compresión) deben controlarse y ajustarse cuidadosamente según el propósito final de la reducción de la dimensionalidad.
+
+
+
+Sin embargo, como discutimos en la sección anterior, la regularidad del espacio latente para los autoencoders es un punto difícil que depende de la distribución de los datos en el espacio inicial, la dimensión del espacio latente y la arquitectura del encoder. Por lo tanto, es bastante difícil (si no imposible) asegurar, a priori, que el codificador organizará el espacio latente de una manera inteligente compatible con el proceso generativo que acabamos de describir.
+
+Para ilustrar este punto, consideremos el ejemplo que dimos anteriormente en el que describimos un encoder y un decoder lo suficientemente potentes como para poner cualquier conjunto de datos de entrenamiento inicial de N dimensiones en el eje real (cada punto de datos se codifica como un valor real) y decodificarlos sin ningún pérdida de reconstrucción. En tal caso, el alto grado de libertad del autoencoder que permite codificar y decodificar sin pérdida de información (a pesar de la baja dimensionalidad del espacio latente) conduce a un sobreajuste severo que implica que algunos puntos del espacio latente darán contenido sin sentido una vez decodificado. Aunque este ejemplo unidimensional haya sido elegido voluntariamente como extremo, podemos notar que el problema de la regularidad del espacio latente de los autoencoders es mucho más general que eso y merece una atención especial.
+
+
+
+Al pensarlo por un minuto, esta falta de regularidad entre los datos codificados en el espacio latente es bastante normal. De hecho, nada en la tarea que el autoencoder está entrenado para hacer lo fuerza a generar tal regularidad: el autoencoder está entrenado únicamente para codificar y decodificar con la menor pérdida posible, sin importar cómo esté organizado el espacio latente. Por lo tanto, si no tenemos cuidado con la definición de la arquitectura, es natural que, durante el entrenamiento, la red aproveche las posibilidades de sobreajuste para lograr su tarea lo mejor que pueda ... ¡a menos que la regularicemos explícitamente!
+
+Definición de AutoEncoder Variacional
+
+Entonces, para poder usar el decoder de nuestro autoencoder con fines generativos, debemos asegurarnos de que el espacio latente sea lo suficientemente regular. Una posible solución para obtener dicha regularidad es introducir una regularización explícita durante el proceso de entrenamiento. Por lo tanto, un autoencoder variacional se puede definir como un autoencoder cuyo entrenamiento se regulariza para evitar el sobreajuste y garantizar que el espacio latente tenga buenas propiedades que permitan el proceso generativo.
+
+Al igual que un autoencoder común, un autoencoder variacional es una arquitectura compuesta por un encoder y un decoder y que está entrenado para minimizar el error de reconstrucción entre los datos codificados-decodificados y los datos iniciales. Sin embargo, para introducir cierta regularización del espacio latente, procedemos a una ligera modificación del proceso de codificación-decodificación: en lugar de codificar una entrada como un solo punto, la codificamos como una distribución sobre el espacio latente
+
+El modelo se entrena entonces de la siguiente manera:
+la entrada se codifica como distribución sobre el espacio latente
+se toma una muestra de un punto del espacio latente a partir de esa distribución
+se decodifica el punto muestreado y se calcular el error de reconstrucción
+el error de reconstrucción se retropropaga a través de la red
+
+
+
+El simple hecho de que los VAE codifiquen las entradas como distribuciones en lugar de puntos no es suficiente para garantizar la continuidad y la completitud. Sin un término de regularización bien definido, el modelo puede aprender, para minimizar su error de reconstrucción, a "ignorar" el hecho de que tienen que devolver distribuciones y se comportan casi como los autoencoders clásicos (lo que lleva a un sobreajuste). Para hacerlo, el encoder puede devolver distribuciones con pequeñas variaciones (que tenderían a ser distribuciones puntuales) o devolver distribuciones con medias muy diferentes (que estarían muy separadas entre sí en el espacio latente). En ambos casos, las distribuciones se usan de manera incorrecta (cancelando el beneficio esperado) y no se satisface la continuidad y / o completitud.
+
+Entonces, para evitar estos efectos, tenemos que regularizar tanto la matriz de covarianza como la media de las distribuciones devueltas por el encoder. En la práctica, esta regularización se realiza haciendo cumplir las distribuciones para que estén cerca de una distribución normal estándar (centrada y reducida). De esta manera, requerimos que las matrices de covarianza estén cerca de la identidad, evitando distribuciones puntuales, y que la media esté cerca de 0, evitando que las distribuciones codificadas estén demasiado separadas entre sí.
+
+
+
+Por lo tanto, la función de pérdida que se minimiza al entrenar un VAE se compone de un "término de reconstrucción"  (en la capa final), que tiende a hacer que el esquema de codificación-decodificación sea lo más eficaz posible, y un "término de regularización" (en la capa latente), que tiende a regularizar la organización del espacio latente al hacer que las distribuciones devueltas por el codificador se aproximen a una distribución normal estándar. Ese término de regularización se expresa como la divergencia Kulback-Leibler entre la distribución devuelta y una Gaussiana estándar.
+
+La divergencia Kulback-Leibler entre dos distribuciones cualquieras se define como:
+
+y para distribuciones continuas como:
+
+Si reemplazamos  y  con distribuciones gaussianas univariadas, la divergencia de Kullback-Leibler tiene una forma cerrada que puede expresarse directamente en términos de las medias y las matrices de covarianza de las dos distribuciones. Por lo tanto, solo necesitaremos estos dos datos para calcular este término regularizador.
+
+Si  y
+
+Con este término de regularización, evitamos que el modelo codifique los datos muy separados en el espacio latente y fomentamos en la mayor medida posible que las distribuciones tiendan a "superponerse", satisfaciendo así las condiciones de continuidad e integridad esperadas. Naturalmente, como para cualquier término de regularización, esto tiene el precio de un error de reconstrucción mayor en los datos de entrenamiento. Sin embargo, la compensación entre el error de reconstrucción y la divergencia KL se puede ajustar y veremos en la siguiente sección cómo la expresión del equilibrio emerge naturalmente de nuestra derivación formal.
+
+Para concluir esta subsección, podemos observar que la continuidad y la integridad obtenidas con la regularización tienden a crear un "gradiente" sobre la información codificada en el espacio latente. Por ejemplo, un punto del espacio latente que estaría a medio camino entre los medios de dos distribuciones codificadas que provienen de diferentes datos de entrenamiento debe decodificarse en algo que esté en algún lugar entre medio de los datos que dieron la primera distribución y los datos que dieron la segunda distribución.
+
+
+
+Creación del Variational AutoEncoder
+
+Función de Pérdida personalizada  para la regularización explícita
+
+Entrenamiento
+
+Entrenar el modelo
+
+Evaluación del modelo
+
+A continuación utilizaremos el modelo entrenado para verificar los conceptos teóricos explicados anteriormente.
+
+Reconstrucción de la entrada
+
+Lo primero que vamos a hacer es evaluar el poder de reconstrucción del autoencoder. Es decir, evaluar qué tan fiel es la salida con respecto a la entrada original.
+
+Regularización del espacio latente
+
+Ahora graficaremos el espacio latente para ver si las propiedades deseadas de continuidad y completitud han sido alcanzadas.
+
+Hay que tener en cuenta que sólo podemos graficar el espacio latente si establecimos que la cantidad de dimensiones es 2. Sin embargo reducir tanto la dimensionalidad puede afectar la calidad de las salidas (debido a la alta pérdida de información). Para poder graficar el espacio latente sin perder la calidad del modelo utilizaremos TSNE que es un algoritmo que aprende la mejor forma de representar en 2D un espacio de dimensionalidad mayor.
+
+Si bien las gráficas de TSNE a menudo parecen mostrar grupos, los grupos visuales pueden verse fuertemente influenciados por la parametrización elegida y, por lo tanto, es necesaria una buena comprensión del funcionamiento interno del algoritmo antes de arrojar conclusiones a partir de los gráficos obtenidos por este algoritmo. Se puede demostrar que tales "grupos" incluso aparecen en datos no agrupados y por lo tanto pueden ser hallazgos falsos.
+
+En la imagen podemos ver que los clusteres tienden a superponerse y no dejar huecos entre ellos por lo que podemos declarar que se logró alcanzar la continuidad y la completitud.
+
+Generación de Contenido
+
+Dígitos similares a un ejemplo del dataset.
+
+Ahora vamos a ver cómo utilizar nuestro modelo entrenado para generar 10 imágenes decodificadas a partir de muestras latentes.
+
+Dígito Individual de una clase deseada
+
+Al conocer la distribución de las clases (gracias al encoder) podemos generar un dígito artificial de la clase que nosotros queramos.
+
+Interpolación de imágenes
+
+Al tratar de entender la regularización habíamos llegado a la conclusión de que la continuidad y la completitud causaba un efecto gradiente sobre las imágenes generadas. Es decir, causaba un efecto donde los puntos localizados a igual distancia de las medias de dos gaussianas devolvían imágenes que "mezclaban" ambas clases.
+
+Para observar este efecto gradiente podemos utilizar dos vectores latentes de dos distribuciones distintas, calcular una serie de vectores latentes intermedios y decodificarlos para ver la "mutación".

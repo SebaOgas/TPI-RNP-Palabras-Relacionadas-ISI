@@ -1,0 +1,102 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/CV/7ModelosGenerativos/GANs.ipynb"> <img src='https://colab.research.google.com/assets/colab-badge.svg' /> </a>
+
+Redes generativas adversarias
+
+A lo largo de la mayor parte de este curso, hemos hablado sobre cómo hacer predicciones. De una forma u otra, utilizamos mapeos aprendidos de redes neuronales profundas desde ejemplos de datos hasta etiquetas. Este tipo de aprendizaje se llama aprendizaje discriminativo, ya que nos gustaría poder discriminar entre fotos de gatos y fotos de perros. Los clasificadores y los regresores son ejemplos de aprendizaje discriminativo. Y las redes neuronales entrenadas por backpropagation han revolucionado todo lo que creíamos saber sobre el aprendizaje discriminativo en conjuntos de datos grandes y complicados. Las precisiones de clasificación en imágenes de alta resolución han pasado de ser inútiles a niveles humanos (con algunas salvedades) en solo 5 o 6 años. Le ahorraremos otra perorata sobre todas las demás tareas discriminatorias en las que las redes neuronales profundas funcionan asombrosamente bien.
+
+Pero hay más en el aprendizaje automático que simplemente resolver tareas discriminatorias. Por ejemplo, dado un gran conjunto de datos, sin etiquetas, podríamos querer aprender un modelo que capture de manera concisa las características de estos datos. Dado tal modelo, podríamos muestrear ejemplos de datos sintéticos que se asemejen a la distribución de los datos de entrenamiento. Por ejemplo, dado un gran corpus de fotografías de rostros, es posible que queramos poder generar una nueva imagen fotorrealista que parezca plausible que provenga del mismo conjunto de datos. Este tipo de aprendizaje se llama modelado generativo.
+
+Hasta hace poco, no teníamos ningún método que pudiera sintetizar nuevas imágenes fotorrealistas. Pero el éxito de las redes neuronales profundas para el aprendizaje discriminativo abrió nuevas posibilidades. Una gran tendencia en los últimos tres años ha sido la aplicación de redes profundas discriminatorias para superar desafíos en problemas que generalmente no consideramos como problemas de aprendizaje supervisado. Los modelos de lenguaje de redes neuronales recurrentes son un ejemplo del uso de una red discriminativa (entrenada para predecir el siguiente carácter) que, una vez entrenada, puede actuar como un modelo generativo.
+
+En 2014, un artículo innovador presentó las redes adversarias generativas (GAN), una nueva forma inteligente de aprovechar el poder de los modelos discriminativos para obtener buenos modelos generativos. En esencia, las GAN se basan en la idea de que un generador de datos es bueno si no podemos distinguir los datos falsos de los datos reales. En estadística, esto se denomina prueba de dos muestras: una prueba para responder a la pregunta de si los conjuntos de datos  y  se extrajeron de la misma distribución. La principal diferencia entre la mayoría de los artículos estadísticos y los GAN es que estos últimos utilizan esta idea de manera constructiva. En otras palabras, en lugar de simplemente entrenar a un modelo para que diga "oiga, estos dos conjuntos de datos no parecen provenir de la misma distribución", usan la prueba de dos muestras para proporcionar señales de entrenamiento a un modelo generativo. Esto nos permite mejorar el generador de datos hasta que genere algo que se asemeje a los datos reales. Como mínimo, necesita engañar al clasificador. Incluso si nuestro clasificador es una red neuronal profunda de última generación.
+
+
+
+La arquitectura GAN se ilustra en la figura de arriba.
+Como puede ver, hay dos piezas en la arquitectura GAN: en primer lugar, necesitamos una red que ssea capaz de generar datos que luzcan igual que la cosa real. Si estamos tratando con imágenes, esto necesita generar imágenes. Si se trata de habla, necesita generar secuencias de audio, y así sucesivamente. A esta la llamamos la red generadora. El segundo componente es la red discriminadora. Intenta distinguir los datos falsos de los reales. Ambas redes compiten entre sí. La red generadora intenta engañar a la red discriminadora. En ese momento, la red discriminadora se adapta a los nuevos datos falsos. Esta información, a su vez, se utiliza para mejorar la red generadora, y así sucesivamente.
+
+El discriminador es un clasificador binario para distinguir si la entrada  es real (de datos reales) o falsa (del generador). Por lo general, el discriminador genera una predicción escalar  para la entrada , por ejemplo, usando una capa densa con una sola neurona, y luego aplica la función sigmoidea para obtener la probabilidad predicha . Suponga que la etiqueta  para los datos verdaderos es  y  para los datos falsos. Entrenamos al discriminador para minimizar la pérdida de entropía cruzada, es decir,
+
+Para el generador, primero se extrae algún parámetro  de una fuente de aleatoriedad, p. ej., una distribución normal  A menudo llamamos  como la variable latente. Luego, se aplica una función para generar . El objetivo del generador es engañar al discriminador para clasificar  como datos verdaderos, es decir, queremos . En otras palabras, para un discriminador dado , actualizamos los parámetros del generador  para maximizar la pérdida de entropía cruzada cuando , es decir,
+
+Si el generador hace un trabajo perfecto, entonces  por lo que la pérdida anterior se acerca a 0, lo que da como resultado que los gradientes sean demasiado pequeños para hacer un buen progreso para el discriminador. Así que comúnmente minimizamos la siguiente pérdida:
+
+que es solo alimentar  en el discriminador pero dando la etiqueta .
+
+En resumen,  y  están jugando un juego "minimax" con la función de objetivo integral:
+
+Muchas de las aplicaciones de GAN están en el contexto de las imágenes. A modo de demostración, nos vamos a contentar con ajustar primero una distribución mucho más sencilla. Ilustraremos lo que sucede si usamos GAN para construir el estimador de parámetros más ineficiente del mundo para un gaussiano. Empecemos.
+
+Generando algunos datos "reales"
+
+Dado que este será el ejemplo más lamentable del mundo, simplemente generaremos datos extraídos de una gaussiana.
+
+Let's see what we got. This should be a Gaussian shifted in some rather arbitrary way with mean  and covariance matrix .
+
+Generador
+
+Nuestra red generadora será la red más simple posible: un modelo lineal de una sola capa. Esto se debe a que alimentaremos esa red lineal con un generador de datos gaussiano. Por lo tanto, literalmente solo necesita aprender los parámetros para falsificar cosas a la perfección.
+
+Discriminador
+
+Para el discriminador seremos un poco más discriminatorios: usaremos un MLP con 3 capas para hacer las cosas un poco más interesantes.
+
+Entrenamiento
+
+Primero, definimos una función para actualizar los pesos del Discriminador.
+
+El generador se actualiza de manera similar. Aquí reutilizamos la pérdida de entropía cruzada pero cambiamos la etiqueta de los datos falsos de  a .
+
+Tanto el discriminador como el generador realizan una regresión logística binaria con la pérdida de entropía cruzada. Usamos a Adam para suavizar el proceso de entrenamiento. En cada iteración, primero actualizamos el discriminador y luego el generador. Visualizamos tanto pérdidas como ejemplos generados.
+
+Ahora especificamos los hiperparámetros para que se ajusten a la distribución gaussiana.
+
+Redes Generativas Adversarias Convolucionales Profundas (DCGAN)
+
+En la sección anterior, presentamos las ideas básicas sobre cómo funcionan las GAN. Mostramos que pueden extraer muestras de una distribución simple y fácil de muestrear, como una distribución uniforme o normal, y transformarlas en muestras que parecen coincidir con la distribución de algún conjunto de datos. Y aunque nuestro ejemplo de hacer coincidir una distribución gaussiana en 2D entendió el punto, no es especialmente emocionante.
+
+En esta sección, demostraremos cómo puede usar GAN para generar imágenes. Basaremos nuestros modelos en las GAN convolucionales profundas (DCGAN) presentadas en este paper. Tomaremos prestada la arquitectura convolucional que ha demostrado ser tan exitosa para los problemas discriminativos de visión por computadora y mostraremos cómo se pueden aprovechar a través de las GAN para generar imágenes.
+
+Dataset FIFA
+
+El conjunto de datos que usaremos es una colección de imágenes de jugadores de futbol profesionales obtenidos de sofifa.com. Primero descarguemos, extraigamos y carguemos este conjunto de datos.
+
+Veamos algunas imágenes del dataset.
+
+Definimos un dataset personalizado para estas imágenes y cargamos con él un dataloader con 256 de tamaño de lote.
+
+El Generador
+
+El generador necesita mapear la variable de ruido , un vector de longitud-, a una imagen RGB con un ancho y un alto de . El bloque básico del generador contiene una capa de convolución transpuesta seguida de la normalización por lotes y la activación de ReLU.
+
+De forma predeterminada, la capa de convolución transpuesta utiliza un kernel , un stride  y un padding . Con una entrada de forma , el bloque generador duplicará el ancho y la altura de la entrada.
+
+Si se cambia el kernel de la capa de convolución transpuesta a uno de , un stride de 1 y un padding 0, aumentará cuatro veces el tamaño de una entrada de .
+
+El generador consiste en cuatro bloques básicos que aumentan el ancho y el alto de la entrada de 1 a 32. Al mismo tiempo, primero proyecta la variable latente en  canales, y luego reduce a la mitad los canales cada vez. Por último, se utiliza una capa más de convolución transpuesta para generar la salida. Duplica aún más el ancho y la altura para que coincida con la forma deseada de , y reduce el tamaño del canal a . La función de activación tanh se aplica a los valores de salida del proyecto en el rango .
+
+Generemos una variable latente de 100 dimensiones para verificar la forma de la salida del generador.
+
+El Discriminador
+
+El discriminador es una red convolucional normal excepto que utiliza una Leaky ReLU como su función de activación. Dado , su definición es
+
+Como puede verse, es la ReLU normal si , y una función identidad si . Para , Leaky ReLU es una función no lineal que proporciona una salida distinta de cero para una entrada negativa. Su objetivo es solucionar el problema de la "ReLU moribunda" en la que una neurona puede generar un valor negativo siempre y, por lo tanto, no puede hacer ningún progreso ya que el gradiente de ReLU es 0.
+
+El bloque básico del discriminador es una capa de convolución seguida de una capa de normalización por lotes y una activación de Leaky ReLU. Los hiperparámetros de la capa de convolución son similares a la capa de convolución transpuesta en el bloque generador.
+
+Un bloque básico con la configuración predeterminada reducirá a la mitad el ancho y el alto de las entradas. Por ejemplo, dada una entrada de forma , con una forma de kernel , un stride  y un padding , la forma de salida será:
+
+El discriminador es un reflejo del generador.
+
+It uses a convolution layer with output channel  as the last layer to obtain a single prediction value.
+
+Entrenamiento
+
+En comparación con el GAN básico que vimos más arriba, usamos la misma tasa de aprendizaje tanto para el generador como para el discriminador, ya que son similares entre sí. Además, cambiamos  en Adam de  a . Disminuye la suavidad del momentum, la media móvil ponderada exponencialmente de los gradientes anteriores, para cuidar los gradientes que cambian rápidamente porque el generador y el discriminador luchan entre sí. Además, el ruido generado aleatoriamente Z es un tensor 4-D y estamos usando GPU para acelerar el cálculo.
+
+Entrenamos el modelo con una pequeña cantidad de épocas solo para demostración. Para un mejor rendimiento, la variable num_epochs se puede establecer en un número mayor.
+
+Predicción
+
+Una vez entrenada la red, se pueden generar imágenes aleatorias al muestrear un vector latente Z y pasarlo por el generador.
