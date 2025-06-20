@@ -31,7 +31,7 @@ def load_model_components():
                 return pred
         
         # Load vocabulary
-        vocabulary_path = "../data/vocabulary.txt"
+        vocabulary_path = "../data/vocabularies/vocab_0.txt"
         vocabulary = []
         
         with open(vocabulary_path, "rb") as cf:
@@ -39,7 +39,7 @@ def load_model_components():
             vocabulary = [ast.literal_eval(l) for l in lines]
         
         # Load model
-        model_path = "../data/models/100-1-256-256.pt"
+        model_path = "../data/models/dataset-100-256-256.pt"
         model = SkipGram(vocabulary, 256)
         model.load_state_dict(torch.load(model_path, weights_only=True, map_location='cpu'))
         model.eval()
