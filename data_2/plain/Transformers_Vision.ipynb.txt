@@ -1,0 +1,141 @@
+Transformers para Visión (ViT)
+
+La arquitectura del tranformer se propuso inicialmente para el aprendizaje de secuencia a secuencia, como la traducción automática. Con gran eficacia, los tranformers se convirtieron posteriormente en el modelo de elección en diversas tareas de procesamiento del lenguaje natural.
+Sin embargo, en el campo de la visión artificial la arquitectura dominante
+se había basado en las CNN. ¿Podemos adaptar tranformers para modelar datos de imagen? Esta pregunta ha despertado un gran interés en la comunidad de visión artificial. Un paper del 2020 demostró teóricamente que la autoatención puede aprender a comportarse de manera similar a la convolución. Empíricamente, se tomaron parches de  de las imágenes como entrada, pero el pequeño tamaño del parche hace que el modelo solo sea aplicable a datos de imágenes con resoluciones bajas.
+
+Sin restricciones específicas sobre el tamaño del parche, los tranformers de visión (ViT) extraen parches de las imágenes y los introducen en un encoder de tranformer para obtener una representación global, que finalmente se transformará para la clasificación. En particular, los tranformers muestran una mejor escalabilidad que las CNN: cuando se entrenan modelos más grandes en conjuntos de datos más grandes, los tranformers de visión superan a los ResNet por un margen significativo. Similar al panorama del diseño de arquitectura de red en el procesamiento del lenguaje natural, los tranformers también cambiaron las reglas del juego en la visión por computadora.
+
+CNN vs ViT: Sesgo Inductivo
+
+El sesgo inductivo es un término utilizado en el aprendizaje automático para describir el conjunto de suposiciones que utiliza un algoritmo de aprendizaje para hacer predicciones. En términos más simples, el sesgo inductivo es como un atajo que ayuda a un modelo de aprendizaje automático a hacer conjeturas basadas en la información que ha visto hasta ahora.
+
+Aquí hay un par de sesgos inductivos que observamos en las CNN:
+Equivarianza traslacional: un objeto puede aparecer en cualquier parte de la imagen y las CNN pueden detectar sus características.
+Localidad: los píxeles de una imagen interactúan principalmente con los píxeles circundantes para generar features.
+
+Estos sesgos inductivos no existen en los ViT porque originalmente fueron pensados para trabajar con secuencias de palabras. Entonces, ¿cómo se desempeñan tan bien? Es porque su diseño basado en los mecanismos de atención son altamente escalables debido a su alto grado de paralelización. Por tanto, superan la necesidad de estos sesgos inductivos si se los entrena con cantidades supermasivas de imágenes.
+
+Entrenando un ViT desde cero
+
+La siguiente figura representa la arquitectura modelo de los tranformers de visión. Esta arquitectura consta de una base que parchea las imágenes, un cuerpo basado en el encoder de un tranformer multicapa y una cabeza que transforma la representación global en la etiqueta de salida.
+
+Considere una imagen de entrada con altura , ancho  y  canales. Especificando la altura y el ancho del parche como ,
+la imagen se divide en una secuencia de  parches,
+donde cada parche se aplana a un vector de longitud .
+De esta forma, los parches de imagen pueden ser tratados de manera similar a los tokens en secuencias de texto por encoderes de tranformeres. Un token especial “&lt;cls&gt;” (clasificación) y los  parches de imagen aplanados se proyectan linealmente en una secuencia de vectores , sumados con embeddings posicionales que se pueden aprender. El encoder de tranformer multicapa transforma los vectores de entrada  en la misma cantidad de representaciones de vectores de salida de la misma longitud. Funciona exactamente de la misma manera que el encoder del tranformer original, solo que difiere en la posición de normalización. Dado que el token “&lt;cls&gt;”  atiende a todos los parches de imagen a través de la autoatención su representación desde la salida del encoder del tranformer
+se transformará en la etiqueta de salida.
+
+Patch Embedding
+
+Para implementar un transformer de visión, comencemos con los embeddings de los parches. Dividir una imagen en parches y proyectar linealmente estos parches aplanados se puede simplificar como una sola operación de convolución, donde tanto el tamaño del kernel como el tamaño del stride se establecen en el tamaño del parche.
+
+En el siguiente ejemplo, tomando imágenes con una altura y un ancho de imgsize como entrada, se generan (imgsize//patchsize)**2 parches que se proyectan linealmente en vectores de longitud numhiddens.
+
+Encoder del Transformer de Vision
+
+El MLP del encoder transformer de visión es ligeramente diferente del a la red feed forward posicional del encoder del transformer original. Primero, aquí la función de activación usa la unidad lineal de error gaussiano (GELU), que puede considerarse como una versión más suave de ReLU. En segundo lugar, el dropout se aplica a la salida de cada capa densa en el MLP para la regularización.
+
+La implementación del bloque del encoder del transformer de visión simplemente sigue el diseño de prenormalización, donde la normalización se aplica justo antes de la atención multiples cabezales o el MLP. A diferencia de la posnormalización, donde la normalización se coloca justo después de las conexiones residuales, la prenormalización conduce a un entrenamiento más efectivo o eficiente para los transformers.
+
+Igual que en el transformer original, cualquier bloque de encoder de transformer de visión no cambia su forma de entrada.
+
+Juntar todo
+
+El paso hacia adelante de los transformers de visión es sencillo. Primero, las imágenes de entrada se introducen en una instancia PatchEmbedding, cuya salida se concatena con el embedding del token “&lt;cls&gt;”. Se suman los embeddings posicionales aprendibles antes del dropout. Luego, la salida se alimenta al encoder del transformer que apila las instancias num_blks de la clase ViTBlock. Finalmente, la representación del token “&lt;cls&gt;” token es proyectado por la cabeza de la red.
+
+Entrenamiento
+
+Entrenar un transformer de visión en el conjunto de datos Fashion-MNIST es similar a cómo se entrenaron las CNN en clases anteriores.
+
+Puede notar que para datasets pequeños como Fashion-MNIST, nuestro transformer de visión implementado no supera a ResNet. Se pueden realizar observaciones similares incluso en el conjunto de datos de ImageNet (1,2 millones de imágenes). Esto se debe a que los transformers carecen de esos principios útiles en la convolución, como la localidad y la invariancia a la traslación. Sin embargo, el panorama cambia cuando se entrenan modelos más grandes en datasets más grandes (por ejemplo, 300 millones de imágenes), donde los transformers de visión superan a las ResNets por un amplio margen en la clasificación de imágenes, lo que demuestra la superioridad intrínseca de los transformers en escalabilidad.
+
+Fine Tuning sobre un ViT pre-entrenado
+
+El fine-tuning es una técnica en la que un modelo previamente entrenado, que ya ha aprendido características de una tarea, se utiliza como punto de partida para una tarea similar. Esto ahorra tiempo y recursos al aprovechar el conocimiento existente del modelo en lugar de entrenar un modelo nuevo desde cero.
+
+En esta sección, vamos a ver cómo podemos aplicar fine-tuning para la clasificación de imágenes con un Vision Transformer en un dataset de nuestra elección.
+
+En el fine-tuning, no necesitamos actualizar los parámetros de todo el modelo. Dado que nuestro ViT ha aprendido representaciones de características de millones de imágenes, podemos optar por entrenar las últimas capas de nuestro modelo para que funcione bien en nuestro nuevo conjunto de datos.
+
+Para este tutorial, usaremos el modelo google/vit-base-patch16-224 del Hugging Face hub.
+
+Comencemos importando algunos módulos y funciones necesarios.
+
+Ahora, carguemos nuestro dataset de clasificación de imágenes.
+
+Para este tutorial, usaremos el dataset de mascotas Oxford-IIIT. Es una colección de imágenes diferentes de 37 razas de perros y gatos. Usaremos la biblioteca Hugging Face Datasets para cargar nuestro conjunto de datos fácilmente desde el hub.
+
+El conjunto de datos contiene las siguientes características:
+ruta: una ruta al archivo
+etiqueta: la raza del animal
+perro: indica si el animal es un perro o no
+imagen: una imagen en formato PIL
+
+Veamos algunas imágenes de muestra de nuestro dataset.
+
+Para cualquier conjunto de datos que usemos con la biblioteca datasets, podemos mezclarlo usando shuffle() y seleccionar cualquier muestra usando el método select().
+
+Preprocesamiento de nuestro conjunto de datos
+
+Cuando se trata de datasets de imágenes, el preprocesamiento implica varios pasos. Esto incluye transformaciones como cambiar el tamaño de todas las imágenes para que tengan las mismas dimensiones, normalizar y escalar los valores de píxeles a un rango uniforme. También podemos hacer augmentatio de imágenes aplicando giros aleatorios, rotaciones, perspectivas, etc.
+
+Antes de aplicar nuestras transformaciones, dividamos nuestro conjunto de datos en 3 partes para entrenamiento, validación y un conjunto de pruebas oculto para evaluar el rendimiento de nuestro modelo. Podemos utilizar el método incorporado traintestsplit para hacerlo.
+
+Dado que solo tenemos una división de "entrenamiento" en nuestro dataset original, usaremos el 80% para entrenamiento y el 10% para "validación" y el 10% restante como nuestra división de "prueba".
+
+Es importante tener en cuenta que ningún modelo puede comprender las etiquetas en su formato de string. Por lo tanto, los asignamos a sus contrapartes enteras. Como hay 37 etiquetas, las etiquetas se asignarán a un número del 0 al 36.
+
+Crearemos dos asignaciones, label2id y id2label para convertir las etiquetas a sus ID y viceversa. Esto también será útil cuando inicialicemos nuestro modelo para actualizar su configuración.
+
+Image Processor
+
+Para aplicar las transformaciones correctas en nuestras imágenes, usaremos AutoImageProcessor que aplicará las transformaciones de acuerdo con el modelo que usaremos. Podemos verificar su configuración para ver qué transformaciones se aplicarán.
+
+Para aplicar las transformaciones a un lote en el momento del entrenamiento, podemos crear una función que preprocesará el lote. El Trainer llamará a esta función cuando la agreguemos al conjunto de datos usando with_transform.
+
+En el momento del entrenamiento, debemos aplicar las transformaciones en un lote de muestras. Para manejar los lotes, crearemos una función "transforms" que se encargará de lo siguiente:
+Convertir todas las imágenes a RGB: es posible que algunas imágenes de su conjunto de datos sean en escala de grises o transparentes (RGBA).
+Convertir las etiquetas de las cadenas a números enteros: usando el mapa label2id.
+Aplicar transformaciones de imágenes: pasamos las imágenes por el processor para procesarlas y convertirlas al formato PyTorch.
+
+Las características del conjunto de datos resultantes serán:
+py
+{
+     'pixel_values': torch.Tensor,
+     'etiquetas': List
+}
+
+Emparejaremos la función con nuestro conjunto de datos usando el método with_transform().
+
+Data Collation
+Al proceso de agrupar nuestros datos en el formato correcto se lo denomina Data Collation. Para pixel_values, la forma de entrada para el modelo debe ser (batch, channels, alto, ancho) y para labels, la forma debe ser (batch,)
+
+Veamos cómo calcular las métricas.
+
+Podemos utilizar la biblioteca evaluate de Hugging Face para calcular las métricas. Para la clasificación de imágenes, podemos utilizar la métrica de accuracy.
+
+Cargando nuestro modelo
+
+Usaremos ViTForImageClassification para cargar nuestro modelo pre-entrenado.
+
+Necesitamos actualizar la capa de clasificación final para generar predicciones iguales a la cantidad de etiquetas en nuestro conjunto de datos.
+Lo haremos pasando el argumento num_labels junto con nuestras asignaciones de etiquetas id2label y label2id.
+
+También necesitamos pasar ignoremismatchedsizes = True para compensar el cambio en el número de parámetros en la capa de clasificación.
+
+Aquí está la arquitectura de nuestro modelo.
+
+Como no vamos a actualizar todo el modelo, podemos "congelar" todos los parámetros excepto la nueva capa classifier estableciendo requires_grad en False para los parámetros de cada capa.
+
+Podemos comprobar cuántos parámetros hay en el modelo junto con cuántos se van a entrenar ahora.
+
+Comencemos nuestro entrenamiento 🚀️🚀️🚀️
+
+Vamos a usar Hugging Face Trainer para entrenar nuestro modelo. De esta manera, es más simple elegir los argumentos de entrenamiento, como el tamaño del lote, la tasa de aprendizaje, la cantidad de épocas, las opciones de logging, etc.
+
+Con respecto a la clasificación de imágenes, necesitamos configurar removeunusedcolumns=False para evitar que se elimine la columna image de nuestro conjunto de datos, ya que es la que se utiliza para crear nuestras entradas de pixel_values.
+
+Evaluamos en nuestro conjunto de datos de prueba
+
+¡Veamos algunas de las predicciones hechas por nuestro nuevo modelo!

@@ -1,0 +1,120 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/NLP/3Embeddings/2Entrenamiento_Word2Vec.ipynb"> <img src='https://colab.research.google.com/assets/colab-badge.svg' /> </a>
+
+Implementación del Entrenamiento de Word2Vec
+
+Ahora que conocemos los detalles técnicos de los modelos word2vec y los métodos de entrenamiento aproximados, veamos sus implementaciones. Específicamente, tomaremos como ejemplo el modelo skip-gram con muestreo negativo.
+
+Cargando el Dataset
+
+Para extraer la información de la Semántica Distribucional necesaria para entrenar embeddings en Español, usaremos el libro "El ingenioso hidalgo don Quijote de la Mancha". Cabe aclarar que este libro será usado solamente para que se entiendan las salidas de cada uno de los pasos de este proceso. En la práctica necesitamos un Dataset MUCHÍSIMO MÁS GRANDE para generar embeddings coherentes como la Wikipedia entera, pero eso llevaría mucho tiempo y no es el objetivo de esta clase.
+
+Las siguientes celdas de código descargan el libro, leen el archivo en listas de oraciones y generan el vocabulario de torchtext como hemos hechos en clases anteriores.
+
+Subsampling
+
+Los datos de texto suelen tener palabras de alta frecuencia como "el", "un" y "en": que incluso pueden aparecer miles de millones de veces en corpus muy grandes. Sin embargo, estas palabras a menudo coexisten con muchas palabras diferentes en las ventanas de contexto, proporcionando señales poco útiles. Por ejemplo, considere la palabra "chip" en una ventana de contexto: intuitivamente, su coexistencia con una palabra de baja frecuencia como "intel" es más útil en el entrenamiento que la coexistencia con una palabra de alta frecuencia como "el". Además, el entrenamiento con grandes cantidades de palabras (de alta frecuencia) es lento. Por lo tanto, al entrenar modelos de embedding de palabras, las de alta frecuencia se pueden submuestrear. Específicamente, cada palabra indexada  en el conjunto de datos se descartará con probabilidad
+
+donde  es la relación entre la cantidad de palabras  y la cantidad total de palabras en el dataset, y la constante  es un hiperparámetro ( en el experimento).
+Podemos ver que solo cuando la frecuencia relativa  se puede descartar la palabra (de alta frecuencia) , y cuanto mayor sea la frecuencia relativa de la palabra, mayor será la probabilidad de que se descarte.
+
+La siguiente celda nos muestra las 10 palabras más frecuentes en el quijote. Como verán son palabras de relleno que pueden encajar en cualquier oración independientemente de sus significado y eso provee muy poco información a la semántia distribucional.
+
+La siguiente función elimina palabras frecuentes del dataset siguiendo la fórmula propuesta.
+
+El siguiente fragmento de código traza el histograma del número de tokens por oración antes y después del submuestreo. Como era de esperar, el submuestreo acorta significativamente las oraciones al eliminar las palabras de alta frecuencia, lo que acelerará el entrenamiento.
+
+Para fichas individuales, la frecuencia de muestreo de la palabra de alta frecuencia "que" es inferior a 1/20.
+
+Por el contrario, las palabras de baja frecuencia como "mesa" se mantienen por completo.
+
+Después del submuestreo, asignamos índices a los tokens y así generamos el corpus.
+
+Extracción de palabras centrales y palabras de contexto
+
+La siguiente función getcentersandcontexts extrae todas las palabras centrales y sus palabras de contexto del corpus. Muestrea uniformemente un número entero entre 1 y maxwindow_size al azar como el tamaño de la ventana de contexto. Para cualquier palabra central, aquellas palabras cuya distancia no exceda el tamaño de la ventana de contexto muestreada son sus palabras de contexto.
+
+A continuación, para ilustrar su funcionamiento, creamos un conjunto de datos artificial que contiene dos oraciones de 7 y 3 palabras, respectivamente. Haremos que el tamaño máximo de la ventana de contexto sea 2 e imprimiremos todas las palabras centrales y sus palabras de contexto.
+
+En este ejercicios, estableceremos el tamaño máximo de la ventana de contexto en 5. La siguiente celda extrae del todas las palabras centrales y sus palabras de contexto.
+
+Muestreo negativo
+
+Usamos muestreo negativo para entrenamiento aproximado. Para muestrear palabras negativas de acuerdo con una distribución predefinida, definimos la siguiente clase RandomGenerator, donde la distribución de muestreo (posiblemente no normalizada) se pasa a través del argumento sampling_weights.
+
+Para un par de palabra central y palabra de contexto, muestreamos aleatoriamente K (5 en el experimento) palabras negativas. Según las sugerencias del paper de word2vec, la probabilidad de muestreo  de una palabra negativa  se establece en su frecuencia relativa en el diccionario elevada a la potencia de 0,75.
+
+Cargando ejemplos de entrenamiento en minilotes
+
+Una vez extraídas todas las palabras centrales junto con sus palabras de contexto y las palabras negativas muestreadas, transformaremos los datos en minilotes de ejemplos que se pueden cargar de forma iterativa durante el entrenamiento.
+
+En un minilote, el ejemplo  incluye una palabra central, sus palabras de contexto  y palabras negativas . Debido a los diferentes tamaños de ventana de contexto,  varía para diferentes .
+Por lo tanto, para cada ejemplo, concatenamos sus palabras de contexto y palabras negativas en la variable contextsnegatives y rellenamos con ceros hasta que la longitud de la concatenación alcance  (max_len).
+Para excluir los rellenos en el cálculo de la pérdida, definimos una variable de máscara mask. Hay una correspondencia de uno a uno entre los elementos en mask y los elementos en contextnegative, donde los ceros (de lo contrario unos) en mask corresponden a rellenos en contextnegative.
+
+Para distinguir entre ejemplos positivos y negativos, separamos las palabras de contexto de las palabras negativas en contextsnegatives a través de una variable labels. De forma similar a las máscaras, también existe una correspondencia uno a uno entre los elementos de las etiquetas y los elementos de los contextosnegativos, donde los unos (de lo contrario, los ceros) de las etiquetas corresponden a las palabras de contexto en contexts_negatives.
+
+La idea anterior se implementa en la siguiente función collate_batch. Sus datos de entrada son una lista con una longitud igual al tamaño del lote, donde cada elemento es un ejemplo que consta de la palabra central center, sus palabras de contexto context y sus palabras negativas negative. Esta función devuelve un minilote que se puede cargar para realizar cálculos durante el entrenamiento, como incluir la variable de máscara.
+
+Probemos esta función usando un mini lote de dos ejemplos.
+
+Juntar todo
+
+Por último, definimos la función loaddataquijote que lee el quijote y devuelve el iterador de datos y el vocabulario.
+
+Imprimamos el primer minilote del iterador de datos.
+
+Proceso de Entrenamiento
+
+Implementamos el modelo skip-gram mediante el uso de capas Embedding y multiplicaciones de matrices por lotes.
+Primero, revisemos cómo funcionan las capas Embedding.
+Embedding Layer
+
+Una capa embedding asigna el índice de un token a su vector de características.
+Los pesos de estas capas conforman una matriz cuyo número de filas es igual al tamaño del diccionario (input_dim) y el número de columnas es igual a
+la dimensión del vector para cada token (output_dim).
+Después de entrenar un modelo de embedding de palabras, estos peso se convertiran en el embedding que utilizaremos para representar a la palabra
+
+La entrada de una capa Embedding es el índice de un token (palabra). Para cualquier índice de token i, su representación vectorial se puede obtener de la i-ésima fila de la matriz de pesos en la capa de Embedding. Dado que la dimensión del vector (output_dim) se estableció en 4, la capa de Embedding devuelve vectores con forma (2, 3, 4) para un minilote de índices de token con forma (2, 3).
+
+Parámetros del Modelo
+
+Al comienzo de la fase de entrenamiento, creamos dos matrices: una matriz de embedding y una matriz de contexto. Estas dos matrices tienen un embedding de palabra central y de contexto respectivamente para cada palabra en nuestro vocabulario.
+
+En nuestro modelo, estas matrices estarán definidas como capas Embedding y la dimensión de los vectores será 100.
+
+Definición de la función forward
+
+En la función forward, la entrada del modelo skip-gram incluye a center (los índices de la palabra central con forma (tamaño del lote, 1)) y contextsandnegatives (los indices concatenados de las palabras de contexto y negativas con forma (tamaño del lote, max_len) ).
+
+Estas dos variables se transforman primero de los índices de token en vectores a través de la capa de Embedding
+
+Luego se calcula el producto punto entre el vector de la palabra central por cada uno de los vectores de contexto y negativos usando una multiplicación de matrices por lotes. Cada elemento de la salida es el producto escalar de un vector de palabra central y un vector de palabra de contexto o negativa.
+
+Imprimamos la forma de la salida de este SkipGram para algunas entradas de ejemplo
+
+Entrenamiento
+
+Una vez que tenemos la función forward, el proceso de entrenamiento es similar a los modelos vistos con anterioridad: se calcula la función de pérdida y eso se utiliza para modificar los parámetros. La particularidad del entrenamiento de embeddings es que los embeddings que queremos obtener como salida son los mismos parámetros que estamos entrenando.
+
+Función de pérdida
+
+De acuerdo a la definición de la función de pérdida para muestreo negativo que presentamos anteriormente
+usaremos la entropía cruzada binaria (también conocida como sigmoidea).
+
+Si probamos con algunos datos inventados.
+
+Vemos que los mismos resultados se pueden generar usando la función sigmoidea (aunque de manera menos eficiente.
+
+Podemos considerar a las dos salidas como dos pérdidas normalizadas que se promedian sobre las predicciones no enmascaradas.
+
+Definición del ciclo de entrenamiento
+
+El ciclo de entrenamiento se define a continuación. Debido a la existencia de relleno, el cálculo de la función de pérdida es ligeramente diferente en comparación con las funciones de entrenamiento anteriores.
+
+Ahora podemos entrenar un modelo skip-gram usando muestreo negativo.
+
+Aplicación de Embeddings de Palabras
+
+Después de entrenar el modelo word2vec, podemos usar la similitud de coseno de los vectores de palabras del modelo entrenado para encontrar palabras del diccionario que sean más similares semánticamente a una palabra de entrada.
+
+Recordemos que estamos entrenado sobre un dataset muy pequeño y los resultados no deberían ser muy buenos.

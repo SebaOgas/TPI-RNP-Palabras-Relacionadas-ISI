@@ -1,0 +1,101 @@
+<a href="https://colab.research.google.com/github/institutohumai/cursos-python/blob/master/DeepLearning/5EvaluacionModelos/1Overfitting.ipynb" target="parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a>
+
+Evaluación de los Modelos
+Como científicos de aprendizaje automático, nuestro objetivo es descubrir patrones. Pero, ¿cómo podemos estar seguros de que realmente hemos descubierto un patrón general y no simplemente memorizado nuestros datos?
+
+Por ejemplo, imagine que quisiéramos buscar patrones entre los marcadores genéticos que vinculan a los pacientes con su estado de demencia, donde las etiquetas se extraen del conjunto 
+
+Debido a que los genes de cada persona los identifican de manera única (ignorando a los hermanos idénticos), es posible memorizar todo el conjunto de datos. No queremos que nuestro modelo diga "¡Ese es Bob! ¡Lo recuerdo! ¡Tiene demencia!" La razón es simple. Cuando implementemos el modelo en el futuro, encontraremos pacientes que el modelo nunca antes había visto. Nuestras predicciones solo serán útiles si nuestro modelo realmente ha descubierto un patrón general.
+
+Para recapitular de manera más formal, nuestro objetivo es descubrir patrones que capturen regularidades en la población subyacente de la que se extrajo nuestro conjunto de entrenamiento. Si tenemos éxito en este esfuerzo, entonces podríamos evaluar con éxito el riesgo incluso para personas con las que nunca nos hemos encontrado antes. Este problema, cómo descubrir patrones que generalizan, es el problema fundamental del aprendizaje automático.
+
+El peligro es que cuando entrenamos modelos, solo accedemos a una pequeña muestra de datos. Los conjuntos de datos de imágenes públicas más grandes contienen aproximadamente un millón de imágenes. Más a menudo, debemos aprender de solo miles o decenas de miles de ejemplos de datos. En un gran sistema hospitalario, podríamos acceder a cientos de miles de registros médicos. Cuando trabajamos con muestras finitas, corremos el riesgo de descubrir asociaciones aparentes que resultan no sostenerse cuando recopilamos más datos.
+
+El fenómeno de ajustar nuestros datos de entrenamiento más estrechamente de lo que ajustamos a la distribución subyacente se denomina sobreajuste, y las técnicas utilizadas para combatir el sobreajuste se denominan regularización. En las secciones anteriores, es posible que haya observado este efecto mientras experimentaba con el conjunto de datos Fashion-MNIST. Si modificó la estructura del modelo o los hiperparámetros durante el experimento, es posible que haya notado que, con suficientes neuronas, capas y épocas de entrenamiento, el modelo finalmente puede alcanzar una precisión perfecta en el conjunto de entrenamiento, incluso cuando la precisión de los datos de prueba se deteriora.
+
+Error de entrenamiento y error de generalización
+
+Para discutir este fenómeno de manera más formal,
+necesitamos diferenciar entre error de entrenamiento y error de generalización.
+El error de entrenamiento es el error de nuestro modelo calculado en el conjunto de entrenamiento.
+El error de generalización es la esperanza del error de nuestro modelo si lo aplicamos a un flujo infinito de ejemplos de datos adicionales extraídos de la misma distribución de datos subyacente que nuestra muestra original.
+
+Problemáticamente, nunca podemos calcular exactamente el error de generalización. Eso es porque el flujo de datos infinitos es un objeto imaginario. En la práctica, debemos estimar el error de generalización aplicando nuestro modelo a un conjunto de prueba independiente constituido por una selección aleatoria de ejemplos de datos que fueron retenidos de nuestro conjunto de entrenamiento.
+
+Según como varíen nuestros errores de entrenamiento y generalización se pueden dar los siguientes casos.
+
+El mejor modelo será aquel que obtenga un error de generalización lo más bajo posible, aunque el error de entrenamiento no sea el mínimo. En la siguiente figura vemos que, la mayoría de las veces, minimizar el error de entrenamiento (hasta el punto de volverlo 0) siempre trae aparejado un aumento del error de generalización.
+
+Componentes del Error de Generalización
+
+El error de generalización es la esperanza del error de nuestro modelo si lo aplicamos a un flujo infinito de ejemplos de datos adicionales extraídos de la misma distribución de datos subyacente que nuestra muestra original.
+
+Si lo expresamos matemáticamente quedaría así  donde  representa la esperanza matemática que formaliza la idea de valor medio de un fenómeno aleatorio.
+
+Luego, mediante un par de artilugios matemáticos podemos expresar la diferencia entre la predicción dle modelo y la realidad como la suma de 3 términos.
+
+Como el error de generalización es la esperanza de esa diferencia, es equivalente a la suma de las esperanzas de cada término. Se puede demostrar que la esperanza del tercer término es cero.
+
+Esto nos permite definir el error de generalización a partir de dos componentes principales. El primer término se llama Sesgo (o Bias en inglés) y el segundo se llama Varianza.
+
+En resumen, el error de generalización tienen las siguientes componentes:
+Sesgo: la diferencia entre la predicción esperada (o promedio) de nuestro modelo y el valor correcto que estamos tratando de predecir.
+Varianza: variabilidad esperada (o promedio) de la predicción de un modelo.
+Error irreducible: es el error introducido desde el marco elegido del problema y puede ser causado por factores como features no tenidas en cuenta o errores en la medición de los datos.
+
+Puede resultar extraño hablar del error promedio de nuestros modelos dado que solo tenemos un modelo. Sin embargo, imagine que pudiera repetir todo el proceso de creación del modelo más de una vez: cada vez que recopilemos nuevos datos y ejecutemos un nuevo entrenamiento, estaríamos creando un nuevo modelo. Debido a la aleatoriedad en los conjuntos de datos subyacentes, los modelos resultantes tendrán una variedad de predicciones. El sesgo mide qué tan lejos en general están las predicciones de estos modelos del valor correcto y la varianza mide que tan lejos en general están cada una de las predicciones de estos modelos del valor medio de las predicciones.
+
+Sesgo
+
+En los modelos de machine learning el sesgo aparece por las suposiciones simplistas y erróneas hechas por un modelo para hacer que la función objetivo sea más fácil de aprender. Si la función que se desea aproximar es demasiado simple comparada con la función real, el modelo no será capaz de aprender y se producirá un underfitting. Por lo tanto, para reducir el sesgo hay que aumentar la complejidad del modelo.
+
+Complejidad del modelo
+
+Lo que constituye precisamente la complejidad del modelo es un asunto complejo. Muchos factores gobiernan si un modelo es o no más complejo que otro. Por ejemplo, un modelo con más parámetros podría considerarse más complejo. Un modelo cuyos parámetros pueden tomar una gama más amplia de valores podría ser más complejo. A menudo, con las redes neuronales, pensamos en un modelo que toma más iteraciones de entrenamiento como más complejo, y uno sujeto a detención anticipada (menos iteraciones de entrenamiento) como menos complejo.
+
+Varianza
+
+En los modelos de machine learning la varianza aparece por una flexibilidad excesiva del modelo que le permite ajustarse al ruido presente en el dataset. Esta flexibilidad es consecuencia de la complejidad del modelo, por lo tanto, para reducir la varianza hay que reducir la complejidad.
+
+Equilibrio entre Sesgo y Varianza
+
+Como la complejidad del modelo tiene efectos inversos sobre el sesgo y la varianza, el problema se reduce nuevamente a buscar un equilibrio entre ambos.
+
+Ejemplo con polinomios
+
+Para ilustrar alguna intuición clásica sobre el sobreajuste y la complejidad del modelo, damos un ejemplo usando polinomios. Dados los datos de entrenamiento que consisten en una sola característica  y una etiqueta de valor real correspondiente , tratamos de encontrar el polinomio de grado 
+
+para estimar las etiquetas . Este es solo un problema de regresión lineal donde nuestras características están dadas por las potencias de , los pesos del modelo están dados por  y el sesgo está dado por  ya que  para todo . Dado que este es solo un problema de regresión lineal, podemos usar el error cuadrático como nuestra función de pérdida.
+
+Una función polinomial de orden superior es más compleja que una función polinomial de orden inferior, ya que el polinomio de orden superior tiene más parámetros y el rango de selección de la función modelo es más amplio.
+Al corregir el conjunto de datos de entrenamiento, las funciones polinómicas de orden superior siempre deben lograr un error de entrenamiento menor (en el peor de los casos, igual) en relación con los polinomios de grado inferior. De hecho, cada vez que los ejemplos de datos tengan un valor distinto de , una función polinomial con un grado igual al número de ejemplos de datos puede ajustarse perfectamente al conjunto de entrenamiento.
+
+Ahora podemos explorar estos conceptos de forma interactiva ajustando polinomios a los datos.
+
+Generación del dataset
+
+Primero necesitamos datos. Dado , utilizaremos el siguiente polinomio cúbico para generar las etiquetas en los datos de entrenamiento y prueba:
+
+El término de ruido  sigue una distribución normal con una media de 0 y una desviación estándar de 0.1. Para la optimización, normalmente queremos evitar valores muy grandes de gradientes o pérdidas. Esta es la razón por la cual las características se reescalan de  a . Nos permite evitar valores muy grandes para exponentes grandes . Sintetizaremos 100 muestras cada una para el conjunto de entrenamiento y el conjunto de prueba.
+
+Nuevamente, los monomios almacenados en poly_features son reescalados por la función gamma, donde . Eche un vistazo a las primeras 2 muestras del conjunto de datos generado. El valor 1 es técnicamente una característica, es decir, la característica constante correspondiente al sesgo.
+
+Entrenamiento y prueba del modelo
+
+Primero implementemos una función para evaluar la pérdida en un conjunto de datos dado.
+
+Ahora definamos la función de entrenamiento.
+
+Ajuste de funciones polinómicas de tercer orden (normal)
+
+Comenzaremos usando primero una función polinomial de tercer orden, que es del mismo orden que la función de generación de datos. Los resultados muestran que las pérdidas de entrenamiento y prueba de este modelo pueden reducirse de manera efectiva. Los parámetros del modelo aprendido también están cerca de los valores verdaderos .
+
+Ajuste de función lineal (subajuste o underfitting)
+
+Echemos otro vistazo al ajuste de funciones lineales. Después del declive en las primeras épocas, se vuelve difícil disminuir aún más la pérdida de entrenamiento de este modelo. Una vez completada la última iteración de época, la pérdida de entrenamiento sigue siendo alta. Cuando se utilizan para ajustar patrones no lineales (como aquí la función polinomial de tercer orden), los modelos lineales tienden a subajustar.
+
+Ajuste de funciones polinómicas de orden superior (sobreajuste u overfitting)
+
+Ahora intentemos entrenar el modelo usando un polinomio de grado demasiado alto. Aquí, no hay datos suficientes para saber que los coeficientes de mayor grado deberían tener valores cercanos a cero. Como resultado, nuestro modelo excesivamente complejo es tan susceptible que está siendo influenciado por el ruido en los datos de entrenamiento. Aunque la pérdida de entrenamiento se puede reducir de manera efectiva, la pérdida de prueba sigue siendo mucho mayor. Muestra que el modelo complejo sobreajusta los datos.
+
+Discussions

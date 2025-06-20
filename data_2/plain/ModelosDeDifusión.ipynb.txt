@@ -1,0 +1,243 @@
+Modelos de Difusión (DDPMs)
+
+¿Qué es la Difusión?
+
+La difusión es un fenómeno natural fundamental observado en varios sistemas, incluyendo la física, la química y la biología. Esto se nota fácilmente en la vida cotidiana. Considerá el ejemplo de rociar perfume. Al principio, las moléculas del perfume están densamente concentradas cerca del punto de rociado. Con el tiempo, las moléculas se dispersan.
+
+La difusión es el proceso por el cual las partículas, la información o la energía se mueven desde un área de alta concentración a una de menor concentración. Esto sucede porque los sistemas tienden a alcanzar el equilibrio, donde las concentraciones se vuelven uniformes en todo el sistema.
+
+En el aprendizaje automático y la generación de datos, la difusión se refiere a un enfoque específico para generar datos usando un proceso estocástico similar a una cadena de Markov. En este contexto, los modelos de difusión crean nuevas muestras de datos comenzando con datos simples y fáciles de generar, y gradualmente transformándolos en datos más complejos y realistas.
+
+En esta clase, vamos a profundizar en los Modelos Probabilísticos de Difusión para Eliminación de Ruido (también conocidos como DDPMs por las siglas en inglés de Denoising Diffusion Probabilistic Models) ya que los investigadores han logrado resultados notables con ellos para la generación (no condicionada) de imágenes/audio/video.
+
+Primero, vamos a instalar e importar las bibliotecas necesarias (asumiendo que ya tenés PyTorch instalado).
+
+¿Qué es un modelo de difusión?
+
+Un modelo de difusión (de eliminación de ruido) no es tan complejo si lo comparás con otros modelos generativos como GANs o VAEs: todos ellos convierten ruido de alguna distribución simple en una muestra de datos. Esto también ocurre aquí, donde una red neuronal aprende a eliminar gradualmente el ruido de los datos comenzando desde puro ruido.
+
+En un poco más de detalle para imágenes, la configuración consta de 2 procesos:
+Un proceso de difusión hacia adelante fijo (o predefinido) de nuestra elección, que agrega gradualmente ruido gaussiano a una imagen, hasta que terminás con puro ruido.
+Un proceso de difusión inverso de eliminación de ruido aprendido , donde se entrena una red neuronal para eliminar gradualmente el ruido de una imagen comenzando desde puro ruido, hasta que terminás con una imagen real.
+
+Tanto el proceso hacia adelante como el proceso inverso, indexados por , ocurren durante un cierto número finito de pasos de tiempo  (los autores de DDPM usan ). Comenzás con  donde muestreás una imagen real  de tu distribución de datos (digamos una imagen de un gato de ImageNet), y el proceso hacia adelante muestrea algo de ruido de una distribución gaussiana en cada paso de tiempo , que se agrega a la imagen del paso de tiempo anterior. Dado un  suficientemente grande y un esquema bien estructurado para agregar ruido en cada paso de tiempo, terminás con lo que se llama una distribución gaussiana isotrópica en  mediante un proceso gradual.
+
+En forma más matemática
+
+Vamos a escribir esto de manera más formal, ya que en última instancia necesitamos una función de pérdida tratable que nuestra red neuronal pueda optimizar.
+
+Sea  la distribución de datos reales, por ejemplo, de "imágenes reales". Podemos muestrear de esta distribución para obtener una imagen, . Definimos el proceso de difusión hacia adelante , que agrega ruido gaussiano en cada paso de tiempo , de acuerdo con un esquema de varianza conocido  como
+
+Recordemos que una distribución normal (también llamada distribución gaussiana) se define por 2 parámetros: una media  y una varianza . Básicamente, cada nueva imagen (ligeramente más ruidosa) en el paso de tiempo  se extrae de una distribución gaussiana condicional con  y , lo cual podemos hacer muestreando  y luego estableciendo .
+
+Notemos que los  no son constantes en cada paso de tiempo  (de ahí el subíndice) — de hecho, uno define un llamado "esquema de varianza", que puede ser lineal, cuadrático, coseno, etc., como veremos más adelante (un poco como un esquema de tasa de aprendizaje).
+
+Entonces, comenzando desde , terminamos con , donde  es ruido gaussiano puro si configuramos el esquema adecuadamente.
+
+Ahora, si conociéramos la distribución condicional , entonces podríamos ejecutar el proceso en reversa: muestreando algo de ruido gaussiano aleatorio , y luego "eliminando el ruido" gradualmente para que terminemos con una muestra de la distribución real .
+
+Sin embargo, no conocemos . Es intratable ya que requiere conocer la distribución de todas las imágenes posibles para calcular esta probabilidad condicional. Por lo tanto, vamos a aprovechar una red neuronal para aproximar (aprender) esta distribución de probabilidad condicional, llamémosla , siendo  los parámetros de la red neuronal, actualizados mediante descenso de gradiente.
+
+Entonces, necesitamos una red neuronal para representar una distribución de probabilidad (condicional) del proceso inverso. Si asumimos que este proceso inverso también es gaussiano, recordemos que cualquier distribución gaussiana se define por 2 parámetros:
+una media parametrizada por ;
+una varianza parametrizada por ;
+
+por lo que podemos parametrizar el proceso como
+
+donde la media y la varianza también están condicionadas por el nivel de ruido .
+
+Por lo tanto, nuestra red neuronal necesita aprender/representar la media y la varianza. Sin embargo, los autores de DDPM decidieron mantener la varianza fija y permitir que la red neuronal solo aprenda (represente) la media  de esta distribución de probabilidad condicional. Entonces continuamos, asumiendo que nuestra red neuronal solo necesita aprender/representar la media de esta distribución de probabilidad condicional.
+
+Definiendo una función objetivo (reparametrizando la media)
+
+Dado que nuestra red neuronal debe aprender la media de nuestra distribución de probabilidad condicional , nuestra función de pérdida se puede expresar como una suma de pérdidas en cada paso de tiempo , .
+
+Cada término de esta suma (excepto ) de la pérdida es en realidad la divergencia KL entre dos distribuciones gaussianas (la real y la predicha). La divergencia KL mide cuánto se desvía una distribución de otra, y en este caso, se puede expresar como una pérdida L2 con respecto a las medias de estas distribuciones.
+
+Una consecuencia directa del proceso hacia adelante , como lo muestra Sohl-Dickstein et al., es que podemos muestrear  en cualquier nivel de ruido arbitrario condicionado a  (ya que la suma de gaussianas también es gaussiana). Esto es muy conveniente: no necesitamos aplicar  repetidamente para muestrear .
+
+Tenemos que
+
+con  y .
+
+Refiramos a esta ecuación como la "propiedad agradable". Esto significa que podemos muestrear ruido gaussiano y escalarlo apropiadamente y agregarlo a  para obtener  directamente. Notemos que los  son funciones del esquema de varianza conocido  y, por lo tanto, también son conocidos y pueden precomputarse. Esto nos permite, durante el entrenamiento, optimizar términos aleatorios de la función de pérdida  (o en otras palabras, muestrear aleatoriamente  durante el entrenamiento y optimizar ).
+
+Otra ventaja de esta propiedad, como se muestra en Ho et al., es que uno puede (después de algunos cálculos, para los cuales remitimos al lector a este excelente posteo de blog ) reparametrizar la media para que la red neuronal aprenda (prediga) el ruido agregado (a través de una red ) para el nivel de ruido  en los términos KL que constituyen las pérdidas. Esto significa que nuestra red neuronal se convierte en un predictor de ruido, en lugar de un predictor de media directo. La media se puede calcular como sigue:
+
+La función objetivo final  entonces queda de la siguiente manera (para un paso de tiempo  aleatorio dado ):
+
+Aquí,  es la imagen inicial (real, no corrompida), y vemos la muestra directa del nivel de ruido  dada por el proceso hacia adelante fijo.  es el ruido puro muestreado en el paso de tiempo , y  es nuestra red neuronal. La red neuronal se optimiza utilizando un simple error cuadrático medio (MSE) entre el ruido gaussiano real y el predicho.
+
+En Resumen
+
+Tomamos una muestra aleatoria  de la distribución de datos real, desconocida y posiblemente compleja .
+Muestreamos un nivel de ruido  uniformemente entre 1 y  (es decir, un paso de tiempo aleatorio).
+Muestreamos algo de ruido de una distribución gaussiana y corrompemos la entrada con este ruido en el nivel  (usando la "propiedad agradable" definida anteriormente).
+La red neuronal se entrena para predecir este ruido basado en la imagen corrupta  (es decir, el ruido aplicado a  basado en el esquema conocido ).
+
+Implementación en PyTorch
+
+La Red Neuronal
+
+La red neuronal necesita tomar una imagen ruidosa en un paso de tiempo particular y devolver el ruido predicho. Notemos que el ruido predicho es un tensor que tiene el mismo tamaño/resolución que la imagen de entrada.
+
+Entonces, técnicamente, la red toma y produce tensores de la misma forma. ¿Qué tipo de red neuronal podemos usar para esto?
+
+En términos de arquitectura, los autores de DDPM optaron por un U-Net, introducido por Ronneberger et al., 2015 (que, en su momento, logró resultados de última generación para la segmentación de imágenes médicas). Esta red, como cualquier autoencoder, consta de un cuello de botella en el medio que asegura que la red aprenda solo la información más importante. Importante destacar que introduce conexiones residuales entre el codificador y el decodificador, mejorando significativamente el flujo de gradientes (inspirado por ResNet en He et al., 2015).
+
+Como se puede ver, un modelo U-Net primero reduce la resolución espacial de la entrada (es decir, hace que la entrada sea más pequeña en términos de resolución espacial), después de lo cual se realiza un aumento de resolución.
+
+A continuación, implementamos esta red paso a paso.
+
+Funciones Auxiliares de la Red
+
+Primero, definimos algunas funciones y clases auxiliares que se utilizarán al implementar la red neuronal. Es importante destacar que definimos un módulo Residual, que simplemente suma la entrada a la salida de una función particular (en otras palabras, añade una conexión residual a una función particular).
+
+También definimos alias para las operaciones de reducción y aumento de resolución (upsampling y downsampling).
+
+Embeddings de Posición
+
+Dado que los parámetros de la red neuronal se comparten a lo largo del tiempo (nivel de ruido), los autores emplean embeddings de posición sinusoidales para codificar tt, inspirados en el Transformer (Vaswani et al., 2017). Esto permite que la red neuronal "sepa" en qué paso de tiempo particular (nivel de ruido) está operando, para cada imagen en un lote.
+
+El módulo SinusoidalPositionEmbeddings toma un tensor de forma (batchsize,1) como entrada (es decir, los niveles de ruido de varias imágenes ruidosas en un lote), y lo convierte en un tensor de forma (batchsize,dim), donde dim es la dimensionalidad de los embeddings de posición. Esto se añade a cada bloque residual, como veremos más adelante.
+
+Bloque ResNet
+
+A continuación, definimos el bloque central del modelo U-Net. Los autores de DDPM emplearon un bloque Wide ResNet (Zagoruyko et al., 2016), pero Phil Wang ha reemplazado la capa convolucional estándar por una versión "weight standardized", que funciona mejor en combinación con la normalización por grupos (ver Kolesnikov et al., 2019 para más detalles).
+
+Módulo de Atención
+
+A continuación, definimos el módulo de atención, que los autores de DDPM añadieron entre los bloques convolucionales. La atención es el bloque de construcción de la famosa arquitectura Transformer (Vaswani et al., 2017), que ha mostrado gran éxito en varios dominios de la IA, desde NLP y visión hasta plegamiento de proteínas. Phil Wang emplea 2 variantes de atención: una es la atención de múltiples cabezas (multi-head self-attention) regular (como se usa en el Transformer), y la otra es una variante de atención lineal (Shen et al., 2018), cuyos requisitos de tiempo y memoria escalan de manera lineal con la longitud de la secuencia, a diferencia de la atención regular que escala de manera cuadrática.
+
+Normalización por Grupos
+
+Los autores de DDPM intercalan las capas convolucionales/de atención del U-Net con normalización por grupos (Wu et al., 2018). A continuación, definimos una clase PreNorm, que se utilizará para aplicar la normalización por grupos antes de la capa de atención, como veremos más adelante.
+
+U-Net Condicional
+
+Ahora que hemos definido todos los bloques de construcción (embeddings de posición, bloques ResNet, atención y normalización por grupos), es hora de definir toda la red neuronal. Recordemos que la tarea de la red  es tomar un lote de imágenes ruidosas y sus respectivos niveles de ruido, y devolver el ruido añadido a la entrada. Más formalmente:
+La red toma un lote de imágenes ruidosas de forma  y un lote de niveles de ruido de forma  como entrada, y devuelve un tensor de forma .
+
+La red se construye de la siguiente manera:
+Primero, se aplica una capa convolucional sobre el lote de imágenes ruidosas y se calculan los embeddings de posición para los niveles de ruido.
+Luego, se aplica una secuencia de etapas de reducción de resolución (downsampling). Cada etapa de reducción de resolución consta de 2 bloques ResNet + normalización por grupos + atención + conexión residual + una operación de reducción de resolución.
+En el medio de la red, se vuelven a aplicar bloques ResNet, intercalados con atención.
+Luego, se aplica una secuencia de etapas de aumento de resolución (upsampling). Cada etapa de aumento de resolución consta de 2 bloques ResNet + normalización por grupos + atención + conexión residual + una operación de aumento de resolución.
+Finalmente, se aplica un bloque ResNet seguido de una capa convolucional.
+
+En última instancia, las redes neuronales apilan capas como si fueran bloques de lego (pero es importante entender cómo funcionan).
+
+Definiendo el proceso de difusión hacia adelante
+
+El proceso de difusión hacia adelante agrega gradualmente ruido a una imagen de la distribución real, en una cantidad de pasos de tiempo T. Esto ocurre de acuerdo con un programa de varianza. Los autores originales de DDPM emplearon un programa lineal:
+
+    "Establecemos las varianzas del proceso hacia adelante en constantes que aumentan linealmente desde β1=10−4 hasta βT=0.02."
+
+Sin embargo, se demostró en (Nichol et al., 2021) que se pueden obtener mejores resultados al emplear un programa cosenoidal.
+
+A continuación, definimos varios programas para los pasos de tiempo TT (elegiremos uno más adelante).
+
+Para comenzar, usemos el programa lineal para T=300 pasos de tiempo y definamos las diversas variables a partir de βt que necesitaremos, como el producto acumulativo de las varianzas αˉt. Cada una de las variables a continuación son solo tensores unidimensionales, que almacenan valores desde t hasta T. Es importante también definir una función de extracción, que nos permitirá extraer el índice t adecuado para un lote de índices.
+
+Vamos a ilustrar con una imagen de gatos cómo se agrega ruido en cada paso de tiempo del proceso de difusión.
+
+El ruido se agrega a los tensores de PyTorch, en lugar de las imágenes de Pillow. Primero definiremos transformaciones de imagen que nos permitan pasar de una imagen PIL a un tensor de PyTorch (sobre el cual podemos agregar el ruido), y viceversa.
+
+Estas transformaciones son bastante simples: primero normalizamos las imágenes dividiéndolas por 255 (de modo que estén en el rango [0,1]), y luego nos aseguramos de que estén en el rango [−1,1]. Del artículo de DDPM:
+
+    "Asumimos que los datos de la imagen consisten en enteros en {0,1,...,255} escalados linealmente a [−1,1]. Esto asegura que el proceso inverso de la red neuronal opere sobre entradas escaladas consistentemente comenzando desde la distribución normal estándar p(xT)."
+
+Ahora podemos definir el proceso de difusión hacia adelante tal como en el artículo.
+
+Probémoslo en un paso de tiempo particular.
+
+Visualicemos esto para varios pasos de tiempo.
+
+Esto significa que ahora podemos definir la función de pérdida dado el modelo de la siguiente manera.
+
+El denoise_model será nuestro U-Net definido anteriormente. Utilizaremos la pérdida Huber entre el ruido verdadero y el ruido predicho.
+
+Definir un Dataset y un DataLoader en PyTorch.
+
+Aquí definimos un Dataset regular en PyTorch. El dataset simplemente consiste en imágenes de un dataset real, como Fashion-MNIST, CIFAR-10 o ImageNet, escaladas linealmente a [−1,1].
+
+Cada imagen se redimensiona al mismo tamaño. Es interesante notar que las imágenes también se voltean horizontalmente de manera aleatoria. Del artículo:
+
+    "Usamos volteos horizontales aleatorios durante el entrenamiento para CIFAR10; probamos entrenar tanto con como sin volteos, y encontramos que los volteos mejoran ligeramente la calidad de las muestras."
+
+Aquí usamos la biblioteca 🤗 Datasets para cargar fácilmente el dataset Fashion MNIST desde el hub. Este dataset consiste en imágenes que ya tienen la misma resolución, es decir, 28x28.
+
+A continuación, definimos una función que aplicaremos sobre la marcha a todo el dataset. Usamos la funcionalidad with_transform para eso. La función solo aplica un preprocesamiento básico de imágenes: volteos horizontales aleatorios, reescalado y finalmente, hacer que tengan valores en el rango [−1,1].
+
+Muestreo
+
+Como muestrearemos del modelo durante el entrenamiento (para seguir el progreso), definimos el código para eso a continuación. El muestreo se resume en el artículo como el Algoritmo 2:
+
+Generar nuevas imágenes a partir de un modelo de difusión ocurre al invertir el proceso de difusión: comenzamos desde T, donde muestreamos ruido puro de una distribución Gaussiana, y luego usamos nuestra red neuronal para deshacer gradualmente el ruido (usando la probabilidad condicional que ha aprendido), hasta que terminamos en el paso de tiempo t=0. Como se muestra arriba, podemos derivar una imagen ligeramente menos ruidosa  al enchufar la reparametrización de la media, usando nuestro predictor de ruido. Recuerda que la varianza se conoce de antemano.
+
+Idealmente, terminamos con una imagen que parece provenir de la distribución de datos reales.
+
+El código a continuación implementa esto.
+
+Este código implementa el proceso de muestreo en un modelo de difusión. Su objetivo es generar una nueva imagen a partir de ruido puro, siguiendo una serie de pasos de denoising (reducción progresiva de ruido). Vamos a analizar cada función para entender cómo se lleva a cabo este proceso.
+p_sample
+
+La función p_sample genera una muestra para un paso temporal específico t (un nivel de ruido dado en el proceso de denoising). La estructura de esta función sigue el modelo de difusión inversa, que elimina el ruido paso a paso, comenzando desde una imagen completamente ruidosa.
+Parámetros de entrada:
+model: El modelo de difusión (normalmente una U-Net), que predice el ruido presente en la imagen en el paso t.
+x: La imagen (o tensor) actual en el paso t.
+t: El índice temporal del paso actual, que indica el nivel de ruido.
+t_index: Índice del paso actual en el bucle (usado para verificar si estamos en el paso inicial o no).
+Proceso dentro de p_sample:
+Extraer Parámetros Temporales:
+betast, sqrtoneminusalphascumprodt, y sqrtrecipalphas_t se extraen del registro predefinido de parámetros del modelo, en función de t. Estos valores están precomputados y permiten calcular la cantidad de ruido o información preservada en cada paso del muestreo.
+Predecir la Media (Ecuación de Denoising):
+La expresión para model_mean implementa la Ecuación 11 en el paper de DDPM, que define cómo usar la salida del modelo para predecir una versión menos ruidosa de la imagen.
+model(x, t) predice el ruido en la imagen x en el paso t. Este ruido se elimina de x para obtener una imagen denoised usando la expresión:
+     [
+     \text{model\mean} = \text{sqrt\recip\alphas\t} \times \left( x - \frac{\text{betas\t} \times \text{model}(x, t)}{\text{sqrt\one\minus\alphas\cumprod\t}} \right)
+     ]
+Añadir Ruido según la Varianza Posterior:
+Si tindex es 0 (último paso), se retorna directamente modelmean como la imagen final.
+Para pasos intermedios, se añade un componente de ruido (noise) ponderado por posteriorvariancet. Esto simula la incertidumbre en el proceso de denoising.
+psampleloop
+
+Esta función aplica p_sample en un bucle para generar una imagen desde el ruido puro, retrocediendo en los pasos temporales desde T (tiempo máximo) hasta 0 (imagen final).
+Parámetros de entrada:
+model: El modelo de difusión.
+shape: La forma de la imagen a generar, incluyendo el tamaño de lote.
+Proceso dentro de psampleloop:
+Inicialización con Ruido Puro:
+Comienza con una imagen img que es simplemente ruido aleatorio. La forma de img depende de shape (en este caso, (batchsize, channels, imagesize, image_size)).
+Muestreo Paso a Paso:
+Se itera desde timesteps hasta 0, generando una versión menos ruidosa de la imagen en cada paso i.
+En cada iteración, p_sample se llama con la imagen actual img, el paso de tiempo i, y se guarda la salida en imgs (lista de imágenes en cada paso de denoising).
+Resultado:
+imgs contiene el historial de imágenes generadas en cada paso de denoising, desde el ruido inicial hasta la imagen generada final.
+sample
+
+La función sample es una envoltura conveniente para configurar y llamar a psampleloop con los parámetros de tamaño de imagen y tamaño de lote.
+Parámetros de entrada:
+model: El modelo de difusión.
+image_size: Tamaño de la imagen generada.
+batch_size: Tamaño del lote de imágenes generadas.
+channels: Número de canales de la imagen (normalmente 3 para imágenes RGB).
+Proceso dentro de sample:
+Define la forma de la imagen (shape) según batchsize, channels, imagesize.
+Llama a psampleloop con el modelo y la forma de la imagen, generando el conjunto de imágenes finales en el lote.
+Resumen General del Flujo
+Empieza con Ruido: sample llama a psampleloop, donde img se inicializa como ruido.
+Proceso de Denoising en Bucle: psampleloop realiza una secuencia de pasos de denoising desde el máximo nivel de ruido hasta la imagen final.
+Retorno de Imágenes: En cada paso de p_sample, se aplica una corrección de ruido basada en la predicción del modelo y se agrega ruido para los pasos intermedios. En el último paso, se obtiene una imagen limpia, que es el resultado final del modelo de difusión.
+
+Entrenar el modelo
+
+A continuación, entrenamos el modelo de la manera habitual en PyTorch. También definimos alguna lógica para guardar periódicamente las imágenes generadas, utilizando el método de muestreo definido anteriormente.
+
+A continuación, definimos el modelo y lo movemos a la GPU. También definimos un optimizador estándar (Adam).
+
+¡Empecemos a entrenar!
+
+Muestreo (inferencia)
+
+Para muestrear del modelo, simplemente podemos usar nuestra función de muestreo definida anteriormente:
