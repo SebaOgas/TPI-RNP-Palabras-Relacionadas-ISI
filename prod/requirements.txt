@@ -1,3 +1,5 @@
 pypdf
 cryptography
 spacy
+plotly
+scikit-learn
