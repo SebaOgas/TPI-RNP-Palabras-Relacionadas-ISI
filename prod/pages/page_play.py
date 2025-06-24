@@ -3,6 +3,7 @@ import os
 import random
 import pandas as pd
 import time
+from itertools import cycle
 
 st.title("Juego")
 st.caption("¡Adivina las palabras relacionadas a temas de Ingeniería en Sistemas de Información!")
@@ -39,7 +40,7 @@ def load_model_components():
             vocabulary = [ast.literal_eval(l) for l in lines]
         
         # Load model
-        model_path = "data/models/dataset-100-256-256.pt"
+        model_path = "prod/dataset-100-256-256.pt"
         model = SkipGram(vocabulary, 256)
         model.load_state_dict(torch.load(model_path, weights_only=True, map_location='cpu'))
         model.eval()
@@ -50,20 +51,31 @@ def load_model_components():
         st.error(f"Error loading model: {e}")
         return None, None, None
 
-def get_related_concepts(concept_ix, k, embed, vocabulary, torch_module):
+def get_related_concepts_with_distractors(concept_ix, num_related_concepts, num_distractors, embed, vocabulary, torch_module):
     """Get k most related concepts to a given concept"""
     W = embed.weight.data
     x = W[torch_module.tensor(concept_ix)]
 
     cos = torch_module.mv(W, x) / torch_module.sqrt(torch_module.sum(W * W, dim=1) *
                                       torch_module.sum(x * x) + 1e-9)
-    topk = torch_module.topk(cos, k=k+1)[1].cpu().numpy().astype('int32')
+    topk = torch_module.topk(cos, k=num_related_concepts+1+num_distractors+20)[1].cpu().numpy().astype('int32')
 
     related = []
+    distractors = []
+    distractors_pool = []
+    added = 0
+
     for i in topk[1:]:
         if i < len(vocabulary):  # Safety check
-            related.append(vocabulary[i])
-    return related
+            if added < num_related_concepts:
+                related.append(vocabulary[i])
+                added += 1 
+            else:
+                distractors_pool.append(vocabulary[i])
+   
+    distractors = random.sample(distractors_pool, min(num_distractors, len(distractors_pool))) 
+ 
+    return related, distractors
 
 # Load model and vocabulary
 model, vocabulary, torch = load_model_components()
@@ -79,35 +91,41 @@ if 'current_concept' not in st.session_state:
     st.session_state.current_concept = None
 if 'related_concepts' not in st.session_state:
     st.session_state.related_concepts = []
+if 'distractors' not in st.session_state:
+    st.session_state.distractors = []
 if 'score' not in st.session_state:
     st.session_state.score = 0
 if 'attempts' not in st.session_state:
     st.session_state.attempts = 0
 if 'vidas' not in st.session_state:
     st.session_state.vidas = 3
+if 'selected_buttons' not in st.session_state:
+    st.session_state.selected_buttons = {}
+if 'all_options' not in st.session_state:
+    st.session_state.all_options = []
+if 'feedback_msg' not in st.session_state:
+    st.session_state.feedback_msg = None
+if 'aciertos' not in st.session_state:
+    st.session_state.aciertos = 0
+if 'clicked_concepts' not in st.session_state:
+    st.session_state.clicked_concepts = set()
 
 # Game interface
 st.header("🎯 Encuentra las palabras relacionadas")
 
 # Generar nuevo concepto si es necesario
-if st.session_state.current_concept is None:
+if st.session_state.current_concept is  None:
     concept_idx = random.randint(0, len(vocabulary) - 1)
     st.session_state.current_concept = concept_idx
-    st.session_state.related_concepts = get_related_concepts(
-                        concept_idx, 10, model.central_embedding, vocabulary, torch)
-
+    st.session_state.related_concepts, st.session_state.distractors= get_related_concepts_with_distractors(
+                                                                     concept_idx, 10, 6, model.central_embedding, vocabulary, torch)
+    st.session_state.all_options = st.session_state.related_concepts + st.session_state.distractors
+    random.shuffle(st.session_state.all_options)
 # Mostrar concepto actual
 if st.session_state.current_concept is not None:
     current_concept = vocabulary[st.session_state.current_concept]
-    
-    # JUST FOR TESTING BLOCK
-    os.write(1, "Top 10 conceptos más relacionados:\n".encode())
-    # Show the related concepts
-    for i, related_concept in enumerate(st.session_state.related_concepts, 1):
-        concept_str = " + ".join(related_concept)
-        os.write(1, f"{i}. {concept_str}\n".encode())
-   # END OF JUST FOR TESTING BLOCK
 
+    
     col1, col2 = st.columns(2, border=True)
 
     hearts = "❤️" * st.session_state.vidas + "🤍" * (3 - st.session_state.vidas)
@@ -120,16 +138,21 @@ if st.session_state.current_concept is not None:
 
     st.header(f"🎮 Concepto -> {' + '.join(current_concept)}")
 
-st.subheader("Tu turno")
     
 # Play Again Btn Component
 def play_again_btn(key):
     if st.button("Nuevo juego", type="secondary", key=key,use_container_width=True, icon=":material/sports_esports:"):
         st.session_state.current_concept = None
         st.session_state.related_concepts = []
+        st.session_state.distractors = []
         st.session_state.score = 0
         st.session_state.attempts = 0
         st.session_state.vidas = 3
+        st.session_state.selected_buttons = {}
+        st.session_state.all_options = []
+        st.session_state.feedback_msg = None
+        st.session_state.aciertos = 0
+        st.session_state.clicked_concepts = set()
         st.rerun()
 
 # Loose Dialog Component
@@ -159,51 +182,67 @@ def loose_dialog():
             width = "large"
         )
     })
+@st.dialog("🎉 ¡Adivinaste los 10 conceptos correctamente!")
+def win_dialog():
+    st.success("¡Excelente! Acertaste los 10 conceptos relacionados sin perder todas las vidas.")
+    play_again_btn("win-game")
 
-def get_guess_points(user_guess):
-    # parsing user's input
-    guess_words = [word.strip().lower() for word in user_guess.split(",")]
-    guess_tuple = tuple(sorted(guess_words))
-
-    for idx ,related_concept in enumerate(st.session_state.related_concepts):
-        related_tuple = tuple(sorted([word.lower() for word in related_concept]))
-        if guess_tuple == related_tuple:
-            puntos = 10 - idx  # Top1 = 10 pts, Top10 = 1 pt
-            return puntos  
-
-    return 0 # player didn't guess          
-
+if (st.session_state.aciertos == len(st.session_state.related_concepts)) and st.session_state.vidas > 0:
+    win_dialog()
 
 player_lost = st.session_state.vidas == 0
 
 if player_lost:
     loose_dialog()
-
-col1, col2 = st.columns([12, 1], vertical_alignment="bottom")
-user_guess = col1.text_input("Ingresa palabras separadas por comas que crees que están relacionadas:", 
-                              placeholder="Ej: servidor, protocolo")
-
-if col2.button("", disabled=player_lost, icon=":material/keyboard_return:"):
-    
-    
-    points = get_guess_points(user_guess)
-    st.session_state.score += points
-    
-    if points == 0:
-        st.session_state.vidas = max(0, st.session_state.vidas - 1)
-        st.error("No está en el top 10. ¡Intenta de nuevo!") #TODO -  no se estan mostrando estos msj por el rerun
-        time.sleep(1.5)
-        st.rerun()
-
-
-    
-    st.success(f"¡Correcto! Ganaste {points} puntos 🎉") #TODO -  no se estan mostrando estos msj por el rerun
-    # Pasar a nuevo concepto
-    st.session_state.current_concept = None
-    time.sleep(1.5)
-    st.rerun()
-    
-#TODO -  no se elimina el contenido del input luego de verificar la rta
-
 # Reset game button
 play_again_btn("always-shown")
+
+st.subheader("Tu turno")
+
+def handle_button_click(button_id, concept):
+    st.session_state.selected_buttons[button_id] = True
+    concept_key = tuple(concept)    
+    if concept_key in st.session_state.clicked_concepts:
+        st.session_state.feedback_msg = ("error", "Ya seleccionaste este concepto.")
+        return
+    st.session_state.clicked_concepts.add(concept_key)
+    if concept in st.session_state.related_concepts:
+        idx = st.session_state.related_concepts.index(concept)
+        points = 10 - idx  # Top 1 = 10 pts, Top 10 = 1 pt
+        st.session_state.score += points
+        st.session_state.aciertos += 1   #Sumamos un acierto
+        st.session_state.feedback_msg = ("success", f"¡Correcto! Ganaste {points} puntos 🎉")
+    else:
+        st.session_state.vidas = max(0, st.session_state.vidas - 1)
+        st.session_state.feedback_msg = ("error", "No está en el top 10. ¡Intenta de nuevo!")
+        
+    # pausa breve antes de la próxima ronda
+    time.sleep(1)
+    
+    
+# Columnas para los botones
+cols = st.columns(4)
+for i, concept in enumerate(st.session_state.all_options):
+            button_id = f"btn_{i}"
+            already_clicked = st.session_state.selected_buttons.get(button_id, False)
+            concept_already_clicked = tuple(concept) in st.session_state.clicked_concepts
+            label = " + ".join(concept)
+
+            col = cols[i % 4]
+            with col:
+                st.button(
+                    label,
+                    key=button_id,
+                    type="secondary",
+                    use_container_width=True,
+                    disabled=already_clicked or concept_already_clicked or st.session_state.vidas == 0 or (st.session_state.aciertos == len(st.session_state.related_concepts)),
+                    on_click=handle_button_click,
+                    args=(button_id, concept),
+                )
+
+if st.session_state.feedback_msg is not None:
+        tipo, mensaje = st.session_state.feedback_msg
+        if tipo == "success":
+            st.success(mensaje)
+        elif tipo == "error":
+            st.error(mensaje)
