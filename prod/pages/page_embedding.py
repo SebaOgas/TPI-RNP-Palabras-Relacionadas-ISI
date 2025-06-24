@@ -103,5 +103,5 @@ if st.sidebar.button("Visualize", icon=":material/graph_3:"):
             plot_for_D(data, labels, dim, search_idx)
         except ValueError:
             st.sidebar.error("Couldnt find " +  search_for)
-
-    plot_for_D(data, labels, dim)
+    else: 
+        plot_for_D(data, labels, dim)
