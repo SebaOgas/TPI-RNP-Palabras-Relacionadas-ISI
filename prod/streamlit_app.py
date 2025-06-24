@@ -12,7 +12,7 @@ ascii_art = """
 st.code(ascii_art, language="text")
 pages = {
     "General": [
-        st.Page("pages/page_home.py", title="Incio", icon=":material/home:")
+        st.Page("pages/page_home.py", title="Inicio", icon=":material/home:")
     ],
     "Juego": [
         st.Page("pages/page_play_new.py", title="Jugar", icon=":material/sports_esports:"),
