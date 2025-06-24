@@ -3,3 +3,4 @@ cryptography
 spacy
 plotly
 scikit-learn
+pytorch
