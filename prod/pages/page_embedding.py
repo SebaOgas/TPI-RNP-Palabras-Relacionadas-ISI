@@ -12,14 +12,15 @@ st.title("Embeddings")
 st.caption("Visualiza nuestro embedding!")
 
 def idx_to_label(idx):
-    file = "../data/vocabularies/vocab_0.txt"
+    file = "data/vocabularies/vocab_0.txt"
+    vocabulary = []
     with open(file, "rb") as cf:
-        lines = cf.read().decode("utf-8").split("\n")
+        lines = cf.read().decode("utf-8").split("\n")[:-1]
         vocabulary = [ast.literal_eval(l) for l in lines]
     return vocabulary[idx]
 
 def load_data(dim):
-    file = f"../data/embeddings/embeddings-{dim}.csv"
+    file = f"data/embeddings/embeddings-{dim}.csv"
     data = np.loadtxt(file, delimiter=",").tolist()
     
     # first index of each row contains the label
