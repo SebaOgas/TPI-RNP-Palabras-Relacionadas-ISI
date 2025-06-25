@@ -11,8 +11,8 @@ Se presenta un concepto base y **el jugador deberá seleccionar los conceptos qu
 Mientras más cerca esté el concepto dentro del top 10 de las palabras más relacionadas, **más puntos obtendrá**.
 
 ### ❤️ Vidas
-El juego es individual y **el jugador posee de 3 vidas**. Por cada intento fallido (el concepto seleccionado no pertenece al top 10) pierde una vida.
-El jugador pierde el juego una vez perdida sus 3 vidas, por lo que deberá iniciar uno nuevo.
+El juego es individual y **el jugador posee 3 vidas**. Por cada intento fallido (el concepto seleccionado no pertenece al top 10) pierde una vida.
+El jugador pierde el juego una vez que perdió todas las vidas, por lo que deberá iniciar uno nuevo.
             
 ### 🏆 Puntuación
 Cuando el jugador selecciona entre uno de los 10 conceptos más relacionados consigue sumar puntos. El cálculo

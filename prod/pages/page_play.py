@@ -40,7 +40,7 @@ def load_model_components():
             vocabulary = [ast.literal_eval(l) for l in lines]
         
         # Load model
-        model_path = "data/models/dataset-100-256-256.pt"
+        model_path = "prod/dataset-100-256-256.pt"
         model = SkipGram(vocabulary, 256)
         model.load_state_dict(torch.load(model_path, weights_only=True, map_location='cpu'))
         model.eval()
@@ -58,10 +58,11 @@ def get_related_concepts_with_distractors(concept_ix, num_related_concepts, num_
 
     cos = torch_module.mv(W, x) / torch_module.sqrt(torch_module.sum(W * W, dim=1) *
                                       torch_module.sum(x * x) + 1e-9)
-    topk = torch_module.topk(cos, k=num_related_concepts+1+num_distractors)[1].cpu().numpy().astype('int32')
+    topk = torch_module.topk(cos, k=num_related_concepts+1+num_distractors+20)[1].cpu().numpy().astype('int32')
 
     related = []
     distractors = []
+    distractors_pool = []
     added = 0
 
     for i in topk[1:]:
@@ -70,9 +71,10 @@ def get_related_concepts_with_distractors(concept_ix, num_related_concepts, num_
                 related.append(vocabulary[i])
                 added += 1 
             else:
-                distractors.append(vocabulary[i])
-        if len(distractors) >= num_distractors:
-            break
+                distractors_pool.append(vocabulary[i])
+   
+    distractors = random.sample(distractors_pool, min(num_distractors, len(distractors_pool))) 
+ 
     return related, distractors
 
 # Load model and vocabulary
@@ -105,6 +107,8 @@ if 'feedback_msg' not in st.session_state:
     st.session_state.feedback_msg = None
 if 'aciertos' not in st.session_state:
     st.session_state.aciertos = 0
+if 'clicked_concepts' not in st.session_state:
+    st.session_state.clicked_concepts = set()
 
 # Game interface
 st.header("🎯 Encuentra las palabras relacionadas")
@@ -120,21 +124,8 @@ if st.session_state.current_concept is  None:
 # Mostrar concepto actual
 if st.session_state.current_concept is not None:
     current_concept = vocabulary[st.session_state.current_concept]
-    
-    # JUST FOR TESTING BLOCK
-    os.write(1, "Top 10 conceptos más relacionados:\n".encode())
-    # Show the related concepts
-    for i, related_concept in enumerate(st.session_state.related_concepts, 1):
-        concept_str = " + ".join(related_concept)
-        os.write(1, f"{i}. {concept_str}\n".encode())
-   
-    os.write(1, "Top 6 distracciones:\n".encode())
-    
-    for i, distractors in enumerate(st.session_state.distractors, 1):
-        concept_str = " + ".join(distractors)
-        os.write(1, f"{i}. {concept_str}\n".encode())
-   # END OF JUST FOR TESTING BLOCK
 
+    
     col1, col2 = st.columns(2, border=True)
 
     hearts = "❤️" * st.session_state.vidas + "🤍" * (3 - st.session_state.vidas)
@@ -161,6 +152,7 @@ def play_again_btn(key):
         st.session_state.all_options = []
         st.session_state.feedback_msg = None
         st.session_state.aciertos = 0
+        st.session_state.clicked_concepts = set()
         st.rerun()
 
 # Loose Dialog Component
@@ -208,7 +200,12 @@ play_again_btn("always-shown")
 st.subheader("Tu turno")
 
 def handle_button_click(button_id, concept):
-    st.session_state.selected_buttons[button_id] = True  # marcar como clickeado
+    st.session_state.selected_buttons[button_id] = True
+    concept_key = tuple(concept)    
+    if concept_key in st.session_state.clicked_concepts:
+        st.session_state.feedback_msg = ("error", "Ya seleccionaste este concepto.")
+        return
+    st.session_state.clicked_concepts.add(concept_key)
     if concept in st.session_state.related_concepts:
         idx = st.session_state.related_concepts.index(concept)
         points = 10 - idx  # Top 1 = 10 pts, Top 10 = 1 pt
@@ -222,11 +219,13 @@ def handle_button_click(button_id, concept):
     # pausa breve antes de la próxima ronda
     time.sleep(1)
     
+    
 # Columnas para los botones
 cols = st.columns(4)
 for i, concept in enumerate(st.session_state.all_options):
             button_id = f"btn_{i}"
             already_clicked = st.session_state.selected_buttons.get(button_id, False)
+            concept_already_clicked = tuple(concept) in st.session_state.clicked_concepts
             label = " + ".join(concept)
 
             col = cols[i % 4]
@@ -236,7 +235,7 @@ for i, concept in enumerate(st.session_state.all_options):
                     key=button_id,
                     type="secondary",
                     use_container_width=True,
-                    disabled=already_clicked or st.session_state.vidas == 0 or (st.session_state.aciertos == len(st.session_state.related_concepts)),
+                    disabled=already_clicked or concept_already_clicked or st.session_state.vidas == 0 or (st.session_state.aciertos == len(st.session_state.related_concepts)),
                     on_click=handle_button_click,
                     args=(button_id, concept),
                 )
