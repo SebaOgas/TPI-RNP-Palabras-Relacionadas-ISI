@@ -6,9 +6,10 @@ Consiste en un juego en que, basándose en la terminología propia de la carrera
 
 ## Estructura del Proyecto
 
-- data/: contiene el dataset, tanto sin procesar como ya procesado, junto al script utilizado para procesarlo.
+- data/: contiene el dataset de apuntes y resumenes de la carrera, tanto sin procesar como ya procesado, junto al script utilizado para procesarlo.
+- data_2/: contiene el dataset de los notebooks de la materia "Redes Neuronales Profundas", tanto sin procesar como ya procesado, junto al script utilizado para procesarlo.
 - dev/: contiene los scripts y Jupyter notebooks utilizados durante el desarrollo.
-- prod/: código preparado para el entorno de producción.
+- prod/: código preparado para el entorno de producción en streamlit.
 
 ## Uso
 
@@ -27,5 +28,5 @@ Consiste en un juego en que, basándose en la terminología propia de la carrera
 3. Ejecutar aplicación
 
 ```
-    streamlit run prod\app.py
+    streamlit run prod\streamlit_app.py
 ```
